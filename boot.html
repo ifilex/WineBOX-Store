@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game</title>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+    <iframe src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameUrl = urlParams.get('url');
+        const gameTitle = urlParams.get('title') || 'Game';
+        
+        document.title = gameTitle;
+        if (gameUrl) document.querySelector('iframe').src = gameUrl;
+    </script>
+</body>
+</html>

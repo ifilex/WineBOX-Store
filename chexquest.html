@@ -1,56 +1,44 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" data-mobile="false" data-v7="false" data-app="false">
+<!doctype html>
+<html>
+<title>Chess for Quest</title>
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
 <head>
-
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/png" href="favicon.ico">
-
-<title>Duke Nukem 3D</title>
-
-    <script async="" src="DOS_files/tag.js"></script><script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": ["VideoGame", "WebApplication"],
-      "name": "DOSBox",
-      "applicationCategory": "GameApplication",
-      "operatingSystem": "Browser"
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+    html,
+    body,
+    #jsdos {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
-    </script>
-
-    <link rel="stylesheet" href="DOS_files/js-dos.css">
-    <link rel="stylesheet" href="DOS_files/tailwind.css">
-
-    <script async="" type="text/javascript" src="DOS_files/emulators.js"></script>
-
+  </style>
+  <script src="./js-dos/js-dos.js"></script>
+  <link href="./js-dos/js-dos.css" rel="stylesheet">
 </head>
 
-<body class="bg-base-200" data-theme="light">
+<body>
 
-    <script type="text/javascript">
-        const theme = localStorage.getItem("dos.zone.theme");
-        if (theme !== null) {
-            document.body.setAttribute("data-theme", theme);
-        }
-    </script>
-  
+<script type="importmap">
+  {
+    "imports": {
+      "scriptprocessornodeshim": "./demons/scriptprocessernodeshim.mjs"
+    }
+  }
+  </script>
+<script src="./demons/audiocontext-polyfill.js"></script>
 
-    <div class="wh-full">
-        <div class="jsdos wh-full" 
-             data-bg="https://dos.zone/images/containers/assets/backgrounds/duke3d.jpeg/7f62c2a0b202567e14b2e561a6e9c379.webp"  
-             data-backend="" 
-            data-lang="en" 
-            data-url="roms/a580eccc17fca3235d67cf85331e7cb204eb4899.jsdos" 
-            data-config=""
-            
-        ></div>
-    </div>
-
-
-
-<script src="DOS_files/dynamics.js"></script>
-<script async="" src="DOS_files/js-dos.js"></script>
-
+  <script type="module">
+    import 'scriptprocessornodeshim';
+  </script>
+<div id="jsdos" />
+  <script>
+    emulators.pathPrefix = "js-dos/";
+    Dos(document.getElementById("jsdos"), {
+    }).run("./roms/a580eccc17fca3235d67cf85331e7cb204eb4899.jsdos");
+  </script>
 </body>
+
 </html>
+
