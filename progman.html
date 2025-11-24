@@ -4812,7 +4812,7 @@ function openDiscoLocal() {
         type: 'web'
     };
     
-    const contentUrl = "accesories/wine.html?app=files&p=dock.exe";
+    const contentUrl = "win32/wine.html?app=files&p=dock.exe";
     createAppWindow(appWindow, contentUrl, 'web');
 }
 
@@ -4822,7 +4822,7 @@ function openFrame(appName) {
         type: 'zip'
     };
     
-    const contentUrl = `accesories/wine.html?app=${appName}&p=${appName}.exe`;
+    const contentUrl = `win32/wine.html?app=${appName}&p=${appName}.exe`;
     createAppWindow(appWindow, contentUrl, 'zip');
 }
 
