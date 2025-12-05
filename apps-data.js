@@ -2,11 +2,25 @@ var appData = window.appData;
 
 window.appData = [
     {
+        name: "Absence",
+        image: "https://www.dosgames.com/screens/absence.png",
+        description: "Absence is a mod (total conversion, I would say) of Wolfenstein 3D. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/absence.html"
+    },
+    {
         name: "Alien Cabal",
         image: "https://ifilex.github.io/WineBOX-Store/box/aliencabal.jpg",
-        description: "Alien Cabal is a 1997 first-person shooter published by QASoft and consisting of ten levels. Its distribution package also contains the \"vedit\" level editor.",
+        description: "Alien Cabal is a 1997 first-person shooter published by QASoft and consisting of ten levels. Its distribution package also contains the vedit level editor.",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/aliencabal.html"
+    },
+    {
+        name: "Alien Trilogy",
+        image: "https://www.dosgames.com/screens/trilogy.png",
+        description: "Alien Trilogy is a FPS based on the popular movie series that was released the same year as Quake.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/alien.html"
     },
     {
         name: "Anarch",
@@ -30,6 +44,20 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/beneath.html"
     },
     {
+        name: "Black Stone",
+        image: "https://www.dosgames.com/screens/blake.gif",
+        description: "Not that bad at all. This is a game that Apogee released between Wolfenstein 3D and Rise of the Triad. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/bstone.html"
+    },
+    {
+        name: "Blam!",
+        image: "https://www.dosgames.com/screens/bammachinehead.png",
+        description: "Blam! Machinehead is a first-person shooting game where you pilot a hovercraft around a strange world.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/blam.html"
+    },
+    {
         name: "Blood",
         image: "https://ifilex.github.io/WineBOX-Store/box/blood.jpg",
         description: "Blood is a 3D first-person shooter video game developed by Monolith Productions and published by GT Interactive.",
@@ -37,11 +65,32 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/blood.html"
     },
     {
+        name: "Chex Quest",
+        image: "https://upload.wikimedia.org/wikipedia/en/1/12/Chex_Quest-front_cover.png",
+        description: "Chex Quest is an English-language, MS-DOS first-person shooter game released in 1996, where players fight cereal-themed aliens called Flemoids",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/chexquest.html"
+    },
+    {
+        name: "Chub Gam 3D",
+        image: "https://www.dosgames.com/screens/chubgam.gif",
+        description: "While this game has supposedly won many awards (listed on the ChubGamSoft website) I m not a huge fan. It plays well enough and has some interesting graphic/gameplay elements (like an actual storyline, and cutscenes to tell it)",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/chubdc.html"
+    },
+    {
         name: "Corridor 7: Alien Invasion",
         image: "https://archive.org/download/msdos_CORR7_shareware/00_coverscreenshot.jpg",
         description: "CORRIDOR 7: ALIEN INVASION By Capstone SoftwareTechnology Licensed From Id Software Creators Of WOLFENSTEIN 3D",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/corr7.html"
+    },
+    {
+        name: "Dark Forces",
+        image: "https://www.dosgames.com/screens/darkforces.gif",
+        description: "A demo version of one of a simply great 3D shooting game that I missed playing when it was originally released. Also known as Star Wars: Dark Forces, this 3D shooting game does not use the DOOM engine, it uses LucasArts' own engine which includes a few features not seen in DOOM. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/DARKFORCES.html"
     },
     {
         name: "Diablo",
@@ -86,11 +135,18 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/duke3d.html"
     },
     {
-        name: "Final DOOM",
-        image: "https://ifilex.github.io/WineBOX-Store/box/finaldoom.jpg",
-        description: "Final Doom is a first-person shooter video game developed by TeamTNT, and Dario and Milo Casali, and was released by id Software.",
+        name: "Eradicator",
+        image: "https://www.dosgames.com/screens/eradicator.png",
+        description: "Eradicator is a unique FPS from Accolade, who are much better known for their Test Drive series and other non-FPS type games.",
         category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/finaldoom.html"
+        link: "https://ifilex.github.io/WineBOX-Store/duke3d.html"
+    },
+    {
+        name: "Escape from Dr. Colosso",
+        image: "https://www.dosgames.com/screens/drcolosso.png",
+        description: "The story involves a mad doctor who has done bad stuff, and now you need to shoot your way out after being freed by a for some reason malevolent executioner. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/escape.html"
     },
     {
         name: "Grand Theft Auto",
@@ -98,6 +154,13 @@ window.appData = [
         description: "Grand Theft Auto is a famous and most played DOS game that now is available to play in browser.",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/gta.html"
+    },
+    {
+        name: "Gore Galore",
+        image: "https://www.dosgames.com/screens/goregalore.png",
+        description: "Due to the general clunkiness of that GCS, the gameplay here is kinda rough. It's obviously intended to be a Wolfenstein 3D clone, right down to the door-opening sound.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/gore.html"
     },
     {
         name: "Half-life",
@@ -149,6 +212,13 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/mk.html"
     },
     {
+        name: "Mr. Pibb",
+        image: "https://www.dosgames.com/screens/mrpibb.png",
+        description: "Mr. Pibb - The 3D Interactive Game is a 3D shooter FPS type game which is not very good",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/mrpibb.html"
+    },
+    {
         name: "Nightmare 3D",
         image: "https://ifilex.github.io/WineBOX-Store/box/nite3d.jpg",
         description: "Nightmare 3D is a horror-themed shooter where the player explores a spooky mansion filled with monsters, traps, and secret passages. You play as a man trying to rescue his girlfriend from an evil doctor. The game features maze-like levels, spooky music, and enemies like ghosts, skeletons, and robots, combining puzzle-solving with action. It uses raycasting graphics similar to Wolfenstein 3D.",
@@ -160,7 +230,6 @@ window.appData = [
         image: "https://ifilex.github.io/WineBOX-Store/box/openttd.jpg",
         description: "OpenTTD is a business simulation game in which players try to earn money by transporting passengers, minerals and goods via road, rail, water and air. It is an open-source remake and expansion of the 1995 Chris Sawyer video game Transport Tycoon Deluxe.",
         category: "rts",
-        // link: "https://ake.neocities.org/games/openttd/"
         link: "https://pelya.github.io/openttd-touch-webapp/openttd.html"
     },
     {
@@ -169,6 +238,27 @@ window.appData = [
         description: "OpenJKDF2 is a function-by-function reimplementation of DF2 in C, with 64-bit ports to Windows 7+, macOS 10.15+, and Linux.",
        category: "games",
         link: "https://maxthomas.dev/openjkdf2/"
+    },
+    {
+        name: "Operation Body Count",
+        image: "https://www.dosgames.com/screens/bodycount.gif",
+        description: "OpenJKDF2 is a function-by-function reimplementation of DF2 in C, with 64-bit ports to Windows 7+, macOS 10.15+, and Linux.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/bcount.html"
+    },
+    {
+        name: "Out of this World",
+        image: "https://www.classicdosgames.com/images/screenshots/tandy09/Out_of_This_World.png",
+        description: "Out of this world game most commonly refers to the 1991 cinematic platformer video game, which was also known as Another World. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/out.html"
+    },
+    {
+        name: "Powerslave",
+        image: "https://www.dosgames.com/screens/pslave.gif",
+        description: "Powerslave (also known as Exhumed) is a FPS built using the Build engine (an the engine used to create Duke Nukem 3D).",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/powerslave.html"
     },
     {
         name: "Quake",
@@ -192,6 +282,13 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/quarantine.html"
     },
     {
+        name: "Robod",
+        image: "https://www.dosgames.com/screens/robod.png",
+        description: "Robod is a 3D-perspective action game similar to Wolfenstein-3D or Blake Stone except that it was made over 22 years after those games",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/robod.html"
+    },
+    {
         name: "Skynet",
         image: "https://ifilex.github.io/WineBOX-Store/box/skynet.jpeg",
         description: "SkyNET is a sci-fi action game where players fight as part of the human resistance against Skynet's machines in a post-apocalyptic future. It features open 3D environments, vehicle driving, and missions centered around sabotaging Skynet's operations. It was known for its advanced graphics at the time and served as a sequel or expansion to Terminator: Future Shock.",
@@ -204,6 +301,41 @@ window.appData = [
         description: "Space Quest: Chapter I - The Sarien Encounter is a graphic adventure game, created by Scott Murphy and Mark Crowe.",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/spaceq.html"
+    },
+    {
+        name: "Strife",
+        image: "https://www.dosgames.com/screens/strife.gif",
+        description: "Strife is one of the best 3D shooting game's that you've likely never heard of. This demo version showcases some of the great gameplay and features that you'll find in the full version, if you're able to find it anywhere ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/strife.html"
+    },
+    {
+        name: "Thanatos 3D",
+        image: "https://www.dosgames.com/screens/thanatos3d.png",
+        description: "Thanatos 3D is an obscure FPS that was released in 1998. For reference, this is five years after DOOM, and two years after Quake.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/thanatos.html"
+    },
+    {
+        name: "Terror in Christmas Town",
+        image: "https://www.dosgames.com/screens/termrampage.gif",
+        description: "Ever felt the need to rescue a kidnapped elf who has been captured by a evil polar bear? No, me neither. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/terror.html"
+    },
+    {
+        name: "Terminal Velocity",
+        image: "https://www.dosgames.com/screens/tv.gif",
+        description: "It takes a little while to get used to, but this flying/shooting game (sort of like Decent, but more out in the open) can be really fun to play.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/tv.html"
+    },
+    {
+        name: "Terminator: Rampage",
+        image: "https://www.dosgames.com/screens/termrampage.gif",
+        description: "Terminator: Rampage is a 3D shooting game from Bethesda, one of several in their early/mid 90's line of Terminator FPS games. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/ramdemo.html"
     },
     {
         name: "Test Drive",
@@ -227,13 +359,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/tombrider.html"
     },
     {
-        name: "Ultimate DOOM",
-        image: "https://ifilex.github.io/WineBOX-Store/box/ultimate.jpg",
-        description: "This is an updated release of the original DOOM called THE ULTIMATE DOOM. THE ULTIMATE DOOM was released in late 1993 which is months before DOOM II came out.",
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/ultimatedoom.html"
-    },
-    {
         name: "WASM-4",
         image: "https://wasm4.org/img/logo.png",
         description: "Build retro games using WebAssembly for a fantasy console.",
@@ -253,6 +378,13 @@ window.appData = [
         description: "Wolfenstein 3D under the DOOM world.",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/wolfdoom.html"
+    },
+    {
+        name: "Wrath of Earth",
+        image: "https://www.dosgames.com/screens/woe.png",
+        description: "Wrath of Earth is a fairly obscure FPS with a sci-fi theme. It bears similarities to the Apogee FPS Blake Stone as well as some stylistic influences from the popular Mac game Marathon. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/wrath.html"
     },
     {
         name: "Wing Commander",
@@ -388,55 +520,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/clock.html"
     },
     {
-        name: "Console Living Room: Atari 2600",
-        image: "https://ia600200.us.archive.org/3/items/atari_2600_library/atari_2600_library_itemimage.jpg",
-        description: "The Atari 2600 is a video game console released in September 1977 by Atari, Inc. It is credited with popularizing the use of microprocessor-based hardware and ROM cartridges containing game code, a format first used with the Fairchild Channel F, instead of having non-microprocessor dedicated hardware with all games built in.",
-        category: "utilities",
-        link: "https://archive.org/details/atari_2600_library"
-    },
-    {
-        name: "Console Living Room: Atari 7800",
-        image: "https://ia802809.us.archive.org/25/items/atari_7800_library/atari_7800_library_itemimage.jpg",
-        description: "A victim of unfortunate timing, the 7800 was released shortly before the great video game crash of 1983. Re-launched by Atari in 1986 as a competitor to the Nintendo Entertainment System and Sega Master System, the Atari 7800 was backwards compatible with original Atari 2600 titles.",
-        category: "utilities",
-        link: "https://archive.org/details/atari_7800_library"
-    },
-    {
-        name: "Console Living Room: Emerson Arcadia",
-        image: "https://ia801309.us.archive.org/1/items/emerson_arcadia_library/emerson_arcadia_library_itemimage.jpg",
-        description: "The Emerson Arcadia 2001 is a second-generation 8-bit console released by Emerson Radio Corp in 1982 following the release of ColecoVision. It was discontinued only 18 months later, with a total of 35 games having been released. Emerson licensed the Arcadia 2001 to Bandai which released it in Japan, and over 30 Arcadia clones exist.",
-        category: "utilities",
-        link: "https://archive.org/details/emerson_arcadia_library"
-    },
-    {
-        name: "Console Living Room: Sega Game Gear",
-        image: "https://ia800906.us.archive.org/30/items/gamegear_library/gamegear_library_itemimage.jpg",
-        description: "The Sega Game Gear is a handheld video game console developed by Sega and released in late 1990 as a response to Nintendo's Game Boy handheld .",
-        category: "utilities",
-        link: "https://archive.org/details/gamegear_library"
-    },
-    {
-        name: "Console Living Room: Sega Genesis/32X",
-        image: "https://ia800308.us.archive.org/25/items/softwarelibrary_amiga_applications/softwarelibrary_amiga_applications_itemimage.jpg",
-        description: "The Sega Genesis, known as Mega Drive in most regions outside North America, is a 16-bit video game console which was developed and sold by Sega Enterprises, Ltd. The Genesis is Sega's third console and the successor to the Master System",
-        category: "utilities",
-        link: "https://archive.org/details/sega_genesis_library"
-    },
-    {
-        name: "Console Living Room: Socrates",
-        image: "https://ia800908.us.archive.org/10/items/socrates_library/socrates_library_itemimage.jpg",
-        description: "The VTech Socrates was an educational video game console released in 1988 by VTech. The console featured a robot character Socrates, named after the philosopher. The character is visually similar to Johnny Five from the Short Circuit movies. ",
-        category: "utilities",
-        link: "https://archive.org/details/socrates_library"
-    },
-    {
-        name: "Console Living Room: Playstation (PSX)",
-        image: "https://ia803106.us.archive.org/12/items/psxgames/psxgames_itemimage.jpg",
-        description: "PlayStation is a gaming brand that consists of four home video game consoles, as well as a media center, an online service, a line of controllers, two handhelds and a phone, as well as multiple magazines. It is created and owned by Sony Interactive Entertainment since December 3, 1994, with the launch of the original PlayStation in Japan. ",
-        category: "utilities",
-        link: "https://archive.org/details/psxgames"
-    },
-    {
         name: "Control",
         image: "https://ifilex.github.io/WineBOX-Store/box/control.png",
         description: "The Windows Control Panel is a tool that allows users to adjust system settings and customize hardware and software options.",
@@ -498,13 +581,6 @@ window.appData = [
         description: "Haiku, originally OpenBeOS, is a free and open-source operating system for personal computers. It is a community-driven continuation of BeOS and aims to be binary-compatible with it, but is largely a reimplementation with the exception of certain components like the Deskbar",
         category: "apps",
         link: "https://copy.sh/v86/?profile=haiku"
-    },
-    {
-        name: "Hyper Card",
-        image: "https://archive.org/download/H2G2_HyperCard/H2G2_001_.jpg",
-        description: "HyperCard \"expanded book\" version of the Hitchhiker's Guide To The Galaxy Trilogy of Four (released before Mostly Harmless was written). Published by The Voyager Company in December 1991. See attached image files for scans of packaging.",
-        category: "utilities",
-        link: "https://archive.org/embed/H2G2_HyperCard"
     },
     {
         name: "Icaros Desktop",
@@ -689,6 +765,13 @@ window.appData = [
         link: "https://copy.sh/v86/?profile=serenity"
     },
     {
+        name: "Shadow Warrior",
+        image: "https://www.dosgames.com/screens/shadwar.gif",
+        description: "Created using the Build engine (the same software the Duke Nukem 3D was created with), Shadow Warrior was largely ignored upon its release due to the fact that Quake has been released the year before, with superior graphics and gameplay enhancements (true 3D environments).",
+       category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/shadow.html"
+    },
+    {
         name: "Shell",
         image: "https://ifilex.github.io/WineBOX-Store/box/shell.png",
         description: "Command Prompt is a WineBOX command-line interpreter that allows users to execute commands, automate tasks, and manage system functions through text-based input.",
@@ -724,32 +807,18 @@ window.appData = [
         link: "https://copy.sh/v86/?profile=syllable"
     },
     {
+        name: "Tekwar",
+        image: "https://www.dosgames.com/screens/tekwar.gif",
+        description: "William Shatner's Tekwar is a game based on the series of books written by Captain Kirk himself.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/tekwar.html"
+    },
+    {
         name: "TexWorks",
         image: "https://ifilex.github.io/WineBOX-Store/box/texworks.jpg",
         description: "A simple (La)TeX editor and PDF previewer that is available on all major desktop operating systems.",
         category: "apps",
         link: "https://ifilex.github.io/WineBOX-Store/texworks.html"
-    },
-    {
-        name: "The Software Library: Atari Computer",
-        image: "https://ia600101.us.archive.org/9/items/softwarelibrary_atari/softwarelibrary_atari_itemimage.jpg",
-        description: "The Atari 8-bit family is a series of 8-bit home computers introduced by Atari, Inc. in 1979 and manufactured until 1992. All are based on the MOS Technology 6502 CPU running at 1.79 MHz, roughly twice that of similar designs, and were the first home computers designed with custom co-processor chips.",
-        category: "utilities",
-        link: "https://archive.org/details/softwarelibrary_atari"
-    },
-    {
-        name: "The Software Library: Atari ST Games",
-        image: "https://ia801406.us.archive.org/24/items/softwarelibrary_atari_st_games/__ia_thumb.jpg",
-        description: "Games for the Atari ST.",
-        category: "utilities",
-        link: "https://archive.org/details/softwarelibrary_atari_st_games"
-    },
-    {
-        name: "The Software Library: MS-DOS",
-        image: "https://ia801606.us.archive.org/32/items/softwarelibrary_msdos/softwarelibrary_msdos_itemimage.jpg",
-        description: "MS-DOS is an operating system for x86-based personal computers mostly developed by Microsoft. It was the most commonly used member of the DOS family of operating systems, and was the main operating system for IBM PC compatible personal computers during the 1980s to the mid-1990s.",
-        category: "utilities",
-        link: "https://archive.org/details/softwarelibrary_msdos"
     },
     {
         name: "Tilck",
@@ -799,6 +868,13 @@ window.appData = [
         description: "VirtualDub is a video capture/processing utility for 32-bit and 64-bit Windows platforms (98/ME/NT4/2000/XP/Vista/7), licensed under the GNU General Public.",
         category: "utilities",
         link: "https://ifilex.github.io/WineBOX-Store/virtualdub.html"
+    },
+    {
+        name: "Web Browser",
+        image: "https://ifilex.github.io/WineBOX-Store/box/web.png",
+        description: "A very small and basic web Browser for WineBOX for see smalls webs",
+        category: "apps",
+        link: "https://ifilex.github.io/WineBOX-Store/edge.html"
     },
     {
         name: "WebRcade",
@@ -855,6 +931,13 @@ window.appData = [
         description: "5 Days A Stranger is a horror-themed point-and-click adventure game using the Adventure Game Studio (AGS) development kit.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/5daysdos.html"
+    },
+    {
+        name: "Agi Tetris",
+        image: "https://wiki.scummvm.org/images/e/e1/AGIWiki_tetris1a.png",
+        description: "AGI Tetris is a version of Tetris released as part of the 0 MS-DOS Classic Games collection.",   
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/tetris.html"
     },
     {
         name: "Arkanoid",
@@ -927,6 +1010,13 @@ window.appData = [
         link: "https://www.jamesfmackenzie.com/chocolatekeen/"
     },
     {
+        name: "Cristal Caves",
+        image: "https://upload.wikimedia.org/wikipedia/en/c/cf/Crystal_Caves_CD_Cover.jpg",
+        description: "Crystal Caves is a side-scrolling platform game developed by Apogee Software for MS-DOS, in which the player controls Mylo on a treasure hunt that goes wrong and leads him into a world of alien technology, traps, and creatures.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/crystal.html"
+    },
+    {
         name: "Dave",
         image: "https://ifilex.github.io/WineBOX-Store/box/dave.jpg",
         description: "Dangerous Dave in the Haunted Mansion is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Dangerous Dave in the Haunted Mansion on mobile.",
@@ -939,6 +1029,20 @@ window.appData = [
         description: "Disney's Aladdin is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Disney's Aladdin on mobile.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/aladdin.html"
+    },
+    {
+        name: "Doom 2D",
+        image: "https://www.dosgames.com/screens/doom2d.png",
+        description: "First of all, if you're looking for the real 3D DOOM game from id Software, the game on this page is not by id Software and certainly not endorsed by them!",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/doom2d.html"
+    },
+    {
+        name: "Dyna Blaster",
+        image: "https://upload.wikimedia.org/wikipedia/en/3/31/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
+        description: "Refers to the European title for certain games in the Bomberman franchise, such as the TurboGrafx-16/PC Engine version",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/dyna.html"
     },
     {
         name: "Ecstatica",
@@ -960,6 +1064,13 @@ window.appData = [
         description: "🐦 🎮 A MelonJS port of the famous Flappy Bird Game",
        category: "arcade",
         link: "http://ellisonleao.github.io/clumsy-bird/"
+    },
+    {
+        name: "Incredible Machine",
+        image: "https://cdn.mobygames.com/4e049778-5a53-11ee-a0a7-02420a0001cf.webp*********",
+        description: "The objective of the game is to create Rube Goldberg machines by arranging collections of objects in a complex fashion, so as to perform some simple task",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/machine.html"
     },
     {
         name: "Hextris",
@@ -1030,6 +1141,13 @@ window.appData = [
         description: "Remake of the original Pacman game. ... This Pac-Lite is not designed to run on your device. Add it to a collection to play later, or you can try to run it ...",
         category: "arcade",
         link: "https://fosiper.com/games/pacman-lite/"
+    },
+    {
+        name: "Prince of persia",
+        image: "https://ifilex.github.io/WineBOX-Store/box/prince.jpg",
+        description: "Prince of Persia: Is a clasic platform game.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/princeofpersia.html"
     },
     {
         name: "Prince of persia 2",
@@ -1116,6 +1234,13 @@ window.appData = [
         link: "https://fosiper.com/games/tower/"
     },
     {
+        name: "Wizardry: Crusaders of the Dark Savant",
+        image: "https://www.alexanderfreed.com/wp/wp-content/uploads/2013/11/w7-introscreen-624x468.png",
+        description: "Crusaders of the Dark Savant is a classic role-playing game published by Sir-Tech, celebrated for its rich storyline and strategic depth.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/wizardry.html"
+    },
+    {
         name: "XBill",
         image: "https://ifilex.github.io/WineBOX-Store/box/xbill.webp",
         description: "XBill is an arcade style game for the X Window System. The game features a bespectacled character known as Bill.",
@@ -1149,13 +1274,6 @@ window.appData = [
         description: "The canonical ending of Heroes I results in Lord Morglin Ironfist's victory. In the following years, he has successfully unified the continent of Enroth and secured his rule as king.",
         category: "rts",
         link: "https://dos.zone/heroes-of-might-and-magic-ii/"
-    },
-    {
-        name: "Battle Chess",
-        image: "https://ia801400.us.archive.org/21/items/BattleChessMacintosh/00_coverscreenshot.png",
-        description: "Battle Chess is a quite typical chess game, but it comes with a twist: all pieces are represented by small, realistic figures that walk around on the chessboard, and when one piece takes another, they both take part in an animated battle. There is a different animation for each permutation, depending on which pieces are capturing or being captured. You can also play in 2D without animation.",
-        category: "rts",
-        link: "https://archive.org/embed/BattleChessMacintosh"
     },
     {
         name: "Command & Conquer",
