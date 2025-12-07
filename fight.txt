@@ -1,0 +1,149 @@
+{
+    "version": 2,
+    "layers": [
+        {
+            "grid": "square",
+            "title": "Layer#0",
+            "controls": [
+                {
+                    "row": 0,
+                    "column": 9,
+                    "symbol": "⚙",
+                    "type": "Options"
+                },
+                {
+                    "row": 4,
+                    "column": 1,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 1,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 0,
+                    "symbol": "←",
+                    "type": "Key",
+                    "mapTo": [
+                        263
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 2,
+                    "symbol": "→",
+                    "type": "Key",
+                    "mapTo": [
+                        262
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 1,
+                    "type": "NippleActivator",
+                    "symbol": "◯"
+                },
+                {
+                    "row": 0,
+                    "column": 0,
+                    "symbol": "⏎",
+                    "type": "Key",
+                    "mapTo": [
+                        257
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 1,
+                    "symbol": "␛",
+                    "type": "Key",
+                    "mapTo": [
+                        256
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 7,
+                    "symbol": "A",
+                    "type": "Key",
+                    "mapTo": [
+                        341
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 8,
+                    "symbol": "B",
+                    "type": "Key",
+                    "mapTo": [
+                        341
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 9,
+                    "symbol": "leftshift",
+                    "type": "Key",
+                    "mapTo": [
+                        340
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 8,
+                    "symbol": "f1",
+                    "type": "Key",
+                    "mapTo": [
+                        290
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 0,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 2,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 0,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 2,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264
+                    ]
+                }
+            ]
+        }
+    ]
+}
