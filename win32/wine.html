@@ -11,7 +11,7 @@
     		<script src="lib/jquery-1.8.0.min.js" type="text/javascript"></script>
     		<script src="lib/jquery-ui-1.8.23.min.js" type="text/javascript"></script>
 
-    <!-- Estilos del teclado virtual - VERSIÓN COMPACTA -->
+    <!-- Estilos del teclado virtual - VERSIÓN COMPACTA A 20px -->
     <style>
         * {
             margin: 0;
@@ -21,7 +21,7 @@
 
         .virtual-keyboard-container {
             position: fixed;
-            bottom: 40px; /* Aparece 40px arriba del fondo */
+            bottom: 20px; /* Cambiado de 40px a 20px */
             left: 0;
             right: 0;
             background: rgba(15, 15, 35, 0.98);
@@ -33,9 +33,9 @@
             border-bottom: none;
             z-index: 10000;
             display: none;
-            max-height: 200px; /* Altura máxima compacta */
+            max-height: 200px;
             overflow: hidden;
-            width: 100%; /* Ocupa todo el ancho */
+            width: 100%;
         }
 
         .keyboard-header {
@@ -84,7 +84,7 @@
             border: none;
             border-radius: 4px;
             padding: 6px 0;
-            min-width: 6%; /* Porcentaje para adaptarse al ancho */
+            min-width: 6%;
             height: 35px;
             cursor: pointer;
             transition: all 0.1s ease;
@@ -99,7 +99,7 @@
                 0 3px 5px rgba(0, 0, 0, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             user-select: none;
-            flex: 1; /* Las teclas se expanden para llenar el espacio */
+            flex: 1;
             margin: 0 1px;
         }
 
@@ -162,7 +162,7 @@
 
         /* Estilos para cuando el teclado está activo */
         .keyboard-active #canvas {
-            margin-bottom: 220px;
+            margin-bottom: 200px; /* Cambiado de 220px a 200px */
             transition: margin-bottom 0.3s ease;
         }
 
@@ -403,8 +403,8 @@
                 } else {
                     keyboard.style.display = 'block';
                     document.body.classList.add('keyboard-active');
-                    // Asegurar que el teclado esté 40px arriba del fondo
-                    keyboard.style.bottom = '40px';
+                    // Asegurar que el teclado esté 20px arriba del fondo
+                    keyboard.style.bottom = '20px'; // Cambiado de 40px a 20px
                 }
             }
 
@@ -417,7 +417,7 @@
                     // Mostrar teclado cuando se muestra la consola
                     const keyboard = document.getElementById('virtualKeyboard');
                     keyboard.style.display = 'block';
-                    keyboard.style.bottom = '40px';
+                    keyboard.style.bottom = '20px'; // Cambiado de 40px a 20px
                     document.body.classList.add('keyboard-active');
                 } else {
                     consoleEl.style.display = 'none';
@@ -599,7 +599,7 @@
                 show: function() {
                     const keyboard = document.getElementById('virtualKeyboard');
                     keyboard.style.display = 'block';
-                    keyboard.style.bottom = '40px';
+                    keyboard.style.bottom = '20px'; // Cambiado de 40px a 20px
                     document.body.classList.add('keyboard-active');
                 },
                 hide: function() {
