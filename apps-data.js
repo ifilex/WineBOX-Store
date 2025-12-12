@@ -1,5 +1,3 @@
-var appData = window.appData;
-
 window.appData = [
     {
         name: "Absence",
@@ -37,6 +35,13 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/a3dsw100.html"
     },
     {
+        name: "Battle Arena Toshinden",
+        image: "https://www.dosgames.com/screens/toshinden.png",
+        description: "Battle Arena Toshinden is a well-known Playstation 1 3D fighting game. It was one of the first games I bought for my PS1.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/tsd.html"
+    },
+    {
         name: "Beneath a Steel Sky",
         image: "https://dos.zone/images/http/original/2X/1/17a6a4cefe9263feb3c0049c98f4ae45082a9933.png/60313c7fa88f998977e0852a5f661711.webp",
         description: "Beneath a Steel Sky is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Beneath a Steel Sky on mobile. On DOS.Zone Beneath a Steel Sky available to play for free without registration.",
@@ -65,11 +70,25 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/blood.html"
     },
     {
+        name: "Brutal: Paws of Fury",
+        image: "https://www.myabandonware.com/media/screenshots/b/brutal-paws-of-fury-2qy/thumbs/brutal-paws-of-fury_1.png",
+        description: "Brutal: Paws of Fury is a one-on-one fighting game in the style of Street Fighter and other similar fighting games from the 90's. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/brutal.html"
+    },
+    {
         name: "Chex Quest",
         image: "https://upload.wikimedia.org/wikipedia/en/1/12/Chex_Quest-front_cover.png",
         description: "Chex Quest is an English-language, MS-DOS first-person shooter game released in 1996, where players fight cereal-themed aliens called Flemoids",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/chexquest.html"
+    },
+    {
+        name: "Cham: The Rift",
+        image: "https://www.dosgames.com/screens/chasm.png",
+        description: "This surprisingly good 3D shooting game (the demo is downloadable here) is, in terms of technical things like graphics, somewhere between DOOM and Quake.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/cham.html"
     },
     {
         name: "Chub Gam 3D",
@@ -90,7 +109,14 @@ window.appData = [
         image: "https://www.dosgames.com/screens/darkforces.gif",
         description: "A demo version of one of a simply great 3D shooting game that I missed playing when it was originally released. Also known as Star Wars: Dark Forces, this 3D shooting game does not use the DOOM engine, it uses LucasArts' own engine which includes a few features not seen in DOOM. ",
         category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/DARKFORCES.html"
+        link: "https://ifilex.github.io/WineBOX-Store/darkforces.html"
+    },
+    {
+        name: "Destruction Derby",
+        image: "https://www.dosgames.com/screens/destructionderby.png",
+        description: "Destruction Derby plays pretty much as you would expect: Crash your car into your opponents' cars, trying to cause as much damage to them as possible, while avoiding damage yourself.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/derby.html"
     },
     {
         name: "Diablo",
@@ -98,6 +124,13 @@ window.appData = [
         description: "Diablo is an action role-playing dungeon crawler video game series developed by Blizzard North and continued by Blizzard Entertainment after the North studio shut down in 2005.",
         category: "games",
         link: "https://d07riv.github.io/diabloweb/"
+    },
+    {
+        name: "Death Rally",
+        image: "https://www.dosgames.com/screens/deathrally.gif",
+        description: "Top-down racing games are sort of a sub-genre of the larger racing genre, and Death Rally is a good example of how to do things right. Sort of like Super Sprint with more destruction.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/rally.html"
     },
     {
         name: "Descent II",
@@ -114,20 +147,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/doom.html"
     },
     {
-        name: "Doom II",
-        image: "https://ifilex.github.io/WineBOX-Store/box/doom2.jpg",
-        description: "*Doom* is a first-person shooter game released in 1993, developed by id Software. Players take on the role of a space marine battling hordes of demons and hellish creatures in a Martian base. It's renowned for its fast-paced action, groundbreaking graphics for its time, and for being one of the pioneers of the FPS genre.",
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/doom2.html"
-    },
-    {
-        name: "Doom 3",
-        image: "https://www.continuation-labs.com/projects/d3wasm/img/SC1.jpg",
-        description: "*Doom* is a first-person shooter game released developed by id Software.", 
-       category: "games",
-        link: "http://wasm.continuation-labs.com/d3demo/"
-    },
-    {
         name: "Duke Nukem 3D",
         image: "https://ifilex.github.io/WineBOX-Store/box/duke3d.webp",
         description: "Duke Nukem 3D is a first-person shooter video game developed by 3D Realms.",
@@ -139,7 +158,7 @@ window.appData = [
         image: "https://www.dosgames.com/screens/eradicator.png",
         description: "Eradicator is a unique FPS from Accolade, who are much better known for their Test Drive series and other non-FPS type games.",
         category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/duke3d.html"
+        link: "https://ifilex.github.io/WineBOX-Store/erad.html"
     },
     {
         name: "Escape from Dr. Colosso",
@@ -147,13 +166,6 @@ window.appData = [
         description: "The story involves a mad doctor who has done bad stuff, and now you need to shoot your way out after being freed by a for some reason malevolent executioner. ",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/escape.html"
-    },
-    {
-        name: "Grand Theft Auto",
-        image: "https://ifilex.github.io/WineBOX-Store/box/gta.jpg",
-        description: "Grand Theft Auto is a famous and most played DOS game that now is available to play in browser.",
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/gta.html"
     },
     {
         name: "Gore Galore",
@@ -184,6 +196,13 @@ window.appData = [
         link: "https://attogram.github.io/HexGL-lite/"
     },
     {
+        name: "Hexen",
+        image: "https://www.dosgames.com/screens/hexen.gif",
+        description: "The sequel to the popular Heretic game, Hexen takes the Heretic engine and adds some notable improvements, like weather effects, breakable environments, roleplaying elements and less linear gameplay.", 
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/hexen.html"
+    },
+    {
         name: "Hurl",
         image: "https://ifilex.github.io/WineBOX-Store/box/hurl.jpg",
         description: "H.U.R.L. (Humans Under Robot Law) is a kid-friendly first-person shooter for MS-DOS where players throw soap, water balloons, and deodorant to clean up trash-throwing animals and robots. Instead of violence, the game focuses on hygiene and features colorful, cartoon-style graphics.",
@@ -194,7 +213,7 @@ window.appData = [
         name: "Indianapolis 500: The Simulation",
         image: "https://ifilex.github.io/WineBOX-Store/box/indi.jpg",
         description: "Indianapolis 500: The Simulation is a 1989 computer game for MS-DOS. It was hailed as the first step of differentiating racing games from the arcade realm and into racing simulation.",
-        category: "rts",
+        category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/indi.html"
     },
     {
@@ -203,13 +222,6 @@ window.appData = [
         description: "An IPTV media player is an application that streams live TV, video-on-demand, and online channels via IPTV protocols, offering playlist support, EPG integration, and customizable viewing options.",
         category: "multimedia",
         link: "https://ifilex.github.io/WineBOX-Store/multimedia.html"
-    },
-    {
-        name: "Mortal Kombat",
-        image: "https://ifilex.github.io/WineBOX-Store/box/mk.jpg",
-        description: "Mortal Kombat is a fighting game in which players battle opponents in one-on-one matches. The player that depletes the opponent's health bar first wins",
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/mk.html"
     },
     {
         name: "Mr. Pibb",
@@ -222,8 +234,15 @@ window.appData = [
         name: "Nightmare 3D",
         image: "https://ifilex.github.io/WineBOX-Store/box/nite3d.jpg",
         description: "Nightmare 3D is a horror-themed shooter where the player explores a spooky mansion filled with monsters, traps, and secret passages. You play as a man trying to rescue his girlfriend from an evil doctor. The game features maze-like levels, spooky music, and enemies like ghosts, skeletons, and robots, combining puzzle-solving with action. It uses raycasting graphics similar to Wolfenstein 3D.",
-        category: "rts",
+        category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/nite3d.html"
+    },
+    {
+        name: "One Must Fall 2097",
+        image: "https://www.dosgames.com/screens/omf2097.gif",
+        description: "One Must Fall 2097 is a futuristic one-on-one fighting game in the style of other popular fighting games of the time such as Street Fighter II, Mortal Kombat, and numerous others. ",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/omf.html"
     },
     {
         name: "Open TTD",
@@ -261,6 +280,13 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/powerslave.html"
     },
     {
+        name: "Pray for Death",
+        image: "https://www.dosgames.com/screens/prayfordeath.png",
+        description: "Pray for Death is a one-on-one fighting game which tries to transfer some of the excitement from arcade beat-em-ups like the popular Street Fighter II, Mortal Kombat, and in this case perhaps most directly Killer Instinct games to the PC platform.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/pfd.html"
+    },
+    {
         name: "Quake",
         image: "https://ifilex.github.io/WineBOX-Store/box/quake.jpg",
         description: "Play legendary Quake game in browser without registration and ads. You can play orginal game as well as Scourge of Armagon and Dissolution of Eternity",
@@ -282,11 +308,32 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/quarantine.html"
     },
     {
+        name: "Rise of the triad",
+        image: "https://ifilex.github.io/WineBOX-Store/box/rise.webp",
+        description: "Rise of the Triad: Dark War is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Rise of the Triad: Dark War on mobile. On DOS.Zone Rise of the Triad: Dark War available to play for free without registration.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/rise.html"
+    },
+    {
         name: "Robod",
         image: "https://www.dosgames.com/screens/robod.png",
         description: "Robod is a 3D-perspective action game similar to Wolfenstein-3D or Blake Stone except that it was made over 22 years after those games",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/robod.html"
+    },
+    {
+        name: "Sango Fighter",
+        image: "https://www.dosgames.com/screens/sango.gif",
+        description: "Sango Fighter is a game that looks better than it actually plays. Inspired by the extremely popular Street Fighter series of games.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/sango.html"
+    },
+    {
+        name: "Sango Fighter 2",
+        image: "https://www.dosgames.com/screens/sango2.gif",
+        description: "Sango Fighter 2 is more of an updated and improved remake of the original than it is a totally new game. Like the first game, it's a one-on-one fighting game just like another much more well-known fighting game",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/sango.html"
     },
     {
         name: "Skynet",
@@ -308,6 +355,13 @@ window.appData = [
         description: "Strife is one of the best 3D shooting game's that you've likely never heard of. This demo version showcases some of the great gameplay and features that you'll find in the full version, if you're able to find it anywhere ",
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/strife.html"
+    },
+    {
+        name: "Super Street Fighter II Turbo",
+        image: "https://www.dosgames.com/screens/ssf2t.png",
+        description: "Street Fighter II first came to DOS PCs in 1992, with an absolutely terrible port of the original game Street Fighter II: The World Warrior.",
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/ss2.html"
     },
     {
         name: "Thanatos 3D",
@@ -359,13 +413,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/tombrider.html"
     },
     {
-        name: "WASM-4",
-        image: "https://wasm4.org/img/logo.png",
-        description: "Build retro games using WebAssembly for a fantasy console.",
-        category: "games",
-        link: "https://wasm4.org/play"
-    },
-    {
         name: "Wolfenstein 3D",
         image: "https://ifilex.github.io/WineBOX-Store/box/wolf3d.jpg",
         description: "Wolfenstein 3D is a first-person shooter video game developed by id Software and published by Apogee Software and FormGen.",
@@ -399,6 +446,27 @@ window.appData = [
         description: "The source code for the classic PSX launch title wipEout was leaked in 2022. A few month ago I finally sat down to take a look at it.",
         category: "games",
         link: "https://phoboslab.org/wipegame/"
+    },
+    {
+        name: "Xenophage: Alien BloodSport",
+        image: "https://www.dosgames.com/screens/xenophage.gif",
+        description: " this game certainly has the looks of a great game, but IMHO falls a bit short in the gameplay department.",
+        category: "games",        
+         link: "https://ifilex.github.io/WineBOX-Store/xeno.html"
+    },
+    {
+        name: "X-Men: Children of the Atom",
+        image: "https://www.dosgames.com/screens/xmen.png",
+        description: "X-Men: Children of the Atom is a port of the one-on-one Street Fighter 2-style fighting game featuring characters from Marvel's X-Men comics.",
+        category: "games",        
+         link: "https://ifilex.github.io/WineBOX-Store/xmen.html"
+    },
+    {
+        name: "4D BOXING",
+        image: "https://www.dosgames.com/screens/4dboxing.gif",
+        description: "4D Boxing attempts to recreate the sport of boxing more accurately than a lot of popular computer or arcade game based on the sport.",
+        category: "games",        
+         link: "https://ifilex.github.io/WineBOX-Store/4dbox.html"
     },
     {
         name: "Youtube",
@@ -562,13 +630,6 @@ window.appData = [
         link: "https://copy.sh/v86/?profile=fiwix"
     },
     {
-        name: "Game Play Color",
-        image: "https://gameplaycolor.com/images/ss_colors.png",
-        description: "A fast Game Color Emulator",
-        category: "utilities",
-        link: "https://app.gameplaycolor.com/"
-    },
-    {
         name: "JPEGView",
         image: "https://ifilex.github.io/WineBOX-Store/box/jpegview.jpg",
         description: "JPEGView is a lean, fast and highly configurable viewer/editor for JPEG, BMP, PNG, WEBP, TGA, GIF and TIFF images with a minimal GUI.",
@@ -639,13 +700,6 @@ window.appData = [
         link: "https://copy.sh/v86/?profile=netbsd"
     },
     {
-        name: "N64 WASM",
-        image: "https://cdn.mos.cms.futurecdn.net/L92cEFyKLJtkGwt4x42kQn-970-80.jpg.webp",
-        description: "Nintendo 64 emulator in WASM format.",
-       category: "utilities",
-        link: "https://www.neilb.net/n64wasm/"
-    },
-    {
         name: "Neopaint",
         image: "https://dn721603.ca.archive.org/0/items/neopaintv10DOS/screen-000207.jpg",
         description: "NeoPaint 3.1 - A complete image editing/paint program for DOS! Includes powerful features and naturalistic tools (such as oil and water colors) usually found only in more costly apps.", 
@@ -702,6 +756,13 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/paint.html"
     },
     {
+        name: "Program Manager",
+        image: "https://ifilex.github.io/WineBOX-Store/box/progman.png",
+        description: "Program Manager is a graphical shell for managing applications and program groups in WineBOX. It allows users to organize, launch, and customize software shortcuts within a windowed interface.",
+        category: "apps",
+        link: "progman.html"
+    },
+    {
         name: "QNX 4.05",
         image: "https://upload.wikimedia.org/wikipedia/en/e/e0/QNX_6.4.1_screenshot.png",
         description: "QNX is a commercial Unix-like real-time operating system, aimed primarily at the embedded systems market.",
@@ -714,13 +775,6 @@ window.appData = [
         description: "OpenBSD is a security-focused, free software, Unix-like operating system based on the Berkeley Software Distribution (BSD). Theo de Raadt created OpenBSD in 1995 by forking NetBSD 1.0. The OpenBSD project emphasizes portability, standardization, correctness, proactive security, and integrated cryptography.",
         category: "apps",
         link: "https://copy.sh/v86/?profile=openbsd"
-    },
-    {
-        name: "Program Manager",
-        image: "https://ifilex.github.io/WineBOX-Store/box/progman.png",
-        description: "Program Manager is a graphical shell for managing applications and program groups in WineBOX. It allows users to organize, launch, and customize software shortcuts within a windowed interface.",
-        category: "apps",
-        link: "https://winebox.cloud/progman.html"
     },
     {
         name: "QBasic 4.5",
@@ -877,20 +931,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/edge.html"
     },
     {
-        name: "WebRcade",
-        image: "https://docs.webrcade.com/assets/images/platforms/ios/safari-full.png",
-        description: "WebЯcade consists of an intuitive web-based front end (the webЯcade player) that enables playing popular gaming content entirely within the context of the browser across a wide variety of platforms",
-        category: "utilities",
-        link: "https://play.webrcade.com/"
-    },
-    {
-        name: "WebRetro",
-        image: "https://images.icon-icons.com/1381/PNG/512/retroarch_93655.png",
-        description: "RetroArch ported to WebAssembly with emscripten.",
-        category: "utilities",
-        link: "https://binbashbanana.github.io/webretro/"
-    },
-    {
         name: "WineZIP",
         image: "https://ifilex.github.io/WineBOX-Store/box/winezip.png",
         description: "WineZip is an application that creates ZIP packages for installing Windows programs within WineBOX. It simplifies software deployment by packaging executable files and dependencies for seamless installation and execution.",
@@ -919,18 +959,18 @@ window.appData = [
         link: "https://copy.sh/v86/?profile=xcom"
     },
     {
-        name: "Xide",
-        image: "https://xide.nullprime.com/nullprime-logo.jpg",
-        description: "An online x86 assembly IDE, containing the Netwide Assembler (NASM), the Advanced Fullscreen Debugger (AFD) and em-dosbox (a WASM port of the DOSBox Emulator)",
-       category: "apps",
-        link: "https://xide.nullprime.com/"
-    },
-    {
         name: "5 Days a Stranger",
         image: "https://image.dosgamesarchive.com/screenshots/thumbnails/5days-1.png",
         description: "5 Days A Stranger is a horror-themed point-and-click adventure game using the Adventure Game Studio (AGS) development kit.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/5daysdos.html"
+    },
+    {
+        name: "Abuse",
+        image: "https://www.dosgames.com/screens/abuse.gif",
+        description: "Abuse is a great side-scrolling action game that uses a unique system to control your character.",   
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/abuse.html"
     },
     {
         name: "Agi Tetris",
@@ -947,18 +987,26 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/arkanoid.html"
     },
     {
-        name: "Apotris",
-        image: "https://akouzoukos.com/assets/ports.jpg",
-        description: "Apotris is a free multiplatform open-source block stacking game! What sets Apotris apart from other block stacking games is its extensive customization options, complemented by ultra-responsive controls that let you execute your moves with precision",
+        name: "Amazon: Guardian of Eden",
+        image: "https://www.dosgames.com/screens/amdemo.png",
+        description: "Amazon is a graphical point-and-click adventure game using a similar engine to that seen in later Sierra and Lucasarts releases.",
         category: "arcade",
-        link: "https://akouzoukos.com/apotris/play/"
+        link: "https://ifilex.github.io/WineBOX-Store/amdemo.html"
     },
     {
         name: "Adventure Fun-Pak ",
         image: "https://www.classicdosgames.com/images/screenshots/cga04/Adventure_Fun-Pak.png",
         description: "Scott Miller had a new idea and created Adventure Fun-Pak and Puzzle Fun-Pak out of the best games that had been submitted to Apogee by aspiring authors. The four games in the Adventure Fun-Pak make an interesting study of some surprising and sometimes questionable programming techniques. There are two ASCII and two graphical games, each of which uses a different CGA mode, although the ASCII games will fall back to Mode 7 for MDA/Hercules cards.",
-       category: "arcade",
+        category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/packs.html"
+    },
+    {
+        name: "Azrael Tear",
+        image: "https://www.dosgames.com/screens/atdemo.png",
+        description: "Azrael's Tear is an interesting 3D first-person perspective adventure game. It plays similarly to graphical adventure games, where you collect items in your inventory and use them to progress.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/atdem.html"
+
     },
     {
         name: "Baby Type",
@@ -982,6 +1030,13 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/baryon.html"
     },
     {
+        name: "Beats Of Rage",
+        image: "https://www.dosgames.com/screens/beatsofrage.gif",
+        description: "If you've ever played Streets of Rage (in an arcade or for any of Sega's old home console systems) you'll know what to expect from Beats of Rage.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/ber.html"
+    },
+    {
         name: "Breakout",
         image: "https://ifilex.github.io/WineBOX-Store/box/breakout.jpg",
         description: "Breakout is a classic arcade game where the player controls a paddle to bounce a ball and break all the bricks on the screen. The goal is to clear the bricks without letting the ball fall past the paddle.",
@@ -996,11 +1051,25 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/brix.html"
     },
     {
+        name: "Bust a Move 2",
+        image: "https://www.dosgames.com/screens/bam2.png",
+        description: "Bust-a-Move (aka Puzzle Bobble) is an extremely popular series of bubble-matching games which combine a puzzle game's need for strategy with the quick-thinking and reflexes needed for success in an action game.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/bam2.html"
+    },
+    {
         name: "CD-MAN",
         image: "https://ifilex.github.io/WineBOX-Store/box/cdman.jpg",
         description: "CD-Man features 5 different worlds to pass each having nicely-drawn graphics in high-res EGA mode and therefore a new character.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/cdman.html"
+    },
+    {
+        name: "Chompsters",
+        image: "https://www.dosgames.com/screens/chompsters.gif",
+        description: "A very fun Pacman type game that expands on the original Pacman idea by adding different characters to play",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/chom.html"
     },
     {
         name: "Commander Keen",
@@ -1038,6 +1107,13 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/doom2d.html"
     },
     {
+        name: "Duke Nukem 2",
+        image: "https://www.dosgames.com/screens/duke2.gif",
+        description: "Between the original, classic Duke and the kickass Duke Nukem 3D came the unheralded sequel, Duke II.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/duke2.html"
+    },
+    {
         name: "Dyna Blaster",
         image: "https://upload.wikimedia.org/wikipedia/en/3/31/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
         description: "Refers to the European title for certain games in the Bomberman franchise, such as the TurboGrafx-16/PC Engine version",
@@ -1057,13 +1133,6 @@ window.appData = [
         description: "Earthworm Jim is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Earthworm Jim on mobile.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/earthworm.html"
-    },
-    {
-        name: "Flappy Bird",
-        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Mario_pipe.png",
-        description: "🐦 🎮 A MelonJS port of the famous Flappy Bird Game",
-       category: "arcade",
-        link: "http://ellisonleao.github.io/clumsy-bird/"
     },
     {
         name: "Incredible Machine",
@@ -1087,6 +1156,13 @@ window.appData = [
         link: "https://gardensofkadesh.github.io/demo/index.html"
     },
     {
+        name: "Indiana Jones and the Fate of Atlantis",
+        image: "https://www.dosgames.com/screens/indyjones.gif",
+        description: "This demo version of the interactive Indiana Jones adventure game gives you an idea what to expect in the full game",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/indy.html"
+    },
+    {
         name: "Golden Axe",
         image: "https://ifilex.github.io/WineBOX-Store/box/axe.jpg",
         description: "Golden Axe is a side-scrolling, beat 'em up, hack and slash arcade video game released in 1989 by Sega for the System 16-B arcade hardware.",
@@ -1095,14 +1171,21 @@ window.appData = [
     },
     {
         name: "Nero Chess",
-        image: "https://archive.org/download/msdos_MIDEMO_shareware/00_coverscreenshot.jpg",
+        image: "https://www.classicdosgames.com/images/screenshots/hercules/Psion_Chess.png",
         description: "Nero 5 is a freeware chess programme, the fifth in a series of revisions by Finnish author Jari Huikari.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/nero5.html"
     },
     {
+        name: "Ms Pacman PC",
+        image: "https://www.dosgames.com/screens/mspac.gif",
+        description: "It's just like Pac-Man, but it is MS Pac-Man! What's the difference? Well, there's a bow on her ...This game IS a lot the same as the classic Pac-Man game, but with some variations, like different maze layouts and smarter ghosts.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/msppc.html"
+    },
+    {
         name: "Monkey Island",
-        image: "https://ifilex.github.io/WineBOX-Store/box/axe.jpg",
+        image: "https://archive.org/download/msdos_MIDEMO_shareware/00_coverscreenshot.jpg",
         description: "Demo Version Of Lucasfilms Monkey Island.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/midemo.html"
@@ -1143,6 +1226,13 @@ window.appData = [
         link: "https://fosiper.com/games/pacman-lite/"
     },
     {
+        name: "Plague of the Moon",
+        image: "https://www.dosgames.com/screens/plague.gif",
+        description: "Plague of the Moon is a Lucasarts style adventure game. However, it does not approach the Lucasarts level of quality, even though it tries.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/plague.html"
+    },
+    {
         name: "Prince of persia",
         image: "https://ifilex.github.io/WineBOX-Store/box/prince.jpg",
         description: "Prince of Persia: Is a clasic platform game.",
@@ -1178,11 +1268,25 @@ window.appData = [
         link: "https://www.artsoft.org/rocksndiamonds/play/"
     },
     {
+        name: "Sam and Max: Hit the road",
+        image: "https://www.dosgames.com/screens/snm.gif",
+        description: "Sam & Max features a detective dog and hyperkinetic rabbit in a graphical adventure game.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/sm.html"
+    },
+    {
         name: "SDL Sopwith",
         image: "https://fragglet.github.io/sdl-sopwith/img/sopwith-macos-window.png",
         description: "SDL Sopwith is a port of the classic biplane shoot ‘em-up “Sopwith” to run on modern computers and operating systems. It is named “SDL Sopwith” as it uses the LibSDL cross-platform library.",
         category: "arcade",
         link: "https://fragglet.github.io/sdl-sopwith-builds/tags/sdl-sopwith-2.7.0/sopwith.html"
+    },
+    {
+        name: "Simon the Sorcerer",
+        image: "https://www.dosgames.com/screens/simon.gif",
+        description: "Simon the Sorcerer is a classic graphical adventure game, and one of the few well-known games of its type from its time that was not released by Sierra or Lucasarts.",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/simon.html"
     },
     {
         name: "Space Invaders",
@@ -1199,13 +1303,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/stargunner.html"
     },
     {
-        name: "Super Mario War",
-        image: "https://wiki.retrobat.org/~gitbook/image?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffabricecaruso%2Fes-theme-carbon%2F0ab5d8cd36c673c827b022c2ae53042a38df33da%2Fart%2Flogos%2Fsuperbroswar.svg&width=768&dpr=4&quality=100&sign=1805bc83&sv=2",
-        description: "Super Mario War is fan-made battle-based Mario platformer. The game has been ported to a number of platforms, including an unofficial port to the Nintendo Wii.",
-        category: "arcade",
-        link: "https://mmatyas.github.io/smw-js/"
-    },
-    {
         name: "Super Tux",
         image: "https://www.supertux.org/images/supertux_title.png",
         description: "SuperTux is an open-source classic 2D jump'n run sidescroller game in a style similar to the original Super Mario games.",
@@ -1213,11 +1310,18 @@ window.appData = [
         link: "https://supertux.semphris.com/play/"
     },
     {
-        name: "Talking Tom Cat 2",
-        image: "https://dn721909.ca.archive.org/0/items/talking-tom-cat-2-flash/00_coverscreenshot.png",
-        description: "Talking Tom is an animated grey tabby cat, popular as a virtual pet and character in a media franchise. He is known for repeating what users say in a funny voice and for reacting to physical interaction in the original games",
+        name: "The Last Express",
+        image: "https://www.dosgames.com/screens/lastexpress.png",
+        description: "The Last Express is a unique graphical adventure / detective game where the goal is to prevent certain events from happening before reaching the next station.",
         category: "arcade",
-        link: "boot.html?url=https://archive.org/embed/talking-tom-cat-2-flash?title=Talking Tom"
+        link: "https://ifilex.github.io/WineBOX-Store/express.html"
+    },
+    {
+        name: "The Lion King",
+        image: "https://www.dosgames.com/screens/lionking.gif",
+        description: "The Lion King represents one of the rare times that a movie-to-game conversion actually worked and granted us a pretty good game",
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/lionking.html"
     },
     {
         name: "The Lost Vikings",
@@ -1234,6 +1338,13 @@ window.appData = [
         link: "https://fosiper.com/games/tower/"
     },
     {
+        name: "Wacky Wheels",
+        image: "https://www.dosgames.com/screens/wacky.gif",
+        description: "Seems like a rip-off of Super Mario Kart, with animals in place of the familiar Mario characters", 
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/wacky.html"
+    },
+    {
         name: "Wizardry: Crusaders of the Dark Savant",
         image: "https://www.alexanderfreed.com/wp/wp-content/uploads/2013/11/w7-introscreen-624x468.png",
         description: "Crusaders of the Dark Savant is a classic role-playing game published by Sir-Tech, celebrated for its rich storyline and strategic depth.",
@@ -1248,18 +1359,32 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/xbill.html"
     },
     {
-        name: "XRick",
-        image: "https://www.rickdangerous.co.uk/rdtitle.png",
-        description: "Xrick is an exact clone of Rick Dangerous, produced by carefully cracking and reverse-engineering the orignal IBM PC.",
-        category: "arcade",
-        link: "https://www.xrick.net/"
-    },
-    {
         name: "XOX",
         image: "https://archive.org/download/msdos_XOX_shareware/00_coverscreenshot.jpg",
         description: "Is a classic game of Tic-Tac-Toe in 3D.",
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/xox.html"
+    },
+    {
+        name: "Capture the Flag",
+        image: "https://www.dosgames.com/screens/capflag.gif",
+        description: "This game was given several glowing reviews upon its initial release (1994/95) and its easy to see why. This shareware game has an interface that is very professionally done and rivals the commercial games of its time.",
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/flag.html"
+    },
+    {
+        name: "Command & Conquer",
+        image: "https://ifilex.github.io/WineBOX-Store/box/command.jpg",
+        description: "Wage real-time war in more ways than ever with a modern and near-future arsenal. Command the powerful US forces.",
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/commandconquer.html"
+    },
+    {
+        name: "Crazy Cows",
+        image: "https://www.dosgames.com/screens/crazycows.png",
+        description: "Crazy Cows is not as crazy as its name might suggest. It's a strategy game, which superficially resembles real-time strategy games like Warcraft or Warcraft II but this is a turn-based game.",
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/cows.html"
     },
     {
         name: "Oregon Trail Delux",
@@ -1269,39 +1394,11 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/oregon.html"
     },
     {
-        name: "Heroes of Might and Magic II",
-        image: "https://ifilex.github.io/WineBOX-Store/box/heroes2.jpg",
-        description: "The canonical ending of Heroes I results in Lord Morglin Ironfist's victory. In the following years, he has successfully unified the continent of Enroth and secured his rule as king.",
-        category: "rts",
-        link: "https://dos.zone/heroes-of-might-and-magic-ii/"
-    },
-    {
-        name: "Command & Conquer",
-        image: "https://ifilex.github.io/WineBOX-Store/box/command.jpg",
-        description: "Wage real-time war in more ways than ever with a modern and near-future arsenal. Command the powerful US forces.",
-        category: "rts",
-        link: "https://dos.zone/command-conquer-sep-26-1995/"
-    },
-    {
         name: "Master of Orion II",
         image: "https://ifilex.github.io/WineBOX-Store/box/master.jpg",
         description: "Forge an empire in a universe where population growth is stripping away planetary resources. Colonize unknown planets and trade.",
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/masteroforion.html"
-    },
-    {
-        name: "Heroes of Might and Magic III",
-        image: "https://dos.zone/images/containers/assets/backgrounds/homm3-vcmi.jpg/6205b73e460ebc5de314ac35e1ed3abc.webp",
-        description: "The canonical ending of Heroes I results in Lord Morglin Ironfist's victory. In the following years, he has successfully unified the continent of Enroth and secured his rule as king.",
-        category: "rts",
-        link: "https://sec.dos.zone/vcmi/launcher/"
-    },
-    {
-        name: "Rise of the triad",
-        image: "https://ifilex.github.io/WineBOX-Store/box/rise.webp",
-        description: "Rise of the Triad: Dark War is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Rise of the Triad: Dark War on mobile. On DOS.Zone Rise of the Triad: Dark War available to play for free without registration.",
-        category: "rts",
-        link: "https://ifilex.github.io/WineBOX-Store/rise.html"
     },
     {
         name: "Sim City",
@@ -1325,6 +1422,20 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/syndicate.html"
     },
     {
+        name: "Theme park",
+        image: "https://www.dosgames.com/screens/themepark.gif",
+        description: "Theme Park is a classic strategy game, and one of the earliest tycoon-style games. In this demo version, your ride selection is limited to just one ride type, and there are many other limits as well. ",
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/themepark.html"
+    },
+    {
+        name: "The Horde",
+        image: "https://www.dosgames.com/screens/thehorde.png",
+        description: "The Horde is a real-time action / strategy fantasy themed game.",
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/horde.html"
+    },
+    {
         name: "Warcraft",
         image: "https://ifilex.github.io/WineBOX-Store/box/war1.jpg",
         description: "Warcraft: Orcs & Humans is a real-time strategy game (RTS) developed and published by Blizzard Entertainment, and published by Interplay Productions in Europe.",
@@ -1337,6 +1448,20 @@ window.appData = [
         description: "WarCraft II: Tides of Darkness is a sequel to WarCraft: Orcs & Humans strategy game for DOS.",
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/warcraft2.html"
+    },
+    {
+        name: "Waterworld",
+        image: "https://www.dosgames.com/screens/waterworld.png",
+        description: "Waterworld is a real-time mission-based strategy game based on the expensive (at the time) and largely poorly regarded movie of the same name.",
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/water.html"
+    },
+    {
+        name: "Worm",
+        image: "https://ifilex.github.io/WineBOX-Store/box/war2.jpg",
+        description: "This demo version of the popular WORMS game allows you to get a taste of what the full game is like. ",
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/wdemo.html"
     },
     {
         name: "X-COM: UFO Defense",
