@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-		<meta http-equiv="x-ua-compatible" content="IE=edge">
-		<title>WineBOX</title>
-		<!--[if IE]><style>#targetIE {margin-left:-2.5px;}</style><![endif]-->
-		<link rel="stylesheet" href="lib/style.css"/>
-     		<link rel="stylesheet" type="text/css" href="wine.css">
-		<link rel="stylesheet" href="lib/scrollbar.css"/>
-		<link rel="shortcut icon" href="favicon.ico"/>
-    		<script src="lib/jquery-1.8.0.min.js" type="text/javascript"></script>
-    		<script src="lib/jquery-ui-1.8.23.min.js" type="text/javascript"></script>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>WineBOX - Gaming Edition</title>
+    <!--[if IE]><style>#targetIE {margin-left:-2.5px;}</style><![endif]-->
+    <link rel="stylesheet" href="lib/style.css"/>
+    <link rel="stylesheet" type="text/css" href="wine.css">
+    <link rel="stylesheet" href="lib/scrollbar.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="lib/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="lib/jquery-ui-1.8.23.min.js" type="text/javascript"></script>
 
-    <!-- Estilos del teclado virtual - VERSIÓN CON BARRA ESPACIADORA COMPLETA -->
+    <!-- Estilos del teclado virtual -->
     <style>
         * {
             margin: 0;
@@ -19,6 +19,27 @@
             box-sizing: border-box;
         }
 
+        /* Contenedor de controles (gamepad) */
+        .gamepad-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(20, 20, 40, 0.95);
+            border-radius: 12px 12px 0 0;
+            padding: 12px 15px 20px 15px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(100, 100, 255, 0.2);
+            border-bottom: none;
+            z-index: 9998;
+            display: none;
+            max-height: 240px;
+            overflow: visible;
+            width: 100%;
+        }
+
+        /* Contenedor del teclado virtual (original) */
         .virtual-keyboard-container {
             position: fixed;
             bottom: 0;
@@ -26,67 +47,284 @@
             right: 0;
             background: rgba(15, 15, 35, 0.98);
             border-radius: 8px 8px 0 0;
-            padding: 8px 8px 15px 8px; /* Más padding abajo para espacio */
+            padding: 8px 8px 15px 8px;
             box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-bottom: none;
             z-index: 10000;
             display: none;
-            max-height: 220px; /* Aumentado */
-            overflow: visible; /* Visible para que no corte */
+            max-height: 220px;
+            overflow: visible;
             width: 100%;
         }
 
-        .keyboard-header {
+        /* Estructura del gamepad */
+        .gamepad-layout {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            height: 25px; /* Altura fija */
+            height: 160px;
+            padding: 0 10px;
         }
 
-        .keyboard-title {
-            color: #00ffcc;
+        /* Sección izquierda: D-Pad/WASD */
+        .gamepad-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        /* Sección derecha: Botones de acción */
+        .gamepad-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        /* Sección central: Botones especiales */
+        .gamepad-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            flex: 1;
+            height: 100%;
+        }
+
+        /* D-Pad estilo cruceta */
+        .d-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 5px;
+            width: 120px;
+            height: 120px;
+            margin-top: 10px;
+        }
+
+        .d-pad-btn {
+            background: linear-gradient(135deg, #4a4a6a 0%, #353555 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 0 #2a2a3a, 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.1s ease;
+            user-select: none;
+        }
+
+        .d-pad-btn:hover {
+            background: linear-gradient(135deg, #5a5a7a 0%, #454565 100%);
+            transform: translateY(-1px);
+        }
+
+        .d-pad-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 #2a2a3a;
+        }
+
+        /* Botones de acción (estilo Xbox/PlayStation) */
+        .action-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3),
+                        inset 0 2px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.1s ease;
+            margin: 5px;
+            position: relative;
+        }
+
+        .action-btn:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .action-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* Colores específicos para botones */
+        .btn-a {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .btn-b {
+            background: linear-gradient(135deg, #ffa502 0%, #ff7f00 100%);
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .btn-x {
+            background: linear-gradient(135deg, #00d2d3 0%, #00a8a8 100%);
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .btn-y {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        /* Botones especiales */
+        .special-btn {
+            background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
             font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px 0;
+            width: 140px;
+            box-shadow: 0 3px 0 #1a1a1a;
+            transition: all 0.1s ease;
+            text-align: center;
+        }
+
+        .special-btn:hover {
+            background: linear-gradient(135deg, #3d4446 0%, #737e82 100%);
+            transform: translateY(-1px);
+        }
+
+        .special-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 #1a1a1a;
+        }
+
+        /* Botón Start (verde) */
+        .btn-start {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+        }
+
+        /* Botón Select/Back (azul) */
+        .btn-select {
+            background: linear-gradient(135deg, #0984e3 0%, #0770c4 100%);
+        }
+
+        /* Botón para abrir teclado */
+        .btn-keyboard {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+        }
+
+        /* Botones de toggle */
+        .control-toggle-buttons {
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+
+        .toggle-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Botón gamepad */
+        .gamepad-toggle {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+        }
+
+        /* Botón teclado */
+        .keyboard-toggle {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        }
+
+        /* Encabezados */
+        .gamepad-header, .keyboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            height: 30px;
+        }
+
+        .gamepad-title, .keyboard-title {
+            color: #00ffcc;
+            font-size: 14px;
             font-weight: bold;
         }
 
-        .close-keyboard {
+        .close-gamepad, .close-keyboard {
             background: #ff6b6b;
             color: white;
             border: none;
             border-radius: 4px;
-            padding: 4px 8px;
+            padding: 5px 10px;
             cursor: pointer;
-            font-size: 10px;
+            font-size: 11px;
         }
 
+        /* Estilos para cuando cualquier control está activo */
+        .controls-active #canvas {
+            margin-bottom: 250px;
+            transition: margin-bottom 0.3s ease;
+        }
+
+        /* Estilos del teclado original (simplificados) */
         .keyboard {
             background: linear-gradient(135deg, #1e1e3f 0%, #2d2b55 100%);
             border-radius: 8px;
-            padding: 8px 10px 12px 10px; /* Más padding abajo */
+            padding: 10px;
             width: 100%;
-            height: 165px; /* Altura ajustada */
+            height: 165px;
             display: flex;
             flex-direction: column;
-            gap: 3px; /* Espacio entre filas */
+            gap: 4px;
         }
 
         .keyboard-row {
             display: flex;
             justify-content: center;
-            width: 100%;
+            gap: 3px;
             flex: 1;
-            gap: 2px;
-        }
-
-        /* Última fila más alta para barra espaciadora */
-        .keyboard-row:last-child {
-            flex: 1.3; /* Más alta */
-            margin-top: 2px;
         }
 
         .key {
@@ -94,23 +332,19 @@
             color: #ffffff;
             border: none;
             border-radius: 4px;
-            padding: 4px 0;
+            padding: 6px 0;
             cursor: pointer;
-            transition: all 0.1s ease;
             font-weight: 600;
-            font-size: 10px;
+            font-size: 11px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 
-                0 2px 0 #1a1a35,
-                0 3px 5px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 0 #1a1a35;
             user-select: none;
             flex: 1;
-            min-height: 28px; /* Altura mínima */
-            height: 100%; /* Ocupa toda la altura de la fila */
+            min-height: 30px;
+            transition: all 0.1s ease;
         }
 
         .key:hover {
@@ -120,114 +354,91 @@
 
         .key:active {
             transform: translateY(1px);
-            box-shadow: 
-                0 1px 0 #1a1a35,
-                0 2px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1px 0 #1a1a35;
         }
 
-        .key-wide {
-            flex: 1.5;
-        }
-
-        .key-extra-wide {
-            flex: 2;
-        }
-
-        .key-ultra-wide {
-            flex: 4;
-        }
-
-        .key-special {
-            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
-        }
-
-        .key-utility {
-            background: linear-gradient(135deg, #45b7d1 0%, #3a92ab 100%);
-        }
-
-        /* BARRA ESPACIADORA - COMPLETAMENTE VISIBLE */
         .key-space {
             background: linear-gradient(135deg, #96ceb4 0%, #7ab89c 100%);
-            flex: 5 !important;
-            height: 38px !important; /* Altura fija mayor */
-            min-height: 38px !important;
-            font-size: 13px !important;
+            flex: 5;
+            font-size: 13px;
             font-weight: bold;
             color: #2d3436;
-            box-shadow: 
-                0 3px 0 #5a8c7a,
-                0 5px 10px rgba(0, 0, 0, 0.3),
-                inset 0 2px 0 rgba(255, 255, 255, 0.3);
-            margin: 0 5px;
-            align-self: center; /* Centrada verticalmente */
-            position: relative;
-            top: 0; /* Aseguramos que no esté cortada */
-        }
-
-        .key-space:hover {
-            background: linear-gradient(135deg, #a8e0c8 0%, #8cc8ac 100%);
-        }
-
-        .key-space:active {
-            transform: translateY(2px);
-            box-shadow: 
-                0 1px 0 #5a8c7a,
-                0 3px 5px rgba(0, 0, 0, 0.2);
+            height: 40px;
         }
 
         .key-sub {
-            font-size: 7px;
+            font-size: 8px;
             opacity: 0.7;
-            margin-top: 1px;
-        }
-
-        .key-shift-active {
-            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
-            color: #2d3436;
-        }
-
-        .key-caps-active {
-            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
-            color: white;
-        }
-
-        /* Estilos para cuando el teclado está activo */
-        .keyboard-active #canvas {
-            margin-bottom: 200px; /* Aumentado para el teclado más alto */
-            transition: margin-bottom 0.3s ease;
-        }
-
-        .keyboard-toggle {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background: #4ecdc4;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            z-index: 9999;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-        }
-
-        /* Ajustes para teclas específicas */
-        #capsLock, #shiftKey, #shiftKeyRight {
-            font-size: 9px;
+            margin-top: 2px;
         }
     </style>
   </head>
   <body>
 
-  <!-- Botón para mostrar/ocultar teclado -->
-  <button class="keyboard-toggle" onclick="toggleVirtualKeyboard()">⌨️</button>
+  <!-- Botones de toggle para controles -->
+  <div class="control-toggle-buttons">
+      <button class="toggle-btn gamepad-toggle" onclick="toggleGamepad()" title="Gamepad">🎮</button>
+      <button class="toggle-btn keyboard-toggle" onclick="toggleVirtualKeyboard()" title="Teclado">⌨️</button>
+  </div>
 
-  <!-- Teclado Virtual -->
+  <!-- Gamepad Virtual -->
+  <div class="gamepad-container" id="gamepad">
+      <div class="gamepad-header">
+          <div class="gamepad-title">Gamepad Virtual</div>
+          <button class="close-gamepad" onclick="toggleGamepad()">Cerrar</button>
+      </div>
+      <div class="gamepad-layout">
+          <!-- Sección izquierda: D-Pad/WASD -->
+          <div class="gamepad-left">
+              <div class="d-pad">
+                  <div class="d-pad-btn"></div>
+                  <div class="d-pad-btn" data-key="w" id="btnUp">W</div>
+                  <div class="d-pad-btn"></div>
+                  
+                  <div class="d-pad-btn" data-key="a" id="btnLeft">A</div>
+                  <div class="d-pad-btn" id="btnCenter">•</div>
+                  <div class="d-pad-btn" data-key="d" id="btnRight">D</div>
+                  
+                  <div class="d-pad-btn"></div>
+                  <div class="d-pad-btn" data-key="s" id="btnDown">S</div>
+                  <div class="d-pad-btn"></div>
+              </div>
+          </div>
+
+          <!-- Sección central: Botones especiales -->
+          <div class="gamepad-center">
+              <button class="special-btn btn-start" data-key="Enter" id="btnStart">
+                  ⏵ START
+              </button>
+              <button class="special-btn btn-select" data-key="Escape" id="btnSelect">
+                  ⏮ SELECT/BACK
+              </button>
+              <button class="special-btn btn-keyboard" onclick="switchToKeyboard()">
+                  ⌨️ ABRIR TECLADO
+              </button>
+          </div>
+
+          <!-- Sección derecha: Botones de acción -->
+          <div class="gamepad-right">
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px;">
+                  <button class="action-btn btn-a" data-key=" " id="btnA">
+                      A<br><small>(ESPACIO)</small>
+                  </button>
+                  <button class="action-btn btn-b" data-key="Control" id="btnB">
+                      B<br><small>(CTRL)</small>
+                  </button>
+                  <button class="action-btn btn-x" data-key="Shift" id="btnX">
+                      X<br><small>(SHIFT)</small>
+                  </button>
+                  <button class="action-btn btn-y" data-key="Alt" id="btnY">
+                      Y<br><small>(ALT)</small>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Teclado Virtual Original -->
   <div class="virtual-keyboard-container" id="virtualKeyboard">
       <div class="keyboard-header">
           <div class="keyboard-title">Teclado Virtual</div>
@@ -249,12 +460,12 @@
               <div class="key" data-key="0">0<div class="key-sub">)</div></div>
               <div class="key" data-key="-">-<div class="key-sub">_</div></div>
               <div class="key" data-key="=">=<div class="key-sub">+</div></div>
-              <div class="key key-wide key-utility" data-key="Backspace">⌫</div>
+              <div class="key key-utility" data-key="Backspace">⌫</div>
           </div>
 
           <!-- Fila QWERTY -->
           <div class="keyboard-row">
-              <div class="key key-wide key-utility" data-key="Tab">Tab</div>
+              <div class="key key-utility" data-key="Tab">Tab</div>
               <div class="key" data-key="q">Q</div>
               <div class="key" data-key="w">W</div>
               <div class="key" data-key="e">E</div>
@@ -272,7 +483,7 @@
 
           <!-- Fila ASDF -->
           <div class="keyboard-row">
-              <div class="key key-wide key-utility" data-key="CapsLock" id="capsLock">Caps</div>
+              <div class="key key-utility" data-key="CapsLock" id="capsLock">Caps</div>
               <div class="key" data-key="a">A</div>
               <div class="key" data-key="s">S</div>
               <div class="key" data-key="d">D</div>
@@ -284,12 +495,12 @@
               <div class="key" data-key="l">L</div>
               <div class="key" data-key=";">;<div class="key-sub">:</div></div>
               <div class="key" data-key="'">'<div class="key-sub">"</div></div>
-              <div class="key key-wide key-utility" data-key="Enter">↵</div>
+              <div class="key key-utility" data-key="Enter">↵</div>
           </div>
 
           <!-- Fila ZXCV -->
           <div class="keyboard-row">
-              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKey">Shift</div>
+              <div class="key key-special" data-key="Shift" id="shiftKey">Shift</div>
               <div class="key" data-key="z">Z</div>
               <div class="key" data-key="x">X</div>
               <div class="key" data-key="c">C</div>
@@ -300,10 +511,10 @@
               <div class="key" data-key=",">,<div class="key-sub"><</div></div>
               <div class="key" data-key=".">.<div class="key-sub">></div></div>
               <div class="key" data-key="/">/<div class="key-sub">?</div></div>
-              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKeyRight">Shift</div>
+              <div class="key key-special" data-key="Shift" id="shiftKeyRight">Shift</div>
           </div>
 
-          <!-- Fila de ESPACIO - COMPLETAMENTE VISIBLE -->
+          <!-- Fila de espacio -->
           <div class="keyboard-row">
               <div class="key key-special" data-key="Control">Ctrl</div>
               <div class="key key-special" data-key="Alt">Alt</div>
@@ -314,385 +525,521 @@
       </div>
   </div>
 
-  <!-- if running inline add style="display: none" to id="loading" and id="inline" and remove same from id="run-inline" -->
+  <!-- Contenido original de WineBOX -->
   <div id="loading">
       <figure id="spinner" style="overflow: visible;">
          <div class="spinner" style="margin-top: .5em; margin-left: auto; margin-right: auto;"></div>
-	  </figure>
+      </figure>
       <div class="emscripten" id="status"></div>
   </div>
-    <div id="run-inline" style="display: none">
-        <button id="inline-runbtn" onclick="startInline()">inline</button>
-    </div>
+  <div id="run-inline" style="display: none">
+      <button id="inline-runbtn" onclick="startInline()">inline</button>
+  </div>
 
-    <div id="inline">
-        <div class="emscripten">
-            <button id="saveFSImage" style="display: none" onclick="saveFSImage()">Save FS Image</button>         
-            <button id="startbtn" style="display: none" onclick="start()">Start</button>
-            <button id="uploadbtn" style="display: none" onclick="document.getElementById('upload').click()" >Add File(s)</button>
-            <input style="display: none" id="upload" name="upload" onclick="document.getElementById('uploadbtn').click();" onchange="startWithFiles(event.target.files);"  type="file" multiple />
-            <button id="downloadbtn" style="display: none" onclick="buildTree();">Get File(s)</button>
-            <a style="display: none" id="modalLink" href="#openModal">Open</a>
-            <a style="display: none" id="modalLinkExe" href="#openModalExe">Open</a>
+  <div id="inline">
+      <div class="emscripten">
+          <button id="saveFSImage" style="display: none" onclick="saveFSImage()">Save FS Image</button>         
+          <button id="startbtn" style="display: none" onclick="start()">Start</button>
+          <button id="uploadbtn" style="display: none" onclick="document.getElementById('upload').click()" >Add File(s)</button>
+          <input style="display: none" id="upload" name="upload" onclick="document.getElementById('uploadbtn').click();" onchange="startWithFiles(event.target.files);"  type="file" multiple />
+          <button id="downloadbtn" style="display: none" onclick="buildTree();">Get File(s)</button>
+          <a style="display: none" id="modalLink" href="#openModal">Open</a>
+          <a style="display: none" id="modalLinkExe" href="#openModalExe">Open</a>
 
-          <span id="sound-checkbox" style="display: none">
-              <input type="checkbox" id="soundToggle" onclick="toggleSound();" />Enable Sound
-          </span>
-          <input style="display: none" id="pointerLock" unchecked>
-          <!-- input type="checkbox" id="showConsole" onclick="toggleConsoleAndKeyboard();" unchecked -->
-          <input style="display: none" id="showConsole" onclick="toggleConsoleAndKeyboard();" unchecked>
-          <!-- input type="checkbox" id="resize" -->
-          <!-- input type="checkbox" id="fullscreen" onclick="Module.requestFullScreen(document.getElementById('pointerLock').checked, document.getElementById('resize').checked)" checked -->
-        </div>
-        <div id="dropzone">
-            <div class="emscripten_border">
-                <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-            </div>
-        </div>
-        <div>
-            <textarea class="emscripten" id="output" rows="8" style="display: none"></textarea>
-        </div>
-        <div id="openModal" class="modalDialog">
-            <div> <a href="#close" title="Close" class="close" onclick="done();">X</a>
-                <div>
-                    <h3>Get File(s)</h3>
-                    <input id="selectedItem" type="text" size="50" readonly>
-                    <button onclick="extract();">Get</button>
-                </div>
-                <div id="tree" class="scroll-style">
-                </div>
-                <div>
-                    <h3 id="loadStatus">Loading...</h3>
-                </div>
-            </div>
-        </div>
-        <div id="openModalExe" class="modalDialog">
-            <div> <a id="openModalExeClick" href="#close" title="Close" class="close">X</a>
-                <div>
-                    <h3>Execute</h3>
-                    <div id="message"></div>
-                    <div id="items" class="scroll-style"></div>
-                </div>
-            </div>
-        </div>
-        <hr>
-    </div>
-        <script src="fat.js"></script>
-        <script src="jszip.js"></script>
-        <script src="shell.js"></script>
+        <span id="sound-checkbox" style="display: none">
+            <input type="checkbox" id="soundToggle" onclick="toggleSound();" />Enable Sound
+        </span>
+        <input style="display: none" id="pointerLock" unchecked>
+        <input style="display: none" id="showConsole" onclick="toggleConsoleAndKeyboard();" unchecked>
+      </div>
+      <div id="dropzone">
+          <div class="emscripten_border">
+              <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+          </div>
+      </div>
+      <div>
+          <textarea class="emscripten" id="output" rows="8" style="display: none"></textarea>
+      </div>
+      <div id="openModal" class="modalDialog">
+          <div> <a href="#close" title="Close" class="close" onclick="done();">X</a>
+              <div>
+                  <h3>Get File(s)</h3>
+                  <input id="selectedItem" type="text" size="50" readonly>
+                  <button onclick="extract();">Get</button>
+              </div>
+              <div id="tree" class="scroll-style">
+              </div>
+              <div>
+                  <h3 id="loadStatus">Loading...</h3>
+              </div>
+          </div>
+      </div>
+      <div id="openModalExe" class="modalDialog">
+          <div> <a id="openModalExeClick" href="#close" title="Close" class="close">X</a>
+              <div>
+                  <h3>Execute</h3>
+                  <div id="message"></div>
+                  <div id="items" class="scroll-style"></div>
+              </div>
+          </div>
+      </div>
+      <hr>
+  </div>
 
-        <!-- Script del teclado virtual -->
-        <script>
-            let isShiftActive = false;
-            let isCapsActive = false;
-            
-            // Mapeo de teclas para el modo shift
-            const shiftMap = {
-                '`': '~', '1': '!', '2': '@', '3': '#', '4': '$', '5': '%', 
-                '6': '^', '7': '&', '8': '*', '9': '(', '0': ')', '-': '_', 
-                '=': '+', '[': '{', ']': '}', '\\': '|', ';': ':', "'": '"', 
-                ',': '<', '.': '>', '/': '?',
-                'a': 'A', 'b': 'B', 'c': 'C', 'd': 'D', 'e': 'E', 'f': 'F',
-                'g': 'G', 'h': 'H', 'i': 'I', 'j': 'J', 'k': 'K', 'l': 'L',
-                'm': 'M', 'n': 'N', 'o': 'O', 'p': 'P', 'q': 'Q', 'r': 'R',
-                's': 'S', 't': 'T', 'u': 'U', 'v': 'V', 'w': 'W', 'x': 'X',
-                'y': 'Y', 'z': 'Z'
-            };
+  <script src="fat.js"></script>
+  <script src="jszip.js"></script>
+  <script src="shell.js"></script>
 
-            // Mapeo de keyCodes para eventos de teclado
-            const keyCodeMap = {
-                '`': 192, '1': 49, '2': 50, '3': 51, '4': 52, '5': 53,
-                '6': 54, '7': 55, '8': 56, '9': 57, '0': 48, '-': 173,
-                '=': 61, '[': 219, ']': 221, '\\': 220, ';': 186, "'": 222,
-                ',': 188, '.': 190, '/': 191, ' ': 32,
-                'a': 65, 'b': 66, 'c': 67, 'd': 68, 'e': 69, 'f': 70,
-                'g': 71, 'h': 72, 'i': 73, 'j': 74, 'k': 75, 'l': 76,
-                'm': 77, 'n': 78, 'o': 79, 'p': 80, 'q': 81, 'r': 82,
-                's': 83, 't': 84, 'u': 85, 'v': 86, 'w': 87, 'x': 88,
-                'y': 89, 'z': 90
-            };
+  <!-- Script para controles virtuales -->
+  <script>
+      // Sistema de gamepad virtual
+      let activeControl = null;
+      
+      // Mapeo de teclas para el emulador
+      const keyCodeMap = {
+          'w': 87, 'a': 65, 's': 83, 'd': 68,
+          ' ': 32, 'Control': 17, 'Shift': 16, 'Alt': 18,
+          'Enter': 13, 'Escape': 27,
+          'ArrowUp': 38, 'ArrowDown': 40, 'ArrowLeft': 37, 'ArrowRight': 39
+      };
 
-            // Mapeo de teclas especiales
-            const specialKeyCodes = {
-                'Backspace': 8,
-                'Tab': 9,
-                'Enter': 13,
-                'Shift': 16,
-                'Control': 17,
-                'Alt': 18,
-                'CapsLock': 20,
-                'Escape': 27
-            };
+      // Configuraciones predefinidas para diferentes tipos de juegos
+      const gameConfigs = {
+          'default': {
+              up: 'w', down: 's', left: 'a', right: 'd',
+              action: ' ', jump: ' ', attack: 'Control',
+              special: 'Shift', start: 'Enter', select: 'Escape'
+          },
+          'platformer': {
+              up: 'w', down: 's', left: 'a', right: 'd',
+              action: ' ', jump: ' ', attack: 'Control',
+              special: 'Shift', start: 'Enter', select: 'Escape'
+          },
+          'rpg': {
+              up: 'w', down: 's', left: 'a', right: 'd',
+              action: 'Enter', jump: ' ', attack: 'Control',
+              special: 'Shift', start: 'Enter', select: 'Escape'
+          },
+          'fps': {
+              up: 'w', down: 's', left: 'a', right: 'd',
+              action: ' ', jump: ' ', attack: 'Control',
+              special: 'Shift', start: 'Enter', select: 'Escape'
+          }
+      };
 
-            function toggleVirtualKeyboard() {
-                const keyboard = document.getElementById('virtualKeyboard');
-                const isVisible = keyboard.style.display === 'block';
-                
-                if (isVisible) {
-                    keyboard.style.display = 'none';
-                    document.body.classList.remove('keyboard-active');
-                } else {
-                    keyboard.style.display = 'block';
-                    document.body.classList.add('keyboard-active');
-                    // Asegurar que el teclado esté pegado al fondo (y=0)
-                    keyboard.style.bottom = '0';
-                    // Forzar reflow para asegurar visibilidad
-                    setTimeout(() => {
-                        const spaceKey = document.querySelector('.key-space');
-                        if (spaceKey) {
-                            spaceKey.style.visibility = 'visible';
-                            console.log('Barra espaciadora visible y posicionada');
-                        }
-                    }, 10);
-                }
-            }
+      let currentConfig = 'default';
 
-            function toggleConsoleAndKeyboard() {
-                const consoleEl = document.getElementById('output');
-                const showConsole = document.getElementById('showConsole');
-                
-                if (showConsole.checked) {
-                    consoleEl.style.display = '';
-                    // Mostrar teclado cuando se muestra la consola
-                    const keyboard = document.getElementById('virtualKeyboard');
-                    keyboard.style.display = 'block';
-                    keyboard.style.bottom = '0'; // Pegado al fondo
-                    document.body.classList.add('keyboard-active');
-                } else {
-                    consoleEl.style.display = 'none';
-                    // Ocultar teclado cuando se oculta la consola
-                    document.getElementById('virtualKeyboard').style.display = 'none';
-                    document.body.classList.remove('keyboard-active');
-                }
-            }
+      // Función para enviar teclas al emulador
+      function sendGamepadKey(key, isKeyDown = true) {
+          const canvas = document.getElementById('canvas');
+          if (!canvas) return;
 
-            function sendKeyToEmulator(key, isSpecialKey = false) {
-                const canvas = document.getElementById('canvas');
-                if (!canvas) return;
+          const keyCode = keyCodeMap[key] || key.charCodeAt(0);
+          const eventType = isKeyDown ? 'keydown' : 'keyup';
+          
+          const event = new KeyboardEvent(eventType, {
+              key: key,
+              code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
+              keyCode: keyCode,
+              which: keyCode,
+              bubbles: true,
+              cancelable: true
+          });
+          
+          canvas.dispatchEvent(event);
+          console.log(`Gamepad: ${eventType} ${key} (${keyCode})`);
+      }
 
-                let keyCode;
-                let keyValue = key;
+      // Función para alternar gamepad
+      function toggleGamepad() {
+          const gamepad = document.getElementById('gamepad');
+          const keyboard = document.getElementById('virtualKeyboard');
+          
+          if (gamepad.style.display === 'block') {
+              gamepad.style.display = 'none';
+              activeControl = null;
+          } else {
+              // Ocultar teclado si está visible
+              keyboard.style.display = 'none';
+              // Mostrar gamepad
+              gamepad.style.display = 'block';
+              activeControl = 'gamepad';
+              document.body.classList.add('controls-active');
+          }
+          
+          updateControlState();
+      }
 
-                // Determinar el keyCode
-                if (isSpecialKey) {
-                    keyCode = specialKeyCodes[key] || 0;
-                } else {
-                    // Aplicar transformaciones de shift/caps
-                    if (isShiftActive && shiftMap[key]) {
-                        keyValue = shiftMap[key];
-                    } else if (isCapsActive && key.match(/[a-z]/)) {
-                        keyValue = key.toUpperCase();
-                    }
-                    keyCode = keyCodeMap[key] || keyValue.charCodeAt(0);
-                }
+      // Función para alternar teclado
+      function toggleVirtualKeyboard() {
+          const keyboard = document.getElementById('virtualKeyboard');
+          const gamepad = document.getElementById('gamepad');
+          
+          if (keyboard.style.display === 'block') {
+              keyboard.style.display = 'none';
+              activeControl = null;
+          } else {
+              // Ocultar gamepad si está visible
+              gamepad.style.display = 'none';
+              // Mostrar teclado
+              keyboard.style.display = 'block';
+              activeControl = 'keyboard';
+              document.body.classList.add('controls-active');
+          }
+          
+          updateControlState();
+      }
 
-                // Crear y disparar evento keydown
-                const keyDownEvent = new KeyboardEvent('keydown', {
-                    key: keyValue,
-                    code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
-                    keyCode: keyCode,
-                    which: keyCode,
-                    bubbles: true,
-                    cancelable: true
-                });
+      // Función para cambiar de gamepad a teclado
+      function switchToKeyboard() {
+          const gamepad = document.getElementById('gamepad');
+          const keyboard = document.getElementById('virtualKeyboard');
+          
+          gamepad.style.display = 'none';
+          keyboard.style.display = 'block';
+          activeControl = 'keyboard';
+          updateControlState();
+      }
 
-                // Crear y disparar evento keypress (para caracteres)
-                if (!isSpecialKey && key.length === 1) {
-                    const keyPressEvent = new KeyboardEvent('keypress', {
-                        key: keyValue,
-                        code: 'Key' + key.toUpperCase(),
-                        keyCode: keyValue.charCodeAt(0),
-                        charCode: keyValue.charCodeAt(0),
-                        which: keyValue.charCodeAt(0),
-                        bubbles: true,
-                        cancelable: true
-                    });
-                    
-                    canvas.dispatchEvent(keyPressEvent);
-                }
+      // Actualizar estado de controles
+      function updateControlState() {
+          if (activeControl === 'gamepad' || activeControl === 'keyboard') {
+              document.body.classList.add('controls-active');
+          } else {
+              document.body.classList.remove('controls-active');
+          }
+      }
 
-                // Disparar keydown
-                canvas.dispatchEvent(keyDownEvent);
+      // Configurar botones del gamepad
+      function setupGamepadButtons() {
+          // D-Pad / WASD
+          const dpadButtons = document.querySelectorAll('.d-pad-btn[data-key]');
+          dpadButtons.forEach(btn => {
+              const key = btn.getAttribute('data-key');
+              
+              btn.addEventListener('mousedown', () => {
+                  btn.classList.add('active');
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('mouseup', () => {
+                  btn.classList.remove('active');
+                  sendGamepadKey(key, false);
+              });
+              
+              btn.addEventListener('mouseleave', () => {
+                  if (btn.classList.contains('active')) {
+                      btn.classList.remove('active');
+                      sendGamepadKey(key, false);
+                  }
+              });
+              
+              // Touch support
+              btn.addEventListener('touchstart', (e) => {
+                  e.preventDefault();
+                  btn.classList.add('active');
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('touchend', (e) => {
+                  e.preventDefault();
+                  btn.classList.remove('active');
+                  sendGamepadKey(key, false);
+              });
+          });
 
-                // Crear y disparar evento keyup después de un breve delay
-                setTimeout(() => {
-                    const keyUpEvent = new KeyboardEvent('keyup', {
-                        key: keyValue,
-                        code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
-                        keyCode: keyCode,
-                        which: keyCode,
-                        bubbles: true,
-                        cancelable: true
-                    });
-                    canvas.dispatchEvent(keyUpEvent);
-                }, 50);
+          // Botones de acción (A, B, X, Y)
+          const actionButtons = document.querySelectorAll('.action-btn[data-key]');
+          actionButtons.forEach(btn => {
+              const key = btn.getAttribute('data-key');
+              
+              btn.addEventListener('mousedown', () => {
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('mouseup', () => {
+                  sendGamepadKey(key, false);
+              });
+              
+              btn.addEventListener('mouseleave', () => {
+                  sendGamepadKey(key, false);
+              });
+              
+              // Touch support
+              btn.addEventListener('touchstart', (e) => {
+                  e.preventDefault();
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('touchend', (e) => {
+                  e.preventDefault();
+                  sendGamepadKey(key, false);
+              });
+          });
 
-                // También escribir en la consola de debug para feedback
-                const output = document.getElementById('output');
-                if (output && output.style.display !== 'none') {
-                    if (key === 'Backspace') {
-                        output.value = output.value.slice(0, -1);
-                    } else if (key === 'Enter') {
-                        output.value += '\n';
-                    } else if (key === 'Tab') {
-                        output.value += '    ';
-                    } else if (!isSpecialKey || key === ' ') {
-                        output.value += keyValue;
-                    }
-                    output.scrollTop = output.scrollHeight;
-                }
+          // Botones especiales (Start, Select, Teclado)
+          const specialButtons = document.querySelectorAll('.special-btn[data-key]');
+          specialButtons.forEach(btn => {
+              const key = btn.getAttribute('data-key');
+              
+              btn.addEventListener('click', () => {
+                  // Para botones de acción momentánea
+                  sendGamepadKey(key, true);
+                  setTimeout(() => sendGamepadKey(key, false), 100);
+              });
+          });
+      }
 
-                console.log(`Tecla enviada al emulador: ${keyValue} (keyCode: ${keyCode})`);
-            }
+      // Sistema de teclado virtual (original, actualizado)
+      let isShiftActive = false;
+      let isCapsActive = false;
+      
+      const shiftMap = {
+          '`': '~', '1': '!', '2': '@', '3': '#', '4': '$', '5': '%', 
+          '6': '^', '7': '&', '8': '*', '9': '(', '0': ')', '-': '_', 
+          '=': '+', '[': '{', ']': '}', '\\': '|', ';': ':', "'": '"', 
+          ',': '<', '.': '>', '/': '?',
+          'a': 'A', 'b': 'B', 'c': 'C', 'd': 'D', 'e': 'E', 'f': 'F',
+          'g': 'G', 'h': 'H', 'i': 'I', 'j': 'J', 'k': 'K', 'l': 'L',
+          'm': 'M', 'n': 'N', 'o': 'O', 'p': 'P', 'q': 'Q', 'r': 'R',
+          's': 'S', 't': 'T', 'u': 'U', 'v': 'V', 'w': 'W', 'x': 'X',
+          'y': 'Y', 'z': 'Z'
+      };
 
-            function handleSpecialKey(key) {
-                switch(key) {
-                    case 'Backspace':
-                        sendKeyToEmulator('Backspace', true);
-                        break;
-                    case 'Enter':
-                        sendKeyToEmulator('Enter', true);
-                        break;
-                    case 'Tab':
-                        sendKeyToEmulator('Tab', true);
-                        break;
-                    case ' ':
-                        sendKeyToEmulator(' ', false); // Barra espaciadora como tecla normal
-                        console.log('Barra espaciadora presionada');
-                        break;
-                    case 'Shift':
-                        toggleShift();
-                        break;
-                    case 'CapsLock':
-                        toggleCaps();
-                        break;
-                    case 'Control':
-                        sendKeyToEmulator('Control', true);
-                        break;
-                    case 'Alt':
-                        sendKeyToEmulator('Alt', true);
-                        break;
-                }
-            }
+      function sendKeyToEmulator(key, isSpecialKey = false) {
+          const canvas = document.getElementById('canvas');
+          if (!canvas) return;
 
-            function toggleShift() {
-                isShiftActive = !isShiftActive;
-                const shiftKey = document.getElementById('shiftKey');
-                const shiftKeyRight = document.getElementById('shiftKeyRight');
-                
-                if (shiftKey) shiftKey.classList.toggle('key-shift-active', isShiftActive);
-                if (shiftKeyRight) shiftKeyRight.classList.toggle('key-shift-active', isShiftActive);
-            }
+          let keyCode;
+          let keyValue = key;
 
-            function toggleCaps() {
-                isCapsActive = !isCapsActive;
-                const capsLock = document.getElementById('capsLock');
-                if (capsLock) capsLock.classList.toggle('key-caps-active', isCapsActive);
-            }
+          if (isSpecialKey) {
+              keyCode = keyCodeMap[key] || 0;
+          } else {
+              if (isShiftActive && shiftMap[key]) {
+                  keyValue = shiftMap[key];
+              } else if (isCapsActive && key.match(/[a-z]/)) {
+                  keyValue = key.toUpperCase();
+              }
+              keyCode = keyCodeMap[key] || keyValue.charCodeAt(0);
+          }
 
-            // Inicializar event listeners para las teclas
-            document.addEventListener('DOMContentLoaded', function() {
-                const keys = document.querySelectorAll('.key');
-                
-                keys.forEach(key => {
-                    key.addEventListener('click', function() {
-                        const keyValue = this.getAttribute('data-key');
-                        
-                        // Si es una tecla especial
-                        if (this.classList.contains('key-special') || 
-                            this.classList.contains('key-utility')) {
-                            handleSpecialKey(keyValue);
-                        } 
-                        // Si es una tecla normal
-                        else {
-                            sendKeyToEmulator(keyValue, false);
-                            
-                            // Desactivar shift después de una tecla normal
-                            if (isShiftActive && keyValue !== 'Shift') {
-                                toggleShift();
-                            }
-                        }
-                    });
-                });
+          // Evento keydown
+          const keyDownEvent = new KeyboardEvent('keydown', {
+              key: keyValue,
+              code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
+              keyCode: keyCode,
+              which: keyCode,
+              bubbles: true,
+              cancelable: true
+          });
 
-                // Asegurarse de que el canvas pueda recibir eventos de teclado
-                const canvas = document.getElementById('canvas');
-                if (canvas) {
-                    canvas.setAttribute('tabindex', '0');
-                    canvas.focus();
-                    
-                    // Re-enfocar el canvas cuando se hace clic en cualquier lugar
-                    document.addEventListener('click', function() {
-                        canvas.focus();
-                    });
-                }
-                
-                // Verificar que la barra espaciadora esté presente y visible
-                setTimeout(() => {
-                    const spaceKey = document.querySelector('.key-space');
-                    if (spaceKey) {
-                        console.log('✅ Barra espaciadora cargada correctamente');
-                        console.log('Dimensiones:', spaceKey.offsetWidth, 'x', spaceKey.offsetHeight);
-                        console.log('Posición:', spaceKey.getBoundingClientRect());
-                        
-                        // Asegurar visibilidad máxima
-                        spaceKey.style.opacity = '1';
-                        spaceKey.style.visibility = 'visible';
-                        spaceKey.style.zIndex = '10001';
-                        spaceKey.style.position = 'relative';
-                        
-                        // Resaltar temporalmente para verificación
-                        spaceKey.style.boxShadow = '0 0 10px #00ff00, 0 3px 0 #5a8c7a';
-                    } else {
-                        console.error('❌ Barra espaciadora NO encontrada en el DOM');
-                    }
-                }, 100);
-            });
+          // Evento keypress para caracteres
+          if (!isSpecialKey && key.length === 1) {
+              const keyPressEvent = new KeyboardEvent('keypress', {
+                  key: keyValue,
+                  code: 'Key' + key.toUpperCase(),
+                  keyCode: keyValue.charCodeAt(0),
+                  charCode: keyValue.charCodeAt(0),
+                  which: keyValue.charCodeAt(0),
+                  bubbles: true,
+                  cancelable: true
+              });
+              
+              canvas.dispatchEvent(keyPressEvent);
+          }
 
-            // Sobrescribir la función toggleConsole original
-            const originalToggleConsole = window.toggleConsole;
-            window.toggleConsole = function() {
-                toggleConsoleAndKeyboard();
-            };
+          canvas.dispatchEvent(keyDownEvent);
 
-            // Función global para que otros scripts puedan usar el teclado
-            window.virtualKeyboard = {
-                show: function() {
-                    const keyboard = document.getElementById('virtualKeyboard');
-                    keyboard.style.display = 'block';
-                    keyboard.style.bottom = '0'; // Pegado al fondo
-                    document.body.classList.add('keyboard-active');
-                },
-                hide: function() {
-                    document.getElementById('virtualKeyboard').style.display = 'none';
-                    document.body.classList.remove('keyboard-active');
-                },
-                toggle: toggleVirtualKeyboard,
-                sendKey: sendKeyToEmulator
-            };
-        </script>
+          // Evento keyup
+          setTimeout(() => {
+              const keyUpEvent = new KeyboardEvent('keyup', {
+                  key: keyValue,
+                  code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
+                  keyCode: keyCode,
+                  which: keyCode,
+                  bubbles: true,
+                  cancelable: true
+              });
+              canvas.dispatchEvent(keyUpEvent);
+          }, 50);
 
-        <script>
-        function startInline() {
-            document.getElementById('run-inline').style.display = 'none';
-            document.getElementById('loading').style.display = '';
-            Config.isRunningInline = true;
-            Config.urlParams = "p=dock";
-            var script = document.createElement('script');
-            script.src = "kernel.js";
-            document.body.appendChild(script);
-        }
-        function addDefaultOnDemand(params) {
-        	if(! params.includes("root=") &&  ! params.includes("ondemand=")) {
-        		if(params.length >0) {
-        			params = params + "&";
-        		}
-        		params = params + "ondemand=root&root=dlls&inline-default-ondemand-root-overlay=dlls";
-        	}
-        	return params;
-        }
-        </script>
-        <script async type="text/javascript" src="kernel.js"></script>
+          // Feedback en consola
+          const output = document.getElementById('output');
+          if (output && output.style.display !== 'none') {
+              if (key === 'Backspace') {
+                  output.value = output.value.slice(0, -1);
+              } else if (key === 'Enter') {
+                  output.value += '\n';
+              } else if (key === 'Tab') {
+                  output.value += '    ';
+              } else if (!isSpecialKey || key === ' ') {
+                  output.value += keyValue;
+              }
+              output.scrollTop = output.scrollHeight;
+          }
+      }
+
+      function setupKeyboard() {
+          const keys = document.querySelectorAll('.key');
+          
+          keys.forEach(key => {
+              key.addEventListener('click', function() {
+                  const keyValue = this.getAttribute('data-key');
+                  
+                  if (this.classList.contains('key-special') || 
+                      this.classList.contains('key-utility')) {
+                      handleSpecialKey(keyValue);
+                  } else {
+                      sendKeyToEmulator(keyValue, false);
+                      
+                      if (isShiftActive && keyValue !== 'Shift') {
+                          toggleShift();
+                      }
+                  }
+              });
+          });
+
+          // Enfocar canvas
+          const canvas = document.getElementById('canvas');
+          if (canvas) {
+              canvas.setAttribute('tabindex', '0');
+              canvas.focus();
+              
+              document.addEventListener('click', function() {
+                  canvas.focus();
+              });
+          }
+      }
+
+      function handleSpecialKey(key) {
+          switch(key) {
+              case 'Backspace':
+                  sendKeyToEmulator('Backspace', true);
+                  break;
+              case 'Enter':
+                  sendKeyToEmulator('Enter', true);
+                  break;
+              case 'Tab':
+                  sendKeyToEmulator('Tab', true);
+                  break;
+              case ' ':
+                  sendKeyToEmulator(' ', false);
+                  break;
+              case 'Shift':
+                  toggleShift();
+                  break;
+              case 'CapsLock':
+                  toggleCaps();
+                  break;
+              case 'Control':
+                  sendKeyToEmulator('Control', true);
+                  break;
+              case 'Alt':
+                  sendKeyToEmulator('Alt', true);
+                  break;
+          }
+      }
+
+      function toggleShift() {
+          isShiftActive = !isShiftActive;
+          const shiftKey = document.getElementById('shiftKey');
+          const shiftKeyRight = document.getElementById('shiftKeyRight');
+          
+          if (shiftKey) shiftKey.classList.toggle('key-shift-active', isShiftActive);
+          if (shiftKeyRight) shiftKeyRight.classList.toggle('key-shift-active', isShiftActive);
+      }
+
+      function toggleCaps() {
+          isCapsActive = !isCapsActive;
+          const capsLock = document.getElementById('capsLock');
+          if (capsLock) capsLock.classList.toggle('key-caps-active', isCapsActive);
+      }
+
+      // Inicialización
+      document.addEventListener('DOMContentLoaded', function() {
+          setupGamepadButtons();
+          setupKeyboard();
+          
+          console.log('🎮 Gamepad virtual cargado');
+          console.log('⌨️ Teclado virtual cargado');
+          
+          // Configurar por defecto
+          applyGameConfig('default');
+      });
+
+      // Aplicar configuración de juego
+      function applyGameConfig(configName) {
+          if (gameConfigs[configName]) {
+              currentConfig = configName;
+              console.log(`Configuración aplicada: ${configName}`);
+          }
+      }
+
+      // API global
+      window.virtualControls = {
+          showGamepad: function() {
+              toggleGamepad();
+          },
+          showKeyboard: function() {
+              toggleVirtualKeyboard();
+          },
+          hideAll: function() {
+              document.getElementById('gamepad').style.display = 'none';
+              document.getElementById('virtualKeyboard').style.display = 'none';
+              activeControl = null;
+              document.body.classList.remove('controls-active');
+          },
+          setGameConfig: applyGameConfig,
+          getCurrentConfig: function() {
+              return currentConfig;
+          }
+      };
+
+      // Integración con sistema original
+      function toggleConsoleAndKeyboard() {
+          const consoleEl = document.getElementById('output');
+          const showConsole = document.getElementById('showConsole');
+          
+          if (showConsole.checked) {
+              consoleEl.style.display = '';
+              // Mostrar teclado cuando se muestra la consola
+              toggleVirtualKeyboard();
+          } else {
+              consoleEl.style.display = 'none';
+              // Ocultar controles cuando se oculta la consola
+              window.virtualControls.hideAll();
+          }
+      }
+
+      // Sobrescribir función original
+      const originalToggleConsole = window.toggleConsole;
+      window.toggleConsole = function() {
+          toggleConsoleAndKeyboard();
+      };
+  </script>
+
+  <script>
+  function startInline() {
+      document.getElementById('run-inline').style.display = 'none';
+      document.getElementById('loading').style.display = '';
+      Config.isRunningInline = true;
+      Config.urlParams = "p=dock";
+      var script = document.createElement('script');
+      script.src = "kernel.js";
+      document.body.appendChild(script);
+  }
+  function addDefaultOnDemand(params) {
+      if(! params.includes("root=") &&  ! params.includes("ondemand=")) {
+          if(params.length >0) {
+              params = params + "&";
+          }
+          params = params + "ondemand=root&root=dlls&inline-default-ondemand-root-overlay=dlls";
+      }
+      return params;
+  }
+  </script>
+  <script async type="text/javascript" src="kernel.js"></script>
 
   </body>
 </html>
