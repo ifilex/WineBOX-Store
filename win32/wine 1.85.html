@@ -36,7 +36,7 @@
             justify-content: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
-            z-index: 10001;
+            z-index: 9999;
             backdrop-filter: blur(10px);
             background: rgba(108, 92, 231, 0.85);
             border: 2px solid rgba(255, 255, 255, 0.2);
@@ -69,7 +69,7 @@
             justify-content: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
-            z-index: 10001;
+            z-index: 9999;
             backdrop-filter: blur(10px);
             background: rgba(52, 152, 219, 0.85);
             border: 2px solid rgba(255, 255, 255, 0.2);
@@ -81,36 +81,15 @@
             background: rgba(52, 152, 219, 0.95);
         }
 
-        /* JOYSTICK AL ESTILO XBOX CLOUD - AHORA MOVIBLE */
+        /* JOYSTICK AL ESTILO XBOX CLOUD */
         .joystick-container {
             position: fixed;
-            bottom: 120px;
+            bottom: 100px;
             left: 30px;
             z-index: 9998;
             display: none;
             user-select: none;
             touch-action: none;
-            cursor: move;
-        }
-
-        .joystick-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            cursor: move;
-            opacity: 0.5;
-            transition: opacity 0.3s ease;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .joystick-header:hover {
-            opacity: 1;
-        }
-
-        .joystick-header span {
-            margin-left: 5px;
         }
 
         .joystick-base {
@@ -141,7 +120,6 @@
             cursor: move;
             transition: background 0.2s ease;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            touch-action: none;
         }
 
         .joystick-thumb:active {
@@ -162,38 +140,16 @@
             transform: translate(-50%, -50%);
         }
 
-        /* BOTONES DE ACCIÓN TRANSPARENTES - AHORA MOVIBLES */
+        /* BOTONES DE ACCIÓN TRANSPARENTES */
         .action-buttons-container {
             position: fixed;
-            bottom: 120px;
+            bottom: 100px;
             right: 30px;
             z-index: 9998;
             display: none;
             gap: 20px;
             flex-direction: column;
             align-items: center;
-            cursor: move;
-        }
-
-        .action-buttons-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            cursor: move;
-            opacity: 0.5;
-            transition: opacity 0.3s ease;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.7);
-            width: 100%;
-        }
-
-        .action-buttons-header:hover {
-            opacity: 1;
-        }
-
-        .action-buttons-header span {
-            margin-left: 5px;
         }
 
         .action-button {
@@ -265,7 +221,7 @@
             background: rgba(253, 203, 110, 1);
         }
 
-        /* TECLADO VIRTUAL COMPLETAMENTE VISIBLE - ARREGLADO */
+        /* TECLADO VIRTUAL MEJORADO */
         .virtual-keyboard-container {
             position: fixed;
             bottom: 100px;
@@ -274,152 +230,73 @@
             background: rgba(30, 30, 30, 0.85);
             backdrop-filter: blur(20px);
             border-radius: 12px;
-            padding: 12px;
+            padding: 15px;
             box-shadow: 
                 0 10px 30px rgba(0, 0, 0, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.1);
             z-index: 9998;
             display: none;
-            width: auto;
-            min-width: 320px;
-            max-width: 95%;
-            cursor: move;
-            overflow: visible;
-        }
-
-        /* Cuando el teclado está en la parte inferior */
-        .virtual-keyboard-container.at-bottom {
-            bottom: 0 !important;
-            border-radius: 12px 12px 0 0 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            left: 0 !important;
-            transform: none !important;
-            padding: 8px !important;
+            width: 95%;
+            max-width: 800px;
+            min-width: 300px;
         }
 
         .keyboard-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
-            padding-bottom: 8px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: move;
-            height: 30px;
         }
 
         .keyboard-title {
             color: #6c5ce7;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .keyboard-title span {
-            font-size: 11px;
-            opacity: 0.7;
-            font-weight: normal;
-        }
-
-        .keyboard-controls {
-            display: flex;
-            gap: 8px;
-        }
-
-        .keyboard-button {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 11px;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .keyboard-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .keyboard-button:active {
-            transform: scale(0.95);
         }
 
         .keyboard-close {
             background: rgba(255, 107, 107, 0.7);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s ease;
         }
 
         .keyboard-close:hover {
             background: rgba(255, 107, 107, 0.9);
         }
 
-        .keyboard-expand {
-            background: rgba(96, 206, 180, 0.7);
-        }
-
-        .keyboard-expand:hover {
-            background: rgba(96, 206, 180, 0.9);
-        }
-
-        /* TECLADO - DISEÑO COMPACTO Y COMPLETO */
         .keyboard {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
             width: 100%;
-            min-height: 160px;
-            overflow: visible;
         }
 
         .keyboard-row {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 4px;
+            gap: 6px;
             width: 100%;
-            min-height: 35px;
-        }
-
-        /* Ajustes específicos para cada fila */
-        .keyboard-row:nth-child(1) { /* Números */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(2) { /* QWERTY */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(3) { /* ASDF */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(4) { /* ZXCV */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(5) { /* Barra espaciadora */
-            min-height: 38px;
         }
 
         .key {
             background: rgba(255, 255, 255, 0.15);
             color: white;
             border: none;
-            border-radius: 5px;
-            padding: 6px 2px;
-            min-width: 24px;
-            height: 100%;
+            border-radius: 6px;
+            padding: 12px 0;
+            min-width: 0;
             flex: 1;
             cursor: pointer;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -427,11 +304,10 @@
             transition: all 0.1s ease;
             user-select: none;
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.2),
+                0 2px 5px rgba(0, 0, 0, 0.2),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            overflow: hidden;
         }
 
         .key:hover {
@@ -444,45 +320,27 @@
             background: rgba(255, 255, 255, 0.35);
         }
 
-        /* Teclas especiales - tamaños específicos */
-        .key-backspace {
-            flex: 1.5 !important;
-            font-size: 14px !important;
+        .key-wide {
+            flex: 1.5;
         }
 
-        .key-tab {
-            flex: 1.2 !important;
+        .key-extra-wide {
+            flex: 2;
         }
 
-        .key-caps {
-            flex: 1.5 !important;
-        }
-
-        .key-enter {
-            flex: 1.5 !important;
-            font-size: 11px !important;
-        }
-
-        .key-shift {
-            flex: 1.8 !important;
-            font-size: 11px !important;
-        }
-
-        .key-ctrl, .key-alt {
-            flex: 1 !important;
-            font-size: 11px !important;
+        .key-ultra-wide {
+            flex: 4;
         }
 
         /* BARRA ESPACIADORA COMPLETA Y VISIBLE */
         .key-space {
-            flex: 6 !important;
+            flex: 8 !important;
             background: rgba(96, 206, 180, 0.7);
             font-weight: bold;
-            font-size: 14px;
-            padding: 8px 0;
-            height: 100%;
-            min-height: 36px;
-            margin: 0 2px;
+            font-size: 16px;
+            padding: 15px 0;
+            min-height: 50px;
+            margin: 0 5px;
         }
 
         .key-space:hover {
@@ -503,7 +361,7 @@
 
         .key-special.active {
             background: rgba(108, 92, 231, 0.8);
-            box-shadow: inset 0 0 8px rgba(108, 92, 231, 0.5);
+            box-shadow: inset 0 0 10px rgba(108, 92, 231, 0.5);
         }
 
         .key-utility {
@@ -512,91 +370,6 @@
 
         .key-utility:hover {
             background: rgba(52, 152, 219, 0.6);
-        }
-
-        /* Cuando el teclado está expandido en la parte inferior */
-        .virtual-keyboard-container.at-bottom .keyboard {
-            gap: 5px;
-        }
-
-        .virtual-keyboard-container.at-bottom .keyboard-row {
-            gap: 3px;
-            min-height: 40px;
-        }
-
-        .virtual-keyboard-container.at-bottom .keyboard-row:nth-child(5) {
-            min-height: 45px;
-        }
-
-        .virtual-keyboard-container.at-bottom .key {
-            font-size: 13px;
-            padding: 8px 2px;
-            border-radius: 6px;
-        }
-
-        .virtual-keyboard-container.at-bottom .key-space {
-            font-size: 15px;
-            min-height: 42px;
-        }
-
-        /* BOTONES EXTRA - AHORA MOVIBLES */
-        .extra-buttons-container {
-            position: fixed;
-            bottom: 240px;
-            left: 30px;
-            z-index: 9998;
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-            cursor: move;
-        }
-
-        .extra-buttons-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            cursor: move;
-            opacity: 0.5;
-            transition: opacity 0.3s ease;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .extra-buttons-header:hover {
-            opacity: 1;
-        }
-
-        .extra-buttons-header span {
-            margin-left: 5px;
-        }
-
-        .extra-button {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(52, 152, 219, 0.7);
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-            transition: all 0.2s ease;
-        }
-
-        .extra-button:hover {
-            transform: scale(1.05);
-            background: rgba(52, 152, 219, 0.85);
-        }
-
-        .extra-button:active {
-            transform: scale(0.95);
-            background: rgba(52, 152, 219, 1);
         }
 
         /* PANEL DE CONFIGURACIÓN COMPLETO */
@@ -656,7 +429,6 @@
             margin-bottom: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 10px;
-            flex-wrap: wrap;
         }
 
         .config-tab {
@@ -669,7 +441,6 @@
             font-size: 14px;
             transition: all 0.2s ease;
             flex: 1;
-            min-width: 80px;
             text-align: center;
         }
 
@@ -702,7 +473,7 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        .config-select, .config-input, .config-range {
+        .config-select, .config-input {
             width: 100%;
             padding: 10px;
             border-radius: 6px;
@@ -711,40 +482,6 @@
             color: white;
             font-size: 14px;
             backdrop-filter: blur(10px);
-        }
-
-        .config-range {
-            padding: 0;
-            height: 30px;
-            -webkit-appearance: none;
-            background: transparent;
-        }
-
-        .config-range::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #6c5ce7;
-            cursor: pointer;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .config-range::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #6c5ce7;
-            cursor: pointer;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .config-range-value {
-            display: inline-block;
-            margin-left: 10px;
-            font-weight: bold;
-            color: #6c5ce7;
-            min-width: 40px;
         }
 
         .config-select:focus, .config-input:focus {
@@ -812,9 +549,43 @@
             50% { opacity: 0.5; }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* BOTONES EXTRA */
+        .extra-buttons-container {
+            position: fixed;
+            bottom: 220px;
+            left: 30px;
+            z-index: 9998;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .extra-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(52, 152, 219, 0.7);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .extra-button:hover {
+            transform: scale(1.05);
+            background: rgba(52, 152, 219, 0.85);
+        }
+
+        .extra-button:active {
+            transform: scale(0.95);
+            background: rgba(52, 152, 219, 1);
         }
 
         /* INDICADOR VISUAL */
@@ -838,60 +609,30 @@
             10%, 90% { opacity: 1; }
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* TECLADO COMPACTO PARA MÓVIL */
         @media (max-width: 768px) {
             .virtual-keyboard-container {
                 bottom: 80px;
                 width: 98%;
+                padding: 10px;
                 left: 50%;
                 transform: translateX(-50%);
-                max-width: 95%;
-                min-width: 300px;
-                padding: 10px;
-            }
-            
-            .virtual-keyboard-container.at-bottom {
-                bottom: 0 !important;
-                width: 100% !important;
-                left: 0 !important;
-                transform: none !important;
-                max-width: 100% !important;
-                padding: 6px !important;
-            }
-            
-            .keyboard {
-                gap: 4px;
-                min-height: 150px;
-            }
-            
-            .keyboard-row {
-                gap: 3px;
-                min-height: 30px;
-            }
-            
-            .keyboard-row:nth-child(5) {
-                min-height: 35px;
             }
             
             .key {
-                padding: 5px 1px;
-                font-size: 11px;
-                min-width: 22px;
+                padding: 10px 0;
+                font-size: 12px;
+                min-height: 40px;
             }
             
             .key-space {
-                font-size: 12px;
-                min-height: 32px;
-            }
-            
-            .virtual-keyboard-container.at-bottom .key {
-                font-size: 12px;
-                padding: 6px 1px;
-            }
-            
-            .virtual-keyboard-container.at-bottom .key-space {
-                font-size: 13px;
-                min-height: 36px;
+                min-height: 45px;
+                font-size: 14px;
             }
             
             .joystick-container {
@@ -937,68 +678,11 @@
             }
         }
         
-        /* AJUSTES PARA PANTALLAS MUY PEQUEÑAS */
-        @media (max-width: 480px) {
-            .keyboard {
-                gap: 3px;
-            }
-            
-            .keyboard-row {
-                gap: 2px;
-                min-height: 28px;
-            }
-            
-            .key {
-                font-size: 10px;
-                padding: 4px 0;
-                min-width: 20px;
-            }
-            
-            .key-space {
-                font-size: 11px;
-                min-height: 30px;
-            }
-            
-            .key-backspace, .key-enter, .key-shift {
-                font-size: 9px !important;
-            }
-        }
-        
-        /* CONTROLES TRANSPARENTES AL MÁXIMO */
-        .ultra-transparent {
-            opacity: 0.1 !important;
-        }
-        
-        .ultra-transparent:hover {
-            opacity: 0.3 !important;
-        }
-        
         /* AJUSTES PARA TECLAS ESPECIALES */
         #capsLock.active, #shiftKey.active, #shiftKeyRight.active {
             background: rgba(108, 92, 231, 0.8) !important;
             color: white !important;
-            box-shadow: inset 0 0 8px rgba(108, 92, 231, 0.5) !important;
-        }
-        
-        /* GRAB HANDLE PARA MOVER */
-        .grab-handle {
-            cursor: move;
-            opacity: 0.5;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 12px;
-        }
-        
-        .grab-handle:hover {
-            opacity: 1;
-        }
-        
-        .grab-handle::before {
-            content: '⣿⣿';
-            font-size: 10px;
-            letter-spacing: 2px;
+            box-shadow: inset 0 0 10px rgba(108, 92, 231, 0.5) !important;
         }
     </style>
   </head>
@@ -1013,54 +697,35 @@
   <!-- Indicador visual -->
   <div class="control-indicator" id="controlIndicator"></div>
 
-  <!-- Joystick estilo Xbox Cloud - AHORA MOVIBLE -->
+  <!-- Joystick estilo Xbox Cloud -->
   <div class="joystick-container" id="joystickContainer">
-      <div class="joystick-header grab-handle">
-          <span>Mover Joystick</span>
-      </div>
       <div class="joystick-base">
           <div class="joystick-center"></div>
           <div class="joystick-thumb" id="joystickThumb"></div>
       </div>
   </div>
 
-  <!-- Botones de acción - AHORA MOVIBLES -->
+  <!-- Botones de acción -->
   <div class="action-buttons-container" id="actionButtons">
-      <div class="action-buttons-header grab-handle">
-          <span>Mover Botones</span>
-      </div>
       <button class="action-button action-button-a" data-key=" ">A</button>
       <button class="action-button action-button-b" data-key="Control">B</button>
       <button class="action-button action-button-x" data-key="Shift">X</button>
       <button class="action-button action-button-y" data-key="Alt">Y</button>
   </div>
 
-  <!-- Botones extra - AHORA MOVIBLES -->
+  <!-- Botones extra -->
   <div class="extra-buttons-container" id="extraButtons">
-      <div class="extra-buttons-header grab-handle">
-          <span>Mover Start/Back</span>
-      </div>
       <button class="extra-button" data-key="Enter" title="Start">⏵</button>
       <button class="extra-button" data-key="Escape" title="Back">⏮</button>
   </div>
 
-  <!-- TECLADO VIRTUAL COMPLETAMENTE VISIBLE - ARREGLADO -->
+  <!-- Teclado virtual mejorado -->
   <div class="virtual-keyboard-container" id="virtualKeyboard">
       <div class="keyboard-header">
-          <div class="keyboard-title grab-handle">
-              <span>Teclado Virtual</span>
-              <span style="font-size: 10px;">(arrastra para mover)</span>
-          </div>
-          <div class="keyboard-controls">
-              <button class="keyboard-button keyboard-expand" onclick="toggleKeyboardPosition()" title="Alternar posición">
-                  ⬇️ Expandir
-              </button>
-              <button class="keyboard-button keyboard-close" onclick="hideKeyboard()" title="Cerrar teclado">
-                  ✕ Cerrar
-              </button>
-          </div>
+          <div class="keyboard-title">Teclado Virtual</div>
+          <button class="keyboard-close" onclick="hideKeyboard()">✕ Cerrar</button>
       </div>
-      <div class="keyboard" id="keyboardLayout">
+      <div class="keyboard">
           <!-- Fila 1: Números y Backspace -->
           <div class="keyboard-row">
               <div class="key" data-key="`">`</div>
@@ -1076,12 +741,12 @@
               <div class="key" data-key="0">0</div>
               <div class="key" data-key="-">-</div>
               <div class="key" data-key="=">=</div>
-              <div class="key key-utility key-backspace" data-key="Backspace">⌫</div>
+              <div class="key key-wide key-utility" data-key="Backspace">⌫</div>
           </div>
           
           <!-- Fila 2: QWERTY -->
           <div class="keyboard-row">
-              <div class="key key-utility key-tab" data-key="Tab">Tab</div>
+              <div class="key key-wide key-utility" data-key="Tab">Tab</div>
               <div class="key" data-key="q">Q</div>
               <div class="key" data-key="w">W</div>
               <div class="key" data-key="e">E</div>
@@ -1094,12 +759,12 @@
               <div class="key" data-key="p">P</div>
               <div class="key" data-key="[">[</div>
               <div class="key" data-key="]">]</div>
-              <div class="key" data-key="\">\</div>
+              <div class="key key-wide" data-key="\">\</div>
           </div>
           
           <!-- Fila 3: ASDF -->
           <div class="keyboard-row">
-              <div class="key key-special key-caps" data-key="CapsLock" id="capsLock">Caps</div>
+              <div class="key key-wide key-special" data-key="CapsLock" id="capsLock">Caps</div>
               <div class="key" data-key="a">A</div>
               <div class="key" data-key="s">S</div>
               <div class="key" data-key="d">D</div>
@@ -1111,12 +776,12 @@
               <div class="key" data-key="l">L</div>
               <div class="key" data-key=";">;</div>
               <div class="key" data-key="'">'</div>
-              <div class="key key-utility key-enter" data-key="Enter">↵ Enter</div>
+              <div class="key key-wide key-utility" data-key="Enter">↵ Enter</div>
           </div>
           
-          <!-- Fila 4: ZXCV - AHORA COMPLETAMENTE VISIBLE -->
+          <!-- Fila 4: ZXCV -->
           <div class="keyboard-row">
-              <div class="key key-special key-shift" data-key="Shift" id="shiftKey">⇧ Shift</div>
+              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKey">⇧ Shift</div>
               <div class="key" data-key="z">Z</div>
               <div class="key" data-key="x">X</div>
               <div class="key" data-key="c">C</div>
@@ -1127,16 +792,16 @@
               <div class="key" data-key=",">,</div>
               <div class="key" data-key=".">.</div>
               <div class="key" data-key="/">/</div>
-              <div class="key key-special key-shift" data-key="Shift" id="shiftKeyRight">⇧ Shift</div>
+              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKeyRight">⇧ Shift</div>
           </div>
           
-          <!-- Fila 5: BARRA ESPACIADORA COMPLETA Y VISIBLE -->
+          <!-- Fila 5: BARRA ESPACIADORA COMPLETA -->
           <div class="keyboard-row">
-              <div class="key key-special key-ctrl" data-key="Control">Ctrl</div>
-              <div class="key key-special key-alt" data-key="Alt">Alt</div>
+              <div class="key key-special" data-key="Control">Ctrl</div>
+              <div class="key key-special" data-key="Alt">Alt</div>
               <div class="key key-space" data-key=" ">ESPACIO</div>
-              <div class="key key-special key-alt" data-key="Alt">Alt</div>
-              <div class="key key-special key-ctrl" data-key="Control">Ctrl</div>
+              <div class="key key-special" data-key="Alt">Alt</div>
+              <div class="key key-special" data-key="Control">Ctrl</div>
           </div>
       </div>
   </div>
@@ -1150,8 +815,8 @@
       
       <div class="config-tabs">
           <button class="config-tab active" onclick="showConfigSection('general')">General</button>
-          <button class="config-tab" onclick="showConfigSection('position')">Posición</button>
-          <button class="config-tab" onclick="showConfigSection('transparency')">Transparencia</button>
+          <button class="config-tab" onclick="showConfigSection('joystick')">Joystick</button>
+          <button class="config-tab" onclick="showConfigSection('keyboard')">Teclado</button>
           <button class="config-tab" onclick="showConfigSection('keys')">Teclas</button>
       </div>
       
@@ -1162,6 +827,17 @@
               <select class="config-select" id="defaultControlType">
                   <option value="joystick">🎮 Joystick</option>
                   <option value="keyboard">⌨️ Teclado</option>
+              </select>
+          </div>
+          
+          <div class="config-group">
+              <label class="config-label">Transparencia General:</label>
+              <select class="config-select" id="globalOpacity">
+                  <option value="0.7">70% - Muy Transparente</option>
+                  <option value="0.8">80% - Transparente</option>
+                  <option value="0.85" selected>85% - Media</option>
+                  <option value="0.9">90% - Poco Transparente</option>
+                  <option value="0.95">95% - Casi Sólido</option>
               </select>
           </div>
           
@@ -1182,7 +858,10 @@
                   <option value="large">Grande</option>
               </select>
           </div>
-          
+      </div>
+      
+      <!-- SECCIÓN JOYSTICK -->
+      <div class="config-section" id="joystickSection">
           <div class="config-group">
               <label class="config-label">Sensibilidad del Joystick:</label>
               <select class="config-select" id="joystickSensitivity">
@@ -1194,94 +873,73 @@
           </div>
           
           <div class="config-group">
+              <label class="config-label">Tamaño del Joystick:</label>
+              <select class="config-select" id="joystickSize">
+                  <option value="small">Pequeño (100px)</option>
+                  <option value="normal" selected>Normal (140px)</option>
+                  <option value="large">Grande (180px)</option>
+              </select>
+          </div>
+          
+          <div class="config-group">
+              <label class="config-label">Posición del Joystick:</label>
+              <select class="config-select" id="joystickPosition">
+                  <option value="left">Izquierda</option>
+                  <option value="center" selected>Centro Izquierda</option>
+                  <option value="right">Derecha</option>
+              </select>
+          </div>
+          
+          <div class="config-group">
+              <label class="config-label">Retorno al Centro:</label>
+              <select class="config-select" id="joystickReturn">
+                  <option value="fast">Rápido (0.2s)</option>
+                  <option value="normal" selected>Normal (0.3s)</option>
+                  <option value="slow">Lento (0.5s)</option>
+                  <option value="none">Sin retorno</option>
+              </select>
+          </div>
+      </div>
+      
+      <!-- SECCIÓN TECLADO -->
+      <div class="config-section" id="keyboardSection">
+          <div class="config-group">
               <label class="config-label">Tamaño del Teclado:</label>
-              <select class="config-select" id="keyboardSize" onchange="changeKeyboardSize(this.value)">
+              <select class="config-select" id="keyboardSize">
                   <option value="compact">Compacto</option>
                   <option value="normal" selected>Normal</option>
                   <option value="large">Grande</option>
-              </select>
-          </div>
-      </div>
-      
-      <!-- SECCIÓN POSICIÓN -->
-      <div class="config-section" id="positionSection">
-          <div class="config-group">
-              <label class="config-label">Posiciones Guardadas:</label>
-              <select class="config-select" id="savedPositions" onchange="loadPosition(this.value)">
-                  <option value="">Seleccionar posición guardada...</option>
-                  <option value="default">Posición por defecto</option>
-                  <option value="mobile">Diseño móvil</option>
-                  <option value="left">Todo a la izquierda</option>
-                  <option value="right">Todo a la derecha</option>
+                  <option value="full">Pantalla Completa</option>
               </select>
           </div>
           
           <div class="config-group">
-              <label class="config-label">Teclado en Parte Inferior:</label>
-              <select class="config-select" id="keyboardAtBottom" onchange="toggleKeyboardBottom(this.value === 'yes')">
-                  <option value="no">No</option>
-                  <option value="yes">Sí (expande horizontalmente)</option>
+              <label class="config-label">Mostrar Teclas Especiales:</label>
+              <select class="config-select" id="showSpecialKeys">
+                  <option value="all">Todas</option>
+                  <option value="common" selected>Solo comunes</option>
+                  <option value="none">Ninguna</option>
               </select>
           </div>
           
           <div class="config-group">
-              <label class="config-label">Guardar Posición Actual:</label>
-              <input type="text" class="config-input" id="positionName" placeholder="Nombre de la posición">
-              <button class="config-button" onclick="saveCurrentPosition()" style="margin-top: 10px;">💾 Guardar Posición</button>
-          </div>
-          
-          <div class="config-group">
-              <label class="config-label">Restablecer Posiciones:</label>
-              <button class="config-button" onclick="resetAllPositions()" style="background: rgba(231, 76, 60, 0.7);">🔄 Restablecer Todo</button>
-          </div>
-      </div>
-      
-      <!-- SECCIÓN TRANSPARENCIA EXTREMA -->
-      <div class="config-section" id="transparencySection">
-          <div class="config-group">
-              <label class="config-label">
-                  Transparencia General:
-                  <span class="config-range-value" id="opacityValue">85%</span>
-              </label>
-              <input type="range" class="config-range" id="globalOpacity" 
-                     min="10" max="95" value="85" step="5"
-                     oninput="updateOpacityValue(this.value)">
-          </div>
-          
-          <div class="config-group">
-              <label class="config-label">Modo Ultra Transparente:</label>
-              <select class="config-select" id="ultraTransparentMode" onchange="toggleUltraTransparent(this.value === 'on')">
-                  <option value="off">Desactivado</option>
-                  <option value="on">Activado (10% opacidad)</option>
+              <label class="config-label">Disposición del Teclado:</label>
+              <select class="config-select" id="keyboardLayout">
+                  <option value="qwerty">QWERTY (EE.UU.)</option>
+                  <option value="qwertz">QWERTZ (Alemania)</option>
+                  <option value="azerty">AZERTY (Francia)</option>
+                  <option value="colemak">Colemak</option>
               </select>
-              <small style="display: block; margin-top: 5px; opacity: 0.7; font-size: 12px;">
-                  Los controles se vuelven casi invisibles hasta que los tocas
-              </small>
           </div>
           
           <div class="config-group">
-              <label class="config-label">Transparencia Individual:</label>
-              
-              <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                  <span style="flex: 1; font-size: 13px;">Teclado:</span>
-                  <input type="range" style="flex: 2;" min="10" max="95" value="85" 
-                         onchange="setElementOpacity('virtualKeyboard', this.value/100)">
-                  <span style="margin-left: 10px; min-width: 40px; text-align: right;">85%</span>
-              </div>
-              
-              <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                  <span style="flex: 1; font-size: 13px;">Joystick:</span>
-                  <input type="range" style="flex: 2;" min="10" max="95" value="85" 
-                         onchange="setElementOpacity('joystickContainer', this.value/100)">
-                  <span style="margin-left: 10px; min-width: 40px; text-align: right;">85%</span>
-              </div>
-              
-              <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                  <span style="flex: 1; font-size: 13px;">Botones:</span>
-                  <input type="range" style="flex: 2;" min="10" max="95" value="85" 
-                         onchange="setElementOpacity('actionButtons', this.value/100); setElementOpacity('extraButtons', this.value/100)">
-                  <span style="margin-left: 10px; min-width: 40px; text-align: right;">85%</span>
-              </div>
+              <label class="config-label">Vibración al Presionar:</label>
+              <select class="config-select" id="keyVibration">
+                  <option value="none">Sin vibración</option>
+                  <option value="light" selected>Ligera</option>
+                  <option value="medium">Media</option>
+                  <option value="strong">Fuerte</option>
+              </select>
           </div>
       </div>
       
@@ -1329,6 +987,16 @@
                   <span class="key-label">Botón Y:</span>
                   <input type="text" class="key-input" id="keyButtonY" value="Alt" readonly onclick="assignKey(this, 'buttonY')">
               </div>
+              
+              <div class="key-assignment">
+                  <span class="key-label">Start:</span>
+                  <input type="text" class="key-input" id="keyStart" value="Enter" readonly onclick="assignKey(this, 'start')">
+              </div>
+              
+              <div class="key-assignment">
+                  <span class="key-label">Back/Select:</span>
+                  <input type="text" class="key-input" id="keyBack" value="Escape" readonly onclick="assignKey(this, 'back')">
+              </div>
           </div>
           
           <div class="config-group">
@@ -1340,7 +1008,8 @@
       </div>
       
       <button class="config-button" onclick="saveAllSettings()">💾 Guardar Todo</button>
-      <button class="config-button" style="background: rgba(52, 152, 219, 0.7);" onclick="loadDefaultSettings()">🔄 Predeterminados</button>
+      <button class="config-button" style="background: rgba(52, 152, 219, 0.7);" onclick="loadDefaultSettings()">🔄 Cargar Predeterminados</button>
+      <button class="config-button" style="background: rgba(231, 76, 60, 0.7);" onclick="hideConfigPanel()">❌ Cancelar</button>
   </div>
 
   <!-- CONTENIDO ORIGINAL DE WINEBOX -->
@@ -1389,7 +1058,7 @@
               </div>
               <div>
                   <h3 id="loadStatus">Loading...</h3>
-                </div>
+              </div>
           </div>
       </div>
       <div id="openModalExe" class="modalDialog">
@@ -1417,19 +1086,6 @@
       let isConfigOpen = false;
       let isAssigningKey = false;
       let currentKeyAssignment = null;
-      let isDraggingElement = null;
-      let dragOffset = { x: 0, y: 0 };
-      let keyboardAtBottom = false;
-      let ultraTransparentMode = false;
-      let keyboardSize = 'normal';
-      
-      // Posiciones guardadas
-      let positions = {
-          joystick: { x: 30, y: 120 },
-          actionButtons: { x: 30, y: 120 },
-          extraButtons: { x: 30, y: 240 },
-          keyboard: { x: '50%', y: 120 }
-      };
       
       // Mapeo de teclas
       const keyCodeMap = {
@@ -1455,19 +1111,19 @@
               defaultControlType: 'joystick',
               globalOpacity: 0.85,
               autoShow: 'console',
-              globalButtonSize: 'normal',
-              joystickSensitivity: 0.5,
-              keyboardSize: 'normal'
+              globalButtonSize: 'normal'
           },
-          position: {
-              keyboardAtBottom: false,
-              savedPositions: {}
+          joystick: {
+              sensitivity: 0.5,
+              size: 'normal',
+              position: 'center',
+              returnSpeed: 'normal'
           },
-          transparency: {
-              ultraTransparentMode: false,
-              keyboardOpacity: 0.85,
-              joystickOpacity: 0.85,
-              buttonsOpacity: 0.85
+          keyboard: {
+              size: 'normal',
+              showSpecialKeys: 'common',
+              layout: 'qwerty',
+              vibration: 'light'
           },
           keyBindings: {
               joystickUp: 'w',
@@ -1477,7 +1133,9 @@
               buttonA: ' ',
               buttonB: 'Control',
               buttonX: 'Shift',
-              buttonY: 'Alt'
+              buttonY: 'Alt',
+              start: 'Enter',
+              back: 'Escape'
           }
       };
       
@@ -1550,393 +1208,9 @@
           localStorage.setItem('winebox_control_type', currentControlType);
       }
       
-      // ============= SISTEMA DE ARRASTRE PARA MOVER CONTROLES =============
-      
-      function setupDraggableElements() {
-          // Elementos que se pueden arrastrar
-          const draggableElements = [
-              { id: 'joystickContainer', header: '.joystick-header' },
-              { id: 'actionButtons', header: '.action-buttons-header' },
-              { id: 'extraButtons', header: '.extra-buttons-header' },
-              { id: 'virtualKeyboard', header: '.keyboard-header' }
-          ];
-          
-          draggableElements.forEach(element => {
-              const el = document.getElementById(element.id);
-              const header = el.querySelector(element.header) || el;
-              
-              header.addEventListener('mousedown', startDrag);
-              header.addEventListener('touchstart', startDragTouch);
-              
-              function startDrag(e) {
-                  if (e.target.classList.contains('action-button') || 
-                      e.target.classList.contains('extra-button') ||
-                      e.target.classList.contains('key') ||
-                      e.target.classList.contains('keyboard-button') ||
-                      e.target.classList.contains('joystick-thumb')) {
-                      return; // No arrastrar si es un botón interno
-                  }
-                  
-                  e.preventDefault();
-                  isDraggingElement = el;
-                  
-                  const rect = el.getBoundingClientRect();
-                  if (e.type === 'mousedown') {
-                      dragOffset.x = e.clientX - rect.left;
-                      dragOffset.y = e.clientY - rect.top;
-                  }
-                  
-                  document.addEventListener('mousemove', drag);
-                  document.addEventListener('mouseup', stopDrag);
-                  document.addEventListener('touchmove', dragTouch);
-                  document.addEventListener('touchend', stopDrag);
-                  
-                  el.style.transition = 'none';
-                  el.style.zIndex = '10000';
-              }
-              
-              function startDragTouch(e) {
-                  if (e.target.classList.contains('action-button') || 
-                      e.target.classList.contains('extra-button') ||
-                      e.target.classList.contains('key') ||
-                      e.target.classList.contains('keyboard-button') ||
-                      e.target.classList.contains('joystick-thumb')) {
-                      return;
-                  }
-                  
-                  e.preventDefault();
-                  isDraggingElement = el;
-                  
-                  const touch = e.touches[0];
-                  const rect = el.getBoundingClientRect();
-                  dragOffset.x = touch.clientX - rect.left;
-                  dragOffset.y = touch.clientY - rect.top;
-                  
-                  document.addEventListener('touchmove', dragTouch);
-                  document.addEventListener('touchend', stopDrag);
-                  
-                  el.style.transition = 'none';
-                  el.style.zIndex = '10000';
-              }
-          });
-          
-          function drag(e) {
-              if (!isDraggingElement) return;
-              
-              let clientX, clientY;
-              if (e.type === 'mousemove') {
-                  clientX = e.clientX;
-                  clientY = e.clientY;
-              } else {
-                  const touch = e.touches[0];
-                  clientX = touch.clientX;
-                  clientY = touch.clientY;
-              }
-              
-              // Calcular nueva posición
-              let newX = clientX - dragOffset.x;
-              let newY = clientY - dragOffset.y;
-              
-              // Limitar a los bordes de la ventana
-              const maxX = window.innerWidth - isDraggingElement.offsetWidth;
-              const maxY = window.innerHeight - isDraggingElement.offsetHeight;
-              
-              newX = Math.max(0, Math.min(newX, maxX));
-              newY = Math.max(0, Math.min(newY, maxY));
-              
-              // Aplicar nueva posición
-              isDraggingElement.style.left = newX + 'px';
-              isDraggingElement.style.top = newY + 'px';
-              isDraggingElement.style.transform = 'none';
-              
-              // Si es el teclado y está cerca del fondo, activar modo inferior
-              if (isDraggingElement.id === 'virtualKeyboard') {
-                  const distanceToBottom = window.innerHeight - (newY + isDraggingElement.offsetHeight);
-                  if (distanceToBottom < 50) {
-                      toggleKeyboardPosition(true);
-                  } else if (keyboardAtBottom) {
-                      toggleKeyboardPosition(false);
-                  }
-              }
-          }
-          
-          function dragTouch(e) {
-              drag(e);
-          }
-          
-          function stopDrag() {
-              if (!isDraggingElement) return;
-              
-              // Guardar posición
-              saveElementPosition(isDraggingElement.id);
-              
-              // Restaurar transición
-              isDraggingElement.style.transition = 'all 0.3s ease';
-              isDraggingElement.style.zIndex = '9998';
-              
-              isDraggingElement = null;
-              
-              document.removeEventListener('mousemove', drag);
-              document.removeEventListener('mouseup', stopDrag);
-              document.removeEventListener('touchmove', dragTouch);
-              document.removeEventListener('touchend', stopDrag);
-          }
-      }
-      
-      function saveElementPosition(elementId) {
-          const element = document.getElementById(elementId);
-          if (!element) return;
-          
-          const rect = element.getBoundingClientRect();
-          positions[elementId] = {
-              x: rect.left,
-              y: rect.top
-          };
-          
-          // Guardar en localStorage
-          localStorage.setItem('winebox_controls_positions', JSON.stringify(positions));
-      }
-      
-      function loadElementPositions() {
-          const saved = localStorage.getItem('winebox_controls_positions');
-          if (saved) {
-              positions = JSON.parse(saved);
-              
-              // Aplicar posiciones
-              Object.keys(positions).forEach(elementId => {
-                  const element = document.getElementById(elementId);
-                  if (element && positions[elementId]) {
-                      element.style.left = positions[elementId].x + 'px';
-                      element.style.top = positions[elementId].y + 'px';
-                      
-                      // Si es el teclado, verificar si está en la parte inferior
-                      if (elementId === 'virtualKeyboard') {
-                          const distanceToBottom = window.innerHeight - (positions[elementId].y + element.offsetHeight);
-                          if (distanceToBottom < 50) {
-                              toggleKeyboardPosition(true);
-                          } else {
-                              element.style.transform = 'none';
-                          }
-                      } else {
-                          element.style.transform = 'none';
-                      }
-                  }
-              });
-          }
-      }
-      
-      // ============= CAMBIAR TAMAÑO DEL TECLADO =============
-      
-      function changeKeyboardSize(size) {
-          keyboardSize = size;
-          const keyboard = document.getElementById('virtualKeyboard');
-          const keys = document.querySelectorAll('.key');
-          
-          switch(size) {
-              case 'compact':
-                  keyboard.style.minWidth = '300px';
-                  keyboard.style.maxWidth = '400px';
-                  keys.forEach(key => {
-                      key.style.fontSize = '11px';
-                      key.style.padding = '5px 1px';
-                  });
-                  document.querySelector('.key-space').style.fontSize = '12px';
-                  break;
-                  
-              case 'normal':
-                  keyboard.style.minWidth = '320px';
-                  keyboard.style.maxWidth = '500px';
-                  keys.forEach(key => {
-                      key.style.fontSize = '12px';
-                      key.style.padding = '6px 2px';
-                  });
-                  document.querySelector('.key-space').style.fontSize = '14px';
-                  break;
-                  
-              case 'large':
-                  keyboard.style.minWidth = '350px';
-                  keyboard.style.maxWidth = '600px';
-                  keys.forEach(key => {
-                      key.style.fontSize = '14px';
-                      key.style.padding = '8px 3px';
-                  });
-                  document.querySelector('.key-space').style.fontSize = '16px';
-                  break;
-          }
-          
-          // Ajustar altura del teclado
-          const rows = document.querySelectorAll('.keyboard-row');
-          rows.forEach(row => {
-              if (size === 'compact') {
-                  row.style.minHeight = '32px';
-              } else if (size === 'normal') {
-                  row.style.minHeight = '35px';
-              } else {
-                  row.style.minHeight = '40px';
-              }
-          });
-          
-          // Ajustar barra espaciadora
-          const spaceRow = document.querySelector('.keyboard-row:nth-child(5)');
-          if (size === 'compact') {
-              spaceRow.style.minHeight = '36px';
-          } else if (size === 'normal') {
-              spaceRow.style.minHeight = '38px';
-          } else {
-              spaceRow.style.minHeight = '44px';
-          }
-          
-          // Guardar configuración
-          settings.general.keyboardSize = size;
-          localStorage.setItem('winebox_controls_full_settings', JSON.stringify(settings));
-      }
-      
-      // ============= EXPANSIÓN DEL TECLADO EN PARTE INFERIOR =============
-      
-      function toggleKeyboardPosition(forceBottom = null) {
-          const keyboard = document.getElementById('virtualKeyboard');
-          const expandButton = keyboard.querySelector('.keyboard-expand');
-          
-          if (forceBottom !== null) {
-              keyboardAtBottom = forceBottom;
-          } else {
-              keyboardAtBottom = !keyboardAtBottom;
-          }
-          
-          if (keyboardAtBottom) {
-              keyboard.classList.add('at-bottom');
-              expandButton.innerHTML = '⬆️ Contraer';
-              expandButton.title = 'Contraer teclado';
-              
-              // Posicionar en la parte inferior
-              keyboard.style.left = '0';
-              keyboard.style.bottom = '0';
-              keyboard.style.transform = 'none';
-              keyboard.style.width = '100%';
-              keyboard.style.maxWidth = '100%';
-              keyboard.style.borderRadius = '12px 12px 0 0';
-              
-              // Ajustar tamaño de teclas para pantalla completa
-              const keys = document.querySelectorAll('.key');
-              keys.forEach(key => {
-                  key.style.fontSize = '13px';
-                  key.style.padding = '7px 1px';
-              });
-              document.querySelector('.key-space').style.fontSize = '15px';
-              
-              // Guardar posición especial
-              positions.virtualKeyboard = { x: 0, y: 'bottom' };
-          } else {
-              keyboard.classList.remove('at-bottom');
-              expandButton.innerHTML = '⬇️ Expandir';
-              expandButton.title = 'Expandir teclado';
-              
-              // Restaurar tamaño según configuración
-              changeKeyboardSize(keyboardSize);
-              
-              // Restaurar posición normal
-              keyboard.style.left = '50%';
-              keyboard.style.bottom = '100px';
-              keyboard.style.transform = 'translateX(-50%)';
-              keyboard.style.width = 'auto';
-              keyboard.style.maxWidth = '95%';
-              keyboard.style.borderRadius = '12px';
-              
-              // Restaurar posición guardada
-              if (positions.virtualKeyboard && positions.virtualKeyboard.y !== 'bottom') {
-                  keyboard.style.left = positions.virtualKeyboard.x + 'px';
-                  keyboard.style.top = positions.virtualKeyboard.y + 'px';
-                  keyboard.style.transform = 'none';
-                  keyboard.style.bottom = '';
-              }
-          }
-          
-          // Guardar configuración
-          settings.position.keyboardAtBottom = keyboardAtBottom;
-          localStorage.setItem('winebox_controls_full_settings', JSON.stringify(settings));
-      }
-      
-      function toggleKeyboardBottom(enable) {
-          toggleKeyboardPosition(enable);
-          
-          // Actualizar UI
-          document.getElementById('keyboardAtBottom').value = enable ? 'yes' : 'no';
-      }
-      
-      // ============= TRANSPARENCIA EXTREMA (HASTA 10%) =============
-      
-      function setElementOpacity(elementId, opacity) {
-          const element = document.getElementById(elementId);
-          if (!element) return;
-          
-          // Guardar opacidad en configuración
-          if (elementId === 'virtualKeyboard') {
-              settings.transparency.keyboardOpacity = opacity;
-          } else if (elementId === 'joystickContainer') {
-              settings.transparency.joystickOpacity = opacity;
-          } else if (elementId === 'actionButtons') {
-              settings.transparency.buttonsOpacity = opacity;
-          }
-          
-          // Aplicar opacidad
-          element.style.opacity = opacity;
-          
-          // Si el modo ultra transparente está activado, limitar a 0.1
-          if (ultraTransparentMode && opacity > 0.1) {
-              element.classList.add('ultra-transparent');
-          } else {
-              element.classList.remove('ultra-transparent');
-          }
-      }
-      
-      function toggleUltraTransparent(enable) {
-          ultraTransparentMode = enable;
-          settings.transparency.ultraTransparentMode = enable;
-          
-          const elements = ['virtualKeyboard', 'joystickContainer', 'actionButtons', 'extraButtons'];
-          
-          elements.forEach(elementId => {
-              const element = document.getElementById(elementId);
-              if (element) {
-                  if (enable) {
-                      element.classList.add('ultra-transparent');
-                      element.style.opacity = '0.1';
-                  } else {
-                      element.classList.remove('ultra-transparent');
-                      // Restaurar opacidad guardada
-                      if (elementId === 'virtualKeyboard') {
-                          element.style.opacity = settings.transparency.keyboardOpacity;
-                      } else if (elementId === 'joystickContainer') {
-                          element.style.opacity = settings.transparency.joystickOpacity;
-                      } else {
-                          element.style.opacity = settings.transparency.buttonsOpacity;
-                      }
-                  }
-              }
-          });
-          
-          // Actualizar UI
-          document.getElementById('ultraTransparentMode').value = enable ? 'on' : 'off';
-      }
-      
-      function updateOpacityValue(value) {
-          document.getElementById('opacityValue').textContent = value + '%';
-          
-          // Aplicar a todos los controles
-          const opacity = value / 100;
-          settings.general.globalOpacity = opacity;
-          
-          const elements = ['virtualKeyboard', 'joystickContainer', 'actionButtons', 'extraButtons'];
-          elements.forEach(elementId => {
-              const element = document.getElementById(elementId);
-              if (element && !ultraTransparentMode) {
-                  element.style.opacity = opacity;
-              }
-          });
-      }
-      
       // ============= SISTEMA DE JOYSTICK =============
       
+      // Configurar joystick
       function setupJoystick() {
           const joystickThumb = document.getElementById('joystickThumb');
           const joystickBase = document.querySelector('.joystick-base');
@@ -1945,21 +1219,33 @@
           let currentX = 0, currentY = 0;
           let activeKeys = new Set();
           
-          const baseSize = 140; // Tamaño fijo para el joystick
+          // Tamaño del joystick según configuración
+          const sizeMap = {
+              'small': 100,
+              'normal': 140,
+              'large': 180
+          };
+          
+          const baseSize = sizeMap[settings.joystick.size] || 140;
+          joystickBase.style.width = baseSize + 'px';
+          joystickBase.style.height = baseSize + 'px';
+          joystickThumb.style.width = (baseSize * 0.5) + 'px';
+          joystickThumb.style.height = (baseSize * 0.5) + 'px';
+          
           const maxDistance = baseSize * 0.35;
           
-          // Eventos para el thumb stick
-          joystickThumb.addEventListener('mousedown', startJoystickDrag);
-          document.addEventListener('mousemove', joystickDrag);
-          document.addEventListener('mouseup', stopJoystickDrag);
+          // Eventos de ratón
+          joystickThumb.addEventListener('mousedown', startDrag);
+          document.addEventListener('mousemove', drag);
+          document.addEventListener('mouseup', stopDrag);
           
-          joystickThumb.addEventListener('touchstart', startJoystickDragTouch);
-          document.addEventListener('touchmove', joystickDragTouch);
-          document.addEventListener('touchend', stopJoystickDrag);
+          // Eventos táctiles
+          joystickThumb.addEventListener('touchstart', startDragTouch);
+          document.addEventListener('touchmove', dragTouch);
+          document.addEventListener('touchend', stopDrag);
           
-          function startJoystickDrag(e) {
+          function startDrag(e) {
               e.preventDefault();
-              e.stopPropagation();
               isDragging = true;
               const rect = joystickBase.getBoundingClientRect();
               startX = rect.left + rect.width / 2;
@@ -1967,9 +1253,8 @@
               joystickThumb.style.transition = 'none';
           }
           
-          function startJoystickDragTouch(e) {
+          function startDragTouch(e) {
               e.preventDefault();
-              e.stopPropagation();
               isDragging = true;
               const touch = e.touches[0];
               const rect = joystickBase.getBoundingClientRect();
@@ -1978,55 +1263,64 @@
               joystickThumb.style.transition = 'none';
           }
           
-          function joystickDrag(e) {
+          function drag(e) {
               if (!isDragging) return;
-              updateJoystickPosition(e.clientX, e.clientY);
+              updatePosition(e.clientX, e.clientY);
           }
           
-          function joystickDragTouch(e) {
+          function dragTouch(e) {
               if (!isDragging) return;
               const touch = e.touches[0];
-              updateJoystickPosition(touch.clientX, touch.clientY);
+              updatePosition(touch.clientX, touch.clientY);
           }
           
-          function updateJoystickPosition(clientX, clientY) {
+          function updatePosition(clientX, clientY) {
               const dx = clientX - startX;
               const dy = clientY - startY;
               
+              // Calcular distancia
               const distance = Math.sqrt(dx * dx + dy * dy);
               const angle = Math.atan2(dy, dx);
               
+              // Limitar distancia
               const limitedDistance = Math.min(distance, maxDistance);
               
+              // Posición limitada
               currentX = Math.cos(angle) * limitedDistance;
               currentY = Math.sin(angle) * limitedDistance;
               
+              // Actualizar posición visual
               joystickThumb.style.transform = `translate(-50%, -50%) translate(${currentX}px, ${currentY}px)`;
               
+              // Enviar teclas según dirección
               sendJoystickInput(currentX, currentY);
           }
           
           function sendJoystickInput(x, y) {
               const threshold = maxDistance * 0.3;
-              const sensitivity = settings.general.joystickSensitivity;
+              const sensitivity = settings.joystick.sensitivity;
               const adjustedThreshold = threshold * sensitivity;
               
+              // Detección de direcciones
               const up = y < -adjustedThreshold;
               const down = y > adjustedThreshold;
               const left = x < -adjustedThreshold;
               const right = x > adjustedThreshold;
               
+              // Mapeo de teclas desde configuración
               const keyUp = settings.keyBindings.joystickUp;
               const keyDown = settings.keyBindings.joystickDown;
               const keyLeft = settings.keyBindings.joystickLeft;
               const keyRight = settings.keyBindings.joystickRight;
               
+              // Actualizar teclas activas
               const newActiveKeys = new Set();
               if (up) newActiveKeys.add(keyUp);
               if (down) newActiveKeys.add(keyDown);
               if (left) newActiveKeys.add(keyLeft);
               if (right) newActiveKeys.add(keyRight);
               
+              // Enviar eventos para teclas que cambiaron
               activeKeys.forEach(key => {
                   if (!newActiveKeys.has(key)) {
                       sendKey(key, false);
@@ -2042,39 +1336,68 @@
               activeKeys = newActiveKeys;
           }
           
-          function stopJoystickDrag() {
+          function stopDrag() {
               if (!isDragging) return;
               isDragging = false;
               
-              joystickThumb.style.transition = 'transform 0.3s ease-out';
+              // Animación de retorno
+              const returnSpeedMap = {
+                  'fast': '0.2s',
+                  'normal': '0.3s',
+                  'slow': '0.5s',
+                  'none': '0s'
+              };
+              
+              const speed = returnSpeedMap[settings.joystick.returnSpeed] || '0.3s';
+              joystickThumb.style.transition = `transform ${speed} ease-out`;
               joystickThumb.style.transform = 'translate(-50%, -50%)';
               
+              // Detener todas las teclas activas
               activeKeys.forEach(key => sendKey(key, false));
               activeKeys.clear();
           }
       }
       
-      // ============= SISTEMA DE TECLADO =============
+      // ============= SISTEMA DE TECLADO MEJORADO =============
       
+      // Configurar teclado virtual
       function setupKeyboard() {
+          // Actualizar disposición según configuración
+          updateKeyboardLayout();
+          
           const keys = document.querySelectorAll('.key');
           
           keys.forEach(key => {
+              // Eventos de clic
               key.addEventListener('click', function(e) {
                   e.stopPropagation();
                   const keyValue = this.getAttribute('data-key');
                   handleKeyPress(keyValue, this);
               });
               
+              // Eventos táctiles
               key.addEventListener('touchstart', function(e) {
                   e.preventDefault();
                   e.stopPropagation();
                   const keyValue = this.getAttribute('data-key');
+                  
+                  // Efecto táctil
+                  if (settings.keyboard.vibration !== 'none') {
+                      this.style.transform = 'scale(0.95)';
+                  }
+                  
                   handleKeyPress(keyValue, this);
+              });
+              
+              key.addEventListener('touchend', function(e) {
+                  e.preventDefault();
+                  if (settings.keyboard.vibration !== 'none') {
+                      this.style.transform = '';
+                  }
               });
           });
           
-          // Configurar botones de acción
+          // Configurar botones de acción del joystick
           document.querySelectorAll('.action-button, .extra-button').forEach(button => {
               const key = button.getAttribute('data-key');
               const bindingKey = getBindingKeyForButton(button);
@@ -2113,6 +1436,8 @@
           if (button.classList.contains('action-button-b')) return 'buttonB';
           if (button.classList.contains('action-button-x')) return 'buttonX';
           if (button.classList.contains('action-button-y')) return 'buttonY';
+          if (button.getAttribute('data-key') === 'Enter') return 'start';
+          if (button.getAttribute('data-key') === 'Escape') return 'back';
           return null;
       }
       
@@ -2121,9 +1446,12 @@
           else if (button.classList.contains('action-button-b')) button.textContent = 'B';
           else if (button.classList.contains('action-button-x')) button.textContent = 'X';
           else if (button.classList.contains('action-button-y')) button.textContent = 'Y';
+          else if (button.getAttribute('title') === 'Start') button.textContent = '⏵';
+          else if (button.getAttribute('title') === 'Back') button.textContent = '⏮';
       }
       
       function handleKeyPress(keyValue, keyElement) {
+          // Manejar teclas especiales
           if (keyValue === 'Shift') {
               toggleShift();
               return;
@@ -2132,6 +1460,7 @@
               return;
           }
           
+          // Aplicar modificadores
           let finalKey = keyValue;
           if (isShiftActive && keyValue.length === 1 && /[a-z]/.test(keyValue)) {
               finalKey = keyValue.toUpperCase();
@@ -2139,19 +1468,23 @@
               finalKey = keyValue.toUpperCase();
           }
           
+          // Enviar tecla
           sendKey(finalKey, true);
           setTimeout(() => sendKey(finalKey, false), 100);
           
+          // Desactivar Shift después de una tecla normal (excepto si es Shift mismo)
           if (isShiftActive && keyValue !== 'Shift') {
               toggleShift();
           }
           
+          // Efecto visual
           keyElement.style.transform = 'scale(0.95)';
           setTimeout(() => {
               keyElement.style.transform = '';
           }, 100);
       }
       
+      // Alternar shift
       function toggleShift() {
           isShiftActive = !isShiftActive;
           const shiftKey = document.getElementById('shiftKey');
@@ -2164,6 +1497,7 @@
           });
       }
       
+      // Alternar caps lock
       function toggleCaps() {
           isCapsActive = !isCapsActive;
           const capsKey = document.getElementById('capsLock');
@@ -2172,10 +1506,39 @@
           }
       }
       
+      // Actualizar disposición del teclado
+      function updateKeyboardLayout() {
+          // En una implementación completa, esto cambiaría la disposición física de las teclas
+          // Por ahora solo actualizamos el tamaño según configuración
+          const size = settings.keyboard.size;
+          const keyboard = document.getElementById('virtualKeyboard');
+          
+          switch(size) {
+              case 'compact':
+                  keyboard.style.width = '95%';
+                  keyboard.style.maxWidth = '600px';
+                  break;
+              case 'large':
+                  keyboard.style.width = '98%';
+                  keyboard.style.maxWidth = '1000px';
+                  break;
+              case 'full':
+                  keyboard.style.width = '100%';
+                  keyboard.style.maxWidth = '100%';
+                  keyboard.style.borderRadius = '0';
+                  keyboard.style.bottom = '0';
+                  break;
+              default: // normal
+                  keyboard.style.width = '95%';
+                  keyboard.style.maxWidth = '800px';
+          }
+      }
+      
       // ============= ENVÍO DE TECLAS AL EMULADOR =============
       
       function sendKey(key, isKeyDown) {
           if (isAssigningKey) {
+              // Si estamos asignando teclas, capturar la tecla
               if (currentKeyAssignment && isKeyDown) {
                   finishKeyAssignment(key);
               }
@@ -2199,6 +1562,7 @@
           
           canvas.dispatchEvent(event);
           
+          // También escribir en la consola si está visible
           const output = document.getElementById('output');
           if (output && output.style.display !== 'none' && isKeyDown) {
               if (key === 'Backspace') {
@@ -2214,14 +1578,16 @@
           }
       }
       
-      // ============= SISTEMA DE CONFIGURACIÓN =============
+      // ============= CONFIGURACIÓN COMPLETA =============
       
+      // Mostrar panel de configuración
       function showConfigPanel() {
           document.getElementById('configPanel').style.display = 'block';
           isConfigOpen = true;
           loadSettingsToUI();
       }
       
+      // Ocultar panel de configuración
       function hideConfigPanel() {
           if (isAssigningKey) {
               cancelKeyAssignment();
@@ -2230,17 +1596,22 @@
           isConfigOpen = false;
       }
       
+      // Cambiar sección de configuración
       function showConfigSection(section) {
+          // Ocultar todas las secciones
           document.querySelectorAll('.config-section').forEach(sec => {
               sec.classList.remove('active');
           });
           
+          // Desactivar todas las pestañas
           document.querySelectorAll('.config-tab').forEach(tab => {
               tab.classList.remove('active');
           });
           
+          // Mostrar sección seleccionada
           document.getElementById(section + 'Section').classList.add('active');
           
+          // Activar pestaña correspondiente
           document.querySelectorAll('.config-tab').forEach(tab => {
               if (tab.textContent.includes(section.charAt(0).toUpperCase() + section.slice(1)) || 
                   tab.getAttribute('onclick')?.includes(section)) {
@@ -2249,32 +1620,31 @@
           });
       }
       
+      // Cargar configuración a la UI
       function loadSettingsToUI() {
+          // Cargar configuración guardada
           const saved = localStorage.getItem('winebox_controls_full_settings');
           if (saved) {
               settings = JSON.parse(saved);
           }
           
-          // Cargar posiciones
-          loadElementPositions();
-          
           // Sección General
           document.getElementById('defaultControlType').value = settings.general.defaultControlType;
-          document.getElementById('globalOpacity').value = Math.round(settings.general.globalOpacity * 100);
-          document.getElementById('opacityValue').textContent = Math.round(settings.general.globalOpacity * 100) + '%';
+          document.getElementById('globalOpacity').value = settings.general.globalOpacity.toString();
           document.getElementById('autoShow').value = settings.general.autoShow;
           document.getElementById('globalButtonSize').value = settings.general.globalButtonSize;
-          document.getElementById('joystickSensitivity').value = settings.general.joystickSensitivity;
-          document.getElementById('keyboardSize').value = settings.general.keyboardSize || 'normal';
-          keyboardSize = settings.general.keyboardSize || 'normal';
           
-          // Sección Posición
-          document.getElementById('keyboardAtBottom').value = settings.position.keyboardAtBottom ? 'yes' : 'no';
-          keyboardAtBottom = settings.position.keyboardAtBottom;
+          // Sección Joystick
+          document.getElementById('joystickSensitivity').value = settings.joystick.sensitivity.toString();
+          document.getElementById('joystickSize').value = settings.joystick.size;
+          document.getElementById('joystickPosition').value = settings.joystick.position;
+          document.getElementById('joystickReturn').value = settings.joystick.returnSpeed;
           
-          // Sección Transparencia
-          document.getElementById('ultraTransparentMode').value = settings.transparency.ultraTransparentMode ? 'on' : 'off';
-          ultraTransparentMode = settings.transparency.ultraTransparentMode;
+          // Sección Teclado
+          document.getElementById('keyboardSize').value = settings.keyboard.size;
+          document.getElementById('showSpecialKeys').value = settings.keyboard.showSpecialKeys;
+          document.getElementById('keyboardLayout').value = settings.keyboard.layout;
+          document.getElementById('keyVibration').value = settings.keyboard.vibration;
           
           // Sección Teclas
           Object.keys(settings.keyBindings).forEach(key => {
@@ -2284,10 +1654,11 @@
               }
           });
           
-          // Aplicar configuración
+          // Aplicar configuración visual
           applyAllSettings();
       }
       
+      // Asignar una tecla
       function assignKey(inputElement, bindingKey) {
           if (isAssigningKey) {
               cancelKeyAssignment();
@@ -2297,10 +1668,12 @@
           isAssigningKey = true;
           currentKeyAssignment = bindingKey;
           
+          // Resaltar el campo
           inputElement.classList.add('assigning');
           document.getElementById('keyAssignStatus').textContent = 
               `Presiona la tecla que quieres asignar a "${bindingKey}"... (ESC para cancelar)`;
           
+          // Configurar captura de teclado global
           const keyHandler = function(e) {
               e.preventDefault();
               e.stopPropagation();
@@ -2310,6 +1683,7 @@
                   return;
               }
               
+              // No permitir teclas de modificación solas
               if (['Control', 'Shift', 'Alt', 'Meta', 'AltGraph'].includes(e.key)) {
                   return;
               }
@@ -2317,6 +1691,7 @@
               finishKeyAssignment(e.key);
           };
           
+          // También capturar clics para teclas especiales
           const clickHandler = function() {
               finishKeyAssignment('Click');
           };
@@ -2324,6 +1699,7 @@
           document.addEventListener('keydown', keyHandler);
           document.addEventListener('click', clickHandler, true);
           
+          // Guardar handlers para limpiarlos después
           inputElement._keyHandler = keyHandler;
           inputElement._clickHandler = clickHandler;
       }
@@ -2331,8 +1707,10 @@
       function finishKeyAssignment(key) {
           if (!currentKeyAssignment) return;
           
+          // Actualizar configuración
           settings.keyBindings[currentKeyAssignment] = key;
           
+          // Actualizar UI
           const elementId = 'key' + currentKeyAssignment.charAt(0).toUpperCase() + currentKeyAssignment.slice(1);
           const inputElement = document.getElementById(elementId);
           if (inputElement) {
@@ -2340,11 +1718,15 @@
               inputElement.classList.remove('assigning');
           }
           
+          // Actualizar botones en tiempo real
           updateButtonBindings();
+          
+          // Limpiar
           cancelKeyAssignment();
           document.getElementById('keyAssignStatus').textContent = 
               `Tecla "${key}" asignada correctamente.`;
           
+          // Mostrar confirmación breve
           showIndicator(`Tecla asignada: ${key}`);
       }
       
@@ -2352,10 +1734,12 @@
           isAssigningKey = false;
           currentKeyAssignment = null;
           
+          // Remover clases de asignación
           document.querySelectorAll('.key-input.assigning').forEach(el => {
               el.classList.remove('assigning');
           });
           
+          // Remover event listeners
           document.querySelectorAll('.key-input').forEach(el => {
               if (el._keyHandler) {
                   document.removeEventListener('keydown', el._keyHandler);
@@ -2372,6 +1756,7 @@
       }
       
       function updateButtonBindings() {
+          // Actualizar botones del joystick con las nuevas asignaciones
           document.querySelectorAll('.action-button, .extra-button').forEach(button => {
               const bindingKey = getBindingKeyForButton(button);
               if (bindingKey && settings.keyBindings[bindingKey]) {
@@ -2380,41 +1765,39 @@
               }
           });
           
+          // Re-configurar el joystick
           setupJoystick();
       }
       
-      // ============= GUARDAR Y CARGAR CONFIGURACIÓN =============
-      
+      // Guardar toda la configuración
       function saveAllSettings() {
           // Recoger valores de la UI
           settings.general.defaultControlType = document.getElementById('defaultControlType').value;
-          settings.general.globalOpacity = parseInt(document.getElementById('globalOpacity').value) / 100;
+          settings.general.globalOpacity = parseFloat(document.getElementById('globalOpacity').value);
           settings.general.autoShow = document.getElementById('autoShow').value;
           settings.general.globalButtonSize = document.getElementById('globalButtonSize').value;
-          settings.general.joystickSensitivity = parseFloat(document.getElementById('joystickSensitivity').value);
-          settings.general.keyboardSize = document.getElementById('keyboardSize').value;
           
-          settings.position.keyboardAtBottom = document.getElementById('keyboardAtBottom').value === 'yes';
+          settings.joystick.sensitivity = parseFloat(document.getElementById('joystickSensitivity').value);
+          settings.joystick.size = document.getElementById('joystickSize').value;
+          settings.joystick.position = document.getElementById('joystickPosition').value;
+          settings.joystick.returnSpeed = document.getElementById('joystickReturn').value;
           
-          settings.transparency.ultraTransparentMode = document.getElementById('ultraTransparentMode').value === 'on';
+          settings.keyboard.size = document.getElementById('keyboardSize').value;
+          settings.keyboard.showSpecialKeys = document.getElementById('showSpecialKeys').value;
+          settings.keyboard.layout = document.getElementById('keyboardLayout').value;
+          settings.keyboard.vibration = document.getElementById('keyVibration').value;
           
-          // Actualizar tipo de control
+          // Actualizar tipo de control actual
           currentControlType = settings.general.defaultControlType;
           localStorage.setItem('winebox_control_type', currentControlType);
           
-          // Guardar posiciones actuales
-          ['joystickContainer', 'actionButtons', 'extraButtons', 'virtualKeyboard'].forEach(id => {
-              saveElementPosition(id);
-          });
-          
           // Guardar en localStorage
           localStorage.setItem('winebox_controls_full_settings', JSON.stringify(settings));
-          localStorage.setItem('winebox_controls_positions', JSON.stringify(positions));
           
           // Aplicar cambios
           applyAllSettings();
           
-          // Actualizar controles
+          // Actualizar controles según nueva configuración
           if (currentControlType === 'joystick') {
               showJoystick();
           } else {
@@ -2425,25 +1808,26 @@
           showIndicator('Configuración Guardada');
       }
       
+      // Cargar configuración predeterminada
       function loadDefaultSettings() {
           settings = {
               general: {
                   defaultControlType: 'joystick',
                   globalOpacity: 0.85,
                   autoShow: 'console',
-                  globalButtonSize: 'normal',
-                  joystickSensitivity: 0.5,
-                  keyboardSize: 'normal'
+                  globalButtonSize: 'normal'
               },
-              position: {
-                  keyboardAtBottom: false,
-                  savedPositions: {}
+              joystick: {
+                  sensitivity: 0.5,
+                  size: 'normal',
+                  position: 'center',
+                  returnSpeed: 'normal'
               },
-              transparency: {
-                  ultraTransparentMode: false,
-                  keyboardOpacity: 0.85,
-                  joystickOpacity: 0.85,
-                  buttonsOpacity: 0.85
+              keyboard: {
+                  size: 'normal',
+                  showSpecialKeys: 'common',
+                  layout: 'qwerty',
+                  vibration: 'light'
               },
               keyBindings: {
                   joystickUp: 'w',
@@ -2453,42 +1837,99 @@
                   buttonA: ' ',
                   buttonB: 'Control',
                   buttonX: 'Shift',
-                  buttonY: 'Alt'
+                  buttonY: 'Alt',
+                  start: 'Enter',
+                  back: 'Escape'
               }
           };
           
+          // Actualizar UI
           loadSettingsToUI();
           showIndicator('Configuración Predeterminada Cargada');
       }
       
+      // Aplicar toda la configuración
       function applyAllSettings() {
           // Aplicar transparencia
-          updateOpacityValue(Math.round(settings.general.globalOpacity * 100));
+          applyOpacity(settings.general.globalOpacity);
           
-          // Aplicar modo ultra transparente
-          toggleUltraTransparent(settings.transparency.ultraTransparentMode);
+          // Aplicar tamaño de botones
+          applyButtonSize(settings.general.globalButtonSize);
           
-          // Aplicar posición del teclado
-          toggleKeyboardPosition(settings.position.keyboardAtBottom);
+          // Aplicar configuración del joystick
+          setupJoystick();
           
-          // Aplicar tamaño del teclado
-          changeKeyboardSize(settings.general.keyboardSize);
+          // Aplicar configuración del teclado
+          updateKeyboardLayout();
           
           // Actualizar bindings de teclas
           updateButtonBindings();
+      }
+      
+      // Aplicar transparencia
+      function applyOpacity(opacity) {
+          const elements = [
+              '.joystick-base',
+              '.action-button',
+              '.extra-button',
+              '.virtual-keyboard-container',
+              '.config-panel',
+              '.control-toggle-button',
+              '.config-toggle-button'
+          ];
           
-          // Configurar joystick con nueva sensibilidad
-          setupJoystick();
+          elements.forEach(selector => {
+              document.querySelectorAll(selector).forEach(el => {
+                  const currentBg = window.getComputedStyle(el).backgroundColor;
+                  const rgba = currentBg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
+                  if (rgba) {
+                      el.style.background = `rgba(${rgba[1]}, ${rgba[2]}, ${rgba[3]}, ${opacity})`;
+                  }
+              });
+          });
+      }
+      
+      // Aplicar tamaño de botones
+      function applyButtonSize(size) {
+          let buttonSize, fontSize;
+          
+          switch(size) {
+              case 'small':
+                  buttonSize = '60px';
+                  fontSize = '16px';
+                  break;
+              case 'large':
+                  buttonSize = '100px';
+                  fontSize = '24px';
+                  break;
+              default: // normal
+                  buttonSize = '80px';
+                  fontSize = '20px';
+          }
+          
+          document.querySelectorAll('.action-button').forEach(btn => {
+              btn.style.width = buttonSize;
+              btn.style.height = buttonSize;
+              btn.style.fontSize = fontSize;
+          });
+          
+          document.querySelectorAll('.extra-button').forEach(btn => {
+              btn.style.width = (parseInt(buttonSize) * 0.75) + 'px';
+              btn.style.height = (parseInt(buttonSize) * 0.75) + 'px';
+              btn.style.fontSize = (parseInt(fontSize) * 0.75) + 'px';
+          });
       }
       
       // ============= INTEGRACIÓN CON WINEBOX =============
       
+      // Integración con consola
       function toggleConsoleAndKeyboard() {
           const consoleEl = document.getElementById('output');
           const showConsole = document.getElementById('showConsole');
           
           if (showConsole.checked) {
               consoleEl.style.display = '';
+              // Mostrar controles automáticamente según configuración
               if (settings.general.autoShow === 'always' || 
                   (settings.general.autoShow === 'console' && currentControlType)) {
                   if (currentControlType === 'joystick') {
@@ -2514,7 +1955,7 @@
       // ============= INICIALIZACIÓN =============
       
       document.addEventListener('DOMContentLoaded', function() {
-          // Cargar configuración
+          // Cargar configuración guardada
           const savedType = localStorage.getItem('winebox_control_type');
           if (savedType) {
               currentControlType = savedType;
@@ -2527,12 +1968,13 @@
           }
           
           // Configurar controles
-          setupDraggableElements();
           setupJoystick();
           setupKeyboard();
           
-          // Configurar botones
+          // Configurar botón toggle
           document.getElementById('controlToggle').addEventListener('click', toggleControls);
+          
+          // Configurar botón de configuración
           document.getElementById('configToggle').addEventListener('click', showConfigPanel);
           
           // Cerrar configuración al hacer clic fuera
@@ -2543,13 +1985,10 @@
               }
           });
           
-          // Cargar posiciones guardadas
-          loadElementPositions();
-          
           // Aplicar configuración inicial
           applyAllSettings();
           
-          // Mostrar controles automáticamente
+          // Mostrar controles automáticamente si es necesario
           setTimeout(() => {
               const consoleEl = document.getElementById('output');
               if (consoleEl && consoleEl.style.display !== 'none') {
@@ -2565,17 +2004,20 @@
           }, 1000);
           
           console.log('🎮 Sistema de controles completo cargado');
-          console.log('⌨️ Teclado completamente visible - todas las filas funcionando');
       });
       
-      // API global
+      // API global para integración
       window.virtualControls = {
           showJoystick: showJoystick,
           showKeyboard: showKeyboard,
           hideAll: hideAllControls,
           showConfig: showConfigPanel,
           toggle: toggleControls,
-          getSettings: () => settings
+          getSettings: () => settings,
+          setSettings: (newSettings) => {
+              settings = newSettings;
+              applyAllSettings();
+          }
       };
   </script>
 

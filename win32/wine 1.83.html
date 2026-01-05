@@ -1,0 +1,1944 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>WineBOX - Gaming Edition</title>
+    <!--[if IE]><style>#targetIE {margin-left:-2.5px;}</style><![endif]-->
+    <link rel="stylesheet" href="lib/style.css"/>
+    <link rel="stylesheet" type="text/css" href="wine.css">
+    <link rel="stylesheet" href="lib/scrollbar.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="lib/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="lib/jquery-ui-1.8.23.min.js" type="text/javascript"></script>
+
+    <!-- Estilos del teclado virtual y sistema de configuración -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* CONTENEDORES DE CONTROLES */
+        .gamepad-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(20, 20, 40, 0.95);
+            border-radius: 12px 12px 0 0;
+            padding: 12px 15px 20px 15px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(100, 100, 255, 0.2);
+            border-bottom: none;
+            z-index: 9998;
+            display: none;
+            max-height: 240px;
+            overflow: visible;
+            width: 100%;
+        }
+
+        /* TECLADO VIRTUAL MEJORADO - Con barra espaciadora completa */
+        .virtual-keyboard-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 15, 35, 0.98);
+            border-radius: 8px 8px 0 0;
+            padding: 8px 8px 15px 8px;
+            box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: none;
+            z-index: 10000;
+            display: none;
+            max-height: 220px;
+            overflow: visible;
+            width: 100%;
+        }
+
+        /* Botones de toggle */
+        .control-toggle-buttons {
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+
+        .toggle-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .gamepad-toggle {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+        }
+
+        .keyboard-toggle {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        }
+
+        /* BOTÓN DE CONFIGURACIÓN */
+        .config-toggle {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+        }
+
+        /* ENCABEZADOS */
+        .gamepad-header, .keyboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            height: 30px;
+        }
+
+        .gamepad-title, .keyboard-title {
+            color: #00ffcc;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Botones de cierre */
+        .close-gamepad, .close-keyboard, .keyboard-config-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .keyboard-config-btn {
+            background: #6c5ce7;
+        }
+
+        /* TECLADO MEJORADO (como wine 1.81.html) */
+        .keyboard {
+            background: linear-gradient(135deg, #1e1e3f 0%, #2d2b55 100%);
+            border-radius: 8px;
+            padding: 10px 10px 12px 10px;
+            width: 100%;
+            height: 165px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .keyboard-row {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            gap: 3px;
+        }
+
+        .keyboard-row:last-child {
+            flex: 1.3;
+            margin-top: 2px;
+        }
+
+        .key {
+            background: linear-gradient(135deg, #3c3c5a 0%, #2a2a4a 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 11px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 2px 0 #1a1a35,
+                0 3px 5px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            user-select: none;
+            flex: 1;
+            min-height: 30px;
+            transition: all 0.1s ease;
+        }
+
+        .key:hover {
+            background: linear-gradient(135deg, #4c4c6a 0%, #3a3a5a 100%);
+            transform: translateY(-1px);
+        }
+
+        .key:active {
+            transform: translateY(1px);
+            box-shadow: 
+                0 1px 0 #1a1a35,
+                0 2px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .key-wide {
+            flex: 1.5;
+        }
+
+        .key-extra-wide {
+            flex: 2;
+        }
+
+        .key-utility {
+            background: linear-gradient(135deg, #45b7d1 0%, #3a92ab 100%);
+        }
+
+        .key-special {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        }
+
+        /* BARRA ESPACIADORA COMPLETA */
+        .key-space {
+            background: linear-gradient(135deg, #96ceb4 0%, #7ab89c 100%);
+            flex: 5 !important;
+            height: 38px !important;
+            min-height: 38px !important;
+            font-size: 13px !important;
+            font-weight: bold;
+            color: #2d3436;
+            box-shadow: 
+                0 3px 0 #5a8c7a,
+                0 5px 10px rgba(0, 0, 0, 0.3),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3);
+            margin: 0 5px;
+            align-self: center;
+        }
+
+        .key-space:hover {
+            background: linear-gradient(135deg, #a8e0c8 0%, #8cc8ac 100%);
+        }
+
+        .key-space:active {
+            transform: translateY(2px);
+            box-shadow: 
+                0 1px 0 #5a8c7a,
+                0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .key-sub {
+            font-size: 8px;
+            opacity: 0.7;
+            margin-top: 2px;
+        }
+
+        /* MODAL DE CONFIGURACIÓN */
+        .config-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 10001;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .config-content {
+            background: linear-gradient(135deg, #1e1e3f 0%, #2d2b55 100%);
+            border-radius: 12px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(100, 100, 255, 0.3);
+        }
+
+        .config-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .config-tab {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .config-tab.active {
+            background: #6c5ce7;
+            color: white;
+        }
+
+        .config-panel {
+            display: none;
+        }
+
+        .config-panel.active {
+            display: block;
+        }
+
+        /* EDITOR DE JOYSTICK */
+        .joystick-editor {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            min-height: 400px;
+            position: relative;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+        }
+
+        .joystick-control {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: move;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            user-select: none;
+            touch-action: none;
+            z-index: 10;
+        }
+
+        .joystick-control:hover {
+            transform: scale(1.1);
+        }
+
+        .joystick-control.selected {
+            box-shadow: 0 0 0 3px #00ffcc, 0 0 20px rgba(0, 255, 204, 0.5);
+        }
+
+        .control-label {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .control-key {
+            font-size: 10px;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+
+        /* PALETA DE CONTROLES */
+        .control-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .control-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .control-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* PERFILES */
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .profile-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .profile-card.active {
+            border-color: #00ffcc;
+            background: rgba(0, 255, 204, 0.1);
+        }
+
+        .profile-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile-name {
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .profile-type {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* FORMULARIOS */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #00ffcc;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+        }
+
+        /* SELECTOR DE TECLAS */
+        .key-selector {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .key-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 11px;
+            transition: all 0.2s ease;
+        }
+
+        .key-option:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .key-option.selected {
+            background: #00ffcc;
+            color: #1e1e3f;
+            border-color: #00ffcc;
+        }
+
+        /* Estilos para cuando cualquier control está activo */
+        .controls-active #canvas {
+            margin-bottom: 250px;
+            transition: margin-bottom 0.3s ease;
+        }
+
+        .keyboard-active #canvas {
+            margin-bottom: 200px;
+        }
+
+        /* JOYSTICK FLOATING */
+        .joystick-floating {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            z-index: 9997;
+            display: none;
+        }
+
+        .joystick-area {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .joystick-thumb {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+  </head>
+  <body>
+
+  <!-- Botones de toggle para controles -->
+  <div class="control-toggle-buttons">
+      <button class="toggle-btn gamepad-toggle" onclick="toggleGamepad()" title="Gamepad">🎮</button>
+      <button class="toggle-btn keyboard-toggle" onclick="toggleVirtualKeyboard()" title="Teclado">⌨️</button>
+      <button class="toggle-btn config-toggle" onclick="toggleConfigModal()" title="Configurar Controles">⚙️</button>
+  </div>
+
+  <!-- Modal de Configuración -->
+  <div class="config-modal" id="configModal">
+      <div class="config-content">
+          <div class="config-tabs">
+              <button class="config-tab active" onclick="switchConfigTab('profiles')">📁 Perfiles</button>
+              <button class="config-tab" onclick="switchConfigTab('joystick')">🎮 Editor Joystick</button>
+              <button class="config-tab" onclick="switchConfigTab('keyboard')">⌨️ Config Teclado</button>
+              <button class="config-tab" onclick="switchConfigTab('advanced')">⚙️ Avanzado</button>
+          </div>
+          
+          <!-- PANEL: PERFILES -->
+          <div class="config-panel active" id="profilesPanel">
+              <h3 style="color: #00ffcc; margin-bottom: 20px;">Perfiles de Controles</h3>
+              
+              <div class="profiles-grid">
+                  <!-- Perfiles precargados -->
+                  <div class="profile-card" onclick="loadProfile('sony')">
+                      <div class="profile-icon">🎮</div>
+                      <div class="profile-name">Sony PlayStation</div>
+                      <div class="profile-type">Plantilla clásica</div>
+                  </div>
+                  
+                  <div class="profile-card" onclick="loadProfile('xbox')">
+                      <div class="profile-icon">🎮</div>
+                      <div class="profile-name">Xbox</div>
+                      <div class="profile-type">Layout estándar</div>
+                  </div>
+                  
+                  <div class="profile-card" onclick="loadProfile('nintendo')">
+                      <div class="profile-icon">🎮</div>
+                      <div class="profile-name">Nintendo Switch</div>
+                      <div class="profile-type">Joy-Con style</div>
+                  </div>
+                  
+                  <div class="profile-card" onclick="createNewProfile()">
+                      <div class="profile-icon">➕</div>
+                      <div class="profile-name">Nuevo Perfil</div>
+                      <div class="profile-type">Personalizado</div>
+                  </div>
+              </div>
+              
+              <div id="customProfiles" style="margin-top: 30px;">
+                  <!-- Perfiles personalizados se cargarán aquí -->
+              </div>
+              
+              <div class="form-group" style="margin-top: 30px;">
+                  <button class="btn btn-primary" onclick="saveCurrentProfile()">💾 Guardar Perfil Actual</button>
+                  <button class="btn" onclick="exportProfiles()">📤 Exportar Perfiles</button>
+                  <input type="file" id="importProfiles" accept=".json" style="display: none;" onchange="importProfiles(event)">
+                  <button class="btn" onclick="document.getElementById('importProfiles').click()">📥 Importar Perfiles</button>
+              </div>
+          </div>
+          
+          <!-- PANEL: EDITOR JOYSTICK -->
+          <div class="config-panel" id="joystickPanel">
+              <h3 style="color: #00ffcc; margin-bottom: 20px;">Editor de Joystick Táctil</h3>
+              
+              <div class="form-group">
+                  <label class="form-label">Nombre del Perfil:</label>
+                  <input type="text" id="profileName" class="form-input" placeholder="Mi Joystick Personalizado" value="Perfil Personalizado">
+              </div>
+              
+              <div class="control-palette">
+                  <div class="control-item" data-type="button" onclick="addControl('button')">
+                      <div>🔘</div>
+                      <div>Botón</div>
+                  </div>
+                  <div class="control-item" data-type="dpad" onclick="addControl('dpad')">
+                      <div>➕</div>
+                      <div>D-Pad</div>
+                  </div>
+                  <div class="control-item" data-type="joystick" onclick="addControl('joystick')">
+                      <div>🕹️</div>
+                      <div>Joystick</div>
+                  </div>
+                  <div class="control-item" data-type="trigger" onclick="addControl('trigger')">
+                      <div>🎚️</div>
+                      <div>Gatillo</div>
+                  </div>
+              </div>
+              
+              <div class="joystick-editor" id="joystickEditor">
+                  <!-- Los controles se agregarán aquí -->
+                  <div class="joystick-control" style="top: 100px; left: 50px;" data-id="btnA">
+                      <div class="control-label">A</div>
+                      <div class="control-key">Espacio</div>
+                  </div>
+                  <div class="joystick-control" style="top: 100px; left: 200px;" data-id="btnB">
+                      <div class="control-label">B</div>
+                      <div class="control-key">Ctrl</div>
+                  </div>
+                  <div class="joystick-control" style="top: 50px; left: 150px;" data-id="btnX">
+                      <div class="control-label">X</div>
+                      <div class="control-key">Shift</div>
+                  </div>
+                  <div class="joystick-control" style="top: 150px; left: 150px;" data-id="btnY">
+                      <div class="control-label">Y</div>
+                      <div class="control-key">Alt</div>
+                  </div>
+              </div>
+              
+              <div id="controlProperties" style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin-top: 20px; display: none;">
+                  <h4 style="color: #00ffcc; margin-bottom: 15px;">Propiedades del Control</h4>
+                  
+                  <div class="form-group">
+                      <label class="form-label">Etiqueta:</label>
+                      <input type="text" id="controlLabel" class="form-input" placeholder="Nombre del botón">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label class="form-label">Tecla Asignada:</label>
+                      <div class="key-selector" id="keySelector">
+                          <!-- Las opciones de teclas se generarán dinámicamente -->
+                      </div>
+                      <input type="text" id="customKey" class="form-input" placeholder="O escribe una tecla personalizada" style="margin-top: 10px;">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label class="form-label">Tamaño:</label>
+                      <input type="range" id="controlSize" min="40" max="100" value="60" class="form-input">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label class="form-label">Color:</label>
+                      <input type="color" id="controlColor" value="#ff6b6b" class="form-input">
+                  </div>
+                  
+                  <button class="btn btn-danger" onclick="deleteSelectedControl()">🗑️ Eliminar Control</button>
+              </div>
+          </div>
+          
+          <!-- PANEL: CONFIG TECLADO -->
+          <div class="config-panel" id="keyboardPanel">
+              <h3 style="color: #00ffcc; margin-bottom: 20px;">Configuración del Teclado</h3>
+              
+              <div class="form-group">
+                  <label class="form-label">
+                      <input type="checkbox" id="autoShowKeyboard" checked> Mostrar teclado automáticamente con la consola
+                  </label>
+              </div>
+              
+              <div class="form-group">
+                  <label class="form-label">Transparencia del teclado:</label>
+                  <input type="range" id="keyboardOpacity" min="50" max="100" value="95" class="form-input">
+              </div>
+              
+              <div class="form-group">
+                  <label class="form-label">Tamaño del teclado:</label>
+                  <select id="keyboardSize" class="form-input">
+                      <option value="small">Pequeño</option>
+                      <option value="normal" selected>Normal</option>
+                      <option value="large">Grande</option>
+                  </select>
+              </div>
+              
+              <div class="form-group">
+                  <label class="form-label">Teclas de acceso rápido:</label>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                      <input type="text" class="form-input" placeholder="Ctrl+S" readonly>
+                      <input type="text" class="form-input" placeholder="Guardar" readonly>
+                      <input type="text" class="form-input" placeholder="Ctrl+O" readonly>
+                      <input type="text" class="form-input" placeholder="Abrir" readonly>
+                  </div>
+              </div>
+              
+              <button class="btn btn-primary" onclick="applyKeyboardSettings()">Aplicar Configuración</button>
+          </div>
+          
+          <!-- PANEL: AVANZADO -->
+          <div class="config-panel" id="advancedPanel">
+              <h3 style="color: #00ffcc; margin-bottom: 20px;">Configuración Avanzada</h3>
+              
+              <div class="form-group">
+                  <label class="form-label">Sensibilidad del joystick:</label>
+                  <input type="range" id="joystickSensitivity" min="1" max="10" value="5" class="form-input">
+              </div>
+              
+              <div class="form-group">
+                  <label class="form-label">Retardo de pulsación (ms):</label>
+                  <input type="number" id="keyDelay" min="10" max="500" value="50" class="form-input">
+              </div>
+              
+              <div class="form-group">
+                  <label class="form-label">Guardar configuración en:</label>
+                  <select id="storageType" class="form-input">
+                      <option value="local">LocalStorage (navegador)</option>
+                      <option value="session">SessionStorage (sesión)</option>
+                      <option value="file">Archivo JSON</option>
+                  </select>
+              </div>
+              
+              <div class="form-group">
+                  <button class="btn" onclick="resetToDefaults()">🔄 Restablecer Valores Predeterminados</button>
+                  <button class="btn btn-danger" onclick="clearAllData()">🗑️ Borrar Todos los Datos</button>
+              </div>
+              
+              <div style="margin-top: 30px; padding: 15px; background: rgba(255,0,0,0.1); border-radius: 8px; border-left: 4px solid #ff6b6b;">
+                  <h4 style="color: #ff6b6b;">Zona de Pruebas</h4>
+                  <p style="font-size: 12px; opacity: 0.8;">Presiona cualquier tecla para probar la asignación:</p>
+                  <div id="keyTest" style="padding: 10px; background: rgba(0,0,0,0.3); border-radius: 4px; margin-top: 10px; min-height: 40px;"></div>
+              </div>
+          </div>
+          
+          <div style="margin-top: 30px; text-align: center;">
+              <button class="btn btn-primary" onclick="closeConfigModal()">✅ Guardar y Cerrar</button>
+              <button class="btn" onclick="closeConfigModal()">❌ Cancelar</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Gamepad Virtual (existente) -->
+  <div class="gamepad-container" id="gamepad">
+      <div class="gamepad-header">
+          <div class="gamepad-title">Gamepad Virtual</div>
+          <div>
+              <button class="keyboard-config-btn" onclick="toggleConfigModal()">⚙️ Config</button>
+              <button class="close-gamepad" onclick="toggleGamepad()">Cerrar</button>
+          </div>
+      </div>
+      <div class="gamepad-layout">
+          <!-- Sección izquierda: D-Pad/WASD -->
+          <div class="gamepad-left">
+              <div class="d-pad">
+                  <div class="d-pad-btn"></div>
+                  <div class="d-pad-btn" data-key="w" id="btnUp">W</div>
+                  <div class="d-pad-btn"></div>
+                  
+                  <div class="d-pad-btn" data-key="a" id="btnLeft">A</div>
+                  <div class="d-pad-btn" id="btnCenter">•</div>
+                  <div class="d-pad-btn" data-key="d" id="btnRight">D</div>
+                  
+                  <div class="d-pad-btn"></div>
+                  <div class="d-pad-btn" data-key="s" id="btnDown">S</div>
+                  <div class="d-pad-btn"></div>
+              </div>
+          </div>
+
+          <!-- Sección central: Botones especiales -->
+          <div class="gamepad-center">
+              <button class="special-btn btn-start" data-key="Enter" id="btnStart">
+                  ⏵ START
+              </button>
+              <button class="special-btn btn-select" data-key="Escape" id="btnSelect">
+                  ⏮ SELECT/BACK
+              </button>
+              <button class="special-btn btn-keyboard" onclick="switchToKeyboard()">
+                  ⌨️ ABRIR TECLADO
+              </button>
+          </div>
+
+          <!-- Sección derecha: Botones de acción -->
+          <div class="gamepad-right">
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px;">
+                  <button class="action-btn btn-a" data-key=" " id="btnA">
+                      A<br><small>(ESPACIO)</small>
+                  </button>
+                  <button class="action-btn btn-b" data-key="Control" id="btnB">
+                      B<br><small>(CTRL)</small>
+                  </button>
+                  <button class="action-btn btn-x" data-key="Shift" id="btnX">
+                      X<br><small>(SHIFT)</small>
+                  </button>
+                  <button class="action-btn btn-y" data-key="Alt" id="btnY">
+                      Y<br><small>(ALT)</small>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Teclado Virtual Mejorado -->
+  <div class="virtual-keyboard-container" id="virtualKeyboard">
+      <div class="keyboard-header">
+          <div class="keyboard-title">Teclado Virtual</div>
+          <div>
+              <button class="keyboard-config-btn" onclick="toggleConfigModal()">⚙️ Config</button>
+              <button class="close-keyboard" onclick="toggleVirtualKeyboard()">Cerrar</button>
+          </div>
+      </div>
+      <div class="keyboard">
+          <!-- Fila de números -->
+          <div class="keyboard-row">
+              <div class="key" data-key="`">`<div class="key-sub">~</div></div>
+              <div class="key" data-key="1">1<div class="key-sub">!</div></div>
+              <div class="key" data-key="2">2<div class="key-sub">@</div></div>
+              <div class="key" data-key="3">3<div class="key-sub">#</div></div>
+              <div class="key" data-key="4">4<div class="key-sub">$</div></div>
+              <div class="key" data-key="5">5<div class="key-sub">%</div></div>
+              <div class="key" data-key="6">6<div class="key-sub">^</div></div>
+              <div class="key" data-key="7">7<div class="key-sub">&</div></div>
+              <div class="key" data-key="8">8<div class="key-sub">*</div></div>
+              <div class="key" data-key="9">9<div class="key-sub">(</div></div>
+              <div class="key" data-key="0">0<div class="key-sub">)</div></div>
+              <div class="key" data-key="-">-<div class="key-sub">_</div></div>
+              <div class="key" data-key="=">=<div class="key-sub">+</div></div>
+              <div class="key key-wide key-utility" data-key="Backspace">⌫</div>
+          </div>
+
+          <!-- Fila QWERTY -->
+          <div class="keyboard-row">
+              <div class="key key-wide key-utility" data-key="Tab">Tab</div>
+              <div class="key" data-key="q">Q</div>
+              <div class="key" data-key="w">W</div>
+              <div class="key" data-key="e">E</div>
+              <div class="key" data-key="r">R</div>
+              <div class="key" data-key="t">T</div>
+              <div class="key" data-key="y">Y</div>
+              <div class="key" data-key="u">U</div>
+              <div class="key" data-key="i">I</div>
+              <div class="key" data-key="o">O</div>
+              <div class="key" data-key="p">P</div>
+              <div class="key" data-key="[">[<div class="key-sub">{</div></div>
+              <div class="key" data-key="]">]<div class="key-sub">}</div></div>
+              <div class="key" data-key="\">\<div class="key-sub">|</div></div>
+          </div>
+
+          <!-- Fila ASDF -->
+          <div class="keyboard-row">
+              <div class="key key-wide key-utility" data-key="CapsLock" id="capsLock">Caps</div>
+              <div class="key" data-key="a">A</div>
+              <div class="key" data-key="s">S</div>
+              <div class="key" data-key="d">D</div>
+              <div class="key" data-key="f">F</div>
+              <div class="key" data-key="g">G</div>
+              <div class="key" data-key="h">H</div>
+              <div class="key" data-key="j">J</div>
+              <div class="key" data-key="k">K</div>
+              <div class="key" data-key="l">L</div>
+              <div class="key" data-key=";">;<div class="key-sub">:</div></div>
+              <div class="key" data-key="'">'<div class="key-sub">"</div></div>
+              <div class="key key-wide key-utility" data-key="Enter">↵</div>
+          </div>
+
+          <!-- Fila ZXCV -->
+          <div class="keyboard-row">
+              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKey">Shift</div>
+              <div class="key" data-key="z">Z</div>
+              <div class="key" data-key="x">X</div>
+              <div class="key" data-key="c">C</div>
+              <div class="key" data-key="v">V</div>
+              <div class="key" data-key="b">B</div>
+              <div class="key" data-key="n">N</div>
+              <div class="key" data-key="m">M</div>
+              <div class="key" data-key=",">,<div class="key-sub"><</div></div>
+              <div class="key" data-key=".">.<div class="key-sub">></div></div>
+              <div class="key" data-key="/">/<div class="key-sub">?</div></div>
+              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKeyRight">Shift</div>
+          </div>
+
+          <!-- Fila de ESPACIO - COMPLETAMENTE VISIBLE -->
+          <div class="keyboard-row">
+              <div class="key key-special" data-key="Control">Ctrl</div>
+              <div class="key key-special" data-key="Alt">Alt</div>
+              <div class="key key-space" data-key=" ">ESPACIO</div>
+              <div class="key key-special" data-key="Alt">Alt</div>
+              <div class="key key-special" data-key="Control">Ctrl</div>
+          </div>
+      </div>
+  </div>
+
+  <!-- CONTENIDO ORIGINAL DE WINEBOX -->
+  <div id="loading">
+      <figure id="spinner" style="overflow: visible;">
+         <div class="spinner" style="margin-top: .5em; margin-left: auto; margin-right: auto;"></div>
+      </figure>
+      <div class="emscripten" id="status"></div>
+  </div>
+  <div id="run-inline" style="display: none">
+      <button id="inline-runbtn" onclick="startInline()">inline</button>
+  </div>
+
+  <div id="inline">
+      <div class="emscripten">
+          <button id="saveFSImage" style="display: none" onclick="saveFSImage()">Save FS Image</button>         
+          <button id="startbtn" style="display: none" onclick="start()">Start</button>
+          <button id="uploadbtn" style="display: none" onclick="document.getElementById('upload').click()" >Add File(s)</button>
+          <input style="display: none" id="upload" name="upload" onclick="document.getElementById('uploadbtn').click();" onchange="startWithFiles(event.target.files);"  type="file" multiple />
+          <button id="downloadbtn" style="display: none" onclick="buildTree();">Get File(s)</button>
+          <a style="display: none" id="modalLink" href="#openModal">Open</a>
+          <a style="display: none" id="modalLinkExe" href="#openModalExe">Open</a>
+
+        <span id="sound-checkbox" style="display: none">
+            <input type="checkbox" id="soundToggle" onclick="toggleSound();" />Enable Sound
+        </span>
+        <input style="display: none" id="pointerLock" unchecked>
+        <input style="display: none" id="showConsole" onclick="toggleConsoleAndKeyboard();" unchecked>
+      </div>
+      <div id="dropzone">
+          <div class="emscripten_border">
+              <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+          </div>
+      </div>
+      <div>
+          <textarea class="emscripten" id="output" rows="8" style="display: none"></textarea>
+      </div>
+      <div id="openModal" class="modalDialog">
+          <div> <a href="#close" title="Close" class="close" onclick="done();">X</a>
+              <div>
+                  <h3>Get File(s)</h3>
+                  <input id="selectedItem" type="text" size="50" readonly>
+                  <button onclick="extract();">Get</button>
+              </div>
+              <div id="tree" class="scroll-style">
+              </div>
+              <div>
+                  <h3 id="loadStatus">Loading...</h3>
+              </div>
+          </div>
+      </div>
+      <div id="openModalExe" class="modalDialog">
+          <div> <a id="openModalExeClick" href="#close" title="Close" class="close">X</a>
+              <div>
+                  <h3>Execute</h3>
+                  <div id="message"></div>
+                  <div id="items" class="scroll-style"></div>
+              </div>
+          </div>
+      </div>
+      <hr>
+  </div>
+
+  <script src="fat.js"></script>
+  <script src="jszip.js"></script>
+  <script src="shell.js"></script>
+
+  <!-- Script para controles virtuales y sistema de configuración -->
+  <script>
+      // ============= SISTEMA DE CONFIGURACIÓN Y PERFILES =============
+      
+      let activeControl = null;
+      let currentProfile = 'default';
+      let selectedControl = null;
+      let profiles = {};
+      
+      // Configuraciones predefinidas
+      const defaultProfiles = {
+          'default': {
+              name: 'Default',
+              type: 'gamepad',
+              controls: {
+                  up: 'w', down: 's', left: 'a', right: 'd',
+                  action: ' ', jump: ' ', attack: 'Control',
+                  special: 'Shift', start: 'Enter', select: 'Escape'
+              },
+              layout: [
+                  { id: 'btnUp', type: 'button', label: 'W', key: 'w', x: 100, y: 50, color: '#4ecdc4' },
+                  { id: 'btnDown', type: 'button', label: 'S', key: 's', x: 100, y: 150, color: '#4ecdc4' },
+                  { id: 'btnLeft', type: 'button', label: 'A', key: 'a', x: 50, y: 100, color: '#4ecdc4' },
+                  { id: 'btnRight', type: 'button', label: 'D', key: 'd', x: 150, y: 100, color: '#4ecdc4' },
+                  { id: 'btnA', type: 'button', label: 'A', key: ' ', x: 250, y: 120, color: '#ff6b6b' },
+                  { id: 'btnB', type: 'button', label: 'B', key: 'Control', x: 350, y: 80, color: '#ffa502' }
+              ]
+          },
+          'sony': {
+              name: 'PlayStation',
+              type: 'gamepad',
+              controls: {
+                  up: 'w', down: 's', left: 'a', right: 'd',
+                  cross: ' ', circle: 'Control', square: 'Shift', triangle: 'Alt',
+                  start: 'Enter', select: 'Escape'
+              },
+              layout: [
+                  { id: 'btnCross', type: 'button', label: '✕', key: ' ', x: 250, y: 120, color: '#00b894' },
+                  { id: 'btnCircle', type: 'button', label: '○', key: 'Control', x: 350, y: 80, color: '#ff6b6b' },
+                  { id: 'btnSquare', type: 'button', label: '□', key: 'Shift', x: 200, y: 80, color: '#0984e3' },
+                  { id: 'btnTriangle', type: 'button', label: '△', key: 'Alt', x: 300, y: 40, color: '#fdcb6e' }
+              ]
+          },
+          'xbox': {
+              name: 'Xbox',
+              type: 'gamepad',
+              controls: {
+                  up: 'w', down: 's', left: 'a', right: 'd',
+                  a: ' ', b: 'Control', x: 'Shift', y: 'Alt',
+                  start: 'Enter', select: 'Escape'
+              },
+              layout: [
+                  { id: 'btnA', type: 'button', label: 'A', key: ' ', x: 250, y: 120, color: '#00b894' },
+                  { id: 'btnB', type: 'button', label: 'B', key: 'Control', x: 350, y: 80, color: '#ff6b6b' },
+                  { id: 'btnX', type: 'button', label: 'X', key: 'Shift', x: 200, y: 80, color: '#0984e3' },
+                  { id: 'btnY', type: 'button', label: 'Y', key: 'Alt', x: 300, y: 40, color: '#fdcb6e' }
+              ]
+          }
+      };
+      
+      // Cargar perfiles guardados
+      function loadProfiles() {
+          const savedProfiles = localStorage.getItem('winebox_profiles');
+          if (savedProfiles) {
+              profiles = JSON.parse(savedProfiles);
+          } else {
+              profiles = defaultProfiles;
+              saveProfiles();
+          }
+          displayCustomProfiles();
+      }
+      
+      function saveProfiles() {
+          localStorage.setItem('winebox_profiles', JSON.stringify(profiles));
+      }
+      
+      function displayCustomProfiles() {
+          const container = document.getElementById('customProfiles');
+          if (!container) return;
+          
+          container.innerHTML = '';
+          
+          Object.keys(profiles).forEach(key => {
+              if (!['default', 'sony', 'xbox', 'nintendo'].includes(key)) {
+                  const profile = profiles[key];
+                  const div = document.createElement('div');
+                  div.className = 'profile-card';
+                  div.innerHTML = `
+                      <div class="profile-icon">🎮</div>
+                      <div class="profile-name">${profile.name}</div>
+                      <div class="profile-type">Personalizado</div>
+                      <div style="margin-top: 10px; display: flex; gap: 5px;">
+                          <button style="font-size: 10px; padding: 3px 6px;" onclick="loadProfile('${key}')">Cargar</button>
+                          <button style="font-size: 10px; padding: 3px 6px; background: #ff6b6b;" onclick="deleteProfile('${key}')">Eliminar</button>
+                      </div>
+                  `;
+                  container.appendChild(div);
+              }
+          });
+      }
+      
+      // ============= SISTEMA DE TECLADO Y GAMEPAD =============
+      
+      const keyCodeMap = {
+          'w': 87, 'a': 65, 's': 83, 'd': 68,
+          ' ': 32, 'Control': 17, 'Shift': 16, 'Alt': 18,
+          'Enter': 13, 'Escape': 27,
+          'ArrowUp': 38, 'ArrowDown': 40, 'ArrowLeft': 37, 'ArrowRight': 39
+      };
+      
+      // Función para enviar teclas al emulador
+      function sendGamepadKey(key, isKeyDown = true) {
+          const canvas = document.getElementById('canvas');
+          if (!canvas) return;
+
+          const keyCode = keyCodeMap[key] || key.charCodeAt(0);
+          const eventType = isKeyDown ? 'keydown' : 'keyup';
+          
+          const event = new KeyboardEvent(eventType, {
+              key: key,
+              code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
+              keyCode: keyCode,
+              which: keyCode,
+              bubbles: true,
+              cancelable: true
+          });
+          
+          canvas.dispatchEvent(event);
+          console.log(`Gamepad: ${eventType} ${key} (${keyCode})`);
+      }
+      
+      // ============= INTERFAZ DE CONFIGURACIÓN =============
+      
+      function toggleConfigModal() {
+          const modal = document.getElementById('configModal');
+          if (modal.style.display === 'flex') {
+              modal.style.display = 'none';
+          } else {
+              modal.style.display = 'flex';
+              loadProfiles();
+              generateKeySelector();
+          }
+      }
+      
+      function closeConfigModal() {
+          document.getElementById('configModal').style.display = 'none';
+          saveProfiles();
+      }
+      
+      function switchConfigTab(tabName) {
+          // Ocultar todos los paneles
+          document.querySelectorAll('.config-panel').forEach(panel => {
+              panel.classList.remove('active');
+          });
+          
+          // Desactivar todas las pestañas
+          document.querySelectorAll('.config-tab').forEach(tab => {
+              tab.classList.remove('active');
+          });
+          
+          // Mostrar panel seleccionado
+          document.getElementById(tabName + 'Panel').classList.add('active');
+          
+          // Activar pestaña seleccionada
+          document.querySelectorAll('.config-tab').forEach(tab => {
+              if (tab.textContent.includes(tabName.charAt(0).toUpperCase() + tabName.slice(1))) {
+                  tab.classList.add('active');
+              }
+          });
+      }
+      
+      function loadProfile(profileId) {
+          if (profiles[profileId]) {
+              currentProfile = profileId;
+              const profile = profiles[profileId];
+              
+              // Actualizar controles del gamepad
+              document.querySelectorAll('.action-btn, .d-pad-btn, .special-btn').forEach(btn => {
+                  const key = btn.getAttribute('data-key');
+                  if (key && profile.controls[key.toLowerCase()]) {
+                      // Actualizar visualmente si es necesario
+                  }
+              });
+              
+              // Cargar layout personalizado
+              if (profile.layout) {
+                  loadJoystickLayout(profile.layout);
+              }
+              
+              alert(`Perfil "${profile.name}" cargado`);
+          }
+      }
+      
+      function createNewProfile() {
+          const name = prompt("Nombre del nuevo perfil:");
+          if (name) {
+              const id = 'profile_' + Date.now();
+              profiles[id] = {
+                  name: name,
+                  type: 'custom',
+                  controls: {},
+                  layout: []
+              };
+              saveProfiles();
+              displayCustomProfiles();
+              loadProfile(id);
+          }
+      }
+      
+      function saveCurrentProfile() {
+          const name = document.getElementById('profileName').value;
+          if (!name) {
+              alert('Por favor, ingresa un nombre para el perfil');
+              return;
+          }
+          
+          // Recopilar controles actuales
+          const layout = [];
+          document.querySelectorAll('.joystick-control').forEach(control => {
+              const rect = control.getBoundingClientRect();
+              const editorRect = document.getElementById('joystickEditor').getBoundingClientRect();
+              
+              layout.push({
+                  id: control.dataset.id,
+                  type: 'button',
+                  label: control.querySelector('.control-label').textContent,
+                  key: control.querySelector('.control-key').textContent,
+                  x: rect.left - editorRect.left,
+                  y: rect.top - editorRect.top,
+                  color: control.style.background || '#ff6b6b'
+              });
+          });
+          
+          // Crear o actualizar perfil
+          const profileId = 'custom_' + Date.now();
+          profiles[profileId] = {
+              name: name,
+              type: 'custom',
+              controls: {},
+              layout: layout
+          };
+          
+          saveProfiles();
+          displayCustomProfiles();
+          alert('Perfil guardado exitosamente');
+      }
+      
+      function deleteProfile(profileId) {
+          if (confirm('¿Estás seguro de eliminar este perfil?')) {
+              delete profiles[profileId];
+              saveProfiles();
+              displayCustomProfiles();
+          }
+      }
+      
+      // ============= EDITOR DE JOYSTICK =============
+      
+      let dragControl = null;
+      let dragOffset = { x: 0, y: 0 };
+      
+      function addControl(type) {
+          const editor = document.getElementById('joystickEditor');
+          const controlId = 'control_' + Date.now();
+          
+          const control = document.createElement('div');
+          control.className = 'joystick-control';
+          control.dataset.id = controlId;
+          control.dataset.type = type;
+          
+          let label = 'Btn';
+          let color = '#ff6b6b';
+          
+          switch(type) {
+              case 'dpad':
+                  label = '➕';
+                  color = '#4ecdc4';
+                  break;
+              case 'joystick':
+                  label = '🕹️';
+                  color = '#6c5ce7';
+                  break;
+              case 'trigger':
+                  label = '🎚️';
+                  color = '#fdcb6e';
+                  break;
+          }
+          
+          control.style.background = color;
+          control.style.left = '50px';
+          control.style.top = '50px';
+          
+          control.innerHTML = `
+              <div class="control-label">${label}</div>
+              <div class="control-key">N/A</div>
+          `;
+          
+          // Eventos de arrastre
+          control.addEventListener('mousedown', startDrag);
+          control.addEventListener('touchstart', startDragTouch);
+          control.addEventListener('click', function(e) {
+              e.stopPropagation();
+              selectControl(control);
+          });
+          
+          editor.appendChild(control);
+          selectControl(control);
+      }
+      
+      function startDrag(e) {
+          e.preventDefault();
+          dragControl = this;
+          const rect = this.getBoundingClientRect();
+          dragOffset.x = e.clientX - rect.left;
+          dragOffset.y = e.clientY - rect.top;
+          
+          document.addEventListener('mousemove', drag);
+          document.addEventListener('mouseup', stopDrag);
+          
+          // Evitar que el canvas reciba el evento
+          dragControl.style.zIndex = '1000';
+      }
+      
+      function startDragTouch(e) {
+          e.preventDefault();
+          dragControl = this;
+          const touch = e.touches[0];
+          const rect = this.getBoundingClientRect();
+          dragOffset.x = touch.clientX - rect.left;
+          dragOffset.y = touch.clientY - rect.top;
+          
+          document.addEventListener('touchmove', dragTouch);
+          document.addEventListener('touchend', stopDrag);
+      }
+      
+      function drag(e) {
+          if (!dragControl) return;
+          
+          const editor = document.getElementById('joystickEditor');
+          const editorRect = editor.getBoundingClientRect();
+          
+          let x = e.clientX - editorRect.left - dragOffset.x;
+          let y = e.clientY - editorRect.top - dragOffset.y;
+          
+          // Mantener dentro del editor
+          x = Math.max(0, Math.min(x, editorRect.width - dragControl.offsetWidth));
+          y = Math.max(0, Math.min(y, editorRect.height - dragControl.offsetHeight));
+          
+          dragControl.style.left = x + 'px';
+          dragControl.style.top = y + 'px';
+      }
+      
+      function dragTouch(e) {
+          if (!dragControl) return;
+          
+          const touch = e.touches[0];
+          const editor = document.getElementById('joystickEditor');
+          const editorRect = editor.getBoundingClientRect();
+          
+          let x = touch.clientX - editorRect.left - dragOffset.x;
+          let y = touch.clientY - editorRect.top - dragOffset.y;
+          
+          x = Math.max(0, Math.min(x, editorRect.width - dragControl.offsetWidth));
+          y = Math.max(0, Math.min(y, editorRect.height - dragControl.offsetHeight));
+          
+          dragControl.style.left = x + 'px';
+          dragControl.style.top = y + 'px';
+      }
+      
+      function stopDrag() {
+          dragControl = null;
+          document.removeEventListener('mousemove', drag);
+          document.removeEventListener('mouseup', stopDrag);
+          document.removeEventListener('touchmove', dragTouch);
+          document.removeEventListener('touchend', stopDrag);
+      }
+      
+      function selectControl(control) {
+          // Deseleccionar anterior
+          document.querySelectorAll('.joystick-control').forEach(c => {
+              c.classList.remove('selected');
+          });
+          
+          // Seleccionar nuevo
+          control.classList.add('selected');
+          selectedControl = control;
+          
+          // Mostrar propiedades
+          const props = document.getElementById('controlProperties');
+          props.style.display = 'block';
+          
+          // Llenar formulario con datos del control
+          document.getElementById('controlLabel').value = control.querySelector('.control-label').textContent;
+          document.getElementById('controlSize').value = control.offsetWidth;
+          document.getElementById('controlColor').value = rgbToHex(control.style.backgroundColor);
+          
+          // Actualizar en tiempo real
+          control.querySelector('.control-label').addEventListener('input', function() {
+              document.getElementById('controlLabel').value = this.textContent;
+          });
+      }
+      
+      function updateControlProperty(property, value) {
+          if (!selectedControl) return;
+          
+          switch(property) {
+              case 'label':
+                  selectedControl.querySelector('.control-label').textContent = value;
+                  break;
+              case 'size':
+                  selectedControl.style.width = value + 'px';
+                  selectedControl.style.height = value + 'px';
+                  break;
+              case 'color':
+                  selectedControl.style.background = value;
+                  break;
+          }
+      }
+      
+      function deleteSelectedControl() {
+          if (selectedControl && confirm('¿Eliminar este control?')) {
+              selectedControl.remove();
+              selectedControl = null;
+              document.getElementById('controlProperties').style.display = 'none';
+          }
+      }
+      
+      function generateKeySelector() {
+          const container = document.getElementById('keySelector');
+          if (!container) return;
+          
+          container.innerHTML = '';
+          
+          const commonKeys = [
+              ' ', 'Enter', 'Escape', 'Tab', 'Backspace',
+              'Shift', 'Control', 'Alt',
+              'w', 'a', 's', 'd',
+              '↑', '↓', '←', '→',
+              '1', '2', '3', '4', '5'
+          ];
+          
+          commonKeys.forEach(key => {
+              const btn = document.createElement('div');
+              btn.className = 'key-option';
+              btn.textContent = key;
+              btn.addEventListener('click', function() {
+                  document.querySelectorAll('.key-option').forEach(k => k.classList.remove('selected'));
+                  this.classList.add('selected');
+                  
+                  if (selectedControl) {
+                      selectedControl.querySelector('.control-key').textContent = key;
+                      assignKeyToControl(selectedControl.dataset.id, key);
+                  }
+              });
+              container.appendChild(btn);
+          });
+      }
+      
+      function assignKeyToControl(controlId, key) {
+          console.log(`Asignando tecla ${key} al control ${controlId}`);
+          // Aquí se implementaría la lógica para asignar la tecla
+      }
+      
+      function loadJoystickLayout(layout) {
+          const editor = document.getElementById('joystickEditor');
+          editor.innerHTML = '';
+          
+          layout.forEach(item => {
+              const control = document.createElement('div');
+              control.className = 'joystick-control';
+              control.dataset.id = item.id;
+              control.dataset.type = item.type;
+              control.style.left = item.x + 'px';
+              control.style.top = item.y + 'px';
+              control.style.background = item.color;
+              
+              control.innerHTML = `
+                  <div class="control-label">${item.label}</div>
+                  <div class="control-key">${item.key}</div>
+              `;
+              
+              control.addEventListener('mousedown', startDrag);
+              control.addEventListener('touchstart', startDragTouch);
+              control.addEventListener('click', function(e) {
+                  e.stopPropagation();
+                  selectControl(control);
+              });
+              
+              editor.appendChild(control);
+          });
+      }
+      
+      // ============= FUNCIONES AUXILIARES =============
+      
+      function rgbToHex(rgb) {
+          if (!rgb) return '#ff6b6b';
+          const result = rgb.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+          return result ? '#' + 
+              parseInt(result[1]).toString(16).padStart(2, '0') +
+              parseInt(result[2]).toString(16).padStart(2, '0') +
+              parseInt(result[3]).toString(16).padStart(2, '0') : '#ff6b6b';
+      }
+      
+      function exportProfiles() {
+          const dataStr = JSON.stringify(profiles, null, 2);
+          const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+          
+          const exportFileDefaultName = 'winebox_profiles.json';
+          
+          const linkElement = document.createElement('a');
+          linkElement.setAttribute('href', dataUri);
+          linkElement.setAttribute('download', exportFileDefaultName);
+          linkElement.click();
+      }
+      
+      function importProfiles(event) {
+          const file = event.target.files[0];
+          if (!file) return;
+          
+          const reader = new FileReader();
+          reader.onload = function(e) {
+              try {
+                  const imported = JSON.parse(e.target.result);
+                  profiles = { ...profiles, ...imported };
+                  saveProfiles();
+                  displayCustomProfiles();
+                  alert('Perfiles importados exitosamente');
+              } catch (err) {
+                  alert('Error al importar perfiles: ' + err.message);
+              }
+          };
+          reader.readAsText(file);
+      }
+      
+      function applyKeyboardSettings() {
+          const opacity = document.getElementById('keyboardOpacity').value;
+          const keyboard = document.getElementById('virtualKeyboard');
+          keyboard.style.background = `rgba(15, 15, 35, ${opacity/100})`;
+          
+          alert('Configuración del teclado aplicada');
+      }
+      
+      function resetToDefaults() {
+          if (confirm('¿Restablecer toda la configuración a valores predeterminados?')) {
+              localStorage.removeItem('winebox_profiles');
+              location.reload();
+          }
+      }
+      
+      function clearAllData() {
+          if (confirm('¿Borrar TODOS los datos y perfiles guardados?')) {
+              localStorage.clear();
+              location.reload();
+          }
+      }
+      
+      // ============= FUNCIONES ORIGINALES (modificadas) =============
+      
+      function toggleGamepad() {
+          const gamepad = document.getElementById('gamepad');
+          const keyboard = document.getElementById('virtualKeyboard');
+          
+          if (gamepad.style.display === 'block') {
+              gamepad.style.display = 'none';
+              activeControl = null;
+          } else {
+              keyboard.style.display = 'none';
+              gamepad.style.display = 'block';
+              activeControl = 'gamepad';
+              document.body.classList.add('controls-active');
+          }
+          
+          updateControlState();
+      }
+      
+      function toggleVirtualKeyboard() {
+          const keyboard = document.getElementById('virtualKeyboard');
+          const gamepad = document.getElementById('gamepad');
+          
+          if (keyboard.style.display === 'block') {
+              keyboard.style.display = 'none';
+              activeControl = null;
+          } else {
+              gamepad.style.display = 'none';
+              keyboard.style.display = 'block';
+              activeControl = 'keyboard';
+              document.body.classList.add('keyboard-active');
+          }
+          
+          updateControlState();
+      }
+      
+      function switchToKeyboard() {
+          const gamepad = document.getElementById('gamepad');
+          const keyboard = document.getElementById('virtualKeyboard');
+          
+          gamepad.style.display = 'none';
+          keyboard.style.display = 'block';
+          activeControl = 'keyboard';
+          document.body.classList.add('keyboard-active');
+          updateControlState();
+      }
+      
+      function updateControlState() {
+          if (activeControl === 'gamepad') {
+              document.body.classList.add('controls-active');
+              document.body.classList.remove('keyboard-active');
+          } else if (activeControl === 'keyboard') {
+              document.body.classList.add('keyboard-active');
+              document.body.classList.remove('controls-active');
+          } else {
+              document.body.classList.remove('controls-active');
+              document.body.classList.remove('keyboard-active');
+          }
+      }
+      
+      // Sistema de teclado virtual (actualizado)
+      let isShiftActive = false;
+      let isCapsActive = false;
+      
+      const shiftMap = {
+          '`': '~', '1': '!', '2': '@', '3': '#', '4': '$', '5': '%', 
+          '6': '^', '7': '&', '8': '*', '9': '(', '0': ')', '-': '_', 
+          '=': '+', '[': '{', ']': '}', '\\': '|', ';': ':', "'": '"', 
+          ',': '<', '.': '>', '/': '?',
+          'a': 'A', 'b': 'B', 'c': 'C', 'd': 'D', 'e': 'E', 'f': 'F',
+          'g': 'G', 'h': 'H', 'i': 'I', 'j': 'J', 'k': 'K', 'l': 'L',
+          'm': 'M', 'n': 'N', 'o': 'O', 'p': 'P', 'q': 'Q', 'r': 'R',
+          's': 'S', 't': 'T', 'u': 'U', 'v': 'V', 'w': 'W', 'x': 'X',
+          'y': 'Y', 'z': 'Z'
+      };
+      
+      function sendKeyToEmulator(key, isSpecialKey = false) {
+          const canvas = document.getElementById('canvas');
+          if (!canvas) return;
+
+          let keyCode;
+          let keyValue = key;
+
+          if (isSpecialKey) {
+              keyCode = keyCodeMap[key] || 0;
+          } else {
+              if (isShiftActive && shiftMap[key]) {
+                  keyValue = shiftMap[key];
+              } else if (isCapsActive && key.match(/[a-z]/)) {
+                  keyValue = key.toUpperCase();
+              }
+              keyCode = keyCodeMap[key] || keyValue.charCodeAt(0);
+          }
+
+          // Evento keydown
+          const keyDownEvent = new KeyboardEvent('keydown', {
+              key: keyValue,
+              code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
+              keyCode: keyCode,
+              which: keyCode,
+              bubbles: true,
+              cancelable: true
+          });
+
+          // Evento keypress para caracteres
+          if (!isSpecialKey && key.length === 1) {
+              const keyPressEvent = new KeyboardEvent('keypress', {
+                  key: keyValue,
+                  code: 'Key' + key.toUpperCase(),
+                  keyCode: keyValue.charCodeAt(0),
+                  charCode: keyValue.charCodeAt(0),
+                  which: keyValue.charCodeAt(0),
+                  bubbles: true,
+                  cancelable: true
+              });
+              
+              canvas.dispatchEvent(keyPressEvent);
+          }
+
+          canvas.dispatchEvent(keyDownEvent);
+
+          // Evento keyup
+          setTimeout(() => {
+              const keyUpEvent = new KeyboardEvent('keyup', {
+                  key: keyValue,
+                  code: 'Key' + (key.length === 1 ? key.toUpperCase() : key),
+                  keyCode: keyCode,
+                  which: keyCode,
+                  bubbles: true,
+                  cancelable: true
+              });
+              canvas.dispatchEvent(keyUpEvent);
+          }, 50);
+
+          // Feedback en consola
+          const output = document.getElementById('output');
+          if (output && output.style.display !== 'none') {
+              if (key === 'Backspace') {
+                  output.value = output.value.slice(0, -1);
+              } else if (key === 'Enter') {
+                  output.value += '\n';
+              } else if (key === 'Tab') {
+                  output.value += '    ';
+              } else if (!isSpecialKey || key === ' ') {
+                  output.value += keyValue;
+              }
+              output.scrollTop = output.scrollHeight;
+          }
+      }
+      
+      function setupGamepadButtons() {
+          // D-Pad / WASD
+          const dpadButtons = document.querySelectorAll('.d-pad-btn[data-key]');
+          dpadButtons.forEach(btn => {
+              const key = btn.getAttribute('data-key');
+              
+              btn.addEventListener('mousedown', () => {
+                  btn.classList.add('active');
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('mouseup', () => {
+                  btn.classList.remove('active');
+                  sendGamepadKey(key, false);
+              });
+              
+              btn.addEventListener('mouseleave', () => {
+                  if (btn.classList.contains('active')) {
+                      btn.classList.remove('active');
+                      sendGamepadKey(key, false);
+                  }
+              });
+              
+              // Touch support
+              btn.addEventListener('touchstart', (e) => {
+                  e.preventDefault();
+                  btn.classList.add('active');
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('touchend', (e) => {
+                  e.preventDefault();
+                  btn.classList.remove('active');
+                  sendGamepadKey(key, false);
+              });
+          });
+
+          // Botones de acción (A, B, X, Y)
+          const actionButtons = document.querySelectorAll('.action-btn[data-key]');
+          actionButtons.forEach(btn => {
+              const key = btn.getAttribute('data-key');
+              
+              btn.addEventListener('mousedown', () => {
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('mouseup', () => {
+                  sendGamepadKey(key, false);
+              });
+              
+              btn.addEventListener('mouseleave', () => {
+                  sendGamepadKey(key, false);
+              });
+              
+              // Touch support
+              btn.addEventListener('touchstart', (e) => {
+                  e.preventDefault();
+                  sendGamepadKey(key, true);
+              });
+              
+              btn.addEventListener('touchend', (e) => {
+                  e.preventDefault();
+                  sendGamepadKey(key, false);
+              });
+          });
+
+          // Botones especiales (Start, Select, Teclado)
+          const specialButtons = document.querySelectorAll('.special-btn[data-key]');
+          specialButtons.forEach(btn => {
+              const key = btn.getAttribute('data-key');
+              
+              btn.addEventListener('click', () => {
+                  sendGamepadKey(key, true);
+                  setTimeout(() => sendGamepadKey(key, false), 100);
+              });
+          });
+      }
+      
+      function setupKeyboard() {
+          const keys = document.querySelectorAll('.key');
+          
+          keys.forEach(key => {
+              key.addEventListener('click', function() {
+                  const keyValue = this.getAttribute('data-key');
+                  
+                  if (this.classList.contains('key-special') || 
+                      this.classList.contains('key-utility')) {
+                      handleSpecialKey(keyValue);
+                  } else {
+                      sendKeyToEmulator(keyValue, false);
+                      
+                      if (isShiftActive && keyValue !== 'Shift') {
+                          toggleShift();
+                      }
+                  }
+              });
+          });
+
+          // Enfocar canvas
+          const canvas = document.getElementById('canvas');
+          if (canvas) {
+              canvas.setAttribute('tabindex', '0');
+              canvas.focus();
+              
+              document.addEventListener('click', function() {
+                  canvas.focus();
+              });
+          }
+      }
+      
+      function handleSpecialKey(key) {
+          switch(key) {
+              case 'Backspace':
+                  sendKeyToEmulator('Backspace', true);
+                  break;
+              case 'Enter':
+                  sendKeyToEmulator('Enter', true);
+                  break;
+              case 'Tab':
+                  sendKeyToEmulator('Tab', true);
+                  break;
+              case ' ':
+                  sendKeyToEmulator(' ', false);
+                  break;
+              case 'Shift':
+                  toggleShift();
+                  break;
+              case 'CapsLock':
+                  toggleCaps();
+                  break;
+              case 'Control':
+                  sendKeyToEmulator('Control', true);
+                  break;
+              case 'Alt':
+                  sendKeyToEmulator('Alt', true);
+                  break;
+          }
+      }
+      
+      function toggleShift() {
+          isShiftActive = !isShiftActive;
+          const shiftKey = document.getElementById('shiftKey');
+          const shiftKeyRight = document.getElementById('shiftKeyRight');
+          
+          if (shiftKey) shiftKey.classList.toggle('key-shift-active', isShiftActive);
+          if (shiftKeyRight) shiftKeyRight.classList.toggle('key-shift-active', isShiftActive);
+      }
+      
+      function toggleCaps() {
+          isCapsActive = !isCapsActive;
+          const capsLock = document.getElementById('capsLock');
+          if (capsLock) capsLock.classList.toggle('key-caps-active', isCapsActive);
+      }
+      
+      // Integración con sistema original
+      function toggleConsoleAndKeyboard() {
+          const consoleEl = document.getElementById('output');
+          const showConsole = document.getElementById('showConsole');
+          
+          if (showConsole.checked) {
+              consoleEl.style.display = '';
+              // Mostrar teclado cuando se muestra la consola
+              toggleVirtualKeyboard();
+          } else {
+              consoleEl.style.display = 'none';
+              // Ocultar controles cuando se oculta la consola
+              hideAllControls();
+          }
+      }
+      
+      function hideAllControls() {
+          document.getElementById('gamepad').style.display = 'none';
+          document.getElementById('virtualKeyboard').style.display = 'none';
+          activeControl = null;
+          document.body.classList.remove('controls-active');
+          document.body.classList.remove('keyboard-active');
+      }
+      
+      // ============= INICIALIZACIÓN =============
+      
+      document.addEventListener('DOMContentLoaded', function() {
+          setupGamepadButtons();
+          setupKeyboard();
+          loadProfiles();
+          
+          console.log('🎮 Sistema de controles virtuales cargado');
+          console.log('⚙️ Sistema de configuración listo');
+          
+          // Configurar por defecto
+          loadProfile('default');
+          
+          // Event listeners para propiedades en tiempo real
+          document.getElementById('controlLabel').addEventListener('input', function() {
+              updateControlProperty('label', this.value);
+          });
+          
+          document.getElementById('controlSize').addEventListener('input', function() {
+              updateControlProperty('size', this.value);
+          });
+          
+          document.getElementById('controlColor').addEventListener('input', function() {
+              updateControlProperty('color', this.value);
+          });
+          
+          // Zona de prueba de teclas
+          document.addEventListener('keydown', function(e) {
+              const testArea = document.getElementById('keyTest');
+              if (testArea) {
+                  testArea.innerHTML = `
+                      <div>Tecla: <strong>${e.key}</strong></div>
+                      <div>Code: <code>${e.code}</code></div>
+                      <div>KeyCode: <code>${e.keyCode}</code></div>
+                  `;
+              }
+          });
+      });
+      
+      // API global
+      window.virtualControls = {
+          showGamepad: function() {
+              toggleGamepad();
+          },
+          showKeyboard: function() {
+              toggleVirtualKeyboard();
+          },
+          hideAll: hideAllControls,
+          showConfig: toggleConfigModal,
+          loadProfile: loadProfile,
+          saveCurrentProfile: saveCurrentProfile
+      };
+      
+      // Sobrescribir función original
+      const originalToggleConsole = window.toggleConsole;
+      window.toggleConsole = function() {
+          toggleConsoleAndKeyboard();
+      };
+  </script>
+
+  <script>
+  function startInline() {
+      document.getElementById('run-inline').style.display = 'none';
+      document.getElementById('loading').style.display = '';
+      Config.isRunningInline = true;
+      Config.urlParams = "p=dock";
+      var script = document.createElement('script');
+      script.src = "kernel.js";
+      document.body.appendChild(script);
+  }
+  function addDefaultOnDemand(params) {
+      if(! params.includes("root=") &&  ! params.includes("ondemand=")) {
+          if(params.length >0) {
+              params = params + "&";
+          }
+          params = params + "ondemand=root&root=dlls&inline-default-ondemand-root-overlay=dlls";
+      }
+      return params;
+  }
+  </script>
+  <script async type="text/javascript" src="kernel.js"></script>
+
+  </body>
+</html>

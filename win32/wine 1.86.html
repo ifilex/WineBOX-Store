@@ -265,27 +265,29 @@
             background: rgba(253, 203, 110, 1);
         }
 
-        /* TECLADO VIRTUAL COMPLETAMENTE VISIBLE - ARREGLADO */
+        /* TECLADO VIRTUAL MEJORADO - AHORA MOVIBLE Y EXPANDIBLE */
         .virtual-keyboard-container {
             position: fixed;
-            bottom: 100px;
+            bottom: 120px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(30, 30, 30, 0.85);
             backdrop-filter: blur(20px);
             border-radius: 12px;
-            padding: 12px;
+            padding: 15px;
             box-shadow: 
                 0 10px 30px rgba(0, 0, 0, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.1);
             z-index: 9998;
             display: none;
-            width: auto;
-            min-width: 320px;
+            min-width: 300px;
             max-width: 95%;
             cursor: move;
-            overflow: visible;
+            resize: horizontal;
+            overflow: hidden;
+            min-height: 200px;
+            max-height: 250px;
         }
 
         /* Cuando el teclado está en la parte inferior */
@@ -296,23 +298,25 @@
             max-width: 100% !important;
             left: 0 !important;
             transform: none !important;
-            padding: 8px !important;
+            padding: 10px !important;
+            min-height: 180px !important;
+            max-height: 220px !important;
+            resize: none !important;
         }
 
         .keyboard-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
-            padding-bottom: 8px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             cursor: move;
-            height: 30px;
         }
 
         .keyboard-title {
             color: #6c5ce7;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -320,7 +324,7 @@
         }
 
         .keyboard-title span {
-            font-size: 11px;
+            font-size: 12px;
             opacity: 0.7;
             font-weight: normal;
         }
@@ -335,13 +339,13 @@
             color: white;
             border: none;
             border-radius: 6px;
-            padding: 5px 10px;
+            padding: 6px 12px;
             cursor: pointer;
-            font-size: 11px;
+            font-size: 12px;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 5px;
         }
 
         .keyboard-button:hover {
@@ -368,58 +372,33 @@
             background: rgba(96, 206, 180, 0.9);
         }
 
-        /* TECLADO - DISEÑO COMPACTO Y COMPLETO */
         .keyboard {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
             width: 100%;
-            min-height: 160px;
-            overflow: visible;
+            height: calc(100% - 50px);
         }
 
         .keyboard-row {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 4px;
+            gap: 6px;
             width: 100%;
-            min-height: 35px;
-        }
-
-        /* Ajustes específicos para cada fila */
-        .keyboard-row:nth-child(1) { /* Números */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(2) { /* QWERTY */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(3) { /* ASDF */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(4) { /* ZXCV */
-            min-height: 32px;
-        }
-        
-        .keyboard-row:nth-child(5) { /* Barra espaciadora */
-            min-height: 38px;
+            flex: 1;
         }
 
         .key {
             background: rgba(255, 255, 255, 0.15);
             color: white;
             border: none;
-            border-radius: 5px;
-            padding: 6px 2px;
-            min-width: 24px;
-            height: 100%;
+            border-radius: 6px;
+            padding: 8px 0;
+            min-width: 0;
             flex: 1;
             cursor: pointer;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -427,11 +406,10 @@
             transition: all 0.1s ease;
             user-select: none;
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.2),
+                0 2px 5px rgba(0, 0, 0, 0.2),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            overflow: hidden;
         }
 
         .key:hover {
@@ -444,45 +422,26 @@
             background: rgba(255, 255, 255, 0.35);
         }
 
-        /* Teclas especiales - tamaños específicos */
-        .key-backspace {
-            flex: 1.5 !important;
-            font-size: 14px !important;
+        .key-wide {
+            flex: 1.5;
         }
 
-        .key-tab {
-            flex: 1.2 !important;
+        .key-extra-wide {
+            flex: 2;
         }
 
-        .key-caps {
-            flex: 1.5 !important;
-        }
-
-        .key-enter {
-            flex: 1.5 !important;
-            font-size: 11px !important;
-        }
-
-        .key-shift {
-            flex: 1.8 !important;
-            font-size: 11px !important;
-        }
-
-        .key-ctrl, .key-alt {
-            flex: 1 !important;
-            font-size: 11px !important;
+        .key-ultra-wide {
+            flex: 4;
         }
 
         /* BARRA ESPACIADORA COMPLETA Y VISIBLE */
         .key-space {
-            flex: 6 !important;
+            flex: 8 !important;
             background: rgba(96, 206, 180, 0.7);
             font-weight: bold;
-            font-size: 14px;
-            padding: 8px 0;
-            height: 100%;
-            min-height: 36px;
-            margin: 0 2px;
+            font-size: 16px;
+            padding: 12px 0;
+            min-height: 45px;
         }
 
         .key-space:hover {
@@ -503,7 +462,7 @@
 
         .key-special.active {
             background: rgba(108, 92, 231, 0.8);
-            box-shadow: inset 0 0 8px rgba(108, 92, 231, 0.5);
+            box-shadow: inset 0 0 10px rgba(108, 92, 231, 0.5);
         }
 
         .key-utility {
@@ -515,28 +474,19 @@
         }
 
         /* Cuando el teclado está expandido en la parte inferior */
-        .virtual-keyboard-container.at-bottom .keyboard {
-            gap: 5px;
-        }
-
         .virtual-keyboard-container.at-bottom .keyboard-row {
-            gap: 3px;
-            min-height: 40px;
-        }
-
-        .virtual-keyboard-container.at-bottom .keyboard-row:nth-child(5) {
-            min-height: 45px;
+            gap: 4px;
         }
 
         .virtual-keyboard-container.at-bottom .key {
-            font-size: 13px;
-            padding: 8px 2px;
-            border-radius: 6px;
+            padding: 10px 0;
+            font-size: 16px;
+            border-radius: 8px;
         }
 
         .virtual-keyboard-container.at-bottom .key-space {
-            font-size: 15px;
-            min-height: 42px;
+            min-height: 50px;
+            font-size: 18px;
         }
 
         /* BOTONES EXTRA - AHORA MOVIBLES */
@@ -838,7 +788,7 @@
             10%, 90% { opacity: 1; }
         }
 
-        /* TECLADO COMPACTO PARA MÓVIL */
+        /* ESTILOS PARA MÓVIL */
         @media (max-width: 768px) {
             .virtual-keyboard-container {
                 bottom: 80px;
@@ -846,8 +796,6 @@
                 left: 50%;
                 transform: translateX(-50%);
                 max-width: 95%;
-                min-width: 300px;
-                padding: 10px;
             }
             
             .virtual-keyboard-container.at-bottom {
@@ -856,42 +804,27 @@
                 left: 0 !important;
                 transform: none !important;
                 max-width: 100% !important;
-                padding: 6px !important;
-            }
-            
-            .keyboard {
-                gap: 4px;
-                min-height: 150px;
-            }
-            
-            .keyboard-row {
-                gap: 3px;
-                min-height: 30px;
-            }
-            
-            .keyboard-row:nth-child(5) {
-                min-height: 35px;
             }
             
             .key {
-                padding: 5px 1px;
-                font-size: 11px;
-                min-width: 22px;
-            }
-            
-            .key-space {
+                padding: 10px 0;
                 font-size: 12px;
-                min-height: 32px;
+                min-height: 40px;
             }
             
             .virtual-keyboard-container.at-bottom .key {
-                font-size: 12px;
-                padding: 6px 1px;
+                padding: 12px 0;
+                font-size: 14px;
+            }
+            
+            .key-space {
+                min-height: 45px;
+                font-size: 14px;
             }
             
             .virtual-keyboard-container.at-bottom .key-space {
-                font-size: 13px;
-                min-height: 36px;
+                min-height: 50px;
+                font-size: 16px;
             }
             
             .joystick-container {
@@ -937,33 +870,6 @@
             }
         }
         
-        /* AJUSTES PARA PANTALLAS MUY PEQUEÑAS */
-        @media (max-width: 480px) {
-            .keyboard {
-                gap: 3px;
-            }
-            
-            .keyboard-row {
-                gap: 2px;
-                min-height: 28px;
-            }
-            
-            .key {
-                font-size: 10px;
-                padding: 4px 0;
-                min-width: 20px;
-            }
-            
-            .key-space {
-                font-size: 11px;
-                min-height: 30px;
-            }
-            
-            .key-backspace, .key-enter, .key-shift {
-                font-size: 9px !important;
-            }
-        }
-        
         /* CONTROLES TRANSPARENTES AL MÁXIMO */
         .ultra-transparent {
             opacity: 0.1 !important;
@@ -977,7 +883,18 @@
         #capsLock.active, #shiftKey.active, #shiftKeyRight.active {
             background: rgba(108, 92, 231, 0.8) !important;
             color: white !important;
-            box-shadow: inset 0 0 8px rgba(108, 92, 231, 0.5) !important;
+            box-shadow: inset 0 0 10px rgba(108, 92, 231, 0.5) !important;
+        }
+        
+        /* RESIZE HANDLE PARA TECLADO */
+        .resize-handle {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            cursor: se-resize;
+            z-index: 1000;
         }
         
         /* GRAB HANDLE PARA MOVER */
@@ -1044,7 +961,7 @@
       <button class="extra-button" data-key="Escape" title="Back">⏮</button>
   </div>
 
-  <!-- TECLADO VIRTUAL COMPLETAMENTE VISIBLE - ARREGLADO -->
+  <!-- Teclado virtual mejorado - AHORA MOVIBLE Y EXPANDIBLE -->
   <div class="virtual-keyboard-container" id="virtualKeyboard">
       <div class="keyboard-header">
           <div class="keyboard-title grab-handle">
@@ -1060,7 +977,7 @@
               </button>
           </div>
       </div>
-      <div class="keyboard" id="keyboardLayout">
+      <div class="keyboard">
           <!-- Fila 1: Números y Backspace -->
           <div class="keyboard-row">
               <div class="key" data-key="`">`</div>
@@ -1076,12 +993,12 @@
               <div class="key" data-key="0">0</div>
               <div class="key" data-key="-">-</div>
               <div class="key" data-key="=">=</div>
-              <div class="key key-utility key-backspace" data-key="Backspace">⌫</div>
+              <div class="key key-wide key-utility" data-key="Backspace">⌫</div>
           </div>
           
           <!-- Fila 2: QWERTY -->
           <div class="keyboard-row">
-              <div class="key key-utility key-tab" data-key="Tab">Tab</div>
+              <div class="key key-wide key-utility" data-key="Tab">Tab</div>
               <div class="key" data-key="q">Q</div>
               <div class="key" data-key="w">W</div>
               <div class="key" data-key="e">E</div>
@@ -1094,12 +1011,12 @@
               <div class="key" data-key="p">P</div>
               <div class="key" data-key="[">[</div>
               <div class="key" data-key="]">]</div>
-              <div class="key" data-key="\">\</div>
+              <div class="key key-wide" data-key="\">\</div>
           </div>
           
           <!-- Fila 3: ASDF -->
           <div class="keyboard-row">
-              <div class="key key-special key-caps" data-key="CapsLock" id="capsLock">Caps</div>
+              <div class="key key-wide key-special" data-key="CapsLock" id="capsLock">Caps</div>
               <div class="key" data-key="a">A</div>
               <div class="key" data-key="s">S</div>
               <div class="key" data-key="d">D</div>
@@ -1111,12 +1028,12 @@
               <div class="key" data-key="l">L</div>
               <div class="key" data-key=";">;</div>
               <div class="key" data-key="'">'</div>
-              <div class="key key-utility key-enter" data-key="Enter">↵ Enter</div>
+              <div class="key key-wide key-utility" data-key="Enter">↵ Enter</div>
           </div>
           
-          <!-- Fila 4: ZXCV - AHORA COMPLETAMENTE VISIBLE -->
+          <!-- Fila 4: ZXCV -->
           <div class="keyboard-row">
-              <div class="key key-special key-shift" data-key="Shift" id="shiftKey">⇧ Shift</div>
+              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKey">⇧ Shift</div>
               <div class="key" data-key="z">Z</div>
               <div class="key" data-key="x">X</div>
               <div class="key" data-key="c">C</div>
@@ -1127,16 +1044,16 @@
               <div class="key" data-key=",">,</div>
               <div class="key" data-key=".">.</div>
               <div class="key" data-key="/">/</div>
-              <div class="key key-special key-shift" data-key="Shift" id="shiftKeyRight">⇧ Shift</div>
+              <div class="key key-extra-wide key-special" data-key="Shift" id="shiftKeyRight">⇧ Shift</div>
           </div>
           
-          <!-- Fila 5: BARRA ESPACIADORA COMPLETA Y VISIBLE -->
+          <!-- Fila 5: BARRA ESPACIADORA COMPLETA -->
           <div class="keyboard-row">
-              <div class="key key-special key-ctrl" data-key="Control">Ctrl</div>
-              <div class="key key-special key-alt" data-key="Alt">Alt</div>
+              <div class="key key-special" data-key="Control">Ctrl</div>
+              <div class="key key-special" data-key="Alt">Alt</div>
               <div class="key key-space" data-key=" ">ESPACIO</div>
-              <div class="key key-special key-alt" data-key="Alt">Alt</div>
-              <div class="key key-special key-ctrl" data-key="Control">Ctrl</div>
+              <div class="key key-special" data-key="Alt">Alt</div>
+              <div class="key key-special" data-key="Control">Ctrl</div>
           </div>
       </div>
   </div>
@@ -1190,15 +1107,6 @@
                   <option value="0.5" selected>Media</option>
                   <option value="0.7">Alta</option>
                   <option value="1.0">Muy Alta</option>
-              </select>
-          </div>
-          
-          <div class="config-group">
-              <label class="config-label">Tamaño del Teclado:</label>
-              <select class="config-select" id="keyboardSize" onchange="changeKeyboardSize(this.value)">
-                  <option value="compact">Compacto</option>
-                  <option value="normal" selected>Normal</option>
-                  <option value="large">Grande</option>
               </select>
           </div>
       </div>
@@ -1389,7 +1297,7 @@
               </div>
               <div>
                   <h3 id="loadStatus">Loading...</h3>
-                </div>
+              </div>
           </div>
       </div>
       <div id="openModalExe" class="modalDialog">
@@ -1421,7 +1329,6 @@
       let dragOffset = { x: 0, y: 0 };
       let keyboardAtBottom = false;
       let ultraTransparentMode = false;
-      let keyboardSize = 'normal';
       
       // Posiciones guardadas
       let positions = {
@@ -1456,8 +1363,7 @@
               globalOpacity: 0.85,
               autoShow: 'console',
               globalButtonSize: 'normal',
-              joystickSensitivity: 0.5,
-              keyboardSize: 'normal'
+              joystickSensitivity: 0.5
           },
           position: {
               keyboardAtBottom: false,
@@ -1647,7 +1553,6 @@
               // Aplicar nueva posición
               isDraggingElement.style.left = newX + 'px';
               isDraggingElement.style.top = newY + 'px';
-              isDraggingElement.style.transform = 'none';
               
               // Si es el teclado y está cerca del fondo, activar modo inferior
               if (isDraggingElement.id === 'virtualKeyboard') {
@@ -1714,81 +1619,11 @@
                           const distanceToBottom = window.innerHeight - (positions[elementId].y + element.offsetHeight);
                           if (distanceToBottom < 50) {
                               toggleKeyboardPosition(true);
-                          } else {
-                              element.style.transform = 'none';
                           }
-                      } else {
-                          element.style.transform = 'none';
                       }
                   }
               });
           }
-      }
-      
-      // ============= CAMBIAR TAMAÑO DEL TECLADO =============
-      
-      function changeKeyboardSize(size) {
-          keyboardSize = size;
-          const keyboard = document.getElementById('virtualKeyboard');
-          const keys = document.querySelectorAll('.key');
-          
-          switch(size) {
-              case 'compact':
-                  keyboard.style.minWidth = '300px';
-                  keyboard.style.maxWidth = '400px';
-                  keys.forEach(key => {
-                      key.style.fontSize = '11px';
-                      key.style.padding = '5px 1px';
-                  });
-                  document.querySelector('.key-space').style.fontSize = '12px';
-                  break;
-                  
-              case 'normal':
-                  keyboard.style.minWidth = '320px';
-                  keyboard.style.maxWidth = '500px';
-                  keys.forEach(key => {
-                      key.style.fontSize = '12px';
-                      key.style.padding = '6px 2px';
-                  });
-                  document.querySelector('.key-space').style.fontSize = '14px';
-                  break;
-                  
-              case 'large':
-                  keyboard.style.minWidth = '350px';
-                  keyboard.style.maxWidth = '600px';
-                  keys.forEach(key => {
-                      key.style.fontSize = '14px';
-                      key.style.padding = '8px 3px';
-                  });
-                  document.querySelector('.key-space').style.fontSize = '16px';
-                  break;
-          }
-          
-          // Ajustar altura del teclado
-          const rows = document.querySelectorAll('.keyboard-row');
-          rows.forEach(row => {
-              if (size === 'compact') {
-                  row.style.minHeight = '32px';
-              } else if (size === 'normal') {
-                  row.style.minHeight = '35px';
-              } else {
-                  row.style.minHeight = '40px';
-              }
-          });
-          
-          // Ajustar barra espaciadora
-          const spaceRow = document.querySelector('.keyboard-row:nth-child(5)');
-          if (size === 'compact') {
-              spaceRow.style.minHeight = '36px';
-          } else if (size === 'normal') {
-              spaceRow.style.minHeight = '38px';
-          } else {
-              spaceRow.style.minHeight = '44px';
-          }
-          
-          // Guardar configuración
-          settings.general.keyboardSize = size;
-          localStorage.setItem('winebox_controls_full_settings', JSON.stringify(settings));
       }
       
       // ============= EXPANSIÓN DEL TECLADO EN PARTE INFERIOR =============
@@ -1816,14 +1651,6 @@
               keyboard.style.maxWidth = '100%';
               keyboard.style.borderRadius = '12px 12px 0 0';
               
-              // Ajustar tamaño de teclas para pantalla completa
-              const keys = document.querySelectorAll('.key');
-              keys.forEach(key => {
-                  key.style.fontSize = '13px';
-                  key.style.padding = '7px 1px';
-              });
-              document.querySelector('.key-space').style.fontSize = '15px';
-              
               // Guardar posición especial
               positions.virtualKeyboard = { x: 0, y: 'bottom' };
           } else {
@@ -1831,14 +1658,11 @@
               expandButton.innerHTML = '⬇️ Expandir';
               expandButton.title = 'Expandir teclado';
               
-              // Restaurar tamaño según configuración
-              changeKeyboardSize(keyboardSize);
-              
               // Restaurar posición normal
               keyboard.style.left = '50%';
-              keyboard.style.bottom = '100px';
+              keyboard.style.bottom = '120px';
               keyboard.style.transform = 'translateX(-50%)';
-              keyboard.style.width = 'auto';
+              keyboard.style.width = '';
               keyboard.style.maxWidth = '95%';
               keyboard.style.borderRadius = '12px';
               
@@ -2265,8 +2089,6 @@
           document.getElementById('autoShow').value = settings.general.autoShow;
           document.getElementById('globalButtonSize').value = settings.general.globalButtonSize;
           document.getElementById('joystickSensitivity').value = settings.general.joystickSensitivity;
-          document.getElementById('keyboardSize').value = settings.general.keyboardSize || 'normal';
-          keyboardSize = settings.general.keyboardSize || 'normal';
           
           // Sección Posición
           document.getElementById('keyboardAtBottom').value = settings.position.keyboardAtBottom ? 'yes' : 'no';
@@ -2383,6 +2205,137 @@
           setupJoystick();
       }
       
+      // ============= GESTIÓN DE POSICIONES =============
+      
+      function saveCurrentPosition() {
+          const name = document.getElementById('positionName').value.trim();
+          if (!name) {
+              showIndicator('Por favor, ingresa un nombre');
+              return;
+          }
+          
+          // Guardar todas las posiciones actuales
+          ['joystickContainer', 'actionButtons', 'extraButtons', 'virtualKeyboard'].forEach(id => {
+              const element = document.getElementById(id);
+              if (element) {
+                  const rect = element.getBoundingClientRect();
+                  if (!settings.position.savedPositions[name]) {
+                      settings.position.savedPositions[name] = {};
+                  }
+                  settings.position.savedPositions[name][id] = {
+                      x: rect.left,
+                      y: rect.top,
+                      atBottom: id === 'virtualKeyboard' ? keyboardAtBottom : false
+                  };
+              }
+          });
+          
+          // Actualizar lista de posiciones guardadas
+          updatePositionsList();
+          
+          // Guardar configuración
+          localStorage.setItem('winebox_controls_full_settings', JSON.stringify(settings));
+          
+          showIndicator(`Posición "${name}" guardada`);
+          document.getElementById('positionName').value = '';
+      }
+      
+      function loadPosition(positionName) {
+          if (!positionName || positionName === 'default') {
+              // Restaurar posiciones por defecto
+              document.getElementById('joystickContainer').style.left = '30px';
+              document.getElementById('joystickContainer').style.top = '120px';
+              
+              document.getElementById('actionButtons').style.right = '30px';
+              document.getElementById('actionButtons').style.top = '120px';
+              
+              document.getElementById('extraButtons').style.left = '30px';
+              document.getElementById('extraButtons').style.top = '240px';
+              
+              document.getElementById('virtualKeyboard').style.left = '50%';
+              document.getElementById('virtualKeyboard').style.top = '120px';
+              document.getElementById('virtualKeyboard').style.transform = 'translateX(-50%)';
+              toggleKeyboardPosition(false);
+              
+              showIndicator('Posición por defecto cargada');
+              return;
+          }
+          
+          if (positionName === 'mobile') {
+              // Diseño para móviles
+              document.getElementById('joystickContainer').style.left = '20px';
+              document.getElementById('joystickContainer').style.top = '80px';
+              
+              document.getElementById('actionButtons').style.right = '20px';
+              document.getElementById('actionButtons').style.top = '80px';
+              
+              document.getElementById('extraButtons').style.left = '20px';
+              document.getElementById('extraButtons').style.top = '200px';
+              
+              toggleKeyboardPosition(true);
+              
+              showIndicator('Diseño móvil cargado');
+              return;
+          }
+          
+          if (settings.position.savedPositions[positionName]) {
+              const pos = settings.position.savedPositions[positionName];
+              
+              Object.keys(pos).forEach(elementId => {
+                  const element = document.getElementById(elementId);
+                  if (element && pos[elementId]) {
+                      element.style.left = pos[elementId].x + 'px';
+                      element.style.top = pos[elementId].y + 'px';
+                      
+                      if (elementId === 'virtualKeyboard' && pos[elementId].atBottom) {
+                          toggleKeyboardPosition(true);
+                      }
+                  }
+              });
+              
+              showIndicator(`Posición "${positionName}" cargada`);
+          }
+      }
+      
+      function updatePositionsList() {
+          const select = document.getElementById('savedPositions');
+          
+          // Guardar selección actual
+          const currentSelection = select.value;
+          
+          // Limpiar opciones personalizadas
+          while (select.options.length > 4) {
+              select.remove(4);
+          }
+          
+          // Agregar posiciones guardadas
+          Object.keys(settings.position.savedPositions).forEach(name => {
+              const option = document.createElement('option');
+              option.value = name;
+              option.textContent = name;
+              select.appendChild(option);
+          });
+          
+          // Restaurar selección
+          select.value = currentSelection;
+      }
+      
+      function resetAllPositions() {
+          if (confirm('¿Restablecer todas las posiciones a los valores por defecto?')) {
+              localStorage.removeItem('winebox_controls_positions');
+              positions = {
+                  joystick: { x: 30, y: 120 },
+                  actionButtons: { x: 30, y: 120 },
+                  extraButtons: { x: 30, y: 240 },
+                  keyboard: { x: '50%', y: 120 }
+              };
+              
+              loadElementPositions();
+              toggleKeyboardPosition(false);
+              showIndicator('Posiciones restablecidas');
+          }
+      }
+      
       // ============= GUARDAR Y CARGAR CONFIGURACIÓN =============
       
       function saveAllSettings() {
@@ -2392,7 +2345,6 @@
           settings.general.autoShow = document.getElementById('autoShow').value;
           settings.general.globalButtonSize = document.getElementById('globalButtonSize').value;
           settings.general.joystickSensitivity = parseFloat(document.getElementById('joystickSensitivity').value);
-          settings.general.keyboardSize = document.getElementById('keyboardSize').value;
           
           settings.position.keyboardAtBottom = document.getElementById('keyboardAtBottom').value === 'yes';
           
@@ -2432,8 +2384,7 @@
                   globalOpacity: 0.85,
                   autoShow: 'console',
                   globalButtonSize: 'normal',
-                  joystickSensitivity: 0.5,
-                  keyboardSize: 'normal'
+                  joystickSensitivity: 0.5
               },
               position: {
                   keyboardAtBottom: false,
@@ -2470,9 +2421,6 @@
           
           // Aplicar posición del teclado
           toggleKeyboardPosition(settings.position.keyboardAtBottom);
-          
-          // Aplicar tamaño del teclado
-          changeKeyboardSize(settings.general.keyboardSize);
           
           // Actualizar bindings de teclas
           updateButtonBindings();
@@ -2562,10 +2510,12 @@
                       }
                   }
               }
+              
+              // Actualizar lista de posiciones
+              updatePositionsList();
           }, 1000);
           
           console.log('🎮 Sistema de controles completo cargado');
-          console.log('⌨️ Teclado completamente visible - todas las filas funcionando');
       });
       
       // API global
