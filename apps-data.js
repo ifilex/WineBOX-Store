@@ -1121,13 +1121,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/dyna.html"
     },
     {
-        name: "Ecstatica",
-        image: "https://dos.zone/images/containers/assets/backgrounds/izdxbg.%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2015-03-2025%20162449.jpg/f91eb9124a83f19e4987a1a77f7a69cf.webp",
-        description: "Ecstatica is an action-adventure computer game released by Psygnosis in 1994 for MS-DOS.",
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/ecstatica.html"
-    },
-    {
         name: "Earthworm Jim",
         image: "https://ifilex.github.io/WineBOX-Store/box/jim.jpg",
         description: "Earthworm Jim is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Earthworm Jim on mobile.",
