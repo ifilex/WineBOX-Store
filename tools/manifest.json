@@ -1,14 +1,11 @@
 {
-  "dir": "ltr",
-  "lang": "en",
   "name": "WineBOX Tools",
   "id": "com.wineboxtool.app",
   "short_name": "WineBOX Tools",
-  "scope": "/",
+  "scope": "/WineBOX-Store/roms/",
   "display": "fullscreen",
-  "scope_extensions": [],
   "display_override": ["standalone", "minimal-ui"],
-  "start_url": "/index.html",
+  "start_url": "/WineBOX-Store/roms/index.html",
   "background_color": "#FFFFFF",
   "theme_color": "#000",
   "description": "Winebox is a digital platform focused on cognitive stimulation and guided learning, designed for use in educational and supportive environments. It provides interactive content and an experience optimized for Android devices.",
@@ -19,7 +16,7 @@
   "shortcuts" : [
     {
       "name": "WineBOX Tools",
-      "url": "/",
+      "url": "/WineBOX-Store/roms/",
       "description": "Digital plataform focused on cognitive estimulation."
     } 
   ],

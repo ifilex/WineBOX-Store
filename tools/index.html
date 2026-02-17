@@ -5,19 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeuroTerapia - Sistema de Gestión con WineBox</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="manifest" href="manifest.json" />
-    <link rel="shortcut icon" href="src/icons/favicon.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="src/icons/favicon.png">
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#166088">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+   <meta name="apple-mobile-web-app-title" content="NeuroTerapia">
+   <link rel="apple-touch-icon" href="/icon-192-192.png">
 
-<script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('service-worker.js');
-            });
-        }
-</script>
+   <!-- Scripts de instalación -->
+   <script src="/install-script.js" defer></script>
 
     <style>
+
+   /* Estilos para la instalación PWA */
+  .update-notification,
+  .install-prompt {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2000;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 15px;
+    animation: slideUp 0.3s;
+    border-left: 5px solid var(--info);
+    max-width: 350px;
+}
+
+.install-prompt {
+    border-left-color: var(--success);
+}
+
+.update-content,
+.install-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.update-content i,
+.install-content i {
+    font-size: 1.5rem;
+    color: var(--info);
+}
+
+.install-content i {
+    color: var(--success);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modo standalone */
+.app-installed .nav-tabs {
+    padding-top: env(safe-area-inset-top);
+}
+
+.app-installed header {
+    padding-top: calc(25px + env(safe-area-inset-top));
+}
+
+/* Soporte para pantallas notch */
+@media (display-mode: standalone) {
+    body {
+        padding: 0;
+    }
+    
+    .container {
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    
+    .help-button {
+        top: calc(20px + env(safe-area-inset-top));
+    }
+}
+
+/* Indicador de conexión */
+.connection-status {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--warning);
+    color: var(--dark);
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    z-index: 2001;
+    animation: slideDown 0.3s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
         :root {
             --primary: #4a6fa5;
             --secondary: #166088;
@@ -57,6 +157,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             overflow: hidden;
             min-height: 90vh;
+            position: relative;
         }
 
         /* Header */
@@ -102,6 +203,38 @@
             display: block;
             position: relative;
             z-index: 1;
+        }
+
+        /* Botón de ayuda flotante */
+        .help-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .help-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1) rotate(5deg);
+            border-color: white;
+        }
+
+        .help-button i {
+            font-size: 1.5rem;
         }
 
         /* Navigation */
@@ -1166,6 +1299,14 @@
             .calendar-grid-monthly {
                 grid-template-columns: repeat(4, 1fr);
             }
+
+            .help-button {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
 
         /* Loading */
@@ -1248,6 +1389,10 @@
             <i class="fas fa-brain header-icon"></i>
             <h1>WineBox Tools</h1>
             <p>Sistema de Evaluación y Tratamiento con Videojuegos para TEA y TDAH</p>
+            <!-- Botón de ayuda flotante -->
+            <div class="help-button" onclick="showTab('help')" title="Ayuda">
+                <i class="fas fa-question"></i>
+            </div>
         </header>
 
         <nav>
@@ -1260,6 +1405,7 @@
                 <li><button onclick="showTab('behavioralProfile')"><i class="fas fa-brain"></i></button></li>
                 <li><button onclick="showTab('patientManager')"><i class="fas fa-calendar-alt"></i></button></li>
                 <li><button onclick="showTab('configuration')"><i class="fas fa-cog"></i></button></li>
+                <!-- El botón de ayuda se ha movido al header -->
             </ul>
         </nav>
 
@@ -1302,7 +1448,7 @@
                     <button class="btn btn-success" onclick="showTab('patientManager')">
                         <i class="fas fa-calendar-alt"></i> Ver Calendario
                     </button>
-                    <!-- BOTÓN NUEVO DE CERTIFICADOS -->
+                    <!-- Botón de certificados -->
                     <button class="btn btn-info" onclick="showModal('certificateModal')">
                         <i class="fas fa-file-certificate"></i> Certificados
                     </button>
@@ -2067,6 +2213,146 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Pestaña de Ayuda -->
+            <div class="tab-content" id="help">
+                <h2><i class="fas fa-question-circle"></i> Guía de Uso de NeuroTerapia + WineBox</h2>
+
+                <div class="session-log">
+                    <h3><i class="fas fa-info-circle"></i> Introducción</h3>
+                    <p>Bienvenido al sistema de gestión NeuroTerapia, diseñado para ayudar a terapeutas a utilizar videojuegos como herramienta terapéutica para pacientes con TEA y TDAH. La aplicación te guía a través de un proceso estructurado para evaluar, planificar y dar seguimiento a tus pacientes.</p>
+                    <p><span class="badge badge-info">Flujo Principal</span> <strong>Registrar Paciente → Evaluación Inicial → Analizar Perfil → Crear Plan de Tratamiento → Registrar Sesiones → Re-evaluar para ver el progreso.</strong></p>
+                </div>
+
+                <div class="form-group">
+                    <h3><i class="fas fa-user-plus"></i> Paso 1: Gestión de Pacientes</h3>
+                    <div class="session-log" style="margin-left: 0;">
+                        <p><strong>Objetivo:</strong> Dar de alta a un paciente en el sistema.</p>
+                        <ol>
+                            <li>Ve a la pestaña <strong>"Pacientes"</strong> o al <strong>"Panel de Control"</strong>.</li>
+                            <li>Haz clic en el botón <button class="btn btn-primary btn-small" style="pointer-events: none;"><i class="fas fa-plus"></i> Nuevo Paciente</button>.</li>
+                            <li>Completa el formulario. Los campos obligatorios son <strong>Nombre Completo</strong> y <strong>Fecha de Nacimiento</strong>.</li>
+                            <li>Guarda el paciente. Aparecerá en las listas y podrás empezar a trabajar con él.</li>
+                        </ol>
+                        <p><span class="badge badge-info">Nota:</span> Puedes editar o ver los detalles de un paciente desde su tarjeta en cualquier momento.</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3><i class="fas fa-clipboard-check"></i> Paso 2: Evaluación Inicial</h3>
+                    <div class="session-log" style="margin-left: 0;">
+                        <p><strong>Objetivo:</strong> Conocer las preferencias del paciente y generar su primer perfil conductual.</p>
+                        <ol>
+                            <li>Ve a la pestaña <strong>"Evaluación Inicial"</strong>.</li>
+                            <li>Selecciona el paciente que acabas de registrar.</li>
+                            <li>Haz clic en <button class="btn btn-primary btn-small" style="pointer-events: none;"><i class="fas fa-play"></i> Iniciar Evaluación</button>.</li>
+                            <li>Se desplegará la lista completa de juegos del WineBox. El terapeuta debe <strong>seleccionar al menos 3 juegos</strong> haciendo clic en sus tarjetas.</li>
+                            <li>Presiona <button class="btn btn-success btn-small" style="pointer-events: none;"><i class="fas fa-check"></i> Finalizar Evaluación</button> para comenzar con la evaluación uno a uno.</li>
+                            <li>Para el primer juego seleccionado, aparecerá un panel con un <strong>temporizador</strong> y un <strong>cuestionario</strong>.
+                                <ul>
+                                    <li>Inicia el temporizador cuando el paciente empiece a jugar.</li>
+                                    <li>Al terminar, pausa o detén el temporizador.</li>
+                                    <li>Pide al paciente que puntúe cómo se sintió (<i class="far fa-smile"></i>), la dificultad (<i class="fas fa-battery-half"></i>) y si volvería a jugar.</li>
+                                </ul>
+                            </li>
+                            <li>Presiona <button class="btn btn-success btn-small" style="pointer-events: none;"><i class="fas fa-save"></i> Guardar Evaluación</button>. El sistema guardará los datos y pasará automáticamente al siguiente juego seleccionado.</li>
+                            <li>Repite hasta completar todos los juegos. Al finalizar, el sistema generará automáticamente un <strong>Perfil Conductual</strong>.</li>
+                        </ol>
+                        <p><span class="badge badge-warning">Importante:</span> La evaluación debe ser guiada por el terapeuta. Se evalúa la <strong>conducta operante</strong> (cómo reacciona y qué prefiere el paciente).</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3><i class="fas fa-brain"></i> Paso 3: Analizar el Perfil Conductual</h3>
+                    <div class="session-log" style="margin-left: 0;">
+                        <p><strong>Objetivo:</strong> Entender las tendencias del paciente (impulsividad, atención, etc.) basadas en los juegos que prefirió.</p>
+                        <ol>
+                            <li>Ve a la pestaña <strong>"Perfil Conductual"</strong> y selecciona al paciente.</li>
+                            <li>El sistema mostrará un resumen visual y de texto:
+                                <ul>
+                                    <li><strong>Mapa Cerebral Inferido:</strong> Una representación gráfica de las áreas cognitivas estimuladas.</li>
+                                    <li><strong>Análisis por Dominios:</strong> Barras de progreso para Atención, Control de Impulsos, Planificación y Regulación Emocional.</li>
+                                    <li><strong>Observaciones Conductuales:</strong> Texto generado que describe el patrón del paciente (ej. "Perfil dinámico-impulsivo").</li>
+                                    <li><strong>Sugerencias Terapéuticas:</strong> El sistema recomienda tipos de juegos para trabajar áreas específicas.</li>
+                                </ul>
+                            </li>
+                            <li>Puedes usar el botón <button class="btn btn-success btn-small" style="pointer-events: none;"><i class="fas fa-file-alt"></i> Generar Reporte TXT</button> para obtener un informe detallado para tu historia clínica.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3><i class="fas fa-file-medical"></i> Paso 4: Crear un Plan de Tratamiento</h3>
+                    <div class="session-log" style="margin-left: 0;">
+                        <p><strong>Objetivo:</strong> Definir los 3 juegos que el paciente practicará en casa.</p>
+                        <ol>
+                            <li>Ve a la pestaña <strong>"Plan de Tratamiento"</strong> y selecciona al paciente.</li>
+                            <li>El sistema mostrará un resumen de su perfil y una lista de "Juegos Recomendados".</li>
+                            <li>En la sección "Seleccionar 3 Juegos para el Tratamiento", elige exactamente 3 juegos de la lista. El contador te guiará.</li>
+                            <li>Completa los datos del plan: frecuencia, duración por sesión y los objetivos terapéuticos.</li>
+                            <li>Presiona <button class="btn btn-success btn-small" style="pointer-events: none;"><i class="fas fa-save"></i> Guardar Plan de Tratamiento</button>. Estos serán los juegos de "tarea" para el hogar.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3><i class="fas fa-gamepad"></i> Paso 5: Registrar Sesiones de Tratamiento</h3>
+                    <div class="session-log" style="margin-left: 0;">
+                        <p><strong>Objetivo:</strong> Llevar un registro de las sesiones presenciales, el progreso y las observaciones clínicas.</p>
+                        <ol>
+                            <li>Ve a la pestaña <strong>"Sesiones de Tratamiento"</strong> y selecciona al paciente.</li>
+                            <li>El sistema cargará el plan de tratamiento activo, mostrando los 3 juegos prescritos.</li>
+                            <li>En el formulario "Registro de Sesión":
+                                <ul>
+                                    <li>Marca los juegos del plan que se utilizaron en la sesión de hoy.</li>
+                                    <li>Evalúa al paciente en las escalas de Atención, Control de Impulsos, etc.</li>
+                                    <li>Escribe tus observaciones y el feedback del paciente.</li>
+                                    <li>Indica un progreso general del 1 al 10 con el deslizador.</li>
+                                </ul>
+                            </li>
+                            <li>Presiona <button class="btn btn-success btn-small" style="pointer-events: none;"><i class="fas fa-save"></i> Guardar Sesión</button>. El registro se archivará en el "Historial de Sesiones".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3><i class="fas fa-chart-line"></i> Paso 6: Seguimiento y Re-evaluación</h3>
+                    <div class="session-log" style="margin-left: 0;">
+                        <p><strong>Objetivo:</strong> Medir la evolución del paciente a lo largo del tiempo.</p>
+                        <ul>
+                            <li><strong>Historial de Sesiones:</strong> En la misma pestaña de "Sesiones de Tratamiento", puedes ver un historial de todas las sesiones registradas, lo que te permite observar la evolución de las notas y el progreso numérico.</li>
+                            <li><strong>Re-evaluación:</strong> Después de varias semanas de tratamiento, puedes realizar una nueva evaluación.
+                                <ol>
+                                    <li>Ve a la pestaña <strong>"Evaluación Inicial"</strong> y selecciona al paciente.</li>
+                                    <li>Ahora, en lugar de "Iniciar Evaluación", aparecerá el botón <button class="btn btn-warning btn-small" style="pointer-events: none;"><i class="fas fa-redo"></i> Re-evaluar</button>.</li>
+                                    <li>Repite el proceso de evaluación con 3 juegos. El sistema guardará esta nueva evaluación <strong>sin borrar la anterior</strong>.</li>
+                                    <li>Al generar el Perfil Conductual, el sistema indicará que es una "Re-evaluación" y podrás comparar los resultados para ver los cambios en la conducta operante del paciente.</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3><i class="fas fa-cogs"></i> Funciones Adicionales</h3>
+                    <div class="session-log" style="margin-left: 0;">
+                        <h4>📅 Gestor de Pacientes y Sesiones (Calendario)</h4>
+                        <p>Programa sesiones futuras. Ve a la pestaña "Gestor de Pacientes y Sesiones". Puedes ver una vista semanal o mensual y hacer clic en un día para ver o agendar sesiones con el botón <button class="btn btn-info btn-small" style="pointer-events: none;"><i class="fas fa-plus-circle"></i> Programar Sesión</button>.</p>
+                        <h4>📄 Certificados</h4>
+                        <p>Genera constancias de tratamiento. Desde el botón <button class="btn btn-info btn-small" style="pointer-events: none;"><i class="fas fa-file-certificate"></i> Certificados</button> en varias pantallas, o desde la pestaña de Configuración. Selecciona el paciente, el tipo de constancia y la fecha para generar, descargar o imprimir un documento listo para entregar.</p>
+                        <h4>👥 Gestión de Terapeutas</h4>
+                        <p>En la pestaña <strong>"Configuración"</strong>, puedes gestionar múltiples terapeutas. Esto permite que varios profesionales usen el sistema en un mismo dispositivo, manteniendo sus datos de contacto para los certificados. Selecciona el terapeuta activo para que sus datos aparezcan por defecto.</p>
+                        <h4>💾 Importar/Exportar Datos</h4>
+                        <p>En la pestaña <strong>"Configuración"</strong>, encontrarás herramientas para hacer copias de seguridad (Exportar) o restaurar/transferir datos (Importar) entre dispositivos. Es una buena práctica exportar todos los datos regularmente.</p>
+                    </div>
+                </div>
+
+                <div class="session-log" style="text-align: center;">
+                    <i class="fas fa-heart" style="color: var(--danger);"></i>
+                    <p>Con este flujo de trabajo, podrás aprovechar al máximo el potencial terapéutico de los videojuegos, siempre con un enfoque estructurado, medible y centrado en el paciente.</p>
+                    <p><strong>¡Mucho éxito en tus terapias!</strong></p>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -2253,7 +2539,7 @@
         </div>
     </div>
 
-    <!-- Modal para Certificados (NUEVO) -->
+    <!-- Modal para Certificados -->
     <div class="modal" id="certificateModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -2309,1275 +2595,1271 @@
 
     <div id="notificationArea"></div>
 
-    <!-- ============================================ -->
-    <!-- DATOS COMPLETOS DE WINEBOX -->
-    <!-- ============================================ -->
+    <!-- Datos de WineBox -->
     <script id="winebox-data">
         const WINEBOX_GAMES_DATA = {
-
-    "estimulos_juegos": [
-        {
-            "name": "Absence",
-            "estimulos": ["atención sostenida", "coordinación visomotora", "resolución de problemas rápidos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de acción rápida que requiere concentración y reacción inmediata, ideal para entrenar el foco atencional."
-        },
-        {
-            "name": "Alien Cabal",
-            "estimulos": ["atención selectiva", "planificación espacial", "toma de decisiones bajo presión"],
-            "patologias": ["TDAH"],
-            "justificacion": "FPS con niveles estructurados que exigen estrategia y control de impulsos."
-        },
-        {
-            "name": "Alien Trilogy",
-            "estimulos": ["alertas sensoriales", "coordinación mano-ojo", "gestión del estrés"],
-            "patologias": ["TDAH"],
-            "justificacion": "Entorno inmersivo que ayuda a regular la respuesta al estrés mediante acción controlada."
-        },
-        {
-            "name": "Anarch",
-            "estimulos": ["simplicidad visual", "control motor fino", "autonomía"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Interfaz limpia y predecible, adecuada para evitar sobrecarga sensorial."
-        },
-        {
-            "name": "Astro3D",
-            "estimulos": ["orientación espacial 3D", "atención dividida", "anticipación de movimientos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego espacial que entrena la capacidad de seguir múltiples estímulos en el espacio."
-        },
-        {
-            "name": "Battle Arena Toshinden",
-            "estimulos": ["memoria de patrones", "timing", "control de impulsos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Combates estructurados que requieren aprender secuencias y esperar el momento oportuno."
-        },
-        {
-            "name": "Beneath a Steel Sky",
-            "estimulos": ["narrativa", "resolución de puzzles", "empatía"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura gráfica con historia fuerte, ideal para trabajar comprensión social y lógica."
-        },
-        {
-            "name": "Black Stone",
-            "estimulos": ["exploración", "atención a detalles", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Entornos predecibles y mecánicas simples, buenos para rutinas de juego."
-        },
-        {
-            "name": "Blam!",
-            "estimulos": ["coordinación visomotora", "estrategia simple", "atención sostenida"],
-            "patologias": ["TDAH"],
-            "justificacion": "Movimiento continuo y objetivos claros, ayuda a mantener el foco."
-        },
-        {
-            "name": "Blood",
-            "estimulos": ["gestión de recursos", "toma de decisiones rápidas", "control de la frustración"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de supervivencia que enseña a manejar recursos y emociones bajo presión."
-        },
-        {
-            "name": "Brutal: Paws of Fury",
-            "estimulos": ["memoria muscular", "reacción a estímulos", "regulación emocional"],
-            "patologias": ["TDAH"],
-            "justificacion": "Combates rápidos que permiten descarga controlada de energía."
-        },
-        {
-            "name": "Chex Quest",
-            "estimulos": ["humor", "cooperación implícita", "narrativa simple"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Tema amigable y mecánicas simples, buen punto de entrada para juegos de acción."
-        },
-        {
-            "name": "Cham: The Rift",
-            "estimulos": ["exploración 3D", "atención a pistas", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Niveles explorables con secretos, fomenta la curiosidad sistemática."
-        },
-        {
-            "name": "Chub Gam 3D",
-            "estimulos": ["seguimiento de narrativa", "interacción simple", "recompensas inmediatas"],
-            "patologias": ["TEA"],
-            "justificacion": "Estructura lineal y cinemáticas, ayuda a entender secuencias causa-efecto."
-        },
-        {
-            "name": "Corridor 7: Alien Invasion",
-            "estimulos": ["orientación laberíntica", "memoria espacial", "paciencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Laberintos predecibles, ideales para entrenar memoria espacial y planificación."
-        },
-        {
-            "name": "Dark Forces",
-            "estimulos": ["exploración no lineal", "resolución de problemas", "atención a detalles"],
-            "patologias": ["TEA"],
-            "justificacion": "Ambientación rica en detalles, fomenta la exploración metódica."
-        },
-        {
-            "name": "Destruction Derby",
-            "estimulos": ["control de impulsos", "coordinación", "gestión de consecuencias"],
-            "patologias": ["TDAH"],
-            "justificacion": "Carreras con consecuencias inmediatas, enseña causa-efecto en tiempo real."
-        },
-        {
-            "name": "Diablo",
-            "estimulos": ["gestión de inventario", "toma de decisiones estratégicas", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema de progreso claro y repetitivo, ideal para rutinas de juego estructuradas."
-        },
-        {
-            "name": "Death Rally",
-            "estimulos": ["atención dividida", "reflejos", "control de velocidad"],
-            "patologias": ["TDAH"],
-            "justificacion": "Carreras de vista aérea que requieren dividir atención entre varios elementos."
-        },
-        {
-            "name": "Descent II",
-            "estimulos": ["orientación 3D", "multitarea", "planificación espacial"],
-            "patologias": ["TDAH"],
-            "justificacion": "Movimiento en 6 ejes, desafía la capacidad de orientación y atención múltiple."
-        },
-        {
-            "name": "Doom",
-            "estimulos": ["reacción rápida", "navegación espacial", "gestión de recursos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Clásico que exige atención continua y adaptación a cambios rápidos."
-        },
-        {
-            "name": "Duke Nukem 3D",
-            "estimulos": ["humor", "exploración", "interacción con entorno"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Tonelada humorística y entornos interactivos, facilitan la engagement."
-        },
-        {
-            "name": "Eradicator",
-            "estimulos": ["estrategia en tiempo real", "adaptación", "control de recursos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Combina acción y estrategia, exigiendo flexibilidad cognitiva."
-        },
-        {
-            "name": "Escape from Dr. Colosso",
-            "estimulos": ["resolución de puzzles", "atención a detalles", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Narrativa clara y puzzles lógicos, buenos para pensamiento estructurado."
-        },
-        {
-            "name": "Gore Galore",
-            "estimulos": ["patrones simples", "coordinación básica", "repetición"],
-            "patologias": ["TEA"],
-            "justificacion": "Mecánicas repetitivas y predecibles, adecuadas para aprendizaje por rutina."
-        },
-        {
-            "name": "Half-life",
-            "estimulos": ["narrativa inmersiva", "resolución de problemas", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Historia continua y puzzles integrados, fomentan la inmersión y lógica."
-        },
-        {
-            "name": "Heretic",
-            "estimulos": ["gestión de recursos mágicos", "exploración", "adaptación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Variedad de armas y hechizos, requiere planificación de recursos."
-        },
-        {
-            "name": "HexGL",
-            "estimulos": ["velocidad de procesamiento", "coordinación", "anticipación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Carreras futuristas rápidas, ideales para entrenar tiempo de reacción."
-        },
-        {
-            "name": "Hexen",
-            "estimulos": ["exploración no lineal", "toma de decisiones", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Niveles interconectados que recompensan la exploración metódica."
-        },
-        {
-            "name": "Hurl",
-            "estimulos": ["humor", "coordinación", "conceptos de higiene"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Tema infantil y mecánicas simples, buen juego para iniciación."
-        },
-        {
-            "name": "Indianapolis 500: The Simulation",
-            "estimulos": ["planificación estratégica", "paciencia", "control fino"],
-            "patologias": ["TDAH"],
-            "justificacion": "Simulación realista que requiere concentración prolongada y precisión."
-        },
-        {
-            "name": "Media IPTV",
-            "estimulos": ["elección personal", "control de estímulos", "relajación"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Permite seleccionar contenido auditivo-visual según preferencias, promoviendo autoregulación."
-        },
-        {
-            "name": "Mr. Pibb",
-            "estimulos": ["interacción simple", "feedback inmediato", "coordinación básica"],
-            "patologias": ["TEA"],
-            "justificacion": "Mecánicas directas, adecuadas para sesiones cortas de entrenamiento."
-        },
-        {
-            "name": "Nightmare 3D",
-            "estimulos": ["gestión del miedo", "exploración cautelosa", "resolución de puzzles"],
-            "patologias": ["TEA"],
-            "justificacion": "Ambiente controlado de terror, útil para trabajar tolerancia a la incertidumbre."
-        },
-        {
-            "name": "One Must Fall 2097",
-            "estimulos": ["patrones de combate", "timing", "memoria procedural"],
-            "patologias": ["TDAH"],
-            "justificacion": "Combos y timing, ideales para entrenar memoria secuencial y control motor."
-        },
-        {
-            "name": "Open TTD",
-            "estimulos": ["planificación a largo plazo", "gestión de recursos", "pensamiento sistémico"],
-            "patologias": ["TEA"],
-            "justificacion": "Simulación compleja que fomenta el pensamiento lógico y la previsión."
-        },
-        {
-            "name": "Open Jedi Knight Dark Forces 2",
-            "estimulos": ["exploración", "narrativa", "toma de decisiones morales"],
-            "patologias": ["TEA"],
-            "justificacion": "Historia rica y elecciones, buenas para comprensión narrativa y empatía."
-        },
-        {
-            "name": "Operation Body Count",
-            "estimulos": ["acción rápida", "coordinación", "atención dividida"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de acción pura, útil para descarga controlada de energía."
-        },
-        {
-            "name": "Out of this World",
-            "estimulos": ["timing preciso", "resolución de puzzles", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego cinemático que requiere precisión y aprendizaje por error."
-        },
-        {
-            "name": "Powerslave",
-            "estimulos": ["exploración", "gestión de recursos", "adaptación"],
-            "patologias": ["TEA"],
-            "justificacion": "Niveles interconectados que recompensan la exploración y planificación."
-        },
-        {
-            "name": "Pray for Death",
-            "estimulos": ["combos", "memoria de movimientos", "control de ira"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de pelea que permite canalizar frustración en mecánicas controladas."
-        },
-        {
-            "name": "Quake",
-            "estimulos": ["multitarea", "estrategia rápida", "coordinación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Action rápida con necesidad de gestionar armas y movimientos simultáneamente."
-        },
-        {
-            "name": "Quake 3 Arena",
-            "estimulos": ["competencia", "reflejos", "adaptación a oponentes"],
-            "patologias": ["TDAH"],
-            "justificacion": "Multijugador rápido, ideal para entrenar adaptación social en entorno controlado."
-        },
-        {
-            "name": "Quarantine",
-            "estimulos": ["conducción y acción", "gestión de daños", "atención dividida"],
-            "patologias": ["TDAH"],
-            "justificacion": "Combina conducción y disparos, exigiendo dividir atención y gestionar recursos."
-        },
-        {
-            "name": "Rise of the triad",
-            "estimulos": ["acción caótica controlada", "coordinación", "gestión de poder"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego sobreexagerado que permite liberar energía de forma estructurada."
-        },
-        {
-            "name": "Robod",
-            "estimulos": ["simplicidad", "patrones predecibles", "coordinación básica"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego retro con mecánicas simples, ideal para evitar sobrecarga."
-        },
-        {
-            "name": "Sango Fighter",
-            "estimulos": ["memoria de movimientos", "timing", "control de impulsos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Pequeñas sesiones de combate, buenas para entrenar paciencia y timing."
-        },
-        {
-            "name": "Sango Fighter 2",
-            "estimulos": ["mejora incremental", "patrones", "retroalimentación inmediata"],
-            "patologias": ["TDAH"],
-            "justificacion": "Secuela con mecánicas pulidas, adecuada para práctica repetitiva."
-        },
-        {
-            "name": "Skynet",
-            "estimulos": ["exploración a cielo abierto", "gestión de vehículos", "misiones estructuradas"],
-            "patologias": ["TEA"],
-            "justificacion": "Mundo abierto con objetivos claros, fomenta la autonomía dentro de estructura."
-        },
-        {
-            "name": "Space Quest: Chapter I",
-            "estimulos": ["humor", "resolución de puzzles verbales", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura gráfica con humor, buena para comprensión del lenguaje figurado."
-        },
-        {
-            "name": "Strife",
-            "estimulos": ["narrativa interactiva", "toma de decisiones", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "RPG shooter con elecciones, fomenta pensamiento crítico y consecuencias."
-        },
-        {
-            "name": "Super Street Fighter II Turbo",
-            "estimulos": ["competencia", "memoria muscular", "control emocional"],
-            "patologias": ["TDAH"],
-            "justificacion": "Combates uno a uno, ideales para aprender a manejar victorias y derrotas."
-        },
-        {
-            "name": "Thanatos 3D",
-            "estimulos": ["exploración oscura", "persistencia", "atención a detalles"],
-            "patologias": ["TEA"],
-            "justificacion": "Ambiente atmosférico que recompensa la exploración cuidadosa."
-        },
-        {
-            "name": "Terror in Christmas Town",
-            "estimulos": ["humor absurdo", "coordinación simple", "narrativa ligera"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Tema festivo y mecánicas simples, buen juego para sesiones ligeras."
-        },
-        {
-            "name": "Terminal Velocity",
-            "estimulos": ["velocidad", "coordinación 3D", "atención dividida"],
-            "patologias": ["TDAH"],
-            "justificacion": "Vuelo rápido que exige procesamiento visual rápido y coordinación."
-        },
-        {
-            "name": "Terminator: Rampage",
-            "estimulos": ["acción continua", "gestión de recursos", "persistencia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de acción pura, útil para mantener la atención en tareas repetitivas."
-        },
-        {
-            "name": "Test Drive",
-            "estimulos": ["control de velocidad", "concentración", "persistencia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Carreras realistas que requieren concentración continua y control motor."
-        },
-        {
-            "name": "The Need for Speed",
-            "estimulos": ["velocidad de procesamiento", "toma de decisiones rápidas", "control fino"],
-            "patologias": ["TDAH"],
-            "justificacion": "Carreras arcade que entrenan reflejos y decisiones bajo presión."
-        },
-        {
-            "name": "Tomb Rider",
-            "estimulos": ["exploración", "resolución de puzzles", "coordinación"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura con puzzles y plataformas, fomenta pensamiento lógico y espacial."
-        },
-        {
-            "name": "Wolfenstein 3D",
-            "estimulos": ["acción simple", "navegación laberíntica", "persistencia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Clásico con mecánicas directas, bueno para iniciación en videojuegos."
-        },
-        {
-            "name": "WolfenDOOM",
-            "estimulos": ["fusión de mecánicas", "adaptación", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Mod que combina estilos, ideal para jugadores que buscan variación dentro de lo conocido."
-        },
-        {
-            "name": "Wrath of Earth",
-            "estimulos": ["exploración", "atención a detalles", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "FPS con elementos de exploración, fomenta la observación meticulosa."
-        },
-        {
-            "name": "Wing Commander",
-            "estimulos": ["narrativa espacial", "toma de decisiones estratégicas", "gestión de recursos"],
-            "patologias": ["TEA"],
-            "justificacion": "Simulación espacial con historia, buena para pensamiento estratégico."
-        },
-        {
-            "name": "Wipeout",
-            "estimulos": ["velocidad extrema", "coordinación", "anticipación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Carreras futuristas que exigen reflejos y planeación de rutas."
-        },
-        {
-            "name": "Xenophage: Alien BloodSport",
-            "estimulos": ["combate 1v1", "timing", "control emocional"],
-            "patologias": ["TDAH"],
-            "justificacion": "Combates cuerpo a cuerpo, útiles para trabajar control de impulsos."
-        },
-        {
-            "name": "X-Men: Children of the Atom",
-            "estimulos": ["combos", "memoria de movimientos", "competencia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de lucha con personajes variados, ideal para entrenar secuencias."
-        },
-        {
-            "name": "4D BOXING",
-            "estimulos": ["estrategia deportiva", "timing", "control de movimientos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Boxeo simulado que requiere anticipación y control de timing."
-        },
-        {
-            "name": "Youtube",
-            "estimulos": ["elección autónoma", "regulación sensorial", "aprendizaje por interés"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Acceso a contenido variado, permite autoregulación del estímulo visual/auditivo."
-        },
-        {
-            "name": "Youtube Music",
-            "estimulos": ["regulación emocional", "atención auditiva", "elección personal"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Música como herramienta de regulación emocional y concentración."
-        },
-        {
-            "name": "Arachne Browser",
-            "estimulos": ["navegación estructurada", "curiosidad", "control de estímulos"],
-            "patologias": ["TEA"],
-            "justificacion": "Navegador simple, ideal para sesiones controladas de búsqueda de información."
-        },
-        {
-            "name": "AbiWord",
-            "estimulos": ["expresión escrita", "organización de ideas", "concentración"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Procesador de texto minimalista, reduce distracciones al escribir."
-        },
-        {
-            "name": "Android 1.6",
-            "estimulos": ["exploración de sistemas", "curiosidad técnica", "aprendizaje por descubrimiento"],
-            "patologias": ["TEA"],
-            "justificacion": "Entorno de emulación que permite experimentar con un sistema operativo de forma segura."
-        },
-        {
-            "name": "Arch Linux",
-            "estimulos": ["resolución de problemas técnicos", "paciencia", "pensamiento lógico"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo para usuarios avanzados, fomenta el aprendizaje técnico estructurado."
-        },
-        {
-            "name": "BeOS 5",
-            "estimulos": ["interfaz limpia", "exploración técnica", "curiosidad"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema alternativo con diseño claro, bueno para evitar sobrecarga visual."
-        },
-        {
-            "name": "Damn Small Linux 4.11",
-            "estimulos": ["simplicidad", "enfoque", "eficiencia"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Sistema minimalista, reduce distracciones y promueve concentración en tareas."
-        },
-        {
-            "name": "Desktop",
-            "estimulos": ["organización espacial", "rutinas", "autonomía"],
-            "patologias": ["TEA"],
-            "justificacion": "Entorno de escritorio que permite personalizar y estructurar el espacio de trabajo."
-        },
-        {
-            "name": "DosBOX",
-            "estimulos": ["emulación técnica", "aprendizaje histórico", "resolución de problemas"],
-            "patologias": ["TEA"],
-            "justificacion": "Herramienta para ejecutar software antiguo, fomenta interés técnico y paciencia."
-        },
-        {
-            "name": "Explorer++",
-            "estimulos": ["organización de archivos", "categorización", "metodología"],
-            "patologias": ["TEA"],
-            "justificacion": "Gestor de archivos avanzado, ideal para crear rutinas de organización."
-        },
-        {
-            "name": "7Zip",
-            "estimulos": ["compresión/descompresión", "resolución de problemas", "paciencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Herramienta de archivos, enseña procesos paso a paso y manejo de errores."
-        },
-        {
-            "name": "AROS Broadway",
-            "estimulos": ["interfaz retro", "exploración", "curiosidad"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema alternativo, promueve la exploración de entornos digitales distintos."
-        },
-        {
-            "name": "Audacity",
-            "estimulos": ["creatividad auditiva", "atención al detalle", "paciencia"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Editor de audio que fomenta la creatividad y el procesamiento auditivo estructurado."
-        },
-        {
-            "name": "Calc",
-            "estimulos": ["cálculo mental", "lógica", "precisión"],
-            "patologias": ["TEA"],
-            "justificacion": "Calculadora, útil para ejercitar habilidades matemáticas en un entorno controlado."
-        },
-        {
-            "name": "Calendar",
-            "estimulos": ["organización temporal", "planificación", "rutinas"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Calendario, ayuda a estructurar el tiempo y anticipar eventos."
-        },
-        {
-            "name": "Clock",
-            "estimulos": ["gestión del tiempo", "alarmas", "rutinas"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Reloj con alarmas, útil para crear estructura temporal y transiciones."
-        },
-        {
-            "name": "Control",
-            "estimulos": ["personalización", "control del entorno", "toma de decisiones"],
-            "patologias": ["TEA"],
-            "justificacion": "Panel de control, permite ajustar preferencias y sentir control sobre el sistema."
-        },
-        {
-            "name": "DOSShell",
-            "estimulos": ["comandos estructurados", "memoria procedural", "lógica"],
-            "patologias": ["TEA"],
-            "justificacion": "Intérprete de comandos, fomenta el pensamiento secuencial y estructurado."
-        },
-        {
-            "name": "Flat Assembler",
-            "estimulos": ["programación de bajo nivel", "lógica", "atención al detalle"],
-            "patologias": ["TEA"],
-            "justificacion": "Ensamblador, ideal para mentes analíticas y metódicas."
-        },
-        {
-            "name": "FreeBSD 12.0",
-            "estimulos": ["sistema operativo avanzado", "resolución de problemas", "exploración técnica"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema Unix, promueve el aprendizaje técnico profundo y la paciencia."
-        },
-        {
-            "name": "FreeGEM",
-            "estimulos": ["interfaz gráfica retro", "simplicidad", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Entorno gráfico antiguo, reduce estímulos y fomenta la concentración."
-        },
-        {
-            "name": "FiwixOS",
-            "estimulos": ["sistema minimalista", "curiosidad técnica", "enfoque"],
-            "patologias": ["TEA"],
-            "justificacion": "Kernel educativo, ideal para aprender conceptos de sistemas operativos."
-        },
-        {
-            "name": "JPEGView",
-            "estimulos": ["visualización de imágenes", "atención al detalle", "organización visual"],
-            "patologias": ["TEA"],
-            "justificacion": "Visor de imágenes rápido y simple, útil para sesiones de observación."
-        },
-        {
-            "name": "Haiku",
-            "estimulos": ["interfaz cohesiva", "exploración", "curiosidad"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo alternativo, fomenta la exploración de entornos digitales."
-        },
-        {
-            "name": "Icaros Desktop",
-            "estimulos": ["entorno alternativo", "personalización", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema inspirado en Amiga, promueve la curiosidad y adaptación a nuevas interfaces."
-        },
-        {
-            "name": "JX",
-            "estimulos": ["sistema en Java", "curiosidad técnica", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo experimental, ideal para mentes técnicas y curiosas."
-        },
-        {
-            "name": "KolibriOS",
-            "estimulos": ["sistema minimalista", "velocidad", "enfoque"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Sistema rápido y pequeño, reduce tiempos de carga y distracciones."
-        },
-        {
-            "name": "Media Player Classic",
-            "estimulos": ["reproducción de medios", "control de estímulos", "enfoque"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Reproductor simple, permite consumo controlado de contenido audiovisual."
-        },
-        {
-            "name": "Minix",
-            "estimulos": ["sistema educativo", "resolución de problemas", "lógica"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo docente, ideal para aprendizaje estructurado de informática."
-        },
-        {
-            "name": "Netsurf",
-            "estimulos": ["navegación web ligera", "enfoque", "control de distracciones"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Navegador minimalista, reduce sobrecarga de información en la web."
-        },
-        {
-            "name": "Neobook",
-            "estimulos": ["creación multimedia", "lógica de programación visual", "creatividad"],
-            "patologias": ["TEA"],
-            "justificacion": "Herramienta de autoría, fomenta la creatividad dentro de un marco estructurado."
-        },
-        {
-            "name": "NetBSD 4.0",
-            "estimulos": ["sistema portable", "exploración técnica", "adaptación"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo multiplataforma, promueve el aprendizaje técnico."
-        },
-        {
-            "name": "Neopaint",
-            "estimulos": ["creatividad visual", "coordinación", "expresión artística"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Programa de dibujo retro, fomenta la expresión creativa en entorno controlado."
-        },
-        {
-            "name": "NodeOS",
-            "estimulos": ["sistema experimental", "curiosidad", "aprendizaje técnico"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo basado en Node.js, ideal para desarrolladores jóvenes."
-        },
-        {
-            "name": "Notepad",
-            "estimulos": ["escrita simple", "enfoque", "organización de texto"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Editor de texto básico, sin distracciones, ideal para tomar notas o escribir."
-        },
-        {
-            "name": "Notepad Classic",
-            "estimulos": ["escrita minimalista", "concentración", "simplicidad"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Versión HTML5 de bloc de notas, reduce estímulos externos."
-        },
-        {
-            "name": "Notepad++",
-            "estimulos": ["programación", "organización de código", "atención al detalle"],
-            "patologias": ["TEA"],
-            "justificacion": "Editor de código avanzado, útil para jóvenes programadores metódicos."
-        },
-        {
-            "name": "Oberon",
-            "estimulos": ["sistema operativo educativo", "lógica", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema académico, fomenta el pensamiento estructurado y la exploración técnica."
-        },
-        {
-            "name": "Paint",
-            "estimulos": ["creatividad visual", "coordinación mano-ojo", "expresión"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Herramienta de dibujo clásica, promueve la creatividad y relajación."
-        },
-        {
-            "name": "PaintBrush",
-            "estimulos": ["dibujo digital", "experimentación", "control motor"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Versión simple de Paint, ideal para sesiones cortas de expresión artística."
-        },
-        {
-            "name": "Program Manager",
-            "estimulos": ["organización de iconos", "rutinas", "estructura visual"],
-            "patologias": ["TEA"],
-            "justificacion": "Gestor de programas al estilo Windows 3.1, fomenta el orden y categorización."
-        },
-        {
-            "name": "QNX 4.05",
-            "estimulos": ["sistema de tiempo real", "lógica", "exploración técnica"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo de tiempo real, ideal para mentes analíticas y técnicas."
-        },
-        {
-            "name": "OpenBSD 6.6",
-            "estimulos": ["seguridad informática", "atención al detalle", "pensamiento crítico"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema enfocado en seguridad, fomenta el pensamiento meticuloso y preventivo."
-        },
-        {
-            "name": "QBasic 4.5",
-            "estimulos": ["programación introductoria", "lógica", "creatividad"],
-            "patologias": ["TEA"],
-            "justificacion": "Entorno de programación básico, ideal para aprender algoritmos de forma estructurada."
-        },
-        {
-            "name": "Open Office",
-            "estimulos": ["ofimática completa", "organización", "concentración"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Suite ofimática gratuita, útil para tareas estructuradas de escritura y cálculo."
-        },
-        {
-            "name": "ReactOS",
-            "estimulos": ["compatibilidad", "exploración técnica", "curiosidad"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema compatible con Windows, permite experimentar con software familiar en entorno abierto."
-        },
-        {
-            "name": "Redox",
-            "estimulos": ["sistema en Rust", "curiosidad técnica", "seguridad"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo moderno escrito en Rust, fomenta interés en lenguajes seguros."
-        },
-        {
-            "name": "RetroArch",
-            "estimulos": ["emulación múltiple", "organización", "curiosidad histórica"],
-            "patologias": ["TEA"],
-            "justificacion": "Frontend para emuladores, permite explorar videojuegos clásicos de forma estructurada."
-        },
-        {
-            "name": "SerenityOS",
-            "estimulos": ["sistema hobby", "exploración", "creatividad técnica"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo casero, ideal para jóvenes interesados en desarrollo de sistemas."
-        },
-        {
-            "name": "Shadow Warrior",
-            "estimulos": ["acción con humor", "coordinación", "gestión de recursos"],
-            "patologias": ["TDAH"],
-            "justificacion": "FPS humorístico, permite liberar energía con toque de comedia."
-        },
-        {
-            "name": "Shell",
-            "estimulos": ["línea de comandos", "lógica secuencial", "control preciso"],
-            "patologias": ["TEA"],
-            "justificacion": "Intérprete de comandos, fomenta el pensamiento estructurado y procedural."
-        },
-        {
-            "name": "Sortix",
-            "estimulos": ["sistema Unix minimalista", "exploración técnica", "lógica"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo pequeño, ideal para aprender conceptos de sistemas."
-        },
-        {
-            "name": "Soso",
-            "estimulos": ["sistema educativo", "exploración", "curiosidad"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema Unix-like educativo, fomenta el aprendizaje de sistemas operativos."
-        },
-        {
-            "name": "Sumatra PDF",
-            "estimulos": ["lectura digital", "enfoque", "control de estímulos"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Visor de PDF ligero, ideal para sesiones de lectura sin distracciones."
-        },
-        {
-            "name": "Syllable",
-            "estimulos": ["interfaz simple", "enfoque", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Sistema operativo ligero, reduce complejidad y favorece la concentración."
-        },
-        {
-            "name": "Tekwar",
-            "estimulos": ["ciencia ficción", "acción", "exploración"],
-            "patologias": ["TDAH"],
-            "justificacion": "FPS temático, permite inmersión en narrativa de ciencia ficción con acción."
-        },
-        {
-            "name": "TexWorks",
-            "estimulos": ["edición LaTeX", "precisión", "atención al detalle"],
-            "patologias": ["TEA"],
-            "justificacion": "Editor de LaTeX, ideal para mentes metódicas interesadas en publicación técnica."
-        },
-        {
-            "name": "Tilck",
-            "estimulos": ["kernel educativo", "lógica", "exploración técnica"],
-            "patologias": ["TEA"],
-            "justificacion": "Kernel didáctico, fomenta el aprendizaje profundo de sistemas operativos."
-        },
-        {
-            "name": "ToDO",
-            "estimulos": ["organización de tareas", "planificación", "rutinas"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Aplicación de tareas, ayuda a estructurar el día y reducir ansiedad por olvidos."
-        },
-        {
-            "name": "TurboC",
-            "estimulos": ["programación en C", "lógica", "atención al detalle"],
-            "patologias": ["TEA"],
-            "justificacion": "Entorno de desarrollo clásico, ideal para aprender programación estructurada."
-        },
-        {
-            "name": "TuxPaint",
-            "estimulos": ["dibujo infantil", "creatividad", "coordinación"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Programa de dibujo para niños, fomenta expresión creativa en entorno amigable."
-        },
-        {
-            "name": "Tiny Aros",
-            "estimulos": ["sistema ligero", "exploración", "curiosidad"],
-            "patologias": ["TEA"],
-            "justificacion": "Distribución pequeña de AROS, ideal para experimentar con sistemas alternativos."
-        },
-        {
-            "name": "UltraISO",
-            "estimulos": ["gestión de imágenes de disco", "organización", "precisión"],
-            "patologias": ["TEA"],
-            "justificacion": "Herramienta para ISO, enseña manejo de archivos de sistema y backup."
-        },
-        {
-            "name": "VirtualDUB",
-            "estimulos": ["edición de video básica", "procesamiento por pasos", "paciencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Editor de video simple, fomenta el aprendizaje de flujos de trabajo estructurados."
-        },
-        {
-            "name": "Web Browser",
-            "estimulos": ["navegación controlada", "enfoque", "limitación de estímulos"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Navegador minimalista, reduce distracciones y permite navegación segura."
-        },
-        {
-            "name": "WineZIP",
-            "estimulos": ["empaquetado de software", "organización", "metodología"],
-            "patologias": ["TEA"],
-            "justificacion": "Herramienta para crear paquetes, enseña procesos de instalación y estructura."
-        },
-        {
-            "name": "WinAMP",
-            "estimulos": ["reproducción de audio", "organización de listas", "regulación emocional"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Reproductor de audio clásico, permite crear playlists para concentración o relajación."
-        },
-        {
-            "name": "Wordpad",
-            "estimulos": ["procesamiento de texto intermedio", "formato", "concentración"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Editor de texto con formato, útil para tareas escolares estructuradas."
-        },
-        {
-            "name": "Xcom",
-            "estimulos": ["entorno de escritorio alternativo", "exploración", "organización"],
-            "patologias": ["TEA"],
-            "justificacion": "Entorno de ventanas simple, fomenta la exploración y personalización."
-        },
-        {
-            "name": "5 Days a Stranger",
-            "estimulos": ["aventura de horror", "resolución de puzzles", "atención a detalles"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura gráfica de miedo, fomenta la observación y lógica narrativa."
-        },
-        {
-            "name": "Abuse",
-            "estimulos": ["plataformas y disparos", "coordinación", "estrategia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de acción lateral, requiere coordinación y planificación rápida."
-        },
-        {
-            "name": "Agi Tetris",
-            "estimulos": ["puzzles espaciales", "velocidad de procesamiento", "toma de decisiones"],
-            "patologias": ["TDAH"],
-            "justificacion": "Tetris clásico, ideal para entrenar velocidad de procesamiento y planificación espacial."
-        },
-        {
-            "name": "Arkanoid",
-            "estimulos": ["coordinación mano-ojo", "timing", "persistencia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de rebotes, requiere sincronización y precisión."
-        },
-        {
-            "name": "Amazon: Guardian of Eden",
-            "estimulos": ["aventura gráfica", "exploración", "resolución de puzzles"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura point-and-click, fomenta la lógica y comprensión de narrativas."
-        },
-        {
-            "name": "Adventure Fun-Pak",
-            "estimulos": ["variedad de géneros", "exploración", "adaptación"],
-            "patologias": ["TEA"],
-            "justificacion": "Colección de juegos simples, ideal para probar diferentes estilos sin sobrecarga."
-        },
-        {
-            "name": "Azrael Tear",
-            "estimulos": ["aventura en primera persona", "exploración", "puzzles lógicos"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura 3D con énfasis en puzzles, fomenta la exploración metódica."
-        },
-        {
-            "name": "Baby Type",
-            "estimulos": ["escritura rápida", "memoria muscular", "concentración"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de mecanografía, entrena velocidad y precisión en la escritura."
-        },
-        {
-            "name": "Baller SDL",
-            "estimulos": ["estrategia de artillería", "cálculo de trayectorias", "paciencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego de estrategia por turnos, fomenta el pensamiento lógico y planeación."
-        },
-        {
-            "name": "Baryon",
-            "estimulos": ["disparos verticales", "coordinación", "atención dividida"],
-            "patologias": ["TDAH"],
-            "justificacion": "Shoot 'em up vertical, requiere enfoque y control de múltiples elementos."
-        },
-        {
-            "name": "Beats Of Rage",
-            "estimulos": ["pelea lateral", "coordinación", "descarga controlada"],
-            "patologias": ["TDAH"],
-            "justificacion": "Beat 'em up clásico, permite liberar energía con combates simples."
-        },
-        {
-            "name": "Breakout",
-            "estimulos": ["rebotes", "timing", "precisión"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de romper bloques, entrena coordinación y reflejos."
-        },
-        {
-            "name": "Brix",
-            "estimulos": ["puzzles de bloques", "lógica espacial", "planificación"],
-            "patologias": ["TEA"],
-            "justificacion": "Variante de Breakout, fomenta la estrategia y previsión de movimientos."
-        },
-        {
-            "name": "Bust a Move 2",
-            "estimulos": ["puzzles de burbujas", "planificación", "paciencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego de emparejar colores, requiere estrategia y pensamiento anticipatorio."
-        },
-        {
-            "name": "CD-MAN",
-            "estimulos": ["laberintos", "memoria espacial", "estrategia de huida"],
-            "patologias": ["TEA"],
-            "justificacion": "Clon de Pac-Man, fomenta memoria espacial y toma de decisiones rápidas."
-        },
-        {
-            "name": "Chompsters",
-            "estimulos": ["laberintos", "patrones de enemigos", "estrategia"],
-            "patologias": ["TEA"],
-            "justificacion": "Variante de Pac-Man, ideal para entrenar reconocimiento de patrones."
-        },
-        {
-            "name": "Commander Keen",
-            "estimulos": ["plataformas", "exploración", "resolución de problemas"],
-            "patologias": ["TEA"],
-            "justificacion": "Plataformas clásico, fomenta exploración y superación de obstáculos."
-        },
-        {
-            "name": "Cristal Caves",
-            "estimulos": ["plataformas", "coleccionismo", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Plataformas con secretos, recompensa la exploración meticulosa."
-        },
-        {
-            "name": "Dave",
-            "estimulos": ["plataformas", "coordinación", "persistencia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Plataformas clásico, requiere timing y control de saltos."
-        },
-        {
-            "name": "Disney Aladdin",
-            "estimulos": ["plataformas", "narrativa familiar", "coordinación"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Plataformas con licencia Disney, atractivo y con desafíos asequibles."
-        },
-        {
-            "name": "Doom 2D",
-            "estimulos": ["acción lateral", "coordinación", "gestión de recursos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Versión 2D de Doom, acción rápida con mecánicas simples."
-        },
-        {
-            "name": "Duke Nukem 2",
-            "estimulos": ["plataformas", "acción", "humor"],
-            "patologias": ["TDAH"],
-            "justificacion": "Plataformas con actitud, combina acción y comedia."
-        },
-        {
-            "name": "Dyna Blaster",
-            "estimulos": ["bombas", "estrategia espacial", "multijugador"],
-            "patologias": ["TDAH"],
-            "justificacion": "Clon de Bomberman, ideal para planificación espacial y juego social."
-        },
-        {
-            "name": "Earthworm Jim",
-            "estimulos": ["plataformas extravagantes", "coordinación", "humor absurdo"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Plataformas surrealista, fomenta la creatividad y coordinación."
-        },
-        {
-            "name": "Incredible Machine",
-            "estimulos": ["puzzles de física", "pensamiento lógico", "creatividad"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego de máquinas de Rube Goldberg, ideal para pensamiento lógico y causa-efecto."
-        },
-        {
-            "name": "Hextris",
-            "estimulos": ["puzzles hexagonal", "velocidad", "toma de decisiones"],
-            "patologias": ["TDAH"],
-            "justificacion": "Tetris hexagonal, entrena velocidad de procesamiento y adaptación."
-        },
-        {
-            "name": "HomeworldSDL",
-            "estimulos": ["estrategia espacial", "gestión de recursos", "planificación"],
-            "patologias": ["TEA"],
-            "justificacion": "Estrategia en tiempo real espacial, fomenta pensamiento estratégico y paciencia."
-        },
-        {
-            "name": "Indiana Jones and the Fate of Atlantis",
-            "estimulos": ["aventura gráfica", "resolución de puzzles", "narrativa"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura clásica, ideal para comprensión de historias y puzzles lógicos."
-        },
-        {
-            "name": "Golden Axe",
-            "estimulos": ["beat 'em up", "cooperación", "coordinación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Beat 'em up clásico, permite juego en equipo y liberación de energía."
-        },
-        {
-            "name": "Nero Chess",
-            "estimulos": ["ajedrez", "pensamiento estratégico", "paciencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Ajedrez digital, fomenta el pensamiento a largo plazo y la concentración."
-        },
-        {
-            "name": "Ms Pacman PC",
-            "estimulos": ["laberintos", "memoria de patrones", "velocidad"],
-            "patologias": ["TDAH"],
-            "justificacion": "Variante de Pac-Man, entrena velocidad de decisión y reconocimiento de patrones."
-        },
-        {
-            "name": "Monkey Island",
-            "estimulos": ["aventura gráfica", "humor", "resolución de puzzles"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura gráfica humorística, ideal para comprensión de sarcasmo y lógica."
-        },
-        {
-            "name": "Max Mechanized Assault",
-            "estimulos": ["estrategia por turnos", "gestión de recursos", "planificación"],
-            "patologias": ["TEA"],
-            "justificacion": "Estrategia profunda, fomenta el pensamiento táctico y la previsión."
-        },
-        {
-            "name": "Open Jazz",
-            "estimulos": ["plataformas rápido", "coordinación", "coleccionismo"],
-            "patologias": ["TDAH"],
-            "justificacion": "Plataformas rápido, requiere reflejos y control preciso."
-        },
-        {
-            "name": "Open Jazz 2",
-            "estimulos": ["plataformas mejorado", "coordinación", "exploración"],
-            "patologias": ["TDAH"],
-            "justificacion": "Secuela de Jazz, con más variedad y desafíos de coordinación."
-        },
-        {
-            "name": "Out this world",
-            "estimulos": ["plataformas cinemático", "timing", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Plataformas con física, requiere precisión y aprendizaje por error."
-        },
-        {
-            "name": "Pacman",
-            "estimulos": ["laberintos", "estrategia de evasión", "memoria espacial"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Clásico absoluto, ideal para entrenar memoria espacial y toma de decisiones rápidas."
-        },
-        {
-            "name": "Plague of the Moon",
-            "estimulos": ["aventura gráfica", "exploración", "puzzles"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura con temática oscura, fomenta la observación y lógica."
-        },
-        {
-            "name": "Prince of persia",
-            "estimulos": ["plataformas de precisión", "timing", "persistencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Plataformas clásico de precisión, requiere paciencia y control exacto."
-        },
-        {
-            "name": "Prince of persia 2",
-            "estimulos": ["plataformas", "combate", "exploración"],
-            "patologias": ["TEA"],
-            "justificacion": "Secuela con más acción, mantiene la necesidad de precisión y timing."
-        },
-        {
-            "name": "Prehistorik",
-            "estimulos": ["plataformas", "coleccionismo", "coordinación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Plataformas simple y colorido, ideal para sesiones cortas."
-        },
-        {
-            "name": "Prehistorik 2",
-            "estimulos": ["plataformas mejorado", "exploración", "coleccionismo"],
-            "patologias": ["TDAH"],
-            "justificacion": "Secuela con más contenido, fomenta la exploración y recolección."
-        },
-        {
-            "name": "Rocks Diamonds",
-            "estimulos": ["puzzles de caída de rocas", "estrategia", "planificación"],
-            "patologias": ["TEA"],
-            "justificacion": "Clon de Boulder Dash, requiere pensamiento anticipatorio y lógica espacial."
-        },
-        {
-            "name": "Sam and Max: Hit the road",
-            "estimulos": ["aventura gráfica humorística", "resolución de puzzles", "diálogos"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura absurda, ideal para trabajar comprensión de humor abstracto."
-        },
-        {
-            "name": "SDL Sopwith",
-            "estimulos": ["vuelo 2D", "coordinación", "estrategia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de avión biplano, requiere coordinación y planificación de ataques."
-        },
-        {
-            "name": "Simon the Sorcerer",
-            "estimulos": ["aventura gráfica", "humor", "puzzles"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura fantástica, fomenta la lógica y comprensión de narrativas."
-        },
-        {
-            "name": "Space Invaders",
-            "estimulos": ["disparos estáticos", "coordinación", "control de estrés"],
-            "patologias": ["TDAH"],
-            "justificacion": "Clásico arcade, ideal para entrenar reflejos y manejo de presión progresiva."
-        },
-        {
-            "name": "Stargunner",
-            "estimulos": ["scroll horizontal", "coordinación", "gestión de recursos"],
-            "patologias": ["TDAH"],
-            "justificacion": "Shoot 'em up horizontal, requiere atención continua y estrategia de disparo."
-        },
-        {
-            "name": "Super Tux",
-            "estimulos": ["plataformas", "exploración", "coleccionismo"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Clon de Super Mario, entorno amigable y desafíos progresivos."
-        },
-        {
-            "name": "The Last Express",
-            "estimulos": ["aventura de misterio", "atención al tiempo", "narrativa"],
-            "patologias": ["TEA"],
-            "justificacion": "Aventura en tiempo real, fomenta la observación y comprensión de cronologías."
-        },
-        {
-            "name": "The Lion King",
-            "estimulos": ["plataformas", "coordinación", "persistencia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Plataformas basado en Disney, desafía la coordinación y timing."
-        },
-        {
-            "name": "The Lost Vikings",
-            "estimulos": ["puzzles de personajes múltiples", "cooperación", "lógica"],
-            "patologias": ["TEA"],
-            "justificacion": "Puzzle-platformer, fomenta el pensamiento estratégico con múltiples habilidades."
-        },
-        {
-            "name": "Tower Building",
-            "estimulos": ["construcción", "equilibrio", "paciencia"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego de apilar, ideal para entrenar motricidad fina y paciencia."
-        },
-        {
-            "name": "Wacky Wheels",
-            "estimulos": ["carreras karts", "competencia", "coordinación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Carreras de karts con power-ups, divertido y con acción constante."
-        },
-        {
-            "name": "Wizardry: Crusaders of the Dark Savant",
-            "estimulos": ["RPG por turnos", "gestión de grupo", "pensamiento estratégico"],
-            "patologias": ["TEA"],
-            "justificacion": "RPG clásico, fomenta la planificación a largo plazo y gestión de recursos."
-        },
-        {
-            "name": "XBill",
-            "estimulos": ["defensa rápida", "atención dividida", "coordinación"],
-            "patologias": ["TDAH"],
-            "justificacion": "Juego de defender computadoras, requiere atención múltiple y reflejos."
-        },
-        {
-            "name": "XOX",
-            "estimulos": ["tres en raya 3D", "estrategia simple", "pensamiento espacial"],
-            "patologias": ["TEA"],
-            "justificacion": "Tic-tac-toe en 3D, ideal para introducir conceptos de estrategia espacial."
-        },
-        {
-            "name": "Capture the Flag",
-            "estimulos": ["estrategia en tiempo real", "trabajo en equipo", "planificación"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego de estrategia con objetivos claros, fomenta cooperación y táctica."
-        },
-        {
-            "name": "Command & Conquer",
-            "estimulos": ["estrategia en tiempo real", "gestión de recursos", "multitarea"],
-            "patologias": ["TDAH"],
-            "justificacion": "RTS clásico, exige atención múltiple y toma de decisiones rápidas."
-        },
-        {
-            "name": "Crazy Cows",
-            "estimulos": ["estrategia por turnos", "humor", "planificación"],
-            "patologias": ["TEA"],
-            "justificacion": "Estrategia ligera con temática absurda, buena para iniciación en el género."
-        },
-        {
-            "name": "Oregon Trail Delux",
-            "estimulos": ["simulación histórica", "toma de decisiones", "gestión de recursos"],
-            "patologias": ["TEA"],
-            "justificacion": "Juego educativo, enseña consecuencias de decisiones y planificación."
-        },
-        {
-            "name": "Master of Orion II",
-            "estimulos": ["estrategia 4X", "gestión de imperio", "pensamiento a largo plazo"],
-            "patologias": ["TEA"],
-            "justificacion": "Estrategia espacial compleja, ideal para mentes analíticas y pacientes."
-        },
-        {
-            "name": "Sim City",
-            "estimulos": ["construcción de ciudades", "planificación urbana", "pensamiento sistémico"],
-            "patologias": ["TEA"],
-            "justificacion": "Simulador de ciudades, fomenta la visión a largo plazo y gestión de recursos."
-        },
-        {
-            "name": "Sim City 2000",
-            "estimulos": ["simulación urbana avanzada", "estrategia", "gestión de capas"],
-            "patologias": ["TEA"],
-            "justificacion": "Secuela más compleja, ideal para profundizar en pensamiento sistémico."
-        },
-        {
-            "name": "Syndicate Plus",
-            "estimulos": ["estrategia táctica", "gestión de agentes", "toma de decisiones"],
-            "patologias": ["TEA"],
-            "justificacion": "Estrategia de control de agentes, fomenta el pensamiento táctico y cuidado de recursos."
-        },
-        {
-            "name": "Theme park",
-            "estimulos": ["gestión de parques", "economía simple", "creatividad"],
-            "patologias": ["TEA"],
-            "justificacion": "Simulador de parques de atracciones, enseña gestión y diseño básico."
-        },
-        {
-            "name": "The Horde",
-            "estimulos": ["estrategia y acción", "gestión de aldeas", "defensa"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Combina acción y estrategia, ideal para transición entre géneros."
-        },
-        {
-            "name": "Warcraft",
-            "estimulos": ["estrategia en tiempo real", "construcción de bases", "gestión de unidades"],
-            "patologias": ["TDAH"],
-            "justificacion": "RTS fundacional, requiere atención continua y microgestión."
-        },
-        {
-            "name": "Warcraft II",
-            "estimulos": ["estrategia en tiempo real mejorada", "cooperación", "estrategia"],
-            "patologias": ["TDAH"],
-            "justificacion": "Secuela con más profundidad, ideal para jugadores que ya dominan lo básico."
-        },
-        {
-            "name": "Waterworld",
-            "estimulos": ["estrategia basada en misiones", "adaptación", "gestión de recursos"],
-            "patologias": ["TEA"],
-            "justificacion": "Estrategia con temática acuática, fomenta adaptación a entornos restrictivos."
-        },
-        {
-            "name": "Worm",
-            "estimulos": ["estrategia por turnos con artillería", "cálculo", "humor"],
-            "patologias": ["TEA", "TDAH"],
-            "justificacion": "Juego de gusanos con armas, combina estrategia y física con toque humorístico."
-        },
-        {
-            "name": "X-COM: UFO Defense",
-            "estimulos": ["estrategia por turnos táctica", "gestión de base", "pensamiento crítico"],
-            "patologias": ["TEA"],
-            "justificacion": "Estrategia profunda y desafiante, ideal para mentes analíticas y pacientes."
-        },
-        {
-            "name": "ZED",
-            "estimulos": ["estrategia en tiempo real rápida", "captura de territorios", "microgestión"],
-            "patologias": ["TDAH"],
-            "justificacion": "RTS rápido y frenético, perfecto para entrenar velocidad de decisión y multitarea."
-        }
-    ]
-
+            "estimulos_juegos": [
+                {
+                    "name": "Absence",
+                    "estimulos": ["atención sostenida", "coordinación visomotora", "resolución de problemas rápidos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de acción rápida que requiere concentración y reacción inmediata, ideal para entrenar el foco atencional."
+                },
+                {
+                    "name": "Alien Cabal",
+                    "estimulos": ["atención selectiva", "planificación espacial", "toma de decisiones bajo presión"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "FPS con niveles estructurados que exigen estrategia y control de impulsos."
+                },
+                {
+                    "name": "Alien Trilogy",
+                    "estimulos": ["alertas sensoriales", "coordinación mano-ojo", "gestión del estrés"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Entorno inmersivo que ayuda a regular la respuesta al estrés mediante acción controlada."
+                },
+                {
+                    "name": "Anarch",
+                    "estimulos": ["simplicidad visual", "control motor fino", "autonomía"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Interfaz limpia y predecible, adecuada para evitar sobrecarga sensorial."
+                },
+                {
+                    "name": "Astro3D",
+                    "estimulos": ["orientación espacial 3D", "atención dividida", "anticipación de movimientos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego espacial que entrena la capacidad de seguir múltiples estímulos en el espacio."
+                },
+                {
+                    "name": "Battle Arena Toshinden",
+                    "estimulos": ["memoria de patrones", "timing", "control de impulsos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Combates estructurados que requieren aprender secuencias y esperar el momento oportuno."
+                },
+                {
+                    "name": "Beneath a Steel Sky",
+                    "estimulos": ["narrativa", "resolución de puzzles", "empatía"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura gráfica con historia fuerte, ideal para trabajar comprensión social y lógica."
+                },
+                {
+                    "name": "Black Stone",
+                    "estimulos": ["exploración", "atención a detalles", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Entornos predecibles y mecánicas simples, buenos para rutinas de juego."
+                },
+                {
+                    "name": "Blam!",
+                    "estimulos": ["coordinación visomotora", "estrategia simple", "atención sostenida"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Movimiento continuo y objetivos claros, ayuda a mantener el foco."
+                },
+                {
+                    "name": "Blood",
+                    "estimulos": ["gestión de recursos", "toma de decisiones rápidas", "control de la frustración"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de supervivencia que enseña a manejar recursos y emociones bajo presión."
+                },
+                {
+                    "name": "Brutal: Paws of Fury",
+                    "estimulos": ["memoria muscular", "reacción a estímulos", "regulación emocional"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Combates rápidos que permiten descarga controlada de energía."
+                },
+                {
+                    "name": "Chex Quest",
+                    "estimulos": ["humor", "cooperación implícita", "narrativa simple"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Tema amigable y mecánicas simples, buen punto de entrada para juegos de acción."
+                },
+                {
+                    "name": "Cham: The Rift",
+                    "estimulos": ["exploración 3D", "atención a pistas", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Niveles explorables con secretos, fomenta la curiosidad sistemática."
+                },
+                {
+                    "name": "Chub Gam 3D",
+                    "estimulos": ["seguimiento de narrativa", "interacción simple", "recompensas inmediatas"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estructura lineal y cinemáticas, ayuda a entender secuencias causa-efecto."
+                },
+                {
+                    "name": "Corridor 7: Alien Invasion",
+                    "estimulos": ["orientación laberíntica", "memoria espacial", "paciencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Laberintos predecibles, ideales para entrenar memoria espacial y planificación."
+                },
+                {
+                    "name": "Dark Forces",
+                    "estimulos": ["exploración no lineal", "resolución de problemas", "atención a detalles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Ambientación rica en detalles, fomenta la exploración metódica."
+                },
+                {
+                    "name": "Destruction Derby",
+                    "estimulos": ["control de impulsos", "coordinación", "gestión de consecuencias"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Carreras con consecuencias inmediatas, enseña causa-efecto en tiempo real."
+                },
+                {
+                    "name": "Diablo",
+                    "estimulos": ["gestión de inventario", "toma de decisiones estratégicas", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema de progreso claro y repetitivo, ideal para rutinas de juego estructuradas."
+                },
+                {
+                    "name": "Death Rally",
+                    "estimulos": ["atención dividida", "reflejos", "control de velocidad"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Carreras de vista aérea que requieren dividir atención entre varios elementos."
+                },
+                {
+                    "name": "Descent II",
+                    "estimulos": ["orientación 3D", "multitarea", "planificación espacial"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Movimiento en 6 ejes, desafía la capacidad de orientación y atención múltiple."
+                },
+                {
+                    "name": "Doom",
+                    "estimulos": ["reacción rápida", "navegación espacial", "gestión de recursos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Clásico que exige atención continua y adaptación a cambios rápidos."
+                },
+                {
+                    "name": "Duke Nukem 3D",
+                    "estimulos": ["humor", "exploración", "interacción con entorno"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Tonelada humorística y entornos interactivos, facilitan la engagement."
+                },
+                {
+                    "name": "Eradicator",
+                    "estimulos": ["estrategia en tiempo real", "adaptación", "control de recursos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Combina acción y estrategia, exigiendo flexibilidad cognitiva."
+                },
+                {
+                    "name": "Escape from Dr. Colosso",
+                    "estimulos": ["resolución de puzzles", "atención a detalles", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Narrativa clara y puzzles lógicos, buenos para pensamiento estructurado."
+                },
+                {
+                    "name": "Gore Galore",
+                    "estimulos": ["patrones simples", "coordinación básica", "repetición"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Mecánicas repetitivas y predecibles, adecuadas para aprendizaje por rutina."
+                },
+                {
+                    "name": "Half-life",
+                    "estimulos": ["narrativa inmersiva", "resolución de problemas", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Historia continua y puzzles integrados, fomentan la inmersión y lógica."
+                },
+                {
+                    "name": "Heretic",
+                    "estimulos": ["gestión de recursos mágicos", "exploración", "adaptación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Variedad de armas y hechizos, requiere planificación de recursos."
+                },
+                {
+                    "name": "HexGL",
+                    "estimulos": ["velocidad de procesamiento", "coordinación", "anticipación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Carreras futuristas rápidas, ideales para entrenar tiempo de reacción."
+                },
+                {
+                    "name": "Hexen",
+                    "estimulos": ["exploración no lineal", "toma de decisiones", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Niveles interconectados que recompensan la exploración metódica."
+                },
+                {
+                    "name": "Hurl",
+                    "estimulos": ["humor", "coordinación", "conceptos de higiene"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Tema infantil y mecánicas simples, buen juego para iniciación."
+                },
+                {
+                    "name": "Indianapolis 500: The Simulation",
+                    "estimulos": ["planificación estratégica", "paciencia", "control fino"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Simulación realista que requiere concentración prolongada y precisión."
+                },
+                {
+                    "name": "Media IPTV",
+                    "estimulos": ["elección personal", "control de estímulos", "relajación"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Permite seleccionar contenido auditivo-visual según preferencias, promoviendo autoregulación."
+                },
+                {
+                    "name": "Mr. Pibb",
+                    "estimulos": ["interacción simple", "feedback inmediato", "coordinación básica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Mecánicas directas, adecuadas para sesiones cortas de entrenamiento."
+                },
+                {
+                    "name": "Nightmare 3D",
+                    "estimulos": ["gestión del miedo", "exploración cautelosa", "resolución de puzzles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Ambiente controlado de terror, útil para trabajar tolerancia a la incertidumbre."
+                },
+                {
+                    "name": "One Must Fall 2097",
+                    "estimulos": ["patrones de combate", "timing", "memoria procedural"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Combos y timing, ideales para entrenar memoria secuencial y control motor."
+                },
+                {
+                    "name": "Open TTD",
+                    "estimulos": ["planificación a largo plazo", "gestión de recursos", "pensamiento sistémico"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Simulación compleja que fomenta el pensamiento lógico y la previsión."
+                },
+                {
+                    "name": "Open Jedi Knight Dark Forces 2",
+                    "estimulos": ["exploración", "narrativa", "toma de decisiones morales"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Historia rica y elecciones, buenas para comprensión narrativa y empatía."
+                },
+                {
+                    "name": "Operation Body Count",
+                    "estimulos": ["acción rápida", "coordinación", "atención dividida"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de acción pura, útil para descarga controlada de energía."
+                },
+                {
+                    "name": "Out of this World",
+                    "estimulos": ["timing preciso", "resolución de puzzles", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego cinemático que requiere precisión y aprendizaje por error."
+                },
+                {
+                    "name": "Powerslave",
+                    "estimulos": ["exploración", "gestión de recursos", "adaptación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Niveles interconectados que recompensan la exploración y planificación."
+                },
+                {
+                    "name": "Pray for Death",
+                    "estimulos": ["combos", "memoria de movimientos", "control de ira"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de pelea que permite canalizar frustración en mecánicas controladas."
+                },
+                {
+                    "name": "Quake",
+                    "estimulos": ["multitarea", "estrategia rápida", "coordinación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Action rápida con necesidad de gestionar armas y movimientos simultáneamente."
+                },
+                {
+                    "name": "Quake 3 Arena",
+                    "estimulos": ["competencia", "reflejos", "adaptación a oponentes"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Multijugador rápido, ideal para entrenar adaptación social en entorno controlado."
+                },
+                {
+                    "name": "Quarantine",
+                    "estimulos": ["conducción y acción", "gestión de daños", "atención dividida"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Combina conducción y disparos, exigiendo dividir atención y gestionar recursos."
+                },
+                {
+                    "name": "Rise of the triad",
+                    "estimulos": ["acción caótica controlada", "coordinación", "gestión de poder"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego sobreexagerado que permite liberar energía de forma estructurada."
+                },
+                {
+                    "name": "Robod",
+                    "estimulos": ["simplicidad", "patrones predecibles", "coordinación básica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego retro con mecánicas simples, ideal para evitar sobrecarga."
+                },
+                {
+                    "name": "Sango Fighter",
+                    "estimulos": ["memoria de movimientos", "timing", "control de impulsos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Pequeñas sesiones de combate, buenas para entrenar paciencia y timing."
+                },
+                {
+                    "name": "Sango Fighter 2",
+                    "estimulos": ["mejora incremental", "patrones", "retroalimentación inmediata"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Secuela con mecánicas pulidas, adecuada para práctica repetitiva."
+                },
+                {
+                    "name": "Skynet",
+                    "estimulos": ["exploración a cielo abierto", "gestión de vehículos", "misiones estructuradas"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Mundo abierto con objetivos claros, fomenta la autonomía dentro de estructura."
+                },
+                {
+                    "name": "Space Quest: Chapter I",
+                    "estimulos": ["humor", "resolución de puzzles verbales", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura gráfica con humor, buena para comprensión del lenguaje figurado."
+                },
+                {
+                    "name": "Strife",
+                    "estimulos": ["narrativa interactiva", "toma de decisiones", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "RPG shooter con elecciones, fomenta pensamiento crítico y consecuencias."
+                },
+                {
+                    "name": "Super Street Fighter II Turbo",
+                    "estimulos": ["competencia", "memoria muscular", "control emocional"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Combates uno a uno, ideales para aprender a manejar victorias y derrotas."
+                },
+                {
+                    "name": "Thanatos 3D",
+                    "estimulos": ["exploración oscura", "persistencia", "atención a detalles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Ambiente atmosférico que recompensa la exploración cuidadosa."
+                },
+                {
+                    "name": "Terror in Christmas Town",
+                    "estimulos": ["humor absurdo", "coordinación simple", "narrativa ligera"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Tema festivo y mecánicas simples, buen juego para sesiones ligeras."
+                },
+                {
+                    "name": "Terminal Velocity",
+                    "estimulos": ["velocidad", "coordinación 3D", "atención dividida"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Vuelo rápido que exige procesamiento visual rápido y coordinación."
+                },
+                {
+                    "name": "Terminator: Rampage",
+                    "estimulos": ["acción continua", "gestión de recursos", "persistencia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de acción pura, útil para mantener la atención en tareas repetitivas."
+                },
+                {
+                    "name": "Test Drive",
+                    "estimulos": ["control de velocidad", "concentración", "persistencia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Carreras realistas que requieren concentración continua y control motor."
+                },
+                {
+                    "name": "The Need for Speed",
+                    "estimulos": ["velocidad de procesamiento", "toma de decisiones rápidas", "control fino"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Carreras arcade que entrenan reflejos y decisiones bajo presión."
+                },
+                {
+                    "name": "Tomb Rider",
+                    "estimulos": ["exploración", "resolución de puzzles", "coordinación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura con puzzles y plataformas, fomenta pensamiento lógico y espacial."
+                },
+                {
+                    "name": "Wolfenstein 3D",
+                    "estimulos": ["acción simple", "navegación laberíntica", "persistencia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Clásico con mecánicas directas, bueno para iniciación en videojuegos."
+                },
+                {
+                    "name": "WolfenDOOM",
+                    "estimulos": ["fusión de mecánicas", "adaptación", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Mod que combina estilos, ideal para jugadores que buscan variación dentro de lo conocido."
+                },
+                {
+                    "name": "Wrath of Earth",
+                    "estimulos": ["exploración", "atención a detalles", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "FPS con elementos de exploración, fomenta la observación meticulosa."
+                },
+                {
+                    "name": "Wing Commander",
+                    "estimulos": ["narrativa espacial", "toma de decisiones estratégicas", "gestión de recursos"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Simulación espacial con historia, buena para pensamiento estratégico."
+                },
+                {
+                    "name": "Wipeout",
+                    "estimulos": ["velocidad extrema", "coordinación", "anticipación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Carreras futuristas que exigen reflejos y planeación de rutas."
+                },
+                {
+                    "name": "Xenophage: Alien BloodSport",
+                    "estimulos": ["combate 1v1", "timing", "control emocional"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Combates cuerpo a cuerpo, útiles para trabajar control de impulsos."
+                },
+                {
+                    "name": "X-Men: Children of the Atom",
+                    "estimulos": ["combos", "memoria de movimientos", "competencia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de lucha con personajes variados, ideal para entrenar secuencias."
+                },
+                {
+                    "name": "4D BOXING",
+                    "estimulos": ["estrategia deportiva", "timing", "control de movimientos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Boxeo simulado que requiere anticipación y control de timing."
+                },
+                {
+                    "name": "Youtube",
+                    "estimulos": ["elección autónoma", "regulación sensorial", "aprendizaje por interés"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Acceso a contenido variado, permite autoregulación del estímulo visual/auditivo."
+                },
+                {
+                    "name": "Youtube Music",
+                    "estimulos": ["regulación emocional", "atención auditiva", "elección personal"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Música como herramienta de regulación emocional y concentración."
+                },
+                {
+                    "name": "Arachne Browser",
+                    "estimulos": ["navegación estructurada", "curiosidad", "control de estímulos"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Navegador simple, ideal para sesiones controladas de búsqueda de información."
+                },
+                {
+                    "name": "AbiWord",
+                    "estimulos": ["expresión escrita", "organización de ideas", "concentración"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Procesador de texto minimalista, reduce distracciones al escribir."
+                },
+                {
+                    "name": "Android 1.6",
+                    "estimulos": ["exploración de sistemas", "curiosidad técnica", "aprendizaje por descubrimiento"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Entorno de emulación que permite experimentar con un sistema operativo de forma segura."
+                },
+                {
+                    "name": "Arch Linux",
+                    "estimulos": ["resolución de problemas técnicos", "paciencia", "pensamiento lógico"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo para usuarios avanzados, fomenta el aprendizaje técnico estructurado."
+                },
+                {
+                    "name": "BeOS 5",
+                    "estimulos": ["interfaz limpia", "exploración técnica", "curiosidad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema alternativo con diseño claro, bueno para evitar sobrecarga visual."
+                },
+                {
+                    "name": "Damn Small Linux 4.11",
+                    "estimulos": ["simplicidad", "enfoque", "eficiencia"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Sistema minimalista, reduce distracciones y promueve concentración en tareas."
+                },
+                {
+                    "name": "Desktop",
+                    "estimulos": ["organización espacial", "rutinas", "autonomía"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Entorno de escritorio que permite personalizar y estructurar el espacio de trabajo."
+                },
+                {
+                    "name": "DosBOX",
+                    "estimulos": ["emulación técnica", "aprendizaje histórico", "resolución de problemas"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Herramienta para ejecutar software antiguo, fomenta interés técnico y paciencia."
+                },
+                {
+                    "name": "Explorer++",
+                    "estimulos": ["organización de archivos", "categorización", "metodología"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Gestor de archivos avanzado, ideal para crear rutinas de organización."
+                },
+                {
+                    "name": "7Zip",
+                    "estimulos": ["compresión/descompresión", "resolución de problemas", "paciencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Herramienta de archivos, enseña procesos paso a paso y manejo de errores."
+                },
+                {
+                    "name": "AROS Broadway",
+                    "estimulos": ["interfaz retro", "exploración", "curiosidad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema alternativo, promueve la exploración de entornos digitales distintos."
+                },
+                {
+                    "name": "Audacity",
+                    "estimulos": ["creatividad auditiva", "atención al detalle", "paciencia"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Editor de audio que fomenta la creatividad y el procesamiento auditivo estructurado."
+                },
+                {
+                    "name": "Calc",
+                    "estimulos": ["cálculo mental", "lógica", "precisión"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Calculadora, útil para ejercitar habilidades matemáticas en un entorno controlado."
+                },
+                {
+                    "name": "Calendar",
+                    "estimulos": ["organización temporal", "planificación", "rutinas"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Calendario, ayuda a estructurar el tiempo y anticipar eventos."
+                },
+                {
+                    "name": "Clock",
+                    "estimulos": ["gestión del tiempo", "alarmas", "rutinas"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Reloj con alarmas, útil para crear estructura temporal y transiciones."
+                },
+                {
+                    "name": "Control",
+                    "estimulos": ["personalización", "control del entorno", "toma de decisiones"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Panel de control, permite ajustar preferencias y sentir control sobre el sistema."
+                },
+                {
+                    "name": "DOSShell",
+                    "estimulos": ["comandos estructurados", "memoria procedural", "lógica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Intérprete de comandos, fomenta el pensamiento secuencial y estructurado."
+                },
+                {
+                    "name": "Flat Assembler",
+                    "estimulos": ["programación de bajo nivel", "lógica", "atención al detalle"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Ensamblador, ideal para mentes analíticas y metódicas."
+                },
+                {
+                    "name": "FreeBSD 12.0",
+                    "estimulos": ["sistema operativo avanzado", "resolución de problemas", "exploración técnica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema Unix, promueve el aprendizaje técnico profundo y la paciencia."
+                },
+                {
+                    "name": "FreeGEM",
+                    "estimulos": ["interfaz gráfica retro", "simplicidad", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Entorno gráfico antiguo, reduce estímulos y fomenta la concentración."
+                },
+                {
+                    "name": "FiwixOS",
+                    "estimulos": ["sistema minimalista", "curiosidad técnica", "enfoque"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Kernel educativo, ideal para aprender conceptos de sistemas operativos."
+                },
+                {
+                    "name": "JPEGView",
+                    "estimulos": ["visualización de imágenes", "atención al detalle", "organización visual"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Visor de imágenes rápido y simple, útil para sesiones de observación."
+                },
+                {
+                    "name": "Haiku",
+                    "estimulos": ["interfaz cohesiva", "exploración", "curiosidad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo alternativo, fomenta la exploración de entornos digitales."
+                },
+                {
+                    "name": "Icaros Desktop",
+                    "estimulos": ["entorno alternativo", "personalización", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema inspirado en Amiga, promueve la curiosidad y adaptación a nuevas interfaces."
+                },
+                {
+                    "name": "JX",
+                    "estimulos": ["sistema en Java", "curiosidad técnica", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo experimental, ideal para mentes técnicas y curiosas."
+                },
+                {
+                    "name": "KolibriOS",
+                    "estimulos": ["sistema minimalista", "velocidad", "enfoque"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Sistema rápido y pequeño, reduce tiempos de carga y distracciones."
+                },
+                {
+                    "name": "Media Player Classic",
+                    "estimulos": ["reproducción de medios", "control de estímulos", "enfoque"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Reproductor simple, permite consumo controlado de contenido audiovisual."
+                },
+                {
+                    "name": "Minix",
+                    "estimulos": ["sistema educativo", "resolución de problemas", "lógica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo docente, ideal para aprendizaje estructurado de informática."
+                },
+                {
+                    "name": "Netsurf",
+                    "estimulos": ["navegación web ligera", "enfoque", "control de distracciones"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Navegador minimalista, reduce sobrecarga de información en la web."
+                },
+                {
+                    "name": "Neobook",
+                    "estimulos": ["creación multimedia", "lógica de programación visual", "creatividad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Herramienta de autoría, fomenta la creatividad dentro de un marco estructurado."
+                },
+                {
+                    "name": "NetBSD 4.0",
+                    "estimulos": ["sistema portable", "exploración técnica", "adaptación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo multiplataforma, promueve el aprendizaje técnico."
+                },
+                {
+                    "name": "Neopaint",
+                    "estimulos": ["creatividad visual", "coordinación", "expresión artística"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Programa de dibujo retro, fomenta la expresión creativa en entorno controlado."
+                },
+                {
+                    "name": "NodeOS",
+                    "estimulos": ["sistema experimental", "curiosidad", "aprendizaje técnico"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo basado en Node.js, ideal para desarrolladores jóvenes."
+                },
+                {
+                    "name": "Notepad",
+                    "estimulos": ["escrita simple", "enfoque", "organización de texto"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Editor de texto básico, sin distracciones, ideal para tomar notas o escribir."
+                },
+                {
+                    "name": "Notepad Classic",
+                    "estimulos": ["escrita minimalista", "concentración", "simplicidad"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Versión HTML5 de bloc de notas, reduce estímulos externos."
+                },
+                {
+                    "name": "Notepad++",
+                    "estimulos": ["programación", "organización de código", "atención al detalle"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Editor de código avanzado, útil para jóvenes programadores metódicos."
+                },
+                {
+                    "name": "Oberon",
+                    "estimulos": ["sistema operativo educativo", "lógica", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema académico, fomenta el pensamiento estructurado y la exploración técnica."
+                },
+                {
+                    "name": "Paint",
+                    "estimulos": ["creatividad visual", "coordinación mano-ojo", "expresión"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Herramienta de dibujo clásica, promueve la creatividad y relajación."
+                },
+                {
+                    "name": "PaintBrush",
+                    "estimulos": ["dibujo digital", "experimentación", "control motor"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Versión simple de Paint, ideal para sesiones cortas de expresión artística."
+                },
+                {
+                    "name": "Program Manager",
+                    "estimulos": ["organización de iconos", "rutinas", "estructura visual"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Gestor de programas al estilo Windows 3.1, fomenta el orden y categorización."
+                },
+                {
+                    "name": "QNX 4.05",
+                    "estimulos": ["sistema de tiempo real", "lógica", "exploración técnica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo de tiempo real, ideal para mentes analíticas y técnicas."
+                },
+                {
+                    "name": "OpenBSD 6.6",
+                    "estimulos": ["seguridad informática", "atención al detalle", "pensamiento crítico"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema enfocado en seguridad, fomenta el pensamiento meticuloso y preventivo."
+                },
+                {
+                    "name": "QBasic 4.5",
+                    "estimulos": ["programación introductoria", "lógica", "creatividad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Entorno de programación básico, ideal para aprender algoritmos de forma estructurada."
+                },
+                {
+                    "name": "Open Office",
+                    "estimulos": ["ofimática completa", "organización", "concentración"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Suite ofimática gratuita, útil para tareas estructuradas de escritura y cálculo."
+                },
+                {
+                    "name": "ReactOS",
+                    "estimulos": ["compatibilidad", "exploración técnica", "curiosidad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema compatible con Windows, permite experimentar con software familiar en entorno abierto."
+                },
+                {
+                    "name": "Redox",
+                    "estimulos": ["sistema en Rust", "curiosidad técnica", "seguridad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo moderno escrito en Rust, fomenta interés en lenguajes seguros."
+                },
+                {
+                    "name": "RetroArch",
+                    "estimulos": ["emulación múltiple", "organización", "curiosidad histórica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Frontend para emuladores, permite explorar videojuegos clásicos de forma estructurada."
+                },
+                {
+                    "name": "SerenityOS",
+                    "estimulos": ["sistema hobby", "exploración", "creatividad técnica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo casero, ideal para jóvenes interesados en desarrollo de sistemas."
+                },
+                {
+                    "name": "Shadow Warrior",
+                    "estimulos": ["acción con humor", "coordinación", "gestión de recursos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "FPS humorístico, permite liberar energía con toque de comedia."
+                },
+                {
+                    "name": "Shell",
+                    "estimulos": ["línea de comandos", "lógica secuencial", "control preciso"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Intérprete de comandos, fomenta el pensamiento estructurado y procedural."
+                },
+                {
+                    "name": "Sortix",
+                    "estimulos": ["sistema Unix minimalista", "exploración técnica", "lógica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo pequeño, ideal para aprender conceptos de sistemas."
+                },
+                {
+                    "name": "Soso",
+                    "estimulos": ["sistema educativo", "exploración", "curiosidad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema Unix-like educativo, fomenta el aprendizaje de sistemas operativos."
+                },
+                {
+                    "name": "Sumatra PDF",
+                    "estimulos": ["lectura digital", "enfoque", "control de estímulos"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Visor de PDF ligero, ideal para sesiones de lectura sin distracciones."
+                },
+                {
+                    "name": "Syllable",
+                    "estimulos": ["interfaz simple", "enfoque", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Sistema operativo ligero, reduce complejidad y favorece la concentración."
+                },
+                {
+                    "name": "Tekwar",
+                    "estimulos": ["ciencia ficción", "acción", "exploración"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "FPS temático, permite inmersión en narrativa de ciencia ficción con acción."
+                },
+                {
+                    "name": "TexWorks",
+                    "estimulos": ["edición LaTeX", "precisión", "atención al detalle"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Editor de LaTeX, ideal para mentes metódicas interesadas en publicación técnica."
+                },
+                {
+                    "name": "Tilck",
+                    "estimulos": ["kernel educativo", "lógica", "exploración técnica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Kernel didáctico, fomenta el aprendizaje profundo de sistemas operativos."
+                },
+                {
+                    "name": "ToDO",
+                    "estimulos": ["organización de tareas", "planificación", "rutinas"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Aplicación de tareas, ayuda a estructurar el día y reducir ansiedad por olvidos."
+                },
+                {
+                    "name": "TurboC",
+                    "estimulos": ["programación en C", "lógica", "atención al detalle"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Entorno de desarrollo clásico, ideal para aprender programación estructurada."
+                },
+                {
+                    "name": "TuxPaint",
+                    "estimulos": ["dibujo infantil", "creatividad", "coordinación"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Programa de dibujo para niños, fomenta expresión creativa en entorno amigable."
+                },
+                {
+                    "name": "Tiny Aros",
+                    "estimulos": ["sistema ligero", "exploración", "curiosidad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Distribución pequeña de AROS, ideal para experimentar con sistemas alternativos."
+                },
+                {
+                    "name": "UltraISO",
+                    "estimulos": ["gestión de imágenes de disco", "organización", "precisión"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Herramienta para ISO, enseña manejo de archivos de sistema y backup."
+                },
+                {
+                    "name": "VirtualDUB",
+                    "estimulos": ["edición de video básica", "procesamiento por pasos", "paciencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Editor de video simple, fomenta el aprendizaje de flujos de trabajo estructurados."
+                },
+                {
+                    "name": "Web Browser",
+                    "estimulos": ["navegación controlada", "enfoque", "limitación de estímulos"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Navegador minimalista, reduce distracciones y permite navegación segura."
+                },
+                {
+                    "name": "WineZIP",
+                    "estimulos": ["empaquetado de software", "organización", "metodología"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Herramienta para crear paquetes, enseña procesos de instalación y estructura."
+                },
+                {
+                    "name": "WinAMP",
+                    "estimulos": ["reproducción de audio", "organización de listas", "regulación emocional"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Reproductor de audio clásico, permite crear playlists para concentración o relajación."
+                },
+                {
+                    "name": "Wordpad",
+                    "estimulos": ["procesamiento de texto intermedio", "formato", "concentración"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Editor de texto con formato, útil para tareas escolares estructuradas."
+                },
+                {
+                    "name": "Xcom",
+                    "estimulos": ["entorno de escritorio alternativo", "exploración", "organización"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Entorno de ventanas simple, fomenta la exploración y personalización."
+                },
+                {
+                    "name": "5 Days a Stranger",
+                    "estimulos": ["aventura de horror", "resolución de puzzles", "atención a detalles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura gráfica de miedo, fomenta la observación y lógica narrativa."
+                },
+                {
+                    "name": "Abuse",
+                    "estimulos": ["plataformas y disparos", "coordinación", "estrategia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de acción lateral, requiere coordinación y planificación rápida."
+                },
+                {
+                    "name": "Agi Tetris",
+                    "estimulos": ["puzzles espaciales", "velocidad de procesamiento", "toma de decisiones"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Tetris clásico, ideal para entrenar velocidad de procesamiento y planificación espacial."
+                },
+                {
+                    "name": "Arkanoid",
+                    "estimulos": ["coordinación mano-ojo", "timing", "persistencia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de rebotes, requiere sincronización y precisión."
+                },
+                {
+                    "name": "Amazon: Guardian of Eden",
+                    "estimulos": ["aventura gráfica", "exploración", "resolución de puzzles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura point-and-click, fomenta la lógica y comprensión de narrativas."
+                },
+                {
+                    "name": "Adventure Fun-Pak",
+                    "estimulos": ["variedad de géneros", "exploración", "adaptación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Colección de juegos simples, ideal para probar diferentes estilos sin sobrecarga."
+                },
+                {
+                    "name": "Azrael Tear",
+                    "estimulos": ["aventura en primera persona", "exploración", "puzzles lógicos"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura 3D con énfasis en puzzles, fomenta la exploración metódica."
+                },
+                {
+                    "name": "Baby Type",
+                    "estimulos": ["escritura rápida", "memoria muscular", "concentración"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de mecanografía, entrena velocidad y precisión en la escritura."
+                },
+                {
+                    "name": "Baller SDL",
+                    "estimulos": ["estrategia de artillería", "cálculo de trayectorias", "paciencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego de estrategia por turnos, fomenta el pensamiento lógico y planeación."
+                },
+                {
+                    "name": "Baryon",
+                    "estimulos": ["disparos verticales", "coordinación", "atención dividida"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Shoot 'em up vertical, requiere enfoque y control de múltiples elementos."
+                },
+                {
+                    "name": "Beats Of Rage",
+                    "estimulos": ["pelea lateral", "coordinación", "descarga controlada"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Beat 'em up clásico, permite liberar energía con combates simples."
+                },
+                {
+                    "name": "Breakout",
+                    "estimulos": ["rebotes", "timing", "precisión"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de romper bloques, entrena coordinación y reflejos."
+                },
+                {
+                    "name": "Brix",
+                    "estimulos": ["puzzles de bloques", "lógica espacial", "planificación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Variante de Breakout, fomenta la estrategia y previsión de movimientos."
+                },
+                {
+                    "name": "Bust a Move 2",
+                    "estimulos": ["puzzles de burbujas", "planificación", "paciencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego de emparejar colores, requiere estrategia y pensamiento anticipatorio."
+                },
+                {
+                    "name": "CD-MAN",
+                    "estimulos": ["laberintos", "memoria espacial", "estrategia de huida"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Clon de Pac-Man, fomenta memoria espacial y toma de decisiones rápidas."
+                },
+                {
+                    "name": "Chompsters",
+                    "estimulos": ["laberintos", "patrones de enemigos", "estrategia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Variante de Pac-Man, ideal para entrenar reconocimiento de patrones."
+                },
+                {
+                    "name": "Commander Keen",
+                    "estimulos": ["plataformas", "exploración", "resolución de problemas"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Plataformas clásico, fomenta exploración y superación de obstáculos."
+                },
+                {
+                    "name": "Cristal Caves",
+                    "estimulos": ["plataformas", "coleccionismo", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Plataformas con secretos, recompensa la exploración meticulosa."
+                },
+                {
+                    "name": "Dave",
+                    "estimulos": ["plataformas", "coordinación", "persistencia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Plataformas clásico, requiere timing y control de saltos."
+                },
+                {
+                    "name": "Disney Aladdin",
+                    "estimulos": ["plataformas", "narrativa familiar", "coordinación"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Plataformas con licencia Disney, atractivo y con desafíos asequibles."
+                },
+                {
+                    "name": "Doom 2D",
+                    "estimulos": ["acción lateral", "coordinación", "gestión de recursos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Versión 2D de Doom, acción rápida con mecánicas simples."
+                },
+                {
+                    "name": "Duke Nukem 2",
+                    "estimulos": ["plataformas", "acción", "humor"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Plataformas con actitud, combina acción y comedia."
+                },
+                {
+                    "name": "Dyna Blaster",
+                    "estimulos": ["bombas", "estrategia espacial", "multijugador"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Clon de Bomberman, ideal para planificación espacial y juego social."
+                },
+                {
+                    "name": "Earthworm Jim",
+                    "estimulos": ["plataformas extravagantes", "coordinación", "humor absurdo"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Plataformas surrealista, fomenta la creatividad y coordinación."
+                },
+                {
+                    "name": "Incredible Machine",
+                    "estimulos": ["puzzles de física", "pensamiento lógico", "creatividad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego de máquinas de Rube Goldberg, ideal para pensamiento lógico y causa-efecto."
+                },
+                {
+                    "name": "Hextris",
+                    "estimulos": ["puzzles hexagonal", "velocidad", "toma de decisiones"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Tetris hexagonal, entrena velocidad de procesamiento y adaptación."
+                },
+                {
+                    "name": "HomeworldSDL",
+                    "estimulos": ["estrategia espacial", "gestión de recursos", "planificación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estrategia en tiempo real espacial, fomenta pensamiento estratégico y paciencia."
+                },
+                {
+                    "name": "Indiana Jones and the Fate of Atlantis",
+                    "estimulos": ["aventura gráfica", "resolución de puzzles", "narrativa"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura clásica, ideal para comprensión de historias y puzzles lógicos."
+                },
+                {
+                    "name": "Golden Axe",
+                    "estimulos": ["beat 'em up", "cooperación", "coordinación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Beat 'em up clásico, permite juego en equipo y liberación de energía."
+                },
+                {
+                    "name": "Nero Chess",
+                    "estimulos": ["ajedrez", "pensamiento estratégico", "paciencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Ajedrez digital, fomenta el pensamiento a largo plazo y la concentración."
+                },
+                {
+                    "name": "Ms Pacman PC",
+                    "estimulos": ["laberintos", "memoria de patrones", "velocidad"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Variante de Pac-Man, entrena velocidad de decisión y reconocimiento de patrones."
+                },
+                {
+                    "name": "Monkey Island",
+                    "estimulos": ["aventura gráfica", "humor", "resolución de puzzles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura gráfica humorística, ideal para comprensión de sarcasmo y lógica."
+                },
+                {
+                    "name": "Max Mechanized Assault",
+                    "estimulos": ["estrategia por turnos", "gestión de recursos", "planificación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estrategia profunda, fomenta el pensamiento táctico y la previsión."
+                },
+                {
+                    "name": "Open Jazz",
+                    "estimulos": ["plataformas rápido", "coordinación", "coleccionismo"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Plataformas rápido, requiere reflejos y control preciso."
+                },
+                {
+                    "name": "Open Jazz 2",
+                    "estimulos": ["plataformas mejorado", "coordinación", "exploración"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Secuela de Jazz, con más variedad y desafíos de coordinación."
+                },
+                {
+                    "name": "Out this world",
+                    "estimulos": ["plataformas cinemático", "timing", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Plataformas con física, requiere precisión y aprendizaje por error."
+                },
+                {
+                    "name": "Pacman",
+                    "estimulos": ["laberintos", "estrategia de evasión", "memoria espacial"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Clásico absoluto, ideal para entrenar memoria espacial y toma de decisiones rápidas."
+                },
+                {
+                    "name": "Plague of the Moon",
+                    "estimulos": ["aventura gráfica", "exploración", "puzzles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura con temática oscura, fomenta la observación y lógica."
+                },
+                {
+                    "name": "Prince of persia",
+                    "estimulos": ["plataformas de precisión", "timing", "persistencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Plataformas clásico de precisión, requiere paciencia y control exacto."
+                },
+                {
+                    "name": "Prince of persia 2",
+                    "estimulos": ["plataformas", "combate", "exploración"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Secuela con más acción, mantiene la necesidad de precisión y timing."
+                },
+                {
+                    "name": "Prehistorik",
+                    "estimulos": ["plataformas", "coleccionismo", "coordinación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Plataformas simple y colorido, ideal para sesiones cortas."
+                },
+                {
+                    "name": "Prehistorik 2",
+                    "estimulos": ["plataformas mejorado", "exploración", "coleccionismo"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Secuela con más contenido, fomenta la exploración y recolección."
+                },
+                {
+                    "name": "Rocks Diamonds",
+                    "estimulos": ["puzzles de caída de rocas", "estrategia", "planificación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Clon de Boulder Dash, requiere pensamiento anticipatorio y lógica espacial."
+                },
+                {
+                    "name": "Sam and Max: Hit the road",
+                    "estimulos": ["aventura gráfica humorística", "resolución de puzzles", "diálogos"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura absurda, ideal para trabajar comprensión de humor abstracto."
+                },
+                {
+                    "name": "SDL Sopwith",
+                    "estimulos": ["vuelo 2D", "coordinación", "estrategia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de avión biplano, requiere coordinación y planificación de ataques."
+                },
+                {
+                    "name": "Simon the Sorcerer",
+                    "estimulos": ["aventura gráfica", "humor", "puzzles"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura fantástica, fomenta la lógica y comprensión de narrativas."
+                },
+                {
+                    "name": "Space Invaders",
+                    "estimulos": ["disparos estáticos", "coordinación", "control de estrés"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Clásico arcade, ideal para entrenar reflejos y manejo de presión progresiva."
+                },
+                {
+                    "name": "Stargunner",
+                    "estimulos": ["scroll horizontal", "coordinación", "gestión de recursos"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Shoot 'em up horizontal, requiere atención continua y estrategia de disparo."
+                },
+                {
+                    "name": "Super Tux",
+                    "estimulos": ["plataformas", "exploración", "coleccionismo"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Clon de Super Mario, entorno amigable y desafíos progresivos."
+                },
+                {
+                    "name": "The Last Express",
+                    "estimulos": ["aventura de misterio", "atención al tiempo", "narrativa"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Aventura en tiempo real, fomenta la observación y comprensión de cronologías."
+                },
+                {
+                    "name": "The Lion King",
+                    "estimulos": ["plataformas", "coordinación", "persistencia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Plataformas basado en Disney, desafía la coordinación y timing."
+                },
+                {
+                    "name": "The Lost Vikings",
+                    "estimulos": ["puzzles de personajes múltiples", "cooperación", "lógica"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Puzzle-platformer, fomenta el pensamiento estratégico con múltiples habilidades."
+                },
+                {
+                    "name": "Tower Building",
+                    "estimulos": ["construcción", "equilibrio", "paciencia"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego de apilar, ideal para entrenar motricidad fina y paciencia."
+                },
+                {
+                    "name": "Wacky Wheels",
+                    "estimulos": ["carreras karts", "competencia", "coordinación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Carreras de karts con power-ups, divertido y con acción constante."
+                },
+                {
+                    "name": "Wizardry: Crusaders of the Dark Savant",
+                    "estimulos": ["RPG por turnos", "gestión de grupo", "pensamiento estratégico"],
+                    "patologias": ["TEA"],
+                    "justificacion": "RPG clásico, fomenta la planificación a largo plazo y gestión de recursos."
+                },
+                {
+                    "name": "XBill",
+                    "estimulos": ["defensa rápida", "atención dividida", "coordinación"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Juego de defender computadoras, requiere atención múltiple y reflejos."
+                },
+                {
+                    "name": "XOX",
+                    "estimulos": ["tres en raya 3D", "estrategia simple", "pensamiento espacial"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Tic-tac-toe en 3D, ideal para introducir conceptos de estrategia espacial."
+                },
+                {
+                    "name": "Capture the Flag",
+                    "estimulos": ["estrategia en tiempo real", "trabajo en equipo", "planificación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego de estrategia con objetivos claros, fomenta cooperación y táctica."
+                },
+                {
+                    "name": "Command & Conquer",
+                    "estimulos": ["estrategia en tiempo real", "gestión de recursos", "multitarea"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "RTS clásico, exige atención múltiple y toma de decisiones rápidas."
+                },
+                {
+                    "name": "Crazy Cows",
+                    "estimulos": ["estrategia por turnos", "humor", "planificación"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estrategia ligera con temática absurda, buena para iniciación en el género."
+                },
+                {
+                    "name": "Oregon Trail Delux",
+                    "estimulos": ["simulación histórica", "toma de decisiones", "gestión de recursos"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Juego educativo, enseña consecuencias de decisiones y planificación."
+                },
+                {
+                    "name": "Master of Orion II",
+                    "estimulos": ["estrategia 4X", "gestión de imperio", "pensamiento a largo plazo"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estrategia espacial compleja, ideal para mentes analíticas y pacientes."
+                },
+                {
+                    "name": "Sim City",
+                    "estimulos": ["construcción de ciudades", "planificación urbana", "pensamiento sistémico"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Simulador de ciudades, fomenta la visión a largo plazo y gestión de recursos."
+                },
+                {
+                    "name": "Sim City 2000",
+                    "estimulos": ["simulación urbana avanzada", "estrategia", "gestión de capas"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Secuela más compleja, ideal para profundizar en pensamiento sistémico."
+                },
+                {
+                    "name": "Syndicate Plus",
+                    "estimulos": ["estrategia táctica", "gestión de agentes", "toma de decisiones"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estrategia de control de agentes, fomenta el pensamiento táctico y cuidado de recursos."
+                },
+                {
+                    "name": "Theme park",
+                    "estimulos": ["gestión de parques", "economía simple", "creatividad"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Simulador de parques de atracciones, enseña gestión y diseño básico."
+                },
+                {
+                    "name": "The Horde",
+                    "estimulos": ["estrategia y acción", "gestión de aldeas", "defensa"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Combina acción y estrategia, ideal para transición entre géneros."
+                },
+                {
+                    "name": "Warcraft",
+                    "estimulos": ["estrategia en tiempo real", "construcción de bases", "gestión de unidades"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "RTS fundacional, requiere atención continua y microgestión."
+                },
+                {
+                    "name": "Warcraft II",
+                    "estimulos": ["estrategia en tiempo real mejorada", "cooperación", "estrategia"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "Secuela con más profundidad, ideal para jugadores que ya dominan lo básico."
+                },
+                {
+                    "name": "Waterworld",
+                    "estimulos": ["estrategia basada en misiones", "adaptación", "gestión de recursos"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estrategia con temática acuática, fomenta adaptación a entornos restrictivos."
+                },
+                {
+                    "name": "Worm",
+                    "estimulos": ["estrategia por turnos con artillería", "cálculo", "humor"],
+                    "patologias": ["TEA", "TDAH"],
+                    "justificacion": "Juego de gusanos con armas, combina estrategia y física con toque humorístico."
+                },
+                {
+                    "name": "X-COM: UFO Defense",
+                    "estimulos": ["estrategia por turnos táctica", "gestión de base", "pensamiento crítico"],
+                    "patologias": ["TEA"],
+                    "justificacion": "Estrategia profunda y desafiante, ideal para mentes analíticas y pacientes."
+                },
+                {
+                    "name": "ZED",
+                    "estimulos": ["estrategia en tiempo real rápida", "captura de territorios", "microgestión"],
+                    "patologias": ["TDAH"],
+                    "justificacion": "RTS rápido y frenético, perfecto para entrenar velocidad de decisión y multitarea."
+                }
+            ]
         };
     </script>
 
@@ -3786,7 +4068,7 @@
             updatePatientsSelect('profilePatient');
             updatePatientsSelect('schedulePatient');
             updatePatientsSelect('patientFilter');
-            updateCertificateSelect(); // NUEVO: Selector de certificados
+            updateCertificateSelect(); // Selector de certificados
             loadPatientsList();
         }
 
@@ -3803,7 +4085,7 @@
         }
 
         // ============================
-        // FUNCIONES DE CERTIFICADOS (NUEVAS)
+        // FUNCIONES DE CERTIFICADOS
         // ============================
 
         function updateCertificateSelect() {
@@ -4156,8 +4438,8 @@ presentada ante su empleador o institución correspondiente.
 ATENTAMENTE,
 
 {{terapeuta_nombre}}
-{{terapeuta_matricula ? 'Matrícula: {{terapeuta_matricula}}' : ''}}
-{{terapeuta_institucion ? 'Institución: {{terapeuta_institucion}}' : ''}}
+${therapist.license ? 'Matrícula: {{terapeuta_matricula}}' : ''}
+${therapist.institution ? 'Institución: {{terapeuta_institucion}}' : ''}
 Fecha: {{fecha_actual}}`;
                         break;
                 }
@@ -4184,7 +4466,7 @@ Fecha: {{fecha_actual}}`;
         }
 
         // ============================
-        // FUNCIONES ORIGINALES DEL SISTEMA (se mantienen igual)
+        // FUNCIONES ORIGINALES DEL SISTEMA
         // ============================
 
         // GESTIÓN DE TERAPEUTAS
