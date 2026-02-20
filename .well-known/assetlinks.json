@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.ifilex.twa",
+        "sha256_cert_fingerprints": ["42:98:51:40:0D:78:C7:EF:7A:3C:87:E0:52:6D:F7:DB:AC:49:CC:EF:E9:6F:42:BF:ED:29:D7:69:DE:0B:36:24"]
+      }
+    }]
