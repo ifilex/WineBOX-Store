@@ -73,86 +73,114 @@
         .confirm-ok { background-color: #d32f2f; color: white; }
         .confirm-ok:hover { background-color: #b71c1c; }
 
-        /* --- NUEVOS ESTILOS: Ventana Virtual FULLSCREEN con botón redondo flotante --- */
+        /* --- NUEVOS ESTILOS: Ventana Virtual (APP LAUNCHER) --- */
+        .virtual-window {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85vw;
+            height: 85vh;
+            max-width: 1300px;
+            max-height: 90vh;
+            background-color: #1e1e2f;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: fadeInScale 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        .virtual-window-header {
+            background-color: #2c2c3a;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3a3a4a;
+            cursor: move;
+            user-select: none;
+        }
+        .window-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #eee;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .window-title img {
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+        .window-controls {
+            display: flex;
+            gap: 12px;
+        }
+        .window-controls button {
+            background: transparent;
+            border: none;
+            color: #ccc;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .window-controls button:hover {
+            background-color: #4a4a5a;
+            color: white;
+        }
+        .close-window-btn:hover {
+            background-color: #d32f2f !important;
+            color: white !important;
+        }
+        .virtual-window-iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+            background-color: #fff;
+        }
+        /* Overlay oscuro detrás de la ventana virtual */
         .virtual-window-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
             z-index: 1999;
             display: none;
         }
-        
-        .virtual-window {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            z-index: 2000;
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            animation: fadeIn 0.2s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Botón de cierre redondo flotante */
-        .virtual-window-close-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(8px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-            z-index: 2001;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            font-family: Arial, sans-serif;
-        }
-        
-        .virtual-window-close-btn:hover {
-            background-color: rgba(220, 53, 69, 0.9);
-            transform: scale(1.08);
-            border-color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .virtual-window-close-btn:active {
-            transform: scale(0.95);
-        }
-        
-        .virtual-window-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background-color: #fff;
-        }
-        
-        /* Responsive: en móviles el botón es un poco más pequeño */
+        /* Responsive: en móviles se ajusta */
         @media (max-width: 768px) {
-            .virtual-window-close-btn {
-                top: 12px;
-                right: 12px;
-                width: 44px;
-                height: 44px;
-                font-size: 24px;
+            .virtual-window {
+                width: 95vw;
+                height: 90vh;
+                top: 50%;
+                left: 50%;
+            }
+            .window-title {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -254,16 +282,21 @@
     <source src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Elementos para ventana virtual FULLSCREEN con botón redondo -->
+<!-- Elementos para ventana virtual (iframe overlay) -->
 <div id="virtualWindowOverlay" class="virtual-window-overlay"></div>
-<div id="virtualWindow" class="virtual-window">
-    <button id="closeVirtualWindowBtn" class="virtual-window-close-btn" title="Cerrar (ESC)">✕</button>
-    <iframe id="virtualAppIframe" class="virtual-window-iframe" title="App Content" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads"></iframe>
+<div id="virtualWindow" class="virtual-window" style="display: none;">
+    <div class="virtual-window-header" id="virtualWindowHeader">
+        <div class="window-title" id="windowTitle">App</div>
+        <div class="window-controls">
+            <button id="closeVirtualWindowBtn" class="close-window-btn" title="Close (Esc)">✕</button>
+        </div>
+    </div>
+    <iframe id="virtualAppIframe" class="virtual-window-iframe" title="App Content" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"></iframe>
 </div>
 
 <script src="apps-data.js"></script>
 <script>
-// ==================== CÓDIGO ORIGINAL + VENTANA FULLSCREEN CON BOTÓN REDONDO ====================
+// ==================== CÓDIGO ORIGINAL CONSOLIDADO + MODIFICACIÓN: Ventana Virtual ====================
 const SYSTEM_ICONS = {
     discoLocal: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNCIgZmlsbD0iI2ZmZDcwMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjIiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI5IiB5PSI5IiB3aWR0aD0iMTQiIGhlaWdodD0iMyIgcng9IjEiIGZpbGw9IiNmZmE4MDAiLz48cmVjdCB4PSI5IiB5PSIxNCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjMiIHJ4PSIxIiBmaWxsPSIjZmZhODAwIi8+PHJlY3QgeD0iOSIgeT0iMTkiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzIiByeD0iMSIgZmlsbD0iI2ZmYTgwMCIvPjwvc3ZnPg==',
     trash: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNCIgZmlsbD0iIzc4OTA5QyIvPjxwYXRoIGQ9Ik0xMiA4aDh2MmgtOHpNMTAgMTJoMTJ2MTRIMTB6IiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTMiIHk9IjE1IiB3aWR0aD0iMiIgaGVpZ2h0PSI4IiBmaWxsPSIjNTQ2RTdBIi8+PHJlY3QgeD0iMTciIHk9IjE1IiB3aWR0aD0iMiIgaGVpZ2h0PSI4IiBmaWxsPSIjNTQ2RTdBIi8+PC9zdmc+'
@@ -335,24 +368,29 @@ function showStatusMessage(msg, type='success') {
     setTimeout(() => el.classList.remove('show'), 3000);
 }
 
-// ========== NUEVA FUNCIÓN: Ventana Virtual FULLSCREEN con botón redondo ==========
+// ========== NUEVA FUNCIÓN: Ventana Virtual (iframe) en lugar de nueva pestaña ==========
 function openVirtualAppWindow(app) {
-    // Si ya hay una ventana abierta, la cerramos primero (para tener solo una)
-    const virtualWin = document.getElementById('virtualWindow');
-    if (virtualWin && virtualWin.style.display === 'flex') {
+    // Si ya existe una ventana abierta, la cerramos antes (opcional: se puede permitir múltiples, pero mejor una única flotante)
+    const existingWin = document.getElementById('virtualWindow');
+    if (existingWin && existingWin.style.display === 'flex') {
         closeVirtualWindow();
     }
-    
+    const overlay = document.getElementById('virtualWindowOverlay');
+    const virtualWin = document.getElementById('virtualWindow');
     const iframe = document.getElementById('virtualAppIframe');
+    const windowTitleSpan = document.getElementById('windowTitle');
+    
+    // Configurar título con ícono y nombre
+    windowTitleSpan.innerHTML = `<img src="${app.image}" alt="icon" style="width:20px;height:20px;border-radius:4px;"> ${app.name}`;
     // Establecer src del iframe (la URL de la app)
     iframe.src = app.link;
-    
-    // Mostrar la ventana fullscreen
+    // Mostrar overlay + ventana
+    overlay.style.display = 'block';
     virtualWin.style.display = 'flex';
     // Prevenir scroll del body
     document.body.style.overflow = 'hidden';
     
-    // Añadir event listener para cerrar con Escape
+    // Añadir event listener para cerrar con Escape (global mientras esté abierta)
     const escHandler = function(e) {
         if (e.key === 'Escape') {
             closeVirtualWindow();
@@ -363,20 +401,21 @@ function openVirtualAppWindow(app) {
     // Guardar handler para limpieza al cerrar
     virtualWin._escHandler = escHandler;
     
-    // Configurar botón de cierre redondo
+    // Añadir también evento para botón de cierre
     const closeBtn = document.getElementById('closeVirtualWindowBtn');
     closeBtn.onclick = () => closeVirtualWindow();
+    overlay.onclick = () => closeVirtualWindow();
 }
 
 function closeVirtualWindow() {
+    const overlay = document.getElementById('virtualWindowOverlay');
     const virtualWin = document.getElementById('virtualWindow');
     const iframe = document.getElementById('virtualAppIframe');
     if (!virtualWin) return;
-    
     virtualWin.style.display = 'none';
-    iframe.src = 'about:blank'; // limpiar contenido para liberar recursos
+    overlay.style.display = 'none';
+    iframe.src = 'about:blank'; // limpiar contenido
     document.body.style.overflow = '';
-    
     // remover event listener de escape
     if (virtualWin._escHandler) {
         document.removeEventListener('keydown', virtualWin._escHandler);
@@ -384,7 +423,10 @@ function closeVirtualWindow() {
     }
 }
 
-// ========== MANTENER EL RESTO DEL CÓDIGO ORIGINAL ==========
+// Reemplazar la función original de lanzamiento en modal y en recientes
+// Originalmente se usaba location.href = app.link o window.open. Interceptamos.
+
+// ========== MANTENER EL RESTO DEL CÓDIGO ORIGINAL CON PEQUEÑOS AJUSTES ==========
 if (!Array.prototype.forEach) { Array.prototype.forEach = function(callback, thisArg) { var T,k; if (this == null) throw new TypeError(' this is null'); var O = Object(this); var len = O.length >>> 0; if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function'); if (arguments.length > 1) T = thisArg; k = 0; while (k < len) { if (k in O) { callback.call(T, O[k], k, O); } k++; } }; }
 if (!NodeList.prototype.forEach) { NodeList.prototype.forEach = Array.prototype.forEach; }
 if (!String.prototype.includes) { String.prototype.includes = function(search, start) { if (typeof start !== 'number') start = 0; return this.indexOf(search, start) !== -1; }; }
@@ -496,7 +538,7 @@ ready(function() {
         details.innerHTML = `<h2>${app.name}</h2><img src="${app.image}" style="max-width:200px; border-radius:8px;"><p><strong>Category:</strong> ${app.category}</p><p><strong>Description:</strong> ${app.description}</p>`;
         const launchBtn = document.getElementById('launchButton');
         launchBtn.onclick = function() {
-            // MODIFICACIÓN: Ventana virtual FULLSCREEN
+            // MODIFICACIÓN: En lugar de abrir nueva ventana, usar ventana virtual
             openVirtualAppWindow(app);
             addToRecentApps(app);
             closeModal();
@@ -519,7 +561,7 @@ ready(function() {
     
     function closeModal() { isModalOpen = false; document.getElementById('appModal').style.display = 'none'; if (currentApps.length && currentFocusArea === 'apps') { currentSelectedIndex = Math.min(currentSelectedIndex, currentApps.length-1); updateSelection(); } }
     function toggleMenu() { isMenuOpen = !isMenuOpen; if(isMenuOpen) { sideMenu.classList.add('open'); menuOverlay.classList.add('open'); currentFocusArea = 'menu'; currentMenuItemIndex = 0; } else { sideMenu.classList.remove('open'); menuOverlay.classList.remove('open'); currentFocusArea = 'recent'; currentMenuItemIndex = -1; } updateSelection(); }
-    function handleUpArrow() { if (isMenuOpen) { if(currentMenuItemIndex>0) currentMenuItemIndex--; updateSelection(); return; } if (currentFocusArea === 'apps' && currentApps.length) { let cols = Math.floor(appGrid.offsetWidth / (240+25)); if(currentSelectedIndex >= cols) { currentSelectedIndex -= cols; updateSelection(); } else { currentFocusArea='categories'; currentCategoryIndex = Math.min(currentCategoryIndex, categoryButtons.length-1); updateSelection(); } } else if(currentFocusArea==='categories') { currentFocusArea='recent'; if(recentApps.length) { currentRecentIndex=0; updateSelection(); } } }
+    function handleUpArrow() { /* implementación simplificada pero funcional */ if (isMenuOpen) { if(currentMenuItemIndex>0) currentMenuItemIndex--; updateSelection(); return; } if (currentFocusArea === 'apps' && currentApps.length) { let cols = Math.floor(appGrid.offsetWidth / (240+25)); if(currentSelectedIndex >= cols) { currentSelectedIndex -= cols; updateSelection(); } else { currentFocusArea='categories'; currentCategoryIndex = Math.min(currentCategoryIndex, categoryButtons.length-1); updateSelection(); } } else if(currentFocusArea==='categories') { currentFocusArea='recent'; if(recentApps.length) { currentRecentIndex=0; updateSelection(); } } }
     function handleDownArrow() { if (isMenuOpen) { if(currentMenuItemIndex<menuItems.length-1) currentMenuItemIndex++; updateSelection(); return; } if(currentFocusArea==='recent') { currentFocusArea='categories'; currentCategoryIndex = Math.min(currentCategoryIndex, categoryButtons.length-1); updateSelection(); } else if(currentFocusArea==='categories') { currentFocusArea='apps'; currentSelectedIndex = (currentApps.length?0:-1); updateSelection(); } else if(currentFocusArea==='apps' && currentApps.length) { let cols = Math.floor(appGrid.offsetWidth/(240+25)); if(currentSelectedIndex+cols < currentApps.length) { currentSelectedIndex+=cols; updateSelection(); } } }
     function handleLeftArrow() { if(isMenuOpen) return; if(currentFocusArea==='recent' && currentRecentIndex>0) { currentRecentIndex--; updateSelection(); } else if(currentFocusArea==='categories' && currentCategoryIndex>0) { currentCategoryIndex--; updateSelection(); } else if(currentFocusArea==='apps' && currentSelectedIndex>0) { currentSelectedIndex--; updateSelection(); } }
     function handleRightArrow() { if(isMenuOpen) return; if(currentFocusArea==='recent' && currentRecentIndex<recentApps.length-1) { currentRecentIndex++; updateSelection(); } else if(currentFocusArea==='categories' && currentCategoryIndex<categoryButtons.length-1) { currentCategoryIndex++; updateSelection(); } else if(currentFocusArea==='apps' && currentSelectedIndex<currentApps.length-1) { currentSelectedIndex++; updateSelection(); } }
