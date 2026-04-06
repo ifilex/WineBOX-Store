@@ -294,13 +294,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/quake.html"
     },
     {
-        name: "Quake 3 Arena",
-        image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2200/header.jpg?t=1664229254",
-        description: "Play legendary Quake Arena.",
-        category: "games",
-        link: "https://www.quakejs.com/"
-    },
-    {
         name: "Quarantine",
         image: "https://ifilex.github.io/WineBOX-Store/box/qua.jpg",
         description: "Quarantine is a 1994 racing/first-person shooter video game for MS-DOS and 3DO, created by Imagexcel and published by GameTek.",
