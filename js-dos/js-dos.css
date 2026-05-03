@@ -1688,3 +1688,13 @@ select:focus {
 
 @media (min-width: 1536px) {
 }
+
+/* PARCH: Eliminar UI de todas las apps */
+.emulator-options,
+.emulator-sidebar,
+[class*="SideBar"],
+[class*="action-bar"],
+.emulator-control-select,
+.hg-candidate-box {
+    display: none !important;
+}
