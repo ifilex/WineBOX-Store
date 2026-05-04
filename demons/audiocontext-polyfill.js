@@ -163,3 +163,12 @@ Licensed under the MIT license
     };
   }
 }(window));
+
+// Guardado automático cada 5 minutos
+setInterval(async () => {
+  const saveFunction = emulator.layers.getOnSave();
+  if (saveFunction) {
+    console.log("Guardado automático...");
+    await saveFunction();
+  }
+}, 300000); // 5 minutos
