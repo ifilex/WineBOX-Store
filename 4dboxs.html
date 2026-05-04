@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4D BOXING</title>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        #dos {
+            width: 100%;
+            height: 95%;
+        }
+
+        .link {
+            text-decoration: underline;
+        }
+
+        .footer {
+            height: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .info {
+                margin: auto;
+            }
+        }
+    </style>
+
+    <!-- js-dos style sheet -->
+    <link rel="stylesheet" href="./js-dos/js-dos.css">
+
+    <!-- js-dos -->
+    <script src="./js-dos/js-dos.js"></script>
+</head>
+<body>
+    <div id="dos" contenteditable="true"></div>
+    <script>
+        Dos(document.getElementById("dos"), {
+            url: "./roms/4dboxing.jsdos",
+            theme: "dark",
+            autoStart: true,
+            kiosk: true,
+            noCloud: true,
+        }).ready((fs, main) => {
+          fs.extract("./bundle.jsdos").then(() => {
+            main(["-conf", ".jsdos/dosbox.conf"])
+          })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* ==========================================
+   OCULTAR UI DE JS-DOS (v7/v8) SIN ROMPER CONTROLES
+   ========================================== */
+
+/* 1. Sidebar y menú lateral */
+.emulator-sidebar,
+.sidebar,
+[class*="SideBar"],
+[class*="side-bar"] {
+    display: none !important;
+}
+
+/* 2. Barra de acciones (Guardar, Pausa, Volumen, Teclado, etc.) */
+.emulator-options,
+.action-bar,
+[class*="ActionBar"],
+.emulator-control-select,
+.jsdos-player-button {
+    display: none !important;
+}
+
+/* 3. Overlay de tips y mensajes */
+.tips-container,
+.tip-container,
+[class*="Tips"],
+.emulator-click-to-start-overlay,
+.notyf,
+.notyf__toast {
+    display: none !important;
+}
+
+/* 4. Caja de autocompletado de teclado */
+.hg-candidate-box {
+    display: none !important;
+}
+
+/* ⚠️ IMPORTANTE: Mantener activos los controles del juego */
+.emulator-mouse-overlay,
+.emulator-canvas,
+.emulator-video,
+.hg-theme-default,
+.emulator-button,
+.emulator-button-touch-zone,
+.nipple,
+.nipple-collection {
+    display: block !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+}

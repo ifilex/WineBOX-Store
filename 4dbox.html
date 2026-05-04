@@ -1,7 +1,5 @@
 <!doctype html>
 <html>
-<title>4D Boxing</title>
-<link rel="icon" href="./favicon.ico" type="image/x-icon">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <style>
@@ -32,15 +30,16 @@
   <script type="module">
     import 'scriptprocessornodeshim';
   </script>
+
+
 <div id="jsdos" />
-  <script>
-    emulators.pathPrefix = "js-dos/";
-    Dos(document.getElementById("jsdos"), {
-    }).run("./roms/4dboxing.jsdos");
-  </script>
+<script>  
+  // Iniciar el emulador
+  emulators.pathPrefix = "js-dos/";
+  Dos(document.getElementById("jsdos"), {
+    style: "none",
+  }).run("./roms/4dboxing.jsdos");
+</script>
+
 </body>
-
 </html>
-
-
-

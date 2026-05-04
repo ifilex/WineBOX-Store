@@ -4,6 +4,69 @@ audiocontext-polyfill.js v0.1.1
 Licensed under the MIT license
 */
 
+(function() {
+    // 1. Parchear la función Dos para forzar opciones
+    const originalDos = window.Dos;
+    window.Dos = function(element, options) {
+        options = options || {};
+        options.noSideBar = true;
+        options.noSocialLinks = true;
+        options.style = "none";  // ← Esto desactiva toda la UI
+        return originalDos.call(this, element, options);
+    };
+    
+    // 2. Observador que elimina elementos no deseados cuando aparecen
+    const observer = new MutationObserver(function(mutations) {
+        // Buscar y eliminar sidebar
+        const sidebars = document.querySelectorAll([
+            '.emulator-sidebar',
+            '[class*="SideBar"]',
+            '[class*="sidebar"]',
+            '.absolute.bg-gray-500.bg-opacity-80', // Tips overlay
+            '.z-50.rounded',                       // Modal de tips
+            '.emulator-options',
+            '.action-bar',
+            '.hg-candidate-box'
+        ].join(','));
+        
+        sidebars.forEach(el => {
+            if (el && el.remove) {
+                console.log('🗑️ Eliminando UI:', el.className);
+                el.remove();
+            }
+        });
+        
+        // También buscar por contenido de texto (tips)
+        const allDivs = document.querySelectorAll('div');
+        allDivs.forEach(div => {
+            const text = div.innerText || '';
+            if (text.includes('Mouse lock') || 
+                text.includes('Mobile Controls') ||
+                text.includes('Sidebar') ||
+                text.includes('Save/Load')) {
+                console.log('🗑️ Eliminando tips por texto');
+                div.remove();
+            }
+        });
+    });
+    
+    // Iniciar observación cuando el DOM esté listo
+    window.addEventListener('load', () => {
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true
+        });
+        
+        // Limpieza inicial
+        setTimeout(() => {
+            const tips = document.querySelectorAll('.absolute.bg-gray-500.bg-opacity-80');
+            tips.forEach(t => t.remove());
+        }, 100);
+    });
+})();
+
+
 (function(window, undefined) {
   'use strict';
 
