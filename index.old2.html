@@ -806,7 +806,6 @@ let appDataGlobal = window.appData || [];
 let usageLog = JSON.parse(localStorage.getItem('winebox_neuro_usage')) || [];
 let evaluations = JSON.parse(localStorage.getItem('winebox_neuro_evaluations')) || [];
 let currentAppStart=null, currentAppObj=null;
-let currentTrackingInterval = null;
 
 function startTracking(app){ 
     currentAppStart=Date.now(); 
@@ -821,35 +820,7 @@ function stopTracking(){
             localStorage.setItem('winebox_neuro_usage',JSON.stringify(usageLog)); 
         } 
         currentAppStart=null; 
-        currentAppObj=null;
     } 
-}
-
-// ========== FUNCIÓN CLAVE: RECREAR IFRAME LIMPIO ==========
-function recrearIframe() {
-    let contenedor = document.getElementById('virtualWindow');
-    let iframeViejo = document.getElementById('virtualAppIframe');
-    if (iframeViejo) {
-        iframeViejo.remove();
-    }
-    let iframeNuevo = document.createElement('iframe');
-    iframeNuevo.id = 'virtualAppIframe';
-    iframeNuevo.className = 'virtual-window-iframe';
-    iframeNuevo.sandbox = 'allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads';
-    iframeNuevo.title = 'Application Window';
-    contenedor.appendChild(iframeNuevo);
-    return iframeNuevo;
-}
-
-function cerrarVentanaVirtual() {
-    let win = document.getElementById('virtualWindow');
-    win.style.display = 'none';
-    document.body.style.overflow = '';
-    if (currentTrackingInterval) {
-        clearInterval(currentTrackingInterval);
-        currentTrackingInterval = null;
-    }
-    stopTracking();
 }
 
 // ========== ALGORITMO NEUROSCREENING ==========
@@ -985,10 +956,7 @@ function mostrarScreeningEnVentana(){
     if(!ultima || !ultima.perfil){ console.error("Error: invalid evaluation"); generarEvaluacion(); return; }
     let p=ultima.perfil;
     let win=document.getElementById('virtualWindow');
-    
-    // RECREAR IFRAME LIMPIO para el screening
-    let iframe = recrearIframe();
-    
+    let iframe=document.getElementById('virtualAppIframe');
     let htmlContent = `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
         *{box-sizing:border-box;} body{font-family:'Segoe UI',Arial,sans-serif; background:#0a0a0a; color:#eee; margin:0; padding:24px; line-height:1.5;}
         .container{max-width:1100px;margin:0 auto;background:#1a1a2e;border-radius:28px;padding:28px;}
@@ -1038,22 +1006,24 @@ function mostrarScreeningEnVentana(){
         const closeBtn = document.getElementById('closeScreeningBtn2');
         const downloadBtn = document.getElementById('downloadReportBtn2');
         const newEvalBtn = document.getElementById('newEvaluationBtn2');
-        if(closeBtn) closeBtn.addEventListener('click',()=>{ window.parent.cerrarVentanaVirtual(); });
+        if(closeBtn) closeBtn.addEventListener('click',()=>{ window.parent.document.getElementById('virtualWindow').style.display='none'; window.parent.document.body.style.overflow=''; });
         if(downloadBtn) downloadBtn.addEventListener('click',()=>{ window.parent.descargarInforme(); });
-        if(newEvalBtn) newEvalBtn.addEventListener('click',()=>{ 
-            window.parent.generarEvaluacion(); 
-            setTimeout(()=>window.parent.mostrarScreeningEnVentana(), 100); 
-        });
+        if(newEvalBtn) newEvalBtn.addEventListener('click',()=>{ window.parent.generarEvaluacion(); setTimeout(()=>window.parent.mostrarScreeningEnVentana(), 100); });
         document.addEventListener('keydown', (e) => {
-            if(e.key === 'Escape') { window.parent.cerrarVentanaVirtual(); }
+            if(e.key === 'Escape') { window.parent.document.getElementById('virtualWindow').style.display='none'; window.parent.document.body.style.overflow=''; }
         });
     <\/script></body></html>`;
     iframe.srcdoc = htmlContent;
     win.style.display='flex';
     document.body.style.overflow='hidden';
-    
-    // Configurar botón de cierre global
-    document.getElementById('closeVirtualWindowBtn').onclick = cerrarVentanaVirtual;
+    const closeVirtualBtn = document.getElementById('closeVirtualWindowBtn');
+    const newCloseHandler = () => { 
+        win.style.display='none'; 
+        document.body.style.overflow=''; 
+        if(iframe) iframe.src = 'about:blank';
+    };
+    closeVirtualBtn.removeEventListener('click', closeVirtualBtn.click);
+    closeVirtualBtn.addEventListener('click', newCloseHandler);
 }
 
 function descargarInforme(){
@@ -1216,20 +1186,13 @@ function handleModalKeydown(e){
     }
 }
 
-function getGridCols(){
-    let grid = document.getElementById('appGrid');
-    if(!grid) return 3;
-    let cardWidth = 260;
-    let cols = Math.floor(grid.clientWidth / cardWidth);
-    return Math.max(1, cols);
-}
-
 function handleKeyDown(e){
     if(isModalOpen){ handleModalKeydown(e); return; }
     if(document.getElementById('confirmModal').style.display==='block') return;
     if(document.getElementById('virtualWindow').style.display==='flex'){ 
         if(e.key==='Escape'){ 
-            cerrarVentanaVirtual();
+            document.getElementById('virtualWindow').style.display='none'; 
+            document.body.style.overflow=''; 
         } 
         return; 
     }
@@ -1334,6 +1297,14 @@ function handleKeyDown(e){
     }
 }
 
+function getGridCols(){
+    let grid = document.getElementById('appGrid');
+    if(!grid) return 3;
+    let cardWidth = 260;
+    let cols = Math.floor(grid.clientWidth / cardWidth);
+    return Math.max(1, cols);
+}
+
 let currentModalApp = null;
 let launchHandlerRef, installHandlerRef, uninstallHandlerRef;
 
@@ -1362,25 +1333,25 @@ function openAppModal(app){
         addToRecent(app); 
         startTracking(app); 
         let win=document.getElementById('virtualWindow'); 
-        // RECREAR IFRAME LIMPIO para la app
-        let iframe = recrearIframe();
-        iframe.src = app.link;
+        let iframe=document.getElementById('virtualAppIframe'); 
+        iframe.src=app.link; 
         win.style.display='flex'; 
         document.body.style.overflow='hidden'; 
-        
-        if(currentTrackingInterval) clearInterval(currentTrackingInterval);
-        
-        currentTrackingInterval = setInterval(()=>{ 
-            if(win.style.display !== 'flex'){ 
+        let interval=setInterval(()=>{ 
+            if(win.style.display!=='flex'){ 
                 stopTracking(); 
-                clearInterval(currentTrackingInterval); 
-                currentTrackingInterval = null;
+                clearInterval(interval); 
             } 
-        }, 500);
-        
-        // Configurar botón de cierre
-        document.getElementById('closeVirtualWindowBtn').onclick = cerrarVentanaVirtual;
-        
+        },500); 
+        const closeVirtualBtn = document.getElementById('closeVirtualWindowBtn');
+        const closeHandler = () => { 
+            win.style.display='none'; 
+            iframe.src='about:blank'; 
+            document.body.style.overflow=''; 
+            stopTracking(); 
+        };
+        closeVirtualBtn.removeEventListener('click', closeVirtualBtn.click);
+        closeVirtualBtn.addEventListener('click', closeHandler);
         modal.style.display='none'; 
         isModalOpen=false; 
     };
@@ -1483,9 +1454,6 @@ window.addEventListener('load',()=>{
         document.getElementById('scrollIndicator').addEventListener('click',()=>{ document.querySelector('.recent-apps').scrollBy({left:200,behavior:'smooth'}); });
         document.addEventListener('keydown',handleKeyDown);
         applyTranslations();
-        
-        // Inicializar variables globales
-        currentTrackingInterval = null;
     } else { 
         setTimeout(()=>window.location.reload(),200); 
     }
@@ -1510,7 +1478,6 @@ window.mostrarScreeningEnVentana=mostrarScreeningEnVentana;
 window.descargarInforme=descargarInforme;
 window.abrirScreening=abrirScreening;
 window.showCustomAlert=showCustomAlert;
-window.cerrarVentanaVirtual=cerrarVentanaVirtual;
 </script>
 </body>
 </html>
