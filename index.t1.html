@@ -133,7 +133,7 @@
 
 <header class="header">
     <div class="header-content">
-        <div class="logo-container"><button id="menuButton" class="menu-button" tabindex="0" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg></button><div class="logo">WineBOX</div></div>
+        <div class="logo-container"><button id="menuButton" class="menu-button" tabindex="0" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg></button><div class="logo">WineBOX Store</div></div>
         <div class="search-bar"><input type="text" class="search-input" id="searchInput" placeholder="Find apps..." data-i18n-placeholder="search_placeholder" tabindex="0"><button class="search-button" id="searchBtn" tabindex="0" data-i18n="search_button">Find</button></div>
         <div class="header-buttons">
             <div class="lang-dropdown"><button class="lang-toggle" id="langToggle" tabindex="0" aria-label="Language">⚙️</button><div class="lang-menu" id="langMenu"><div class="lang-option" data-lang="es" tabindex="0"><span>🇪🇸</span><span>Español</span></div><div class="lang-option" data-lang="en" tabindex="0"><span>🇬🇧</span><span>English</span></div><div class="lang-option" data-lang="de" tabindex="0"><span>🇩🇪</span><span>Deutsch</span></div><div class="lang-option" data-lang="fr" tabindex="0"><span>🇫🇷</span><span>Français</span></div><div class="lang-option" data-lang="pt" tabindex="0"><span>🇵🇹</span><span>Português</span></div><div class="lang-option" data-lang="it" tabindex="0"><span>🇮🇹</span><span>Italiano</span></div><div class="lang-option" data-lang="ru" tabindex="0"><span>🇷🇺</span><span>Русский</span></div><div class="lang-option" data-lang="zh" tabindex="0"><span>🇨🇳</span><span>中文</span></div><div class="lang-option" data-lang="ja" tabindex="0"><span>🇯🇵</span><span>日本語</span></div></div></div>
@@ -155,7 +155,7 @@
 
 <script src="apps-data.js"></script>
 <script>
-// ========== TRADUCCIONES COMPLETAS CON TODOS LOS TEXTOS ==========
+// ========== TRADUCCIONES COMPLETAS ==========
 const translations = { 
     es: { 
         menu_home:"Inicio", menu_apps:"Aplicaciones", menu_games:"Juegos", menu_arcade:"Arcade", menu_multimedia:"Multimedia", menu_utilities:"Utilidades", menu_strategy:"Estrategia", menu_uninstall:"Desinstalar", 
@@ -293,59 +293,7 @@ const translations = {
         first_analysis_btn_go:"View Report",
         first_analysis_btn_cancel:"Close"
     },
-    de: {
-        menu_home:"Startseite", menu_apps:"Anwendungen", menu_games:"Spiele", menu_arcade:"Arcade", menu_multimedia:"Multimedia", menu_utilities:"Dienstprogramme", menu_strategy:"Strategie", menu_uninstall:"Deinstallieren",
-        search_placeholder:"Apps suchen...", search_button:"Suchen", recent_title:"Kürzlich verwendet", cat_all:"Alle", cat_apps:"Apps", cat_games:"Spiele", cat_multimedia:"Multimedia", cat_utilities:"Dienstprogramme", cat_arcade:"Arcade", cat_rts:"Strategie",
-        run_button:"Starten", install_button:"Installieren", uninstall_button:"Deinstallieren", confirm_title:"Deinstallation bestätigen", confirm_message:"Sind Sie sicher, dass Sie <strong>{name}</strong> deinstallieren möchten?", confirm_cancel:"Abbrechen", confirm_ok:"Deinstallieren", no_recent:"Keine kürzlichen Apps", no_apps:"Keine Apps gefunden",
-        neuro_insufficient_data:"⚠️ Unzureichende Daten - Spielen Sie mindestens 3 verschiedene Apps und insgesamt 5 Minuten, um Ihr kognitives Profil zu erstellen",
-        neuro_analysis_title:"KOGNITIVE ANALYSE",
-        neuro_data_analysis:"📊 DATENANALYSE",
-        neuro_sessions:"Registrierte Sitzungen",
-        neuro_total_time:"Gesamtspielzeit",
-        neuro_minutes:"Minuten",
-        neuro_detected_pattern:"🧩 Erkanntes Verhaltensmuster",
-        neuro_cognitive_domains:"🧠 KOGNITIVE DOMÄNENANALYSE",
-        neuro_impulsivity:"IMPULSIVITÄT",
-        neuro_attention:"AUFMERKSAMKEIT",
-        neuro_planning:"EXEKUTIVE PLANUNG",
-        neuro_emotional:"EMOTIONSREGULATION",
-        neuro_high_impulsivity:"⚡ Hohe Tendenz zu sofortigem Handeln, Schwierigkeiten bei der Hemmung automatischer Reaktionen. Sucht schnelle Belohnungen, zeigt Ungeduld.",
-        neuro_low_impulsivity:"🐢 Sehr geringe Impulsivität, hohe reflexive Kapazität.",
-        neuro_moderate_impulsivity:"⚖️ Moderates Impulsivitätsniveau, variable Selbstkontrolle.",
-        neuro_high_attention:"🎯 Ausgezeichnete Konzentration. Hält den Fokus über lange Zeiträume aufrecht.",
-        neuro_low_attention:"🦋 Fluktuierende Aufmerksamkeit mit erheblicher Ablenkbarkeit.",
-        neuro_moderate_attention:"👁️ Funktionale Aufmerksamkeit mit Variabilität je nach Interesse.",
-        neuro_high_planning:"📐 Außergewöhnliche Fähigkeit, Sequenzen zu organisieren, Konsequenzen vorherzusehen.",
-        neuro_low_planning:"📝 Anfängliche Entwicklungsplanung. Schwierigkeiten, Aufgaben in Schritte zu unterteilen.",
-        neuro_moderate_planning:"📋 Angemessene Planung für tägliche Ziele.",
-        neuro_high_emotional:"💪 Ausgezeichnete Frustrationstoleranz und Erholungsfähigkeit.",
-        neuro_low_emotional:"😰 Intensive emotionale Reaktivität auf Hindernisse, Tendenz zu Vermeidung.",
-        neuro_moderate_emotional:"🌊 Variable Regulation, verbessert sich mit positivem Feedback.",
-        neuro_warning:"⚠️ WICHTIGER HINWEIS: Diese Analyse ersetzt KEINE professionelle Diagnose.",
-        neuro_legal_notice:"⚠️ RECHTLICHER HINWEIS: Dieser Bericht stellt KEINE medizinische Diagnose dar.",
-        neuro_report_title:"WINEBOX · KOGNITIVER BERICHT",
-        neuro_report_date:"Datum",
-        neuro_inferred_profile:"ABGELEITETES PROFIL",
-        neuro_clinical_scores:"KLINISCHE WERTE",
-        neuro_therapeutic_recommendations:"THERAPEUTISCHE EMPFEHLUNGEN",
-        neuro_suggested_games:"🎮 Vorgeschlagene Spiele",
-        neuro_suggested_duration:"⏱️ Vorgeschlagene Dauer",
-        neuro_clinical_foundation:"📖 Klinische Grundlage",
-        neuro_daily_exercises:"💡 Tägliche Übungen",
-        neuro_impulsive_profile:"🔥 Impulsives Verhaltensprofil",
-        neuro_introspective_profile:"🧘 Introspektives Verhaltensprofil",
-        neuro_high_reactivity:"⚡ Hohes Reaktivitätsprofil",
-        neuro_strategic_profile:"🎯 Strategisches Profil",
-        neuro_balanced_profile:"⚖️ Ausgeglichenes neurokognitives Profil",
-        neuro_close:"Schließen",
-        neuro_download:"Bericht herunterladen",
-        neuro_new_evaluation:"Neue Bewertung",
-        neuro_evaluation_history:"📜 Auswertungsverlauf",
-        neuro_impulse_control_title:"🎯 Impulskontrolle",
-        neuro_attention_title:"🎯 Aufmerksamkeitsstimulation",
-        neuro_planning_title:"🎯 Planungsentwicklung",
-        neuro_emotional_title:"🎯 Emotionsregulation",
-        neuro_cognitive_maintenance_title:"🎯 Kognitive Erhaltung",
+    de: { 
         rec_impulse_control_foundation:"Spiele mit strategischen Pausen. Stärken die Fähigkeit, automatische Reaktionen zu hemmen.",
         rec_impulse_control_exercises:"🔹 'STOPP-DENKE-HANDLE'-Technik\n🔹 Verwende eine Ampel (rot=stopp, gelb=denke, grün=handle)\n🔹 Übe, 10 Sekunden zu warten",
         rec_attention_foundation:"Aktivitäten, die kontinuierliche Konzentration erfordern. Verbessern das Arbeitsgedächtnis.",
@@ -363,117 +311,113 @@ const translations = {
     },
     fr: {
         rec_impulse_control_foundation:"Jeux avec pauses stratégiques. Renforcent l'inhibition des réponses automatiques.",
-        rec_impulse_control_exercises:"🔹 Technique 'ARRÊTE-PENSE-AGIS'\n🔹 Feu tricolore visuel (rouge=arrêt, jaune=pense, vert=agis)\n🔹 Attendre 10 secondes avant de répondre",
-        rec_attention_foundation:"Activités nécessitant une concentration continue. Améliorent la mémoire de travail.",
-        rec_attention_exercises:"🔹 Méthode Pomodoro: 15 min de focus + 5 min de pause\n🔹 Organise ton espace de travail\n🔹 Pratique 'trouve les différences'",
-        rec_planning_foundation:"Stratégies d'organisation des ressources et d'anticipation des conséquences.",
-        rec_planning_exercises:"🔹 Utilise un agenda visuel hebdomadaire\n🔹 Écris des listes d'étapes avant de commencer\n🔹 Organise ton espace physique",
-        rec_emotional_foundation:"Environnements calmes pour travailler la tolérance à la frustration.",
-        rec_emotional_exercises:"🔹 Respiration 4-4-4-4\n🔹 Nomme tes émotions à voix haute\n🔹 Crée un 'coin calme'",
-        rec_cognitive_foundation:"Stimulation variée qui maintient les fonctions exécutives actives.",
-        rec_cognitive_exercises:"🔹 Maintiens des horaires de sommeil réguliers\n🔹 Hydrate-toi toutes les 2 heures\n🔹 Fais de l'activité physique quotidienne",
+        rec_impulse_control_exercises:"🔹 Technique 'ARRÊTE-PENSE-AGIS'\n🔹 Feu tricolore visuel\n🔹 Attendre 10 secondes avant de répondre",
+        rec_attention_foundation:"Activités nécessitant une concentration continue.",
+        rec_attention_exercises:"🔹 Méthode Pomodoro\n🔹 Organise ton espace",
+        rec_planning_foundation:"Stratégies d'organisation et d'anticipation.",
+        rec_planning_exercises:"🔹 Agenda visuel hebdomadaire",
+        rec_emotional_foundation:"Environnements calmes pour la tolérance à la frustration.",
+        rec_emotional_exercises:"🔹 Respiration 4-4-4-4",
+        rec_cognitive_foundation:"Stimulation variée pour les fonctions exécutives.",
+        rec_cognitive_exercises:"🔹 Sommeil régulier",
         first_analysis_title:"✅ Analyse prête!",
-        first_analysis_msg:"Votre première analyse cognitive est prête. Vous pouvez y accéder via le bouton 📊.",
+        first_analysis_msg:"Votre première analyse cognitive est prête.",
         first_analysis_btn_go:"Voir rapport",
         first_analysis_btn_cancel:"Fermer"
     },
     pt: {
-        rec_impulse_control_foundation:"Jogos com pausas estratégicas. Fortalecem a capacidade de inibir respostas automáticas.",
-        rec_impulse_control_exercises:"🔹 Técnica 'PARE-PENSE-AGIR'\n🔹 Use um semáforo visual (vermelho=pare, amarelo=pense, verde=aja)\n🔹 Pratique esperar 10 segundos antes de responder",
-        rec_attention_foundation:"Atividades que exigem foco contínuo. Melhoram a memória de trabalho.",
-        rec_attention_exercises:"🔹 Método Pomodoro: 15 min de foco + 5 min de descanso\n🔹 Organize seu espaço de trabalho\n🔹 Pratique 'encontre as diferenças'",
-        rec_planning_foundation:"Estratégias que exigem organização de recursos e antecipação de consequências.",
-        rec_planning_exercises:"🔹 Use uma agenda visual semanal\n🔹 Escreva listas de etapas antes de começar\n🔹 Organize seu espaço físico",
-        rec_emotional_foundation:"Ambientes calmos para trabalhar a tolerância à frustração.",
-        rec_emotional_exercises:"🔹 Respiração 4-4-4-4\n🔹 Nomeie suas emoções em voz alta\n🔹 Crie um 'cantinho da calma'",
-        rec_cognitive_foundation:"Estimulação variada que mantém as funções executivas ativas.",
-        rec_cognitive_exercises:"🔹 Mantenha horários regulares de sono\n🔹 Hidrate-se a cada 2 horas\n🔹 Faça atividade física diária",
+        rec_impulse_control_foundation:"Jogos com pausas estratégicas. Fortalecem o controle inibitório.",
+        rec_impulse_control_exercises:"🔹 Técnica 'PARE-PENSE-AGIR'\n🔹 Semáforo visual",
+        rec_attention_foundation:"Atividades que exigem foco contínuo.",
+        rec_attention_exercises:"🔹 Método Pomodoro",
+        rec_planning_foundation:"Estratégias de organização e antecipação.",
+        rec_planning_exercises:"🔹 Agenda visual semanal",
+        rec_emotional_foundation:"Ambientes calmos para tolerância à frustração.",
+        rec_emotional_exercises:"🔹 Respiração 4-4-4-4",
+        rec_cognitive_foundation:"Estimulação variada para funções executivas.",
+        rec_cognitive_exercises:"🔹 Sono regular",
         first_analysis_title:"✅ Análise pronta!",
-        first_analysis_msg:"Sua primeira análise cognitiva está pronta. Você pode acessá-la pelo botão 📊.",
+        first_analysis_msg:"Sua primeira análise cognitiva está pronta.",
         first_analysis_btn_go:"Ver Relatório",
         first_analysis_btn_cancel:"Fechar"
     },
     it: {
-        rec_impulse_control_foundation:"Giochi con pause strategiche. Rafforzano la capacità di inibire le risposte automatiche.",
-        rec_impulse_control_exercises:"🔹 Tecnica 'FERMA-PENSA-AGISCI'\n🔹 Usa un semaforo visivo (rosso=ferma, giallo=pensa, verde=agisci)\n🔹 Esercitati ad aspettare 10 secondi prima di rispondere",
-        rec_attention_foundation:"Attività che richiedono concentrazione continua. Migliorano la memoria di lavoro.",
-        rec_attention_exercises:"🔹 Metodo Pomodoro: 15 min di focus + 5 min di pausa\n🔹 Organizza il tuo spazio di lavoro\n🔹 Pratica 'trova le differenze'",
-        rec_planning_foundation:"Strategie che richiedono organizzazione delle risorse e anticipazione delle conseguenze.",
-        rec_planning_exercises:"🔹 Usa un'agenda visiva settimanale\n🔹 Scrivi liste di passaggi prima di iniziare\n🔹 Organizza il tuo spazio fisico",
-        rec_emotional_foundation:"Ambienti calmi per lavorare sulla tolleranza alla frustrazione.",
-        rec_emotional_exercises:"🔹 Respirazione 4-4-4-4\n🔹 Nomina le tue emozioni ad alta voce\n🔹 Crea un 'angolo della calma'",
-        rec_cognitive_foundation:"Stimolazione varia che mantiene attive le funzioni esecutive.",
-        rec_cognitive_exercises:"🔹 Mantieni orari di sonno regolari\n🔹 Idratati ogni 2 ore\n🔹 Fai attività fisica quotidiana",
+        rec_impulse_control_foundation:"Giochi con pause strategiche. Rafforzano il controllo inibitorio.",
+        rec_impulse_control_exercises:"🔹 Tecnica 'FERMA-PENSA-AGISCI'\n🔹 Semaforo visivo",
+        rec_attention_foundation:"Attività che richiedono concentrazione continua.",
+        rec_attention_exercises:"🔹 Metodo Pomodoro",
+        rec_planning_foundation:"Strategie di organizzazione e anticipazione.",
+        rec_planning_exercises:"🔹 Agenda visiva settimanale",
+        rec_emotional_foundation:"Ambienti calmi per la tolleranza alla frustrazione.",
+        rec_emotional_exercises:"🔹 Respirazione 4-4-4-4",
+        rec_cognitive_foundation:"Stimolazione varia per le funzioni esecutive.",
+        rec_cognitive_exercises:"🔹 Sonno regolare",
         first_analysis_title:"✅ Analisi pronta!",
-        first_analysis_msg:"La tua prima analisi cognitiva è pronta. Puoi accedervi tramite il pulsante 📊.",
+        first_analysis_msg:"La tua prima analisi cognitiva è pronta.",
         first_analysis_btn_go:"Vedi Report",
         first_analysis_btn_cancel:"Chiudi"
     },
     ru: {
-        rec_impulse_control_foundation:"Игры со стратегическими паузами. Укрепляют способность подавлять автоматические реакции.",
-        rec_impulse_control_exercises:"🔹 Техника 'СТОП-ДУМАЙ-ДЕЙСТВУЙ'\n🔹 Используйте визуальный светофор (красный=стоп, желтый=думай, зеленый=действуй)\n🔹 Практикуйте ожидание 10 секунд перед ответом",
-        rec_attention_foundation:"Деятельность, требующая непрерывного внимания. Улучшают рабочую память.",
-        rec_attention_exercises:"🔹 Метод Помодоро: 15 мин фокуса + 5 мин отдыха\n🔹 Организуйте свое рабочее пространство\n🔹 Практикуйте 'найди отличия'",
-        rec_planning_foundation:"Стратегии, требующие организации ресурсов и предвидения последствий.",
-        rec_planning_exercises:"🔹 Используйте еженедельное визуальное расписание\n🔹 Записывайте списки шагов перед началом\n🔹 Организуйте свое физическое пространство",
-        rec_emotional_foundation:"Спокойная обстановка для работы над толерантностью к фрустрации.",
-        rec_emotional_exercises:"🔹 Дыхание 4-4-4-4\n🔹 Называйте свои эмоции вслух\n🔹 Создайте 'уголок спокойствия'",
-        rec_cognitive_foundation:"Разнообразная стимуляция, поддерживающая активность исполнительных функций.",
-        rec_cognitive_exercises:"🔹 Поддерживайте регулярный режим сна\n🔹 Пейте воду каждые 2 часа\n🔹 Занимайтесь ежедневной физической активностью",
+        rec_impulse_control_foundation:"Игры со стратегическими паузами. Укрепляют тормозной контроль.",
+        rec_impulse_control_exercises:"🔹 Техника 'СТОП-ДУМАЙ-ДЕЙСТВУЙ'\n🔹 Визуальный светофор",
+        rec_attention_foundation:"Деятельность, требующая непрерывного внимания.",
+        rec_attention_exercises:"🔹 Метод Помодоро",
+        rec_planning_foundation:"Стратегии организации и предвидения.",
+        rec_planning_exercises:"🔹 Визуальное расписание",
+        rec_emotional_foundation:"Спокойная среда для работы с фрустрацией.",
+        rec_emotional_exercises:"🔹 Дыхание 4-4-4-4",
+        rec_cognitive_foundation:"Разнообразная стимуляция когнитивных функций.",
+        rec_cognitive_exercises:"🔹 Регулярный сон",
         first_analysis_title:"✅ Анализ готов!",
-        first_analysis_msg:"Ваш первый когнитивный анализ готов. Вы можете получить к нему доступ через кнопку 📊.",
+        first_analysis_msg:"Ваш первый когнитивный анализ готов.",
         first_analysis_btn_go:"Посмотреть отчёт",
         first_analysis_btn_cancel:"Закрыть"
     },
     zh: {
         rec_impulse_control_foundation:"需要策略性停顿的游戏。增强抑制自动反应的能力。",
-        rec_impulse_control_exercises:"🔹 '停-想-做'技巧\n🔹 使用视觉红绿灯（红=停，黄=想，绿=做）\n🔹 练习在回应前等待10秒",
-        rec_attention_foundation:"需要持续专注的活动。改善工作记忆。",
-        rec_attention_exercises:"🔹 番茄工作法：15分钟专注+5分钟休息\n🔹 整理你的工作空间\n🔹 练习'找不同'",
+        rec_impulse_control_exercises:"🔹 '停-想-做'技巧\n🔹 使用视觉红绿灯",
+        rec_attention_foundation:"需要持续专注的活动。",
+        rec_attention_exercises:"🔹 番茄工作法",
         rec_planning_foundation:"需要资源组织和结果预测的策略。",
-        rec_planning_exercises:"🔹 使用周度视觉日程表\n🔹 开始前写下步骤清单\n🔹 整理你的物理空间",
+        rec_planning_exercises:"🔹 周度视觉日程表",
         rec_emotional_foundation:"培养挫折容忍度的平静环境。",
-        rec_emotional_exercises:"🔹 4-4-4-4呼吸法\n🔹 大声说出你的情绪\n🔹 创建一个'平静角落'",
+        rec_emotional_exercises:"🔹 4-4-4-4呼吸法",
         rec_cognitive_foundation:"维持执行功能的多样化刺激。",
-        rec_cognitive_exercises:"🔹 保持规律的睡眠时间\n🔹 每2小时补充水分\n🔹 进行日常体育活动",
+        rec_cognitive_exercises:"🔹 规律睡眠",
         first_analysis_title:"✅ 分析就绪！",
-        first_analysis_msg:"您的首次认知分析已完成。您可以通过📊按钮访问它。",
+        first_analysis_msg:"您的首次认知分析已完成。",
         first_analysis_btn_go:"查看报告",
         first_analysis_btn_cancel:"关闭"
     },
     ja: {
-        rec_impulse_control_foundation:"戦略的ポーズのあるゲーム。自動反応を抑制する能力を強化します。",
-        rec_impulse_control_exercises:"🔹 '止めて-考えて-行動する'テクニック\n🔹 視覚的な信号を使用（赤=止まれ、黄=考えろ、緑=行動せよ）\n🔹 応答前に10秒待つ練習をする",
-        rec_attention_foundation:"持続的な集中を必要とする活動。ワーキングメモリを改善します。",
-        rec_attention_exercises:"🔹 ポモドーロテクニック：15分集中+5分休憩\n🔹 ワークスペースを整理する\n🔹 '違いを見つけよう'を練習する",
+        rec_impulse_control_foundation:"戦略的ポーズのあるゲーム。自動反応の抑制を強化。",
+        rec_impulse_control_exercises:"🔹 '止めて-考えて-行動する'テクニック\n🔹 視覚的な信号",
+        rec_attention_foundation:"持続的な集中を必要とする活動。",
+        rec_attention_exercises:"🔹 ポモドーロテクニック",
         rec_planning_foundation:"リソース整理と結果予測を必要とする戦略。",
-        rec_planning_exercises:"🔹 週間ビジュアル予定表を使用する\n🔹 開始前にステップリストを書く\n🔹 物理的な空間を整理する",
+        rec_planning_exercises:"🔹 週間ビジュアル予定表",
         rec_emotional_foundation:"フラストレーション耐性を高める静かな環境。",
-        rec_emotional_exercises:"🔹 4-4-4-4呼吸\n🔹 感情を声に出して言う\n🔹 '落ち着くコーナー'を作る",
+        rec_emotional_exercises:"🔹 4-4-4-4呼吸",
         rec_cognitive_foundation:"実行機能を活性化する多様な刺激。",
-        rec_cognitive_exercises:"🔹 規則正しい睡眠スケジュールを維持する\n🔹 2時間ごとに水分補給する\n🔹 毎日の身体活動を行う",
+        rec_cognitive_exercises:"🔹 規則正しい睡眠",
         first_analysis_title:"✅ 分析準備完了！",
-        first_analysis_msg:"初めての認知分析が完了しました。📊ボタンからアクセスできます。",
+        first_analysis_msg:"初めての認知分析が完了しました。",
         first_analysis_btn_go:"レポートを見る",
         first_analysis_btn_cancel:"閉じる"
     }
 };
 
-// Completar traducciones base para todos los idiomas (para las claves que faltan)
-const allLanguages = ['es', 'en', 'de', 'fr', 'pt', 'it', 'ru', 'zh', 'ja'];
-const baseKeys = ['neuro_impulse_control_title', 'neuro_attention_title', 'neuro_planning_title', 'neuro_emotional_title', 'neuro_cognitive_maintenance_title', 'neuro_suggested_games', 'neuro_suggested_duration', 'neuro_clinical_foundation', 'neuro_daily_exercises', 'neuro_analysis_title', 'neuro_data_analysis', 'neuro_sessions', 'neuro_total_time', 'neuro_minutes', 'neuro_detected_pattern', 'neuro_cognitive_domains', 'neuro_impulsivity', 'neuro_attention', 'neuro_planning', 'neuro_emotional', 'neuro_high_impulsivity', 'neuro_low_impulsivity', 'neuro_moderate_impulsivity', 'neuro_high_attention', 'neuro_low_attention', 'neuro_moderate_attention', 'neuro_high_planning', 'neuro_low_planning', 'neuro_moderate_planning', 'neuro_high_emotional', 'neuro_low_emotional', 'neuro_moderate_emotional', 'neuro_warning', 'neuro_legal_notice', 'neuro_report_title', 'neuro_report_date', 'neuro_inferred_profile', 'neuro_clinical_scores', 'neuro_therapeutic_recommendations', 'neuro_close', 'neuro_download', 'neuro_new_evaluation', 'neuro_evaluation_history', 'first_analysis_title', 'first_analysis_msg', 'first_analysis_btn_go', 'first_analysis_btn_cancel'];
-allLanguages.forEach(lang => {
+// Completar traducciones faltantes
+const langKeys = ['de', 'fr', 'pt', 'it', 'ru', 'zh', 'ja'];
+const missingKeys = ['neuro_impulse_control_title', 'neuro_attention_title', 'neuro_planning_title', 'neuro_emotional_title', 'neuro_cognitive_maintenance_title', 'neuro_suggested_games', 'neuro_suggested_duration', 'neuro_clinical_foundation', 'neuro_daily_exercises'];
+langKeys.forEach(lang => {
     if (!translations[lang]) translations[lang] = {};
-    baseKeys.forEach(key => {
-        if (!translations[lang][key] && translations.en[key]) {
-            translations[lang][key] = translations.en[key];
-        }
+    missingKeys.forEach(key => {
+        if (!translations[lang][key] && translations.en[key]) translations[lang][key] = translations.en[key];
     });
 });
 
-function t(key) { 
-    return translations[currentLanguage]?.[key] !== undefined ? translations[currentLanguage][key] : (translations.en[key] || key); 
-}
+function t(key) { return translations[currentLanguage]?.[key] !== undefined ? translations[currentLanguage][key] : (translations.en[key] || key); }
 
 // ========== DETECCIÓN DE IDIOMA ==========
 function detectBrowserLanguage() {
@@ -846,7 +790,7 @@ function generarEvaluacion(){
 function mostrarScreeningEnVentana(){
     if(!evaluations.length){ generarEvaluacion(); return; }
     let ultima=evaluations[0];
-    if(!ultima || !ultima.perfil){ console.error("Error: invalid evaluation"); generarEvaluacion(); return; }
+    if(!ultima || !ultima.perfil){ generarEvaluacion(); return; }
     let p=ultima.perfil;
     let win=document.getElementById('virtualWindow');
     let iframe = recrearIframe();
@@ -856,18 +800,16 @@ function mostrarScreeningEnVentana(){
         .container{max-width:1100px;margin:0 auto;background:#1a1a2e;border-radius:28px;padding:28px;}
         .header-flex{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;padding-bottom:18px;margin-bottom:22px;flex-wrap:wrap;}
         .btn-close{background:#dc2626;border:none;width:44px;height:44px;border-radius:50%;color:white;cursor:pointer;font-size:24px;}
-        .btn-close:focus-visible{outline:2px solid #fff;outline-offset:2px;}
         .grid-perfiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:20px 0;}
         .tarjeta-perfil{background:#26263a;border-radius:20px;padding:18px;border-left:4px solid #4a6fa5;}
         .barra-progreso{background:#3a3a4a;height:10px;border-radius:20px;overflow:hidden;margin:12px 0;}
         .relleno{height:100%;transition:width 0.5s;border-radius:20px;}
         .btn-neuro{background:#4a6fa5;padding:10px 22px;border-radius:40px;border:none;color:white;font-weight:bold;cursor:pointer;margin-right:12px;margin-top:10px;}
-        .btn-neuro:focus-visible{outline:2px solid #fff;outline-offset:2px;}
         .caja-narrativa{background:#1e2538;border-radius:20px;padding:22px;margin:20px 0;white-space:pre-wrap;font-family:'Courier New',monospace;font-size:0.85rem;}
-        .grafico-cerebro{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin:50px 0;}
+        .grafico-cerebro{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0;}
         .area-cerebro{text-align:center;width:80px;}
         .circulo{width:70px;height:70px;border-radius:50%;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:1.3rem;}
-        @media (max-width:768px){body{padding:12px;}.grid-perfiles{grid-template-columns:1fr;}}
+        @media (max-width:768px){body{padding:12px;}}
     </style></head><body><div class="container"><div class="header-flex"><h2 style="margin:0;">🧠 ${t('neuro_analysis_title')}</h2><button class="btn-close" id="closeScreeningBtn2" tabindex="0">✕</button></div>
     <div class="grafico-cerebro">
         <div class="area-cerebro"><div class="circulo" style="background:radial-gradient(circle, #ff7e5e ${p.impulsividad}%, #333 ${p.impulsividad}%);">⚡</div><div>${t('neuro_impulsivity')}<br>${Math.round(p.impulsividad)}%</div></div>
@@ -1332,7 +1274,7 @@ window.addEventListener('load',()=>{
         applyTranslations();
         currentTrackingInterval = null;
         
-        // Botón de ayuda (❓) que abre help.html
+        // Botón de ayuda
         document.getElementById('openHelpBtn').addEventListener('click', () => {
             let iframe = recrearIframe();
             iframe.src = 'help.html';

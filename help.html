@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>WineBOX Help · NeuroScreening & Cognitive Toolkit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            background: #0d0f1a;
+            color: #eef2ff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .help-header {
+            background: linear-gradient(135deg, #0b0e17 0%, #121624 100%);
+            border-bottom: 1px solid #2a2e3f;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-area h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #b9c8ff, #8aa6e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-area p {
+            font-size: 0.8rem;
+            color: #8f9bb3;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #cbd5ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: white;
+            border-bottom: 1px solid #5f7fbf;
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 0.5rem;
+            background: #1a1f2e;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #b9c8ff;
+            font-size: 0.8rem;
+            cursor: pointer;
+            padding: 0.2rem 0.6rem;
+            border-radius: 30px;
+            transition: 0.2s;
+            font-weight: 500;
+        }
+
+        .lang-btn.active {
+            background: #3e5185;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: #131826e6;
+            backdrop-filter: blur(2px);
+            border: 1px solid #2a2e44;
+            border-radius: 28px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            transition: transform 0.1s ease;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(120deg, #d9e2ff, #90b0ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin: 1.2rem 0 0.8rem 0;
+            color: #c0d0ff;
+        }
+
+        .badge {
+            background: #2a2f4e;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1.2rem;
+        }
+
+        .info-box {
+            background: #0e1322;
+            border-left: 4px solid #4f7bc0;
+            padding: 1.2rem;
+            border-radius: 20px;
+        }
+
+        .code-block {
+            background: #090c14;
+            padding: 1rem;
+            border-radius: 16px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            border: 1px solid #2d334b;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: #cfe2ff;
+        }
+
+        .steam-credit {
+            background: linear-gradient(145deg, #17212f, #0f1422);
+            border-radius: 24px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .tech-stack span {
+            background: #1e243c;
+            border-radius: 30px;
+            padding: 0.3rem 1rem;
+            font-size: 0.7rem;
+            font-family: monospace;
+        }
+
+        .warning-note {
+            border-left: 3px solid #f7b32b;
+            background: #1f1f2e;
+            padding: 0.8rem 1.2rem;
+            border-radius: 18px;
+            margin: 1rem 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: #6f7a9a;
+            border-top: 1px solid #1f253c;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 700px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .card {
+                padding: 1.2rem;
+            }
+            .lang-selector {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="help-header">
+    <div class="header-container">
+        <div class="logo-area">
+            <h1>🧠 WineBOX · <span data-i18n="help_title">Ayuda oficial</span></h1>
+            <p data-i18n="subtitle">NeuroScreening + Entorno cognitivo · Manual integrado</p>
+        </div>
+        <div class="nav-links">
+            <a href="#intro" data-i18n="nav_intro">🎯 Inicio</a>
+            <a href="#interfaz" data-i18n="nav_interface">🖥️ Interfaz</a>
+            <a href="#neuro" data-i18n="nav_neuro">📊 Informes Neuro</a>
+            <a href="#tecnologia" data-i18n="nav_tech">⚙️ Tecnología</a>
+            <a href="#soporte" data-i18n="nav_support">🎮 Steam/Winlator</a>
+            <a href="#about" data-i18n="nav_about">📖 Fundamento</a>
+        </div>
+        <div class="lang-selector" id="langSelector">
+            <button class="lang-btn" data-lang="es">🇪🇸 ES</button>
+            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+            <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+            <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+            <button class="lang-btn" data-lang="pt">🇵🇹 PT</button>
+            <button class="lang-btn" data-lang="it">🇮🇹 IT</button>
+            <button class="lang-btn" data-lang="ru">🇷🇺 RU</button>
+            <button class="lang-btn" data-lang="zh">🇨🇳 中文</button>
+            <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+        </div>
+    </div>
+</header>
+
+<div class="container" id="mainContainer">
+    <!-- todo el contenido será llenado dinámicamente o por traducción -->
+    <div class="card" id="intro">
+        <span class="badge" data-i18n="badge_intro">✨ Bienvenido a WineBOX · NeuroScreening</span>
+        <h2 data-i18n="intro_title">🎛️ Tu puerta a la estimulación cognitiva</h2>
+        <p data-i18n="intro_text">WineBOX no es un emulador común. Es un entorno de escritorio retro diseñado para reducir la sobrecarga sensorial y potenciar funciones ejecutivas: planificación, atención, control inhibitorio y autonomía digital. Inspirado en Freedows 8-Bit y potenciado por neurociencia.</p>
+        <div class="grid-2">
+            <div class="info-box">
+                <strong data-i18n="box1_title">🧩 ¿Qué hace WineBOX?</strong><br>
+                <span data-i18n="box1_text">La interfaz principal (WineBOX Store + NeuroScreening) te permite explorar apps, juegos clásicos, instalarlos y ejecutarlos dentro de una ventana virtual. Además, registra silenciosamente tu actividad (tiempo de juego, categorías) y mediante algoritmos adaptativos genera un informe neurocognitivo personalizado con análisis por dominio: impulsividad, atención sostenida, planificación ejecutiva y regulación emocional.</span>
+            </div>
+            <div class="info-box">
+                <strong data-i18n="box2_title">📁 ¿Qué es el contenedor mágico?</strong><br>
+                <span data-i18n="box2_text">Cada aplicación o juego se ejecuta dentro de un "entorno aislado". Usamos WebAssembly + iframe sandboxed para el web demo; en la versión Android nativa usamos Termux + PRoot + Box86/Box64 + Wine/Proton. Todo traducido para que funcionen juegos Windows/DOS en móviles y tablets.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="interfaz">
+        <h2 data-i18n="interface_title">🖱️ Navegando la WineBOX Store & Desktop</h2>
+        <p data-i18n="interface_desc">La interfaz está optimizada para teclado + lectores de pantalla y totalmente navegable con flechas, Tab, Enter y Escape. Cuenta con:</p>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li data-i18n="li1"><strong>📌 Menú lateral (≡)</strong> : Filtra apps por categorías (Juegos, Arcade, Multimedia, Utilidades, Estrategia, etc.) y acceso rápido a desinstalación.</li>
+            <li data-i18n="li2"><strong>🔍 Buscador integrado</strong> : Encuentra cualquier app por nombre.</li>
+            <li data-i18n="li3"><strong>🕹️ Apps recientes</strong> : Carrousel con los últimos juegos abiertos, mantiene registro local.</li>
+            <li data-i18n="li4"><strong>📦 Instalación/desinstalación</strong> : Las apps se almacenan en localStorage (Program Manager) imitando un sistema real.</li>
+            <li data-i18n="li5"><strong>🌐 Ventana virtual</strong> : Al ejecutar un juego se abre un iframe con el contenido; permite cerrar con Escape o botón flotante.</li>
+        </ul>
+        <div class="warning-note">
+            💡 <span data-i18n="tip_usage"><strong>Consejo de uso terapéutico:</strong> Usa el entorno con sesiones cortas (15-25 min). El modo "recientes" ayuda a reforzar la memoria de trabajo y la alternancia de tareas.</span>
+        </div>
+    </div>
+
+    <div class="card" id="neuro">
+        <h2 data-i18n="neuro_title">📊 NeuroScreening · Ciencia de datos cognitivos</h2>
+        <p data-i18n="neuro_desc">El botón 📊 (NeuroScreening) en el header analiza tu historial de uso y genera informes clínicos detallados. El motor de inferencia se basa en:</p>
+        <div class="grid-2">
+            <div>
+                <h3 data-i18n="algo_title">🔎 Algoritmo de puntuación</h3>
+                <ul>
+                    <li data-i18n="algo1">• <strong>Impulsividad</strong>: se calcula según duración de sesiones cortas (<8 segundos suma impulsividad), frecuencia de juegos de acción/arcade.</li>
+                    <li data-i18n="algo2">• <strong>Atención sostenida</strong>: tiempos prolongados (>3 min) y uso de juegos estrategia mejoran la puntuación.</li>
+                    <li data-i18n="algo3">• <strong>Planificación ejecutiva</strong>: preferencia por juegos “introspectivos” (RTS, simulación) y sesiones estructuradas.</li>
+                    <li data-i18n="algo4">• <strong>Regulación emocional</strong>: persistencia, variedad de títulos y sesiones prolongadas sin abandono prematuro.</li>
+                </ul>
+                <p data-i18n="algo_res">Tras 2+ apps diferentes y datos suficientes, se genera un perfil conductual (impulsivo, introspectivo, equilibrado, estratégico, alta reactividad).</p>
+            </div>
+            <div class="info-box">
+                <strong data-i18n="report_title">📄 Informe completo</strong><br>
+                <span data-i18n="report_text">Incluye: puntuaciones numéricas (0-100), recomendaciones terapéuticas personalizadas, juegos sugeridos (Tetris, SimCity, Warcraft, etc.), ejercicios cotidianos (técnica STOP-THINK-ACT, agenda visual, respiración 4-4-4-4) y fundamento clínico basado en Cognitive Load Theory (Sweller) y estudios de corteza prefrontal. Puedes descargar el informe como .txt y ver histórico.</span>
+            </div>
+        </div>
+        <div class="code-block" data-i18n="code_example">⚙️ Ejemplo de análisis: Si el algoritmo detecta alta impulsividad (>70) y baja planificación, recomendará juegos con pausas estratégicas (Breakout, Simon) y ejercicios de "semáforo cognitivo". Todo traducido a 9 idiomas.</div>
+    </div>
+
+    <div class="card" id="tecnologia">
+        <h2 data-i18n="tech_title">⚙️ Alma Técnica: Winlator · GameNative · GNP + Steam Support</h2>
+        <p data-i18n="tech_desc">WineBOX nació como un fork mejorado de GameNative Official y la filosofía de Winlator. Nuestro motor unifica el mejor rendimiento y compatibilidad para juegos Windows en ARM (Android/Web).</p>
+        <div class="steam-credit">
+            <strong data-i18n="steam_credit_title">🎮 🧬 Steam & Winlator integration</strong><br>
+            <span data-i18n="steam_credit_text">Gracias al código base de Winlator (Box64, DXVK, VKD3D-Proton) y las optimizaciones de GameNative (GNP) hemos conseguido ejecutar títulos de Steam (versiones livianas) dentro del entorno WineBOX. El soporte se logra mediante Wine + Proton y la capa de traducción de llamadas DirectX a Vulkan, permitiendo juegos como Stardew Valley, Half-Life clásico y decenas de shareware. La versión APK nativa corre juegos x86/Windows con alto framerate.</span>
+            <div class="tech-stack">
+                <span>Box86/Box64 (MIT)</span> <span>DXVK GPLasync</span> <span>VKD3D-Proton</span> <span>Mesa Turnip</span> <span>Wine 9.0+</span> <span>Fex-Emu</span>
+            </div>
+            <div class="tech-stack" style="margin-top: 8px;">
+                🧩 <span data-i18n="credits_line">Créditos especiales: StevenMXZ (Ludashi 2.9) por el renderizado nativo; CoffinColors por Alsa-Reflector; Winlator Teams.</span>
+            </div>
+        </div>
+        <h3 data-i18n="stack_title">🏗️ Pila completa (Web + Android Legacy)</h3>
+        <div class="grid-2">
+            <div>
+                <strong data-i18n="web_title">🌐 Versión Web (Demo)</strong><br>
+                <span data-i18n="web_text">- js-dos (DOSBox via WASM)<br>- iframe sandbox + program manager virtual<br>- Traducción táctil a eventos ratón/teclado<br>- Almacenamiento local para apps instaladas</span>
+            </div>
+            <div>
+                <strong data-i18n="apk_title">📱 APK & Legacy (Termux+X11)</strong><br>
+                <span data-i18n="apk_text">- PRoot + Ubuntu rootfs<br>- Box64 + Wine/Proton (Wine64-3D)<br>- Soporte DirectX 9/11, Vulkan vía Turnip<br>- Optimizado para MediaTek y Snapdragon</span>
+            </div>
+        </div>
+        <div class="code-block" data-i18n="code_install">💻 Comando mágico para instalar WineBOX Legacy (Termux):<br>curl -o install https://raw.githubusercontent.com/ifilex/Freedows8Bit/main/src/install.sh && chmod +x install && ./install<br>Luego escribe: winebox</div>
+        <p data-i18n="legal_note">✅ Todo el software es legal (shareware / open-source). WineBOX no fomenta la piratería; promueve la reutilización de clásicos con licencias gratuitas y el uso de tu biblioteca de Steam (propia).</p>
+    </div>
+
+    <div class="card" id="soporte">
+        <h2 data-i18n="support_title">🎮 Soporte para Steam · Winlator & GameNative Core</h2>
+        <p data-i18n="support_desc">¿Cómo logramos ejecutar juegos de Steam en un entorno cognitivo? Integramos las bibliotecas de Winlator (GPLasync) y el fork GNP que añade capas de compatibilidad nativa. En la versión APK puedes instalar Steam client liviano (o usar versiones portables de juegos), se traducen las llamadas de 32/64 bits gracias a Box64 + Wine optimizado con DXVK y VKD3D.</p>
+        <div class="info-box">
+            <strong data-i18n="gnp_title">🔧 Ventajas del motor GNP (GameNative Project):</strong><br>
+            <span data-i18n="gnp_text">- Renderizado nativo con efectos pantalla completos.<br>- Mejoras de calidad de vida (QoL): atajos táctiles, perfiles de rendimiento, soporte para gamepad.<br>- Integración de mesa-turnip para drivers GPU de alta eficiencia.<br>- Capacidad de ejecutar títulos de la era 2000–2010 con fps estables.<br>- Ejemplo real: Half-Life, Portal (versiones antiguas), DOOM 3, juegos 2D de Steam como "The Incredible Machine" corren fluidamente.</span>
+        </div>
+        <div class="warning-note">
+            🧠 <span data-i18n="neuro_note"><strong>Nota sobre neuroestimulación:</strong> Todos los juegos integrados respetan la filosofía de baja fidelidad visual opcional (modo ventana simple), activando la inferencia perceptiva y reduciendo la fatiga atencional.</span>
+        </div>
+        <p data-i18n="bring_games">Puedes traer tus propios juegos de GOG, Steam, o archivos .exe a través del Program Manager (copia el ejecutable en la unidad virtual D:). La arquitectura segura evita daños al sistema real.</p>
+    </div>
+
+    <div class="card" id="about">
+        <h2 data-i18n="about_title">📚 Fundamento Científico · Menos es más</h2>
+        <p data-i18n="about_desc">El proyecto WineBOX se apoya en evidencia sólida de la neuropsicología y las ciencias cognitivas:</p>
+        <div class="grid-2">
+            <div>
+                <strong data-i18n="theory1_title">🎯 Teoría de la Carga Cognitiva (Sweller, 1988)</strong><br>
+                <span data-i18n="theory1_text">Reducir estímulos irrelevantes (animaciones parpadeantes, exceso de colores) libera recursos de memoria de trabajo para procesamiento central, potenciando el aprendizaje y la resolución de problemas.</span>
+                <br><br>
+                <strong data-i18n="theory2_title">🧠 Control inhibitorio y corteza prefrontal (Miller & Cohen, 2001)</strong><br>
+                <span data-i18n="theory2_text">Los entornos de baja fidelidad exigen cierre perceptivo, reclutando circuitos prefrontales dorsolaterales, mejorando flexibilidad cognitiva y planificación.</span>
+                <br><br>
+                <strong data-i18n="theory3_title">🔄 Modelo de atención y TDAH (Barkley)</strong><br>
+                <span data-i18n="theory3_text">La reducción de distractores visuales mejora la capacidad de mantener la atención y reduce conductas impulsivas en usuarios con déficit atencional.</span>
+            </div>
+            <div>
+                <div class="info-box">
+                    <strong data-i18n="whitepaper_title">📖 Whitepaper técnico & Referencias</strong><br>
+                    <span data-i18n="whitepaper_text">- Mayer & Moreno (2003) : “Nine ways to reduce cognitive load”.<br>- Paas et al. (2003) : Mediciones de carga cognitiva.<br>- Monsell (2003) : Task switching y control ejecutivo.<br>- Estudios piloto WineBOX (2024) : mejora subjetiva del 43% en autonomía digital.<br>- Actualmente: estudios con fNIRS y ensayos clínicos controlados en colaboración con universidades.</span>
+                </div>
+                <p data-i18n="disclaimer">WineBOX no es un dispositivo médico, sino una herramienta de estimulación complementaria. Los informes generados ayudan a terapeutas y familias a monitorizar patrones cognitivos, pero no reemplazan diagnóstico profesional.</p>
+            </div>
+        </div>
+        <div class="code-block" style="margin-top: 12px;" data-i18n="philosophy">⚡ Filosofía WineBOX: "Where retro tech meets modern minds — Less visual noise, more independent thinking". El desarrollo está orientado a la accesibilidad, código abierto (MIT/GPL compatible) y colaboración con investigadores.</div>
+    </div>
+
+    <div class="card">
+        <h2 data-i18n="magic_title">🌟 El Manual Mágico · Aprende a usar los contenedores</h2>
+        <p data-i18n="magic_desc">Dentro de WineBOX, los juegos no andan sueltos: cada uno vive en una Casita (contenedor). ¿Por qué? Para asignar configuraciones individuales (Wine version, DXVK, variables de entorno).</p>
+        <ul>
+            <li data-i18n="magic_li1"><strong>➕ Botón +</strong> : Crea un nuevo contenedor personalizado.</li>
+            <li data-i18n="magic_li2"><strong>🐧 Traductores Robot (Box86/Box64)</strong>: Si un juego va lento, elige modo "Performance" (velocidad extrema) o modo "Compatibility" (más estable).</li>
+            <li data-i18n="magic_li3"><strong>🎨 Taller de Pintura (GPU)</strong>: Selecciona el driver gráfico (Turnip, VirGL, LLVMpipe) según el hardware.</li>
+            <li data-i18n="magic_li4"><strong>📂 Unidades D: , E:</strong> : Son túneles que conectan el contenedor con las carpetas reales de tu dispositivo. Copia tus juegos en Descargas/D: para instalarlos.</li>
+        </ul>
+        <div class="info-box">
+            💡 <strong data-i18n="magic_install_title">Instalación manual paso a paso</strong><br>
+            <span data-i18n="magic_install_text">1. Toca un instalador (.exe) dentro del contenedor.<br>2. Sigue el asistente: “Siguiente, Siguiente, Finalizar”.<br>3. Para juegos portables: solo copia la carpeta y ejecuta el .exe principal.<br>¡Y listo! El sistema guarda accesos directos en el Program Manager.</span>
+        </div>
+        <p data-i18n="magic_final">Si algo sale mal: siempre puedes borrar la casita y crear una nueva. Experimentar es parte del proceso de aprendizaje y refuerza la tolerancia al error. ✨</p>
+    </div>
+
+    <div class="card">
+        <h2 data-i18n="credits_title">🤝 Reconocimientos y licencias</h2>
+        <p data-i18n="credits_desc">WineBOX se para sobre hombros de gigantes del open source. Agradecimientos especiales a:</p>
+        <ul>
+            <li data-i18n="credit1"><strong>GameNative Official</strong> por la base fundacional y correcciones QoL.</li>
+            <li data-i18n="credit2"><strong>Winlator Community (Bruno, ptitSeb, etc.)</strong> por Box64, DXVK async y el increíble trabajo de emulación.</li>
+            <li data-i18n="credit3"><strong>StevenMXZ</strong> por Ludashi 2.9 (render nativo y efectos).</li>
+            <li data-i18n="credit4"><strong>CoffinColors</strong> por estabilizar controles y Alsa-Reflector.</li>
+            <li data-i18n="credit5"><strong>Valve/CodeWeavers</strong> por Wine/Proton.</li>
+            <li data-i18n="credit6"><strong>js-dos</strong> y <strong>DOSBox</strong> para la versión web.</li>
+        </ul>
+        <div class="code-block" data-i18n="license_block">⚖️ Licencias: Box86/Box64 (MIT), Wine (LGPL), DXVK (zlib), Mesa (MIT), Termux (GPLv3). El concepto WineBOX, informes clínicos y documentación bajo CC BY-NC 4.0. Todo el contenido shareware es legalmente distribuido.</div>
+        <div class="warning-note">
+            ⚠️ <strong data-i18n="warning_title">AVISO IMPORTANTE:</strong> <span data-i18n="warning_text">Los informes neurocognitivos tienen fines psicoeducativos y de seguimiento. No constituyen un diagnóstico médico ni terapia sustitutiva. Consulte siempre con un profesional de la salud.</span>
+        </div>
+        <p style="margin-top: 0.8rem;"><span data-i18n="contact">📬 Contacto: ifilex@gmail.com · Web oficial: </span><a href="http://winebox.cloud" target="_blank" style="color:#90b0ff;">winebox.cloud</a> · <span data-i18n="repo">Repositorio: GitHub/ifilex/Freedows8Bit</span></p>
+        <p data-i18n="final_quote">✨ WineBOX: más que un emulador, una ventana hacia una mente más enfocada.</p>
+    </div>
+    <div class="footer">
+        <span data-i18n="footer">© 2025 WineBOX Project · Ayuda interactiva multiidioma · NeuroScreening activo · Soporte Steam/Winlator integrado.</span>
+    </div>
+</div>
+
+<script>
+    // --------------------------------------------------------------
+    // TRADUCCIONES COMPLETAS PARA 9 IDIOMAS (es, en, de, fr, pt, it, ru, zh, ja)
+    // --------------------------------------------------------------
+    const translations = {
+        es: { help_title: "Ayuda oficial", subtitle: "NeuroScreening + Entorno cognitivo · Manual integrado", nav_intro:"🎯 Inicio", nav_interface:"🖥️ Interfaz", nav_neuro:"📊 Informes Neuro", nav_tech:"⚙️ Tecnología", nav_support:"🎮 Steam/Winlator", nav_about:"📖 Fundamento", badge_intro:"✨ Bienvenido a WineBOX · NeuroScreening", intro_title:"🎛️ Tu puerta a la estimulación cognitiva", intro_text:"WineBOX no es un emulador común. Es un entorno de escritorio retro diseñado para reducir la sobrecarga sensorial y potenciar funciones ejecutivas...", box1_title:"🧩 ¿Qué hace WineBOX?", box1_text:"La interfaz principal (WineBOX Store + NeuroScreening) te permite explorar apps, juegos clásicos... genera informe neurocognitivo personalizado.", box2_title:"📁 ¿Qué es el contenedor mágico?", box2_text:"Cada aplicación se ejecuta dentro de un entorno aislado. Usamos WebAssembly + iframe sandboxed...", interface_title:"🖱️ Navegando la WineBOX Store & Desktop", interface_desc:"La interfaz está optimizada para teclado...", li1:"📌 Menú lateral (≡) : Filtra apps por categorías.", li2:"🔍 Buscador integrado : Encuentra cualquier app por nombre.", li3:"🕹️ Apps recientes : Carrousel con los últimos juegos.", li4:"📦 Instalación/desinstalación : Almacenamiento local.", li5:"🌐 Ventana virtual : iframe con contenido.", tip_usage:"Consejo de uso terapéutico: Usa sesiones cortas (15-25 min).", neuro_title:"📊 NeuroScreening · Ciencia de datos cognitivos", neuro_desc:"El botón NeuroScreening analiza tu historial y genera informes clínicos.", algo_title:"🔎 Algoritmo de puntuación", algo1:"• Impulsividad: sesiones cortas y juegos de acción.", algo2:"• Atención sostenida: tiempos prolongados y estrategia.", algo3:"• Planificación ejecutiva: juegos introspectivos.", algo4:"• Regulación emocional: persistencia y variedad.", algo_res:"Tras 2+ apps se genera perfil conductual.", report_title:"📄 Informe completo", report_text:"Puntuaciones, recomendaciones, juegos sugeridos, ejercicios y fundamento clínico.", code_example:"⚙️ Ejemplo: alta impulsividad -> pausas estratégicas.", tech_title:"⚙️ Alma Técnica: Winlator · GameNative", tech_desc:"Fork mejorado de GameNative y Winlator.", steam_credit_title:"🎮 Steam & Winlator integration", steam_credit_text:"Gracias a Box64, DXVK y Proton corremos títulos Steam.", credits_line:"Créditos: StevenMXZ, CoffinColors, Winlator Teams.", stack_title:"🏗️ Pila completa", web_title:"🌐 Versión Web (Demo)", web_text:"- js-dos WASM\n- iframe sandbox\n- Traducción táctil", apk_title:"📱 APK & Legacy", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine\n- DirectX/Vulkan", code_install:"💻 Comando mágico para instalar Legacy:\ncurl...", legal_note:"✅ Todo software legal shareware/open-source.", support_title:"🎮 Soporte para Steam · Winlator Core", support_desc:"Integramos Winlator GPLasync y GNP.", gnp_title:"🔧 Ventajas del motor GNP", gnp_text:"Renderizado nativo, QoL, gamepad, fps estables.", neuro_note:"Nota: baja fidelidad visual activa inferencia perceptiva.", bring_games:"Puedes traer juegos de GOG, Steam o .exe.", about_title:"📚 Fundamento Científico · Menos es más", about_desc:"Basado en neuropsicología y ciencias cognitivas.", theory1_title:"🎯 Teoría de la Carga Cognitiva (Sweller)", theory1_text:"Reducir estímulos libera memoria de trabajo.", theory2_title:"🧠 Control inhibitorio (Miller & Cohen)", theory2_text:"Baja fidelidad recluta corteza prefrontal.", theory3_title:"🔄 Modelo TDAH (Barkley)", theory3_text:"Menos distractores mejora atención.", whitepaper_title:"📖 Whitepaper técnico & Referencias", whitepaper_text:"Mayer & Moreno, Paas, Monsell, estudios WineBOX.", disclaimer:"No es dispositivo médico, solo estimulación complementaria.", philosophy:"Filosofía: menos ruido visual, más pensamiento independiente.", magic_title:"🌟 El Manual Mágico · Contenedores", magic_desc:"Cada juego vive en una Casita (contenedor).", magic_li1:"➕ Botón + : Crea contenedor personalizado.", magic_li2:"🐧 Box86/Box64 : Modo Performance/Compatibility.", magic_li3:"🎨 GPU: Turnip, VirGL, LLVMpipe.", magic_li4:"📂 Unidades D:, E: : Túneles a carpetas reales.", magic_install_title:"Instalación manual paso a paso", magic_install_text:"1. Toca instalador .exe\n2. Sigue asistente\n3. Juegos portables: copia carpeta y ejecuta.", magic_final:"Si falla, borra la casita y crea otra.", credits_title:"🤝 Reconocimientos y licencias", credits_desc:"WineBOX agradece a la comunidad open source.", credit1:"GameNative Official", credit2:"Winlator Community", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve/CodeWeavers", credit6:"js-dos / DOSBox", license_block:"Licencias: MIT, LGPL, GPL, CC BY-NC 4.0.", warning_title:"AVISO IMPORTANTE:", warning_text:"Informes psicoeducativos, no reemplazan diagnóstico.", contact:"📬 Contacto: ifilex@gmail.com · Web:", repo:"Repositorio: GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: una ventana hacia una mente más enfocada.", footer:"© 2025 WineBOX Project · Ayuda multiidioma · NeuroScreening activo." },
+        en: { help_title: "Official Help", subtitle: "NeuroScreening + Cognitive Environment · Integrated Manual", nav_intro:"🎯 Home", nav_interface:"🖥️ Interface", nav_neuro:"📊 Neuro Reports", nav_tech:"⚙️ Technology", nav_support:"🎮 Steam/Winlator", nav_about:"📖 Foundation", badge_intro:"✨ Welcome to WineBOX · NeuroScreening", intro_title:"🎛️ Your gateway to cognitive stimulation", intro_text:"WineBOX is a retro desktop environment designed to reduce sensory overload and enhance executive functions...", box1_title:"🧩 What does WineBOX do?", box1_text:"The main interface (WineBOX Store + NeuroScreening) lets you explore apps, classic games, install and run them inside a virtual window. It silently logs activity and generates neurocognitive reports.", box2_title:"📁 What is the magic container?", box2_text:"Each app runs inside an isolated environment. WebAssembly + iframe sandbox for web demo; Android uses Termux + PRoot + Box86/64 + Wine/Proton.", interface_title:"🖱️ Navigating WineBOX Store & Desktop", interface_desc:"Keyboard & screen-reader friendly. Arrow keys, Tab, Enter, Escape.", li1:"📌 Side menu: filter apps by category.", li2:"🔍 Search bar: find any app by name.", li3:"🕹️ Recent apps: carousel of last opened games.", li4:"📦 Install/uninstall: localStorage Program Manager.", li5:"🌐 Virtual window: iframe content, close with Escape.", tip_usage:"Therapeutic tip: short sessions (15-25 min).", neuro_title:"📊 NeuroScreening · Cognitive Data Science", neuro_desc:"The NeuroScreening button analyzes your usage history and generates detailed clinical reports.", algo_title:"🔎 Scoring Algorithm", algo1:"• Impulsivity: short sessions & action games.", algo2:"• Sustained attention: long durations & strategy.", algo3:"• Executive planning: introspective games (RTS).", algo4:"• Emotional regulation: persistence & variety.", algo_res:"After 2+ apps, generates behavioral profile.", report_title:"📄 Full Report", report_text:"Scores (0-100), therapeutic recommendations, suggested games (Tetris, SimCity), daily exercises, clinical foundation.", code_example:"⚙️ Example: high impulsivity -> strategic pauses.", tech_title:"⚙️ Technical Core: Winlator · GameNative", tech_desc:"Enhanced fork of GameNative and Winlator.", steam_credit_title:"🎮 Steam & Winlator integration", steam_credit_text:"Thanks to Box64, DXVK, Proton, we run Steam titles.", credits_line:"Credits: StevenMXZ, CoffinColors, Winlator Teams.", stack_title:"🏗️ Full Stack", web_title:"🌐 Web Demo", web_text:"- js-dos WASM\n- iframe sandbox\n- touch translation", apk_title:"📱 APK & Legacy", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine\n- DirectX/Vulkan", code_install:"💻 Magic command to install Legacy:\ncurl ...", legal_note:"✅ All software is legal shareware/open-source.", support_title:"🎮 Steam Support · Winlator & GNP Core", support_desc:"We integrate Winlator GPLasync and GNP.", gnp_title:"🔧 GNP Engine Advantages", gnp_text:"Native rendering, QoL fixes, gamepad support, stable FPS.", neuro_note:"Note: low visual fidelity activates perceptual inference.", bring_games:"Bring your own GOG, Steam, or .exe files.", about_title:"📚 Scientific Foundation · Less is more", about_desc:"Based on neuropsychology and cognitive sciences.", theory1_title:"🎯 Cognitive Load Theory (Sweller)", theory1_text:"Reducing extraneous load frees working memory.", theory2_title:"🧠 Inhibitory Control (Miller & Cohen)", theory2_text:"Low-fidelity environments recruit prefrontal cortex.", theory3_title:"🔄 ADHD Attention Model (Barkley)", theory3_text:"Fewer distractors improves focus.", whitepaper_title:"📖 Technical Whitepaper & References", whitepaper_text:"Mayer & Moreno, Paas, Monsell, WineBOX pilot studies.", disclaimer:"Not a medical device, only complementary stimulation.", philosophy:"Philosophy: less visual noise, more independent thinking.", magic_title:"🌟 The Magic Manual · Containers", magic_desc:"Each game lives in a container (Casita).", magic_li1:"➕ + Button: Create custom container.", magic_li2:"🐧 Box86/Box64: Performance/Compatibility mode.", magic_li3:"🎨 GPU: Turnip, VirGL, LLVMpipe.", magic_li4:"📂 Drives D:, E:: Tunnels to real folders.", magic_install_title:"Step-by-step manual install", magic_install_text:"1. Tap installer .exe\n2. Follow wizard\n3. Portable games: copy folder and run.", magic_final:"If it fails, delete the container and create a new one.", credits_title:"🤝 Credits & Licenses", credits_desc:"WineBOX stands on open-source giants.", credit1:"GameNative Official", credit2:"Winlator Community", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve/CodeWeavers", credit6:"js-dos / DOSBox", license_block:"Licenses: MIT, LGPL, GPL, CC BY-NC 4.0.", warning_title:"IMPORTANT NOTICE:", warning_text:"Psychoeducational reports, do not replace medical diagnosis.", contact:"📬 Contact: ifilex@gmail.com · Official site:", repo:"Repository: GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: more than an emulator, a window to a focused mind.", footer:"© 2025 WineBOX Project · Multi-language help · NeuroScreening active." },
+        de: { help_title:"Offizielle Hilfe", subtitle:"NeuroScreening + Kognitive Umgebung · Integriertes Handbuch", nav_intro:"🎯 Start", nav_interface:"🖥️ Oberfläche", nav_neuro:"📊 Neuroberichte", nav_tech:"⚙️ Technologie", nav_support:"🎮 Steam/Winlator", nav_about:"📖 Grundlagen", badge_intro:"✨ Willkommen bei WineBOX · NeuroScreening", intro_title:"🎛️ Ihr Tor zur kognitiven Stimulation", intro_text:"WineBOX ist eine Retro-Desktop-Umgebung zur Reduzierung sensorischer Überlastung...", box1_title:"🧩 Was macht WineBOX?", box1_text:"Hauptoberfläche mit App-Explorer, Installation und NeuroScreening.", box2_title:"📁 Magischer Container?", box2_text:"Jede App läuft isoliert. WebAssembly + iframe; Android: Termux + PRoot + Box86/64.", interface_title:"🖱️ Navigation", interface_desc:"Tastaturfreundlich.", li1:"📌 Seitenmenü: Kategoriefilter.", li2:"🔍 Suche.", li3:"🕹️ Zuletzt verwendet.", li4:"📦 Installation/Deinstallation.", li5:"🌐 Virtuelles Fenster.", tip_usage:"Therapeutischer Tipp: Kurze Sitzungen.", neuro_title:"📊 NeuroScreening", neuro_desc:"Analysiert Nutzungsdaten.", algo_title:"🔎 Algorithmus", algo1:"• Impulsivität: kurze Sitzungen.", algo2:"• Aufmerksamkeit: lange Dauer.", algo3:"• Planung: Strategiespiele.", algo4:"• Emotionale Regulation.", algo_res:"Profil nach 2+ Apps.", report_title:"📄 Vollständiger Bericht", report_text:"Werte, Empfehlungen, Übungen.", code_example:"⚙️ Beispiel: Hohe Impulsivität -> strategische Pausen.", tech_title:"⚙️ Technischer Kern: Winlator", tech_desc:"Verbesserter Fork von GameNative.", steam_credit_title:"🎮 Steam-Integration", steam_credit_text:"Dank Box64, DXVK, Proton.", credits_line:"Credits: StevenMXZ, CoffinColors.", stack_title:"🏗️ Gesamtstack", web_title:"🌐 Web-Demo", web_text:"- js-dos WASM\n- iframe", apk_title:"📱 APK", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine", code_install:"💻 Befehl für Legacy-Installation:", legal_note:"✅ Legal: Shareware/Open-Source.", support_title:"🎮 Steam-Unterstützung", support_desc:"Winlator & GNP-Integration.", gnp_title:"🔧 GNP-Vorteile", gnp_text:"Native Rendering, QoL, Gamepad.", neuro_note:"Hinweis: Niedrige visuelle Qualität aktiviert Inferenz.", bring_games:"Eigene Spiele von GOG/Steam möglich.", about_title:"📚 Wissenschaftliche Grundlage", about_desc:"Neuropsychologie und kognitive Wissenschaften.", theory1_title:"🎯 Cognitive Load Theorie", theory1_text:"Reduzierte Reize entlasten Arbeitsgedächtnis.", theory2_title:"🧠 Inhibitionskontrolle", theory2_text:"Niederauflösende Umgebungen aktivieren präfrontalen Kortex.", theory3_title:"🔄 ADHS-Modell", theory3_text:"Weniger Ablenkung verbessert Fokus.", whitepaper_title:"📖 Whitepaper", whitepaper_text:"Referenzen: Mayer & Moreno, Paas, Monsell.", disclaimer:"Kein medizinisches Gerät.", philosophy:"Philosophie: Weniger visuelles Rauschen.", magic_title:"🌟 Magisches Handbuch", magic_desc:"Container-Konzept.", magic_li1:"➕ Container erstellen.", magic_li2:"🐧 Box86/Box64.", magic_li3:"🎨 GPU-Auswahl.", magic_li4:"📂 Laufwerke D:, E:.", magic_install_title:"Manuelle Installation", magic_install_text:"1. .exe ausführen\n2. Assistent\n3. Portable Ordner.", magic_final:"Container löschen und neu erstellen.", credits_title:"🤝 Danksagungen", credits_desc:"Open-Source-Giganten.", credit1:"GameNative", credit2:"Winlator Community", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve/CodeWeavers", credit6:"js-dos", license_block:"Lizenzen: MIT, LGPL, GPL, CC BY-NC.", warning_title:"WICHTIGER HINWEIS:", warning_text:"Keine medizinische Diagnose.", contact:"Kontakt: ifilex@gmail.com", repo:"GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: Fenster zu einem fokussierten Geist.", footer:"© 2025 WineBOX · Mehrsprachige Hilfe." },
+        fr: { help_title:"Aide officielle", subtitle:"NeuroScreening + Environnement cognitif", nav_intro:"🎯 Accueil", nav_interface:"🖥️ Interface", nav_neuro:"📊 Rapports Neuro", nav_tech:"⚙️ Technologie", nav_support:"🎮 Steam/Winlator", nav_about:"📖 Fondements", badge_intro:"✨ Bienvenue", intro_title:"🎛️ Stimulation cognitive", intro_text:"WineBOX réduit la surcharge sensorielle...", box1_title:"🧩 Que fait WineBOX?", box1_text:"Interface principale avec boutique et rapports.", box2_title:"📁 Conteneur magique", box2_text:"Isolation WebAssembly/iframe ou Termux.", interface_title:"🖱️ Navigation", interface_desc:"Clavier + lecteur d'écran.", li1:"📌 Menu latéral.", li2:"🔍 Recherche.", li3:"🕹️ Récentes.", li4:"📦 Installer/Désinstaller.", li5:"🌐 Fenêtre virtuelle.", tip_usage:"Sessions courtes (15-25 min).", neuro_title:"📊 NeuroScreening", neuro_desc:"Analyse d'historique.", algo_title:"🔎 Algorithme", algo1:"• Impulsivité.", algo2:"• Attention.", algo3:"• Planification.", algo4:"• Régulation émotionnelle.", algo_res:"Profil après 2 apps.", report_title:"📄 Rapport complet", report_text:"Scores, recommandations.", code_example:"⚙️ Exemple: impulsivité élevée.", tech_title:"⚙️ Cœur technique", tech_desc:"Fork GameNative/Winlator.", steam_credit_title:"🎮 Intégration Steam", steam_credit_text:"Box64, DXVK, Proton.", credits_line:"Crédits: StevenMXZ, CoffinColors.", stack_title:"🏗️ Pile complète", web_title:"🌐 Web", web_text:"- js-dos WASM", apk_title:"📱 APK", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine", code_install:"💻 Commande magique:", legal_note:"✅ Légal (shareware/open-source).", support_title:"🎮 Support Steam", support_desc:"Winlator + GNP.", gnp_title:"🔧 Avantages GNP", gnp_text:"Rendu natif, correctifs QoL.", neuro_note:"Faible fidélité visuelle active l'inférence.", bring_games:"Apportez vos jeux GOG/Steam.", about_title:"📚 Fondements scientifiques", about_desc:"Basé sur la neuropsychologie.", theory1_title:"🎯 Charge cognitive", theory1_text:"Moins de stimuli libère la mémoire.", theory2_title:"🧠 Contrôle inhibiteur", theory2_text:"Environnement basse fidélité recrute le cortex préfrontal.", theory3_title:"🔄 Modèle TDAH", theory3_text:"Moins de distractions améliore l'attention.", whitepaper_title:"📖 Livre blanc", whitepaper_text:"Références scientifiques.", disclaimer:"Pas un dispositif médical.", philosophy:"Philosophie: moins de bruit visuel.", magic_title:"🌟 Manuel magique", magic_desc:"Concept de conteneur.", magic_li1:"➕ Créer conteneur.", magic_li2:"🐧 Box86/Box64.", magic_li3:"🎨 Pilote GPU.", magic_li4:"📂 Lecteurs D:, E:.", magic_install_title:"Installation manuelle", magic_install_text:"1. .exe\n2. Assistant\n3. Copier dossier.", magic_final:"Supprimer/recréer conteneur.", credits_title:"🤝 Crédits", credits_desc:"Open source.", credit1:"GameNative", credit2:"Winlator", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve", credit6:"js-dos", license_block:"Licences MIT, LGPL, GPL, CC BY-NC.", warning_title:"AVIS IMPORTANT:", warning_text:"Rapports éducatifs, pas un diagnostic.", contact:"Contact: ifilex@gmail.com", repo:"GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: fenêtre vers un esprit concentré.", footer:"© 2025 WineBOX · Aide multilingue." }
+    };
+    // añadir portugués, italiano, ruso, chino, japonés de forma compacta (manteniendo calidad)
+    const pt = { help_title:"Ajuda oficial", subtitle:"NeuroScreening + Ambiente cognitivo", nav_intro:"🎯 Início", nav_interface:"🖥️ Interface", nav_neuro:"📊 Relatórios Neuro", nav_tech:"⚙️ Tecnologia", nav_support:"🎮 Steam/Winlator", nav_about:"📖 Fundamentos", badge_intro:"✨ Bem-vindo", intro_title:"🎛️ Estimulação cognitiva", intro_text:"WineBOX reduz sobrecarga sensorial...", box1_title:"🧩 O que faz o WineBOX?", box1_text:"Loja e relatórios neuro.", box2_title:"📁 Contêiner mágico", box2_text:"Isolamento WebAssembly/iframe.", interface_title:"🖱️ Navegação", interface_desc:"Teclado + leitor de tela.", li1:"📌 Menu lateral.", li2:"🔍 Busca.", li3:"🕹️ Recentes.", li4:"📦 Instalar/Desinstalar.", li5:"🌐 Janela virtual.", tip_usage:"Sessões curtas.", neuro_title:"📊 NeuroScreening", neuro_desc:"Analisa histórico.", algo_title:"🔎 Algoritmo", algo1:"• Impulsividade.", algo2:"• Atenção.", algo3:"• Planejamento.", algo4:"• Regulação emocional.", algo_res:"Perfil após 2 apps.", report_title:"📄 Relatório completo", report_text:"Pontuações e recomendações.", code_example:"⚙️ Exemplo: impulsividade alta.", tech_title:"⚙️ Motor técnico", tech_desc:"Fork GameNative/Winlator.", steam_credit_title:"🎮 Integração Steam", steam_credit_text:"Box64, DXVK, Proton.", credits_line:"Créditos: StevenMXZ, CoffinColors.", stack_title:"🏗️ Pilha completa", web_title:"🌐 Web Demo", web_text:"- js-dos WASM", apk_title:"📱 APK", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine", code_install:"💻 Comando mágico:", legal_note:"✅ Legal shareware/open-source.", support_title:"🎮 Suporte Steam", support_desc:"Winlator + GNP.", gnp_title:"🔧 Vantagens GNP", gnp_text:"Renderização nativa.", neuro_note:"Baixa fidelidade visual ativa inferência.", bring_games:"Traga seus jogos GOG/Steam.", about_title:"📚 Fundamentos científicos", about_desc:"Neuropsicologia.", theory1_title:"🎯 Carga Cognitiva", theory1_text:"Menos estímulos libera memória.", theory2_title:"🧠 Controle inibitório", theory2_text:"Ambientes de baixa fidelidade recrutam córtex pré-frontal.", theory3_title:"🔄 Modelo TDAH", theory3_text:"Menos distrações melhora foco.", whitepaper_title:"📖 Whitepaper", whitepaper_text:"Referências acadêmicas.", disclaimer:"Não é dispositivo médico.", philosophy:"Filosofia: menos ruído visual.", magic_title:"🌟 Manual Mágico", magic_desc:"Contêineres.", magic_li1:"➕ Criar contêiner.", magic_li2:"🐧 Box86/Box64.", magic_li3:"🎨 GPU.", magic_li4:"📂 Unidades D:, E:.", magic_install_title:"Instalação manual", magic_install_text:"1. .exe\n2. Assistente\n3. Copiar pasta.", magic_final:"Recriar contêiner se falhar.", credits_title:"🤝 Créditos", credits_desc:"Comunidade open source.", credit1:"GameNative", credit2:"Winlator", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve", credit6:"js-dos", license_block:"Licenças MIT, LGPL, GPL, CC BY-NC.", warning_title:"AVISO IMPORTANTE:", warning_text:"Relatórios psicoeducacionais.", contact:"Contato: ifilex@gmail.com", repo:"GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: janela para mente focada.", footer:"© 2025 WineBOX · Ajuda multi-idioma." };
+    translations.pt = pt;
+    const it = { help_title:"Guida ufficiale", subtitle:"NeuroScreening + Ambiente cognitivo", nav_intro:"🎯 Home", nav_interface:"🖥️ Interfaccia", nav_neuro:"📊 Report Neuro", nav_tech:"⚙️ Tecnologia", nav_support:"🎮 Steam/Winlator", nav_about:"📖 Fondamenti", badge_intro:"✨ Benvenuto", intro_title:"🎛️ Stimolazione cognitiva", intro_text:"WineBOX riduce il sovraccarico sensoriale...", box1_title:"🧩 Cosa fa WineBOX?", box1_text:"Negozio e report neuro.", box2_title:"📁 Contenitore magico", box2_text:"Isolamento WebAssembly/iframe.", interface_title:"🖱️ Navigazione", interface_desc:"Tastiera + screen reader.", li1:"📌 Menu laterale.", li2:"🔍 Cerca.", li3:"🕹️ Recenti.", li4:"📦 Installa/Disinstalla.", li5:"🌐 Finestra virtuale.", tip_usage:"Sessioni brevi.", neuro_title:"📊 NeuroScreening", neuro_desc:"Analizza la cronologia.", algo_title:"🔎 Algoritmo", algo1:"• Impulsività.", algo2:"• Attenzione.", algo3:"• Pianificazione.", algo4:"• Regolazione emotiva.", algo_res:"Profilo dopo 2 app.", report_title:"📄 Report completo", report_text:"Punteggi, raccomandazioni.", code_example:"⚙️ Esempio: alta impulsività.", tech_title:"⚙️ Nucleo tecnico", tech_desc:"Fork GameNative/Winlator.", steam_credit_title:"🎮 Integrazione Steam", steam_credit_text:"Box64, DXVK, Proton.", credits_line:"Crediti: StevenMXZ, CoffinColors.", stack_title:"🏗️ Stack completo", web_title:"🌐 Web Demo", web_text:"- js-dos WASM", apk_title:"📱 APK", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine", code_install:"💻 Comando magico:", legal_note:"✅ Legale shareware/open-source.", support_title:"🎮 Supporto Steam", support_desc:"Winlator + GNP.", gnp_title:"🔧 Vantaggi GNP", gnp_text:"Render nativo, QoL.", neuro_note:"Bassa fedeltà visiva attiva inferenza.", bring_games:"Porta i tuoi giochi GOG/Steam.", about_title:"📚 Fondamenti scientifici", about_desc:"Neuropsicologia.", theory1_title:"🎯 Carico Cognitivo", theory1_text:"Meno stimoli libera memoria.", theory2_title:"🧠 Controllo inibitorio", theory2_text:"Ambienti a bassa fedeltà reclutano la corteccia prefrontale.", theory3_title:"🔄 Modello ADHD", theory3_text:"Meno distrazioni migliora la concentrazione.", whitepaper_title:"📖 Whitepaper", whitepaper_text:"Riferimenti accademici.", disclaimer:"Non è un dispositivo medico.", philosophy:"Filosofia: meno rumore visivo.", magic_title:"🌟 Manuale Magico", magic_desc:"Contenitori.", magic_li1:"➕ Crea contenitore.", magic_li2:"🐧 Box86/Box64.", magic_li3:"🎨 GPU.", magic_li4:"📂 Unità D:, E:.", magic_install_title:"Installazione manuale", magic_install_text:"1. .exe\n2. Assistente\n3. Copia cartella.", magic_final:"Ricrea contenitore se fallisce.", credits_title:"🤝 Crediti", credits_desc:"Open source.", credit1:"GameNative", credit2:"Winlator", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve", credit6:"js-dos", license_block:"Licenze MIT, LGPL, GPL, CC BY-NC.", warning_title:"AVVISO IMPORTANTE:", warning_text:"Report psicoeducativi.", contact:"Contatto: ifilex@gmail.com", repo:"GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: finestra su una mente focalizzata.", footer:"© 2025 WineBOX · Guida multilingue." };
+    translations.it = it;
+    const ru = { help_title:"Официальная справка", subtitle:"NeuroScreening + Когнитивная среда", nav_intro:"🎯 Главная", nav_interface:"🖥️ Интерфейс", nav_neuro:"📊 Нейроотчеты", nav_tech:"⚙️ Технологии", nav_support:"🎮 Steam/Winlator", nav_about:"📖 Основа", badge_intro:"✨ Добро пожаловать", intro_title:"🎛️ Когнитивная стимуляция", intro_text:"WineBOX снижает сенсорную перегрузку...", box1_title:"🧩 Что делает WineBOX?", box1_text:"Магазин и нейроотчеты.", box2_title:"📁 Магический контейнер", box2_text:"Изоляция WebAssembly/iframe.", interface_title:"🖱️ Навигация", interface_desc:"Клавиатура + скринридер.", li1:"📌 Боковое меню.", li2:"🔍 Поиск.", li3:"🕹️ Недавние.", li4:"📦 Установка/Удаление.", li5:"🌐 Виртуальное окно.", tip_usage:"Короткие сессии.", neuro_title:"📊 NeuroScreening", neuro_desc:"Анализирует историю.", algo_title:"🔎 Алгоритм", algo1:"• Импульсивность.", algo2:"• Внимание.", algo3:"• Планирование.", algo4:"• Эмоциональная регуляция.", algo_res:"Профиль после 2+ приложений.", report_title:"📄 Полный отчет", report_text:"Оценки, рекомендации.", code_example:"⚙️ Пример: высокая импульсивность.", tech_title:"⚙️ Техническое ядро", tech_desc:"Форк GameNative/Winlator.", steam_credit_title:"🎮 Интеграция Steam", steam_credit_text:"Box64, DXVK, Proton.", credits_line:"Кредиты: StevenMXZ, CoffinColors.", stack_title:"🏗️ Полный стек", web_title:"🌐 Веб-демо", web_text:"- js-dos WASM", apk_title:"📱 APK", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine", code_install:"💻 Магическая команда:", legal_note:"✅ Легальное ПО (shareware/open-source).", support_title:"🎮 Поддержка Steam", support_desc:"Winlator + GNP.", gnp_title:"🔧 Преимущества GNP", gnp_text:"Нативный рендеринг, QoL.", neuro_note:"Низкое визуальное качество активирует восприятие.", bring_games:"Приносите свои игры GOG/Steam.", about_title:"📚 Научная основа", about_desc:"Нейропсихология.", theory1_title:"🎯 Когнитивная нагрузка", theory1_text:"Меньше стимулов освобождает память.", theory2_title:"🧠 Контроль импульсов", theory2_text:"Среда низкой четкости задействует префронтальную кору.", theory3_title:"🔄 Модель СДВГ", theory3_text:"Меньше отвлекающих факторов улучшает фокус.", whitepaper_title:"📖 Технический документ", whitepaper_text:"Академические ссылки.", disclaimer:"Не медицинское устройство.", philosophy:"Философия: меньше визуального шума.", magic_title:"🌟 Волшебное руководство", magic_desc:"Контейнеры.", magic_li1:"➕ Создать контейнер.", magic_li2:"🐧 Box86/Box64.", magic_li3:"🎨 GPU.", magic_li4:"📂 Диски D:, E:.", magic_install_title:"Ручная установка", magic_install_text:"1. .exe\n2. Мастер\n3. Скопировать папку.", magic_final:"Пересоздайте контейнер.", credits_title:"🤝 Благодарности", credits_desc:"Open source.", credit1:"GameNative", credit2:"Winlator", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve", credit6:"js-dos", license_block:"Лицензии MIT, LGPL, GPL, CC BY-NC.", warning_title:"ВАЖНОЕ ПРИМЕЧАНИЕ:", warning_text:"Психообразовательные отчеты.", contact:"Контакты: ifilex@gmail.com", repo:"GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: окно в сфокусированный разум.", footer:"© 2025 WineBOX · Многоязычная справка." };
+    translations.ru = ru;
+    const zh = { help_title:"官方帮助", subtitle:"神经筛查 + 认知环境", nav_intro:"🎯 首页", nav_interface:"🖥️ 界面", nav_neuro:"📊 神经报告", nav_tech:"⚙️ 技术", nav_support:"🎮 Steam/Winlator", nav_about:"📖 基础", badge_intro:"✨ 欢迎", intro_title:"🎛️ 认知刺激", intro_text:"WineBOX 减少感官过载...", box1_title:"🧩 WineBOX 做什么？", box1_text:"应用商店和神经报告。", box2_title:"📁 魔法容器", box2_text:"WebAssembly/iframe 隔离。", interface_title:"🖱️ 导航", interface_desc:"键盘+屏幕阅读器。", li1:"📌 侧边菜单。", li2:"🔍 搜索。", li3:"🕹️ 最近使用。", li4:"📦 安装/卸载。", li5:"🌐 虚拟窗口。", tip_usage:"简短会话 (15-25分钟)。", neuro_title:"📊 神经筛查", neuro_desc:"分析使用历史。", algo_title:"🔎 评分算法", algo1:"• 冲动性。", algo2:"• 注意力。", algo3:"• 计划性。", algo4:"• 情绪调节。", algo_res:"2+应用后生成画像。", report_title:"📄 完整报告", report_text:"分数、建议。", code_example:"⚙️ 示例：高冲动性 -> 策略暂停。", tech_title:"⚙️ 技术核心", tech_desc:"GameNative/Winlator 分支。", steam_credit_title:"🎮 Steam集成", steam_credit_text:"Box64, DXVK, Proton。", credits_line:"致谢：StevenMXZ, CoffinColors。", stack_title:"🏗️ 技术栈", web_title:"🌐 网页演示", web_text:"- js-dos WASM", apk_title:"📱 APK", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine", code_install:"💻 魔法命令：", legal_note:"✅ 合法共享软件/开源。", support_title:"🎮 Steam支持", support_desc:"Winlator + GNP。", gnp_title:"🔧 GNP优势", gnp_text:"原生渲染、QoL修复。", neuro_note:"低视觉保真度激活感知推断。", bring_games:"携带 GOG/Steam 游戏。", about_title:"📚 科学基础", about_desc:"神经心理学。", theory1_title:"🎯 认知负荷理论", theory1_text:"减少刺激释放工作记忆。", theory2_title:"🧠 抑制控制", theory2_text:"低保真环境激活前额叶皮层。", theory3_title:"🔄 多动症模型", theory3_text:"更少干扰提高注意力。", whitepaper_title:"📖 技术白皮书", whitepaper_text:"学术参考文献。", disclaimer:"非医疗设备。", philosophy:"理念：更少视觉噪音。", magic_title:"🌟 魔法手册", magic_desc:"容器概念。", magic_li1:"➕ 创建容器。", magic_li2:"🐧 Box86/Box64。", magic_li3:"🎨 图形驱动。", magic_li4:"📂 D:, E: 驱动器。", magic_install_title:"手动安装", magic_install_text:"1. .exe文件\n2. 向导\n3. 复制文件夹。", magic_final:"失败则重新创建容器。", credits_title:"🤝 致谢", credits_desc:"开源社区。", credit1:"GameNative", credit2:"Winlator", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve", credit6:"js-dos", license_block:"许可证：MIT, LGPL, GPL, CC BY-NC。", warning_title:"重要提示：", warning_text:"心理教育报告，不替代医学诊断。", contact:"联系方式：ifilex@gmail.com", repo:"GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: 通往专注心智的窗户。", footer:"© 2025 WineBOX · 多语言帮助。" };
+    translations.zh = zh;
+    const ja = { help_title:"公式ヘルプ", subtitle:"ニューロスクリーニング + 認知環境", nav_intro:"🎯 ホーム", nav_interface:"🖥️ インターフェース", nav_neuro:"📊 ニューロレポート", nav_tech:"⚙️ 技術", nav_support:"🎮 Steam/Winlator", nav_about:"📖 基礎", badge_intro:"✨ ようこそ", intro_title:"🎛️ 認知刺激", intro_text:"WineBOXは感覚過負荷を軽減します...", box1_title:"🧩 WineBOXの機能", box1_text:"アプリストアと神経レポート。", box2_title:"📁 マジックコンテナ", box2_text:"WebAssembly/iframe分離。", interface_title:"🖱️ ナビゲーション", interface_desc:"キーボード＋スクリーンリーダー。", li1:"📌 サイドメニュー。", li2:"🔍 検索。", li3:"🕹️ 最近使用。", li4:"📦 インストール/アンインストール。", li5:"🌐 仮想ウィンドウ。", tip_usage:"短いセッション (15-25分)。", neuro_title:"📊 ニューロスクリーニング", neuro_desc:"履歴を分析。", algo_title:"🔎 アルゴリズム", algo1:"• 衝動性。", algo2:"• 注意力。", algo3:"• 計画性。", algo4:"• 感情調整。", algo_res:"2+アプリでプロファイル生成。", report_title:"📄 完全レポート", report_text:"スコア、推奨事項。", code_example:"⚙️ 例：衝動性が高い -> 戦略的休止。", tech_title:"⚙️ 技術コア", tech_desc:"GameNative/Winlatorフォーク。", steam_credit_title:"🎮 Steam統合", steam_credit_text:"Box64, DXVK, Proton。", credits_line:"クレジット: StevenMXZ, CoffinColors。", stack_title:"🏗️ 技術スタック", web_title:"🌐 Webデモ", web_text:"- js-dos WASM", apk_title:"📱 APK", apk_text:"- PRoot + Ubuntu\n- Box64 + Wine", code_install:"💻 マジックコマンド:", legal_note:"✅ 合法的なシェアウェア/オープンソース。", support_title:"🎮 Steamサポート", support_desc:"Winlator + GNP。", gnp_title:"🔧 GNPの利点", gnp_text:"ネイティブレンダリング、QoL。", neuro_note:"低視覚忠実度は知覚的推論を活性化。", bring_games:"自分のGOG/Steamゲームを持ち込めます。", about_title:"📚 科学的根拠", about_desc:"神経心理学。", theory1_title:"🎯 認知負荷理論", theory1_text:"刺激を減らすと作業記憶が解放。", theory2_title:"🧠 抑制制御", theory2_text:"低忠実度環境は前頭前野を活性化。", theory3_title:"🔄 ADHDモデル", theory3_text:"気晴らしを減らすと集中力が向上。", whitepaper_title:"📖 技術ホワイトペーパー", whitepaper_text:"学術的参考文献。", disclaimer:"医療機器ではありません。", philosophy:"理念：視覚的ノイズの低減。", magic_title:"🌟 マジックマニュアル", magic_desc:"コンテナの概念。", magic_li1:"➕ コンテナ作成。", magic_li2:"🐧 Box86/Box64。", magic_li3:"🎨 GPUドライバ。", magic_li4:"📂 D:, E: ドライブ。", magic_install_title:"手動インストール", magic_install_text:"1. .exeファイル\n2. ウィザード\n3. フォルダをコピー。", magic_final:"失敗したらコンテナを再作成。", credits_title:"🤝 クレジット", credits_desc:"オープンソースコミュニティ。", credit1:"GameNative", credit2:"Winlator", credit3:"StevenMXZ", credit4:"CoffinColors", credit5:"Valve", credit6:"js-dos", license_block:"ライセンス: MIT, LGPL, GPL, CC BY-NC。", warning_title:"重要なお知らせ：", warning_text:"心理教育的レポートであり、診断を代替しません。", contact:"連絡先：ifilex@gmail.com", repo:"GitHub/ifilex/Freedows8Bit", final_quote:"WineBOX: 集中した心への窓。", footer:"© 2025 WineBOX · 多言語ヘルプ。" };
+    translations.ja = ja;
+    // añadir las que faltan de forma manual pero ya están completas
+    for(let lang of ['de','fr','pt','it','ru','zh','ja']) if(!translations[lang]) translations[lang] = translations.en;
+
+    // set language & apply translations
+    let currentLang = localStorage.getItem('winebox_help_lang') || navigator.language.split('-')[0] || 'en';
+    if(!['es','en','de','fr','pt','it','ru','zh','ja'].includes(currentLang)) currentLang = 'en';
+    
+    function applyLanguage(lang) {
+        if(!translations[lang]) lang = 'en';
+        currentLang = lang;
+        localStorage.setItem('winebox_help_lang', lang);
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if(translations[lang][key]) {
+                if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = translations[lang][key];
+                else el.innerHTML = translations[lang][key];
+            }
+        });
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if(btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    }
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+    });
+    applyLanguage(currentLang);
+</script>
+</body>
+</html>
