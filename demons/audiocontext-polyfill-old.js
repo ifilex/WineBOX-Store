@@ -4,44 +4,67 @@ audiocontext-polyfill.js v0.1.1
 Licensed under the MIT license
 */
 
-// ============================================
-// CLEAN-DOS.JS - Elimina UI pero mantiene eventos
-// ============================================
-
-
-
 (function() {
-    console.log('🧹 Clean-DOS: Iniciando parche');
-    
-    // Guardar referencia original
+    // 1. Parchear la función Dos para forzar opciones
     const originalDos = window.Dos;
-    if (!originalDos) {
-        console.error('Clean-DOS: Dos no encontrado');
-        return;
-    }
-    
-    // Reemplazar Dos
-    window.Dos = function(element, userOptions) {
-        // Configuración limpia
-        const options = userOptions || {};
-//        options.noSideBar = true;
-//        options.noSocialLinks = true;
-        options.style = "none"; 
-        
-        console.log('🧹 Clean-DOS: Creando emulador sin UI');
-        const emulator = originalDos.call(this, element, options);
-        
-        // Guardar referencia global
-        window.__currentEmulator = emulator;
-        
-        return emulator;
+    window.Dos = function(element, options) {
+        options = options || {};
+        options.noSideBar = true;
+        options.noSocialLinks = true;
+        options.style = "none";  // ← Esto desactiva toda la UI
+        return originalDos.call(this, element, options);
     };
     
-    // Copiar propiedades
-    Object.assign(window.Dos, originalDos);
-
+    // 2. Observador que elimina elementos no deseados cuando aparecen
+    const observer = new MutationObserver(function(mutations) {
+        // Buscar y eliminar sidebar
+        const sidebars = document.querySelectorAll([
+            '.emulator-sidebar',
+            '[class*="SideBar"]',
+            '[class*="sidebar"]',
+            '.absolute.bg-gray-500.bg-opacity-80', // Tips overlay
+            '.z-50.rounded',                       // Modal de tips
+            '.emulator-options',
+            '.action-bar',
+            '.hg-candidate-box'
+        ].join(','));
+        
+        sidebars.forEach(el => {
+            if (el && el.remove) {
+                console.log('🗑️ Eliminando UI:', el.className);
+                el.remove();
+            }
+        });
+        
+        // También buscar por contenido de texto (tips)
+        const allDivs = document.querySelectorAll('div');
+        allDivs.forEach(div => {
+            const text = div.innerText || '';
+            if (text.includes('Mouse lock') || 
+                text.includes('Mobile Controls') ||
+                text.includes('Sidebar') ||
+                text.includes('Save/Load')) {
+                console.log('🗑️ Eliminando tips por texto');
+                div.remove();
+            }
+        });
+    });
+    
+    // Iniciar observación cuando el DOM esté listo
+    window.addEventListener('load', () => {
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true
+        });
+        
+        // Limpieza inicial
+        setTimeout(() => {
+            const tips = document.querySelectorAll('.absolute.bg-gray-500.bg-opacity-80');
+            tips.forEach(t => t.remove());
+        }, 100);
+    });
 })();
-
 
 
 (function(window, undefined) {

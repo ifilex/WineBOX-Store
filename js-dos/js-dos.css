@@ -1689,71 +1689,27 @@ select:focus {
 @media (min-width: 1536px) {
 }
 
-
-/* ============================================
-   PARCH: Eliminar TODA la UI de js-dos
-   ============================================ */
-
-/* Sidebar principal */
+/* Ocultar solo lo que molesta */
 .emulator-sidebar,
-.sidebar,
 [class*="SideBar"],
 [class*="sidebar"],
-[class*="side-bar"] {
-    display: none !important;
-}
-
-/* Diálogo de tips (el que explica las opciones) */
-.tips-container,
-.tip-container,
-[class*="Tips"],
-[class*="tip"],
-.tips-overlay,
-.modal-tips,
-.absolute.bg-gray-500.bg-opacity-80,
-div[class*="z-50"][class*="rounded"],
-div[class*="bg-gray-500"][class*="bg-opacity-80"] {
-    display: none !important;
-}
-
-/* Barra de acciones flotante */
 .emulator-options,
-.action-bar,
-[class*="ActionBar"],
-[class*="action-bar"],
-[class*="emulator-options"] {
+.hg-candidate-box,
+.absolute.bg-gray-500 {
     display: none !important;
 }
 
-/* Botones individuales */
-.emulator-control-select,
-.emulator-button-control,
-.emulator-control-exit-fullscreen-icon,
-.emulator-control-close-icon,
-button[data-skbtn="save"],
-button[data-skbtn="options"],
-button[data-skbtn="fullscreen"],
-.hg-button[data-skbtn="save"],
-.hg-button[data-skbtn="options"],
-.hg-button[data-skbtn="fullscreen"] {
-    display: none !important;
+/* Mantener los joystick visibles (para móvil) */
+.emulator-mouse-overlay {
+    pointer-events: auto !important;
 }
 
-/* Overlay de "Press to start" si quieres eliminarlo */
-.emulator-click-to-start-overlay {
-    display: none !important;
-}
-
-/* Cuadro de candidatos de autocompletado */
-.hg-candidate-box {
-    display: none !important;
-}
-
-/* Cualquier elemento que tenga texto relacionado con tips/ayuda */
-div:contains("Mouse lock"),
-div:contains("Mobile Controls"),
-div:contains("Sidebar"),
-div:contains("Save/Load") {
-    display: none !important;
+/* En PC, ocultar joystick (opcional) */
+@media (min-width: 768px) {
+    .nipple,
+    [class*="Nipple"],
+    [class*="joystick"] {
+        display: none !important;
+    }
 }
 
