@@ -693,85 +693,28 @@ document.getElementById('goToReportBtn')?.addEventListener('click', () => {
 document.getElementById('closeFirstDialogBtn')?.addEventListener('click', closeFirstDialog);
 
 // ========== RECREAR IFRAME ==========
-
 function recrearIframe() {
     let contenedor = document.getElementById('virtualWindow');
     let iframeViejo = document.getElementById('virtualAppIframe');
-    
-    // Destruir el iframe viejo completamente
-    if (iframeViejo) {
-        iframeViejo.src = 'about:blank';
-        iframeViejo.sandbox = '';
-        iframeViejo.remove();
-    }
-    
-    // Crear iframe nuevo
+    if (iframeViejo) iframeViejo.remove();
     let iframeNuevo = document.createElement('iframe');
     iframeNuevo.id = 'virtualAppIframe';
     iframeNuevo.className = 'virtual-window-iframe';
     iframeNuevo.sandbox = 'allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads';
     iframeNuevo.title = 'Application Window';
-    iframeNuevo.src = 'about:blank';  // Iniciar en blanco
     contenedor.appendChild(iframeNuevo);
     return iframeNuevo;
 }
 
-
 function cerrarVentanaVirtual() {
     let win = document.getElementById('virtualWindow');
-    let iframe = document.getElementById('virtualAppIframe');
-    
-    // 1. Forzar la detención del iframe
-    if (iframe) {
-        // Método más agresivo: cambiar src a about:blank
-        iframe.src = 'about:blank';
-        
-        // Eliminar el sandbox temporalmente para bloquear ejecución
-        iframe.sandbox = '';
-        
-        // Si existe contentWindow, detenerlo
-        if (iframe.contentWindow) {
-            try {
-                iframe.contentWindow.stop();
-            } catch(e) { /* ignorar errores de cross-origin */ }
-        }
-    }
-    
-    // 2. Detener tracking
+    win.style.display = 'none';
+    document.body.style.overflow = '';
     if (currentTrackingInterval) {
         clearInterval(currentTrackingInterval);
         currentTrackingInterval = null;
     }
     stopTracking();
-    
-    // 3. Ocultar la ventana
-    win.style.display = 'none';
-    document.body.style.overflow = '';
-    
-    // 4. Eliminar completamente el iframe del DOM y recrearlo limpio
-    setTimeout(() => {
-        if (iframe) {
-            iframe.remove();
-        }
-        // Crear un iframe nuevo y limpio
-        let contenedor = document.getElementById('virtualWindow');
-        let iframeNuevo = document.createElement('iframe');
-        iframeNuevo.id = 'virtualAppIframe';
-        iframeNuevo.className = 'virtual-window-iframe';
-        iframeNuevo.sandbox = 'allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads';
-        iframeNuevo.title = 'Application Window';
-        iframeNuevo.src = 'about:blank';
-        contenedor.appendChild(iframeNuevo);
-    }, 50);
-    
-    // 5. Recuperar foco en el launcher
-    setTimeout(() => {
-        currentFocusArea = 'apps';
-        currentSelectedIndex = 0;
-        updateSelection();
-        let firstCard = document.querySelector('.app-card');
-        if (firstCard) firstCard.focus();
-    }, 150);
 }
 
 // ========== ALGORITMO NEUROSCREENING ==========
@@ -1269,29 +1212,26 @@ function openAppModal(app){
     if(installHandlerRef) installBtn.removeEventListener('click', installHandlerRef);
     if(uninstallHandlerRef) uninstallBtn.removeEventListener('click', uninstallHandlerRef);
     
-launchHandlerRef = () => { 
-    addToRecent(app); 
-    startTracking(app); 
-    let win = document.getElementById('virtualWindow'); 
-    let iframe = recrearIframe();
-    // Pequeño delay para asegurar que el iframe está listo
-    setTimeout(() => {
+    launchHandlerRef = () => { 
+        addToRecent(app); 
+        startTracking(app); 
+        let win=document.getElementById('virtualWindow'); 
+        let iframe = recrearIframe();
         iframe.src = app.link;
-    }, 10);
-    win.style.display = 'flex'; 
-    document.body.style.overflow = 'hidden'; 
-    if (currentTrackingInterval) clearInterval(currentTrackingInterval);
-    currentTrackingInterval = setInterval(() => { 
-        if (win.style.display !== 'flex') { 
-            stopTracking(); 
-            clearInterval(currentTrackingInterval); 
-            currentTrackingInterval = null;
-        } 
-    }, 500);
-    document.getElementById('closeVirtualWindowBtn').onclick = cerrarVentanaVirtual;
-    modal.style.display = 'none'; 
-    isModalOpen = false; 
-};
+        win.style.display='flex'; 
+        document.body.style.overflow='hidden'; 
+        if(currentTrackingInterval) clearInterval(currentTrackingInterval);
+        currentTrackingInterval = setInterval(()=>{ 
+            if(win.style.display !== 'flex'){ 
+                stopTracking(); 
+                clearInterval(currentTrackingInterval); 
+                currentTrackingInterval = null;
+            } 
+        }, 500);
+        document.getElementById('closeVirtualWindowBtn').onclick = cerrarVentanaVirtual;
+        modal.style.display='none'; 
+        isModalOpen=false; 
+    };
     
     installHandlerRef = () => { installApp(app); modal.style.display='none'; isModalOpen=false; };
     uninstallHandlerRef = () => { showConfirmModal(app); modal.style.display='none'; isModalOpen=false; };
