@@ -1,7 +1,8 @@
+
 window.appData = [
     {
         name: "Absence",
-        image: "https://www.dosgames.com/screens/absence.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/absence.png",
         description: "Absence is a mod (total conversion, I would say) of Wolfenstein 3D. ",
         description: {
             es: "Absence es un mod (conversión total, diría yo) de Wolfenstein 3D.",
@@ -35,7 +36,7 @@ window.appData = [
     },
     {
         name: "Alien Trilogy",
-        image: "https://www.dosgames.com/screens/trilogy.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/trilogy.png",
         description: "Alien Trilogy is a FPS based on the popular movie series that was released the same year as Quake.",
         description: {
             es: "Alien Trilogy es un FPS basado en la popular serie de películas que se lanzó el mismo año que Quake.",
@@ -52,7 +53,7 @@ window.appData = [
     },
     {
         name: "Anarch",
-        image: "https://gitlab.com/drummyfish/anarch/-/raw/master/media/riced.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/riced.png",
         description: "Extremely small, completely public domain, no-dependency, no-file, portable suckless anarcho-pacifist from-scratch 90s-style Doom clone that runs everywhere, made for the benefit of all living beings",
         description: {
             es: "Extremadamente pequeño, completamente de dominio público, sin dependencias, sin archivos, portátil, suckless, anarcopacifista, clon de Doom estilo 90s desde cero que funciona en todas partes, hecho para el beneficio de todos los seres vivos.",
@@ -69,7 +70,7 @@ window.appData = [
     },
     {
         name: "Astro3D",
-        image: "https://www.classicdosgames.com/images/screenshots/vga13/Astro3D.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Astro3D.png",
         description: "Sometimes described as Asteroids on steroids, Astro3D is a 3D space shooter in which your job is to clear a field of debris from a massive three-dimensional space.",
         description: {
             es: "A veces descrito como Asteroids con esteroides, Astro3D es un shooter espacial 3D en el que tu trabajo es limpiar un campo de escombros de un enorme espacio tridimensional.",
@@ -86,7 +87,7 @@ window.appData = [
     },
     {
         name: "Battle Arena Toshinden",
-        image: "https://www.dosgames.com/screens/toshinden.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/toshinden.png",
         description: "Battle Arena Toshinden is a well-known Playstation 1 3D fighting game. It was one of the first games I bought for my PS1.",
         description: {
             es: "Battle Arena Toshinden es un conocido juego de lucha en 3D de PlayStation 1. Fue uno de los primeros juegos que compré para mi PS1.",
@@ -103,7 +104,7 @@ window.appData = [
     },
     {
         name: "Beneath a Steel Sky",
-        image: "https://dos.zone/images/http/original/2X/1/17a6a4cefe9263feb3c0049c98f4ae45082a9933.png/60313c7fa88f998977e0852a5f661711.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/60313c7fa88f998977e0852a5f661711.webp",
         description: "Beneath a Steel Sky is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Beneath a Steel Sky on mobile. On DOS.Zone Beneath a Steel Sky available to play for free without registration.",
         description: {
             es: "Beneath a Steel Sky es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar a Beneath a Steel Sky en dispositivos móviles. En DOS.Zone, Beneath a Steel Sky está disponible para jugar gratis sin registro.",
@@ -120,7 +121,7 @@ window.appData = [
     },
     {
         name: "Black Stone",
-        image: "https://www.dosgames.com/screens/blake.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/blake.gif",
         description: "Not that bad at all. This is a game that Apogee released between Wolfenstein 3D and Rise of the Triad. ",
         description: {
             es: "No está nada mal. Este es un juego que Apogee lanzó entre Wolfenstein 3D y Rise of the Triad.",
@@ -137,7 +138,7 @@ window.appData = [
     },
     {
         name: "Blam!",
-        image: "https://www.dosgames.com/screens/bammachinehead.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/bammachinehead.png",
         description: "Blam! Machinehead is a first-person shooting game where you pilot a hovercraft around a strange world.",
         description: {
             es: "Blam! Machinehead es un juego de disparos en primera persona donde pilotas un aerodeslizador alrededor de un mundo extraño.",
@@ -171,7 +172,7 @@ window.appData = [
     },
     {
         name: "Brutal: Paws of Fury",
-        image: "https://www.myabandonware.com/media/screenshots/b/brutal-paws-of-fury-2qy/thumbs/brutal-paws-of-fury_1.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/brutal-paws-of-fury_1.png",
         description: "Brutal: Paws of Fury is a one-on-one fighting game in the style of Street Fighter and other similar fighting games from the 90's. ",
         description: {
             es: "Brutal: Paws of Fury es un juego de lucha uno contra uno al estilo de Street Fighter y otros juegos de lucha similares de los 90.",
@@ -188,7 +189,7 @@ window.appData = [
     },
     {
         name: "Chex Quest",
-        image: "https://upload.wikimedia.org/wikipedia/en/1/12/Chex_Quest-front_cover.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Chex_Quest-front_cover.png",
         description: "Chex Quest is an English-language, MS-DOS first-person shooter game released in 1996, where players fight cereal-themed aliens called Flemoids",
         description: {
             es: "Chex Quest es un juego de disparos en primera persona en inglés para MS-DOS lanzado en 1996, donde los jugadores luchan contra aliens con temática de cereal llamados Flemoids.",
@@ -205,7 +206,7 @@ window.appData = [
     },
     {
         name: "Cham: The Rift",
-        image: "https://www.dosgames.com/screens/chasm.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/chasm.png",
         description: "This surprisingly good 3D shooting game (the demo is downloadable here) is, in terms of technical things like graphics, somewhere between DOOM and Quake.",
         description: {
             es: "Este sorprendentemente bueno juego de disparos en 3D (la demo se puede descargar aquí) se encuentra, en términos de aspectos técnicos como los gráficos, en algún punto entre DOOM y Quake.",
@@ -222,7 +223,7 @@ window.appData = [
     },
     {
         name: "Chub Gam 3D",
-        image: "https://www.dosgames.com/screens/chubgam.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/chubgam.gif",
         description: "While this game has supposedly won many awards (listed on the ChubGamSoft website) I m not a huge fan. It plays well enough and has some interesting graphic/gameplay elements (like an actual storyline, and cutscenes to tell it)",
         description: {
             es: "Si bien se supone que este juego ha ganado muchos premios (enumerados en el sitio web de ChubGamSoft), no soy un gran fan. Juega lo suficientemente bien y tiene algunos elementos gráficos / de juego interesantes (como una historia real y escenas cinemáticas para contarla).",
@@ -239,7 +240,7 @@ window.appData = [
     },
     {
         name: "Corridor 7: Alien Invasion",
-        image: "https://archive.org/download/msdos_CORR7_shareware/00_coverscreenshot.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/00_coverscreenshot.jpg",
         description: "CORRIDOR 7: ALIEN INVASION By Capstone SoftwareTechnology Licensed From Id Software Creators Of WOLFENSTEIN 3D",
         description: {
             es: "CORRIDOR 7: ALIEN INVASION de Capstone Software Technology, con licencia de Id Software, creadores de WOLFENSTEIN 3D.",
@@ -256,7 +257,7 @@ window.appData = [
     },
     {
         name: "Dark Forces",
-        image: "https://www.dosgames.com/screens/darkforces.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/darkforces.gif",
         description: "A demo version of one of a simply great 3D shooting game that I missed playing when it was originally released. Also known as Star Wars: Dark Forces, this 3D shooting game does not use the DOOM engine, it uses LucasArts' own engine which includes a few features not seen in DOOM. ",
         description: {
             es: "Una versión demo de un gran juego de disparos en 3D que me perdí cuando se lanzó originalmente. También conocido como Star Wars: Dark Forces, este juego de disparos en 3D no usa el motor DOOM, usa el motor propio de LucasArts que incluye algunas características no vistas en DOOM.",
@@ -273,7 +274,7 @@ window.appData = [
     },
     {
         name: "Destruction Derby",
-        image: "https://www.dosgames.com/screens/destructionderby.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/destructionderby.png",
         description: "Destruction Derby plays pretty much as you would expect: Crash your car into your opponents' cars, trying to cause as much damage to them as possible, while avoiding damage yourself.",
         description: {
             es: "Destruction Derby se juega más o menos como esperarías: Choca tu coche contra los coches de tus oponentes, tratando de causarles el mayor daño posible, mientras evitas dañarte a ti mismo.",
@@ -307,7 +308,7 @@ window.appData = [
     },
     {
         name: "Death Rally",
-        image: "https://www.dosgames.com/screens/deathrally.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/deathrally.gif",
         description: "Top-down racing games are sort of a sub-genre of the larger racing genre, and Death Rally is a good example of how to do things right. Sort of like Super Sprint with more destruction.",
         description: {
             es: "Los juegos de carreras en vista cenital son una especie de subgénero del género de carreras más amplio, y Death Rally es un buen ejemplo de cómo hacer las cosas bien. Algo así como Super Sprint con más destrucción.",
@@ -375,7 +376,7 @@ window.appData = [
     },
     {
         name: "Eradicator",
-        image: "https://www.dosgames.com/screens/eradicator.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/eradicator.png",
         description: "Eradicator is a unique FPS from Accolade, who are much better known for their Test Drive series and other non-FPS type games.",
         description: {
             es: "Eradicator es un FPS único de Accolade, mucho más conocidos por su serie Test Drive y otros juegos que no son del tipo FPS.",
@@ -392,7 +393,7 @@ window.appData = [
     },
     {
         name: "Escape from Dr. Colosso",
-        image: "https://www.dosgames.com/screens/drcolosso.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/drcolosso.png",
         description: "The story involves a mad doctor who has done bad stuff, and now you need to shoot your way out after being freed by a for some reason malevolent executioner. ",
         description: {
             es: "La historia involucra a un médico loco que ha hecho cosas malas, y ahora necesitas disparar para salir después de ser liberado por un verdugo malévolo por alguna razón.",
@@ -409,7 +410,7 @@ window.appData = [
     },
     {
         name: "Gore Galore",
-        image: "https://www.dosgames.com/screens/goregalore.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/goregalore.png",
         description: "Due to the general clunkiness of that GCS, the gameplay here is kinda rough. It's obviously intended to be a Wolfenstein 3D clone, right down to the door-opening sound.",
         description: {
             es: "Debido a la torpeza general de ese GCS, la jugabilidad aquí es un poco tosca. Obviamente, está destinado a ser un clon de Wolfenstein 3D, hasta el sonido de apertura de puertas.",
@@ -423,23 +424,6 @@ window.appData = [
         },
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/gore.html"
-    },
-    {
-        name: "Half-life",
-        image: "https://ifilex.github.io/WineBOX-Store/box/half.jpg",
-        description: "Half-Life is a 1998 first-person shooter developed by Valve. You play as Gordon Freeman, a scientist who must survive after a failed experiment opens a portal to an alien world. Combining action, storytelling, and puzzles in a seamless experience, Half-Life was revolutionary for its time and became one of the most influential games in FPS history.",
-        description: {
-            es: "Half-Life es un shooter en primera persona de 1998 desarrollado por Valve. Juegas como Gordon Freeman, un científico que debe sobrevivir después de que un experimento fallido abre un portal a un mundo alienígena. Combinando acción, narración y rompecabezas en una experiencia fluida, Half-Life fue revolucionario para su época y se convirtió en uno de los juegos más influyentes en la historia de los FPS.",
-            de: "Half-Life ist ein 1998 von Valve entwickelter Ego-Shooter. Sie spielen als Gordon Freeman, einen Wissenschaftler, der überleben muss, nachdem ein fehlgeschlagenes Experiment ein Portal zu einer fremden Welt öffnet. Half-Life kombiniert Action, Storytelling und Rätsel zu einem nahtlosen Erlebnis, war für seine Zeit revolutionär und wurde zu einem der einflussreichsten Spiele in der FPS-Geschichte.",
-            fr: "Half-Life est un jeu de tir à la première personne de 1998 développé par Valve. Vous incarnez Gordon Freeman, un scientifique qui doit survivre après qu'une expérience ratée ouvre un portail vers un monde extraterrestre. Combinant action, narration et puzzles dans une expérience transparente, Half-Life était révolutionnaire pour son époque et est devenu l'un des jeux les plus influents de l'histoire du FPS.",
-            it: "Half-Life è uno sparatutto in prima persona del 1998 sviluppato da Valve. Interpreti Gordon Freeman, uno scienziato che deve sopravvivere dopo che un esperimento fallito apre un portale verso un mondo alieno. Combinando azione, narrazione e puzzle in un'esperienza fluida, Half-Life fu rivoluzionario per il suo tempo e divenne uno dei giochi più influenti nella storia degli FPS.",
-            pt: "Half-Life é um jogo de tiro em primeira pessoa de 1998 desenvolvido pela Valve. Você joga como Gordon Freeman, um cientista que deve sobreviver depois que um experimento fracassado abre um portal para um mundo alienígena. Combinando ação, narrativa e quebra-cabeças em uma experiência perfeita, Half-Life foi revolucionário para sua época e se tornou um dos jogos mais influentes na história do FPS.",
-            ru: "Half-Life — это шутер от первого лица 1998 года, разработанный Valve. Вы играете за Гордона Фримена, ученого, который должен выжить после того, как неудачный эксперимент открывает портал в инопланетный мир. Сочетая действие, повествование и головоломки в едином опыте, Half-Life был революционным для своего времени и стал одной из самых влиятельных игр в истории FPS.",
-            zh: "Half-Life（半条命）是 Valve 于 1998 年开发的一款第一人称射击游戏。你扮演科学家戈登·弗里曼，在一次失败的实验打开了通往异世界的传送门后，必须努力生存。Half-Life 将动作、叙事和解谜无缝结合，在当时具有革命性，并成为 FPS 历史上最具影响力的游戏之一。",
-            ja: "Half-Lifeは、Valveが1998年に開発したファーストパーソン・シューティングゲームです。あなたは科学者ゴードン・フリーマンを演じ、失敗した実験が異世界へのポータルを開いた後、生き残らなければなりません。アクション、ストーリーテリング、パズルをシームレスに組み合わせたHalf-Lifeは、当時としては革命的であり、FPS史上最も影響力のあるゲームの一つとなりました。"
-        },
-        category: "games",
-        link: "https://x8bitrain.github.io/webXash/"
     },
     {
         name: "Heretic",
@@ -460,7 +444,7 @@ window.appData = [
     },
     {
         name: "Hexen",
-        image: "https://www.dosgames.com/screens/hexen.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/hexen.gif",
         description: "The sequel to the popular Heretic game, Hexen takes the Heretic engine and adds some notable improvements, like weather effects, breakable environments, roleplaying elements and less linear gameplay.", 
         description: {
             es: "La secuela del popular juego Heretic, Hexen toma el motor de Heretic y añade algunas mejoras notables, como efectos climáticos, entornos destructibles, elementos de rol y una jugabilidad menos lineal.",
@@ -528,7 +512,7 @@ window.appData = [
     },
     {
         name: "Mr. Pibb",
-        image: "https://www.dosgames.com/screens/mrpibb.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/mrpibb.png",
         description: "Mr. Pibb - The 3D Interactive Game is a 3D shooter FPS type game which is not very good",
         description: {
             es: "Mr. Pibb - The 3D Interactive Game es un juego de tipo shooter FPS en 3D que no es muy bueno.",
@@ -562,7 +546,7 @@ window.appData = [
     },
     {
         name: "One Must Fall 2097",
-        image: "https://www.dosgames.com/screens/omf2097.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/omf2097.gif",
         description: "One Must Fall 2097 is a futuristic one-on-one fighting game in the style of other popular fighting games of the time such as Street Fighter II, Mortal Kombat, and numerous others. ",
         description: {
             es: "One Must Fall 2097 es un juego de lucha futurista uno contra uno al estilo de otros juegos de lucha populares de la época como Street Fighter II, Mortal Kombat y muchos otros.",
@@ -596,7 +580,7 @@ window.appData = [
     },
     {
         name: "Operation Body Count",
-        image: "https://www.dosgames.com/screens/bodycount.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/bodycount.gif",
         description: "OpenJKDF2 is a function-by-function reimplementation of DF2 in C, with 64-bit ports to Windows 7+, macOS 10.15+, and Linux.",
         description: {
             es: "OpenJKDF2 es una reimplementación función por función de DF2 en C, con versiones de 64 bits para Windows 7+, macOS 10.15+ y Linux.",
@@ -613,7 +597,7 @@ window.appData = [
     },
     {
         name: "Out of this World",
-        image: "https://www.classicdosgames.com/images/screenshots/tandy09/Out_of_This_World.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Out_of_This_World.png",
         description: "Out of this world game most commonly refers to the 1991 cinematic platformer video game, which was also known as Another World. ",
         description: {
             es: "Out of this world game generalmente se refiere al videojuego de plataformas cinematográfico de 1991, que también se conocía como Another World.",
@@ -630,7 +614,7 @@ window.appData = [
     },
     {
         name: "Powerslave",
-        image: "https://www.dosgames.com/screens/pslave.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/pslave.gif",
         description: "Powerslave (also known as Exhumed) is a FPS built using the Build engine (an the engine used to create Duke Nukem 3D).",
         description: {
             es: "Powerslave (también conocido como Exhumed) es un FPS construido con el motor Build (el motor utilizado para crear Duke Nukem 3D).",
@@ -647,7 +631,7 @@ window.appData = [
     },
     {
         name: "Pray for Death",
-        image: "https://www.dosgames.com/screens/prayfordeath.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/prayfordeath.png",
         description: "Pray for Death is a one-on-one fighting game which tries to transfer some of the excitement from arcade beat-em-ups like the popular Street Fighter II, Mortal Kombat, and in this case perhaps most directly Killer Instinct games to the PC platform.",
         description: {
             es: "Pray for Death es un juego de lucha uno contra uno que intenta transferir parte de la emoción de los juegos de lucha arcade como el popular Street Fighter II, Mortal Kombat y, en este caso, quizás más directamente, los juegos de Killer Instinct a la plataforma de PC.",
@@ -715,7 +699,7 @@ window.appData = [
     },
     {
         name: "Robod",
-        image: "https://www.dosgames.com/screens/robod.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/robod.png",
         description: "Robod is a 3D-perspective action game similar to Wolfenstein-3D or Blake Stone except that it was made over 22 years after those games",
         description: {
             es: "Robod es un juego de acción en perspectiva 3D similar a Wolfenstein-3D o Blake Stone, excepto que fue creado más de 22 años después de esos juegos.",
@@ -732,7 +716,7 @@ window.appData = [
     },
     {
         name: "Sango Fighter",
-        image: "https://www.dosgames.com/screens/sango.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/sango.gif",
         description: "Sango Fighter is a game that looks better than it actually plays. Inspired by the extremely popular Street Fighter series of games.",
         description: {
             es: "Sango Fighter es un juego que se ve mejor de lo que realmente se juega. Inspirado en la extremadamente popular serie de juegos Street Fighter.",
@@ -749,7 +733,7 @@ window.appData = [
     },
     {
         name: "Sango Fighter 2",
-        image: "https://www.dosgames.com/screens/sango2.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/sango2.gif",
         description: "Sango Fighter 2 is more of an updated and improved remake of the original than it is a totally new game. Like the first game, it's a one-on-one fighting game just like another much more well-known fighting game",
         description: {
             es: "Sango Fighter 2 es más un remake actualizado y mejorado del original que un juego totalmente nuevo. Al igual que el primer juego, es un juego de lucha uno contra uno, como otro juego de lucha mucho más conocido.",
@@ -800,7 +784,7 @@ window.appData = [
     },
     {
         name: "Strife",
-        image: "https://www.dosgames.com/screens/strife.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/strife.gif",
         description: "Strife is one of the best 3D shooting game's that you've likely never heard of. This demo version showcases some of the great gameplay and features that you'll find in the full version, if you're able to find it anywhere ",
         description: {
             es: "Strife es uno de los mejores juegos de disparos en 3D que probablemente nunca hayas oído hablar. Esta versión demo muestra algunas de las excelentes jugabilidad y características que encontrarás en la versión completa, si puedes encontrarla en algún lado.",
@@ -817,7 +801,7 @@ window.appData = [
     },
     {
         name: "Super Street Fighter II Turbo",
-        image: "https://www.dosgames.com/screens/ssf2t.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/ssf2t.png",
         description: "Street Fighter II first came to DOS PCs in 1992, with an absolutely terrible port of the original game Street Fighter II: The World Warrior.",
         description: {
             es: "Street Fighter II llegó por primera vez a las PC con DOS en 1992, con un puerto absolutamente terrible del juego original Street Fighter II: The World Warrior.",
@@ -834,7 +818,7 @@ window.appData = [
     },
     {
         name: "Thanatos 3D",
-        image: "https://www.dosgames.com/screens/thanatos3d.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/thanatos3d.png",
         description: "Thanatos 3D is an obscure FPS that was released in 1998. For reference, this is five years after DOOM, and two years after Quake.",
         description: {
             es: "Thanatos 3D es un FPS oscuro que fue lanzado en 1998. A modo de referencia, esto es cinco años después de DOOM y dos años después de Quake.",
@@ -851,7 +835,7 @@ window.appData = [
     },
     {
         name: "Terror in Christmas Town",
-        image: "https://www.dosgames.com/screens/termrampage.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/termrampage.gif",
         description: "Ever felt the need to rescue a kidnapped elf who has been captured by a evil polar bear? No, me neither. ",
         description: {
             es: "¿Alguna vez has sentido la necesidad de rescatar a un elfo secuestrado que ha sido capturado por un malvado oso polar? No, yo tampoco.",
@@ -868,7 +852,7 @@ window.appData = [
     },
     {
         name: "Terminal Velocity",
-        image: "https://www.dosgames.com/screens/tv.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/tv.gif",
         description: "It takes a little while to get used to, but this flying/shooting game (sort of like Decent, but more out in the open) can be really fun to play.",
         description: {
             es: "Toma un tiempo acostumbrarse, pero este juego de vuelo/disparos (algo así como Decent, pero más al aire libre) puede ser muy divertido de jugar.",
@@ -885,7 +869,7 @@ window.appData = [
     },
     {
         name: "Terminator: Rampage",
-        image: "https://www.dosgames.com/screens/termrampage.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/termrampage.gif",
         description: "Terminator: Rampage is a 3D shooting game from Bethesda, one of several in their early/mid 90's line of Terminator FPS games. ",
         description: {
             es: "Terminator: Rampage es un juego de disparos en 3D de Bethesda, uno de los varios en su línea de juegos de FPS de Terminator de principios / mediados de los 90.",
@@ -936,7 +920,7 @@ window.appData = [
     },
     {
         name: "Tomb Rider",
-        image: "https://dos.zone/images/containers/assets/backgrounds/lhazhk.8_12f0b6d8a9.png/d44c441b8ff939af74625c8375f4c8c1.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/d44c441b8ff939af74625c8375f4c8c1.webp",
         description: "Tomb Raider, released in 1996, is a groundbreaking action-adventure game that introduced players to the iconic character Lara Croft.",
         description: {
             es: "Tomb Raider, lanzado en 1996, es un innovador juego de acción y aventuras que presentó a los jugadores a la icónica personaje Lara Croft.",
@@ -987,7 +971,7 @@ window.appData = [
     },
     {
         name: "Wrath of Earth",
-        image: "https://www.dosgames.com/screens/woe.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/woe.png",
         description: "Wrath of Earth is a fairly obscure FPS with a sci-fi theme. It bears similarities to the Apogee FPS Blake Stone as well as some stylistic influences from the popular Mac game Marathon. ",
         description: {
             es: "Wrath of Earth es un FPS bastante oscuro con temática de ciencia ficción. Tiene similitudes con el FPS de Apogee Blake Stone, así como algunas influencias estilísticas del popular juego de Mac Marathon.",
@@ -1021,7 +1005,7 @@ window.appData = [
     },
     {
         name: "Wipeout",
-        image: "https://phoboslab.org/content/assets/wipeout-wasm.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/wipeout-wasm.png",
         description: "The source code for the classic PSX launch title wipEout was leaked in 2022. A few month ago I finally sat down to take a look at it.",
         description: {
             es: "El código fuente del clásico título de lanzamiento de PSX wipEout fue filtrado en 2022. Hace unos meses finalmente me senté a echarle un vistazo.",
@@ -1038,7 +1022,7 @@ window.appData = [
     },
     {
         name: "Xenophage: Alien BloodSport",
-        image: "https://www.dosgames.com/screens/xenophage.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/xenophage.gif",
         description: " this game certainly has the looks of a great game, but IMHO falls a bit short in the gameplay department.",
         description: {
             es: "Este juego ciertamente tiene la apariencia de un gran juego, pero en mi humilde opinión, se queda un poco corto en el departamento de jugabilidad.",
@@ -1055,7 +1039,7 @@ window.appData = [
     },
     {
         name: "X-Men: Children of the Atom",
-        image: "https://www.dosgames.com/screens/xmen.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/xmen.png",
         description: "X-Men: Children of the Atom is a port of the one-on-one Street Fighter 2-style fighting game featuring characters from Marvel's X-Men comics.",
         description: {
             es: "X-Men: Children of the Atom es una versión del juego de lucha uno contra uno estilo Street Fighter 2 que presenta personajes de los cómics de X-Men de Marvel.",
@@ -1072,7 +1056,7 @@ window.appData = [
     },
     {
         name: "4D BOXING",
-        image: "https://www.dosgames.com/screens/4dboxing.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4dboxing.gif",
         description: "4D Boxing attempts to recreate the sport of boxing more accurately than a lot of popular computer or arcade game based on the sport.",
         description: {
             es: "4D Boxing intenta recrear el deporte del boxeo con mayor precisión que muchos juegos populares de computadora o arcade basados en este deporte.",
@@ -1157,7 +1141,7 @@ window.appData = [
     },
     {
         name: "Android 1.6",
-        image: "https://www.cnet.com/a/img/resize/1b533c095dd6ca73f41ca0cf9730d0d8d87b32e0/hub/2010/07/17/20f6f0b4-cbf2-11e2-9a4a-0291187b029a/android-donut.jpg?auto=webp&width=1200",
+        image: "https://ifilex.github.io/WineBOX-Store/box/android-donut.webp",
         description: "A full android x86 emulator, make posible run old APKs.",
         description: {
             es: "Un emulador completo de Android x86, que permite ejecutar APKs antiguos.",
@@ -1174,7 +1158,7 @@ window.appData = [
     },
     {
         name: "Arch Linux",
-        image: "https://1000marcas.net/wp-content/uploads/2021/05/Arch-Linux-logo-768x480.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Arch-Linux-logo-768x480.png",
         description: "A lightweight and flexible Linux distribution that tries to Keep It Simple. Currently we have official packages optimized for the x86-64 architecture.",
         description: {
             es: "Una distribución de Linux ligera y flexible que trata de mantener las cosas simples. Actualmente tenemos paquetes oficiales optimizados para la arquitectura x86-64.",
@@ -1191,7 +1175,7 @@ window.appData = [
     },
     {
         name: "BeOS 5",
-        image: "https://upload.wikimedia.org/wikipedia/en/a/ae/BeOS_Desktop.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/BeOS_Desktop.png",
         description: "BeOS is a discontinued operating system for personal computers that was developed by Be Inc. It was conceived for the company's BeBox personal computer which was released in 1995. BeOS was designed for multitasking, multithreading, and a graphical user interface. The OS was later sold to OEMs, retail, and directly to users; its last version was released as freeware.",
         description: {
             es: "BeOS es un sistema operativo discontinuado para computadoras personales que fue desarrollado por Be Inc. Fue concebido para la computadora personal BeBox de la compañía, lanzada en 1995. BeOS fue diseñado para la multitarea, la programación multihilo y una interfaz gráfica de usuario. El sistema operativo luego se vendió a OEM, minoristas y directamente a los usuarios; su última versión fue lanzada como freeware.",
@@ -1208,7 +1192,7 @@ window.appData = [
     },
     {
         name: "Damn Small Linux 4.11",
-        image: "https://upload.wikimedia.org/wikipedia/commons/c/cd/DSL-logo.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/DSL-logo.jpg",
         description: "Minimal Linux with graphical user interface",
         description: {
             es: "Linux mínimo con interfaz gráfica de usuario.",
@@ -1293,7 +1277,7 @@ window.appData = [
     },
     {
         name: "AROS Broadway",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Icaros131.jpg/500px-Icaros131.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Icaros131.jpg",
         description: "AROS Research Operating System is a free and open-source multi media centric implementation of the AmigaOS 3.1 application programming interface (API) which is designed to be portable and flexible.",
         description: {
             es: "AROS Research Operating System es una implementación gratuita y de código abierto centrada en multimedia de la interfaz de programación de aplicaciones (API) de AmigaOS 3.1, diseñada para ser portátil y flexible.",
@@ -1429,7 +1413,7 @@ window.appData = [
     },
     {
         name: "FreeBSD 12.0",
-        image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Freebsd_logo.svg/330px-Freebsd_logo.svg.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/freebsd.jpg",
         description: "FreeBSD is a free-software Unix-like operating system descended from the Berkeley Software Distribution (BSD). The first version was released in 1993 developed from 386BSD,[4] one of the first fully functional and free Unix clones on affordable home-class hardware, and has since continuously been the most commonly used BSD-derived operating system.",
         description: {
             es: "FreeBSD es un sistema operativo tipo Unix de software libre descendiente de Berkeley Software Distribution (BSD). La primera versión se lanzó en 1993 desarrollada a partir de 386BSD, uno de los primeros clones de Unix completamente funcionales y gratuitos en hardware doméstico asequible, y desde entonces ha sido continuamente el sistema operativo derivado de BSD más utilizado.",
@@ -1446,7 +1430,7 @@ window.appData = [
     },
     {
         name: "FreeGEM",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gem1.png/500px-Gem1.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Gem1.png",
         description: "Graphical desktop for FreeDOS",
         description: {
             es: "Escritorio gráfico para FreeDOS.",
@@ -1463,7 +1447,7 @@ window.appData = [
     },
     {
         name: "FiwixOS",
-        image: "https://www.fiwix.org/imgs/shot-vga-login-fiwixos35.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/shot-vga-login-fiwixos35.png",
         description: "Fiwix is an operating system kernel written from scratch in ANSI C, based on the UNIX architecture and fully focused on being Linux 2.0 i386 ABI compatible.",
         description: {
             es: "Fiwix es un kernel de sistema operativo escrito desde cero en ANSI C, basado en la arquitectura UNIX y totalmente centrado en ser compatible con Linux 2.0 i386 ABI.",
@@ -1497,7 +1481,7 @@ window.appData = [
     },
     {
         name: "Haiku",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Haiku_R1_Beta_3_desktop_screenshot.png/500px-Haiku_R1_Beta_3_desktop_screenshot.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Haiku_R1_Beta_3_desktop_screenshot.png",
         description: "Haiku, originally OpenBeOS, is a free and open-source operating system for personal computers. It is a community-driven continuation of BeOS and aims to be binary-compatible with it, but is largely a reimplementation with the exception of certain components like the Deskbar",
         description: {
             es: "Haiku, originalmente OpenBeOS, es un sistema operativo gratuito y de código abierto para computadoras personales. Es una continuación impulsada por la comunidad de BeOS y tiene como objetivo ser binariamente compatible con él, pero es en gran parte una reimplementación, con la excepción de ciertos componentes como la Deskbar.",
@@ -1514,7 +1498,7 @@ window.appData = [
     },
     {
         name: "Icaros Desktop",
-        image: "https://archiveos.org/wp-content/uploads/2023/08/icaros.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/icaros.jpg",
         description: "Since April 2009, the name VMWAros has been changed into Icaros Desktop to avoid ambiguities with any existing copyrighted virtual machine of any kind. Amiga 68K emulation integration, 3D acceleration for Nvidia cards and latest updates of applications can be found there",
         description: {
             es: "Desde abril de 2009, el nombre VMWAros se cambió a Icaros Desktop para evitar ambigüedades con cualquier máquina virtual con derechos de autor existente. Integración de emulación Amiga 68K, aceleración 3D para tarjetas Nvidia y las últimas actualizaciones de aplicaciones se pueden encontrar allí.",
@@ -1531,7 +1515,7 @@ window.appData = [
     },
     {
         name: "JX",
-        image: "https://archiveos.org/wp-content/uploads/2022/01/jx.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/jx.webp",
         description: "Java based operative system.",
         description: {
             es: "Sistema operativo basado en Java.",
@@ -1548,7 +1532,7 @@ window.appData = [
     },
     {
         name: "KolibriOS",
-        image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/KolibriOS_logo%2C_summer_2024.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/KolibriOS_logo%2C_summer_2024.png",
         description: "KolibriOS is an open-source operating system for x86 computers, written completely in FASM assembly language.",
         description: {
             es: "KolibriOS es un sistema operativo de código abierto para computadoras x86, escrito completamente en lenguaje ensamblador FASM.",
@@ -1582,7 +1566,7 @@ window.appData = [
     },
     {
         name: "Minix",
-        image: "https://substackcdn.com/image/fetch/$s_!C2vd!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4995fd08-ab17-4213-b45c-70e85939d432_800x600.jpeg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4995fd08-ab17-4213-b45c-70e85939d432_800x600.webp",
         description: "Old open source Unix compatible OS.",
         description: {
             es: "Sistema operativo antiguo de código abierto compatible con Unix.",
@@ -1616,7 +1600,7 @@ window.appData = [
     },
     {
         name: "Neobook",
-        image: "https://ia801308.us.archive.org/4/items/win3_NEOBOOK_shareware/win3_NEOBOOK_shareware_screenshot.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/win3_NEOBOOK_shareware_screenshot.gif",
         description: "Neobook make posible create multimedia apps",
         description: {
             es: "Neobook permite crear aplicaciones multimedia.",
@@ -1633,7 +1617,7 @@ window.appData = [
     },
     {
         name: "NetBSD 4.0",
-        image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/NetBSD.svg/375px-NetBSD.svg.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/netbsd.png",
         description: "NetBSD is a free and open-source Unix-like operating system based on the Berkeley Software Distribution (BSD). It was the first open-source BSD descendant officially released after 386BSD was forked. It continues to be actively developed and is available for many platforms, including servers, desktops, handheld devices, and embedded systems.",
         description: {
             es: "NetBSD es un sistema operativo libre y de código abierto tipo Unix basado en Berkeley Software Distribution (BSD). Fue el primer descendiente BSD de código abierto lanzado oficialmente después de que 386BSD se bifurcara. Continúa siendo desarrollado activamente y está disponible para muchas plataformas, que incluyen servidores, computadoras de escritorio, dispositivos de mano y sistemas integrados.",
@@ -1650,7 +1634,7 @@ window.appData = [
     },
     {
         name: "Neopaint",
-        image: "https://dn721603.ca.archive.org/0/items/neopaintv10DOS/screen-000207.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/screen-000207.jpg",
         description: "NeoPaint 3.1 - A complete image editing/paint program for DOS! Includes powerful features and naturalistic tools (such as oil and water colors) usually found only in more costly apps.", 
         description: {
             es: "NeoPaint 3.1: ¡Un programa completo de edición de imágenes / pintura para DOS! Incluye potentes funciones y herramientas naturalistas (como colores al óleo y acuarelas) que generalmente solo se encuentran en aplicaciones más costosas.",
@@ -1667,7 +1651,7 @@ window.appData = [
     },
     {
         name: "NodeOS",
-        image: "https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2F4084530%2Fcover_image%2Fregular_1708x683%2F0604-nodeos-the-javascript-based-operating-system-Waldek_Newsletter-ba9668338d760d72b5d3d0cc1985682a.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/jos.avif",
         description: "Linux distro with nodejs as init.",
         description: {
             es: "Distribución de Linux con nodejs como init.",
@@ -1735,7 +1719,7 @@ window.appData = [
     },
     {
         name: "Oberon",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/OberonScreen.PNG/500px-OberonScreen.PNG",
+        image: "https://ifilex.github.io/WineBOX-Store/box/500px-OberonScreen.png",
         description: "The Oberon System is a modular, single-user, single-process, multitasking operating system written in the programming language Oberon.",
         description: {
             es: "El Sistema Oberon es un sistema operativo modular, monousuario, monoproceso y multitarea escrito en el lenguaje de programación Oberon.",
@@ -1803,7 +1787,7 @@ window.appData = [
     },
     {
         name: "QNX 4.05",
-        image: "https://upload.wikimedia.org/wikipedia/en/e/e0/QNX_6.4.1_screenshot.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/QNX_6.4.1_screenshot.png",
         description: "QNX is a commercial Unix-like real-time operating system, aimed primarily at the embedded systems market.",
         description: {
             es: "QNX es un sistema operativo comercial de tiempo real tipo Unix, dirigido principalmente al mercado de sistemas integrados.",
@@ -1820,7 +1804,7 @@ window.appData = [
     },
     {
         name: "OpenBSD 6.6",
-        image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/83/OpenBSD_Logo_-_Cartoon_Puffy_with_textual_logo_below.svg/330px-OpenBSD_Logo_-_Cartoon_Puffy_with_textual_logo_below.svg.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/OpenBSD_Logo_-_Cartoon_Puffy_with_textual_logo_below.svg.png",
         description: "OpenBSD is a security-focused, free software, Unix-like operating system based on the Berkeley Software Distribution (BSD). Theo de Raadt created OpenBSD in 1995 by forking NetBSD 1.0. The OpenBSD project emphasizes portability, standardization, correctness, proactive security, and integrated cryptography.",
         description: {
             es: "OpenBSD es un sistema operativo tipo Unix de software libre centrado en la seguridad, basado en Berkeley Software Distribution (BSD). Theo de Raadt creó OpenBSD en 1995 bifurcando NetBSD 1.0. El proyecto OpenBSD enfatiza la portabilidad, la estandarización, la corrección, la seguridad proactiva y la criptografía integrada.",
@@ -1837,7 +1821,7 @@ window.appData = [
     },
     {
         name: "QBasic 4.5",
-        image: "https://dos.zone/images/http/original/qbasic1.jpg/6a0c2580c730845b21f6f2d3b7505b50.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/6a0c2580c730845b21f6f2d3b7505b50.webp",
         description: "Program Manager is a graphical shell for managing applications and program groups in WineBOX. It allows users to organize, launch, and customize software shortcuts within a windowed interface.",
         description: {
             es: "Program Manager es un shell gráfico para administrar aplicaciones y grupos de programas en WineBOX. Permite a los usuarios organizar, iniciar y personalizar accesos directos de software dentro de una interfaz de ventanas.",
@@ -1871,7 +1855,7 @@ window.appData = [
     },
     {
         name: "ReactOS",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/ReactOS_0.4.14_desktop_screenshot.png/500px-ReactOS_0.4.14_desktop_screenshot.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/ReactOS_0.4.14_desktop_screenshot.png",
         description: "ReactOS is a free and open-source operating system for i586/amd64 personal computers that is intended to be binary-compatible with computer programs and device drivers developed for Windows Server 2003 and later versions of Microsoft Windows",
        description: {
             es: "ReactOS es un sistema operativo gratuito y de código abierto para computadoras personales i586/amd64 que tiene la intención de ser binariamente compatible con programas de computadora y controladores de dispositivos desarrollados para Windows Server 2003 y versiones posteriores de Microsoft Windows.",
@@ -1888,7 +1872,7 @@ window.appData = [
     },
     {
         name: "Redox",
-        image: "https://regmedia.co.uk/2022/11/29/redox-08-2.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/redox-08-2.jpg",
         description: "A Unix like microkernel OS written in Rust.",
         description: {
             es: "Un sistema operativo de micronúcleo tipo Unix escrito en Rust.",
@@ -1905,7 +1889,7 @@ window.appData = [
     },
     {
         name: "RetroArch",
-        image: "https://upload.wikimedia.org/wikipedia/commons/6/6d/RetroArch_logo_theme.png?20210920085941",
+        image: "https://ifilex.github.io/WineBOX-Store/box/RetroArch_logo_theme.png",
         description: "RetroArch is a frontend for emulators, game engines and media players.",
         description: {
             es: "RetroArch es un frontend para emuladores, motores de juegos y reproductores multimedia.",
@@ -1922,7 +1906,7 @@ window.appData = [
     },
     {
         name: "SerenityOS",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/SerenityOS_2023-07-14.png/500px-SerenityOS_2023-07-14.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/SerenityOS_2023-07-14.png",
         description: "SerenityOS is a free and open source desktop operating system. It features a preemptive kernel, currently supports x86-64, ARM, and RISC-V[1][2] based computers, and hosts multiple complex applications including its own web browser and integrated development environment.",
         description: {
             es: "SerenityOS es un sistema operativo de escritorio gratuito y de código abierto. Cuenta con un kernel preventivo, actualmente admite computadoras basadas en x86-64, ARM y RISC-V, y alberga múltiples aplicaciones complejas, incluido su propio navegador web y entorno de desarrollo integrado.",
@@ -1939,7 +1923,7 @@ window.appData = [
     },
     {
         name: "Shadow Warrior",
-        image: "https://www.dosgames.com/screens/shadwar.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/shadwar.gif",
         description: "Created using the Build engine (the same software the Duke Nukem 3D was created with), Shadow Warrior was largely ignored upon its release due to the fact that Quake has been released the year before, with superior graphics and gameplay enhancements (true 3D environments).",
        description: {
             es: "Creado con el motor Build (el mismo software con el que se creó Duke Nukem 3D), Shadow Warrior fue ampliamente ignorado en su lanzamiento debido a que Quake se había lanzado el año anterior, con gráficos superiores y mejoras en la jugabilidad (entornos 3D reales).",
@@ -1973,7 +1957,7 @@ window.appData = [
     },
     {
         name: "Sortix",
-        image: "https://archiveos.org/wp-content/uploads/2022/10/sortix.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/sortix.webp",
         description: "Sortix – a small self-hosting operating-system aiming to be a clean and modern POSIX implementation.",
         description: {
             es: "Sortix: un pequeño sistema operativo autoalojado que aspira a ser una implementación POSIX limpia y moderna.",
@@ -1990,7 +1974,7 @@ window.appData = [
     },
     {
         name: "Soso",
-        image: "https://os-projects.eu/sites/default/files/2022-04/soso-v0.3.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/soso-v0.3.png",
         description: "Soso is a simple unix-like operating system written in Nasm assembly and mostly in C. It supports multiboot, so it is started by Grub. It can be built using Nasm and Clang. Tested build environments are Linux, FreeBSD.",
         description: {
             es: "Soso es un sistema operativo simple tipo Unix escrito en ensamblador Nasm y principalmente en C. Admite multiboot, por lo que es iniciado por Grub. Se puede construir usando Nasm y Clang. Los entornos de compilación probados son Linux y FreeBSD.",
@@ -2024,7 +2008,7 @@ window.appData = [
     },
     {
         name: "Syllable",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Syllable-0.6.5-pl.png/500px-Syllable-0.6.5-pl.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Syllable-0.6.5-pl.png",
         description: "Syllable Desktop is a discontinued free and open-source lightweight hobbyist operating system for Pentium and compatible processors. Its purpose was to create an easy-to-use desktop operating system for the home and small office user. Its development began in 2002 as a fork of AtheOS.",
        description: {
             es: "Syllable Desktop es un sistema operativo ligero para aficionados, gratuito y de código abierto, discontinuado, para procesadores Pentium y compatibles. Su propósito era crear un sistema operativo de escritorio fácil de usar para el hogar y la pequeña oficina. Su desarrollo comenzó en 2002 como una bifurcación de AtheOS.",
@@ -2041,7 +2025,7 @@ window.appData = [
     },
     {
         name: "Tekwar",
-        image: "https://www.dosgames.com/screens/tekwar.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/tekwar.gif",
         description: "William Shatner's Tekwar is a game based on the series of books written by Captain Kirk himself.",
         description: {
             es: "Tekwar de William Shatner es un juego basado en la serie de libros escrita por el mismísimo Capitán Kirk.",
@@ -2075,7 +2059,7 @@ window.appData = [
     },
     {
         name: "Tilck",
-        image: "https://camo.githubusercontent.com/9ceb81a59418eca9af9c945aa5acdf9685799b57340fafeb0641c38dd40055da/687474703a2f2f7676616c74636865762e6769746875622e696f2f74696c636b5f696d67732f76322f74696c636b2d6c6f676f2d76352e706e67",
+        image: "https://ifilex.github.io/WineBOX-Store/box/tiny.png",
         description: "Tiny Linux-Compatible Kernel.",
         description: {
             es: "Kernel diminuto compatible con Linux.",
@@ -2143,7 +2127,7 @@ window.appData = [
     },
     {
         name: "Tiny Aros",
-        image: "https://archiveos.org/wp-content/uploads/2023/09/tiny-aros.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/tiny-aros.webp",
         description: "Tiny AROS – a distribution of the AROS operating system, offered as a Live CD for i386 classes (32bit) machines.",
         description: {
             es: "Tiny AROS: una distribución del sistema operativo AROS, ofrecida como un Live CD para máquinas de clase i386 (32 bits).",
@@ -2262,7 +2246,7 @@ window.appData = [
     },
     {
         name: "Xcom",
-        image: "https://i.imgur.com/vLR5PIg.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/xos.png",
         description: "Xcom is a multi-windowed desktop environment with a file manager - it allows you to browse, copy, view and manage your files, start and stop programs, watch and listen basic media content and music. Unlike other windowing systems and protocols, it integrates the basic functionality as a monolithic, cohesive program.",
         description: {
             es: "Xcom es un entorno de escritorio con múltiples ventanas y un administrador de archivos: le permite navegar, copiar, ver y administrar sus archivos, iniciar y detener programas, ver y escuchar contenido multimedia básico y música. A diferencia de otros sistemas y protocolos de ventanas, integra la funcionalidad básica como un programa monolítico y cohesivo.",
@@ -2279,7 +2263,7 @@ window.appData = [
     },
     {
         name: "5 Days a Stranger",
-        image: "https://image.dosgamesarchive.com/screenshots/thumbnails/5days-1.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/5days-1.png",
         description: "5 Days A Stranger is a horror-themed point-and-click adventure game using the Adventure Game Studio (AGS) development kit.",
         description: {
             es: "5 Days A Stranger es un juego de aventura point-and-click con temática de terror que utiliza el kit de desarrollo Adventure Game Studio (AGS).",
@@ -2296,7 +2280,7 @@ window.appData = [
     },
     {
         name: "Abuse",
-        image: "https://www.dosgames.com/screens/abuse.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/abuse.gif",
         description: "Abuse is a great side-scrolling action game that uses a unique system to control your character.",   
         description: {
             es: "Abuse es un gran juego de acción de desplazamiento lateral que utiliza un sistema único para controlar a tu personaje.",
@@ -2313,7 +2297,7 @@ window.appData = [
     },
     {
         name: "Agi Tetris",
-        image: "https://wiki.scummvm.org/images/e/e1/AGIWiki_tetris1a.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/AGIWiki_tetris1a.png",
         description: "AGI Tetris is a version of Tetris released as part of the 0 MS-DOS Classic Games collection.",   
         description: {
             es: "AGI Tetris es una versión de Tetris lanzada como parte de la colección 0 MS-DOS Classic Games.",
@@ -2347,7 +2331,7 @@ window.appData = [
     },
     {
         name: "Amazon: Guardian of Eden",
-        image: "https://www.dosgames.com/screens/amdemo.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/amdemo.png",
         description: "Amazon is a graphical point-and-click adventure game using a similar engine to that seen in later Sierra and Lucasarts releases.",
         description: {
             es: "Amazon es un juego de aventura gráfico point-and-click que utiliza un motor similar al visto en lanzamientos posteriores de Sierra y Lucasarts.",
@@ -2364,7 +2348,7 @@ window.appData = [
     },
     {
         name: "Adventure Fun-Pak ",
-        image: "https://www.classicdosgames.com/images/screenshots/cga04/Adventure_Fun-Pak.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Adventure_Fun-Pak.png",
         description: "Scott Miller had a new idea and created Adventure Fun-Pak and Puzzle Fun-Pak out of the best games that had been submitted to Apogee by aspiring authors. The four games in the Adventure Fun-Pak make an interesting study of some surprising and sometimes questionable programming techniques. There are two ASCII and two graphical games, each of which uses a different CGA mode, although the ASCII games will fall back to Mode 7 for MDA/Hercules cards.",
         description: {
             es: "Scott Miller tuvo una nueva idea y creó Adventure Fun-Pak y Puzzle Fun-Pak con los mejores juegos que autores aspirantes habían enviado a Apogee. Los cuatro juegos en Adventure Fun-Pak ofrecen un estudio interesante de algunas técnicas de programación sorprendentes y a veces cuestionables. Hay dos juegos ASCII y dos gráficos, cada uno de los cuales usa un modo CGA diferente, aunque los juegos ASCII recurren al Modo 7 para tarjetas MDA/Hercules.",
@@ -2381,7 +2365,7 @@ window.appData = [
     },
     {
         name: "Azrael Tear",
-        image: "https://www.dosgames.com/screens/atdemo.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/atdemo.png",
         description: "Azrael's Tear is an interesting 3D first-person perspective adventure game. It plays similarly to graphical adventure games, where you collect items in your inventory and use them to progress.",
         description: {
             es: "Azrael's Tear es un interesante juego de aventura en primera persona en 3D. Se juega de manera similar a los juegos de aventura gráfica, donde recoges objetos en tu inventario y los usas para progresar.",
@@ -2414,23 +2398,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/babytype.html"
     },
     {
-        name: "Baller SDL",
-        image: "https://baller.frama.io/king.png",
-        description: "Ballerburg SDL is a classical castle combat game for GNU/Linux and other systems that are supported by the SDL library. Two castles, separated by a mountain, try to defeat each other with their cannonballs, either by killing the opponent's king or by weakening the opponent enough so that the king capitulates",
-        description: {
-            es: "Ballerburg SDL es un juego clásico de combate de castillos para GNU/Linux y otros sistemas compatibles con la biblioteca SDL. Dos castillos, separados por una montaña, intentan derrotarse mutuamente con sus balas de cañón, ya sea matando al rey oponente o debilitando lo suficiente al oponente para que el rey se rinda.",
-            de: "Ballerburg SDL ist ein klassisches Burgenkampfspiel für GNU/Linux und andere Systeme, die von der SDL-Bibliothek unterstützt werden. Zwei Burgen, getrennt durch einen Berg, versuchen, sich gegenseitig mit ihren Kanonenkugeln zu besiegen, entweder durch Töten des gegnerischen Königs oder durch ausreichende Schwächung des Gegners, bis der König kapituliert.",
-            fr: "Ballerburg SDL est un jeu de combat de château classique pour GNU/Linux et d'autres systèmes pris en charge par la bibliothèque SDL. Deux châteaux, séparés par une montagne, tentent de se vaincre mutuellement avec leurs boulets de canon, soit en tuant le roi adverse, soit en affaiblissant suffisamment l'adversaire pour que le roi capitule.",
-            it: "Ballerburg SDL è un classico gioco di combattimento tra castelli per GNU/Linux e altri sistemi supportati dalla libreria SDL. Due castelli, separati da una montagna, cercano di sconfiggersi a vicenda con le loro palle di cannone, uccidendo il re avversario o indebolendo a sufficienza l'avversario in modo che il re capitolì.",
-            pt: "Ballerburg SDL é um clássico jogo de combate de castelos para GNU/Linux e outros sistemas suportados pela biblioteca SDL. Dois castelos, separados por uma montanha, tentam se derrotar com suas balas de canhão, seja matando o rei adversário ou enfraquecendo o oponente o suficiente para que o rei se renda.",
-            ru: "Ballerburg SDL — это классическая игра в замковые сражения для GNU/Linux и других систем, поддерживаемых библиотекой SDL. Два замка, разделенные горой, пытаются победить друг друга с помощью пушечных ядер, либо убив короля противника, либо достаточно ослабив противника, чтобы король капитулировал.",
-            zh: "Ballerburg SDL 是一款适用于 GNU/Linux 和 SDL 库支持的其他系统的经典城堡战斗游戏。两座城堡被一座山隔开，试图用炮弹击败对方，要么杀死对方的国王，要么将对方削弱到足以让国王投降。",
-            ja: "Ballerburg SDLは、GNU/LinuxおよびSDLライブラリがサポートするその他のシステム向けの古典的な城戦闘ゲームです。山で隔てられた2つの城が、砲弾を使って互いに倒そうとします。相手の王を殺すか、相手を十分に弱体化させて王が降伏するかのどちらかです。"
-        },
-        category: "arcade",
-        link: "https://baller.tuxfamily.org/online/"
-    },
-    {
         name: "Baryon",
         image: "https://ifilex.github.io/WineBOX-Store/box/baryon.jpg",
         description: "Baryon is a straightforward vertical shooter which features a smooth graphical engine, a short digital sound track and various types of enemies.",
@@ -2449,7 +2416,7 @@ window.appData = [
     },
     {
         name: "Beats Of Rage",
-        image: "https://www.dosgames.com/screens/beatsofrage.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/beatsofrage.gif",
         description: "If you've ever played Streets of Rage (in an arcade or for any of Sega's old home console systems) you'll know what to expect from Beats of Rage.",
         description: {
             es: "Si alguna vez has jugado a Streets of Rage (en un arcade o en cualquiera de los antiguos sistemas de consola doméstica de Sega), sabrás qué esperar de Beats of Rage.",
@@ -2483,7 +2450,7 @@ window.appData = [
     },
     {
         name: "Brix",
-        image: "https://archive.org/download/msdos_BRIX_shareware/00_coverscreenshot.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/00_coverscreenshot.jpg",
         description: "Breakout is a classic arcade game making puzzles",
         description: {
             es: "Breakout es un juego arcade clásico que crea rompecabezas.",
@@ -2500,7 +2467,7 @@ window.appData = [
     },
     {
         name: "Bust a Move 2",
-        image: "https://www.dosgames.com/screens/bam2.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/bam2.png",
         description: "Bust-a-Move (aka Puzzle Bobble) is an extremely popular series of bubble-matching games which combine a puzzle game's need for strategy with the quick-thinking and reflexes needed for success in an action game.",
         description: {
             es: "Bust-a-Move (también conocido como Puzzle Bobble) es una serie extremadamente popular de juegos de emparejamiento de burbujas que combinan la necesidad de estrategia de un juego de rompecabezas con el pensamiento rápido y los reflejos necesarios para tener éxito en un juego de acción.",
@@ -2534,7 +2501,7 @@ window.appData = [
     },
     {
         name: "Chompsters",
-        image: "https://www.dosgames.com/screens/chompsters.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/chompsters.gif",
         description: "A very fun Pacman type game that expands on the original Pacman idea by adding different characters to play",
         description: {
             es: "Un juego tipo Pacman muy divertido que amplía la idea original de Pacman al agregar diferentes personajes para jugar.",
@@ -2550,25 +2517,8 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/chom.html"
     },
     {
-        name: "Commander Keen",
-        image: "https://upload.wikimedia.org/wikipedia/en/e/ef/Commander_Keen_cover_art.jpeg",
-        description: "Commander Keen in Goodbye, Galaxy (stylized as Goodbye, Galaxy!) is a two-part episodic side-scrolling platform video game developed by id Software and published by Apogee Software in 1991 for DOS.",
-        description: {
-            es: "Commander Keen in Goodbye, Galaxy (estilizado como Goodbye, Galaxy!) es un videojuego de plataformas de desplazamiento lateral episódico en dos partes desarrollado por id Software y publicado por Apogee Software en 1991 para DOS.",
-            de: "Commander Keen in Goodbye, Galaxy (stilisiert als Goodbye, Galaxy!) ist ein zweiteiliges episodisches Side-Scrolling-Plattform-Videospiel, das 1991 von id Software entwickelt und von Apogee Software für DOS veröffentlicht wurde.",
-            fr: "Commander Keen in Goodbye, Galaxy (stylisé Goodbye, Galaxy!) est un jeu vidéo de plateforme à défilement latéral épisodique en deux parties développé par id Software et publié par Apogee Software en 1991 pour DOS.",
-            it: "Commander Keen in Goodbye, Galaxy (stilizzato come Goodbye, Galaxy!) è un videogioco a piattaforme a scorrimento laterale episodico in due parti sviluppato da id Software e pubblicato da Apogee Software nel 1991 per DOS.",
-            pt: "Commander Keen in Goodbye, Galaxy (estilizado como Goodbye, Galaxy!) é um videogame de plataforma de rolagem lateral episódico em duas partes desenvolvido pela id Software e publicado pela Apogee Software em 1991 para DOS.",
-            ru: "Commander Keen in Goodbye, Galaxy (стилизовано как Goodbye, Galaxy!) — это двухчастная эпизодическая платформенная игра с боковой прокруткой, разработанная id Software и изданная Apogee Software в 1991 году для DOS.",
-            zh: "Commander Keen in Goodbye, Galaxy（风格化为 Goodbye, Galaxy!）是一款由 id Software 开发、Apogee Software 于 1991 年为 DOS 发行的两部分连载横向卷轴平台视频游戏。",
-            ja: "Commander Keen in Goodbye, Galaxy（Goodbye, Galaxy!と表記）は、id Softwareが開発しApogee Softwareが1991年にDOS向けに発売した、2部構成のエピソード式横スクロールプラットフォームゲームです。"
-        },
-        category: "arcade",
-        link: "https://www.jamesfmackenzie.com/chocolatekeen/"
-    },
-    {
         name: "Cristal Caves",
-        image: "https://upload.wikimedia.org/wikipedia/en/c/cf/Crystal_Caves_CD_Cover.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Crystal_Caves_CD_Cover.jpg",
         description: "Crystal Caves is a side-scrolling platform game developed by Apogee Software for MS-DOS, in which the player controls Mylo on a treasure hunt that goes wrong and leads him into a world of alien technology, traps, and creatures.",
         description: {
             es: "Crystal Caves es un juego de plataformas de desplazamiento lateral desarrollado por Apogee Software para MS-DOS, en el que el jugador controla a Mylo en una búsqueda del tesoro que sale mal y lo lleva a un mundo de tecnología alienígena, trampas y criaturas.",
@@ -2619,7 +2569,7 @@ window.appData = [
     },
     {
         name: "Doom 2D",
-        image: "https://www.dosgames.com/screens/doom2d.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/doom2d.png",
         description: "First of all, if you're looking for the real 3D DOOM game from id Software, the game on this page is not by id Software and certainly not endorsed by them!",
         description: {
             es: "En primer lugar, si estás buscando el verdadero juego DOOM en 3D de id Software, el juego de esta página no es de id Software y ciertamente no está respaldado por ellos.",
@@ -2636,7 +2586,7 @@ window.appData = [
     },
     {
         name: "Duke Nukem 2",
-        image: "https://www.dosgames.com/screens/duke2.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/duke2.gif",
         description: "Between the original, classic Duke and the kickass Duke Nukem 3D came the unheralded sequel, Duke II.",
         description: {
             es: "Entre el Duke clásico original y el increíble Duke Nukem 3D llegó la secuela no anunciada, Duke II.",
@@ -2653,7 +2603,7 @@ window.appData = [
     },
     {
         name: "Dyna Blaster",
-        image: "https://upload.wikimedia.org/wikipedia/en/3/31/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
         description: "Refers to the European title for certain games in the Bomberman franchise, such as the TurboGrafx-16/PC Engine version",
         description: {
             es: "Se refiere al título europeo para ciertos juegos de la franquicia Bomberman, como la versión de TurboGrafx-16/PC Engine.",
@@ -2687,7 +2637,7 @@ window.appData = [
     },
     {
         name: "Incredible Machine",
-        image: "https://cdn.mobygames.com/4e049778-5a53-11ee-a0a7-02420a0001cf.webp*********",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
         description: "The objective of the game is to create Rube Goldberg machines by arranging collections of objects in a complex fashion, so as to perform some simple task",
         description: {
             es: "El objetivo del juego es crear máquinas de Rube Goldberg organizando colecciones de objetos de manera compleja, para realizar alguna tarea simple.",
@@ -2704,7 +2654,7 @@ window.appData = [
     },
     {
         name: "Hextris",
-        image: "https://fosiper.com/games/_logo/hextris-lite.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/hextris-lite.png",
         description: "Hextris is a game where users rotate a central hexagon and add similar colors.",
        description: {
             es: "Hextris es un juego donde los usuarios rotan un hexágono central y agregan colores similares.",
@@ -2720,25 +2670,8 @@ window.appData = [
         link: "https://fosiper.com/games/hextris-lite/"
     },
     {
-        name: "HomeworldSDL",
-        image: "https://homeworldsdl.org/images/hwlogo.gif",
-        description: "HomeworldSDL is turn is based on the original Homeword source code released by relic entretaiment in 2003.",
-       description: {
-            es: "HomeworldSDL es un juego por turnos basado en el código fuente original de Homeworld lanzado por Relic Entertainment en 2003.",
-            de: "HomeworldSDL ist ein rundenbasiertes Spiel, das auf dem ursprünglichen Quellcode von Homeworld basiert, der 2003 von Relic Entertainment veröffentlicht wurde.",
-            fr: "HomeworldSDL est un jeu au tour par tour basé sur le code source original de Homeworld publié par Relic Entertainment en 2003.",
-            it: "HomeworldSDL è un gioco a turni basato sul codice sorgente originale di Homeworld rilasciato da Relic Entertainment nel 2003.",
-            pt: "HomeworldSDL é um jogo baseado em turnos baseado no código-fonte original de Homeworld lançado pela Relic Entertainment em 2003.",
-            ru: "HomeworldSDL — это пошаговая игра, основанная на исходном коде оригинальной Homeworld, выпущенном Relic Entertainment в 2003 году.",
-            zh: "HomeworldSDL 是一款回合制游戏，基于 Relic Entertainment 于 2003 年发布的原始《家园》源代码。",
-            ja: "HomeworldSDLは、Relic Entertainmentが2003年にリリースしたオリジナルのHomeworldソースコードに基づくターン制ゲームです。"
-        },
-        category: "arcade",
-        link: "https://gardensofkadesh.github.io/demo/index.html"
-    },
-    {
         name: "Indiana Jones and the Fate of Atlantis",
-        image: "https://www.dosgames.com/screens/indyjones.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/indyjones.gif",
         description: "This demo version of the interactive Indiana Jones adventure game gives you an idea what to expect in the full game",
         description: {
             es: "Esta versión demo del juego de aventura interactivo de Indiana Jones te da una idea de lo que te espera en el juego completo.",
@@ -2772,7 +2705,7 @@ window.appData = [
     },
     {
         name: "Nero Chess",
-        image: "https://www.classicdosgames.com/images/screenshots/hercules/Psion_Chess.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Psion_Chess.png",
         description: "Nero 5 is a freeware chess programme, the fifth in a series of revisions by Finnish author Jari Huikari.",
         description: {
             es: "Nero 5 es un programa de ajedrez gratuito, el quinto de una serie de revisiones del autor finlandés Jari Huikari.",
@@ -2789,7 +2722,7 @@ window.appData = [
     },
     {
         name: "Ms Pacman PC",
-        image: "https://www.dosgames.com/screens/mspac.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/mspac.gif",
         description: "It's just like Pac-Man, but it is MS Pac-Man! What's the difference? Well, there's a bow on her ...This game IS a lot the same as the classic Pac-Man game, but with some variations, like different maze layouts and smarter ghosts.",
         description: {
             es: "Es como Pac-Man, ¡pero es MS Pac-Man! ¿Cuál es la diferencia? Bueno, ella tiene un lazo... Este juego es muy similar al clásico Pac-Man, pero con algunas variaciones, como diferentes diseños de laberintos y fantasmas más inteligentes.",
@@ -2806,7 +2739,7 @@ window.appData = [
     },
     {
         name: "Monkey Island",
-        image: "https://archive.org/download/msdos_MIDEMO_shareware/00_coverscreenshot.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/monkey.jpg",
         description: "Demo Version Of Lucasfilms Monkey Island.",
         description: {
             es: "Versión demo de Monkey Island de Lucasfilm.",
@@ -2823,7 +2756,7 @@ window.appData = [
     },
     {
         name: "Max Mechanized Assault",
-        image: "https://dos.zone/images/containers/assets/backgrounds/vvwawa.497_4a54b79a2ba3e.jpg/4d120df40fcf9efe1111c3b030510769.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4d120df40fcf9efe1111c3b030510769.webp",
         description: "M.A.X.: Mechanized Assault & Exploration is a real-time strategy game set in a futuristic world. Players build bases, gather resources, and command customizable mechs to conquer opponents and explore new territories.",
         description: {
             es: "M.A.X.: Mechanized Assault & Exploration es un juego de estrategia en tiempo real ambientado en un mundo futurista. Los jugadores construyen bases, recolectan recursos y comandan mechs personalizables para conquistar oponentes y explorar nuevos territorios.",
@@ -2837,40 +2770,6 @@ window.appData = [
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/max.html"
-    },
-    {
-        name: "Open Jazz",
-        image: "https://images.gog-statics.com/040adf752b040d9b4381c39909960b227c4d4cc5137d30230d561a52b99ae0ec_product_card_v2_thumbnail_542.jpg",
-        description: "OpenJazz is a free, open-source version of the classic Jazz Jackrabbit™ games. OpenJazz can be compiled on a wide range of operating systems, including Windows 98/Me/XP and Linux. To play, you will need the files from one of the original games.",
-        description: {
-            es: "OpenJazz es una versión gratuita y de código abierto de los clásicos juegos Jazz Jackrabbit™. OpenJazz se puede compilar en una amplia gama de sistemas operativos, incluidos Windows 98/Me/XP y Linux. Para jugar, necesitarás los archivos de uno de los juegos originales.",
-            de: "OpenJazz ist eine kostenlose Open-Source-Version der klassischen Jazz Jackrabbit™-Spiele. OpenJazz kann auf einer Vielzahl von Betriebssystemen kompiliert werden, darunter Windows 98/Me/XP und Linux. Zum Spielen benötigen Sie die Dateien eines der Originalspiele.",
-            fr: "OpenJazz est une version gratuite et open source des jeux classiques Jazz Jackrabbit™. OpenJazz peut être compilé sur une large gamme de systèmes d'exploitation, y compris Windows 98/Me/XP et Linux. Pour jouer, vous aurez besoin des fichiers de l'un des jeux d'origine.",
-            it: "OpenJazz è una versione gratuita e open source dei classici giochi Jazz Jackrabbit™. OpenJazz può essere compilato su un'ampia gamma di sistemi operativi, tra cui Windows 98/Me/XP e Linux. Per giocare, avrai bisogno dei file di uno dei giochi originali.",
-            pt: "OpenJazz é uma versão gratuita e de código aberto dos clássicos jogos Jazz Jackrabbit™. OpenJazz pode ser compilado em uma ampla variedade de sistemas operacionais, incluindo Windows 98/Me/XP e Linux. Para jogar, você precisará dos arquivos de um dos jogos originais.",
-            ru: "OpenJazz — это бесплатная версия классических игр Jazz Jackrabbit™ с открытым исходным кодом. OpenJazz может быть скомпилирован в широком диапазоне операционных систем, включая Windows 98/Me/XP и Linux. Для игры вам понадобятся файлы из одной из оригинальных игр.",
-            zh: "OpenJazz 是经典游戏《爵士兔》™ 的免费开源版本。OpenJazz 可以在广泛的操作系统上编译，包括 Windows 98/Me/XP 和 Linux。要游玩，您需要其中一款原始游戏的文件。",
-            ja: "OpenJazzは、古典的なJazz Jackrabbit™ゲームの無料のオープンソースバージョンです。OpenJazzは、Windows 98/Me/XPやLinuxを含む幅広いオペレーティングシステムでコンパイルできます。プレイするには、いずれかのオリジナルゲームのファイルが必要です。"
-        },
-        category: "arcade",
-        link: "https://openjazz.github.io/"
-    },
-    {
-        name: "Open Jazz 2",
-        image: "https://images.gog-statics.com/040adf752b040d9b4381c39909960b227c4d4cc5137d30230d561a52b99ae0ec_product_card_v2_thumbnail_542.jpg",
-        description: "OpenJazz 2 is a free, open-source version of the classic Jazz Jackrabbit games.", 
-        description: {
-            es: "OpenJazz 2 es una versión gratuita y de código abierto de los clásicos juegos Jazz Jackrabbit.",
-            de: "OpenJazz 2 ist eine kostenlose Open-Source-Version der klassischen Jazz-Jackrabbit-Spiele.",
-            fr: "OpenJazz 2 est une version gratuite et open source des jeux classiques Jazz Jackrabbit.",
-            it: "OpenJazz 2 è una versione gratuita e open source dei classici giochi Jazz Jackrabbit.",
-            pt: "OpenJazz 2 é uma versão gratuita e de código aberto dos clássicos jogos Jazz Jackrabbit.",
-            ru: "OpenJazz 2 — это бесплатная версия классических игр Jazz Jackrabbit с открытым исходным кодом.",
-            zh: "OpenJazz 2 是经典游戏《爵士兔》的免费开源版本。",
-            ja: "OpenJazz 2は、古典的なJazz Jackrabbitゲームの無料のオープンソースバージョンです。"
-        },
-        category: "arcade",
-        link: "https://deat.tk/jazz2/wasm/"
     },
     {
         name: "Out this world",
@@ -2891,7 +2790,7 @@ window.appData = [
     },
     {
         name: "Pacman",
-        image: "https://fosiper.com/games/_logo/pacman-lite.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/pacman-lite.png",
         description: "Remake of the original Pacman game. ... This Pac-Lite is not designed to run on your device. Add it to a collection to play later, or you can try to run it ...",
         description: {
             es: "Remake del juego original de Pacman. ... Este Pac-Lite no está diseñado para ejecutarse en su dispositivo. Agrégalo a una colección para jugar más tarde, o puedes intentar ejecutarlo...",
@@ -2908,7 +2807,7 @@ window.appData = [
     },
     {
         name: "Plague of the Moon",
-        image: "https://www.dosgames.com/screens/plague.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/plague.gif",
         description: "Plague of the Moon is a Lucasarts style adventure game. However, it does not approach the Lucasarts level of quality, even though it tries.",
         description: {
             es: "Plague of the Moon es un juego de aventura al estilo de Lucasarts. Sin embargo, no alcanza el nivel de calidad de Lucasarts, aunque lo intenta.",
@@ -2993,7 +2892,7 @@ window.appData = [
     },
     {
         name: "Rocks Diamonds",
-        image: "https://www.artsoft.org/rocksndiamonds/screenshots/thumbs/mainmenu.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/mainmenu.png",
         description: "arcade style game for Linux, Mac, Windows and Android in the tradition of: Boulder Dash, Emerald Mine, Supaplex” (Amiga/PC), Sokoban” (PC).",
         description: {
             es: "Juego estilo arcade para Linux, Mac, Windows y Android en la tradición de: Boulder Dash, Emerald Mine, Supaplex (Amiga/PC), Sokoban (PC).",
@@ -3010,7 +2909,7 @@ window.appData = [
     },
     {
         name: "Sam and Max: Hit the road",
-        image: "https://www.dosgames.com/screens/snm.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/snm.gif",
         description: "Sam & Max features a detective dog and hyperkinetic rabbit in a graphical adventure game.",
         description: {
             es: "Sam & Max presenta a un perro detective y un conejo hiperquinético en un juego de aventura gráfica.",
@@ -3026,25 +2925,8 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/sm.html"
     },
     {
-        name: "SDL Sopwith",
-        image: "https://fragglet.github.io/sdl-sopwith/img/sopwith-macos-window.png",
-        description: "SDL Sopwith is a port of the classic biplane shoot ‘em-up “Sopwith” to run on modern computers and operating systems. It is named “SDL Sopwith” as it uses the LibSDL cross-platform library.",
-        description: {
-            es: "SDL Sopwith es un port del clásico juego de disparos con biplano “Sopwith” para que funcione en computadoras y sistemas operativos modernos. Se llama “SDL Sopwith” porque utiliza la biblioteca multiplataforma LibSDL.",
-            de: "SDL Sopwith ist ein Port des klassischen Doppeldecker-Shoot-’em-up „Sopwith“, um auf modernen Computern und Betriebssystemen zu laufen. Es heißt „SDL Sopwith“, da es die plattformübergreifende Bibliothek LibSDL verwendet.",
-            fr: "SDL Sopwith est un portage du classique jeu de tir à dos de biplan « Sopwith » pour fonctionner sur les ordinateurs et systèmes d'exploitation modernes. Il est nommé « SDL Sopwith » car il utilise la bibliothèque multiplateforme LibSDL.",
-            it: "SDL Sopwith è un port del classico sparatutto con biplano “Sopwith” per funzionare su computer e sistemi operativi moderni. Si chiama “SDL Sopwith” perché utilizza la libreria multipiattaforma LibSDL.",
-            pt: "SDL Sopwith é uma adaptação do clássico jogo de tiro com biplano “Sopwith” para funcionar em computadores e sistemas operacionais modernos. É chamado de “SDL Sopwith” porque usa a biblioteca multiplataforma LibSDL.",
-            ru: "SDL Sopwith — это порт классической стрелялки с бипланом «Sopwith» для работы на современных компьютерах и операционных системах. Он называется «SDL Sopwith», так как использует кросс-платформенную библиотеку LibSDL.",
-            zh: "SDL Sopwith 是经典双翼飞机射击游戏“Sopwith”的一个移植版，可在现代计算机和操作系统上运行。它之所以被称为“SDL Sopwith”，是因为它使用了 LibSDL 跨平台库。",
-            ja: "SDL Sopwithは、古典的な複葉機シューティングゲーム「Sopwith」を現代のコンピュータとオペレーティングシステムで動作させるための移植版です。クロスプラットフォームライブラリLibSDLを使用しているため、「SDL Sopwith」と名付けられています。"
-        },
-        category: "arcade",
-        link: "https://fragglet.github.io/sdl-sopwith-builds/tags/sdl-sopwith-2.7.0/sopwith.html"
-    },
-    {
         name: "Simon the Sorcerer",
-        image: "https://www.dosgames.com/screens/simon.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/simon.gif",
         description: "Simon the Sorcerer is a classic graphical adventure game, and one of the few well-known games of its type from its time that was not released by Sierra or Lucasarts.",
         description: {
             es: "Simon the Sorcerer es un juego de aventura gráfica clásico, y uno de los pocos juegos conocidos de su tipo de su época que no fue lanzado por Sierra o Lucasarts.",
@@ -3078,7 +2960,7 @@ window.appData = [
     },
     {
         name: "Stargunner",
-        image: "https://archive.org/download/msdos_STARGUNNER_shareware/00_coverscreenshot.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/starg.jpg",
         description: "Space war game",
         description: {
             es: "Juego de guerra espacial.",
@@ -3094,25 +2976,8 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/stargunner.html"
     },
     {
-        name: "Super Tux",
-        image: "https://www.supertux.org/images/supertux_title.png",
-        description: "SuperTux is an open-source classic 2D jump'n run sidescroller game in a style similar to the original Super Mario games.",
-        description: {
-            es: "SuperTux es un juego clásico de plataformas 2D de código abierto, similar en estilo a los juegos originales de Super Mario.",
-            de: "SuperTux ist ein klassisches Open-Source-2D-Jump'n'Run-Sidescroller-Spiel im Stil der originalen Super Mario-Spiele.",
-            fr: "SuperTux est un jeu de plateforme 2D open source classique de type jump'n run dans un style similaire aux jeux Super Mario originaux.",
-            it: "SuperTux è un classico gioco open source 2D a piattaforme a scorrimento laterale in uno stile simile ai giochi originali di Super Mario.",
-            pt: "SuperTux é um jogo clássico de plataforma 2D de código aberto no estilo dos jogos originais do Super Mario.",
-            ru: "SuperTux — это классическая 2D-платформенная игра с боковой прокруткой с открытым исходным кодом в стиле, похожем на оригинальные игры Super Mario.",
-            zh: "SuperTux 是一款开源的经典 2D 跳跃奔跑横向卷轴游戏，风格类似于原版《超级马里奥》游戏。",
-            ja: "SuperTuxは、オリジナルのスーパーマリオゲームと類似したスタイルの、オープンソースの古典的な2Dジャンプンランワンサイドスクローラーゲームです。"
-        },
-        category: "arcade",
-        link: "https://supertux.semphris.com/play/"
-    },
-    {
         name: "The Last Express",
-        image: "https://www.dosgames.com/screens/lastexpress.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/lastexpress.png",
         description: "The Last Express is a unique graphical adventure / detective game where the goal is to prevent certain events from happening before reaching the next station.",
         description: {
             es: "The Last Express es un juego único de aventura gráfica / detective donde el objetivo es evitar que ciertos eventos sucedan antes de llegar a la siguiente estación.",
@@ -3129,7 +2994,7 @@ window.appData = [
     },
     {
         name: "The Lion King",
-        image: "https://www.dosgames.com/screens/lionking.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/lionking.gif",
         description: "The Lion King represents one of the rare times that a movie-to-game conversion actually worked and granted us a pretty good game",
         description: {
             es: "El Rey León representa una de las raras veces que una conversión de película a juego realmente funcionó y nos brindó un juego bastante bueno.",
@@ -3162,25 +3027,8 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/vikings.html"
     },
     {
-        name: "Tower Building",
-        image: "https://www.desura.games/files/images/83/838321429c16f0e9fe4e5bb0be621524-480.webp",
-        description: "It is an arcade in which our objective will be to build the tallest skyscraper in the city",
-        description: {
-            es: "Es un arcade en el que nuestro objetivo será construir el rascacielos más alto de la ciudad.",
-            de: "Es ist ein Arcade-Spiel, bei dem unser Ziel ist, das höchste Hochhaus der Stadt zu bauen.",
-            fr: "C'est un jeu d'arcade dans lequel notre objectif sera de construire le plus haut gratte-ciel de la ville.",
-            it: "È un arcade in cui il nostro obiettivo sarà costruire il grattacielo più alto della città.",
-            pt: "É um arcade em que nosso objetivo será construir o arranha-céu mais alto da cidade.",
-            ru: "Это аркада, в которой нашей целью будет построить самый высокий небоскреб в городе.",
-            zh: "这是一款街机游戏，我们的目标是建造城市中最高的摩天大楼。",
-            ja: "それはアーケードゲームであり、私たちの目的は都市で最も高い超高層ビルを建設することです。"
-        },
-        category: "arcade",
-        link: "https://fosiper.com/games/tower/"
-    },
-    {
         name: "Wacky Wheels",
-        image: "https://www.dosgames.com/screens/wacky.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/wacky.gif",
         description: "Seems like a rip-off of Super Mario Kart, with animals in place of the familiar Mario characters", 
         description: {
             es: "Parece una copia de Super Mario Kart, con animales en lugar de los familiares personajes de Mario.",
@@ -3197,7 +3045,7 @@ window.appData = [
     },
     {
         name: "Wizardry: Crusaders of the Dark Savant",
-        image: "https://www.alexanderfreed.com/wp/wp-content/uploads/2013/11/w7-introscreen-624x468.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/w7-introscreen-624x468.png",
         description: "Crusaders of the Dark Savant is a classic role-playing game published by Sir-Tech, celebrated for its rich storyline and strategic depth.",
         description: {
             es: "Crusaders of the Dark Savant es un juego de rol clásico publicado por Sir-Tech, célebre por su rica historia y profundidad estratégica.",
@@ -3231,7 +3079,7 @@ window.appData = [
     },
     {
         name: "XOX",
-        image: "https://archive.org/download/msdos_XOX_shareware/00_coverscreenshot.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/xox.jpg",
         description: "Is a classic game of Tic-Tac-Toe in 3D.",
         description: {
             es: "Es un juego clásico de tres en raya en 3D.",
@@ -3248,7 +3096,7 @@ window.appData = [
     },
     {
         name: "Capture the Flag",
-        image: "https://www.dosgames.com/screens/capflag.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/capflag.gif",
         description: "This game was given several glowing reviews upon its initial release (1994/95) and its easy to see why. This shareware game has an interface that is very professionally done and rivals the commercial games of its time.",
         description: {
             es: "Este juego recibió varias críticas entusiastas en su lanzamiento inicial (1994/95) y es fácil ver por qué. Este juego shareware tiene una interfaz muy profesional que rivaliza con los juegos comerciales de su época.",
@@ -3282,7 +3130,7 @@ window.appData = [
     },
     {
         name: "Crazy Cows",
-        image: "https://www.dosgames.com/screens/crazycows.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/crazycows.png",
         description: "Crazy Cows is not as crazy as its name might suggest. It's a strategy game, which superficially resembles real-time strategy games like Warcraft or Warcraft II but this is a turn-based game.",
         description: {
             es: "Crazy Cows no es tan loco como su nombre podría sugerir. Es un juego de estrategia, que superficialmente se parece a juegos de estrategia en tiempo real como Warcraft o Warcraft II, pero este es un juego por turnos.",
@@ -3367,7 +3215,7 @@ window.appData = [
     },
     {
         name: "Syndicate Plus",
-        image: "https://dos.zone/images/containers/assets/backgrounds/xhscog.73599010340e1630b66dadcdbf922049c99deeeb40eeaf2fc83ace6c3792e05a.jpg/0d60ba79f3cc2bb7493618a3e7491d01.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/0d60ba79f3cc2bb7493618a3e7491d01.webp",
         description: "Syndicate Plus is a combination of Syndicate and the American Revolt expansion pack. Syndicate Plus is a strategy game in which you control cyborg 'agents' in an attempt to dominate the world. American Revolt adds new missions to the game, as well as multiplayer capability and multiplayer missions.",
         description: {
             es: "Syndicate Plus es una combinación de Syndicate y el paquete de expansión American Revolt. Syndicate Plus es un juego de estrategia en el que controlas 'agentes' cyborg en un intento de dominar el mundo. American Revolt agrega nuevas misiones al juego, así como capacidad multijugador y misiones multijugador.",
@@ -3384,7 +3232,7 @@ window.appData = [
     },
     {
         name: "Theme park",
-        image: "https://www.dosgames.com/screens/themepark.gif",
+        image: "https://ifilex.github.io/WineBOX-Store/box/themepark.gif",
         description: "Theme Park is a classic strategy game, and one of the earliest tycoon-style games. In this demo version, your ride selection is limited to just one ride type, and there are many other limits as well. ",
         description: {
             es: "Theme Park es un juego de estrategia clásico y uno de los primeros juegos de estilo tycoon. En esta versión demo, tu selección de atracciones se limita a un solo tipo de atracción, y también hay muchos otros límites.",
@@ -3401,7 +3249,7 @@ window.appData = [
     },
     {
         name: "The Horde",
-        image: "https://www.dosgames.com/screens/thehorde.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/thehorde.png",
         description: "The Horde is a real-time action / strategy fantasy themed game.",
         description: {
             es: "The Horde es un juego de acción/estrategia en tiempo real con temática de fantasía.",
@@ -3452,7 +3300,7 @@ window.appData = [
     },
     {
         name: "Waterworld",
-        image: "https://www.dosgames.com/screens/waterworld.png",
+        image: "https://ifilex.github.io/WineBOX-Store/box/waterworld.png",
         description: "Waterworld is a real-time mission-based strategy game based on the expensive (at the time) and largely poorly regarded movie of the same name.",
         description: {
             es: "Waterworld es un juego de estrategia en tiempo real basado en misiones, inspirado en la costosa (en ese momento) y en gran medida mal considerada película del mismo nombre.",
@@ -3469,7 +3317,7 @@ window.appData = [
     },
     {
         name: "Worm",
-        image: "https://ifilex.github.io/WineBOX-Store/box/war2.jpg",
+        image: "https://ifilex.github.io/WineBOX-Store/box/worms.jpg",
         description: "This demo version of the popular WORMS game allows you to get a taste of what the full game is like. ",
         description: {
             es: "Esta versión demo del popular juego WORMS te permite probar cómo es el juego completo.",
@@ -3503,7 +3351,7 @@ window.appData = [
     },
     {
         name: "ZED",
-        image: "https://dos.zone/images/containers/assets/backgrounds/rofzsx.203_5b03ef03913fe.png/1418a024ed1903d472446d6aebc8ce6c.webp",
+        image: "https://ifilex.github.io/WineBOX-Store/box/1418a024ed1903d472446d6aebc8ce6c.webp",
         description: "Z (ZED) is a real-time strategy game featuring fast-paced, action-packed gameplay. Players command robotic armies, capture territories, and engage in tactical battles across diverse landscapes to achieve victory.",
         description: {
             es: "Z (ZED) es un juego de estrategia en tiempo real que presenta un juego rápido y lleno de acción. Los jugadores comandan ejércitos robóticos, capturan territorios y participan en batallas tácticas en diversos paisajes para lograr la victoria.",
