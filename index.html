@@ -692,7 +692,7 @@ document.getElementById('goToReportBtn')?.addEventListener('click', () => {
 });
 document.getElementById('closeFirstDialogBtn')?.addEventListener('click', closeFirstDialog);
 
-// ========== RECREAR IFRAME ==========
+// ========== RECREAR IFRAME Y MANEJO DE JOYSTICK ==========
 
 function recrearIframe() {
     let contenedor = document.getElementById('virtualWindow');
@@ -716,20 +716,79 @@ function recrearIframe() {
     return iframeNuevo;
 }
 
+// Variable para controlar si el teclado está capturado por el iframe
+let keyboardCaptured = false;
+
+function abrirVirtualConApp(app) {
+    let win = document.getElementById('virtualWindow');
+    let iframe = recrearIframe();
+    
+    // Configurar captura de teclado
+    keyboardCaptured = true;
+    
+    // Iniciar tracking
+    startTracking(app);
+    
+    // Establecer src con un pequeño delay para asegurar la captura
+    setTimeout(() => {
+        iframe.src = app.link;
+        
+        // Intentar dar foco al iframe después de cargar
+        iframe.onload = () => {
+            // Reforzar captura de teclado múltiples veces
+            setTimeout(() => {
+                try {
+                    iframe.contentWindow.focus();
+                    iframe.focus();
+                } catch(e) {}
+            }, 100);
+            
+            setTimeout(() => {
+                try {
+                    iframe.contentWindow.focus();
+                } catch(e) {}
+            }, 500);
+        };
+    }, 50);
+    
+    win.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Cerrar modal si está abierto
+    if (isModalOpen) {
+        document.getElementById('appModal').style.display = 'none';
+        isModalOpen = false;
+    }
+    
+    // Configurar intervalos
+    if (currentTrackingInterval) clearInterval(currentTrackingInterval);
+    currentTrackingInterval = setInterval(() => { 
+        if (win.style.display !== 'flex') { 
+            stopTracking(); 
+            clearInterval(currentTrackingInterval); 
+            currentTrackingInterval = null;
+            keyboardCaptured = false;
+        } 
+    }, 1000);
+    
+    document.getElementById('closeVirtualWindowBtn').onclick = () => {
+        keyboardCaptured = false;
+        cerrarVentanaVirtual();
+    };
+}
 
 function cerrarVentanaVirtual() {
     let win = document.getElementById('virtualWindow');
     let iframe = document.getElementById('virtualAppIframe');
     
+    // Liberar captura de teclado
+    keyboardCaptured = false;
+    
     // 1. Forzar la detención del iframe
     if (iframe) {
-        // Método más agresivo: cambiar src a about:blank
         iframe.src = 'about:blank';
-        
-        // Eliminar el sandbox temporalmente para bloquear ejecución
         iframe.sandbox = '';
         
-        // Si existe contentWindow, detenerlo
         if (iframe.contentWindow) {
             try {
                 iframe.contentWindow.stop();
@@ -748,12 +807,11 @@ function cerrarVentanaVirtual() {
     win.style.display = 'none';
     document.body.style.overflow = '';
     
-    // 4. Eliminar completamente el iframe del DOM y recrearlo limpio
+    // 4. Recrear iframe limpio
     setTimeout(() => {
         if (iframe) {
             iframe.remove();
         }
-        // Crear un iframe nuevo y limpio
         let contenedor = document.getElementById('virtualWindow');
         let iframeNuevo = document.createElement('iframe');
         iframeNuevo.id = 'virtualAppIframe';
@@ -764,7 +822,7 @@ function cerrarVentanaVirtual() {
         contenedor.appendChild(iframeNuevo);
     }, 50);
     
-    // 5. Recuperar foco en el launcher
+    // 5. Recuperar foco en el lanzador
     setTimeout(() => {
         currentFocusArea = 'apps';
         currentSelectedIndex = 0;
@@ -1137,10 +1195,26 @@ function getGridCols(){
     return Math.max(1, cols);
 }
 
+// FUNCIÓN PRINCIPAL DE MANEJO DE TECLADO - MODIFICADA PARA RESPETAR keyboardCaptured
 function handleKeyDown(e){
+    // Si el teclado está capturado por el iframe, no hacer nada en el lanzador
+    if(keyboardCaptured) {
+        e.stopPropagation();
+        return;
+    }
+    
     if(isModalOpen){ handleModalKeydown(e); return; }
     if(document.getElementById('confirmModal').style.display==='block') return;
     if(document.getElementById('virtualWindow').style.display==='flex'){ 
+        // La ventana virtual está abierta pero el teclado debería estar capturado
+        // Si llegamos aquí, algo falló, así que aseguramos la captura
+        let iframe = document.getElementById('virtualAppIframe');
+        if(iframe && iframe.contentWindow) {
+            try {
+                iframe.contentWindow.focus();
+                keyboardCaptured = true;
+            } catch(e) {}
+        }
         if(e.key==='Escape'){ cerrarVentanaVirtual(); } 
         return; 
     }
@@ -1269,29 +1343,12 @@ function openAppModal(app){
     if(installHandlerRef) installBtn.removeEventListener('click', installHandlerRef);
     if(uninstallHandlerRef) uninstallBtn.removeEventListener('click', uninstallHandlerRef);
     
-launchHandlerRef = () => { 
-    addToRecent(app); 
-    startTracking(app); 
-    let win = document.getElementById('virtualWindow'); 
-    let iframe = recrearIframe();
-    // Pequeño delay para asegurar que el iframe está listo
-    setTimeout(() => {
-        iframe.src = app.link;
-    }, 10);
-    win.style.display = 'flex'; 
-    document.body.style.overflow = 'hidden'; 
-    if (currentTrackingInterval) clearInterval(currentTrackingInterval);
-    currentTrackingInterval = setInterval(() => { 
-        if (win.style.display !== 'flex') { 
-            stopTracking(); 
-            clearInterval(currentTrackingInterval); 
-            currentTrackingInterval = null;
-        } 
-    }, 500);
-    document.getElementById('closeVirtualWindowBtn').onclick = cerrarVentanaVirtual;
-    modal.style.display = 'none'; 
-    isModalOpen = false; 
-};
+    launchHandlerRef = () => { 
+        addToRecent(app);
+        abrirVirtualConApp(app);
+        modal.style.display = 'none'; 
+        isModalOpen = false; 
+    };
     
     installHandlerRef = () => { installApp(app); modal.style.display='none'; isModalOpen=false; };
     uninstallHandlerRef = () => { showConfirmModal(app); modal.style.display='none'; isModalOpen=false; };
