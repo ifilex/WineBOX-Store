@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Steam Client Pro - Gaming Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #66c0f4, #2a475e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #66c0f4;
+        }
+
+        .search-box::after {
+            content: '🔍';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.5;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #66c0f4, #2a475e);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Sección de juegos recientes */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #66c0f4;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: #66c0f4;
+        }
+
+        .game-card.supported {
+            border-bottom: 3px solid #4caf50;
+        }
+
+        .game-card.unsupported {
+            border-bottom: 3px solid #f44336;
+            opacity: 0.7;
+        }
+
+        .game-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #1a1f3a, #0a0e27);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .game-info {
+            padding: 15px;
+        }
+
+        .game-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .game-status {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .status-supported {
+            color: #4caf50;
+        }
+
+        .status-unsupported {
+            color: #f44336;
+        }
+
+        /* Modal de juego */
+        .game-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            z-index: 2000;
+        }
+
+        .game-modal.active {
+            display: block;
+        }
+
+        .modal-header {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2001;
+            display: flex;
+            gap: 10px;
+        }
+
+        .close-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .game-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Login Modal */
+        .login-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-overlay.active {
+            display: flex;
+        }
+
+        .login-box {
+            background: linear-gradient(135deg, #1a1f3a, #0a0e27);
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background: white;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #000;
+        }
+
+        /* Navegación por teclado */
+        .game-card:focus {
+            outline: 2px solid #66c0f4;
+            transform: scale(1.02);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .header {
+                padding: 10px 15px;
+            }
+            
+            .container {
+                margin-top: 100px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🎮 STEAM CLIENT PRO</div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar juegos...">
+        </div>
+        <div class="user-info">
+            <div id="loginStatus">
+                <button class="login-btn" onclick="showLogin()">Iniciar Sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Juegos Recientes -->
+        <div class="section" id="recentSection" style="display: none;">
+            <h2 class="section-title">🕒 Jugados Recientemente</h2>
+            <div class="games-grid" id="recentGames"></div>
+        </div>
+
+        <!-- Mi Biblioteca -->
+        <div class="section">
+            <h2 class="section-title">📚 Mi Biblioteca</h2>
+            <div class="games-grid" id="libraryGames"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Juego -->
+    <div class="game-modal" id="gameModal">
+        <div class="modal-header">
+            <button class="close-btn" onclick="closeGame()">✕</button>
+        </div>
+        <iframe id="gameIframe" class="game-iframe" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"></iframe>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-overlay" id="loginModal">
+        <div class="login-box">
+            <h2>Iniciar Sesión en Steam</h2>
+            <input type="text" id="username" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button class="login-btn" onclick="loginWithCredentials()">Ingresar</button>
+            <hr style="margin: 20px 0; opacity: 0.3;">
+            <button class="login-btn" onclick="showQR()">Iniciar con QR</button>
+            <div id="qrContainer" style="display: none;">
+                <div class="qr-code">📱 Escanea con Steam App</div>
+                <button class="login-btn" onclick="confirmMobileLogin()">Confirmar en App</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // BASE DE DATOS DE JUEGOS SOPORTADOS (Verdes)
+        const supportedGames = [
+            "2048.html", "Angry Birds.html", "Doodle Jump.html", "Flappy Bird.html",
+            "Fruit Ninja.html", "Geometry Dash Lite (REMAKE).html", "Getting Over It with Bennett Foddy.html",
+            "Happy Wheels.html", "Jetpack Joyride.html", "Plants vs Zombies.html",
+            "Slime Rancher.html", "Subway Surfers_ Barcelona.html", "Temple Run 2.html",
+            "Bad Ice Cream.html", "Bad Ice Cream 2.html", "Bad Ice Cream 3.html",
+            "8 Ball Pool.html", "Drift Hunters.html", "Granny.html", "Granny 2.html"
+        ];
+
+        // Lista completa de juegos (extraída de tu lista)
+        const allGames = [
+            "Date Danger.html", "10 Minutes Till Dawn.html", "12 Mini Battles.html", "1v1.LoL.html",
+            "2048 Merge Run.html", "2048.html", "3D Bolt Master.html", "3D Bowling.html",
+            "8 Ball Classic.html", "8 Ball Pool.html", "99 Balls.html", "A Bite at Freddy's.html",
+            "A Dance of Fire and Ice.html", "A Difficult Game About Climbing.html", "A Small World Cup.html",
+            "Adventure Drivers.html", "Alien Hominid.html", "Amanda the Adventurer.html",
+            "Angry Birds Showdown.html", "Angry Birds.html", "Aquapark.io.html", "Arthur's Nightmare.html",
+            "Attack Hole.html", "Aviamasters.html", "Awesome Tanks.html", "Backrooms.html",
+            "Bacon May Die.html", "Bad Ice Cream 2.html", "Bad Ice Cream 3.html", "Bad Ice Cream.html",
+            "Bad Monday Simulator.html", "Bad Parenting 1.html", "Bad Time Simulator.html",
+            "Baldi's Basics Classic Remastered.html", "Baldi's Basics Plus.html", "Baldi's Basics.html",
+            "Ball Blast.html", "Bendy and the Ink Machine.html", "Buckshot Roulette.html",
+            "Celeste.html", "Cuphead.html", "Doodle Jump.html", "Doom 2.html", "Doom 3.html",
+            "DOOM.html", "Dragon vs Bricks.html", "Draw Climber.html", "Draw the Hill.html",
+            "Draw the Line.html", "Dreadhead Parkour.html", "Drift Boss.html", "Drift Hunters.html",
+            "Duck Life 2.html", "Duck Life 3.html", "Duck Life 5.html", "Duck Life 8.html",
+            "Duck Life.html", "Elastic Man.html", "Endoparasitic.html", "Endroll.html",
+            "Escape Road 2.html", "Escape Road.html", "Evil Glitch.html", "EvoWars.io.html",
+            "Fallout.html", "Fancy Pants Adventure 2.html", "Fancy Pants Adventure 4 Part 2.html",
+            "Fancy Pants Adventure.html", "Fears to Fathom_ Home Alone.html", "FIFA 10.html",
+            "Final Earth 2.html", "Five Nights at Candy's 2.html", "Five Nights at Candy's.html",
+            "Five Nights at Freddy's 3.html", "Five Nights at Freddy's 4.html",
+            "Five Nights at Freddy's 4_ Halloween.html", "Five Nights at Freddy's_ Pizza Simulator.html",
+            "Five Nights at Freddy's_ Sister Location.html", "Five Nights at Freddy's_ Ultimate Custom Night.html",
+            "Five Nights at Freddy's_ World.html", "Five Nights at Winston's.html", "Flappy Bird.html",
+            "Flappy Dunk.html", "FNF vs Pibby Corrupted.html", "FNF Vs. Hypno's Lullaby v2.html",
+            "Football Bros.html", "Fork n Sausage.html", "Fortzone Battle Royale.html",
+            "Friday Night Funkin vs Carol V2.html", "Friday Night Funkin VS Impostor v4.html",
+            "Friday Night Funkin vs Nonsense.html", "Friday Night Funkin vs Sunday Remastered HD.html",
+            "Friday Night Funkin vs Undertale.html", "Friday Night Funkin Vs. Cyber Sensation.html",
+            "Friday Night Funkin Vs. Dave and Bambi v3.html", "Friday Night Funkin VS. Sky.html",
+            "Friday Night Funkin.html", "Fruit Ninja.html", "Generic Fighter Maybe.html",
+            "Geometry Dash Lite (REMAKE).html", "Get Yoked.html", "Getaway Shootout.html",
+            "Getting Over It with Bennett Foddy.html", "Giant Wanted.html", "Gladihoppers.html",
+            "Goblin Goopmaxxing.html", "God's Flesh.html", "Godzilla Daikaiju Battle Royale.html",
+            "Going Balls.html", "Google Baseball.html", "Gorilla Tag.html", "Granny 2.html",
+            "Granny 3.html", "Granny.html", "Growden.io.html", "Guess Their Answer.html",
+            "Gun Clone.html", "Gun Runner.html", "Gunspin.html", "Half Life.html",
+            "Half Life_ Opposing Force.html", "Happy Sheepies.html", "Happy Wheels.html",
+            "Harvest.io.html", "Hollow Knight.html", "Hotline Miami.html", "House of Hazards.html",
+            "Human Expenditure Program.html", "Hypper Sandbox.html", "I woke up next to you again..html",
+            "Ice Dodo.html", "Idle Breakout.html", "Idle Dice.html", "Idle Mining Empire.html",
+            "In Stars and Time.html", "Infinimoes.html", "Jelly Drift.html", "Jetpack Joyride.html",
+            "Johnny Trigger.html", "Journey Downhill.html", "JustFall.lol.html", "Karlson.html",
+            "Kindergarten 2.html", "Kindergarten 3.html", "Kindergarten.html", "Kirby Squeak Squad.html",
+            "Kirby Super Star Ultra.html", "Kirby ~ Soft & Wet.html", "Kitchen Bazar.html",
+            "Kitty Toy.html", "Lacey's Flash Games.html", "Layers Roll.html", "Lazy Jumper.html",
+            "Learn to Fly.html", "Little Runmo.html", "Look Outside.html", "Love Letters.html",
+            "Madalin Stunt Cars 2.html", "Madalin Stunt Cars 3.html", "Magic Tiles 3.html",
+            "Maze Speedrun.html", "Melon Playground.html", "Merge Harvest.html", "Midnight Shift.html",
+            "Milk Inside a Bag of Milk Inside a Bag of Milk.html", "Mindwave.html",
+            "Minecraft Beta 1.7.3.html", "Nazi Zombies_ Portable.html", "Newgrounds Rumble.html",
+            "Nijika's Ahoge.html", "OMORI.html", "Oneshot (LEGACY).html", "Orange Roulette.html",
+            "Oshi Oshi Punch!.html", "Papa's Cheeseria.html", "Papa's Cupcakeria.html",
+            "Papa's Pizeria.html", "Papery Planes.html", "People Playground.html",
+            "Pico's School (1999).html", "Pixel Gun Survival.html", "Pizza Tower.html",
+            "Pizza Tower_ Scoutdigo.html", "Plants vs Zombies.html", "Plants vs. Zombies 2 Gardenless.html",
+            "Pou.html", "Protektor.html", "R.E.P.O.html", "Raft Wars.html", "Raft.html",
+            "Schoolboy Runaway.html", "Slime Rancher.html", "Sonic Mania.html", "Stick War_ Legacy.html",
+            "Subway Surfers_ Barcelona.html", "Super Star Car.html", "Superhot.html", "Tattletail.html",
+            "Temple Run 2.html", "Terraria.html", "That's Not My Neighbor.html", "Time Shooter 1.html",
+            "ULTRAKILL.html", "War The Knights.html", "Waterworks!.html", "WebFishing.html",
+            "World Box.html", "Yandere Simulator.html", "Yume Nikki.html"
+        ];
+
+        let currentUser = null;
+        let userGames = [];
+        let recentPlayed = [];
+        let currentIframeSrc = null;
+        let iframeProcess = null;
+
+        // Función para verificar si un juego es soportado
+        function isGameSupported(gameName) {
+            return supportedGames.includes(gameName);
+        }
+
+        // Obtener datos del juego desde Steam (simulado)
+        async function getGameDetails(gameName) {
+            // Simular API de Steam
+            return {
+                title: gameName.replace('.html', ''),
+                summary: `Disfruta de ${gameName.replace('.html', '')} - Un juego increíble disponible en nuestra plataforma.`,
+                image: `https://via.placeholder.com/400x225/2a475e/ffffff?text=${encodeURIComponent(gameName.replace('.html', ''))}`
+            };
+        }
+
+        // Renderizar biblioteca
+        async function renderLibrary() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filteredGames = userGames.filter(game => 
+                game.toLowerCase().includes(searchTerm)
+            );
+
+            const libraryGrid = document.getElementById('libraryGames');
+            libraryGrid.innerHTML = '';
+
+            for (const game of filteredGames) {
+                const isSupported = isGameSupported(game);
+                const gameCard = document.createElement('div');
+                gameCard.className = `game-card ${isSupported ? 'supported' : 'unsupported'}`;
+                gameCard.tabIndex = 0;
+                
+                const gameDetails = await getGameDetails(game);
+                
+                gameCard.innerHTML = `
+                    <div class="game-image">🎮</div>
+                    <div class="game-info">
+                        <div class="game-title">${game.replace('.html', '')}</div>
+                        <div class="game-status">
+                            ${isSupported ? 
+                                '<span class="status-supported">✅ Soportado</span>' : 
+                                '<span class="status-unsupported">❌ No Soportado</span>'}
+                        </div>
+                    </div>
+                `;
+                
+                gameCard.onclick = () => showGameDetails(game, isSupported);
+                gameCard.onkeydown = (e) => {
+                    if (e.key === 'Enter') showGameDetails(game, isSupported);
+                    navigateWithKeyboard(e);
+                };
+                
+                libraryGrid.appendChild(gameCard);
+            }
+        }
+
+        // Mostrar detalles del juego y botón Play
+        async function showGameDetails(gameName, isSupported) {
+            const details = await getGameDetails(gameName);
+            
+            // Crear modal de detalles
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.right = '0';
+            modal.style.bottom = '0';
+            modal.style.background = 'rgba(0,0,0,0.95)';
+            modal.style.zIndex = '2500';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            
+            modal.innerHTML = `
+                <div style="background: linear-gradient(135deg, #1a1f3a, #0a0e27); border-radius: 20px; max-width: 500px; width: 90%; padding: 30px; text-align: center;">
+                    <img src="${details.image}" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+                    <h2>${details.title}</h2>
+                    <p style="margin: 20px 0; opacity: 0.8;">${details.summary}</p>
+                    <button ${!isSupported ? 'disabled style="opacity:0.5;"' : ''} class="login-btn" onclick="launchGame('${gameName}')">🎮 JUGAR</button>
+                    <button class="login-btn" style="background: #666; margin-left: 10px;" onclick="this.parentElement.parentElement.remove()">Cerrar</button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+        }
+
+        // Lanzar juego
+        function launchGame(gameName) {
+            // Cerrar modal de detalles si existe
+            const detailModals = document.querySelectorAll('div[style*="position: fixed"][style*="z-index: 2500"]');
+            detailModals.forEach(modal => modal.remove());
+            
+            const iframe = document.getElementById('gameIframe');
+            const modal = document.getElementById('gameModal');
+            
+            // Guardar en recientes
+            if (!recentPlayed.includes(gameName)) {
+                recentPlayed.unshift(gameName);
+                if (recentPlayed.length > 10) recentPlayed.pop();
+                saveRecentGames();
+                renderRecentGames();
+            }
+            
+            // Cargar juego
+            iframe.src = `./games/${gameName}`;
+            modal.classList.add('active');
+            
+            // Prevenir scroll en body
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Cerrar juego
+        function closeGame() {
+            const iframe = document.getElementById('gameIframe');
+            const modal = document.getElementById('gameModal');
+            
+            // Matar el iframe completamente
+            iframe.src = 'about:blank';
+            modal.classList.remove('active');
+            
+            // Liberar recursos forzando recolección de basura
+            iframe.contentWindow.location.href = 'about:blank';
+            
+            // Restaurar scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Renderizar juegos recientes
+        function renderRecentGames() {
+            const recentSection = document.getElementById('recentSection');
+            const recentGrid = document.getElementById('recentGames');
+            
+            if (recentPlayed.length === 0) {
+                recentSection.style.display = 'none';
+                return;
+            }
+            
+            recentSection.style.display = 'block';
+            recentGrid.innerHTML = '';
+            
+            for (const game of recentPlayed) {
+                const isSupported = isGameSupported(game);
+                const gameCard = document.createElement('div');
+                gameCard.className = `game-card ${isSupported ? 'supported' : 'unsupported'}`;
+                gameCard.innerHTML = `
+                    <div class="game-image">🕒</div>
+                    <div class="game-info">
+                        <div class="game-title">${game.replace('.html', '')}</div>
+                        <div class="game-status">Recientemente jugado</div>
+                    </div>
+                `;
+                gameCard.onclick = () => showGameDetails(game, isSupported);
+                recentGrid.appendChild(gameCard);
+            }
+        }
+        
+        // Guardar recientes
+        function saveRecentGames() {
+            localStorage.setItem('recentGames', JSON.stringify(recentPlayed));
+        }
+        
+        // Login con credenciales
+        function loginWithCredentials() {
+            const username = document.getElementById('username').value;
+            if (username) {
+                currentUser = username;
+                userGames = [...allGames]; // Simular que tiene todos los juegos
+                document.getElementById('loginStatus').innerHTML = `<div style="display:flex;align-items:center;gap:10px;">👤 ${username}</div>`;
+                document.getElementById('loginModal').classList.remove('active');
+                renderLibrary();
+                loadRecentGames();
+            }
+        }
+        
+        // Mostrar QR
+        function showQR() {
+            document.getElementById('qrContainer').style.display = 'block';
+        }
+        
+        // Confirmar login móvil
+        function confirmMobileLogin() {
+            setTimeout(() => {
+                const username = "Usuario_Steam_" + Math.floor(Math.random() * 10000);
+                currentUser = username;
+                userGames = [...allGames];
+                document.getElementById('loginStatus').innerHTML = `<div style="display:flex;align-items:center;gap:10px;">📱 ${username}</div>`;
+                document.getElementById('loginModal').classList.remove('active');
+                renderLibrary();
+                loadRecentGames();
+            }, 2000);
+        }
+        
+        function showLogin() {
+            document.getElementById('loginModal').classList.add('active');
+        }
+        
+        function loadRecentGames() {
+            const saved = localStorage.getItem('recentGames');
+            if (saved) {
+                recentPlayed = JSON.parse(saved);
+                renderRecentGames();
+            }
+        }
+        
+        // Navegación con teclado
+        let currentFocus = 0;
+        const gameCards = () => document.querySelectorAll('.game-card');
+        
+        function navigateWithKeyboard(e) {
+            const cards = gameCards();
+            if (cards.length === 0) return;
+            
+            if (e.key === 'ArrowRight') {
+                currentFocus = (currentFocus + 1) % cards.length;
+                cards[currentFocus]?.focus();
+                cards[currentFocus]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else if (e.key === 'ArrowLeft') {
+                currentFocus = (currentFocus - 1 + cards.length) % cards.length;
+                cards[currentFocus]?.focus();
+                cards[currentFocus]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+        
+        document.addEventListener('keydown', navigateWithKeyboard);
+        
+        // Búsqueda en tiempo real
+        document.getElementById('searchInput').addEventListener('input', () => {
+            if (currentUser) renderLibrary();
+        });
+        
+        // Inicialización
+        function init() {
+            loadRecentGames();
+            // Simular demo sin login
+            setTimeout(() => {
+                if (!currentUser) {
+                    // Mostrar mensaje de bienvenida
+                    document.getElementById('libraryGames').innerHTML = `
+                        <div style="grid-column:1/-1; text-align:center; padding:50px;">
+                            <h3>🔐 Inicia sesión para ver tu biblioteca de juegos</h3>
+                            <button class="login-btn" onclick="showLogin()" style="margin-top:20px;">Iniciar Sesión</button>
+                        </div>
+                    `;
+                }
+            }, 100);
+        }
+        
+        init();
+    </script>
+</body>
+</html>
