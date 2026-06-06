@@ -10,6 +10,15 @@
     <link href="../css/main.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <style>
+        /* ===== SOLO ESTAS 3 LÍNEAS NUEVAS PARA MÓVIL ===== */
+        #video1 {
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 16 / 9;
+        }
+        /* ===== FIN DE LAS LÍNEAS NUEVAS ===== */
+    </style>
 </head>
 
 <body>
@@ -43,7 +52,6 @@
     </div>
     <div id="right">
         <div id="div1">
-            <!-- The element where the player will be placed -->
             <video id="video1" class="video-js vjs-big-play-centered" controls preload="auto" poster="Loading..." autoplay="true" data-setup='{}'>
                 <source src="https://f8e7y4c6.ssl.hwcdn.net/andflixhd/index.m3u8" type="application/x-mpegURL" />
                 <p class="vjs-no-js">
