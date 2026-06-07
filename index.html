@@ -362,100 +362,413 @@ const translations = {
         first_analysis_btn_cancel:"Schließen"
     },
     fr: {
-        rec_impulse_control_foundation:"Jeux avec pauses stratégiques. Renforcent l'inhibition des réponses automatiques.",
-        rec_impulse_control_exercises:"🔹 Technique 'ARRÊTE-PENSE-AGIS'\n🔹 Feu tricolore visuel (rouge=arrêt, jaune=pense, vert=agis)\n🔹 Attendre 10 secondes avant de répondre",
-        rec_attention_foundation:"Activités nécessitant une concentration continue. Améliorent la mémoire de travail.",
-        rec_attention_exercises:"🔹 Méthode Pomodoro: 15 min de focus + 5 min de pause\n🔹 Organise ton espace de travail\n🔹 Pratique 'trouve les différences'",
-        rec_planning_foundation:"Stratégies d'organisation des ressources et d'anticipation des conséquences.",
-        rec_planning_exercises:"🔹 Utilise un agenda visuel hebdomadaire\n🔹 Écris des listes d'étapes avant de commencer\n🔹 Organise ton espace physique",
-        rec_emotional_foundation:"Environnements calmes pour travailler la tolérance à la frustration.",
-        rec_emotional_exercises:"🔹 Respiration 4-4-4-4\n🔹 Nomme tes émotions à voix haute\n🔹 Crée un 'coin calme'",
-        rec_cognitive_foundation:"Stimulation variée qui maintient les fonctions exécutives actives.",
-        rec_cognitive_exercises:"🔹 Maintiens des horaires de sommeil réguliers\n🔹 Hydrate-toi toutes les 2 heures\n🔹 Fais de l'activité physique quotidienne",
-        first_analysis_title:"✅ Analyse prête!",
-        first_analysis_msg:"Votre première analyse cognitive est prête. Vous pouvez y accéder via le bouton 📊.",
-        first_analysis_btn_go:"Voir rapport",
-        first_analysis_btn_cancel:"Fermer"
+menu_home:"Accueil", menu_apps:"Applications", menu_games:"Jeux", menu_arcade:"Arcade", menu_multimedia:"Multimédia", menu_utilities:"Utilitaires", menu_strategy:"Stratégie", menu_uninstall:"Désinstaller", 
+search_placeholder:"Rechercher des apps...", search_button:"Rechercher", recent_title:"Récemment utilisés", cat_all:"Tous", cat_apps:"Apps", cat_games:"Jeux", cat_multimedia:"Multimédia", cat_utilities:"Utilitaires", cat_arcade:"Arcade", cat_rts:"Stratégie", 
+run_button:"Exécuter", install_button:"Installer", uninstall_button:"Désinstaller", confirm_title:"Confirmer la désinstallation", confirm_message:"Êtes-vous sûr de vouloir désinstaller <strong>{name}</strong> ?", confirm_cancel:"Annuler", confirm_ok:"Désinstaller", no_recent:"Aucune app récente", no_apps:"Aucune app trouvée",
+neuro_insufficient_data:"⚠️ Données insuffisantes - Vous avez besoin d'au moins 3 jeux différents et 5 minutes au total pour générer votre profil cognitif",
+neuro_analysis_title:"ANALYSE COGNITIVE",
+neuro_data_analysis:"📊 DONNÉES DE L'ANALYSE",
+neuro_sessions:"Sessions enregistrées",
+neuro_total_time:"Temps de jeu total",
+neuro_minutes:"minutes",
+neuro_detected_pattern:"🧩 Schéma comportemental détecté",
+neuro_cognitive_domains:"🧠 ANALYSE PAR DOMAINE COGNITIF",
+neuro_impulsivity:"IMPULSIVITÉ",
+neuro_attention:"ATTENTION SOUTENUE",
+neuro_planning:"PLANIFICATION EXÉCUTIVE",
+neuro_emotional:"RÉGULATION ÉMOTIONNELLE",
+neuro_high_impulsivity:"⚡ Forte tendance à l'action immédiate, avec des difficultés à inhiber les réponses automatiques. Recherche de récompenses rapides et impatience. Bénéfique : technique 'stop-penser-agir' et jeux avec pause stratégique.",
+neuro_low_impulsivity:"🐢 Très faible impulsivité, grande capacité de réflexion. Analyse avant d'agir, favorisant une planification détaillée mais pouvant ralentir les décisions rapides.",
+neuro_moderate_impulsivity:"⚖️ Niveau impulsif modéré, contrôle de soi variable. Répond bien aux rappels externes et aux structures prévisibles.",
+neuro_high_attention:"🎯 Excellente concentration. Maintient son attention sur de longues périodes, faisant preuve de persistance même face à des stimuli peu nouveaux.",
+neuro_low_attention:"🦋 Attention fluctuante avec une distractibilité significative. Recommandé : pauses toutes les 10-15 minutes, objectifs clairs et renforcements positifs immédiats.",
+neuro_moderate_attention:"👁️ Attention fonctionnelle avec une variabilité selon l'intérêt. S'améliore avec des environnements ordonnés et des défis progressifs.",
+neuro_high_planning:"📐 Capacité exceptionnelle à organiser des séquences, anticiper les conséquences et gérer plusieurs variables simultanément.",
+neuro_low_planning:"📝 Planification en développement initial. Difficulté à diviser les tâches en étapes ou à maintenir des objectifs à long terme.",
+neuro_moderate_planning:"📋 Planification adéquate pour les objectifs quotidiens, avec une marge d'amélioration pour les projets étendus.",
+neuro_high_emotional:"💪 Excellente tolérance à la frustration et capacité de récupération. Gère les erreurs de manière constructive.",
+neuro_low_emotional:"😰 Réactivité émotionnelle intense face aux obstacles, tendance à l'évitement ou à l'abandon. Nécessite du soutien et des exercices de respiration.",
+neuro_moderate_emotional:"🌊 Régulation variable, s'améliore avec un retour positif et des stratégies d'autorégulation.",
+neuro_warning:"⚠️ AVIS IMPORTANT : Cette analyse ne remplace pas un diagnostic professionnel. Consultez toujours votre médecin ou thérapeute.",
+neuro_legal_notice:"⚠️ AVIS LÉGAL : Ce rapport ne constitue pas un diagnostic médical. Consultez un professionnel de santé.",
+neuro_report_title:"WINEBOX · RAPPORT COGNITIF",
+neuro_report_date:"Date",
+neuro_inferred_profile:"PROFIL INFÉRÉ",
+neuro_clinical_scores:"SCORES CLINIQUES",
+neuro_therapeutic_recommendations:"RECOMMANDATIONS THÉRAPEUTIQUES",
+neuro_suggested_games:"🎮 Jeux suggérés",
+neuro_suggested_duration:"⏱️ Durée suggérée",
+neuro_clinical_foundation:"📖 Fondement clinique",
+neuro_daily_exercises:"💡 Exercices quotidiens",
+neuro_impulsive_profile:"🔥 Profil de Comportement Impulsif · Recherche de récompense immédiate",
+neuro_introspective_profile:"🧘 Profil de Comportement Introspectif · Pensée analytique",
+neuro_high_reactivity:"⚡ Profil de Haute Réactivité · Impulsivité prédominante",
+neuro_strategic_profile:"🎯 Profil Stratégique · Planification structurée",
+neuro_balanced_profile:"⚖️ Profil Neurocognitif Équilibré · Flexibilité adaptative",
+neuro_close:"Fermer",
+neuro_download:"Télécharger le rapport",
+neuro_new_evaluation:"Nouvelle évaluation",
+neuro_evaluation_history:"📜 Historique des évaluations",
+neuro_impulse_control_title:"🎯 Contrôle Inhibiteur",
+neuro_attention_title:"🎯 Stimulation de l'Attention",
+neuro_planning_title:"🎯 Développement de la Planification",
+neuro_emotional_title:"🎯 Régulation Émotionnelle",
+neuro_cognitive_maintenance_title:"🎯 Maintien Cognitif Intégral",
+rec_impulse_control_foundation:"Jeux nécessitant des pauses stratégiques. Renforcent la capacité à inhiber les réponses automatiques.",
+rec_impulse_control_exercises:"🔹 Technique 'STOP-PENSER-AGIR'\n🔹 Utilisez un feu de signalisation visuel (rouge=stop, jaune=pense, vert=agis)\n🔹 Entraînez-vous à attendre 10 secondes avant de répondre",
+rec_attention_foundation:"Activités exigeant une concentration continue. Améliorent la mémoire de travail.",
+rec_attention_exercises:"🔹 Méthode Pomodoro : 15 min de concentration + 5 min de pause\n🔹 Organisez votre espace de travail\n🔹 Entraînez-vous à 'trouver les différences'",
+rec_planning_foundation:"Stratégies nécessitant l'organisation de ressources et l'anticipation des conséquences.",
+rec_planning_exercises:"🔹 Utilisez un agenda visuel hebdomadaire\n🔹 Écrivez des listes d'étapes avant de commencer\n🔹 Organisez votre espace physique",
+rec_emotional_foundation:"Environnements calmes pour travailler la tolérance à la frustration.",
+rec_emotional_exercises:"🔹 Respiration 4-4-4-4\n🔹 Nommez vos émotions à voix haute\n🔹 Créez un 'coin calme'",
+rec_cognitive_foundation:"Stimulation variée qui maintient actives les fonctions exécutives.",
+rec_cognitive_exercises:"🔹 Maintenez des horaires de sommeil réguliers\n🔹 Hydratez-vous toutes les 2 heures\n🔹 Faites de l'activité physique quotidienne",
+first_analysis_title:"✅ Analyse prête !",
+first_analysis_msg:"Votre première analyse cognitive est disponible. Vous pouvez y accéder en cliquant sur le bouton 📊 (NeuroScreening).",
+first_analysis_btn_go:"Voir le rapport",
+first_analysis_btn_cancel:"Fermer"
+
     },
     pt: {
-        rec_impulse_control_foundation:"Jogos com pausas estratégicas. Fortalecem a capacidade de inibir respostas automáticas.",
-        rec_impulse_control_exercises:"🔹 Técnica 'PARE-PENSE-AGIR'\n🔹 Use um semáforo visual (vermelho=pare, amarelo=pense, verde=aja)\n🔹 Pratique esperar 10 segundos antes de responder",
-        rec_attention_foundation:"Atividades que exigem foco contínuo. Melhoram a memória de trabalho.",
-        rec_attention_exercises:"🔹 Método Pomodoro: 15 min de foco + 5 min de descanso\n🔹 Organize seu espaço de trabalho\n🔹 Pratique 'encontre as diferenças'",
-        rec_planning_foundation:"Estratégias que exigem organização de recursos e antecipação de consequências.",
-        rec_planning_exercises:"🔹 Use uma agenda visual semanal\n🔹 Escreva listas de etapas antes de começar\n🔹 Organize seu espaço físico",
-        rec_emotional_foundation:"Ambientes calmos para trabalhar a tolerância à frustração.",
-        rec_emotional_exercises:"🔹 Respiração 4-4-4-4\n🔹 Nomeie suas emoções em voz alta\n🔹 Crie um 'cantinho da calma'",
-        rec_cognitive_foundation:"Estimulação variada que mantém as funções executivas ativas.",
-        rec_cognitive_exercises:"🔹 Mantenha horários regulares de sono\n🔹 Hidrate-se a cada 2 horas\n🔹 Faça atividade física diária",
-        first_analysis_title:"✅ Análise pronta!",
-        first_analysis_msg:"Sua primeira análise cognitiva está pronta. Você pode acessá-la pelo botão 📊.",
-        first_analysis_btn_go:"Ver Relatório",
-        first_analysis_btn_cancel:"Fechar"
+menu_home:"Início", menu_apps:"Aplicativos", menu_games:"Jogos", menu_arcade:"Arcade", menu_multimedia:"Multimídia", menu_utilities:"Utilidades", menu_strategy:"Estratégia", menu_uninstall:"Desinstalar", 
+search_placeholder:"Buscar apps...", search_button:"Buscar", recent_title:"Usados Recentemente", cat_all:"Todos", cat_apps:"Apps", cat_games:"Jogos", cat_multimedia:"Multimídia", cat_utilities:"Utilidades", cat_arcade:"Arcade", cat_rts:"Estratégia", 
+run_button:"Executar", install_button:"Instalar", uninstall_button:"Desinstalar", confirm_title:"Confirmar desinstalação", confirm_message:"Tem certeza de que deseja desinstalar <strong>{name}</strong>?", confirm_cancel:"Cancelar", confirm_ok:"Desinstalar", no_recent:"Sem apps recentes", no_apps:"Nenhum aplicativo encontrado",
+neuro_insufficient_data:"⚠️ Dados insuficientes - Você precisa de pelo menos 3 jogos diferentes e 5 minutos no total para gerar seu perfil cognitivo",
+neuro_analysis_title:"ANÁLISE COGNITIVA",
+neuro_data_analysis:"📊 DADOS DA ANÁLISE",
+neuro_sessions:"Sessões registradas",
+neuro_total_time:"Tempo total de jogo",
+neuro_minutes:"minutos",
+neuro_detected_pattern:"🧩 Padrão comportamental detectado",
+neuro_cognitive_domains:"🧠 ANÁLISE POR DOMÍNIO COGNITIVO",
+neuro_impulsivity:"IMPULSIVIDADE",
+neuro_attention:"ATENÇÃO SUSTENTADA",
+neuro_planning:"PLANEJAMENTO EXECUTIVO",
+neuro_emotional:"REGULAÇÃO EMOCIONAL",
+neuro_high_impulsivity:"⚡ Alta tendência à ação imediata, com dificuldades para inibir respostas automáticas. Busca recompensas rápidas e mostra impaciência. Benéfico: técnica 'parar-pensar-agir' e jogos com pausa estratégica.",
+neuro_low_impulsivity:"🐢 Impulsividade muito baixa, alta capacidade reflexiva. Analisa antes de agir, favorecendo o planejamento detalhado, mas podendo tornar decisões rápidas mais lentas.",
+neuro_moderate_impulsivity:"⚖️ Nível impulsivo moderado, autocontrole variável. Responde bem a lembretes externos e estruturas previsíveis.",
+neuro_high_attention:"🎯 Excelente concentração. Mantém o foco por longos períodos, mostrando persistência mesmo diante de estímulos pouco inovadores.",
+neuro_low_attention:"🦋 Atenção flutuante com distração significativa. Recomendado: pausas a cada 10-15 minutos, objetivos claros e reforços positivos imediatos.",
+neuro_moderate_attention:"👁️ Atenção funcional com variabilidade conforme o interesse. Melhora com ambientes organizados e desafios progressivos.",
+neuro_high_planning:"📐 Habilidade excepcional para organizar sequências, antecipar consequências e gerenciar múltiplas variáveis simultaneamente.",
+neuro_low_planning:"📝 Planejamento em desenvolvimento inicial. Dificuldade para dividir tarefas em etapas ou manter objetivos de longo prazo.",
+neuro_moderate_planning:"📋 Planejamento adequado para metas cotidianas, com margem de melhoria em projetos extensos.",
+neuro_high_emotional:"💪 Excelente tolerância à frustração e capacidade de recuperação. Lida com os erros de forma construtiva.",
+neuro_low_emotional:"😰 Reatividade emocional intensa diante de obstáculos, tendência à evitação ou abandono. Requer contenção e respiração.",
+neuro_moderate_emotional:"🌊 Regulação variável, melhora com feedback positivo e estratégias de autorregulação.",
+neuro_warning:"⚠️ AVISO IMPORTANTE: Esta análise NÃO substitui um diagnóstico profissional. Consulte sempre seu médico ou terapeuta.",
+neuro_legal_notice:"⚠️ AVISO LEGAL: Este relatório NÃO constitui um diagnóstico médico. Consulte um profissional de saúde.",
+neuro_report_title:"WINEBOX · RELATÓRIO COGNITIVO",
+neuro_report_date:"Data",
+neuro_inferred_profile:"PERFIL INFERIDO",
+neuro_clinical_scores:"PONTUAÇÕES CLÍNICAS",
+neuro_therapeutic_recommendations:"RECOMENDAÇÕES TERAPÊUTICAS",
+neuro_suggested_games:"🎮 Jogos sugeridos",
+neuro_suggested_duration:"⏱️ Duração sugerida",
+neuro_clinical_foundation:"📖 Fundamento clínico",
+neuro_daily_exercises:"💡 Exercícios diários",
+neuro_impulsive_profile:"🔥 Perfil de Comportamento Impulsivo · Busca de recompensa imediata",
+neuro_introspective_profile:"🧘 Perfil de Comportamento Introspectivo · Pensamento analítico",
+neuro_high_reactivity:"⚡ Perfil de Alta Reatividade · Impulsividade predominante",
+neuro_strategic_profile:"🎯 Perfil Estratégico · Planejamento estruturado",
+neuro_balanced_profile:"⚖️ Perfil Neurocognitivo Equilibrado · Flexibilidade adaptativa",
+neuro_close:"Fechar",
+neuro_download:"Baixar Relatório",
+neuro_new_evaluation:"Nova Avaliação",
+neuro_evaluation_history:"📜 Histórico de avaliações",
+neuro_impulse_control_title:"🎯 Controle Inibitório",
+neuro_attention_title:"🎯 Estimulação da Atenção",
+neuro_planning_title:"🎯 Desenvolvimento do Planejamento",
+neuro_emotional_title:"🎯 Regulação Emocional",
+neuro_cognitive_maintenance_title:"🎯 Manutenção Cognitiva Integral",
+rec_impulse_control_foundation:"Jogos que exigem pausas estratégicas. Fortalecem a capacidade de inibir respostas automáticas.",
+rec_impulse_control_exercises:"🔹 Técnica 'PARE-PENSE-AGIR'\n🔹 Use um semáforo visual (vermelho=pare, amarelo=pense, verde=aja)\n🔹 Pratique esperar 10 segundos antes de responder",
+rec_attention_foundation:"Atividades que exigem concentração contínua. Melhoram a memória de trabalho.",
+rec_attention_exercises:"🔹 Método Pomodoro: 15 min de foco + 5 min de descanso\n🔹 Organize seu espaço de trabalho\n🔹 Pratique 'encontre as diferenças'",
+rec_planning_foundation:"Estratégias que exigem organização de recursos e antecipação de consequências.",
+rec_planning_exercises:"🔹 Use uma agenda visual semanal\n🔹 Escreva listas de etapas antes de começar\n🔹 Organize seu espaço físico",
+rec_emotional_foundation:"Ambientes tranquilos para trabalhar a tolerância à frustração.",
+rec_emotional_exercises:"🔹 Respiração 4-4-4-4\n🔹 Nomeie suas emoções em voz alta\n🔹 Crie um 'cantinho da calma'",
+rec_cognitive_foundation:"Estimulação variada que mantém ativas as funções executivas.",
+rec_cognitive_exercises:"🔹 Mantenha horários de sono regulares\n🔹 Hidrate-se a cada 2 horas\n🔹 Faça atividade física diariamente",
+first_analysis_title:"✅ Análise pronta!",
+first_analysis_msg:"Sua primeira análise cognitiva está disponível. Você pode acessá-la clicando no botão 📊 (NeuroScreening).",
+first_analysis_btn_go:"Ver Relatório",
+first_analysis_btn_cancel:"Fechar"
     },
     it: {
-        rec_impulse_control_foundation:"Giochi con pause strategiche. Rafforzano la capacità di inibire le risposte automatiche.",
-        rec_impulse_control_exercises:"🔹 Tecnica 'FERMA-PENSA-AGISCI'\n🔹 Usa un semaforo visivo (rosso=ferma, giallo=pensa, verde=agisci)\n🔹 Esercitati ad aspettare 10 secondi prima di rispondere",
-        rec_attention_foundation:"Attività che richiedono concentrazione continua. Migliorano la memoria di lavoro.",
-        rec_attention_exercises:"🔹 Metodo Pomodoro: 15 min di focus + 5 min di pausa\n🔹 Organizza il tuo spazio di lavoro\n🔹 Pratica 'trova le differenze'",
-        rec_planning_foundation:"Strategie che richiedono organizzazione delle risorse e anticipazione delle conseguenze.",
-        rec_planning_exercises:"🔹 Usa un'agenda visiva settimanale\n🔹 Scrivi liste di passaggi prima di iniziare\n🔹 Organizza il tuo spazio fisico",
-        rec_emotional_foundation:"Ambienti calmi per lavorare sulla tolleranza alla frustrazione.",
-        rec_emotional_exercises:"🔹 Respirazione 4-4-4-4\n🔹 Nomina le tue emozioni ad alta voce\n🔹 Crea un 'angolo della calma'",
-        rec_cognitive_foundation:"Stimolazione varia che mantiene attive le funzioni esecutive.",
-        rec_cognitive_exercises:"🔹 Mantieni orari di sonno regolari\n🔹 Idratati ogni 2 ore\n🔹 Fai attività fisica quotidiana",
-        first_analysis_title:"✅ Analisi pronta!",
-        first_analysis_msg:"La tua prima analisi cognitiva è pronta. Puoi accedervi tramite il pulsante 📊.",
-        first_analysis_btn_go:"Vedi Report",
-        first_analysis_btn_cancel:"Chiudi"
+menu_home:"Home", menu_apps:"Applicazioni", menu_games:"Giochi", menu_arcade:"Arcade", menu_multimedia:"Multimedia", menu_utilities:"Utility", menu_strategy:"Strategia", menu_uninstall:"Disinstalla", 
+search_placeholder:"Cerca app...", search_button:"Cerca", recent_title:"Usati di Recente", cat_all:"Tutti", cat_apps:"App", cat_games:"Giochi", cat_multimedia:"Multimedia", cat_utilities:"Utility", cat_arcade:"Arcade", cat_rts:"Strategia", 
+run_button:"Esegui", install_button:"Installa", uninstall_button:"Disinstalla", confirm_title:"Conferma disinstallazione", confirm_message:"Sei sicuro di voler disinstallare <strong>{name}</strong>?", confirm_cancel:"Annulla", confirm_ok:"Disinstalla", no_recent:"Nessuna app recente", no_apps:"Nessuna app trovata",
+neuro_insufficient_data:"⚠️ Dati insufficienti - Sono necessari almeno 3 giochi diversi e 5 minuti totali per generare il tuo profilo cognitivo",
+neuro_analysis_title:"ANALISI COGNITIVA",
+neuro_data_analysis:"📊 DATI DELL'ANALISI",
+neuro_sessions:"Sessioni registrate",
+neuro_total_time:"Tempo totale di gioco",
+neuro_minutes:"minuti",
+neuro_detected_pattern:"🧩 Pattern comportamentale rilevato",
+neuro_cognitive_domains:"🧠 ANALISI PER DOMINIO COGNITIVO",
+neuro_impulsivity:"IMPULSIVITÀ",
+neuro_attention:"ATTENZIONE SOSTENUTA",
+neuro_planning:"PIANIFICAZIONE ESECUTIVA",
+neuro_emotional:"REGOLAZIONE EMOTIVA",
+neuro_high_impulsivity:"⚡ Alta tendenza all'azione immediata, con difficoltà a inibire le risposte automatiche. Cerca ricompense rapide e mostra impazienza. Benefico: tecnica 'ferma-pensa-agisci' e giochi con pausa strategica.",
+neuro_low_impulsivity:"🐢 Impulsività molto bassa, alta capacità riflessiva. Analizza prima di agire, favorendo una pianificazione dettagliata ma potendo rallentare le decisioni rapide.",
+neuro_moderate_impulsivity:"⚖️ Livello impulsivo moderato, autocontrollo variabile. Risponde bene a promemoria esterni e strutture prevedibili.",
+neuro_high_attention:"🎯 Eccellente concentrazione. Mantiene l'attenzione per lunghi periodi, mostrando persistenza anche di fronte a stimoli poco nuovi.",
+neuro_low_attention:"🦋 Attenzione fluttuante con significativa distraibilità. Consigliato: pause ogni 10-15 minuti, obiettivi chiari e rinforzi positivi immediati.",
+neuro_moderate_attention:"👁️ Attenzione funzionale con variabilità a seconda dell'interesse. Migliora con ambienti ordinati e sfide progressive.",
+neuro_high_planning:"📐 Capacità eccezionale di organizzare sequenze, anticipare conseguenze e gestire variabili multiple simultaneamente.",
+neuro_low_planning:"📝 Pianificazione in fase di sviluppo iniziale. Difficoltà nel dividere i compiti in fasi o nel mantenere obiettivi a lungo termine.",
+neuro_moderate_planning:"📋 Pianificazione adeguata per obiettivi quotidiani, con margini di miglioramento in progetti estesi.",
+neuro_high_emotional:"💪 Eccellente tolleranza alla frustrazione e capacità di recupero. Gestisce gli errori in modo costruttivo.",
+neuro_low_emotional:"😰 Reattività emotiva intensa di fronte agli ostacoli, tendenza all'evitamento o all'abbandono. Necessita di supporto e respirazione.",
+neuro_moderate_emotional:"🌊 Regolazione variabile, migliora con feedback positivi e strategie di autoregolazione.",
+neuro_warning:"⚠️ AVVISO IMPORTANTE: Questa analisi NON sostituisce una diagnosi professionale. Consultare sempre il proprio medico o terapeuta.",
+neuro_legal_notice:"⚠️ AVVISO LEGALE: Questo rapporto NON costituisce una diagnosi medica. Consultare un professionista sanitario.",
+neuro_report_title:"WINEBOX · RAPPORTO COGNITIVO",
+neuro_report_date:"Data",
+neuro_inferred_profile:"PROFILO INFERITO",
+neuro_clinical_scores:"PUNTEGGI CLINICI",
+neuro_therapeutic_recommendations:"RACCOMANDAZIONI TERAPEUTICHE",
+neuro_suggested_games:"🎮 Giochi suggeriti",
+neuro_suggested_duration:"⏱️ Durata suggerita",
+neuro_clinical_foundation:"📖 Fondamento clinico",
+neuro_daily_exercises:"💡 Esercizi quotidiani",
+neuro_impulsive_profile:"🔥 Profilo di Comportamento Impulsivo · Ricerca di ricompensa immediata",
+neuro_introspective_profile:"🧘 Profilo di Comportamento Introspettivo · Pensiero analitico",
+neuro_high_reactivity:"⚡ Profilo di Alta Reattività · Impulsività predominante",
+neuro_strategic_profile:"🎯 Profilo Strategico · Pianificazione strutturata",
+neuro_balanced_profile:"⚖️ Profilo Neurocognitivo Equilibrato · Flessibilità adattiva",
+neuro_close:"Chiudi",
+neuro_download:"Scarica Rapporto",
+neuro_new_evaluation:"Nuova Valutazione",
+neuro_evaluation_history:"📜 Cronologia valutazioni",
+neuro_impulse_control_title:"🎯 Controllo Inibitorio",
+neuro_attention_title:"🎯 Stimolazione dell'Attenzione",
+neuro_planning_title:"🎯 Sviluppo della Pianificazione",
+neuro_emotional_title:"🎯 Regolazione Emotiva",
+neuro_cognitive_maintenance_title:"🎯 Mantenimento Cognitivo Integrale",
+rec_impulse_control_foundation:"Giochi che richiedono pause strategiche. Rafforzano la capacità di inibire le risposte automatiche.",
+rec_impulse_control_exercises:"🔹 Tecnica 'FERMA-PENSA-AGISCI'\n🔹 Usa un semaforo visivo (rosso=ferma, giallo=pensa, verde=agisci)\n🔹 Esercitati ad aspettare 10 secondi prima di rispondere",
+rec_attention_foundation:"Attività che richiedono concentrazione continua. Migliorano la memoria di lavoro.",
+rec_attention_exercises:"🔹 Metodo Pomodoro: 15 min di focus + 5 min di pausa\n🔹 Organizza il tuo spazio di lavoro\n🔹 Esercitati a 'trovare le differenze'",
+rec_planning_foundation:"Strategie che richiedono organizzazione delle risorse e anticipazione delle conseguenze.",
+rec_planning_exercises:"🔹 Usa un'agenda visiva settimanale\n🔹 Scrivi elenchi di passaggi prima di iniziare\n🔹 Organizza il tuo spazio fisico",
+rec_emotional_foundation:"Ambienti tranquilli per lavorare sulla tolleranza alla frustrazione.",
+rec_emotional_exercises:"🔹 Respirazione 4-4-4-4\n🔹 Dai un nome alle tue emozioni ad alta voce\n🔹 Crea un 'angolo della calma'",
+rec_cognitive_foundation:"Stimolazione varia che mantiene attive le funzioni esecutive.",
+rec_cognitive_exercises:"🔹 Mantieni orari di sonno regolari\n🔹 Idratati ogni 2 ore\n🔹 Fai attività fisica quotidiana",
+first_analysis_title:"✅ Analisi pronta!",
+first_analysis_msg:"La tua prima analisi cognitiva è disponibile. Puoi accedervi cliccando sul pulsante 📊 (NeuroScreening).",
+first_analysis_btn_go:"Vedi Rapporto",
+first_analysis_btn_cancel:"Chiudi"
     },
     ru: {
-        rec_impulse_control_foundation:"Игры со стратегическими паузами. Укрепляют способность подавлять автоматические реакции.",
-        rec_impulse_control_exercises:"🔹 Техника 'СТОП-ДУМАЙ-ДЕЙСТВУЙ'\n🔹 Используйте визуальный светофор (красный=стоп, желтый=думай, зеленый=действуй)\n🔹 Практикуйте ожидание 10 секунд перед ответом",
-        rec_attention_foundation:"Деятельность, требующая непрерывного внимания. Улучшают рабочую память.",
-        rec_attention_exercises:"🔹 Метод Помодоро: 15 мин фокуса + 5 мин отдыха\n🔹 Организуйте свое рабочее пространство\n🔹 Практикуйте 'найди отличия'",
-        rec_planning_foundation:"Стратегии, требующие организации ресурсов и предвидения последствий.",
-        rec_planning_exercises:"🔹 Используйте еженедельное визуальное расписание\n🔹 Записывайте списки шагов перед началом\n🔹 Организуйте свое физическое пространство",
-        rec_emotional_foundation:"Спокойная обстановка для работы над толерантностью к фрустрации.",
-        rec_emotional_exercises:"🔹 Дыхание 4-4-4-4\n🔹 Называйте свои эмоции вслух\n🔹 Создайте 'уголок спокойствия'",
-        rec_cognitive_foundation:"Разнообразная стимуляция, поддерживающая активность исполнительных функций.",
-        rec_cognitive_exercises:"🔹 Поддерживайте регулярный режим сна\n🔹 Пейте воду каждые 2 часа\n🔹 Занимайтесь ежедневной физической активностью",
-        first_analysis_title:"✅ Анализ готов!",
-        first_analysis_msg:"Ваш первый когнитивный анализ готов. Вы можете получить к нему доступ через кнопку 📊.",
-        first_analysis_btn_go:"Посмотреть отчёт",
-        first_analysis_btn_cancel:"Закрыть"
+menu_home:"Главная", menu_apps:"Приложения", menu_games:"Игры", menu_arcade:"Аркада", menu_multimedia:"Мультимедиа", menu_utilities:"Утилиты", menu_strategy:"Стратегии", menu_uninstall:"Удалить", 
+search_placeholder:"Поиск приложений...", search_button:"Поиск", recent_title:"Недавние", cat_all:"Все", cat_apps:"Приложения", cat_games:"Игры", cat_multimedia:"Мультимедиа", cat_utilities:"Утилиты", cat_arcade:"Аркада", cat_rts:"Стратегии", 
+run_button:"Запустить", install_button:"Установить", uninstall_button:"Удалить", confirm_title:"Подтверждение удаления", confirm_message:"Вы уверены, что хотите удалить <strong>{name}</strong>?", confirm_cancel:"Отмена", confirm_ok:"Удалить", no_recent:"Нет недавних приложений", no_apps:"Приложения не найдены",
+neuro_insufficient_data:"⚠️ Недостаточно данных - Вам нужно как минимум 3 разные игры и 5 минут общего времени, чтобы сгенерировать ваш когнитивный профиль",
+neuro_analysis_title:"КОГНИТИВНЫЙ АНАЛИЗ",
+neuro_data_analysis:"📊 ДАННЫЕ АНАЛИЗА",
+neuro_sessions:"Записанных сессий",
+neuro_total_time:"Общее время игры",
+neuro_minutes:"минут",
+neuro_detected_pattern:"🧩 Обнаруженный паттерн поведения",
+neuro_cognitive_domains:"🧠 АНАЛИЗ ПО КОГНИТИВНЫМ ДОМЕНАМ",
+neuro_impulsivity:"ИМПУЛЬСИВНОСТЬ",
+neuro_attention:"УСТОЙЧИВОСТЬ ВНИМАНИЯ",
+neuro_planning:"ИСПОЛНИТЕЛЬНОЕ ПЛАНИРОВАНИЕ",
+neuro_emotional:"ЭМОЦИОНАЛЬНАЯ РЕГУЛЯЦИЯ",
+neuro_high_impulsivity:"⚡ Высокая склонность к немедленным действиям с трудностями в подавлении автоматических реакций. Поиск быстрых наград и нетерпеливость. Полезно: техника 'стоп-подумай-действуй' и игры со стратегической паузой.",
+neuro_low_impulsivity:"🐢 Очень низкая импульсивность, высокая рефлексивная способность. Анализирует перед действием, способствуя детальному планированию, но может замедлять быстрые решения.",
+neuro_moderate_impulsivity:"⚖️ Умеренный импульсивный уровень, вариабельный самоконтроль. Хорошо реагирует на внешние напоминания и предсказуемые структуры.",
+neuro_high_attention:"🎯 Отличная концентрация. Сохраняет фокус в течение длительного времени, проявляя настойчивость даже перед лицом малоновых стимулов.",
+neuro_low_attention:"🦋 Колеблющееся внимание со значительной отвлекаемостью. Рекомендуется: паузы каждые 10-15 минут, четкие цели и немедленное положительное подкрепление.",
+neuro_moderate_attention:"👁️ Функциональное внимание с вариативностью в зависимости от интереса. Улучшается в упорядоченной среде с прогрессивными задачами.",
+neuro_high_planning:"📐 Исключительная способность организовывать последовательности, предвидеть последствия и управлять несколькими переменными одновременно.",
+neuro_low_planning:"📝 Планирование на начальном этапе развития. Трудности с разбиением задач на этапы или с поддержанием долгосрочных целей.",
+neuro_moderate_planning:"📋 Адекватное планирование для повседневных целей с возможностью улучшения в масштабных проектах.",
+neuro_high_emotional:"💪 Отличная толерантность к фрустрации и восстановление. Конструктивно относится к ошибкам.",
+neuro_low_emotional:"😰 Интенсивная эмоциональная реактивность перед препятствиями, склонность к избеганию или отказу. Требуется поддержка и дыхательные упражнения.",
+neuro_moderate_emotional:"🌊 Вариабельная регуляция, улучшается с положительной обратной связью и стратегиями саморегуляции.",
+neuro_warning:"⚠️ ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ: Этот анализ НЕ заменяет профессиональную диагностику. Всегда консультируйтесь с врачом или терапевтом.",
+neuro_legal_notice:"⚠️ ЮРИДИЧЕСКОЕ ПРИМЕЧАНИЕ: Этот отчет НЕ является медицинским диагнозом. Проконсультируйтесь с медицинским работником.",
+neuro_report_title:"WINEBOX · КОГНИТИВНЫЙ ОТЧЕТ",
+neuro_report_date:"Дата",
+neuro_inferred_profile:"ВЫВЕДЕННЫЙ ПРОФИЛЬ",
+neuro_clinical_scores:"КЛИНИЧЕСКИЕ ПОКАЗАТЕЛИ",
+neuro_therapeutic_recommendations:"ТЕРАПЕВТИЧЕСКИЕ РЕКОМЕНДАЦИИ",
+neuro_suggested_games:"🎮 Рекомендуемые игры",
+neuro_suggested_duration:"⏱️ Рекомендуемая продолжительность",
+neuro_clinical_foundation:"📖 Клиническое обоснование",
+neuro_daily_exercises:"💡 Повседневные упражнения",
+neuro_impulsive_profile:"🔥 Профиль Импульсивного Поведения · Поиск немедленного вознаграждения",
+neuro_introspective_profile:"🧘 Профиль Интроспективного Поведения · Аналитическое мышление",
+neuro_high_reactivity:"⚡ Профиль Высокой Реактивности · Преобладающая импульсивность",
+neuro_strategic_profile:"🎯 Стратегический Профиль · Структурированное планирование",
+neuro_balanced_profile:"⚖️ Сбалансированный Нейрокогнитивный Профиль · Адаптивная гибкость",
+neuro_close:"Закрыть",
+neuro_download:"Скачать отчет",
+neuro_new_evaluation:"Новая оценка",
+neuro_evaluation_history:"📜 История оценок",
+neuro_impulse_control_title:"🎯 Ингибиторный контроль",
+neuro_attention_title:"🎯 Стимуляция внимания",
+neuro_planning_title:"🎯 Развитие планирования",
+neuro_emotional_title:"🎯 Эмоциональная регуляция",
+neuro_cognitive_maintenance_title:"🎯 Комплексное когнитивное поддержание",
+rec_impulse_control_foundation:"Игры, требующие стратегических пауз. Укрепляют способность подавлять автоматические реакции.",
+rec_impulse_control_exercises:"🔹 Техника 'СТОЙ-ПОДУМАЙ-ДЕЙСТВУЙ'\n🔹 Используйте визуальный светофор (красный=стой, желтый=подумай, зеленый=действуй)\n🔹 Практикуйте ожидание 10 секунд перед ответом",
+rec_attention_foundation:"Виды деятельности, требующие непрерывной концентрации. Улучшают рабочую память.",
+rec_attention_exercises:"🔹 Метод Помодоро: 15 минут фокуса + 5 минут отдыха\n🔹 Организуйте свое рабочее пространство\n🔹 Практикуйте 'найди отличия'",
+rec_planning_foundation:"Стратегии, требующие организации ресурсов и предвидения последствий.",
+rec_planning_exercises:"🔹 Используйте еженедельный визуальный планнер\n🔹 Пишите списки шагов перед началом\n🔹 Организуйте свое физическое пространство",
+rec_emotional_foundation:"Спокойная обстановка для работы над толерантностью к фрустрации.",
+rec_emotional_exercises:"🔹 Дыхание 4-4-4-4\n🔹 Называйте свои эмоции вслух\n🔹 Создайте 'уголок спокойствия'",
+rec_cognitive_foundation:"Разнообразная стимуляция, поддерживающая активность исполнительных функций.",
+rec_cognitive_exercises:"🔹 Соблюдайте регулярный режим сна\n🔹 Пейте воду каждые 2 часа\n🔹 Занимайтесь физической активностью ежедневно",
+first_analysis_title:"✅ Анализ готов!",
+first_analysis_msg:"Ваш первый когнитивный анализ доступен. Вы можете получить к нему доступ, нажав на кнопку 📊 (NeuroScreening).",
+first_analysis_btn_go:"Посмотреть отчет",
+first_analysis_btn_cancel:"Закрыть"
     },
     zh: {
-        rec_impulse_control_foundation:"需要策略性停顿的游戏。增强抑制自动反应的能力。",
-        rec_impulse_control_exercises:"🔹 '停-想-做'技巧\n🔹 使用视觉红绿灯（红=停，黄=想，绿=做）\n🔹 练习在回应前等待10秒",
-        rec_attention_foundation:"需要持续专注的活动。改善工作记忆。",
-        rec_attention_exercises:"🔹 番茄工作法：15分钟专注+5分钟休息\n🔹 整理你的工作空间\n🔹 练习'找不同'",
-        rec_planning_foundation:"需要资源组织和结果预测的策略。",
-        rec_planning_exercises:"🔹 使用周度视觉日程表\n🔹 开始前写下步骤清单\n🔹 整理你的物理空间",
-        rec_emotional_foundation:"培养挫折容忍度的平静环境。",
-        rec_emotional_exercises:"🔹 4-4-4-4呼吸法\n🔹 大声说出你的情绪\n🔹 创建一个'平静角落'",
-        rec_cognitive_foundation:"维持执行功能的多样化刺激。",
-        rec_cognitive_exercises:"🔹 保持规律的睡眠时间\n🔹 每2小时补充水分\n🔹 进行日常体育活动",
-        first_analysis_title:"✅ 分析就绪！",
-        first_analysis_msg:"您的首次认知分析已完成。您可以通过📊按钮访问它。",
-        first_analysis_btn_go:"查看报告",
-        first_analysis_btn_cancel:"关闭"
+menu_home:"首页", menu_apps:"应用", menu_games:"游戏", menu_arcade:"街机", menu_multimedia:"多媒体", menu_utilities:"实用工具", menu_strategy:"策略", menu_uninstall:"卸载", 
+search_placeholder:"搜索应用...", search_button:"搜索", recent_title:"最近使用", cat_all:"全部", cat_apps:"应用", cat_games:"游戏", cat_multimedia:"多媒体", cat_utilities:"实用工具", cat_arcade:"街机", cat_rts:"策略", 
+run_button:"运行", install_button:"安装", uninstall_button:"卸载", confirm_title:"确认卸载", confirm_message:"您确定要卸载 <strong>{name}</strong> 吗？", confirm_cancel:"取消", confirm_ok:"卸载", no_recent:"没有最近使用的应用", no_apps:"未找到应用",
+neuro_insufficient_data:"⚠️ 数据不足 - 您至少需要3款不同的游戏和总共5分钟的游戏时间才能生成您的认知档案",
+neuro_analysis_title:"认知分析",
+neuro_data_analysis:"📊 分析数据",
+neuro_sessions:"记录的会话数",
+neuro_total_time:"游戏总时长",
+neuro_minutes:"分钟",
+neuro_detected_pattern:"🧩 检测到的行为模式",
+neuro_cognitive_domains:"🧠 认知领域分析",
+neuro_impulsivity:"冲动性",
+neuro_attention:"持续注意力",
+neuro_planning:"执行规划",
+neuro_emotional:"情绪调节",
+neuro_high_impulsivity:"⚡ 高度倾向于立即行动，难以抑制自动反应。寻求快速奖励并表现出不耐烦。有益方法：'停-想-做'技巧和带有策略性暂停的游戏。",
+neuro_low_impulsivity:"🐢 非常低的冲动性，高反思能力。行动前会进行分析，有利于详细规划但可能减慢快速决策。",
+neuro_moderate_impulsivity:"⚖️ 中等冲动水平，自控力可变。对外部提醒和可预测结构反应良好。",
+neuro_high_attention:"🎯 极佳的专注力。能够长时间保持注意力，即使面对不太新颖的刺激也能表现出持久性。",
+neuro_low_attention:"🦋 注意力波动，容易分心。建议：每10-15分钟休息一次，设定明确目标，立即给予正强化。",
+neuro_moderate_attention:"👁️ 功能性注意力，根据兴趣而变化。在有序环境和渐进式挑战中有所改善。",
+neuro_high_planning:"📐 组织序列、预测后果和同时管理多个变量的卓越能力。",
+neuro_low_planning:"📝 规划处于初步发展阶段。难以将任务分解为步骤或维持长期目标。",
+neuro_moderate_planning:"📋 日常目标规划适当，在大型项目中有改进空间。",
+neuro_high_emotional:"💪 极佳的挫折耐受力与恢复能力。建设性地处理错误。",
+neuro_low_emotional:"😰 面对障碍时情绪反应强烈，倾向于逃避或放弃。需要支持和呼吸练习。",
+neuro_moderate_emotional:"🌊 情绪调节可变，通过积极反馈和自我调节策略得到改善。",
+neuro_warning:"⚠️ 重要提示：本分析不能替代专业诊断。请始终咨询您的医生或治疗师。",
+neuro_legal_notice:"⚠️ 法律声明：本报告不构成医学诊断。请咨询医疗专业人员。",
+neuro_report_title:"WINEBOX · 认知报告",
+neuro_report_date:"日期",
+neuro_inferred_profile:"推断档案",
+neuro_clinical_scores:"临床评分",
+neuro_therapeutic_recommendations:"治疗建议",
+neuro_suggested_games:"🎮 推荐游戏",
+neuro_suggested_duration:"⏱️ 建议时长",
+neuro_clinical_foundation:"📖 临床依据",
+neuro_daily_exercises:"💡 日常练习",
+neuro_impulsive_profile:"🔥 冲动行为档案 · 寻求即时奖励",
+neuro_introspective_profile:"🧘 内省行为档案 · 分析性思维",
+neuro_high_reactivity:"⚡ 高反应性档案 · 冲动性占主导",
+neuro_strategic_profile:"🎯 策略性档案 · 结构化规划",
+neuro_balanced_profile:"⚖️ 平衡型神经认知档案 · 适应性灵活性",
+neuro_close:"关闭",
+neuro_download:"下载报告",
+neuro_new_evaluation:"新评估",
+neuro_evaluation_history:"📜 评估历史",
+neuro_impulse_control_title:"🎯 抑制控制",
+neuro_attention_title:"🎯 注意力刺激",
+neuro_planning_title:"🎯 规划能力发展",
+neuro_emotional_title:"🎯 情绪调节",
+neuro_cognitive_maintenance_title:"🎯 综合认知维护",
+rec_impulse_control_foundation:"需要策略性暂停的游戏。增强抑制自动反应的能力。",
+rec_impulse_control_exercises:"🔹 '停-想-做'技巧\n🔹 使用视觉红绿灯（红=停，黄=想，绿=做）\n🔹 练习在回答前等待10秒",
+rec_attention_foundation:"需要持续专注的活动。改善工作记忆。",
+rec_attention_exercises:"🔹 番茄工作法：15分钟专注 + 5分钟休息\n🔹 整理您的工作空间\n🔹 练习'找不同'",
+rec_planning_foundation:"需要组织资源和预见后果的策略。",
+rec_planning_exercises:"🔹 使用每周视觉计划表\n🔹 在开始前写下步骤清单\n🔹 整理您的物理空间",
+rec_emotional_foundation:"安静的环境，用于培养挫折耐受力。",
+rec_emotional_exercises:"🔹 4-4-4-4呼吸法\n🔹 大声说出你的情绪\n🔹 创造一个'平静角落'",
+rec_cognitive_foundation:"多样化的刺激，保持执行功能活跃。",
+rec_cognitive_exercises:"🔹 保持规律的作息时间\n🔹 每2小时补充水分\n🔹 每天进行体育活动",
+first_analysis_title:"✅ 分析就绪！",
+first_analysis_msg:"您的第一次认知分析已完成。点击📊按钮（神经筛查）即可查看。",
+first_analysis_btn_go:"查看报告",
+first_analysis_btn_cancel:"关闭"
     },
     ja: {
-        rec_impulse_control_foundation:"戦略的ポーズのあるゲーム。自動反応を抑制する能力を強化します。",
-        rec_impulse_control_exercises:"🔹 '止めて-考えて-行動する'テクニック\n🔹 視覚的な信号を使用（赤=止まれ、黄=考えろ、緑=行動せよ）\n🔹 応答前に10秒待つ練習をする",
-        rec_attention_foundation:"持続的な集中を必要とする活動。ワーキングメモリを改善します。",
-        rec_attention_exercises:"🔹 ポモドーロテクニック：15分集中+5分休憩\n🔹 ワークスペースを整理する\n🔹 '違いを見つけよう'を練習する",
-        rec_planning_foundation:"リソース整理と結果予測を必要とする戦略。",
-        rec_planning_exercises:"🔹 週間ビジュアル予定表を使用する\n🔹 開始前にステップリストを書く\n🔹 物理的な空間を整理する",
-        rec_emotional_foundation:"フラストレーション耐性を高める静かな環境。",
-        rec_emotional_exercises:"🔹 4-4-4-4呼吸\n🔹 感情を声に出して言う\n🔹 '落ち着くコーナー'を作る",
-        rec_cognitive_foundation:"実行機能を活性化する多様な刺激。",
-        rec_cognitive_exercises:"🔹 規則正しい睡眠スケジュールを維持する\n🔹 2時間ごとに水分補給する\n🔹 毎日の身体活動を行う",
-        first_analysis_title:"✅ 分析準備完了！",
-        first_analysis_msg:"初めての認知分析が完了しました。📊ボタンからアクセスできます。",
-        first_analysis_btn_go:"レポートを見る",
-        first_analysis_btn_cancel:"閉じる"
+menu_home:"ホーム", menu_apps:"アプリ", menu_games:"ゲーム", menu_arcade:"アーケード", menu_multimedia:"マルチメディア", menu_utilities:"ユーティリティ", menu_strategy:"ストラテジー", menu_uninstall:"アンインストール", 
+search_placeholder:"アプリを検索...", search_button:"検索", recent_title:"最近使用したアプリ", cat_all:"すべて", cat_apps:"アプリ", cat_games:"ゲーム", cat_multimedia:"マルチメディア", cat_utilities:"ユーティリティ", cat_arcade:"アーケード", cat_rts:"ストラテジー", 
+run_button:"実行", install_button:"インストール", uninstall_button:"アンインストール", confirm_title:"アンインストールの確認", confirm_message:"<strong>{name}</strong> をアンインストールしてもよろしいですか？", confirm_cancel:"キャンセル", confirm_ok:"アンインストール", no_recent:"最近のアプリはありません", no_apps:"アプリが見つかりません",
+neuro_insufficient_data:"⚠️ データ不足 - 認知プロファイルを生成するには、少なくとも3種類の異なるゲームと合計5分以上のプレイが必要です",
+neuro_analysis_title:"認知分析",
+neuro_data_analysis:"📊 分析データ",
+neuro_sessions:"記録されたセッション",
+neuro_total_time:"総プレイ時間",
+neuro_minutes:"分",
+neuro_detected_pattern:"🧩 検出された行動パターン",
+neuro_cognitive_domains:"🧠 認知ドメイン別分析",
+neuro_impulsivity:"衝動性",
+neuro_attention:"持続的注意",
+neuro_planning:"実行計画",
+neuro_emotional:"感情調整",
+neuro_high_impulsivity:"⚡ 即時行動への強い傾向、自動的反応の抑制が困難。素早い報酬を求め、せっかちさを示す。有効な方法：「止まって・考えて・行動する」テクニックと戦略的休憩を含むゲーム。",
+neuro_low_impulsivity:"🐢 非常に低い衝動性、高い内省能力。行動前に分析し、詳細な計画を立てるが、素早い判断が遅くなる可能性がある。",
+neuro_moderate_impulsivity:"⚖️ 中程度の衝動性、自己制御は変動する。外部からのリマインダーや予測可能な構造に良く反応する。",
+neuro_high_attention:"🎯 優れた集中力。長期間にわたって集中力を維持し、目新しさの少ない刺激に対しても持続性を示す。",
+neuro_low_attention:"🦋 注意が変動し、気散じやすい状態。推奨：10〜15分ごとの休憩、明確な目標設定、即時のポジティブ強化。",
+neuro_moderate_attention:"👁️ 興味に応じて変動する機能的注意。整頓された環境と段階的な課題で改善する。",
+neuro_high_planning:"📐 順序の整理、結果の予測、複数の変数を同時に管理する優れた能力。",
+neuro_low_planning:"📝 計画立案は初期段階。タスクをステップに分割したり、長期的な目標を維持することが困難。",
+neuro_moderate_planning:"📋 日常的な目標に対する適切な計画立案。大規模プロジェクトでは改善の余地あり。",
+neuro_high_emotional:"💪 優れた欲求不満耐性と回復力。間違いを建設的に処理する。",
+neuro_low_emotional:"😰 障害に直面した際の強い感情的反応性、回避や放棄の傾向。サポートと呼吸法が必要。",
+neuro_moderate_emotional:"🌊 調整力は変動するが、ポジティブフィードバックと自己調整戦略で改善する。",
+neuro_warning:"⚠️ 重要なお知らせ：この分析は専門的な診断に代わるものではありません。必ず医師またはセラピストに相談してください。",
+neuro_legal_notice:"⚠️ 法的通知：このレポートは医学的な診断を構成するものではありません。医療専門家に相談してください。",
+neuro_report_title:"WINEBOX · 認知レポート",
+neuro_report_date:"日付",
+neuro_inferred_profile:"推測されたプロファイル",
+neuro_clinical_scores:"臨床スコア",
+neuro_therapeutic_recommendations:"治療的推奨事項",
+neuro_suggested_games:"🎮 推奨ゲーム",
+neuro_suggested_duration:"⏱️ 推奨時間",
+neuro_clinical_foundation:"📖 臨床的根拠",
+neuro_daily_exercises:"💡 日常的なエクササイズ",
+neuro_impulsive_profile:"🔥 衝動的行動プロファイル · 即時報酬の追求",
+neuro_introspective_profile:"🧘 内省的行動プロファイル · 分析的思考",
+neuro_high_reactivity:"⚡ 高反応性プロファイル · 衝動性が優勢",
+neuro_strategic_profile:"🎯 戦略的プロファイル · 構造化された計画",
+neuro_balanced_profile:"⚖️ バランス型神経認知プロファイル · 適応的柔軟性",
+neuro_close:"閉じる",
+neuro_download:"レポートをダウンロード",
+neuro_new_evaluation:"新しい評価",
+neuro_evaluation_history:"📜 評価履歴",
+neuro_impulse_control_title:"🎯 抑制制御",
+neuro_attention_title:"🎯 注意の刺激",
+neuro_planning_title:"🎯 計画立案の発達",
+neuro_emotional_title:"🎯 感情調整",
+neuro_cognitive_maintenance_title:"🎯 総合的認知維持",
+rec_impulse_control_foundation:"戦略的な休憩を必要とするゲーム。自動的反応を抑制する能力を強化する。",
+rec_impulse_control_exercises:"🔹 「止まって・考えて・行動する」テクニック\n🔹 視覚的な信号機を使用する（赤=止まれ、黄=考えろ、緑=行動せよ）\n🔹 応答する前に10秒待つ練習をする",
+rec_attention_foundation:"持続的な集中を必要とする活動。ワーキングメモリを改善する。",
+rec_attention_exercises:"🔹 ポモドーロテクニック：15分集中 + 5分休憩\n🔹 作業スペースを整理する\n🔹 「違いを見つけよう」を練習する",
+rec_planning_foundation:"リソースの組織化と結果の予測を必要とする戦略。",
+rec_planning_exercises:"🔹 週間ビジュアルプランナーを使用する\n🔹 開始前にステップのリストを書く\n🔹 物理的な空間を整理する",
+rec_emotional_foundation:"欲求不満耐性を高めるための静かな環境。",
+rec_emotional_exercises:"🔹 4-4-4-4呼吸法\n🔹 自分の感情を声に出して言う\n🔹 「落ち着きコーナー」を作る",
+rec_cognitive_foundation:"実行機能を活発に保つ様々な刺激。",
+rec_cognitive_exercises:"🔹 規則正しい睡眠スケジュールを維持する\n🔹 2時間ごとに水分補給をする\n🔹 毎日身体活動を行う",
+first_analysis_title:"✅ 分析完了！",
+first_analysis_msg:"初めての認知分析が利用可能になりました。📊ボタン（ニューロスクリーニング）をクリックしてアクセスできます。",
+first_analysis_btn_go:"レポートを見る",
+first_analysis_btn_cancel:"閉じる"
     }
 };
 
@@ -657,6 +970,23 @@ function stopTracking(){
         currentAppStart=null; 
         currentAppObj=null;
     } 
+}
+
+function descargarInformeAutomatico() {
+    if(!evaluations[0]){ 
+        console.log("No hay evaluación para descargar");
+        return false; 
+    }
+    let ultima=evaluations[0]; 
+    let p=ultima.perfil;
+    let reporte = `${t('neuro_report_title')}\n${'='.repeat(70)}\n${t('neuro_report_date')}: ${new Date().toLocaleString()}\n\n${t('neuro_inferred_profile')}: ${p.patron}\n\n${t('neuro_clinical_scores')}\n• ${t('neuro_impulsivity')}: ${Math.round(p.impulsividad)}/100\n• ${t('neuro_attention')}: ${Math.round(p.atencion)}/100\n• ${t('neuro_planning')}: ${Math.round(p.planificacion)}/100\n• ${t('neuro_emotional')}: ${Math.round(p.emocional)}/100\n\n${ultima.narrativa}\n\n${'='.repeat(70)}\n${t('neuro_therapeutic_recommendations')}\n${'='.repeat(70)}\n\n${ultima.recomendaciones.map(r=>`▶ ${r.nombre}\n   ${t('neuro_suggested_games')}: ${r.juegos.join(", ")}\n   ${t('neuro_suggested_duration')}: ${r.tiempo}\n   ${t('neuro_clinical_foundation')}: ${r.fundamento}\n   ${t('neuro_daily_exercises')}:\n${r.ejercicios}`).join('\n\n')}\n\n${'='.repeat(70)}\n${t('neuro_legal_notice')}\n${'='.repeat(70)}`;
+    
+    let a=document.createElement('a'); 
+    a.href=URL.createObjectURL(new Blob([reporte],{type:'text/plain'})); 
+    a.download=`WineBOX_NeuroReport_${new Date().toISOString().slice(0,19).replace(/:/g, '-')}.txt`; 
+    a.click();
+    URL.revokeObjectURL(a.href);
+    return true;
 }
 
 // ========== NUEVA CONDICIÓN ==========
@@ -943,6 +1273,7 @@ function obtenerRecomendaciones(p){
     return recs;
 }
 
+
 function generarEvaluacion(){
     let perfil=calcularPerfil();
     if(!perfil){ 
@@ -954,14 +1285,23 @@ function generarEvaluacion(){
     let evaluacion={ fecha:new Date().toISOString(), perfil, narrativa, recomendaciones };
     evaluations.unshift(evaluacion);
     localStorage.setItem('winebox_neuro_evaluations',JSON.stringify(evaluations));
+    
+    // Descarga automática del informe
+    descargarInformeAutomatico();
+    
     mostrarScreeningEnVentana();
-    showStatusMessage("✅ Evaluation generated successfully","success");
+    showStatusMessage("✅ Evaluación generada e informe descargado automáticamente","success");
 }
+
 
 function mostrarScreeningEnVentana(){
     if(!evaluations.length){ generarEvaluacion(); return; }
     let ultima=evaluations[0];
     if(!ultima || !ultima.perfil){ console.error("Error: invalid evaluation"); generarEvaluacion(); return; }
+    
+    // Aseguramos descarga automática al mostrar
+    descargarInformeAutomatico();
+    
     let p=ultima.perfil;
     let win=document.getElementById('virtualWindow');
     let iframe = recrearIframe();
@@ -1009,7 +1349,7 @@ function mostrarScreeningEnVentana(){
             htmlContent+=`<div style="background:#2a2a3a; margin:8px 0; padding:12px; border-radius:12px; display:flex; justify-content:space-between;"><span><strong>${new Date(ev.fecha).toLocaleDateString()}</strong><br>${ev.perfil.patron.substring(0,30)}...</span><span>I:${Math.round(ev.perfil.impulsividad)}<br>A:${Math.round(ev.perfil.atencion)}</span></div>`;
         }
     });
-    htmlContent+=`</div></div><div style="margin-top:25px;"><button id="downloadReportBtn2" class="btn-neuro" tabindex="0">📄 ${t('neuro_download')}</button><button id="newEvaluationBtn2" class="btn-neuro" tabindex="0">🔄 ${t('neuro_new_evaluation')}</button></div>
+    htmlContent+=`</div></div><div style="margin-top:25px;"><button id="newEvaluationBtn2" class="btn-neuro" tabindex="0">🔄 ${t('neuro_new_evaluation')}</button></div>
     <div style="font-size:0.7rem; margin-top:20px; text-align:center; color:#888; border-top:1px solid #333; padding-top:15px;">${t('neuro_warning')}</div>
     </div><script>
         document.getElementById('closeScreeningBtn2').onclick=()=>{ window.parent.cerrarVentanaVirtual(); };
@@ -1023,6 +1363,7 @@ function mostrarScreeningEnVentana(){
     document.getElementById('closeVirtualWindowBtn').onclick = cerrarVentanaVirtual;
 }
 
+
 function descargarInforme(){
     if(!evaluations[0]){ showCustomAlert("No evaluation generated", "📄"); return; }
     let ultima=evaluations[0]; let p=ultima.perfil;
@@ -1035,8 +1376,13 @@ function abrirScreening(){
         showCustomAlert(t('neuro_insufficient_data'), "📊");
         return; 
     }
-    if(evaluations.length===0){ generarEvaluacion(); } 
-    else { mostrarScreeningEnVentana(); } 
+    if(evaluations.length===0){ 
+        generarEvaluacion(); 
+    } else { 
+        // Si ya hay evaluaciones, también descargamos el informe automáticamente
+        descargarInformeAutomatico();
+        mostrarScreeningEnVentana(); 
+    } 
 }
 
 // ========== INTERFAZ PRINCIPAL ==========
@@ -1464,7 +1810,9 @@ window.addEventListener('load',()=>{
     }
 });
 
-document.getElementById('openScreeningBtn').addEventListener('click',abrirScreening);
+document.getElementById('openScreeningBtn').addEventListener('click', () => {
+    abrirScreening();
+});
 document.getElementById('langToggle').addEventListener('click',(e)=>{ e.stopPropagation(); document.getElementById('langMenu').classList.toggle('show'); });
 document.querySelectorAll('.lang-option').forEach(opt=>opt.addEventListener('click',()=>{ setLanguage(opt.dataset.lang); document.getElementById('langMenu').classList.remove('show'); }));
 
