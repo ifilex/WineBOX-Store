@@ -3299,6 +3299,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/warcraft2.html"
     },
     {
+        name: "Warpath",
+        image: "https://archive.org/download/win3_Warpath/screenshot_00.jpg",
+        description: "Warpath is a shareware science fiction space strategy game of the 4X (xplore, xpand, xploit, xterminate) mold for up to four players. It is played in real-time, and contains some real-time strategy/action elements. Multiplayer mode is playable over LAN (IPX only) or serial/modem connection. It was written for Windows 3.1, but works well in any Windows environment.",
+        description: {
+            es: "Warpath es un juego shareware de estrategia espacial de ciencia ficción del tipo 4X (explorar, expandir, explotar, exterminar) para hasta cuatro jugadores. Se juega en tiempo real e incluye elementos de estrategia y acción en tiempo real. El modo multijugador se puede jugar a través de LAN (solo IPX) o conexión serie/módem. Fue desarrollado para Windows 3.1, pero funciona correctamente en cualquier entorno Windows.",
+            de: "Warpath ist ein Shareware-Weltraumstrategiespiel im Science-Fiction-Setting vom Typ 4X (erforschen, ausdehnen, ausbeuten, ausrotten) für bis zu vier Spieler. Es wird in Echtzeit gespielt und enthält Elemente aus Echtzeit-Strategie und -Action. Der Mehrspielermodus kann über LAN (nur IPX) oder eine serielle Verbindung / über Modem gespielt werden. Es wurde für Windows 3.1 entwickelt, funktioniert aber einwandfrei in jeder Windows-Umgebung.",
+            fr: "Warpath est un jeu shareware de stratégie spatiale de science-fiction du type 4X (explorer, étendre, exploiter, exterminer) pour jusqu'à quatre joueurs. Il se joue en temps réel et inclut des éléments de stratégie et d'action en temps réel. Le mode multijoueur peut être joué via un réseau local (IPX uniquement) ou une connexion série/modem. Il a été développé pour Windows 3.1, mais fonctionne parfaitement sous n'importe quel environnement Windows.",
+            it: "Warpath è un gioco shareware di strategia spaziale di fantascienza del tipo 4X (esplorare, espandere, sfruttare, sterminare) per un massimo di quattro giocatori. Si gioca in tempo reale e include elementi di strategia e azione in tempo reale. La modalità multigiocatore può essere giocata tramite LAN (solo IPX) o connessione seriale/modem. È stato sviluppato per Windows 3.1, ma funziona correttamente in qualsiasi ambiente Windows.",
+            pt: "Warpath é um jogo shareware de estratégia espacial de ficção científica do tipo 4X (explorar, expandir, explorar, exterminar) para até quatro jogadores. É jogado em tempo real e inclui elementos de estratégia e ação em tempo real. O modo multijogador pode ser jogado via LAN (apenas IPX) ou conexão serial/modem. Foi desenvolvido para Windows 3.1, mas funciona corretamente em qualquer ambiente Windows.",
+            ru: "Warpath — это условно-бесплатная (shareware) научно-фантастическая космическая стратегия типа 4X (исследовать, расширять, эксплуатировать, истреблять) для игры до четырёх игроков. Игра ведётся в реальном времени и включает элементы стратегии и экшена в реальном времени. Мультиплеер доступен по локальной сети (только IPX) или через последовательное соединение/модем. Игра была разработана для Windows 3.1, но корректно работает в любой среде Windows.",
+            zh: "《Warpath》是一款科幻太空策略类共享软件游戏，属于4X类型（探索、扩张、开发、征服），支持最多四名玩家。游戏采用实时进行，并包含即时战略与动作元素。多人模式可通过局域网（仅支持IPX）或串口/调制解调器连接进行。该游戏最初为Windows 3.1开发，但在任何Windows环境下均可正常运行。",
+            ja: "Warpathは、4X（探索、拡張、開発、絶滅）タイプのSF宇宙戦略シェアウェアゲームで、最大4人までプレイ可能です。リアルタイムで進行し、リアルタイムストラテジーおよびアクションの要素を含みます。マルチプレイヤーモードはLAN（IPXのみ）またはシリアル接続/モデムを介してプレイできます。Windows 3.1向けに開発されましたが、どのWindows環境でも正常に動作します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/warpath.html"
+    },
+    {
         name: "Waterworld",
         image: "https://ifilex.github.io/WineBOX-Store/box/waterworld.png",
         description: "Waterworld is a real-time mission-based strategy game based on the expensive (at the time) and largely poorly regarded movie of the same name.",
