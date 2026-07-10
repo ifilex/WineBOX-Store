@@ -494,23 +494,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/indi.html"
     },
     {
-        name: "Media IPTV",
-        image: "https://ifilex.github.io/WineBOX-Store/box/media.png",
-        description: "An IPTV media player is an application that streams live TV, video-on-demand, and online channels via IPTV protocols, offering playlist support, EPG integration, and customizable viewing options.",
-        description: {
-            es: "Un reproductor multimedia IPTV es una aplicación que transmite TV en vivo, video bajo demanda y canales en línea a través de protocolos IPTV, ofreciendo soporte para listas de reproducción, integración de EPG y opciones de visualización personalizables.",
-            de: "Ein IPTV-Mediaplayer ist eine Anwendung, die Live-TV, Video-on-Demand und Online-Kanäle über IPTV-Protokolle streamt und Wiedergabelistenunterstützung, EPG-Integration und anpassbare Anzeigeoptionen bietet.",
-            fr: "Un lecteur multimédia IPTV est une application qui diffuse la télévision en direct, la vidéo à la demande et les chaînes en ligne via des protocoles IPTV, offrant la prise en charge des listes de lecture, l'intégration EPG et des options de visualisation personnalisables.",
-            it: "Un lettore multimediale IPTV è un'applicazione che trasmette TV live, video on demand e canali online tramite protocolli IPTV, offrendo supporto per playlist, integrazione EPG e opzioni di visualizzazione personalizzabili.",
-            pt: "Um player de mídia IPTV é um aplicativo que transmite TV ao vivo, vídeo sob demanda e canais online via protocolos IPTV, oferecendo suporte a listas de reprodução, integração EPG e opções de visualização personalizáveis.",
-            ru: "IPTV-медиаплеер — это приложение, которое транслирует live-телевидение, видео по запросу и онлайн-каналы по IPTV-протоколам, предлагая поддержку плейлистов, интеграцию EPG и настраиваемые параметры просмотра.",
-            zh: "IPTV 媒体播放器是一种通过 IPTV 协议流式传输直播电视、视频点播和在线频道的应用程序，提供播放列表支持、EPG 集成和可自定义的观看选项。",
-            ja: "IPTVメディアプレーヤーは、IPTVプロトコルを介してライブTV、ビデオオンデマンド、オンラインチャンネルをストリーミングするアプリケーションで、プレイリストのサポート、EPG統合、カスタマイズ可能な表示オプションを提供します。"
-        },
-        category: "multimedia",
-        link: "https://ifilex.github.io/WineBOX-Store/multimedia.html"
-    },
-    {
         name: "Mr. Pibb",
         image: "https://ifilex.github.io/WineBOX-Store/box/mrpibb.png",
         description: "Mr. Pibb - The 3D Interactive Game is a 3D shooter FPS type game which is not very good",
@@ -2089,7 +2072,7 @@ window.appData = [
             ja: "To Doは、リマインダー、リスト、クラウド同期を使用して、ユーザーがタスクを作成、整理、追跡するのに役立つタスク管理アプリケーションです。"
         },
         category: "utilities",
-        link: "https://ifilex.github.io/WineBOX-Store/todo.html"
+        link: "todo.html"
     },
     {
         name: "TurboC",
@@ -2191,7 +2174,7 @@ window.appData = [
             ja: "小さなウェブサイトを表示するための、非常に小さな基本機能のWineBOX用ウェブブラウザ。"
         },
         category: "apps",
-        link: "https://ifilex.github.io/WineBOX-Store/edge.html"
+        link: "edge.html"
     },
     {
         name: "WineZIP",
@@ -2208,7 +2191,7 @@ window.appData = [
             ja: "WineZipは、WineBOSS内でWindowsプログラムをインストールするためのZIPパッケージを作成するアプリケーションです。実行可能ファイルと依存関係をパッケージ化することでソフトウェアのデプロイを簡素化し、シームレスなインストールと実行を実現します。"
         },
         category: "utilities",
-        link: "https://ifilex.github.io/WineBOX-Store/winezip.html"
+        link: "winezip.html"
     },
     {
         name: "WinAMP",
@@ -2636,23 +2619,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/earthworm.html"
     },
     {
-        name: "Incredible Machine",
-        image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
-        description: "The objective of the game is to create Rube Goldberg machines by arranging collections of objects in a complex fashion, so as to perform some simple task",
-        description: {
-            es: "El objetivo del juego es crear máquinas de Rube Goldberg organizando colecciones de objetos de manera compleja, para realizar alguna tarea simple.",
-            de: "Das Ziel des Spiels ist es, Rube-Goldberg-Maschinen zu erstellen, indem Sammlungen von Objekten auf komplexe Weise angeordnet werden, um eine einfache Aufgabe auszuführen.",
-            fr: "L'objectif du jeu est de créer des machines de Rube Goldberg en arrangeant des collections d'objets de manière complexe, afin d'effectuer une tâche simple.",
-            it: "L'obiettivo del gioco è creare macchine di Rube Goldberg disponendo collezioni di oggetti in modo complesso, in modo da eseguire un compito semplice.",
-            pt: "O objetivo do jogo é criar máquinas de Rube Goldberg organizando coleções de objetos de maneira complexa, para realizar alguma tarefa simples.",
-            ru: "Цель игры — создавать машины Руба Голдберга, располагая наборы объектов замысловатым образом, чтобы выполнить какое-либо простое задание.",
-            zh: "游戏的目标是通过以复杂的方式排列物体集合来创建鲁布·戈德堡机械，从而执行一些简单的任务。",
-            ja: "ゲームの目的は、オブジェクトのコレクションを複雑に配置してルーブ・ゴールドバーグマシンを作成し、単純なタスクを実行することです。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/machine.html"
-    },
-    {
         name: "Hextris",
         image: "https://ifilex.github.io/WineBOX-Store/box/hextris-lite.png",
         description: "Hextris is a game where users rotate a central hexagon and add similar colors.",
@@ -2667,7 +2633,7 @@ window.appData = [
             ja: "Hextrisは、中央の六角形を回転させて類似した色を追加するゲームです。"
         },
         category: "arcade",
-        link: "https://fosiper.com/games/hextris-lite/"
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/hextris/index.html"
     },
     {
         name: "Indiana Jones and the Fate of Atlantis",
@@ -2924,6 +2890,24 @@ window.appData = [
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/sm.html"
     },
+{
+    name: "Simon",
+    image: "https://ifilex.github.io/WineBOX-Store/box/simonx.jpg",
+    description: "Simon es el clásico juego electrónico de memoria y ritmo que puso a prueba a toda una generación. Cuatro botones de colores brillan y suenan en una secuencia que deberás recordar y repetir sin fallar. Un desafío hipnótico que entrena la mente al ritmo de luces y tonos.",
+    description: {
+        "es": "Simon es el clásico juego electrónico de memoria y ritmo que puso a prueba a toda una generación. Cuatro botones de colores brillan y suenan en una secuencia que deberás recordar y repetir sin fallar. Un desafío hipnótico que entrena la mente al ritmo de luces y tonos.",
+        "en": "Simon is the classic electronic memory and rhythm game that challenged an entire generation. Four colored buttons light up and beep in a sequence you must remember and repeat without mistakes. A hypnotic challenge that trains your mind to the beat of lights and tones.",
+        "de": "Simon ist das klassische elektronische Gedächtnis- und Rhythmusspiel, das eine ganze Generation herausforderte. Vier farbige Tasten leuchten und piepen in einer Sequenz, die Sie sich merken und fehlerfrei wiederholen müssen. Eine hypnotische Herausforderung, die das Gehirn im Takt von Lichtern und Tönen trainiert.",
+        "fr": "Simon est le jeu électronique classique de mémoire et de rythme qui a défié toute une génération. Quatre boutons colorés s'allument et émettent des bips dans une séquence que vous devez mémoriser et répéter sans vous tromper. Un défi hypnotique qui entraîne l'esprit au rythme des lumières et des sons.",
+        "it": "Simon è il classico gioco elettronico di memoria e ritmo che ha sfidato un'intera generazione. Quattro pulsanti colorati si illuminano e suonano in una sequenza che devi ricordare e ripetere senza sbagliare. Una sfida ipnotica che allena la mente al ritmo di luci e toni.",
+        "pt": "Simon é o clássico jogo eletrônico de memória e ritmo que desafiou uma geração inteira. Quatro botões coloridos acendem e apitam em uma sequência que você deve lembrar e repetir sem errar. Um desafio hipnótico que treina a mente ao ritmo de luzes e tons.",
+        "ru": "Simon — это классическая электронная игра на память и ритм, которая бросила вызов целому поколению. Четыре цветные кнопки загораются и издают звуки в определённой последовательности, которую нужно запомнить и повторить без ошибок. Гипнотическая задача, тренирующая мозг в ритме света и звука.",
+        "zh": "西蒙（Simon）是经典的电子记忆与节奏游戏，曾向整整一代人发起挑战。四个彩色按钮会按一定顺序亮起并发出提示音，你必须记住并准确无误地重复出来。这是一场在灯光与音调节奏中训练大脑的催眠式挑战。",
+        "ja": "サイモンは、一世代に挑戦した古典的な電子記憶＆リズムゲームです。4つのカラフルなボタンが点灯し、ある順序でビープ音を鳴らします。あなたはその順序を覚え、間違えずに繰り返さなければなりません。光と音のリズムに合わせて脳を鍛える、催眠術のような挑戦です。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/simon/index.html"
+    },
     {
         name: "Simon the Sorcerer",
         image: "https://ifilex.github.io/WineBOX-Store/box/simon.gif",
@@ -3043,6 +3027,24 @@ window.appData = [
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/wacky.html"
     },
+   {
+    name: "Winemine",
+    image: "https://ifilex.github.io/WineBOX-Store/box/winemine.png",
+    description: "Buscaminas es el clásico juego de lógica incluido en Windows, y uno de los pocos juegos de su época que convirtió la limpieza de un campo minado virtual en un adictivo ejercicio de deducción y riesgo calculado.",
+    description: {
+        es: "Buscaminas es el clásico juego de lógica incluido en Windows, y uno de los pocos juegos de su época que convirtió la limpieza de un campo minado virtual en un adictivo ejercicio de deducción y riesgo calculado.",
+        en: "Minesweeper is the classic logic game included with Windows, and one of the few games of its time that turned clearing a virtual minefield into an addictive exercise in deduction and calculated risk.",
+        de: "Minesweeper ist das klassische Logikspiel, das mit Windows geliefert wurde, und eines der wenigen Spiele seiner Zeit, das das Räumen eines virtuellen Minenfeldes in eine süchtig machende Übung in Deduktion und kalkuliertem Risiko verwandelte.",
+        fr: "Démineur est le jeu de logique classique inclus avec Windows, et l'un des rares jeux de son époque à avoir transformé le nettoyage d'un champ de mines virtuel en un exercice addictif de déduction et de risque calculé.",
+        it: "Campo minato è il classico gioco di logica incluso in Windows, e uno dei pochi giochi della sua epoca che ha trasformato la bonifica di un campo minato virtuale in un esercizio avvincente di deduzione e rischio calcolato.",
+        pt: "Campo Minado é o clássico jogo de lógica incluído no Windows, e um dos poucos jogos da sua época que transformou a limpeza de um campo minado virtual em um exercício viciante de dedução e risco calculado.",
+        ru: "«Сапёр» — это классическая логическая игра, включённая в Windows, и одна из немногих игр своего времени, которая превратила очистку виртуального минного поля в вызывающее зависимость упражнение на дедукцию и просчитанный риск.",
+        zh: "《扫雷》是 Windows 自带的经典逻辑游戏，也是其时代为数不多的将清理虚拟雷区变成一种令人上瘾的推理和风险计算练习的游戏之一。",
+        ja: "マインスイーパーはWindowsに含まれる古典的なロジックゲームであり、仮想の地雷原の掃討を、演繹と計算されたリスクの中毒的な練習問題に変えた、その時代の数少ないゲームの一つです。"
+    },
+    category: "arcade",
+    link: "https://ifilex.github.io/WineBOX-Store/winemine.html"
+    },
     {
         name: "Wizardry: Crusaders of the Dark Savant",
         image: "https://ifilex.github.io/WineBOX-Store/box/w7-introscreen-624x468.png",
@@ -3146,6 +3148,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/cows.html"
     },
     {
+        name: "Incredible Machine",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
+        description: "The objective of the game is to create Rube Goldberg machines by arranging collections of objects in a complex fashion, so as to perform some simple task",
+        description: {
+            es: "El objetivo del juego es crear máquinas de Rube Goldberg organizando colecciones de objetos de manera compleja, para realizar alguna tarea simple.",
+            de: "Das Ziel des Spiels ist es, Rube-Goldberg-Maschinen zu erstellen, indem Sammlungen von Objekten auf komplexe Weise angeordnet werden, um eine einfache Aufgabe auszuführen.",
+            fr: "L'objectif du jeu est de créer des machines de Rube Goldberg en arrangeant des collections d'objets de manière complexe, afin d'effectuer une tâche simple.",
+            it: "L'obiettivo del gioco è creare macchine di Rube Goldberg disponendo collezioni di oggetti in modo complesso, in modo da eseguire un compito semplice.",
+            pt: "O objetivo do jogo é criar máquinas de Rube Goldberg organizando coleções de objetos de maneira complexa, para realizar alguma tarefa simples.",
+            ru: "Цель игры — создавать машины Руба Голдберга, располагая наборы объектов замысловатым образом, чтобы выполнить какое-либо простое задание.",
+            zh: "游戏的目标是通过以复杂的方式排列物体集合来创建鲁布·戈德堡机械，从而执行一些简单的任务。",
+            ja: "ゲームの目的は、オブジェクトのコレクションを複雑に配置してルーブ・ゴールドバーグマシンを作成し、単純なタスクを実行することです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/machine.html"
+    },
+    {
         name: "Oregon Trail Delux",
         image: "https://ifilex.github.io/WineBOX-Store/box/oregon.jpg",
         description: "You get to play the role of a wagon leader and guide your group of chosen settlers from Independence, Missouri, to the Willamette Valley in Oregon.",
@@ -3212,6 +3231,60 @@ window.appData = [
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/simcity2000.html"
+    },
+
+   {
+    name: "Sudoku",
+    image: "https://ifilex.github.io/WineBOX-Store/box/sudoku.png",
+    description: "Sudoku es el clásico rompecabezas numérico japonés que conquistó al mundo. Una cuadrícula de 9x9 con números del 1 al 9 que no deben repetirse ni en filas, ni en columnas, ni en las subcuadrículas de 3x3. Un ejercicio de lógica pura y paciencia que agudiza la mente sin necesidad de operaciones matemáticas.",
+    description: {
+        "es": "Sudoku es el clásico rompecabezas numérico japonés que conquistó al mundo. Una cuadrícula de 9x9 con números del 1 al 9 que no deben repetirse ni en filas, ni en columnas, ni en las subcuadrículas de 3x3. Un ejercicio de lógica pura y paciencia que agudiza la mente sin necesidad de operaciones matemáticas.",
+        "en": "Sudoku is the classic Japanese number puzzle that took the world by storm. A 9x9 grid where numbers 1 to 9 must not repeat in any row, column, or 3x3 subgrid. A pure logic and patience exercise that sharpens the mind without needing any math operations.",
+        "de": "Sudoku ist das klassische japanische Zahlenrätsel, das die Welt eroberte. Ein 9x9-Gitter, in dem die Zahlen 1 bis 9 sich weder in Zeilen, noch in Spalten, noch in den 3x3-Unterfeldern wiederholen dürfen. Eine Übung in reiner Logik und Geduld, die den Verstand schärft, ohne dass man rechnen muss.",
+        "fr": "Le Sudoku est le casse-tête numérique japonais classique qui a conquis le monde. Une grille de 9x9 dans laquelle les chiffres de 1 à 9 ne doivent se répéter ni dans les lignes, ni dans les colonnes, ni dans les sous-grilles de 3x3. Un exercice de logique pure et de patience qui aiguise l'esprit sans aucun calcul mathématique.",
+        "it": "Il Sudoku è il classico rompicapo numerico giapponese che ha conquistato il mondo. Una griglia 9x9 in cui i numeri da 1 a 9 non devono ripetersi né in righe, né in colonne, né nei sottogruppi 3x3. Un esercizio di pura logica e pazienza che affina la mente senza bisogno di operazioni matematiche.",
+        "pt": "Sudoku é o clássico quebra-cabeça numérico japonês que conquistou o mundo. Uma grade 9x9 onde os números de 1 a 9 não podem se repetir em linhas, colunas ou subgrades 3x3. Um exercício de lógica pura e paciência que aguça a mente sem precisar de nenhuma operação matemática.",
+        "ru": "Судоку — это классическая японская числовая головоломка, покорившая мир. Сетка 9x9, в которой числа от 1 до 9 не должны повторяться ни в строках, ни в столбцах, ни в подсекциях 3x3. Упражнение на чистую логику и терпение, которое оттачивает ум без каких-либо математических вычислений.",
+        "zh": "数独是风靡全球的经典日本数字谜题。在一个9x9的网格中，数字1到9在每一行、每一列以及每一个3x3的小九宫格内都不能重复。这是一个纯粹的逻辑与耐心练习，无需任何数学运算，却能磨砺你的思维。",
+        "ja": "数独は、世界中を席巻した古典的な日本のナンバーパズルです。9x9のグリッドで、1から9までの数字は、行、列、3x3のサブグリッドのいずれでも繰り返されてはいけません。これは、純粋な論理と忍耐の練習であり、数学的な操作を必要とせずに精神を研ぎ澄ますものです。"
+      },
+      category: "rts",
+      link: "https://ifilex.github.io/WineBOX-Store/webapps/sudoku/index.html"
+   },
+   {
+    name: "Solitaire",
+    image: "https://ifilex.github.io/WineBOX-Store/box/sol.jpg",
+    description: "El Solitario es el clásico juego de cartas incluido en Windows, y uno de los pasatiempos digitales más emblemáticos que ha ayudado a millones de usuarios a aprender a usar el ratón mientras ordenaban mazos virtuales.",
+    description: {
+        es: "El Solitario es el clásico juego de cartas incluido en Windows, y uno de los pasatiempos digitales más emblemáticos que ha ayudado a millones de usuarios a aprender a usar el ratón mientras ordenaban mazos virtuales.",
+        en: "Solitaire is the classic card game included with Windows, and one of the most iconic digital pastimes that helped millions of users learn to use a mouse while sorting virtual decks.",
+        de: "Solitaire ist das klassische Kartenspiel, das mit Windows geliefert wurde, und eine der kultigsten digitalen Beschäftigungen, die Millionen von Benutzern half, die Maus zu bedienen, während sie virtuelle Stapel sortierten.",
+        fr: "Le Solitaire est le jeu de cartes classique inclus avec Windows, et l'un des passe-temps numériques les plus emblématiques qui a aidé des millions d'utilisateurs à apprendre à utiliser une souris tout en rangeant des piles virtuelles.",
+        it: "Il Solitario è il classico gioco di carte incluso in Windows, e uno dei passatempi digitali più iconici che ha aiutato milioni di utenti a imparare a usare il mouse mentre riordinavano mazzi virtuali.",
+        pt: "O Solitário é o clássico jogo de cartas incluído no Windows, e um dos passatempos digitais mais icônicos que ajudou milhões de usuários a aprender a usar o mouse enquanto organizavam pilhas virtuais.",
+        ru: "«Солитер» — это классическая карточная игра, включённая в Windows, и одно из самых знаковых цифровых развлечений, которое помогло миллионам пользователей научиться пользоваться мышью, попутно сортируя виртуальные колоды.",
+        zh: "《纸牌》是 Windows 自带的经典纸牌游戏，也是最标志性的数字消遣之一，它帮助数百万用户在整理虚拟牌堆的同时学会了使用鼠标。",
+        ja: "ソリティアはWindowsに含まれる古典的なカードゲームであり、仮想の山札を整理しながら何百万人ものユーザーがマウスの使い方を学ぶのを助けた、最も象徴的なデジタル娯楽の一つです。"
+      },
+      category: "rts",
+      link: "https://ifilex.github.io/WineBOX-Store/sol.html"
+    },
+   {
+    name: "Spider Solitaire",
+    image: "https://ifilex.github.io/WineBOX-Store/box/spider.jpg",
+    description: {
+        "es": "El Solitario Spider es la variante más estratégica y adictiva del clásico juego de cartas. A diferencia del sencillo solitario de Windows, aquí deberás ordenar dos mazos completos para formar escaleras del rey al as. Un desafío de paciencia y lógica que ha atrapado a generaciones.",
+        "en": "Spider Solitaire is the most strategic and addictive variant of the classic card game. Unlike the simple Windows solitaire, here you must sort two complete decks to build sequences from king to ace. A challenge of patience and logic that has captivated generations.",
+        "de": "Spider Solitaire ist die strategischste und süchtig machendste Variante des klassischen Kartenspiels. Im Gegensatz zum einfachen Windows-Solitaire müssen Sie hier zwei komplette Decks sortieren, um Sequenzen vom König bis zum Ass zu bilden. Eine Herausforderung für Geduld und Logik, die Generationen fasziniert hat.",
+        "fr": "Le Spider Solitaire est la variante la plus stratégique et addictive du jeu de cartes classique. Contrairement au solitaire simple de Windows, vous devez ici trier deux jeux complets pour former des séquences du roi à l'as. Un défi de patience et de logique qui a captivé des générations.",
+        "it": "Il Solitario Spider è la variante più strategica e avvincente del classico gioco di carte. A differenza del semplice solitario di Windows, qui devi ordinare due mazzi completi per formare sequenze dal re all'asso. Una sfida di pazienza e logica che ha affascinato generazioni.",
+        "pt": "O Paciência Spider é a variante mais estratégica e viciante do clássico jogo de cartas. Diferente do solitário simples do Windows, aqui você deve organizar dois baralhos completos para formar sequências do rei ao ás. Um desafio de paciência e lógica que cativou gerações.",
+        "ru": "Пасьянс «Паук» — самая стратегическая и захватывающая разновидность классической карточной игры. В отличие от простого солитера Windows, здесь вам нужно отсортировать две полные колоды, чтобы построить последовательности от короля до туза. Испытание терпения и логики, которое покорило поколения.",
+        "zh": "蜘蛛纸牌是经典纸牌游戏中最具战略性和成瘾性的变种。与简单的 Windows 纸牌不同，你需要整理两整副牌，组成从国王到尖子的顺子。这是一个考验耐心与逻辑的挑战，迷住了几代人。",
+        "ja": "スパイダーソリティアは、古典的なカードゲームの中で最も戦略的で中毒性のある変種です。シンプルなWindowsソリティアとは異なり、ここではキングからエースまでのシーケンスを構築するために2つの完全なデッキをソートする必要があります。忍耐と論理の挑戦は、世代を魅了してきました。"
+      },
+      category: "rts",
+      link: "https://ifilex.github.io/WineBOX-Store/spider.html"
     },
     {
         name: "Syndicate Plus",
