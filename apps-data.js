@@ -2926,6 +2926,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/simon.html"
     },
     {
+        name: "Ski",
+        image: "https://ia800704.us.archive.org/15/items/win3_WINSKI/00_coverscreenshot.jpg",
+        description: "SkiFree is the standalone version of the game originally included as a part of the Microsoft Entertainment Pack 3 (1991) for Windows 3.x, and later made available separately for Windows 3.x. It was then re-compiled for 32-bit Windows systems when the author found back the source code and released it for free through his website.",
+        description: {
+            es: "SkiFree es la versión independiente del juego incluido originalmente como parte del Microsoft Entertainment Pack 3 (1991) para Windows 3.x, y más tarde puesto a disposición por separado para Windows 3.x. Luego fue recompilado para sistemas Windows de 32 bits cuando el autor recuperó el código fuente y lo publicó de forma gratuita en su sitio web.",
+            de: "SkiFree ist die eigenständige Version des Spiels, das ursprünglich als Teil des Microsoft Entertainment Pack 3 (1991) für Windows 3.x enthalten war und später separat für Windows 3.x verfügbar gemacht wurde. Es wurde dann für 32-Bit-Windows-Systeme neu kompiliert, als der Autor den Quellcode wiederfand und ihn kostenlos über seine Website veröffentlichte.",
+             fr: "SkiFree est la version autonome du jeu initialement inclus dans le Microsoft Entertainment Pack 3 (1991) pour Windows 3.x, et plus tard mis à disposition séparément pour Windows 3.x. Il a ensuite été recompilé pour les systèmes Windows 32 bits lorsque l'auteur a retrouvé le code source et l'a publié gratuitement sur son site web.",
+             it: "SkiFree è la versione standalone del gioco originariamente incluso come parte del Microsoft Entertainment Pack 3 (1991) per Windows 3.x, e successivamente reso disponibile separatamente per Windows 3.x. Fu poi ricompilato per i sistemi Windows a 32 bit quando l'autore ritrovò il codice sorgente e lo pubblicò gratuitamente sul suo sito web.",
+            pt: "SkiFree é a versão autônoma do jogo originalmente incluído como parte do Microsoft Entertainment Pack 3 (1991) para Windows 3.x, e posteriormente disponibilizado separadamente para Windows 3.x. Foi então recompilado para sistemas Windows de 32 bits quando o autor reencontrou o código-fonte e o lançou gratuitamente em seu site.",
+            ru: "SkiFree — это автономная версия игры, изначально входившей в состав Microsoft Entertainment Pack 3 (1991) для Windows 3.x, а позже выпущенной отдельно для Windows 3.x. Затем она была перекомпилирована для 32-разрядных систем Windows, когда автор нашел исходный код и бесплатно опубликовал его на своем веб-сайте.",
+            zh: "SkiFree 是该游戏的独立版本，最初作为 Microsoft Entertainment Pack 3（1991）的一部分包含在 Windows 3.x 中，后来单独提供给 Windows 3.x。当作者找回源代码并通过其网站免费发布后，它被重新编译为 32 位 Windows 系统版本。",
+             ja: "SkiFreeは、元々Microsoft Entertainment Pack 3（1991）の一部としてWindows 3.xに含まれていたゲームのスタンドアロンバージョンであり、後にWindows 3.x向けに個別に提供されました。その後、作者がソースコードを発見し、自身のウェブサイトで無料公開した際に、32ビットWindowsシステム向けに再コンパイルされました。"
+        },      
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/ski.html"
+    },
+    {
         name: "Space Invaders",
         image: "https://ifilex.github.io/WineBOX-Store/box/spaceinvaders.png",
         description: "Icónico juego arcade de disparos espaciales.",
@@ -3095,6 +3112,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/xox.html"
+    },
+    {
+        name: "Box World",
+        image: "https://ia800705.us.archive.org/35/items/win3_BOXWORLD/00_coverscreenshot.jpg",
+        description: "Released in 1992 by Jeng-Long Jiang, Boxworld is a classic Sokoban-style puzzle game for Windows 3.1. You navigate a maze to push blocks onto designated target spots to generate energy for a teleporter. The game features 100 levels, and you must avoid getting blocks permanently stuck",
+        description: {
+            es: "Lanzado en 1992 por Jeng-Long Jiang, Boxworld es un clásico juego de rompecabezas estilo Sokoban para Windows 3.1. Navegas por un laberinto para empujar bloques hacia puntos objetivo designados y así generar energía para un teletransportador. El juego cuenta con 100 niveles, y debes evitar que los bloques queden permanentemente atascados.",
+            de: "Veröffentlicht 1992 von Jeng-Long Jiang, ist Boxworld ein klassisches Sokoban-artiges Puzzlespiel für Windows 3.1. Sie navigieren durch ein Labyrinth, um Blöcke auf bestimmte Zielpunkte zu schieben und so Energie für einen Teleporter zu erzeugen. Das Spiel bietet 100 Level, und Sie müssen vermeiden, dass Blöcke dauerhaft feststecken.",
+             fr: "Sorti en 1992 par Jeng-Long Jiang, Boxworld est un jeu de puzzle classique de type Sokoban pour Windows 3.1. Vous parcourez un labyrinthe pour pousser des blocs sur des emplacements cibles désignés afin de générer de l'énergie pour un téléporteur. Le jeu propose 100 niveaux, et vous devez éviter que les blocs ne restent définitivement bloqués.",
+             it: "Pubblicato nel 1992 da Jeng-Long Jiang, Boxworld è un classico gioco di puzzle in stile Sokoban per Windows 3.1. Navighi in un labirinto per spingere i blocchi su punti bersaglio designati per generare energia per un teletrasporto. Il gioco offre 100 livelli e devi evitare che i blocchi rimangano permanentemente incastrati.",
+             pt: "Lançado em 1992 por Jeng-Long Jiang, Boxworld é um clássico jogo de quebra-cabeça no estilo Sokoban para Windows 3.1. Você navega por um labirinto para empurrar blocos até pontos-alvo designados para gerar energia para um teletransportador. O jogo conta com 100 níveis, e você deve evitar que os blocos fiquem permanentemente presos.",
+             ru: "Выпущенная в 1992 году Jeng-Long Jiang, Boxworld — это классическая игра-головоломка в стиле Сокобан для Windows 3.1. Вы перемещаетесь по лабиринту, чтобы толкать блоки на обозначенные целевые точки и генерировать энергию для телепорта. Игра включает 100 уровней, и вам нужно избегать, чтобы блоки навсегда застревали.",
+             zh: "Boxworld 由 Jeng-Long Jiang 于 1992 年发布，是一款适用于 Windows 3.1 的经典推箱子风格益智游戏。您在迷宫中导航，将箱子推到指定的目标位置，为传送器生成能量。游戏包含 100 个关卡，您必须避免箱子被永久卡住。",
+             ja: "1992年にJeng-Long JiangによってリリースされたBoxworldは、Windows 3.1用の古典的な倉庫番スタイルのパズルゲームです。迷路を進み、ブロックを指定されたターゲットスポットに押し込んで、テレポーターのエネルギーを生成します。ゲームは100のレベルを備えており、ブロックが永久に動かなくなるのを避けなければなりません。"
+         },
+         category: "rts",
+         link: "https://ifilex.github.io/WineBOX-Store/boxworld.html"
     },
     {
         name: "Capture the Flag",
@@ -3404,6 +3438,24 @@ window.appData = [
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/water.html"
+    },
+    {
+        name: "Win Solit",
+        image: "https://ia801904.us.archive.org/31/items/win3_SOLITARE/00_coverscreenshot.jpg",
+        description: "El Windows Solitario es el clásico juego de cartas incluido en Windows, y uno de los pasatiempos digitales más emblemáticos que ha ayudado a millones de usuarios a aprender a usar el ratón mientras ordenaban mazos virtuales.",
+        description: {
+        es: "El Windows Solitario es el clásico juego de cartas incluido en Windows, y uno de los pasatiempos digitales más emblemáticos que ha ayudado a millones de usuarios a aprender a usar el ratón mientras ordenaban mazos virtuales.",
+        en: "Windows Solitaire is the classic card game included with Windows, and one of the most iconic digital pastimes that helped millions of users learn to use a mouse while sorting virtual decks.",
+        de: "Win Solitaire ist das klassische Kartenspiel, das mit Windows geliefert wurde, und eine der kultigsten digitalen Beschäftigungen, die Millionen von Benutzern half, die Maus zu bedienen, während sie virtuelle Stapel sortierten.",
+        fr: "Le Win Solitaire est le jeu de cartes classique inclus avec Windows, et l'un des passe-temps numériques les plus emblématiques qui a aidé des millions d'utilisateurs à apprendre à utiliser une souris tout en rangeant des piles virtuelles.",
+        it: "Il Win Solitario è il classico gioco di carte incluso in Windows, e uno dei passatempi digitali più iconici che ha aiutato milioni di utenti a imparare a usare il mouse mentre riordinavano mazzi virtuali.",
+        pt: "O Win Solitário é o clássico jogo de cartas incluído no Windows, e um dos passatempos digitais mais icônicos que ajudou milhões de usuários a aprender a usar o mouse enquanto organizavam pilhas virtuais.",
+        ru: "«Солитер» — это классическая карточная игра, включённая в Windows, и одно из самых знаковых цифровых развлечений, которое помогло миллионам пользователей научиться пользоваться мышью, попутно сортируя виртуальные колоды.",
+        zh: "《纸牌》是 Windows 自带的经典纸牌游戏，也是最标志性的数字消遣之一，它帮助数百万用户在整理虚拟牌堆的同时学会了使用鼠标。",
+        ja: "ソリティアはWindowsに含まれる古典的なカードゲームであり、仮想の山札を整理しながら何百万人ものユーザーがマウスの使い方を学ぶのを助けた、最も象徴的なデジタル娯楽の一つです。"
+      },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/winsolit.html"
     },
     {
         name: "Worm",
