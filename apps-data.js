@@ -2174,7 +2174,7 @@ window.appData = [
             ja: "小さなウェブサイトを表示するための、非常に小さな基本機能のWineBOX用ウェブブラウザ。"
         },
         category: "apps",
-        link: "edge.html"
+        link: "https://ifilex.github.io/WineBOX-Store/edge.html"
     },
     {
         name: "WineZIP",
@@ -2191,7 +2191,7 @@ window.appData = [
             ja: "WineZipは、WineBOSS内でWindowsプログラムをインストールするためのZIPパッケージを作成するアプリケーションです。実行可能ファイルと依存関係をパッケージ化することでソフトウェアのデプロイを簡素化し、シームレスなインストールと実行を実現します。"
         },
         category: "utilities",
-        link: "winezip.html"
+        link: "https://ifilex.github.io/WineBOX-Store/winezip.html"
     },
     {
         name: "WinAMP",
