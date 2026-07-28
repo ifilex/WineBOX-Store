@@ -67,6 +67,11 @@
             font-size: 14px;
             color: #6c5ce7;
         }
+        .loader-status {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #555;
+        }
         #game-frame {
             width: 100vw;
             height: 100vh;
@@ -101,17 +106,15 @@
         <div class="loader-text">CARGANDO JUEGO</div>
         <div class="loader-progress"><div class="loader-progress-bar" id="progressBar"></div></div>
         <div class="loader-game-name" id="gameName">Preparando...</div>
+        <div class="loader-status" id="loadStatus">Iniciando...</div>
     </div>
     <iframe id="game-frame" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads"></iframe>
 
     <script>
         // ========== CONFIGURACIÓN ==========
         const CONFIG = {
-            // URL base donde se encuentra wine.html
-            wineBaseUrl: 'https://ifilex.github.io/WineBOX-Store/win32/',
-            // Tiempo máximo de espera para la carga (ms)
-            maxLoadTime: 30000,
-            // Intentos de reintento
+            wineBaseUrl: window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1),
+            maxLoadTime: 60000,
             maxRetries: 3
         };
 
@@ -124,9 +127,9 @@
         // ========== ESTADO ==========
         let currentApp = {
             name: getParam('app') || 'Desconocido',
-            exe: getParam('p') || '',
-            zipUrl: getParam('zip') || '',
-            directUrl: getParam('url') || ''
+            exe: getParam('exe') || getParam('p') || '',
+            zipUrl: getParam('zip') || getParam('url') || '',
+            directUrl: getParam('direct') || ''
         };
 
         // Si no hay nombre, intentar obtenerlo de la URL
@@ -143,11 +146,13 @@
         const gameFrame = document.getElementById('game-frame');
         const progressBar = document.getElementById('progressBar');
         const gameNameEl = document.getElementById('gameName');
+        const loadStatusEl = document.getElementById('loadStatus');
 
         // ========== ACTUALIZAR PROGRESO ==========
-        function updateProgress(value, text) {
+        function updateProgress(value, text, status) {
             progressBar.style.width = Math.min(value, 100) + '%';
             if (text) gameNameEl.textContent = text;
+            if (status) loadStatusEl.textContent = status;
         }
 
         // ========== MOSTRAR ERROR ==========
@@ -164,80 +169,132 @@
             loadingScreen.classList.remove('hidden');
         }
 
-        // ========== CARGAR JUEGO EXTERNO ==========
-        function loadExternalGame() {
-            updateProgress(10, `Preparando ${currentApp.name}...`);
-
-            // Determinar la URL del juego
-            let gameUrl = currentApp.directUrl || currentApp.zipUrl;
-
-            if (gameUrl) {
-                // Si es un ZIP de archive.org, usar el wrapper
-                if (gameUrl.includes('archive.org') && gameUrl.endsWith('.zip')) {
-                    const zipName = gameUrl.split('/').pop().replace('.zip', '');
-                    const exeName = currentApp.exe || `${currentApp.name}.exe`;
-                    gameUrl = `${CONFIG.wineBaseUrl}wine.html?app=${zipName}&p=${exeName}&zip=${encodeURIComponent(gameUrl)}`;
-                }
-                // Si es una URL directa a wine.html, usarla tal cual
-                else if (gameUrl.includes('wine.html')) {
-                    // Ya está lista
-                }
-                // Si es otra URL, intentar cargarla directamente
-                else {
-                    // Si no parece ser wine.html, intentar cargarla como juego
-                    // pero usando el wrapper para seguridad
-                    const exeName = currentApp.exe || `${currentApp.name}.exe`;
-                    gameUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${exeName}&url=${encodeURIComponent(gameUrl)}`;
-                }
-            } else {
-                // Si no hay URL específica, usar el nombre del juego
-                const exeName = currentApp.exe || `${currentApp.name}.exe`;
-                gameUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${exeName}`;
-            }
-
-            updateProgress(30, 'Cargando motor de emulación...');
-
-            // Configurar el iframe
-            gameFrame.src = gameUrl;
+        // ========== DESCARGAR ZIP REMOTO ==========
+        function downloadRemoteZip(url, callback) {
+            updateProgress(30, currentApp.name, 'Descargando juego...');
             
-            // Evento de carga del iframe
-            gameFrame.onload = function() {
-                updateProgress(100, '¡Listo!');
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'arraybuffer';
+            
+            xhr.onprogress = function(event) {
+                if (event.lengthComputable) {
+                    const percent = 30 + (event.loaded / event.total) * 40;
+                    updateProgress(percent, currentApp.name, `Descargando... ${Math.round(percent)}%`);
+                }
+            };
+            
+            xhr.onload = function() {
+                if (xhr.status === 200 || xhr.status === 0) {
+                    updateProgress(70, currentApp.name, 'Juego descargado, preparando...');
+                    callback(null, xhr.response);
+                } else {
+                    callback(new Error(`HTTP ${xhr.status}: ${xhr.statusText}`));
+                }
+            };
+            
+            xhr.onerror = function() {
+                callback(new Error('Error de red al descargar el juego'));
+            };
+            
+            xhr.ontimeout = function() {
+                callback(new Error('Timeout al descargar el juego'));
+            };
+            
+            xhr.timeout = CONFIG.maxLoadTime;
+            xhr.send();
+        }
+
+        // ========== CARGAR JUEGO ==========
+        function loadGame() {
+            updateProgress(10, currentApp.name, 'Iniciando...');
+
+            // Si es una URL directa a wine.html, usarla tal cual
+            if (currentApp.directUrl && currentApp.directUrl.includes('wine.html')) {
+                updateProgress(100, currentApp.name, 'Cargando...');
                 setTimeout(() => {
                     loadingScreen.classList.add('hidden');
                     gameFrame.style.display = 'block';
-                    // Intentar dar foco
-                    try {
-                        gameFrame.contentWindow.focus();
-                    } catch(e) {}
+                    gameFrame.src = currentApp.directUrl;
                 }, 300);
-            };
+                return;
+            }
 
-            // Evento de error del iframe
-            gameFrame.onerror = function() {
-                showError('No se pudo cargar el juego. Verifica tu conexión.');
-            };
+            // Si hay un ZIP remoto, descargarlo y convertirlo a base64
+            if (currentApp.zipUrl && currentApp.zipUrl.startsWith('http')) {
+                downloadRemoteZip(currentApp.zipUrl, function(err, data) {
+                    if (err) {
+                        showError(`No se pudo descargar el juego: ${err.message}`);
+                        return;
+                    }
+                    
+                    try {
+                        // Convertir a base64
+                        const bytes = new Uint8Array(data);
+                        let binary = '';
+                        for (let i = 0; i < bytes.length; i++) {
+                            binary += String.fromCharCode(bytes[i]);
+                        }
+                        const base64 = btoa(binary);
+                        
+                        updateProgress(90, currentApp.name, 'Preparando emulador...');
+                        
+                        // Construir URL para wine.html con el ZIP en base64
+                        const wineUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${currentApp.exe}&inline-default-ondemand-root-overlay=data:application/zip;base64,${encodeURIComponent(base64)}`;
+                        
+                        // Cargar en el iframe
+                        gameFrame.src = wineUrl;
+                        gameFrame.onload = function() {
+                            updateProgress(100, currentApp.name, '¡Listo!');
+                            setTimeout(() => {
+                                loadingScreen.classList.add('hidden');
+                                gameFrame.style.display = 'block';
+                                try {
+                                    gameFrame.contentWindow.focus();
+                                } catch(e) {}
+                            }, 300);
+                        };
+                        
+                        gameFrame.onerror = function() {
+                            showError('Error al cargar el emulador');
+                        };
+                        
+                    } catch(e) {
+                        showError(`Error al procesar el juego: ${e.message}`);
+                    }
+                });
+                return;
+            }
 
-            // Timeout de carga
+            // Si no hay ZIP, intentar cargar localmente
+            const localUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${currentApp.exe}`;
+            updateProgress(100, currentApp.name, 'Cargando localmente...');
             setTimeout(() => {
-                if (!loadingScreen.classList.contains('hidden')) {
-                    showError('El juego tardó demasiado en cargar. Intenta nuevamente.');
-                }
-            }, CONFIG.maxLoadTime);
-
-            updateProgress(50, 'Descargando recursos...');
+                loadingScreen.classList.add('hidden');
+                gameFrame.style.display = 'block';
+                gameFrame.src = localUrl;
+                try {
+                    gameFrame.contentWindow.focus();
+                } catch(e) {}
+            }, 300);
         }
 
         // ========== INICIALIZAR ==========
         function init() {
             gameNameEl.textContent = `🎮 ${currentApp.name}`;
+            loadStatusEl.textContent = 'Preparando...';
             
             // Verificar si es un juego de la base de datos local
-            const localGame = window.gameDatabase && window.gameDatabase[currentApp.name];
-            if (localGame) {
-                currentApp.zipUrl = localGame.link || '';
+            if (window.gameDatabase && window.gameDatabase[currentApp.name]) {
+                const localGame = window.gameDatabase[currentApp.name];
+                currentApp.zipUrl = localGame.link || currentApp.zipUrl;
                 currentApp.exe = localGame.exe || currentApp.exe;
                 currentApp.directUrl = localGame.directUrl || '';
+                
+                // Si el link es de archive.org, usarlo como ZIP
+                if (localGame.link && localGame.link.includes('archive.org')) {
+                    currentApp.zipUrl = localGame.link;
+                }
             }
 
             // Si no hay URL y no hay nombre, error
@@ -247,10 +304,10 @@
             }
 
             // Iniciar carga
-            setTimeout(loadExternalGame, 500);
+            setTimeout(loadGame, 500);
         }
 
-        // ========== EXPONER API PARA LA BASE DE DATOS ==========
+        // ========== EXPONER API ==========
         window.WineLoader = {
             loadGame: function(gameData) {
                 currentApp = {
@@ -260,7 +317,8 @@
                     directUrl: gameData.directUrl || ''
                 };
                 gameNameEl.textContent = `🎮 ${currentApp.name}`;
-                setTimeout(loadExternalGame, 300);
+                loadStatusEl.textContent = 'Reiniciando...';
+                setTimeout(loadGame, 300);
             },
             getStatus: function() {
                 return {
@@ -277,9 +335,10 @@
             init();
         }
 
-        console.log('🎮 Wine Loader v2.0');
+        console.log('🎮 Wine Loader v2.1');
         console.log(`📦 Cargando: ${currentApp.name}`);
-        console.log(`🔗 URL: ${currentApp.zipUrl || currentApp.directUrl || 'local'}`);
+        console.log(`🔗 ZIP: ${currentApp.zipUrl || 'local'}`);
+        console.log(`📄 EXE: ${currentApp.exe}`);
     </script>
 </body>
 </html>
