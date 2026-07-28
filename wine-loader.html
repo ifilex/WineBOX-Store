@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WineBOX - Game Loader</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #0a0a0a; 
+            color: #fff; 
+            font-family: 'Segoe UI', Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+        }
+        #loading-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a0a;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+        #loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #1a1a2e;
+            border-top: 4px solid #6c5ce7;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .loader-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #888;
+            letter-spacing: 2px;
+        }
+        .loader-progress {
+            margin-top: 15px;
+            width: 300px;
+            height: 4px;
+            background: #1a1a2e;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .loader-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        .loader-game-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6c5ce7;
+        }
+        #game-frame {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: none;
+        }
+        .error-message {
+            color: #ff6b6b;
+            text-align: center;
+            padding: 20px;
+            max-width: 500px;
+        }
+        .error-message h2 { margin-bottom: 10px; }
+        .error-message button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            background: #6c5ce7;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .error-message button:hover {
+            background: #5a4bd1;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">CARGANDO JUEGO</div>
+        <div class="loader-progress"><div class="loader-progress-bar" id="progressBar"></div></div>
+        <div class="loader-game-name" id="gameName">Preparando...</div>
+    </div>
+    <iframe id="game-frame" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads"></iframe>
+
+    <script>
+        // ========== CONFIGURACIÓN ==========
+        const CONFIG = {
+            // URL base donde se encuentra wine.html
+            wineBaseUrl: 'https://ifilex.github.io/WineBOX-Store/win32/',
+            // Tiempo máximo de espera para la carga (ms)
+            maxLoadTime: 30000,
+            // Intentos de reintento
+            maxRetries: 3
+        };
+
+        // ========== OBTENER PARÁMETROS ==========
+        function getParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name) || '';
+        }
+
+        // ========== ESTADO ==========
+        let currentApp = {
+            name: getParam('app') || 'Desconocido',
+            exe: getParam('p') || '',
+            zipUrl: getParam('zip') || '',
+            directUrl: getParam('url') || ''
+        };
+
+        // Si no hay nombre, intentar obtenerlo de la URL
+        if (!currentApp.name && window.location.pathname) {
+            const pathParts = window.location.pathname.split('/');
+            const lastPart = pathParts[pathParts.length - 1];
+            if (lastPart && lastPart !== 'wine-loader.html') {
+                currentApp.name = lastPart.replace('.html', '');
+            }
+        }
+
+        // ========== ELEMENTOS DOM ==========
+        const loadingScreen = document.getElementById('loading-screen');
+        const gameFrame = document.getElementById('game-frame');
+        const progressBar = document.getElementById('progressBar');
+        const gameNameEl = document.getElementById('gameName');
+
+        // ========== ACTUALIZAR PROGRESO ==========
+        function updateProgress(value, text) {
+            progressBar.style.width = Math.min(value, 100) + '%';
+            if (text) gameNameEl.textContent = text;
+        }
+
+        // ========== MOSTRAR ERROR ==========
+        function showError(message) {
+            loadingScreen.innerHTML = `
+                <div class="error-message">
+                    <h2>⚠️ Error al cargar el juego</h2>
+                    <p>${message}</p>
+                    <button onclick="window.location.reload()">Reintentar</button>
+                    <br><br>
+                    <button onclick="window.close()">Cerrar</button>
+                </div>
+            `;
+            loadingScreen.classList.remove('hidden');
+        }
+
+        // ========== CARGAR JUEGO EXTERNO ==========
+        function loadExternalGame() {
+            updateProgress(10, `Preparando ${currentApp.name}...`);
+
+            // Determinar la URL del juego
+            let gameUrl = currentApp.directUrl || currentApp.zipUrl;
+
+            if (gameUrl) {
+                // Si es un ZIP de archive.org, usar el wrapper
+                if (gameUrl.includes('archive.org') && gameUrl.endsWith('.zip')) {
+                    const zipName = gameUrl.split('/').pop().replace('.zip', '');
+                    const exeName = currentApp.exe || `${currentApp.name}.exe`;
+                    gameUrl = `${CONFIG.wineBaseUrl}wine.html?app=${zipName}&p=${exeName}&zip=${encodeURIComponent(gameUrl)}`;
+                }
+                // Si es una URL directa a wine.html, usarla tal cual
+                else if (gameUrl.includes('wine.html')) {
+                    // Ya está lista
+                }
+                // Si es otra URL, intentar cargarla directamente
+                else {
+                    // Si no parece ser wine.html, intentar cargarla como juego
+                    // pero usando el wrapper para seguridad
+                    const exeName = currentApp.exe || `${currentApp.name}.exe`;
+                    gameUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${exeName}&url=${encodeURIComponent(gameUrl)}`;
+                }
+            } else {
+                // Si no hay URL específica, usar el nombre del juego
+                const exeName = currentApp.exe || `${currentApp.name}.exe`;
+                gameUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${exeName}`;
+            }
+
+            updateProgress(30, 'Cargando motor de emulación...');
+
+            // Configurar el iframe
+            gameFrame.src = gameUrl;
+            
+            // Evento de carga del iframe
+            gameFrame.onload = function() {
+                updateProgress(100, '¡Listo!');
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                    gameFrame.style.display = 'block';
+                    // Intentar dar foco
+                    try {
+                        gameFrame.contentWindow.focus();
+                    } catch(e) {}
+                }, 300);
+            };
+
+            // Evento de error del iframe
+            gameFrame.onerror = function() {
+                showError('No se pudo cargar el juego. Verifica tu conexión.');
+            };
+
+            // Timeout de carga
+            setTimeout(() => {
+                if (!loadingScreen.classList.contains('hidden')) {
+                    showError('El juego tardó demasiado en cargar. Intenta nuevamente.');
+                }
+            }, CONFIG.maxLoadTime);
+
+            updateProgress(50, 'Descargando recursos...');
+        }
+
+        // ========== INICIALIZAR ==========
+        function init() {
+            gameNameEl.textContent = `🎮 ${currentApp.name}`;
+            
+            // Verificar si es un juego de la base de datos local
+            const localGame = window.gameDatabase && window.gameDatabase[currentApp.name];
+            if (localGame) {
+                currentApp.zipUrl = localGame.link || '';
+                currentApp.exe = localGame.exe || currentApp.exe;
+                currentApp.directUrl = localGame.directUrl || '';
+            }
+
+            // Si no hay URL y no hay nombre, error
+            if (!currentApp.name || currentApp.name === 'Desconocido') {
+                showError('No se especificó ningún juego para cargar.');
+                return;
+            }
+
+            // Iniciar carga
+            setTimeout(loadExternalGame, 500);
+        }
+
+        // ========== EXPONER API PARA LA BASE DE DATOS ==========
+        window.WineLoader = {
+            loadGame: function(gameData) {
+                currentApp = {
+                    name: gameData.name || currentApp.name,
+                    exe: gameData.exe || gameData.name + '.exe',
+                    zipUrl: gameData.link || '',
+                    directUrl: gameData.directUrl || ''
+                };
+                gameNameEl.textContent = `🎮 ${currentApp.name}`;
+                setTimeout(loadExternalGame, 300);
+            },
+            getStatus: function() {
+                return {
+                    loaded: loadingScreen.classList.contains('hidden'),
+                    currentApp: currentApp
+                };
+            }
+        };
+
+        // ========== INICIAR ==========
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+
+        console.log('🎮 Wine Loader v2.0');
+        console.log(`📦 Cargando: ${currentApp.name}`);
+        console.log(`🔗 URL: ${currentApp.zipUrl || currentApp.directUrl || 'local'}`);
+    </script>
+</body>
+</html>
