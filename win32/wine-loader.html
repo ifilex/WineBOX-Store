@@ -115,7 +115,7 @@
         const CONFIG = {
             wineBaseUrl: window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1),
             maxLoadTime: 60000,
-            maxRetries: 3
+            retryDelay: 2000
         };
 
         // ========== OBTENER PARÁMETROS ==========
@@ -128,18 +128,9 @@
         let currentApp = {
             name: getParam('app') || 'Desconocido',
             exe: getParam('exe') || getParam('p') || '',
-            zipUrl: getParam('zip') || getParam('url') || '',
+            zipUrl: getParam('zip') || '',
             directUrl: getParam('direct') || ''
         };
-
-        // Si no hay nombre, intentar obtenerlo de la URL
-        if (!currentApp.name && window.location.pathname) {
-            const pathParts = window.location.pathname.split('/');
-            const lastPart = pathParts[pathParts.length - 1];
-            if (lastPart && lastPart !== 'wine-loader.html') {
-                currentApp.name = lastPart.replace('.html', '');
-            }
-        }
 
         // ========== ELEMENTOS DOM ==========
         const loadingScreen = document.getElementById('loading-screen');
@@ -169,17 +160,43 @@
             loadingScreen.classList.remove('hidden');
         }
 
-        // ========== DESCARGAR ZIP REMOTO ==========
-        function downloadRemoteZip(url, callback) {
-            updateProgress(30, currentApp.name, 'Descargando juego...');
+        // ========== DESCARGAR ZIP CON FETCH Y NO-CORS ==========
+        function downloadZip(url, callback) {
+            updateProgress(20, currentApp.name, 'Conectando al servidor...');
             
+            // Intentar con fetch y no-cors
+            fetch(url, { 
+                mode: 'no-cors',
+                headers: {
+                    'Accept': 'application/zip, application/octet-stream'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                return response.arrayBuffer();
+            })
+            .then(data => {
+                updateProgress(70, currentApp.name, 'Juego descargado, preparando...');
+                callback(null, data);
+            })
+            .catch(error => {
+                console.warn('Fetch con no-cors falló, intentando con XHR...', error);
+                // Fallback: usar XHR con proxy CORS local
+                downloadWithXHR(url, callback);
+            });
+        }
+
+        // ========== DESCARGAR CON XHR Y PROXY LOCAL ==========
+        function downloadWithXHR(url, callback) {
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
             xhr.responseType = 'arraybuffer';
             
             xhr.onprogress = function(event) {
                 if (event.lengthComputable) {
-                    const percent = 30 + (event.loaded / event.total) * 40;
+                    const percent = 20 + (event.loaded / event.total) * 50;
                     updateProgress(percent, currentApp.name, `Descargando... ${Math.round(percent)}%`);
                 }
             };
@@ -220,16 +237,26 @@
                 return;
             }
 
-            // Si hay un ZIP remoto, descargarlo y convertirlo a base64
+            // Si hay un ZIP remoto, descargarlo
             if (currentApp.zipUrl && currentApp.zipUrl.startsWith('http')) {
-                downloadRemoteZip(currentApp.zipUrl, function(err, data) {
+                downloadZip(currentApp.zipUrl, function(err, data) {
                     if (err) {
-                        showError(`No se pudo descargar el juego: ${err.message}`);
+                        // Si falla la descarga, usar modo de respaldo con el wine.html local
+                        console.warn('Descarga fallida, usando modo de respaldo:', err);
+                        const fallbackUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${currentApp.exe}`;
+                        gameFrame.src = fallbackUrl;
+                        gameFrame.onload = function() {
+                            updateProgress(100, currentApp.name, '¡Listo! (modo respaldo)');
+                            setTimeout(() => {
+                                loadingScreen.classList.add('hidden');
+                                gameFrame.style.display = 'block';
+                            }, 300);
+                        };
                         return;
                     }
                     
                     try {
-                        // Convertir a base64
+                        // Convertir ArrayBuffer a base64
                         const bytes = new Uint8Array(data);
                         let binary = '';
                         for (let i = 0; i < bytes.length; i++) {
@@ -266,7 +293,7 @@
                 return;
             }
 
-            // Si no hay ZIP, intentar cargar localmente
+            // Si no hay ZIP, cargar localmente
             const localUrl = `${CONFIG.wineBaseUrl}wine.html?app=${currentApp.name}&p=${currentApp.exe}`;
             updateProgress(100, currentApp.name, 'Cargando localmente...');
             setTimeout(() => {
@@ -290,11 +317,6 @@
                 currentApp.zipUrl = localGame.link || currentApp.zipUrl;
                 currentApp.exe = localGame.exe || currentApp.exe;
                 currentApp.directUrl = localGame.directUrl || '';
-                
-                // Si el link es de archive.org, usarlo como ZIP
-                if (localGame.link && localGame.link.includes('archive.org')) {
-                    currentApp.zipUrl = localGame.link;
-                }
             }
 
             // Si no hay URL y no hay nombre, error
@@ -318,6 +340,9 @@
                 };
                 gameNameEl.textContent = `🎮 ${currentApp.name}`;
                 loadStatusEl.textContent = 'Reiniciando...';
+                loadingScreen.classList.remove('hidden');
+                gameFrame.style.display = 'none';
+                progressBar.style.width = '0%';
                 setTimeout(loadGame, 300);
             },
             getStatus: function() {
@@ -335,7 +360,7 @@
             init();
         }
 
-        console.log('🎮 Wine Loader v2.1');
+        console.log('🎮 Wine Loader v2.3 (Proxy Interno)');
         console.log(`📦 Cargando: ${currentApp.name}`);
         console.log(`🔗 ZIP: ${currentApp.zipUrl || 'local'}`);
         console.log(`📄 EXE: ${currentApp.exe}`);
