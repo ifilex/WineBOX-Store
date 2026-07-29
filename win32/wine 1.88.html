@@ -24,7 +24,7 @@
         /* ===== FUENTES GAMER ===== */
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap');
 
-        /* ===== SCROLLBAR ===== */
+        /* ===== SCROLLBAR ESTILO STEAM ===== */
         ::-webkit-scrollbar {
             width: 4px;
         }
@@ -35,8 +35,11 @@
             background: rgba(108,92,231,0.3);
             border-radius: 4px;
         }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(108,92,231,0.5);
+        }
 
-        /* ===== BOTON UNICO ===== */
+        /* ===== BOTON UNICO - ESTILO STEAM ===== */
         .game-menu-toggle {
             position: fixed;
             bottom: 28px;
@@ -90,14 +93,13 @@
             color: #fff;
         }
 
-        /* ===== MENU LATERAL ===== */
+        /* ===== MENU LATERAL - ESTILO STEAM ===== */
         .game-side-menu {
             position: fixed;
             top: 0;
             right: -30%;
             width: 28%;
             height: 100vh;
-            height: 100dvh;
             background: rgba(10,10,20,0.97);
             backdrop-filter: blur(30px) saturate(1.6);
             border-left: 1px solid rgba(255,255,255,0.04);
@@ -115,7 +117,7 @@
             right: 0;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER STEAM ===== */
         .game-menu-header {
             padding: 20px 24px 14px;
             border-bottom: 1px solid rgba(255,255,255,0.04);
@@ -177,7 +179,7 @@
             color: #fff;
         }
 
-        /* ===== STATUS BAR ===== */
+        /* ===== STATUS BAR STEAM ===== */
         .game-control-status {
             padding: 10px 24px;
             display: flex;
@@ -220,7 +222,7 @@
             letter-spacing: 1.5px;
         }
 
-        /* ===== NAVEGACION VERTICAL ===== */
+        /* ===== NAVEGACION VERTICAL (ESTILO CONSOLA) ===== */
         .game-menu-nav {
             display: flex;
             flex-direction: column;
@@ -277,7 +279,7 @@
             font-family: 'Orbitron', sans-serif;
         }
 
-        /* ===== CONTENIDO ===== */
+        /* ===== CONTENIDO - SCROLL VERTICAL ===== */
         .game-menu-content {
             flex: 1;
             overflow-y: auto;
@@ -318,6 +320,10 @@
             margin-bottom: 16px;
             padding-bottom: 8px;
             border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .section-title .icon {
+            margin-right: 8px;
         }
 
         /* ===== OPCIONES ===== */
@@ -493,7 +499,7 @@
             50% { opacity: 0.4; }
         }
 
-        /* ===== TOGGLES ===== */
+        /* ===== TOGGLES ESTILO CONSOLA ===== */
         .toggle-inline {
             display: flex;
             align-items: center;
@@ -713,33 +719,30 @@
             background: rgba(255,255,255,0.06);
         }
 
-        /* ===== TECLADO - CORREGIDO PARA MOVIL ===== */
+        /* ===== TECLADO (ESTILO ANDROID/GAMER) ===== */
         .virtual-keyboard-container {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 30vh;
-            max-height: 220px;
-            min-height: 180px;
+            height: 22vh;
+            max-height: 200px;
             background: rgba(8,8,16,0.94);
             backdrop-filter: blur(30px) saturate(1.6);
             border-top: 1px solid rgba(255,255,255,0.03);
             z-index: 9998;
             display: none;
-            padding: 6px 8px 12px;
+            padding: 5px 6px 10px;
             touch-action: none;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
             box-shadow: 0 -8px 40px rgba(0,0,0,0.5);
             opacity: 0.85;
-            /* Asegurar que el teclado se vea completo */
-            overflow: visible;
         }
 
         .keyboard {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
             width: 100%;
             height: 100%;
             justify-content: center;
@@ -750,72 +753,64 @@
         .keyboard-row {
             display: flex;
             justify-content: center;
-            gap: 4px;
+            gap: 3px;
             flex: 1;
-            min-height: 32px;
-            max-height: 44px;
-        }
-
-        /* Ultima fila (espaciadora) - mas grande */
-        .keyboard-row:last-child {
-            min-height: 40px;
-            max-height: 52px;
+            min-height: 26px;
         }
 
         .key {
-            background: rgba(255,255,255,0.04);
+            background: rgba(255,255,255,0.03);
             border: none;
-            border-radius: 5px;
-            color: rgba(255,255,255,0.75);
+            border-radius: 4px;
+            color: rgba(255,255,255,0.7);
             font-family: 'Rajdhani', sans-serif;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 12px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             flex: 1;
-            min-width: 20px;
+            min-width: 18px;
             transition: all 0.06s;
             user-select: none;
             -webkit-tap-highlight-color: transparent;
             border: 1px solid rgba(255,255,255,0.02);
             touch-action: manipulation;
-            padding: 0 3px;
+            padding: 0 2px;
             height: 100%;
         }
 
         .key:active {
             transform: scale(0.92);
-            background: rgba(255,255,255,0.12);
-            border-color: rgba(108,92,231,0.2);
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(108,92,231,0.15);
         }
 
         .key-space {
             flex: 6 !important;
-            background: rgba(108,92,231,0.08);
-            border-color: rgba(108,92,231,0.06);
-            font-size: 14px;
+            background: rgba(108,92,231,0.06);
+            border-color: rgba(108,92,231,0.04);
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 3px;
-            color: rgba(255,255,255,0.3);
-            min-height: 40px;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.25);
         }
 
         .key-space:active {
-            background: rgba(108,92,231,0.2);
+            background: rgba(108,92,231,0.15);
         }
 
         .key-special {
             background: rgba(255,255,255,0.02);
-            font-size: 10px;
+            font-size: 9px;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.25);
             flex: 1.2 !important;
         }
 
         .key-special:active {
-            background: rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.06);
         }
 
         .key-special.active {
@@ -878,35 +873,23 @@
             }
 
             .virtual-keyboard-container {
-                height: 32vh;
-                max-height: 200px;
-                min-height: 160px;
-                padding: 5px 6px 10px;
-            }
-
-            .keyboard-row {
-                min-height: 28px;
-                max-height: 38px;
-            }
-
-            .keyboard-row:last-child {
-                min-height: 36px;
-                max-height: 46px;
+                height: 26vh;
+                max-height: 180px;
+                padding: 4px 4px 8px;
             }
 
             .key {
-                font-size: 11px;
-                min-width: 16px;
-                border-radius: 4px;
+                font-size: 10px;
+                min-width: 14px;
+                border-radius: 3px;
             }
 
             .key-space {
-                font-size: 12px;
-                min-height: 36px;
+                font-size: 11px;
             }
 
             .key-special {
-                font-size: 9px;
+                font-size: 8px;
             }
 
             .game-menu-toggle {
@@ -925,37 +908,23 @@
             }
 
             .virtual-keyboard-container {
-                height: 35vh;
-                max-height: 180px;
-                min-height: 140px;
-                padding: 4px 4px 8px;
-            }
-
-            .keyboard-row {
-                min-height: 24px;
-                max-height: 32px;
-                gap: 3px;
-            }
-
-            .keyboard-row:last-child {
-                min-height: 32px;
-                max-height: 40px;
+                height: 30vh;
+                max-height: 160px;
+                padding: 3px 2px 6px;
             }
 
             .key {
-                font-size: 10px;
-                min-width: 14px;
-                border-radius: 3px;
-                padding: 0 2px;
+                font-size: 9px;
+                min-width: 12px;
+                border-radius: 2px;
             }
 
             .key-space {
-                font-size: 11px;
-                min-height: 32px;
+                font-size: 10px;
             }
 
             .key-special {
-                font-size: 8px;
+                font-size: 7px;
             }
 
             .game-menu-toggle {
@@ -1000,7 +969,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            height: 100dvh;
             background: rgba(0,0,0,0.3);
             z-index: 99998;
             display: none;
@@ -1014,7 +982,7 @@
         /* ===== TOOLTIP ===== */
         .keyboard-tooltip {
             position: fixed;
-            bottom: calc(30vh + 20px);
+            bottom: calc(22vh + 40px);
             left: 50%;
             transform: translateX(-50%);
             background: rgba(0,0,0,0.5);
@@ -1035,7 +1003,7 @@
 
         @media (max-width: 768px) {
             .keyboard-tooltip {
-                bottom: calc(32vh + 16px);
+                bottom: calc(26vh + 32px);
                 font-size: 9px;
                 padding: 4px 10px;
             }
@@ -1043,7 +1011,7 @@
 
         @media (max-width: 480px) {
             .keyboard-tooltip {
-                bottom: calc(35vh + 12px);
+                bottom: calc(30vh + 28px);
                 font-size: 8px;
                 padding: 3px 8px;
             }
@@ -1071,6 +1039,7 @@
             border-color: rgba(255,107,107,0.15);
         }
 
+        /* ===== SEPARADOR ===== */
         .section-divider {
             border: none;
             border-top: 1px solid rgba(255,255,255,0.03);
@@ -1349,7 +1318,7 @@
       <button class="extra-button" data-key="Escape" title="Back">&#9194;</button>
   </div>
 
-  <!-- TECLADO VIRTUAL - CORREGIDO -->
+  <!-- TECLADO VIRTUAL -->
   <div class="virtual-keyboard-container" id="virtualKeyboard">
       <div class="keyboard" id="keyboardLayout">
           <div class="keyboard-row">
@@ -1848,7 +1817,7 @@
           switch(size) {
               case 'compact':
                   keys.forEach(k => { k.style.fontSize = '10px'; k.style.padding = '2px 1px'; });
-                  document.querySelector('.key-space').style.fontSize = '11px';
+                  document.querySelector('.key-space').style.fontSize = '10px';
                   break;
               case 'normal':
                   keys.forEach(k => { k.style.fontSize = '12px'; k.style.padding = '3px 2px'; });
@@ -2392,34 +2361,43 @@
           const type = localStorage.getItem('winebox_control_type');
           if (type) currentControlType = type;
 
+          // Actualizar UI - botones de tipo
           document.querySelectorAll('[data-control]').forEach(function(b) { b.classList.remove('active'); });
           document.querySelector('[data-control="' + currentControlType + '"]')?.classList.add('active');
 
+          // AutoShow
           document.querySelectorAll('[data-auto]').forEach(function(b) { b.classList.remove('active'); });
           const autoVal = settings.general?.autoShow || 'never';
           document.querySelector('[data-auto="' + autoVal + '"]')?.classList.add('active');
           autoShow = autoVal;
 
+          // Ultra transparente
           document.querySelectorAll('[data-ultra]').forEach(function(b) { b.classList.remove('active'); });
           const ultraVal = settings.general?.ultraTransparentMode || false;
           document.querySelector('[data-ultra="' + (ultraVal ? 'on' : 'off') + '"]')?.classList.add('active');
           ultraTransparentMode = ultraVal;
 
+          // Keyboard size
           document.querySelectorAll('[data-keysize]').forEach(function(b) { b.classList.remove('active'); });
           document.querySelector('[data-keysize="' + (settings.keyboard?.size || 'normal') + '"]')?.classList.add('active');
 
+          // Joystick sensitivity
           document.querySelectorAll('[data-sens]').forEach(function(b) { b.classList.remove('active'); });
           document.querySelector('[data-sens="' + (settings.joystick?.sensitivity || 0.5) + '"]')?.classList.add('active');
 
+          // Joystick position
           document.querySelectorAll('[data-jpos]').forEach(function(b) { b.classList.remove('active'); });
           document.querySelector('[data-jpos="' + (settings.joystick?.position || 'left') + '"]')?.classList.add('active');
 
+          // Joystick size
           document.querySelectorAll('[data-jsize]').forEach(function(b) { b.classList.remove('active'); });
           document.querySelector('[data-jsize="' + (settings.joystick?.size || 'normal') + '"]')?.classList.add('active');
 
+          // Screen scale
           document.querySelectorAll('[data-scale]').forEach(function(b) { b.classList.remove('active'); });
           document.querySelector('[data-scale="auto"]')?.classList.add('active');
 
+          // Sliders
           const globalVal = Math.round((settings.general?.globalOpacity || 0.85) * 100);
           document.getElementById('globalOpacitySlider').value = globalVal;
           document.getElementById('globalOpacityValue').textContent = globalVal + '%';
@@ -2436,6 +2414,7 @@
           document.getElementById('buttonsOpacitySlider').value = btnVal;
           document.getElementById('buttonsOpacityValue').textContent = btnVal + '%';
 
+          // Bindings
           Object.keys(settings.keyBindings || {}).forEach(function(key) {
               const value = settings.keyBindings[key];
               const display = value === ' ' ? 'Espacio' :
@@ -2448,11 +2427,13 @@
               });
           });
 
+          // Aplicar configuraciones
           applyJoystickPosition();
           applyJoystickSize();
           applyKeyboardSize();
           updateButtonBindings();
 
+          // Estado visible - TODO OCULTO POR DEFECTO
           hideAllControls();
 
           const kbVisible = settings.keyboard?.visible || false;
@@ -2575,8 +2556,9 @@
               }
           });
 
-          console.log('Game Control System v3.1 - Teclado corregido');
-          console.log('Teclado: 30vh min, espacio visible en todos los dispositivos');
+          console.log('Game Control System v3.0 - Steam Style');
+          console.log('Navegacion vertical estilo consola');
+          console.log('CONTROLES OCULTOS POR DEFECTO');
       });
 
       window.gameControls = {
