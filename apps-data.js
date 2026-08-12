@@ -3217,6 +3217,24 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/cows.html"
     },
+   {
+  "name": "Damas",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/damas.webp",
+  "description": "Las Damas es el clásico juego de tablero que ha entretenido a generaciones, un duelo de estrategia donde el ingenio y la capacidad de anticipación definen al ganador mientras las fichas saltan y se coronan en un tablero de 8x8.",
+  "description": {
+    "es": "Las Damas es el clásico juego de tablero que ha entretenido a generaciones, un duelo de estrategia donde el ingenio y la capacidad de anticipación definen al ganador mientras las fichas saltan y se coronan en un tablero de 8x8.",
+    "en": "Checkers is the classic board game that has entertained generations, a strategic duel where wit and foresight define the winner as pieces jump and get crowned on an 8x8 board.",
+    "de": "Dame ist das klassische Brettspiel, das Generationen unterhalten hat, ein strategisches Duell, bei dem Scharfsinn und Voraussicht den Sieger bestimmen, während Steine auf einem 8x8-Brett springen und gekrönt werden.",
+    "fr": "Les Dames est le jeu de société classique qui a diverti des générations, un duel stratégique où l'ingéniosité et la capacité d'anticipation définissent le gagnant alors que les pions sautent et sont couronnés sur un plateau 8x8.",
+    "it": "La Dama è il classico gioco da tavolo che ha intrattenuto generazioni, un duello strategico dove l'ingegno e la capacità di anticipazione definiscono il vincitore mentre le pedine saltano e vengono incoronate su una scacchiera 8x8.",
+    "pt": "O Jogo de Damas é o clássico jogo de tabuleiro que tem entretido gerações, um duelo estratégico onde a inteligência e a capacidade de antecipação definem o vencedor enquanto as peças saltam e são coroadas num tabuleiro 8x8.",
+    "ru": "Шашки — это классическая настольная игра, которая развлекала поколения, стратегическая дуэль, где остроумие и умение предвидеть определяют победителя, а шашки прыгают и коронуются на доске 8x8.",
+    "zh": "国际跳棋是让几代人乐此不疲的经典棋盘游戏，一场策略对决，智慧和预见能力决定胜负，棋子在8x8的棋盘上跳跃并加冕为王。",
+    "ja": "チェッカーは世代を超えて楽しまれてきた古典的なボードゲームで、機知と先見性が勝者を決める戦略的な決闘であり、駒が8x8のボード上で跳ね回り、キングに昇格します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/damas/index.html"
+   },
     {
         name: "Incredible Machine",
         image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
