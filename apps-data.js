@@ -3113,6 +3113,24 @@ window.appData = [
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/xox.html"
     },
+/*   {
+  "name": "Ajedrez",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/chess.png",
+  "description": "Chess Cognitivo es una experiencia de ajedrez diseñada para entrenar la mente, combinando la estrategia milenaria del ajedrez con ejercicios cognitivos que potencian la memoria, la concentración y la toma de decisiones bajo presión.",
+  "description": {
+    "es": "Chess Cognitivo es una experiencia de ajedrez diseñada para entrenar la mente, combinando la estrategia milenaria del ajedrez con ejercicios cognitivos que potencian la memoria, la concentración y la toma de decisiones bajo presión.",
+    "en": "Chess Cognitivo is a chess experience designed to train the mind, combining the millennia-old strategy of chess with cognitive exercises that enhance memory, concentration, and decision-making under pressure.",
+    "de": "Chess Cognitivo ist eine Schacherfahrung, die darauf ausgelegt ist, den Geist zu trainieren, und kombiniert die jahrtausendealte Strategie des Schachs mit kognitiven Übungen, die Gedächtnis, Konzentration und Entscheidungsfindung unter Druck fördern.",
+    "fr": "Chess Cognitivo est une expérience d'échecs conçue pour entraîner l'esprit, combinant la stratégie millénaire des échecs avec des exercices cognitifs qui renforcent la mémoire, la concentration et la prise de décision sous pression.",
+    "it": "Chess Cognitivo è un'esperienza scacchistica progettata per allenare la mente, combinando la strategia millenaria degli scacchi con esercizi cognitivi che potenziano la memoria, la concentrazione e il processo decisionale sotto pressione.",
+    "pt": "Chess Cognitivo é uma experiência de xadrez projetada para treinar a mente, combinando a estratégia milenar do xadrez com exercícios cognitivos que fortalecem a memória, a concentração e a tomada de decisões sob pressão.",
+    "ru": "Chess Cognitivo — это шахматный опыт, созданный для тренировки ума, сочетающий тысячелетнюю стратегию шахмат с когнитивными упражнениями, которые улучшают память, концентрацию и принятие решений в условиях давления.",
+    "zh": "Chess Cognitivo 是一款为训练大脑而设计的国际象棋体验，将千年国际象棋战略与认知练习相结合，增强记忆力、专注力和压力下的决策能力。",
+    "ja": "Chess Cognitivoは、精神を鍛えるために設計されたチェス体験であり、千年の歴史を持つチェスの戦略と、記憶力、集中力、プレッシャー下での意思決定を強化する認知トレーニングを組み合わせています。"
+  },
+  "category": "rts",
+  "link": "webapps/chess/index.html"
+    }, */
     {
         name: "Box World",
         image: "https://ia800705.us.archive.org/35/items/win3_BOXWORLD/00_coverscreenshot.jpg",
@@ -3146,6 +3164,24 @@ window.appData = [
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/flag.html"
+    },
+   {
+  "name": "Chinchón",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/chinchon.png",
+  "description": "Chinchón es el clásico juego de cartas español donde la astucia y la memoria son clave para formar combinaciones de tres o más cartas del mismo número o escaleras del mismo palo, mientras se intenta ser el primero en quedarse sin cartas o cantar chinchón.",
+  "description": {
+    "es": "Chinchón es el clásico juego de cartas español donde la astucia y la memoria son clave para formar combinaciones de tres o más cartas del mismo número o escaleras del mismo palo, mientras se intenta ser el primero en quedarse sin cartas o cantar chinchón.",
+    "en": "Chinchón is the classic Spanish card game where cunning and memory are key to forming combinations of three or more cards of the same number or runs of the same suit, while trying to be the first to run out of cards or call chinchón.",
+    "de": "Chinchón ist das klassische spanische Kartenspiel, bei dem List und Gedächtnis der Schlüssel sind, um Kombinationen aus drei oder mehr Karten mit gleicher Zahl oder Folgen derselben Farbe zu bilden, während man versucht, als Erster keine Karten mehr zu haben oder Chinchón zu rufen.",
+    "fr": "Chinchón est le jeu de cartes espagnol classique où la ruse et la mémoire sont essentielles pour former des combinaisons de trois cartes ou plus du même nombre ou des suites de la même couleur, tout en essayant d'être le premier à se débarrasser de ses cartes ou à annoncer chinchón.",
+    "it": "Chinchón è il classico gioco di carte spagnolo dove astuzia e memoria sono fondamentali per formare combinazioni di tre o più carte dello stesso numero o scale dello stesso seme, cercando di essere il primo a rimanere senza carte o a cantare chinchón.",
+    "pt": "Chinchón é o clássico jogo de cartas espanhol onde a astúcia e a memória são fundamentais para formar combinações de três ou mais cartas do mesmo número ou sequências do mesmo naipe, enquanto se tenta ser o primeiro a ficar sem cartas ou a cantar chinchón.",
+    "ru": "Chinchón — это классическая испанская карточная игра, где хитрость и память являются ключевыми для формирования комбинаций из трёх или более карт одного достоинства или последовательностей одной масти, пытаясь при этом первым избавиться от всех карт или объявить чинчон.",
+    "zh": "Chinchón 是一款经典的西班牙纸牌游戏，狡猾和记忆力是关键，玩家需要组成三张或更多相同数字的组合或相同花色的顺子，同时争取第一个出完所有牌或喊出 chinchón。",
+    "ja": "Chinchónは、狡猾さと記憶力が鍵となる古典的なスペインのカードゲームで、同じ数字の3枚以上の組み合わせや同じスートのランを形成し、最初に手札をなくすかチンチョンを宣言することを目指します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/chichon/index.html"
     },
     {
         name: "Command & Conquer",
@@ -3214,6 +3250,24 @@ window.appData = [
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/oregon.html"
+    },
+   {
+  "name": "La escoba de 15",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/escoba.png",
+  "description": "La escoba de 15 es el clásico juego de cartas español que combina estrategia y cálculo mental, donde los jugadores deben sumar exactamente 15 con las cartas de la mesa para llevárselas, mientras la escoba final decide al ganador.",
+  "description": {
+    "es": "La escoba de 15 es el clásico juego de cartas español que combina estrategia y cálculo mental, donde los jugadores deben sumar exactamente 15 con las cartas de la mesa para llevárselas, mientras la escoba final decide al ganador.",
+    "en": "La escoba de 15 is the classic Spanish card game that combines strategy and mental calculation, where players must add up to exactly 15 with the cards on the table to take them, while the final sweep decides the winner.",
+    "de": "La escoba de 15 ist das klassische spanische Kartenspiel, das Strategie und mentales Rechnen kombiniert, bei dem die Spieler mit den Karten auf dem Tisch genau 15 erreichen müssen, um sie zu gewinnen, während der letzte Durchgang den Sieger entscheidet.",
+    "fr": "La escoba de 15 est le jeu de cartes espagnol classique qui allie stratégie et calcul mental, où les joueurs doivent additionner exactement 15 avec les cartes sur la table pour les remporter, tandis que le balayage final décide du gagnant.",
+    "it": "La escoba de 15 è il classico gioco di carte spagnolo che combina strategia e calcolo mentale, dove i giocatori devono sommare esattamente 15 con le carte sul tavolo per prenderle, mentre la scopa finale decide il vincitore.",
+    "pt": "La escoba de 15 é o clássico jogo de cartas espanhol que combina estratégia e cálculo mental, onde os jogadores devem somar exatamente 15 com as cartas na mesa para as levar, enquanto a vassoura final decide o vencedor.",
+    "ru": "La escoba de 15 — это классическая испанская карточная игра, сочетающая стратегию и устный счёт, где игроки должны набрать ровно 15 очков с картами на столе, чтобы забрать их, а финальный «подметание» определяет победителя.",
+    "zh": "La escoba de 15 是一款经典的西班牙纸牌游戏，结合了策略和心算，玩家必须用桌上的牌凑成正好15点才能赢走它们，而最后一轮的扫荡决定最终的赢家。",
+    "ja": "La escoba de 15は、戦略と暗算を組み合わせた古典的なスペインのカードゲームで、プレイヤーはテーブル上のカードで合計を正確に15にして獲得し、最後のスイープで勝者が決まります。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/escoba/index.html"
     },
     {
         name: "Master of Orion II",
