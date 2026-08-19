@@ -3131,6 +3131,24 @@ window.appData = [
   "category": "rts",
   "link": "webapps/chess/index.html"
     }, */
+{
+  "name": "Batalla Naval",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/naval.jpg",
+  "description": "Batalla Naval es el clásico juego de estrategia donde dos jugadores colocan sus barcos en un tablero y se turnan para disparar, intentando hundir toda la flota enemiga.",
+  "description": {
+    "es": "Batalla Naval es el clásico juego de estrategia donde dos jugadores colocan sus barcos en un tablero y se turnan para disparar, intentando hundir toda la flota enemiga.",
+    "en": "Battleship is the classic strategy game where two players place their ships on a board and take turns firing, trying to sink the entire enemy fleet.",
+    "de": "Schiffe versenken ist das klassische Strategiespiel, bei dem zwei Spieler ihre Schiffe auf einem Brett platzieren und abwechselnd schießen, um die gesamte feindliche Flotte zu versenken.",
+    "fr": "La bataille navale est le jeu de stratégie classique où deux joueurs placent leurs navires sur un plateau et tirent à tour de rôle, essayant de couler toute la flotte ennemie.",
+    "it": "Battaglia navale è il classico gioco di strategia dove due giocatori posizionano le loro navi su una griglia e si alternano per sparare, cercando di affondare l'intera flotta nemica.",
+    "pt": "Batalha Naval é o clássico jogo de estratégia onde dois jogadores posicionam seus navios em um tabuleiro e se revezam para atirar, tentando afundar toda a frota inimiga.",
+    "ru": "Морской бой — это классическая стратегическая игра, где два игрока расставляют свои корабли на доске и по очереди стреляют, пытаясь потопить весь вражеский флот.",
+    "zh": "海战是一款经典的策略游戏，两名玩家在棋盘上放置自己的船只，轮流开火，试图击沉所有敌方舰队。",
+    "ja": "バトルシップは、2人のプレイヤーがボード上に船を配置し、交代で砲撃して敵艦隊をすべて沈めることを目指す古典的な戦略ゲームです。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/naval/index.html"
+},
     {
         name: "Box World",
         image: "https://ia800705.us.archive.org/35/items/win3_BOXWORLD/00_coverscreenshot.jpg",
@@ -3235,6 +3253,42 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/damas/index.html"
    },
+{
+  "name": "Domino",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/domino.jpg",
+  "description": "Domino es el clásico juego de fichas donde la estrategia y la memoria son clave para colocar las piezas correctamente y ser el primero en quedarse sin fichas.",
+  "description": {
+    "es": "Domino es el clásico juego de fichas donde la estrategia y la memoria son clave para colocar las piezas correctamente y ser el primero en quedarse sin fichas.",
+    "en": "Domino is the classic tile game where strategy and memory are key to placing the pieces correctly and being the first to run out of tiles.",
+    "de": "Domino ist das klassische Legespiel, bei dem Strategie und Gedächtnis entscheidend sind, um die Steine richtig zu platzieren und als Erster keine Steine mehr zu haben.",
+    "fr": "Domino est le jeu de tuiles classique où la stratégie et la mémoire sont essentielles pour placer correctement les pièces et être le premier à ne plus avoir de tuiles.",
+    "it": "Domino è il classico gioco di tessere dove strategia e memoria sono fondamentali per posizionare correttamente i pezzi ed essere il primo a rimanere senza tessere.",
+    "pt": "Domino é o clássico jogo de peças onde a estratégia e a memória são fundamentais para colocar as peças corretamente e ser o primeiro a ficar sem peças.",
+    "ru": "Domino — это классическая игра в костяшки, где стратегия и память являются ключевыми для правильной расстановки фишек и чтобы первым остаться без фишек.",
+    "zh": "Domino 是一款经典的骨牌游戏，策略和记忆力是正确放置牌块并率先出完所有牌的关键。",
+    "ja": "Dominoは、戦略と記憶が鍵となる古典的なタイルゲームで、ピースを正しく置き、最初にタイルがなくなることを目指します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/domino/index.html"
+},
+{
+  "name": "Generala",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/generala.jpg",
+  "description": "Generala es el clásico juego de dados donde los jugadores buscan combinar tiradas para obtener las mejores puntuaciones, como la escalera o la generala, en un desafío de estrategia y suerte.",
+  "description": {
+    "es": "Generala es el clásico juego de dados donde los jugadores buscan combinar tiradas para obtener las mejores puntuaciones, como la escalera o la generala, en un desafío de estrategia y suerte.",
+    "en": "Generala is the classic dice game where players combine rolls to get the best scores, such as straights or five of a kind, in a challenge of strategy and luck.",
+    "de": "Generala ist das klassische Würfelspiel, bei dem die Spieler Würfelkombinationen für die besten Punktzahlen suchen, wie Straßen oder einen Fünfling, in einer Herausforderung aus Strategie und Glück.",
+    "fr": "Generala est le jeu de dés classique où les joueurs cherchent à combiner leurs lancers pour obtenir les meilleurs scores, comme la quinte ou le five of a kind, dans un défi de stratégie et de chance.",
+    "it": "Generala è il classico gioco di dadi dove i giocatori cercano di combinare i tiri per ottenere i punteggi migliori, come la scala o il five of a kind, in una sfida di strategia e fortuna.",
+    "pt": "Generala é o clássico jogo de dados onde os jogadores buscam combinar lançamentos para obter as melhores pontuações, como sequências ou quíntuplos, em um desafio de estratégia e sorte.",
+    "ru": "Generala — это классическая игра в кости, где игроки стремятся комбинировать броски для получения наилучших результатов, таких как стрит или каре, в испытании стратегии и удачи.",
+    "zh": "Generala 是一款经典的骰子游戏，玩家通过组合掷骰结果来获得最高分数，如顺子或五个相同点数，在策略与运气的挑战中一决高下。",
+    "ja": "Generalaは、プレイヤーがダイスを組み合わせてストレートやファイブ・オブ・ア・カインドなどの最高得点を狙う、戦略と運を試す古典的なダイスゲームです。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/generala/index.html"
+},
     {
         name: "Incredible Machine",
         image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
@@ -3338,7 +3392,24 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/simcity2000.html"
     },
-
+{
+  "name": "Sopa de letras",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/sopa.jpg",
+  "description": "Sopa de letras es el clásico juego de búsqueda de palabras donde los jugadores deben encontrar y señalar las palabras ocultas en una cuadrícula llena de letras, poniendo a prueba su agudeza visual y vocabulario.",
+  "description": {
+    "es": "Sopa de letras es el clásico juego de búsqueda de palabras donde los jugadores deben encontrar y señalar las palabras ocultas en una cuadrícula llena de letras, poniendo a prueba su agudeza visual y vocabulario.",
+    "en": "Word Search is the classic word-finding game where players must find and mark hidden words in a grid full of letters, testing their visual acuity and vocabulary.",
+    "de": "Wortsuche ist das klassische Wortfindungsspiel, bei dem die Spieler versteckte Wörter in einem Buchstabenraster finden und markieren müssen, um ihre Sehschärfe und ihren Wortschatz zu testen.",
+    "fr": "La recherche de mots est le jeu classique de recherche de mots où les joueurs doivent trouver et marquer les mots cachés dans une grille remplie de lettres, testant leur acuité visuelle et leur vocabulaire.",
+    "it": "La ricerca di parole è il classico gioco di individuazione di parole dove i giocatori devono trovare e contrassegnare le parole nascoste in una griglia piena di lettere, mettendo alla prova la loro acutezza visiva e vocabolario.",
+    "pt": "Sopa de Letras é o clássico jogo de busca de palavras onde os jogadores devem encontrar e marcar as palavras escondidas em uma grade cheia de letras, testando sua acuidade visual e vocabulário.",
+    "ru": "Филворд — это классическая игра в поиск слов, где игроки должны находить и отмечать скрытые слова в сетке, заполненной буквами, проверяя свою остроту зрения и словарный запас.",
+    "zh": "单词搜索是一款经典的找词游戏，玩家必须在字母网格中找到并标记隐藏的单词，考验他们的视觉敏锐度和词汇量。",
+    "ja": "ワードサーチは、文字が詰まったグリッドの中から隠された単語を見つけてマークする古典的な単語探しゲームで、視覚的な鋭さと語彙力を試します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/sopa/index.html"
+},
    {
     name: "Sudoku",
     image: "https://ifilex.github.io/WineBOX-Store/box/sudoku.png",
