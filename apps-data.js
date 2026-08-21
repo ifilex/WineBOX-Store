@@ -1037,6 +1037,24 @@ window.appData = [
         category: "games",        
          link: "https://ifilex.github.io/WineBOX-Store/4dbox.html"
     },
+{
+    "name": "PixelStream IPTV 8-Bit - TV Legal & VOD Retro",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/iptv.jpg",
+    "description": "PixelStream IPTV 8-Bit es un servicio de televisión legal y VOD retro con estética pixel art. Ofrece 120 canales en vivo que incluyen deportes extremos (Red Bull TV), transmisiones de la NASA, noticias internacionales (Euronews, France 24, Deutsche Welle), tecnología (Bloomberg), cine de culto sci-fi, animación clásica, gaming retro, música chiptune, naturaleza y cine fantasy de código abierto. Todo en resoluciones hasta 1080p60 con interfaz 8-bit.",
+    "description": {
+        "es": "PixelStream IPTV 8-Bit es un servicio de televisión legal y VOD retro con estética pixel art. Ofrece 120 canales en vivo que incluyen deportes extremos (Red Bull TV), transmisiones de la NASA, noticias internacionales (Euronews, France 24, Deutsche Welle), tecnología (Bloomberg), cine de culto sci-fi, animación clásica, gaming retro, música chiptune, naturaleza y cine fantasy de código abierto. Todo en resoluciones hasta 1080p60 con interfaz 8-bit.",
+        "en": "PixelStream IPTV 8-Bit is a legal TV and retro VOD service with pixel art aesthetics. It offers 120 live channels including extreme sports (Red Bull TV), NASA broadcasts, international news (Euronews, France 24, Deutsche Welle), technology (Bloomberg), sci-fi cult cinema, classic animation, retro gaming, chiptune music, nature, and open-source fantasy cinema. All in resolutions up to 1080p60 with an 8-bit interface.",
+        "de": "PixelStream IPTV 8-Bit ist ein legaler TV- und Retro-VOD-Dienst mit Pixel-Art-Ästhetik. Bietet 120 Live-Kanäle mit Extremsport (Red Bull TV), NASA-Übertragungen, internationalen Nachrichten (Euronews, France 24, Deutsche Welle), Technologie (Bloomberg), Sci-Fi-Kultkino, klassischer Animation, Retro-Gaming, Chiptune-Musik, Natur und Open-Source-Fantasykino. Alles in Auflösungen bis zu 1080p60 mit 8-Bit-Oberfläche.",
+        "fr": "PixelStream IPTV 8-Bit est un service de télévision légal et VOD rétro avec une esthétique pixel art. Propose 120 chaînes en direct incluant les sports extrêmes (Red Bull TV), les diffusions de la NASA, les actualités internationales (Euronews, France 24, Deutsche Welle), la technologie (Bloomberg), le cinéma de culte SF, l'animation classique, le gaming rétro, la musique chiptune, la nature et le cinéma fantasy open-source. Le tout en résolutions jusqu'à 1080p60 avec une interface 8-bit.",
+        "it": "PixelStream IPTV 8-Bit è un servizio TV legale e VOD retrò con estetica pixel art. Offre 120 canali live tra cui sport estremi (Red Bull TV), trasmissioni NASA, notizie internazionali (Euronews, France 24, Deutsche Welle), tecnologia (Bloomberg), cinema di culto fantascientifico, animazione classica, gaming retrò, musica chiptune, natura e cinema fantasy open-source. Tutto in risoluzioni fino a 1080p60 con interfaccia 8-bit.",
+        "pt": "PixelStream IPTV 8-Bit é um serviço de TV legal e VOD retrô com estética pixel art. Oferece 120 canais ao vivo incluindo esportes radicais (Red Bull TV), transmissões da NASA, notícias internacionais (Euronews, France 24, Deutsche Welle), tecnologia (Bloomberg), cinema cult de ficção científica, animação clássica, gaming retrô, música chiptune, natureza e cinema fantasia de código aberto. Tudo em resoluções até 1080p60 com interface 8-bit.",
+        "ru": "PixelStream IPTV 8-Bit — это легальный телевизионный сервис и ретро VOD с эстетикой пиксель-арт. Предлагает 120 живых каналов, включая экстремальные виды спорта (Red Bull TV), трансляции NASA, международные новости (Euronews, France 24, Deutsche Welle), технологии (Bloomberg), научно-фантастическое кино, классическую анимацию, ретро-игры, музыку чиптюн, природу и фэнтези-кино с открытым исходным кодом. Всё в разрешении до 1080p60 с 8-битным интерфейсом.",
+        "zh": "《PixelStream IPTV 8-Bit》是一个合法的电视和复古VOD服务，采用像素艺术美学。提供120个直播频道，包括极限运动（Red Bull TV）、NASA广播、国际新闻（Euronews, France 24, Deutsche Welle）、科技（Bloomberg）、科幻邪典电影、经典动画、复古游戏、芯片音乐、自然和开源奇幻电影。全部高达1080p60分辨率，配备8位界面。",
+        "ja": "PixelStream IPTV 8-Bitは、ピクセルアートの美学を持つ合法的なTVおよびレトロVODサービスです。エクストリームスポーツ（Red Bull TV）、NASA放送、国際ニュース（Euronews、France 24、Deutsche Welle）、テクノロジー（Bloomberg）、SFカルトシネマ、クラシックアニメーション、レトロゲーミング、チップチューン音楽、自然、オープンソースファンタジーシネマを含む12のライブチャンネルを提供します。すべて1080p60までの解像度で、8ビットインターフェースを備えています。"
+    },
+    "category": "multimedia",
+    "link": "https://ifilex.github.io/WineBOX-Store/webapps/pixel/index.html"
+},
     {
         name: "Youtube",
         image: "https://ifilex.github.io/WineBOX-Store/box/youtube.png",
