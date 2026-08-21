@@ -545,23 +545,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/omf.html"
     },
     {
-        name: "Open TTD",
-        image: "https://ifilex.github.io/WineBOX-Store/box/openttd.jpg",
-        description: "OpenTTD is a business simulation game in which players try to earn money by transporting passengers, minerals and goods via road, rail, water and air. It is an open-source remake and expansion of the 1995 Chris Sawyer video game Transport Tycoon Deluxe.",
-        description: {
-            es: "OpenTTD es un juego de simulación empresarial en el que los jugadores intentan ganar dinero transportando pasajeros, minerales y mercancías por carretera, ferrocarril, agua y aire. Es un remake y expansión de código abierto del videojuego Transport Tycoon Deluxe de 1995 de Chris Sawyer.",
-            de: "OpenTTD ist ein Wirtschaftssimulationsspiel, bei dem die Spieler versuchen, Geld zu verdienen, indem sie Passagiere, Mineralien und Güter auf der Straße, der Schiene, dem Wasser und in der Luft transportieren. Es ist ein Open-Source-Remake und eine Erweiterung des 1995er Videospiels Transport Tycoon Deluxe von Chris Sawyer.",
-            fr: "OpenTTD est un jeu de simulation d'entreprise dans lequel les joueurs tentent de gagner de l'argent en transportant des passagers, des minéraux et des marchandises par route, rail, eau et air. C'est un remake et une extension open source du jeu vidéo Transport Tycoon Deluxe de 1995 de Chris Sawyer.",
-            it: "OpenTTD è un gioco di simulazione aziendale in cui i giocatori cercano di guadagnare denaro trasportando passeggeri, minerali e merci su strada, rotaia, acqua e aria. È un remake e un'espansione open source del videogioco Transport Tycoon Deluxe del 1995 di Chris Sawyer.",
-            pt: "OpenTTD é um jogo de simulação de negócios em que os jogadores tentam ganhar dinheiro transportando passageiros, minerais e mercadorias por rodovia, ferrovia, água e ar. É um remake e expansão de código aberto do videogame Transport Tycoon Deluxe de 1995, de Chris Sawyer.",
-            ru: "OpenTTD — это бизнес-симулятор, в котором игроки пытаются заработать деньги, перевозя пассажиров, полезные ископаемые и товары по дорогам, железной дороге, воде и воздуху. Это ремейк и расширение с открытым исходным кодом видеоигры 1995 года Transport Tycoon Deluxe Криса Сойера.",
-            zh: "OpenTTD 是一款商业模拟游戏，玩家通过公路、铁路、水路和航空运输乘客、矿产和货物来赚钱。它是 Chris Sawyer 1995 年视频游戏《运输大亨豪华版》的开源重制版和扩展版。",
-            ja: "OpenTTDは、プレイヤーが道路、鉄道、水路、航空を介して乗客、鉱物、商品を輸送してお金を稼ごうとするビジネスシミュレーションゲームです。Chris Sawyerの1995年のビデオゲーム『Transport Tycoon Deluxe』のオープンソースリメイクおよび拡張版です。"
-        },
-        category: "rts",
-        link: "https://pelya.github.io/openttd-touch-webapp/openttd.html"
-    },
-    {
         name: "Operation Body Count",
         image: "https://ifilex.github.io/WineBOX-Store/box/bodycount.gif",
         description: "OpenJKDF2 is a function-by-function reimplementation of DF2 in C, with 64-bit ports to Windows 7+, macOS 10.15+, and Linux.",
@@ -2721,23 +2704,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/midemo.html"
     },
     {
-        name: "Max Mechanized Assault",
-        image: "https://ifilex.github.io/WineBOX-Store/box/4d120df40fcf9efe1111c3b030510769.webp",
-        description: "M.A.X.: Mechanized Assault & Exploration is a real-time strategy game set in a futuristic world. Players build bases, gather resources, and command customizable mechs to conquer opponents and explore new territories.",
-        description: {
-            es: "M.A.X.: Mechanized Assault & Exploration es un juego de estrategia en tiempo real ambientado en un mundo futurista. Los jugadores construyen bases, recolectan recursos y comandan mechs personalizables para conquistar oponentes y explorar nuevos territorios.",
-            de: "M.A.X.: Mechanized Assault & Exploration ist ein Echtzeit-Strategiespiel, das in einer futuristischen Welt spielt. Spieler bauen Basen, sammeln Ressourcen und befehligen anpassbare Mechs, um Gegner zu erobern und neue Gebiete zu erkunden.",
-            fr: "M.A.X.: Mechanized Assault & Exploration est un jeu de stratégie en temps réel se déroulant dans un monde futuriste. Les joueurs construisent des bases, collectent des ressources et commandent des mechs personnalisables pour conquérir des adversaires et explorer de nouveaux territoires.",
-            it: "M.A.X.: Mechanized Assault & Exploration è un gioco di strategia in tempo reale ambientato in un mondo futuristico. I giocatori costruiscono basi, raccolgono risorse e comandano mech personalizzabili per conquistare gli avversari ed esplorare nuovi territori.",
-            pt: "M.A.X.: Mechanized Assault & Exploration é um jogo de estratégia em tempo real ambientado em um mundo futurista. Os jogadores constroem bases, coletam recursos e comandam mechs personalizáveis para conquistar oponentes e explorar novos territórios.",
-            ru: "M.A.X.: Mechanized Assault & Exploration — это стратегия в реальном времени, действие которой происходит в футуристическом мире. Игроки строят базы, собирают ресурсы и управляют настраиваемыми мехами, чтобы побеждать противников и исследовать новые территории.",
-            zh: "M.A.X.: Mechanized Assault & Exploration 是一款以未来世界为背景的即时战略游戏。玩家建造基地、收集资源并指挥可定制的机甲来征服对手并探索新领土。",
-            ja: "M.A.X.: Mechanized Assault & Explorationは、未来的な世界を舞台にしたリアルタイムストラテジーゲームです。プレイヤーは基地を建設し、リソースを収集し、カスタマイズ可能なメカを指揮して対戦相手を征服し、新しい領土を探索します。"
-        },
-        category: "rts",
-        link: "https://ifilex.github.io/WineBOX-Store/max.html"
-    },
-    {
         name: "Out this world",
         image: "https://ifilex.github.io/WineBOX-Store/box/out.jpg",
         description: "Out of This World is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Out of This World on mobile.",
@@ -3358,6 +3324,40 @@ window.appData = [
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/masteroforion.html"
+    },
+    {
+        name: "Max Mechanized Assault",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4d120df40fcf9efe1111c3b030510769.webp",
+        description: "M.A.X.: Mechanized Assault & Exploration is a real-time strategy game set in a futuristic world. Players build bases, gather resources, and command customizable mechs to conquer opponents and explore new territories.",
+        description: {
+            es: "M.A.X.: Mechanized Assault & Exploration es un juego de estrategia en tiempo real ambientado en un mundo futurista. Los jugadores construyen bases, recolectan recursos y comandan mechs personalizables para conquistar oponentes y explorar nuevos territorios.",
+            de: "M.A.X.: Mechanized Assault & Exploration ist ein Echtzeit-Strategiespiel, das in einer futuristischen Welt spielt. Spieler bauen Basen, sammeln Ressourcen und befehligen anpassbare Mechs, um Gegner zu erobern und neue Gebiete zu erkunden.",
+            fr: "M.A.X.: Mechanized Assault & Exploration est un jeu de stratégie en temps réel se déroulant dans un monde futuriste. Les joueurs construisent des bases, collectent des ressources et commandent des mechs personnalisables pour conquérir des adversaires et explorer de nouveaux territoires.",
+            it: "M.A.X.: Mechanized Assault & Exploration è un gioco di strategia in tempo reale ambientato in un mondo futuristico. I giocatori costruiscono basi, raccolgono risorse e comandano mech personalizzabili per conquistare gli avversari ed esplorare nuovi territori.",
+            pt: "M.A.X.: Mechanized Assault & Exploration é um jogo de estratégia em tempo real ambientado em um mundo futurista. Os jogadores constroem bases, coletam recursos e comandam mechs personalizáveis para conquistar oponentes e explorar novos territórios.",
+            ru: "M.A.X.: Mechanized Assault & Exploration — это стратегия в реальном времени, действие которой происходит в футуристическом мире. Игроки строят базы, собирают ресурсы и управляют настраиваемыми мехами, чтобы побеждать противников и исследовать новые территории.",
+            zh: "M.A.X.: Mechanized Assault & Exploration 是一款以未来世界为背景的即时战略游戏。玩家建造基地、收集资源并指挥可定制的机甲来征服对手并探索新领土。",
+            ja: "M.A.X.: Mechanized Assault & Explorationは、未来的な世界を舞台にしたリアルタイムストラテジーゲームです。プレイヤーは基地を建設し、リソースを収集し、カスタマイズ可能なメカを指揮して対戦相手を征服し、新しい領土を探索します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/max.html"
+    },
+    {
+        name: "Open TTD",
+        image: "https://ifilex.github.io/WineBOX-Store/box/openttd.jpg",
+        description: "OpenTTD is a business simulation game in which players try to earn money by transporting passengers, minerals and goods via road, rail, water and air. It is an open-source remake and expansion of the 1995 Chris Sawyer video game Transport Tycoon Deluxe.",
+        description: {
+            es: "OpenTTD es un juego de simulación empresarial en el que los jugadores intentan ganar dinero transportando pasajeros, minerales y mercancías por carretera, ferrocarril, agua y aire. Es un remake y expansión de código abierto del videojuego Transport Tycoon Deluxe de 1995 de Chris Sawyer.",
+            de: "OpenTTD ist ein Wirtschaftssimulationsspiel, bei dem die Spieler versuchen, Geld zu verdienen, indem sie Passagiere, Mineralien und Güter auf der Straße, der Schiene, dem Wasser und in der Luft transportieren. Es ist ein Open-Source-Remake und eine Erweiterung des 1995er Videospiels Transport Tycoon Deluxe von Chris Sawyer.",
+            fr: "OpenTTD est un jeu de simulation d'entreprise dans lequel les joueurs tentent de gagner de l'argent en transportant des passagers, des minéraux et des marchandises par route, rail, eau et air. C'est un remake et une extension open source du jeu vidéo Transport Tycoon Deluxe de 1995 de Chris Sawyer.",
+            it: "OpenTTD è un gioco di simulazione aziendale in cui i giocatori cercano di guadagnare denaro trasportando passeggeri, minerali e merci su strada, rotaia, acqua e aria. È un remake e un'espansione open source del videogioco Transport Tycoon Deluxe del 1995 di Chris Sawyer.",
+            pt: "OpenTTD é um jogo de simulação de negócios em que os jogadores tentam ganhar dinheiro transportando passageiros, minerais e mercadorias por rodovia, ferrovia, água e ar. É um remake e expansão de código aberto do videogame Transport Tycoon Deluxe de 1995, de Chris Sawyer.",
+            ru: "OpenTTD — это бизнес-симулятор, в котором игроки пытаются заработать деньги, перевозя пассажиров, полезные ископаемые и товары по дорогам, железной дороге, воде и воздуху. Это ремейк и расширение с открытым исходным кодом видеоигры 1995 года Transport Tycoon Deluxe Криса Сойера.",
+            zh: "OpenTTD 是一款商业模拟游戏，玩家通过公路、铁路、水路和航空运输乘客、矿产和货物来赚钱。它是 Chris Sawyer 1995 年视频游戏《运输大亨豪华版》的开源重制版和扩展版。",
+            ja: "OpenTTDは、プレイヤーが道路、鉄道、水路、航空を介して乗客、鉱物、商品を輸送してお金を稼ごうとするビジネスシミュレーションゲームです。Chris Sawyerの1995年のビデオゲーム『Transport Tycoon Deluxe』のオープンソースリメイクおよび拡張版です。"
+        },
+        category: "rts",
+        link: "https://pelya.github.io/openttd-touch-webapp/openttd.html"
     },
   {
         name: "Oregon Trail Delux",
