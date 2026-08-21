@@ -3132,6 +3132,24 @@ window.appData = [
   "link": "webapps/chess/index.html"
     }, */
 {
+    "name": "Ahorcado",
+    "image": "https://archive.org/download/win3_ahorcado/screenshot_00.jpg",
+    "description": "Ahorcado es un clásico juego de adivinanzas de palabras donde los jugadores deben adivinar una letra a la vez antes de que se complete el dibujo del ahorcado. Incluye múltiples categorías de palabras y niveles de dificultad. Diseñado para ser jugado en navegador, compatible con todos los sistemas operativos modernos.",
+    "description": {
+        "es": "Ahorcado es un clásico juego de adivinanzas de palabras donde los jugadores deben adivinar una letra a la vez antes de que se complete el dibujo del ahorcado. Incluye múltiples categorías de palabras y niveles de dificultad.",
+        "en": "Hangman is a classic word guessing game where players must guess one letter at a time before the hangman drawing is completed. Includes multiple word categories and difficulty levels.",
+        "de": "Hangman ist ein klassisches Wortratespiel, bei dem die Spieler einen Buchstaben nach dem anderen erraten müssen, bevor die Galgenzeichnung fertig ist. Enthält mehrere Wortkategorien und Schwierigkeitsstufen.",
+        "fr": "Le Pendu est un jeu de devinettes de mots classique où les joueurs doivent deviner une lettre à la fois avant que le dessin du pendu ne soit terminé. Comprend plusieurs catégories de mots et niveaux de difficulté.",
+        "it": "L'Impiccato è un classico gioco di indovinelli di parole dove i giocatori devono indovinare una lettera alla volta prima che il disegno dell'impiccato sia completato. Include multiple categorie di parole e livelli di difficoltà.",
+        "pt": "Jogo da Forca é um clássico jogo de adivinhação de palavras onde os jogadores devem adivinhar uma letra de cada vez antes que o desenho da forca seja concluído. Inclui múltiplas categorias de palavras e níveis de dificuldade.",
+        "ru": "Виселица — это классическая игра по угадыванию слов, где игроки должны угадывать по одной букве, прежде чем рисунок виселицы будет завершён. Включает несколько категорий слов и уровней сложности.",
+        "zh": "《Ahorcado》是一款经典的猜词游戏，玩家必须一次猜一个字母，否则绞刑架的图画将被完成。包含多个单词类别和难度级别。",
+        "ja": "ハングマンは、プレイヤーが絞首台の絵が完成する前に一度に1文字ずつ推測する古典的な単語推測ゲームです。複数の単語カテゴリと難易度レベルが含まれています。"
+    },
+    "category": "rts",
+    "link": "https://ifilex.github.io/WineBOX-Store/webapps/ahorcado/index.html"
+},
+{
   "name": "Batalla Naval",
   "image": "https://ifilex.github.io/WineBOX-Store/box/naval.jpg",
   "description": "Batalla Naval es el clásico juego de estrategia donde dos jugadores colocan sus barcos en un tablero y se turnan para disparar, intentando hundir toda la flota enemiga.",
@@ -3306,23 +3324,6 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/machine.html"
     },
-    {
-        name: "Oregon Trail Delux",
-        image: "https://ifilex.github.io/WineBOX-Store/box/oregon.jpg",
-        description: "You get to play the role of a wagon leader and guide your group of chosen settlers from Independence, Missouri, to the Willamette Valley in Oregon.",
-        description: {
-            es: "Tú juegas el papel de un líder de caravana y guías a tu grupo de colonos elegidos desde Independence, Missouri, hasta el Valle de Willamette en Oregón.",
-            de: "Sie spielen die Rolle eines Wagenführers und führen Ihre ausgewählte Gruppe von Siedlern von Independence, Missouri, ins Willamette Valley in Oregon.",
-            fr: "Vous jouez le rôle d'un chef de convoi et guidez votre groupe de colons choisis depuis Independence, Missouri, jusqu'à la vallée de Willamette en Oregon.",
-            it: "Interpreti il ruolo di un capo carovana e guidi il tuo gruppo di coloni scelti da Independence, Missouri, fino alla Willamette Valley in Oregon.",
-            pt: "Você interpreta o papel de um líder de caravana e guia seu grupo de colonos escolhidos de Independence, Missouri, até o Vale Willamette, no Oregon.",
-            ru: "Вы играете роль лидера фургона и ведете свою группу выбранных поселенцев из Индепенденса, штат Миссури, в долину Уилламетт в Орегоне.",
-            zh: "您将扮演马车队领导者的角色，带领您选定的定居者团体从密苏里州的独立城前往俄勒冈州的威拉米特河谷。",
-            ja: "あなたは幌馬車のリーダーの役割を果たし、ミズーリ州インディペンデンスからオレゴン州ウィラメットバレーまで、選ばれた入植者のグループを導きます。"
-        },
-        category: "rts",
-        link: "https://ifilex.github.io/WineBOX-Store/oregon.html"
-    },
    {
   "name": "La escoba de 15",
   "image": "https://ifilex.github.io/WineBOX-Store/box/escoba.png",
@@ -3357,6 +3358,23 @@ window.appData = [
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/masteroforion.html"
+    },
+  {
+        name: "Oregon Trail Delux",
+        image: "https://ifilex.github.io/WineBOX-Store/box/oregon.jpg",
+        description: "You get to play the role of a wagon leader and guide your group of chosen settlers from Independence, Missouri, to the Willamette Valley in Oregon.",
+        description: {
+            es: "Tú juegas el papel de un líder de caravana y guías a tu grupo de colonos elegidos desde Independence, Missouri, hasta el Valle de Willamette en Oregón.",
+            de: "Sie spielen die Rolle eines Wagenführers und führen Ihre ausgewählte Gruppe von Siedlern von Independence, Missouri, ins Willamette Valley in Oregon.",
+            fr: "Vous jouez le rôle d'un chef de convoi et guidez votre groupe de colons choisis depuis Independence, Missouri, jusqu'à la vallée de Willamette en Oregon.",
+            it: "Interpreti il ruolo di un capo carovana e guidi il tuo gruppo di coloni scelti da Independence, Missouri, fino alla Willamette Valley in Oregon.",
+            pt: "Você interpreta o papel de um líder de caravana e guia seu grupo de colonos escolhidos de Independence, Missouri, até o Vale Willamette, no Oregon.",
+            ru: "Вы играете роль лидера фургона и ведете свою группу выбранных поселенцев из Индепенденса, штат Миссури, в долину Уилламетт в Орегоне.",
+            zh: "您将扮演马车队领导者的角色，带领您选定的定居者团体从密苏里州的独立城前往俄勒冈州的威拉米特河谷。",
+            ja: "あなたは幌馬車のリーダーの役割を果たし、ミズーリ州インディペンデンスからオレゴン州ウィラメットバレーまで、選ばれた入植者のグループを導きます。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/oregon.html"
     },
     {
         name: "Sim City",
@@ -3480,6 +3498,24 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/syndicate.html"
     },
+{
+    "name": "TATETI",
+    "image": "https://archive.org/download/win3_tictactoe/screenshot_00.jpg",
+    "description": "TATETI es el clásico juego de tres en raya para dos jugadores. Con un diseño minimalista y limpio, los jugadores se turnan para colocar sus marcas (X y O) en una cuadrícula de 3x3, con el objetivo de alinear tres símbolos consecutivos en horizontal, vertical o diagonal. Ideal para partidas rápidas y para todos los públicos.",
+    "description": {
+        "es": "TATETI es el clásico juego de tres en raya para dos jugadores. Con un diseño minimalista y limpio, los jugadores se turnan para colocar sus marcas (X y O) en una cuadrícula de 3x3, con el objetivo de alinear tres símbolos consecutivos en horizontal, vertical o diagonal. Ideal para partidas rápidas y para todos los públicos.",
+        "en": "TATETI is the classic tic-tac-toe game for two players. With a minimalist and clean design, players take turns placing their marks (X and O) on a 3x3 grid, aiming to align three consecutive symbols horizontally, vertically, or diagonally. Perfect for quick matches and all ages.",
+        "de": "TATETI ist das klassische Drei-Gewinnt-Spiel für zwei Spieler. Mit einem minimalistischen und sauberen Design platzieren die Spieler abwechselnd ihre Zeichen (X und O) auf einem 3x3-Raster, mit dem Ziel, drei aufeinanderfolgende Symbole horizontal, vertikal oder diagonal auszurichten. Ideal für schnelle Partien und für alle Altersgruppen.",
+        "fr": "TATETI est le jeu classique du morpion pour deux joueurs. Avec un design minimaliste et épuré, les joueurs placent à tour de rôle leurs marques (X et O) sur une grille 3x3, dans le but d'aligner trois symboles consécutifs horizontalement, verticalement ou en diagonale. Idéal pour des parties rapides et pour tous les âges.",
+        "it": "TATETI è il classico gioco del tris per due giocatori. Con un design minimalista e pulito, i giocatori si alternano nel posizionare i loro segni (X e O) su una griglia 3x3, con l'obiettivo di allineare tre simboli consecutivi in orizzontale, verticale o diagonale. Perfetto per partite veloci e per tutte le età.",
+        "pt": "TATETI é o clássico jogo da velha para dois jogadores. Com um design minimalista e limpo, os jogadores se alternam para colocar suas marcas (X e O) em uma grade 3x3, com o objetivo de alinhar três símbolos consecutivos na horizontal, vertical ou diagonal. Ideal para partidas rápidas e para todas as idades.",
+        "ru": "TATETI — это классическая игра «крестики-нолики» для двух игроков. С минималистичным и чистым дизайном игроки по очереди ставят свои знаки (X и O) на сетку 3x3, стремясь выстроить три последовательных символа по горизонтали, вертикали или диагонали. Идеально подходит для быстрых партий и для всех возрастов.",
+        "zh": "《TATETI》是经典的井字棋双人游戏。采用极简和干净的设计，玩家轮流在3x3网格上放置自己的标记（X和O），目标是水平、垂直或对角排列三个连续符号。适合快速对局和各年龄段玩家。",
+        "ja": "TATETIは、2人用の古典的な三目並べゲームです。ミニマリストでクリーンなデザインを採用し、プレイヤーは交代で3x3グリッドに自分のマーク（XとO）を置き、水平、垂直、または斜めに3つの連続するシンボルを揃えることを目指します。短時間の対戦や全年齢層に最適です。"
+    },
+    "category": "rts",
+    "link": "https://ifilex.github.io/WineBOX-Store/webapps/tateti/index.html"
+},
     {
         name: "Theme park",
         image: "https://ifilex.github.io/WineBOX-Store/box/themepark.gif",
@@ -3565,6 +3601,24 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/warpath.html"
     },
+{
+    "name": "Warpath 2",
+    "image": "https://archive.org/download/win3_Warpath2/screenshot_00.jpg",
+    "description": "Warpath 2 es la secuela del clásico juego de estrategia espacial 4X en tiempo real. Mejora la experiencia original con nuevos sistemas estelares, naves mejoradas y una IA más desafiante. Soporta hasta 4 jugadores en LAN (IPX) o conexión directa, manteniendo la esencia del juego original pero con gráficos y jugabilidad optimizados para sistemas modernos.",
+    "description": {
+        "es": "Warpath 2 es la secuela del clásico juego de estrategia espacial 4X en tiempo real. Mejora la experiencia original con nuevos sistemas estelares, naves mejoradas y una IA más desafiante. Soporta hasta 4 jugadores en LAN (IPX) o conexión directa, manteniendo la esencia del juego original pero con gráficos y jugabilidad optimizados para sistemas modernos.",
+        "en": "Warpath 2 is the sequel to the classic real-time 4X space strategy game. It enhances the original experience with new star systems, upgraded ships, and more challenging AI. Supports up to 4 players on LAN (IPX) or direct connection, maintaining the essence of the original game but with graphics and gameplay optimized for modern systems.",
+        "de": "Warpath 2 ist die Fortsetzung des klassischen Echtzeit-4X-Weltraumstrategiespiels. Es verbessert das Originalerlebnis mit neuen Sternensystemen, verbesserten Schiffen und einer anspruchsvolleren KI. Unterstützt bis zu 4 Spieler im LAN (IPX) oder per Direktverbindung und bewahrt die Essenz des Originalspiels mit für moderne Systeme optimierter Grafik und Spielbarkeit.",
+        "fr": "Warpath 2 est la suite du jeu classique de stratégie spatiale 4X en temps réel. Il améliore l'expérience originale avec de nouveaux systèmes stellaires, des vaisseaux améliorés et une IA plus difficile. Prend en charge jusqu'à 4 joueurs sur LAN (IPX) ou en connexion directe, tout en conservant l'essence du jeu original avec des graphismes et un gameplay optimisés pour les systèmes modernes.",
+        "it": "Warpath 2 è il sequel del classico gioco di strategia spaziale 4X in tempo reale. Migliora l'esperienza originale con nuovi sistemi stellari, navi potenziate e un'IA più impegnativa. Supporta fino a 4 giocatori in LAN (IPX) o connessione diretta, mantenendo l'essenza del gioco originale ma con grafica e gioco ottimizzati per i sistemi moderni.",
+        "pt": "Warpath 2 é a sequência do clássico jogo de estratégia espacial 4X em tempo real. Melhora a experiência original com novos sistemas estelares, naves melhoradas e uma IA mais desafiadora. Suporta até 4 jogadores em LAN (IPX) ou conexão direta, mantendo a essência do jogo original, mas com gráficos e jogabilidade otimizados para sistemas modernos.",
+        "ru": "Warpath 2 — это продолжение классической космической стратегии 4X в реальном времени. Оно улучшает оригинальный опыт с новыми звёздными системами, улучшенными кораблями и более сложным ИИ. Поддерживает до 4 игроков по LAN (IPX) или прямому соединению, сохраняя суть оригинальной игры, но с графикой и игровым процессом, оптимизированными для современных систем.",
+        "zh": "《Warpath 2》是经典即时4X太空策略游戏的续作。通过新的星系、升级的舰船和更具挑战性的AI，提升了原版体验。支持最多4名玩家通过局域网（IPX）或直接连接进行游戏，保留了原版游戏的精髓，同时针对现代系统优化了图形和玩法。",
+        "ja": "Warpath 2は、古典的なリアルタイム4X宇宙戦略ゲームの続編です。新しい星系、アップグレードされた船、より挑戦的なAIでオリジナルの体験を向上させます。LAN（IPX）または直接接続で最大4人までサポートし、オリジナルゲームの本質を維持しつつ、最新のシステム向けにグラフィックとゲームプレイが最適化されています。"
+    },
+    "category": "rts",
+    "link": "https://ifilex.github.io/WineBOX-Store/webapps/warpath2/index.html"
+},
     {
         name: "Waterworld",
         image: "https://ifilex.github.io/WineBOX-Store/box/waterworld.png",
