@@ -3099,7 +3099,7 @@ window.appData = [
     }, */
 {
     "name": "Ahorcado",
-    "image": "https://archive.org/download/win3_ahorcado/screenshot_00.jpg",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/ahorcado.jpg",
     "description": "Ahorcado es un clásico juego de adivinanzas de palabras donde los jugadores deben adivinar una letra a la vez antes de que se complete el dibujo del ahorcado. Incluye múltiples categorías de palabras y niveles de dificultad. Diseñado para ser jugado en navegador, compatible con todos los sistemas operativos modernos.",
     "description": {
         "es": "Ahorcado es un clásico juego de adivinanzas de palabras donde los jugadores deben adivinar una letra a la vez antes de que se complete el dibujo del ahorcado. Incluye múltiples categorías de palabras y niveles de dificultad.",
@@ -3603,7 +3603,7 @@ window.appData = [
     },
 {
     "name": "Warpath 2",
-    "image": "https://archive.org/download/win3_Warpath2/screenshot_00.jpg",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/warpath2.png",
     "description": "Warpath 2 es la secuela del clásico juego de estrategia espacial 4X en tiempo real. Mejora la experiencia original con nuevos sistemas estelares, naves mejoradas y una IA más desafiante. Soporta hasta 4 jugadores en LAN (IPX) o conexión directa, manteniendo la esencia del juego original pero con gráficos y jugabilidad optimizados para sistemas modernos.",
     "description": {
         "es": "Warpath 2 es la secuela del clásico juego de estrategia espacial 4X en tiempo real. Mejora la experiencia original con nuevos sistemas estelares, naves mejoradas y una IA más desafiante. Soporta hasta 4 jugadores en LAN (IPX) o conexión directa, manteniendo la esencia del juego original pero con gráficos y jugabilidad optimizados para sistemas modernos.",
