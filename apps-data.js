@@ -3518,7 +3518,7 @@ window.appData = [
     },
 {
     "name": "TATETI",
-    "image": "https://archive.org/download/win3_tictactoe/screenshot_00.jpg",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/tateti.jpg",
     "description": "TATETI es el clásico juego de tres en raya para dos jugadores. Con un diseño minimalista y limpio, los jugadores se turnan para colocar sus marcas (X y O) en una cuadrícula de 3x3, con el objetivo de alinear tres símbolos consecutivos en horizontal, vertical o diagonal. Ideal para partidas rápidas y para todos los públicos.",
     "description": {
         "es": "TATETI es el clásico juego de tres en raya para dos jugadores. Con un diseño minimalista y limpio, los jugadores se turnan para colocar sus marcas (X y O) en una cuadrícula de 3x3, con el objetivo de alinear tres símbolos consecutivos en horizontal, vertical o diagonal. Ideal para partidas rápidas y para todos los públicos.",
