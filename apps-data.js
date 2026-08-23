@@ -1,5 +1,23 @@
 
 window.appData = [
+{
+  "name": "99 Noches en el bosque",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/99noches.jpg",
+  "description": "99 Noches en el bosque es un juego de supervivencia donde los jugadores deben aventurarse en el bosque, gestionar recursos y tomar decisiones tácticas para sobrevivir durante 99 noches.",
+  "description": {
+    "es": "99 Noches en el bosque es un juego de supervivencia donde los jugadores deben aventurarse en el bosque, gestionar recursos y tomar decisiones tácticas para sobrevivir durante 99 noches.",
+    "en": "99 Nights in the Forest is a strategy and survival card game where players must venture into the woods, manage resources, and make tactical decisions to survive for 99 nights.",
+    "de": "99 Nächte im Wald ist ein Strategie- und Überlebenskartenspiel, bei dem die Spieler in den Wald vordringen, Ressourcen verwalten und taktische Entscheidungen treffen müssen, um 99 Nächte zu überleben.",
+    "fr": "99 Nuits dans la forêt est un jeu de cartes de stratégie et de survie où les joueurs doivent s'aventurer dans les bois, gérer leurs ressources et prendre des décisions tactiques pour survivre 99 nuits.",
+    "it": "99 Notti nella foresta è un gioco di carte di strategia e sopravvivenza dove i giocatori devono avventurarsi nel bosco, gestire le risorse e prendere decisioni tattiche per sopravvivere per 99 notti.",
+    "pt": "99 Noites na floresta é um jogo de cartas de estratégia e sobrevivência onde os jogadores devem se aventurar na floresta, gerenciar recursos e tomar decisões táticas para sobreviver por 99 noites.",
+    "ru": "99 ночей в лесу — это стратегическая карточная игра на выживание, где игроки должны отправиться в лес, управлять ресурсами и принимать тактические решения, чтобы выжить в течение 99 ночей.",
+    "zh": "《森林中的99夜》是一款策略与生存卡牌游戏，玩家必须在森林中冒险，管理资源并做出战术决策，以生存过99个夜晚。",
+    "ja": "森の99夜は、戦略とサバイバルのカードゲームで、プレイヤーは森に足を踏み入れ、リソースを管理し、戦術的な決断を下して99夜を生き抜かなければなりません。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/99noches/index.html"
+},
     {
         name: "Absence",
         image: "https://ifilex.github.io/WineBOX-Store/box/absence.png",
@@ -562,23 +580,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/bcount.html"
     },
     {
-        name: "Out of this World",
-        image: "https://ifilex.github.io/WineBOX-Store/box/Out_of_This_World.png",
-        description: "Out of this world game most commonly refers to the 1991 cinematic platformer video game, which was also known as Another World. ",
-        description: {
-            es: "Out of this world game generalmente se refiere al videojuego de plataformas cinematográfico de 1991, que también se conocía como Another World.",
-            de: "Out of this world game bezieht sich am häufigsten auf das cinemastische Plattform-Videospiel von 1991, das auch als Another World bekannt war.",
-            fr: "Out of this world game fait le plus souvent référence au jeu vidéo de plateforme cinématographique de 1991, également connu sous le nom d'Another World.",
-            it: "Out of this world game si riferisce più comunemente al videogioco a piattaforme cinematografico del 1991, noto anche come Another World.",
-            pt: "Out of this world game se refere mais comumente ao videogame de plataforma cinematográfico de 1991, que também era conhecido como Another World.",
-            ru: "Out of this world game чаще всего относится к кинематографическому платформеру 1991 года, который также был известен как Another World.",
-            zh: "Out of this world game 通常指的是 1991 年的电影风格平台视频游戏，该游戏也被称为《另一个世界》。",
-            ja: "Out of this world gameは、一般的に1991年のシネマティックプラットフォーマーゲームを指し、Another Worldとしても知られていました。"
-        },
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/out.html"
-    },
-    {
         name: "Powerslave",
         image: "https://ifilex.github.io/WineBOX-Store/box/pslave.gif",
         description: "Powerslave (also known as Exhumed) is a FPS built using the Build engine (an the engine used to create Duke Nukem 3D).",
@@ -713,23 +714,6 @@ window.appData = [
         },
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/sango.html"
-    },
-    {
-        name: "Skynet",
-        image: "https://ifilex.github.io/WineBOX-Store/box/skynet.jpeg",
-        description: "SkyNET is a sci-fi action game where players fight as part of the human resistance against Skynet's machines in a post-apocalyptic future. It features open 3D environments, vehicle driving, and missions centered around sabotaging Skynet's operations. It was known for its advanced graphics at the time and served as a sequel or expansion to Terminator: Future Shock.",
-        description: {
-            es: "SkyNET es un juego de acción de ciencia ficción en el que los jugadores luchan como parte de la resistencia humana contra las máquinas de Skynet en un futuro postapocalíptico. Cuenta con entornos 3D abiertos, conducción de vehículos y misiones centradas en sabotear las operaciones de Skynet. Era conocido por sus gráficos avanzados en ese momento y sirvió como secuela o expansión de Terminator: Future Shock.",
-            de: "SkyNET ist ein Sci-Fi-Actionspiel, in dem die Spieler in einer postapokalyptischen Zukunft als Teil des menschlichen Widerstands gegen die Maschinen von Skynet kämpfen. Es bietet offene 3D-Umgebungen, Fahrzeugsteuerung und Missionen, die sich auf die Sabotage von Skynets Operationen konzentrieren. Es war bekannt für seine fortschrittliche Grafik zu dieser Zeit und diente als Fortsetzung oder Erweiterung von Terminator: Future Shock.",
-            fr: "SkyNET est un jeu d'action de science-fiction où les joueurs combattent en tant que résistance humaine contre les machines de Skynet dans un futur post-apocalyptique. Il propose des environnements 3D ouverts, la conduite de véhicules et des missions centrées sur le sabotage des opérations de Skynet. Il était connu pour ses graphismes avancés à l'époque et a servi de suite ou d'extension à Terminator: Future Shock.",
-            it: "SkyNET è un gioco d'azione fantascientifico in cui i giocatori combattono come parte della resistenza umana contro le macchine di Skynet in un futuro post-apocalittico. Presenta ambienti 3D aperti, guida di veicoli e missioni incentrate sul sabotaggio delle operazioni di Skynet. Era noto per la sua grafica avanzata all'epoca e servì come sequel o espansione di Terminator: Future Shock.",
-            pt: "SkyNET é um jogo de ação de ficção científica onde os jogadores lutam como parte da resistência humana contra as máquinas da Skynet em um futuro pós-apocalíptico. Apresenta ambientes 3D abertos, direção de veículos e missões centradas em sabotar as operações da Skynet. Era conhecido por seus gráficos avançados na época e serviu como sequência ou expansão de Terminator: Future Shock.",
-            ru: "SkyNET — это научно-фантастическая экшн-игра, в которой игроки сражаются как часть сопротивления человечества против машин Skynet в постапокалиптическом будущем. Она предлагает открытые 3D-среды, управление транспортными средствами и миссии, направленные на саботаж операций Skynet. Она была известна своей продвинутой графикой для того времени и служила продолжением или расширением Terminator: Future Shock.",
-            zh: "SkyNET 是一款科幻动作游戏，玩家在后世界末日的未来，作为人类抵抗力量的一部分，与天网的机器作战。它具有开放的 3D 环境、车辆驾驶以及以破坏天网行动为中心的任务。它以其在当时先进的图形而闻名，并作为《终结者：未来冲击》的续集或扩展包。",
-            ja: "SkyNETは、終末後の未来で、プレイヤーがスカイネットのマシンに対する人間のレジスタンスの一部として戦うSFアクションゲームです。オープンな3D環境、車両運転、スカイネットの作戦を妨害することに焦点を当てたミッションが特徴です。当時としては高度なグラフィックで知られ、Terminator: Future Shockの続編または拡張版として機能しました。"
-        },
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/skynet.html"
     },
     {
         name: "Space Quest: Chapter I - The Sarien Encounter",
@@ -901,6 +885,24 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/tombrider.html"
     },
+{
+  "name": "Voxel Minicraft",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/voxel.png",
+  "description": "Voxel Minicraft es un juego de aventura y laberintos en 3D, inspirado en los mundos de bloques, donde el objetivo es explorar y escapar de un complejo laberinto en el menor tiempo posible, superando obstáculos y enemigos.",
+  "description": {
+    "es": "Voxel Minicraft es un juego de aventura y laberintos en 3D, inspirado en los mundos de bloques, donde el objetivo es explorar y escapar de un complejo laberinto en el menor tiempo posible, superando obstáculos y enemigos.",
+    "en": "Voxel Minicraft is a 3D adventure and maze game, inspired by block worlds, where the goal is to explore and escape a complex maze in the shortest time possible, overcoming obstacles and enemies.",
+    "de": "Voxel Minicraft ist ein 3D-Abenteuer- und Labyrinthspiel, inspiriert von Blockwelten, bei dem das Ziel darin besteht, ein komplexes Labyrinth in kürzester Zeit zu erkunden und zu entkommen, indem man Hindernisse und Gegner überwindet.",
+    "fr": "Voxel Minicraft est un jeu d'aventure et de labyrinthe en 3D, inspiré des mondes en blocs, où l'objectif est d'explorer et de s'échapper d'un labyrinthe complexe le plus rapidement possible, en surmontant les obstacles et les ennemis.",
+    "it": "Voxel Minicraft è un gioco di avventura e labirinti in 3D, ispirato ai mondi a blocchi, dove l'obiettivo è esplorare e fuggire da un labirinto complesso nel minor tempo possibile, superando ostacoli e nemici.",
+    "pt": "Voxel Minicraft é um jogo de aventura e labirinto em 3D, inspirado em mundos de blocos, onde o objetivo é explorar e escapar de um labirinto complexo no menor tempo possível, superando obstáculos e inimigos.",
+    "ru": "Voxel Minicraft — это 3D-приключенческая игра-лабиринт, вдохновленная блочными мирами, где цель — исследовать и выбраться из сложного лабиринта за минимальное время, преодолевая препятствия и врагов.",
+    "zh": "Voxel Minicraft 是一款3D冒险迷宫游戏，灵感来自方块世界，目标是在最短时间内探索并逃离复杂的迷宫，克服障碍和敌人。",
+    "ja": "Voxel Minicraftは、ブロックワールドにインスパイアされた3Dアドベンチャー迷宮ゲームで、複雑な迷宮を探索し、障害物や敵を乗り越えて、可能な限り短い時間で脱出することを目的としています。"
+  },
+  "category": "adventure",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/voxel/index.html"
+},
     {
         name: "Wolfenstein 3D",
         image: "https://ifilex.github.io/WineBOX-Store/box/wolf3d.jpg",
@@ -2073,7 +2075,7 @@ window.appData = [
             ja: "To Doは、リマインダー、リスト、クラウド同期を使用して、ユーザーがタスクを作成、整理、追跡するのに役立つタスク管理アプリケーションです。"
         },
         category: "utilities",
-        link: "todo.html"
+        link: "https://ifilex.github.io/WineBOX-Store/todo.html"
     },
     {
         name: "TurboC",
@@ -2720,23 +2722,6 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/midemo.html"
-    },
-    {
-        name: "Out this world",
-        image: "https://ifilex.github.io/WineBOX-Store/box/out.jpg",
-        description: "Out of This World is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Out of This World on mobile.",
-        description: {
-            es: "Out of This World es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar a Out of This World en dispositivos móviles.",
-            de: "Out of This World ist ein berühmtes und vielgespieltes DOS-Spiel, das jetzt im Browser gespielt werden kann. Mit virtuellen mobilen Steuerelementen können Sie Out of This World auch auf dem Handy spielen.",
-            fr: "Out of This World est un jeu DOS célèbre et très joué, désormais disponible pour jouer dans le navigateur. Avec des commandes mobiles virtuelles, vous pouvez également jouer à Out of This World sur mobile.",
-            it: "Out of This World è un famoso e giocatissimo gioco DOS ora disponibile per giocare nel browser. Con i controlli mobili virtuali puoi anche giocare a Out of This World su dispositivi mobili.",
-            pt: "Out of This World é um famoso e muito jogado jogo de DOS que agora está disponível para jogar no navegador. Com controles móveis virtuais, você também pode jogar Out of This World no celular.",
-            ru: "Out of This World — это известная и популярная DOS-игра, в которую теперь можно играть в браузере. С помощью виртуальных мобильных элементов управления вы также можете играть в Out of This World на мобильных устройствах.",
-            zh: "Out of This World 是一款著名且玩得最多的 DOS 游戏，现在可以在浏览器中游玩。通过虚拟移动控件，您也可以在移动设备上玩《另一个世界》。",
-            ja: "Out of This Worldは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもOut of This Worldをプレイできます。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/out.html"
     },
     {
         name: "Pacman",
