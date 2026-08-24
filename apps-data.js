@@ -1752,7 +1752,7 @@ window.appData = [
             ja: "Paintは、HTML5で動作する多用途でユーザーフレンドリーなグラフィック編集アプリです。"
         },
         category: "apps",
-        link: "https://ifilex.github.io/WineBOX-Store/paint.html"
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/paint/index.html"
     },
     {
         name: "Program Manager",
