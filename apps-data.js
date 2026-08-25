@@ -511,6 +511,24 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/indi.html"
     },
+{
+  "name": "Minecraft",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
+  "description": "Minecraft es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
+  "description": {
+    "es": "Minecraft es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
+    "en": "Minecraft is the iconic block-building and adventure game in an open world, where players can explore, create, and survive in procedurally generated infinite landscapes.",
+    "de": "Minecraft ist das ikonische Bau- und Abenteuerspiel in einer offenen Blockwelt, in der Spieler in prozedural generierten, unendlichen Landschaften erkunden, bauen und überleben können.",
+    "fr": "Minecraft est le jeu emblématique de construction et d'aventure dans un monde ouvert en blocs, où les joueurs peuvent explorer, créer et survivre dans des paysages infinis générés de manière procédurale.",
+    "it": "Minecraft è l'iconico gioco di costruzione e avventura in un mondo aperto a blocchi, dove i giocatori possono esplorare, creare e sopravvivere in paesaggi infiniti generati proceduralmente.",
+    "pt": "Minecraft é o icônico jogo de construção e aventura em um mundo aberto de blocos, onde os jogadores podem explorar, criar e sobreviver em paisagens infinitas geradas processualmente.",
+    "ru": "Minecraft — это культовая игра о строительстве и приключениях в открытом блочном мире, где игроки могут исследовать, создавать и выживать в бесконечных процедурно генерируемых ландшафтах.",
+    "zh": "Minecraft 是一款标志性的开放世界沙盒建造冒险游戏，玩家可以在程序生成的无限景观中探索、创造和生存。",
+    "ja": "Minecraftは、オープンワールドのブロック構築とアドベンチャーを特徴とする象徴的なゲームで、プレイヤーは手続き的に生成される無限の風景を探索し、創造し、生き延びることができます。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
+},
     {
         name: "Mr. Pibb",
         image: "https://ifilex.github.io/WineBOX-Store/box/mrpibb.png",
@@ -647,6 +665,24 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/quarantine.html"
     },
+{
+  "name": "Retrocraft",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/retrocraft.jpg",
+  "description": "Retrocraft es un sandbox de creación de mundos 3D con estilo 2D retro, donde los jugadores pueden construir y explorar entornos pixelados en tercera persona, combinando la estética clásica con la libertad de un mundo tridimensional.",
+  "description": {
+    "es": "Retrocraft es un sandbox de creación de mundos 3D con estilo 2D retro, donde los jugadores pueden construir y explorar entornos pixelados en tercera persona, combinando la estética clásica con la libertad de un mundo tridimensional.",
+    "en": "Retrocraft is a 3D world-building sandbox with a retro 2D style, where players can build and explore pixelated environments in third person, combining classic aesthetics with the freedom of a three-dimensional world.",
+    "de": "Retrocraft ist eine 3D-Weltbau-Sandbox mit Retro-2D-Stil, in der Spieler in der Third-Person-Perspektive pixelige Umgebungen bauen und erkunden können, die klassische Ästhetik mit der Freiheit einer dreidimensionalen Welt verbinden.",
+    "fr": "Retrocraft est un sandbox de création de mondes 3D avec un style rétro 2D, où les joueurs peuvent construire et explorer des environnements pixelisés à la troisième personne, alliant l'esthétique classique à la liberté d'un monde tridimensionnel.",
+    "it": "Retrocraft è un sandbox di creazione di mondi 3D con stile 2D retrò, dove i giocatori possono costruire ed esplorare ambienti pixelati in terza persona, unendo l'estetica classica alla libertà di un mondo tridimensionale.",
+    "pt": "Retrocraft é um sandbox de criação de mundos 3D com estilo 2D retrô, onde os jogadores podem construir e explorar ambientes pixelizados em terceira pessoa, combinando a estética clássica com a liberdade de um mundo tridimensional.",
+    "ru": "Retrocraft — это песочница для создания 3D-миров в ретро-2D-стиле, где игроки могут строить и исследовать пиксельные окружения от третьего лица, сочетая классическую эстетику со свободой трёхмерного мира.",
+    "zh": "Retrocraft 是一款具有复古2D风格的3D世界建造沙盒游戏，玩家可以在第三人称视角下建造和探索像素化环境，将经典美学与三维世界的自由度相结合。",
+    "ja": "Retrocraftは、レトロな2Dスタイルの3Dワールドビルディングサンドボックスで、プレイヤーはサードパーソン視点でピクセル環境を構築し探索でき、クラシックな美学と3次元世界の自由を融合させています。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/retrocraft/index.html"
+},
     {
         name: "Rise of the triad",
         image: "https://ifilex.github.io/WineBOX-Store/box/rise.webp",
@@ -900,7 +936,7 @@ window.appData = [
     "zh": "Voxel Minicraft 是一款3D冒险迷宫游戏，灵感来自方块世界，目标是在最短时间内探索并逃离复杂的迷宫，克服障碍和敌人。",
     "ja": "Voxel Minicraftは、ブロックワールドにインスパイアされた3Dアドベンチャー迷宮ゲームで、複雑な迷宮を探索し、障害物や敵を乗り越えて、可能な限り短い時間で脱出することを目的としています。"
   },
-  "category": "adventure",
+  "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/voxel/index.html"
 },
     {
@@ -1039,6 +1075,24 @@ window.appData = [
         category: "games",        
          link: "https://ifilex.github.io/WineBOX-Store/4dbox.html"
     },
+{
+  "name": "Rec",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/rec.jpg",
+  "description": "Rec es una herramienta de grabación de sonido estilo Windows, que permite capturar audio desde el micrófono, reproducir grabaciones y guardar archivos, ideal para tomar notas de voz o crear efectos de sonido.",
+  "description": {
+    "es": "Rec es una herramienta de grabación de sonido estilo Windows, que permite capturar audio desde el micrófono, reproducir grabaciones y guardar archivos, ideal para tomar notas de voz o crear efectos de sonido.",
+    "en": "Rec is a Windows-style sound recorder tool that allows capturing audio from the microphone, playing recordings, and saving files, ideal for voice notes or creating sound effects.",
+    "de": "Rec ist ein Sound-Recorder-Tool im Windows-Stil, das Audioaufnahmen vom Mikrofon ermöglicht, Wiedergaben abspielt und Dateien speichert, ideal für Sprachnotizen oder Soundeffekte.",
+    "fr": "Rec est un outil d'enregistrement sonore de style Windows qui permet de capturer l'audio du microphone, de lire les enregistrements et de sauvegarder des fichiers, idéal pour les notes vocales ou la création d'effets sonores.",
+    "it": "Rec è uno strumento di registrazione audio in stile Windows che consente di acquisire audio dal microfono, riprodurre registrazioni e salvare file, ideale per note vocali o creare effetti sonori.",
+    "pt": "Rec é uma ferramenta de gravação de som no estilo Windows, que permite capturar áudio do microfone, reproduzir gravações e salvar arquivos, ideal para notas de voz ou criar efeitos sonoros.",
+    "ru": "Rec — это инструмент для записи звука в стиле Windows, который позволяет записывать аудио с микрофона, воспроизводить записи и сохранять файлы, идеально подходит для голосовых заметок или создания звуковых эффектов.",
+    "zh": "Rec 是一款 Windows 风格的录音工具，可以捕捉麦克风音频、播放录音和保存文件，非常适合语音备忘录或创建音效。",
+    "ja": "RecはWindowsスタイルのサウンドレコーダーツールで、マイクからオーディオをキャプチャし、録音を再生してファイルを保存でき、ボイスメモや効果音作成に最適です。"
+  },
+  "category": "multimedia",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/recorder/index.html"
+},
 {
     "name": "PixelStream IPTV 8-Bit - TV Legal & VOD Retro",
     "image": "https://ifilex.github.io/WineBOX-Store/box/iptv.jpg",
