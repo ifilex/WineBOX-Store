@@ -715,7 +715,7 @@ window.appData = [
     "zh": "Rivals 是一款回合制策略对战游戏，两名玩家在战术对决中对抗，管理资源并移动棋子，在动态战场上智胜对手。",
     "ja": "Rivalsは、2人のプレイヤーが戦術的な決闘で対戦するターン制ストラテジー＆コンバットゲームで、リソースを管理し、駒を動かしてダイナミックな戦場で相手を出し抜きます。"
   },
-  "category": "strategy",
+  "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/rivals/index.html"
 },
     {
@@ -3452,7 +3452,7 @@ window.appData = [
     "zh": "Lemonade Tycoon 是一款模拟经营策略游戏，你管理自己的柠檬水摊位，调配柠檬、糖、冰块和杯子等资源以最大化利润，同时应对天气和库存挑战。",
     "ja": "Lemonade Tycoonは、レモネードスタンドを経営するシミュレーション＆ストラテジーゲームで、レモン、砂糖、氷、カップなどのリソースを管理し、天候や在庫の課題に直面しながら利益を最大化します。"
   },
-  "category": "simulation",
+  "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/lemonade/index.html"
 },
     {
