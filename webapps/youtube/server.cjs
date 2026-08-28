@@ -1,0 +1,717 @@
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// server.ts
+var server_exports = {};
+__export(server_exports, {
+  SAMPLE_VIDEOS: () => SAMPLE_VIDEOS
+});
+module.exports = __toCommonJS(server_exports);
+var import_express = __toESM(require("express"), 1);
+var import_path = __toESM(require("path"), 1);
+var import_url = require("url");
+var import_vite = require("vite");
+var import_meta = {};
+var __filename = (0, import_url.fileURLToPath)(import_meta.url);
+var __dirname = import_path.default.dirname(__filename);
+var users = /* @__PURE__ */ new Map();
+var vaults = /* @__PURE__ */ new Map();
+var devices = /* @__PURE__ */ new Map();
+var DEMO_USER_ID = "user_demo_777";
+users.set(DEMO_USER_ID, {
+  id: DEMO_USER_ID,
+  username: "carlos_e2ee",
+  email: "carlos@privatemail.vault",
+  salt: "dGhpcy1pcy1hLXNhbXBsZS1zYWx0LTEyMzQ1Ng==",
+  passwordHash: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  keyVerification: "v1_verified_aes_gcm_256_e2ee",
+  createdAt: Date.now() - 864e5 * 7
+});
+devices.set(DEMO_USER_ID, [
+  {
+    id: "dev_mobile_iphone15",
+    userId: DEMO_USER_ID,
+    name: "iPhone 15 Pro Max",
+    type: "mobile",
+    os: "iOS 18.2",
+    browser: "Mobile Safari",
+    ip: "190.22.14.88",
+    lastActive: Date.now() - 1e3 * 60 * 12,
+    registeredAt: Date.now() - 864e5 * 5
+  },
+  {
+    id: "dev_pc_desktop_m3",
+    userId: DEMO_USER_ID,
+    name: "MacBook Pro M3 Max",
+    type: "desktop",
+    os: "macOS Sonoma",
+    browser: "Chrome 128",
+    ip: "190.22.14.88",
+    lastActive: Date.now() - 1e3 * 60 * 3,
+    registeredAt: Date.now() - 864e5 * 7
+  },
+  {
+    id: "dev_tab_galaxy",
+    userId: DEMO_USER_ID,
+    name: "Galaxy Tab S9 Ultra",
+    type: "tablet",
+    os: "Android 14",
+    browser: "Samsung Internet",
+    ip: "181.45.99.12",
+    lastActive: Date.now() - 1e3 * 60 * 60 * 48,
+    registeredAt: Date.now() - 864e5 * 2
+  }
+]);
+var SAMPLE_VIDEOS = [
+  {
+    id: "dQw4w9WgXcQ",
+    title: "Astronomy & 4K Deep Cosmos Exploration - James Webb Telescope in 60 FPS",
+    channelTitle: "Cosmic Horizons",
+    channelAvatar: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=100&auto=format&fit=crop&q=80",
+    duration: "12:45",
+    durationSec: 765,
+    viewCount: "2.4M",
+    publishedAt: "Hace 3 d\xEDas",
+    description: "Impresionante documental en ultra alta definici\xF3n que explora los l\xEDmites del universo observable capturados por el telescopio espacial James Webb. Sin cortes comerciales y optimizado para pantallas HDR y OLED.",
+    thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    },
+    category: "Ciencia & Naturaleza",
+    isOfflineReady: true
+  },
+  {
+    id: "kXYiU_JCYtU",
+    title: "Synthwave & Lo-Fi Chill Beats - Sesi\xF3n Nocturna para Programar y Estudiar [HD]",
+    channelTitle: "Neon Chill Radio",
+    channelAvatar: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=100&auto=format&fit=crop&q=80",
+    duration: "28:10",
+    durationSec: 1690,
+    viewCount: "890K",
+    publishedAt: "Hace 1 semana",
+    description: "Banda sonora relajante con ritmos lofi anal\xF3gicos y sintes vintage. Especialmente curada para concentraci\xF3n profunda sin distracciones ni pausas publicitarias.",
+    thumbnail: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
+    },
+    category: "M\xFAsica & Lo-Fi",
+    isOfflineReady: true
+  },
+  {
+    id: "M7lc1UVf-VE",
+    title: "Arquitectura de Software Distribuido y Criptograf\xEDa de Extremo a Extremo (E2EE)",
+    channelTitle: "Tech Deep Dive",
+    channelAvatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80",
+    duration: "18:22",
+    durationSec: 1102,
+    viewCount: "412K",
+    publishedAt: "Hace 2 semanas",
+    description: "An\xE1lisis detallado de c\xF3mo funcionan los esquemas de Zero-Knowledge y AES-GCM en clientes modernos. Aprende c\xF3mo proteger los datos privados del usuario frente a intermediarios.",
+    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    },
+    category: "Tecnolog\xEDa",
+    isOfflineReady: true
+  },
+  {
+    id: "9bZkp7q19f0",
+    title: "Cinematic Drone 4K - Fiordos de Noruega y Auroras Boreales en Invierno",
+    channelTitle: "Nordic Wanderer",
+    channelAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+    duration: "15:40",
+    durationSec: 940,
+    viewCount: "1.8M",
+    publishedAt: "Hace 5 d\xEDas",
+    description: "Tomas a\xE9reas cinematogr\xE1ficas en resoluci\xF3n nativa. Calma visual absoluta con paisajes nevados, aguas cristalinas y el baile celestial de las luces del norte.",
+    thumbnail: "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
+    },
+    category: "Naturaleza & Viajes",
+    isOfflineReady: true
+  },
+  {
+    id: "jNQXAC9IVRw",
+    title: "Gu\xEDa Completa de Caf\xE9 de Especialidad: Desde el Origen hasta el Filtrado V60",
+    channelTitle: "Barista Masterclass",
+    channelAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+    duration: "21:15",
+    durationSec: 1275,
+    viewCount: "630K",
+    publishedAt: "Hace 3 semanas",
+    description: "Aprende los secretos del ratio de molienda, temperatura del agua y t\xE9cnicas de vertido para extraer la taza de caf\xE9 perfecta en casa con m\xE9todos manuales.",
+    thumbnail: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    },
+    category: "Estilo de Vida",
+    isOfflineReady: true
+  },
+  {
+    id: "L_LUpnjgPso",
+    title: "Minimalismo Digital: C\xF3mo Redise\xF1ar tu Relaci\xF3n con la Tecnolog\xEDa y el Tiempo",
+    channelTitle: "Slow Life Manifesto",
+    channelAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+    duration: "14:30",
+    durationSec: 870,
+    viewCount: "980K",
+    publishedAt: "Hace 1 mes",
+    description: "Estrategias pr\xE1cticas para eliminar la sobrecarga de notificaciones, optimizar tu espacio de trabajo y recuperar la atenci\xF3n sostenida en la era de los algoritmos.",
+    thumbnail: "https://images.unsplash.com/photo-1507842229451-79b1be886a27?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
+    },
+    category: "Productividad",
+    isOfflineReady: true
+  },
+  {
+    id: "3JZ_D3ELwOQ",
+    title: "Sonidos de Lluvia en Caba\xF1a de Bosque 1080p HD - 60fps Audio Binaural 3D",
+    channelTitle: "Deep Sleep & Rain",
+    channelAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80",
+    duration: "32:00",
+    durationSec: 1920,
+    viewCount: "3.1M",
+    publishedAt: "Hace 4 d\xEDas",
+    description: "Grabaci\xF3n de audio de alta fidelidad con gotas de lluvia en cristal y trueno suave distante. Ideal para dormir, meditar o trabajar sin distracciones.",
+    thumbnail: "https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    },
+    category: "Relajaci\xF3n & Audio",
+    isOfflineReady: true
+  },
+  {
+    id: "7NOSDKb0HlU",
+    title: "Rust vs Go en 2026: Rendimiento de Sistemas, Concurrencia y Consumo de Memoria",
+    channelTitle: "Backend Architecture",
+    channelAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    duration: "24:50",
+    durationSec: 1490,
+    viewCount: "520K",
+    publishedAt: "Hace 6 d\xEDas",
+    description: "Comparativa exhaustiva con benchmarks reales de microservicios, compilaci\xF3n a binario nativo, manejo de hilos y ciclo de vida de memoria.",
+    thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
+    },
+    category: "Tecnolog\xEDa",
+    isOfflineReady: true
+  }
+];
+async function startServer() {
+  const app = (0, import_express.default)();
+  const PORT = 3e3;
+  app.use(import_express.default.json({ limit: "50mb" }));
+  app.get("/api/health", (req, res) => {
+    res.json({
+      status: "ok",
+      service: "YouTube Offline & E2EE Cloud Sync Client",
+      time: (/* @__PURE__ */ new Date()).toISOString()
+    });
+  });
+  app.post("/api/auth/register", (req, res) => {
+    const { username, email, passwordHash, salt, keyVerification, device } = req.body;
+    if (!username || !email || !passwordHash || !salt) {
+      return res.status(400).json({ error: "Faltan campos obligatorios" });
+    }
+    for (const u of users.values()) {
+      if (u.email.toLowerCase() === email.toLowerCase()) {
+        return res.status(409).json({ error: "El correo electr\xF3nico ya est\xE1 registrado" });
+      }
+      if (u.username.toLowerCase() === username.toLowerCase()) {
+        return res.status(409).json({ error: "El nombre de usuario ya est\xE1 en uso" });
+      }
+    }
+    const userId = "usr_" + Math.random().toString(36).substring(2, 11);
+    const newUser = {
+      id: userId,
+      username,
+      email,
+      passwordHash,
+      salt,
+      keyVerification: keyVerification || "",
+      createdAt: Date.now()
+    };
+    users.set(userId, newUser);
+    const deviceId = device?.id || "dev_" + Math.random().toString(36).substring(2, 10);
+    const newDevice = {
+      id: deviceId,
+      userId,
+      name: device?.name || "Navegador Web",
+      type: device?.type || "desktop",
+      os: device?.os || "Desconocido",
+      browser: device?.browser || "Browser",
+      ip: req.ip || "127.0.0.1",
+      lastActive: Date.now(),
+      registeredAt: Date.now()
+    };
+    devices.set(userId, [newDevice]);
+    res.json({
+      token: "jwt_" + Buffer.from(userId + ":" + Date.now()).toString("base64"),
+      user: {
+        id: newUser.id,
+        username: newUser.username,
+        email: newUser.email,
+        createdAt: newUser.createdAt,
+        salt: newUser.salt,
+        keyVerification: newUser.keyVerification
+      },
+      currentDeviceId: deviceId,
+      devices: [newDevice]
+    });
+  });
+  app.post("/api/auth/login", (req, res) => {
+    const { emailOrUsername, passwordHash, device } = req.body;
+    if (!emailOrUsername || !passwordHash) {
+      return res.status(400).json({ error: "Credenciales incompletas" });
+    }
+    let foundUser;
+    for (const u of users.values()) {
+      if (u.email.toLowerCase() === emailOrUsername.toLowerCase() || u.username.toLowerCase() === emailOrUsername.toLowerCase()) {
+        foundUser = u;
+        break;
+      }
+    }
+    if (!foundUser || foundUser.passwordHash !== passwordHash) {
+      return res.status(401).json({ error: "Credenciales inv\xE1lidas" });
+    }
+    const userDevices = devices.get(foundUser.id) || [];
+    let currentDevice = userDevices.find((d) => d.id === device?.id);
+    if (!currentDevice) {
+      currentDevice = {
+        id: device?.id || "dev_" + Math.random().toString(36).substring(2, 10),
+        userId: foundUser.id,
+        name: device?.name || "Dispositivo Sincronizado",
+        type: device?.type || "desktop",
+        os: device?.os || "Web OS",
+        browser: device?.browser || "Browser",
+        ip: req.ip || "127.0.0.1",
+        lastActive: Date.now(),
+        registeredAt: Date.now()
+      };
+      userDevices.push(currentDevice);
+    } else {
+      currentDevice.lastActive = Date.now();
+      if (device?.name) currentDevice.name = device.name;
+    }
+    devices.set(foundUser.id, userDevices);
+    const vault = vaults.get(foundUser.id);
+    res.json({
+      token: "jwt_" + Buffer.from(foundUser.id + ":" + Date.now()).toString("base64"),
+      user: {
+        id: foundUser.id,
+        username: foundUser.username,
+        email: foundUser.email,
+        createdAt: foundUser.createdAt,
+        salt: foundUser.salt,
+        keyVerification: foundUser.keyVerification
+      },
+      currentDeviceId: currentDevice.id,
+      devices: userDevices,
+      vault: vault ? {
+        ciphertext: vault.ciphertext,
+        iv: vault.iv,
+        version: vault.version,
+        updatedAt: vault.updatedAt,
+        lastDeviceId: vault.lastDeviceId
+      } : null
+    });
+  });
+  app.get("/api/auth/me", (req, res) => {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "No autorizado" });
+    }
+    const token = authHeader.substring(7);
+    try {
+      const decoded = Buffer.from(token.replace("jwt_", ""), "base64").toString();
+      const [userId] = decoded.split(":");
+      const user = users.get(userId);
+      if (!user) return res.status(401).json({ error: "Sesi\xF3n expirada" });
+      const userDevices = devices.get(userId) || [];
+      res.json({
+        user: {
+          id: user.id,
+          username: user.username,
+          email: user.email,
+          createdAt: user.createdAt,
+          salt: user.salt,
+          keyVerification: user.keyVerification
+        },
+        devices: userDevices
+      });
+    } catch {
+      res.status(401).json({ error: "Token inv\xE1lido" });
+    }
+  });
+  app.post("/api/sync/push", (req, res) => {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "Se requiere autenticaci\xF3n para sincronizar" });
+    }
+    const token = authHeader.substring(7);
+    try {
+      const decoded = Buffer.from(token.replace("jwt_", ""), "base64").toString();
+      const [userId] = decoded.split(":");
+      const user = users.get(userId);
+      if (!user) return res.status(401).json({ error: "Usuario no encontrado" });
+      const { ciphertext, iv, version, deviceId, checksum } = req.body;
+      if (!ciphertext || !iv) {
+        return res.status(400).json({ error: "Payload encriptado inv\xE1lido" });
+      }
+      const existingVault = vaults.get(userId);
+      const newVersion = (existingVault?.version || 0) + 1;
+      const record = {
+        userId,
+        ciphertext,
+        iv,
+        version: newVersion,
+        updatedAt: Date.now(),
+        clientTimestamp: req.body.clientTimestamp || Date.now(),
+        lastDeviceId: deviceId,
+        checksum
+      };
+      vaults.set(userId, record);
+      const userDevices = devices.get(userId) || [];
+      const dev = userDevices.find((d) => d.id === deviceId);
+      if (dev) {
+        dev.lastActive = Date.now();
+      }
+      res.json({
+        success: true,
+        version: newVersion,
+        updatedAt: record.updatedAt,
+        syncedDevicesCount: userDevices.length
+      });
+    } catch {
+      res.status(500).json({ error: "Error en la sincronizaci\xF3n en la nube" });
+    }
+  });
+  app.get("/api/sync/pull", (req, res) => {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "Se requiere autenticaci\xF3n" });
+    }
+    const token = authHeader.substring(7);
+    try {
+      const decoded = Buffer.from(token.replace("jwt_", ""), "base64").toString();
+      const [userId] = decoded.split(":");
+      const user = users.get(userId);
+      if (!user) return res.status(401).json({ error: "Usuario no encontrado" });
+      const vault = vaults.get(userId);
+      const userDevices = devices.get(userId) || [];
+      res.json({
+        vault: vault ? {
+          ciphertext: vault.ciphertext,
+          iv: vault.iv,
+          version: vault.version,
+          updatedAt: vault.updatedAt,
+          lastDeviceId: vault.lastDeviceId,
+          checksum: vault.checksum
+        } : null,
+        devices: userDevices
+      });
+    } catch {
+      res.status(500).json({ error: "Error al obtener datos sincronizados" });
+    }
+  });
+  app.get("/api/sync/devices", (req, res) => {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "No autorizado" });
+    }
+    const token = authHeader.substring(7);
+    try {
+      const decoded = Buffer.from(token.replace("jwt_", ""), "base64").toString();
+      const [userId] = decoded.split(":");
+      const userDevices = devices.get(userId) || [];
+      res.json({ devices: userDevices });
+    } catch {
+      res.status(401).json({ error: "Token inv\xE1lido" });
+    }
+  });
+  app.delete("/api/sync/devices/:deviceId", (req, res) => {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "No autorizado" });
+    }
+    const token = authHeader.substring(7);
+    try {
+      const decoded = Buffer.from(token.replace("jwt_", ""), "base64").toString();
+      const [userId] = decoded.split(":");
+      const userDevices = devices.get(userId) || [];
+      const updated = userDevices.filter((d) => d.id !== req.params.deviceId);
+      devices.set(userId, updated);
+      res.json({ success: true, remainingDevices: updated });
+    } catch {
+      res.status(401).json({ error: "Token inv\xE1lido" });
+    }
+  });
+  function parseDurationTextToSec(durationStr) {
+    if (!durationStr) return 0;
+    const parts = durationStr.split(":").map(Number);
+    if (parts.length === 3) {
+      return parts[0] * 3600 + parts[1] * 60 + parts[2];
+    }
+    if (parts.length === 2) {
+      return parts[0] * 60 + parts[1];
+    }
+    return 300;
+  }
+  async function searchYouTubeLive(query) {
+    try {
+      const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}&hl=es`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6500);
+      const res = await fetch(url, {
+        signal: controller.signal,
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "Accept-Language": "es-419,es;q=0.9,en;q=0.8"
+        }
+      });
+      clearTimeout(timeoutId);
+      if (!res.ok) return [];
+      const html = await res.text();
+      const match = html.match(/ytInitialData\s*=\s*({.+?});<\/script>/);
+      if (!match) return [];
+      const data = JSON.parse(match[1]);
+      const sections = data.contents?.twoColumnSearchResultsRenderer?.primaryContents?.sectionListRenderer?.contents || [];
+      const items = [];
+      for (const sec of sections) {
+        const itemSection = sec.itemSectionRenderer?.contents || [];
+        for (const item of itemSection) {
+          if (item.videoRenderer) {
+            const v = item.videoRenderer;
+            const id = v.videoId;
+            if (!id) continue;
+            const title = v.title?.runs?.map((r) => r.text).join("") || v.title?.simpleText || "Video de YouTube";
+            const channelTitle = v.ownerText?.runs?.map((r) => r.text).join("") || v.longBylineText?.runs?.map((r) => r.text).join("") || "Canal";
+            const channelAvatar = v.channelThumbnailSupportedRenderers?.channelThumbnailWithLinkRenderer?.thumbnail?.thumbnails?.[0]?.url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80";
+            const duration = v.lengthText?.simpleText || "En vivo";
+            const viewCount = v.viewCountText?.simpleText || v.shortViewCountText?.simpleText || "Vistas";
+            const publishedAt = v.publishedTimeText?.simpleText || "Reciente";
+            const thumbnail = v.thumbnail?.thumbnails?.slice(-1)[0]?.url || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+            const description = v.detailedMetadataSnippets?.[0]?.snippetText?.runs?.map((r) => r.text).join("") || `Video en alta definici\xF3n de YouTube (${channelTitle}). Compatible con reproducci\xF3n sin anuncios y descargas offline locales.`;
+            items.push({
+              id,
+              title,
+              channelTitle,
+              channelAvatar,
+              duration,
+              durationSec: parseDurationTextToSec(duration),
+              viewCount,
+              publishedAt,
+              description,
+              thumbnail,
+              resolutions: ["1080p", "720p", "480p", "Audio"],
+              streamSources: {
+                "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+                "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+              },
+              category: "YouTube",
+              isOfflineReady: true
+            });
+          }
+        }
+      }
+      return items;
+    } catch (err) {
+      console.warn("Live YouTube scrape timed out or encountered error, falling back:", err);
+      return [];
+    }
+  }
+  app.get("/api/youtube/search", async (req, res) => {
+    const rawQuery = (req.query.q || "").trim();
+    const query = rawQuery.toLowerCase();
+    const category = (req.query.category || "").trim();
+    const ytIdMatch = rawQuery.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|shorts\/))([\w-]{11})/);
+    const extractedId = ytIdMatch ? ytIdMatch[1] : rawQuery.length === 11 && !rawQuery.includes(" ") ? rawQuery : null;
+    if (extractedId) {
+      let title = `Video de YouTube: ${extractedId}`;
+      let author = "Canal de YouTube";
+      try {
+        const oembedRes = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${extractedId}&format=json`);
+        if (oembedRes.ok) {
+          const oeData = await oembedRes.json();
+          if (oeData.title) title = oeData.title;
+          if (oeData.author_name) author = oeData.author_name;
+        }
+      } catch {
+      }
+      const customItem = {
+        id: extractedId,
+        title,
+        channelTitle: author,
+        channelAvatar: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+        duration: "10:00",
+        durationSec: 600,
+        viewCount: "1.2M vistas",
+        publishedAt: "Reciente",
+        description: `Video importado directamente desde YouTube (${extractedId}). Compatible con descarga offline de alta resoluci\xF3n y reproductor minimalista sin anuncios.`,
+        thumbnail: `https://i.ytimg.com/vi/${extractedId}/hqdefault.jpg`,
+        resolutions: ["1080p", "720p", "480p", "Audio"],
+        streamSources: {
+          "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+        },
+        category: "Personalizado",
+        isOfflineReady: true
+      };
+      return res.json({
+        results: [customItem],
+        total: 1,
+        categories: ["Todos", "Ciencia & Naturaleza", "M\xFAsica & Lo-Fi", "Tecnolog\xEDa", "Naturaleza & Viajes", "Productividad", "Relajaci\xF3n & Audio"]
+      });
+    }
+    if (query) {
+      const liveResults = await searchYouTubeLive(rawQuery);
+      if (liveResults.length > 0) {
+        return res.json({
+          results: liveResults,
+          total: liveResults.length,
+          categories: ["Todos", "Ciencia & Naturaleza", "M\xFAsica & Lo-Fi", "Tecnolog\xEDa", "Naturaleza & Viajes", "Productividad", "Relajaci\xF3n & Audio"]
+        });
+      }
+    }
+    let results = [...SAMPLE_VIDEOS];
+    if (category && category !== "Todos") {
+      results = results.filter((v) => v.category.toLowerCase() === category.toLowerCase());
+    }
+    if (query) {
+      results = results.filter(
+        (v) => v.title.toLowerCase().includes(query) || v.channelTitle.toLowerCase().includes(query) || v.description.toLowerCase().includes(query) || v.category.toLowerCase().includes(query)
+      );
+    }
+    res.json({
+      results,
+      total: results.length,
+      categories: ["Todos", "Ciencia & Naturaleza", "M\xFAsica & Lo-Fi", "Tecnolog\xEDa", "Naturaleza & Viajes", "Productividad", "Relajaci\xF3n & Audio"]
+    });
+  });
+  app.get("/api/youtube/video/:id", async (req, res) => {
+    const videoId = req.params.id;
+    let video = SAMPLE_VIDEOS.find((v) => v.id === videoId);
+    if (!video) {
+      let title = `YouTube Video (${videoId})`;
+      let author = "Canal Oficial";
+      try {
+        const oembedRes = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`);
+        if (oembedRes.ok) {
+          const oeData = await oembedRes.json();
+          if (oeData.title) title = oeData.title;
+          if (oeData.author_name) author = oeData.author_name;
+        }
+      } catch {
+      }
+      video = {
+        id: videoId,
+        title,
+        channelTitle: author,
+        channelAvatar: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+        duration: "10:00",
+        durationSec: 600,
+        viewCount: "950K vistas",
+        publishedAt: "Reciente",
+        description: `Reproducci\xF3n de alta fidelidad sin publicidad con opci\xF3n de descarga offline para ${videoId}.`,
+        thumbnail: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+        resolutions: ["1080p", "720p", "480p", "Audio"],
+        streamSources: {
+          "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+        },
+        category: "Personalizado",
+        isOfflineReady: true
+      };
+    }
+    const related = SAMPLE_VIDEOS.filter((v) => v.id !== videoId).slice(0, 5);
+    res.json({ video, related });
+  });
+  if (process.env.NODE_ENV !== "production") {
+    const vite = await (0, import_vite.createServer)({
+      server: { middlewareMode: true },
+      appType: "spa"
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distPath = import_path.default.join(process.cwd(), "dist");
+    app.use(import_express.default.static(distPath));
+    app.get("*", (req, res) => {
+      res.sendFile(import_path.default.join(distPath, "index.html"));
+    });
+  }
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Minimalist YouTube Client with E2EE Sync server listening on http://0.0.0.0:${PORT}`);
+  });
+}
+startServer();
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  SAMPLE_VIDEOS
+});
+//# sourceMappingURL=server.cjs.map
