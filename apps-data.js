@@ -700,6 +700,24 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/rise.html"
     },
+{
+  "name": "Rivals",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/rivals.jpg",
+  "description": "Rivals es un juego de estrategia y combate por turnos donde dos jugadores se enfrentan en un duelo táctico, gestionando recursos y moviendo sus piezas para superar al oponente en un campo de batalla dinámico.",
+  "description": {
+    "es": "Rivals es un juego de estrategia y combate por turnos donde dos jugadores se enfrentan en un duelo táctico, gestionando recursos y moviendo sus piezas para superar al oponente en un campo de batalla dinámico.",
+    "en": "Rivals is a turn-based strategy and combat game where two players face off in a tactical duel, managing resources and moving their pieces to outmaneuver the opponent on a dynamic battlefield.",
+    "de": "Rivals ist ein rundenbasiertes Strategie- und Kampfspiel, in dem zwei Spieler in einem taktischen Duell gegeneinander antreten, Ressourcen verwalten und ihre Figuren bewegen, um den Gegner auf einem dynamischen Schlachtfeld zu überlisten.",
+    "fr": "Rivals est un jeu de stratégie et de combat au tour par tour où deux joueurs s'affrontent dans un duel tactique, gérant des ressources et déplaçant leurs pièces pour surpasser l'adversaire sur un champ de bataille dynamique.",
+    "it": "Rivals è un gioco di strategia e combattimento a turni dove due giocatori si sfidano in un duello tattico, gestendo risorse e muovendo le loro pedine per superare l'avversario su un campo di battaglia dinamico.",
+    "pt": "Rivals é um jogo de estratégia e combate por turnos onde dois jogadores se enfrentam em um duelo tático, gerenciando recursos e movendo suas peças para superar o oponente em um campo de batalha dinâmico.",
+    "ru": "Rivals — это пошаговая стратегическая игра с боями, где два игрока сражаются в тактической дуэли, управляя ресурсами и перемещая свои фигуры, чтобы перехитрить противника на динамичном поле боя.",
+    "zh": "Rivals 是一款回合制策略对战游戏，两名玩家在战术对决中对抗，管理资源并移动棋子，在动态战场上智胜对手。",
+    "ja": "Rivalsは、2人のプレイヤーが戦術的な決闘で対戦するターン制ストラテジー＆コンバットゲームで、リソースを管理し、駒を動かしてダイナミックな戦場で相手を出し抜きます。"
+  },
+  "category": "strategy",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/rivals/index.html"
+},
     {
         name: "Robod",
         image: "https://ifilex.github.io/WineBOX-Store/box/robod.png",
@@ -2233,6 +2251,60 @@ window.appData = [
         category: "apps",
         link: "https://ifilex.github.io/WineBOX-Store/edge.html"
     },
+{
+  "name": "WineBOX Excel",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/excel.png",
+  "description": "WineBOX Excel es una hoja de cálculo completa que permite organizar, analizar y visualizar datos con funciones integradas, tablas, gráficos y fórmulas avanzadas, ideal para gestionar información de manera eficiente.",
+  "description": {
+    "es": "WineBOX Excel es una hoja de cálculo completa que permite organizar, analizar y visualizar datos con funciones integradas, tablas, gráficos y fórmulas avanzadas, ideal para gestionar información de manera eficiente.",
+    "en": "WineBOX Excel is a full-featured spreadsheet that allows you to organize, analyze, and visualize data with built-in functions, tables, charts, and advanced formulas, ideal for managing information efficiently.",
+    "de": "WineBOX Excel ist eine voll ausgestattete Tabellenkalkulation, die es ermöglicht, Daten mit integrierten Funktionen, Tabellen, Diagrammen und erweiterten Formeln zu organisieren, zu analysieren und zu visualisieren – ideal für die effiziente Verwaltung von Informationen.",
+    "fr": "WineBOX Excel est un tableur complet qui permet d'organiser, d'analyser et de visualiser des données avec des fonctions intégrées, des tableaux, des graphiques et des formules avancées, idéal pour gérer efficacement les informations.",
+    "it": "WineBOX Excel è un foglio di calcolo completo che consente di organizzare, analizzare e visualizzare i dati con funzioni integrate, tabelle, grafici e formule avanzate, ideale per gestire le informazioni in modo efficiente.",
+    "pt": "WineBOX Excel é uma planilha completa que permite organizar, analisar e visualizar dados com funções integradas, tabelas, gráficos e fórmulas avançadas, ideal para gerenciar informações de forma eficiente.",
+    "ru": "WineBOX Excel — это полнофункциональная электронная таблица, позволяющая организовывать, анализировать и визуализировать данные с помощью встроенных функций, таблиц, диаграмм и расширенных формул, что идеально подходит для эффективного управления информацией.",
+    "zh": "WineBOX Excel 是一款功能齐全的电子表格，可通过内置函数、表格、图表和高级公式来组织、分析和可视化数据，非常适合高效管理信息。",
+    "ja": "WineBOX Excelは、組み込み関数、テーブル、グラフ、高度な数式を使ってデータを整理、分析、可視化できるフル機能のスプレッドシートで、情報を効率的に管理するのに最適です。"
+  },
+  "category": "utility",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/excel/index.html"
+},
+{
+  "name": "WineBOX Powerpoint",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/powerpoint.jpg",
+  "description": "WineBOX Powerpoint es una herramienta de presentaciones que permite crear diapositivas profesionales con texto, imágenes, formas y transiciones, ideal para exponer ideas de manera visual y dinámica.",
+  "description": {
+    "es": "WineBOX Powerpoint es una herramienta de presentaciones que permite crear diapositivas profesionales con texto, imágenes, formas y transiciones, ideal para exponer ideas de manera visual y dinámica.",
+    "en": "WineBOX Powerpoint is a presentation tool that allows you to create professional slides with text, images, shapes, and transitions, ideal for presenting ideas in a visual and dynamic way.",
+    "de": "WineBOX Powerpoint ist ein Präsentationstool, mit dem Sie professionelle Folien mit Text, Bildern, Formen und Übergängen erstellen können – ideal für die visuelle und dynamische Präsentation von Ideen.",
+    "fr": "WineBOX Powerpoint est un outil de présentation qui permet de créer des diapositives professionnelles avec du texte, des images, des formes et des transitions, idéal pour présenter des idées de manière visuelle et dynamique.",
+    "it": "WineBOX Powerpoint è uno strumento di presentazione che consente di creare diapositive professionali con testo, immagini, forme e transizioni, ideale per presentare idee in modo visivo e dinamico.",
+    "pt": "WineBOX Powerpoint é uma ferramenta de apresentação que permite criar slides profissionais com texto, imagens, formas e transições, ideal para apresentar ideias de forma visual e dinâmica.",
+    "ru": "WineBOX Powerpoint — это инструмент для создания презентаций, позволяющий создавать профессиональные слайды с текстом, изображениями, фигурами и переходами, идеально подходит для визуальной и динамичной подачи идей.",
+    "zh": "WineBOX Powerpoint 是一款演示工具，可用文本、图像、形状和过渡效果创建专业幻灯片，非常适合以视觉和动态方式展示想法。",
+    "ja": "WineBOX Powerpointは、テキスト、画像、図形、トランジションを使ったプロフェッショナルなスライドを作成できるプレゼンテーションツールで、アイデアを視覚的かつダイナミックに提示するのに最適です。"
+  },
+  "category": "utility",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/powerpoint/index.html"
+},
+{
+  "name": "WineBOX Word",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/word.jpg",
+  "description": "WineBOX Word es un procesador de textos completo que permite crear, editar y dar formato a documentos con una interfaz intuitiva, incluyendo herramientas de fuente, párrafo, estilos y guardado en la nube.",
+  "description": {
+    "es": "WineBOX Word es un procesador de textos completo que permite crear, editar y dar formato a documentos con una interfaz intuitiva, incluyendo herramientas de fuente, párrafo, estilos y guardado en la nube.",
+    "en": "WineBOX Word is a full-featured word processor that allows you to create, edit, and format documents with an intuitive interface, including font, paragraph, styles, and cloud saving tools.",
+    "de": "WineBOX Word ist eine voll ausgestattete Textverarbeitung, die es ermöglicht, Dokumente mit einer intuitiven Oberfläche zu erstellen, zu bearbeiten und zu formatieren, einschließlich Schriftart-, Absatz-, Stil- und Cloud-Speicher-Tools.",
+    "fr": "WineBOX Word est un traitement de texte complet qui permet de créer, éditer et formater des documents avec une interface intuitive, incluant des outils de police, paragraphe, styles et sauvegarde dans le cloud.",
+    "it": "WineBOX Word è un elaboratore di testi completo che consente di creare, modificare e formattare documenti con un'interfaccia intuitiva, inclusi strumenti per font, paragrafo, stili e salvataggio nel cloud.",
+    "pt": "WineBOX Word é um processador de texto completo que permite criar, editar e formatar documentos com uma interface intuitiva, incluindo ferramentas de fonte, parágrafo, estilos e salvamento na nuvem.",
+    "ru": "WineBOX Word — это полнофункциональный текстовый процессор, позволяющий создавать, редактировать и форматировать документы с интуитивно понятным интерфейсом, включая инструменты для шрифтов, абзацев, стилей и облачного сохранения.",
+    "zh": "WineBOX Word 是一款功能齐全的文字处理器，可通过直观的界面创建、编辑和格式化文档，包括字体、段落、样式和云保存工具。",
+    "ja": "WineBOX Wordは、直感的なインターフェースでドキュメントの作成、編集、書式設定ができるフル機能のワードプロセッサで、フォント、段落、スタイル、クラウド保存ツールを備えています。"
+  },
+  "category": "utility",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/word/index.html"
+},
     {
         name: "WineZIP",
         image: "https://ifilex.github.io/WineBOX-Store/box/winezip.png",
@@ -3365,6 +3437,24 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/escoba/index.html"
     },
+{
+  "name": "Lemonade Tycoon",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/lemonade.jpg",
+  "description": "Lemonade Tycoon es un juego de simulación y estrategia donde administras tu propio puesto de limonada, gestionando recursos como limones, azúcar, hielo y vasos para maximizar ganancias mientras enfrentas desafíos climáticos y de inventario.",
+  "description": {
+    "es": "Lemonade Tycoon es un juego de simulación y estrategia donde administras tu propio puesto de limonada, gestionando recursos como limones, azúcar, hielo y vasos para maximizar ganancias mientras enfrentas desafíos climáticos y de inventario.",
+    "en": "Lemonade Tycoon is a simulation and strategy game where you manage your own lemonade stand, handling resources like lemons, sugar, ice, and cups to maximize profits while facing weather and inventory challenges.",
+    "de": "Lemonade Tycoon ist ein Simulations- und Strategiespiel, in dem Sie Ihren eigenen Limonadenstand verwalten, Ressourcen wie Zitronen, Zucker, Eis und Becher verwalten, um den Gewinn zu maximieren, während Sie sich Wetter- und Bestandsproblemen stellen.",
+    "fr": "Lemonade Tycoon est un jeu de simulation et de stratégie où vous gérez votre propre stand de limonade, en gérant des ressources comme les citrons, le sucre, la glace et les gobelets pour maximiser les bénéfices tout en faisant face aux défis climatiques et de stock.",
+    "it": "Lemonade Tycoon è un gioco di simulazione e strategia dove gestisci il tuo banco di limonata, gestendo risorse come limoni, zucchero, ghiaccio e bicchieri per massimizzare i profitti affrontando sfide meteorologiche e di inventario.",
+    "pt": "Lemonade Tycoon é um jogo de simulação e estratégia onde você administra sua própria barraca de limonada, gerenciando recursos como limões, açúcar, gelo e copos para maximizar lucros enquanto enfrenta desafios climáticos e de estoque.",
+    "ru": "Lemonade Tycoon — это игра-симуляция и стратегия, где вы управляете своим киоском с лимонадом, распределяя ресурсы: лимоны, сахар, лёд и стаканы, чтобы максимизировать прибыль, преодолевая погодные и складские трудности.",
+    "zh": "Lemonade Tycoon 是一款模拟经营策略游戏，你管理自己的柠檬水摊位，调配柠檬、糖、冰块和杯子等资源以最大化利润，同时应对天气和库存挑战。",
+    "ja": "Lemonade Tycoonは、レモネードスタンドを経営するシミュレーション＆ストラテジーゲームで、レモン、砂糖、氷、カップなどのリソースを管理し、天候や在庫の課題に直面しながら利益を最大化します。"
+  },
+  "category": "simulation",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/lemonade/index.html"
+},
     {
         name: "Master of Orion II",
         image: "https://ifilex.github.io/WineBOX-Store/box/master.jpg",
