@@ -2266,7 +2266,7 @@ window.appData = [
     "zh": "WineBOX Excel 是一款功能齐全的电子表格，可通过内置函数、表格、图表和高级公式来组织、分析和可视化数据，非常适合高效管理信息。",
     "ja": "WineBOX Excelは、組み込み関数、テーブル、グラフ、高度な数式を使ってデータを整理、分析、可視化できるフル機能のスプレッドシートで、情報を効率的に管理するのに最適です。"
   },
-  "category": "utility",
+  "category": "apps",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/excel/index.html"
 },
 {
@@ -2284,7 +2284,7 @@ window.appData = [
     "zh": "WineBOX Powerpoint 是一款演示工具，可用文本、图像、形状和过渡效果创建专业幻灯片，非常适合以视觉和动态方式展示想法。",
     "ja": "WineBOX Powerpointは、テキスト、画像、図形、トランジションを使ったプロフェッショナルなスライドを作成できるプレゼンテーションツールで、アイデアを視覚的かつダイナミックに提示するのに最適です。"
   },
-  "category": "utility",
+  "category": "apps",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/powerpoint/index.html"
 },
 {
@@ -2302,7 +2302,7 @@ window.appData = [
     "zh": "WineBOX Word 是一款功能齐全的文字处理器，可通过直观的界面创建、编辑和格式化文档，包括字体、段落、样式和云保存工具。",
     "ja": "WineBOX Wordは、直感的なインターフェースでドキュメントの作成、編集、書式設定ができるフル機能のワードプロセッサで、フォント、段落、スタイル、クラウド保存ツールを備えています。"
   },
-  "category": "utility",
+  "category": "apps",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/word/index.html"
 },
     {
