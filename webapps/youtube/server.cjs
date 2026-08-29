@@ -89,37 +89,16 @@ devices.set(DEMO_USER_ID, [
 ]);
 var SAMPLE_VIDEOS = [
   {
-    id: "dQw4w9WgXcQ",
-    title: "Astronomy & 4K Deep Cosmos Exploration - James Webb Telescope in 60 FPS",
-    channelTitle: "Cosmic Horizons",
-    channelAvatar: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=100&auto=format&fit=crop&q=80",
-    duration: "12:45",
-    durationSec: 765,
-    viewCount: "2.4M",
-    publishedAt: "Hace 3 d\xEDas",
-    description: "Impresionante documental en ultra alta definici\xF3n que explora los l\xEDmites del universo observable capturados por el telescopio espacial James Webb. Sin cortes comerciales y optimizado para pantallas HDR y OLED.",
-    thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
-    resolutions: ["1080p", "720p", "480p", "Audio"],
-    streamSources: {
-      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-    },
-    category: "Ciencia & Naturaleza",
-    isOfflineReady: true
-  },
-  {
-    id: "kXYiU_JCYtU",
-    title: "Synthwave & Lo-Fi Chill Beats - Sesi\xF3n Nocturna para Programar y Estudiar [HD]",
-    channelTitle: "Neon Chill Radio",
+    id: "jfKfPfyJRdk",
+    title: "Lofi Hip Hop Radio - Beats to Relax/Study to [24/7 Live Stream Audio & HD]",
+    channelTitle: "Lofi Girl",
     channelAvatar: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=100&auto=format&fit=crop&q=80",
-    duration: "28:10",
-    durationSec: 1690,
-    viewCount: "890K",
-    publishedAt: "Hace 1 semana",
-    description: "Banda sonora relajante con ritmos lofi anal\xF3gicos y sintes vintage. Especialmente curada para concentraci\xF3n profunda sin distracciones ni pausas publicitarias.",
-    thumbnail: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800&auto=format&fit=crop&q=80",
+    duration: "En vivo",
+    durationSec: 3600,
+    viewCount: "58M",
+    publishedAt: "En vivo",
+    description: "La transmisi\xF3n de lofi hip hop m\xE1s famosa del mundo. M\xFAsica tranquila para concentrarse, estudiar, programar o descansar sin anuncios ni interrupciones.",
+    thumbnail: "https://i.ytimg.com/vi/jfKfPfyJRdk/hqdefault.jpg",
     resolutions: ["1080p", "720p", "480p", "Audio"],
     streamSources: {
       "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
@@ -131,37 +110,79 @@ var SAMPLE_VIDEOS = [
     isOfflineReady: true
   },
   {
-    id: "M7lc1UVf-VE",
-    title: "Arquitectura de Software Distribuido y Criptograf\xEDa de Extremo a Extremo (E2EE)",
-    channelTitle: "Tech Deep Dive",
-    channelAvatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80",
-    duration: "18:22",
-    durationSec: 1102,
-    viewCount: "412K",
-    publishedAt: "Hace 2 semanas",
-    description: "An\xE1lisis detallado de c\xF3mo funcionan los esquemas de Zero-Knowledge y AES-GCM en clientes modernos. Aprende c\xF3mo proteger los datos privados del usuario frente a intermediarios.",
-    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+    id: "uD4izuDMUQA",
+    title: "James Webb Telescope 4K - Deep Space Exploration & Observable Universe in 60 FPS",
+    channelTitle: "NASA Space Science",
+    channelAvatar: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=100&auto=format&fit=crop&q=80",
+    duration: "14:20",
+    durationSec: 860,
+    viewCount: "4.8M",
+    publishedAt: "Hace 3 d\xEDas",
+    description: "Impresionante documental en ultra alta definici\xF3n que explora galaxias lejanas, nebulosas y los l\xEDmites del cosmos capturados por el telescopio espacial James Webb.",
+    thumbnail: "https://i.ytimg.com/vi/uD4izuDMUQA/hqdefault.jpg",
     resolutions: ["1080p", "720p", "480p", "Audio"],
     streamSources: {
-      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
-      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     },
-    category: "Tecnolog\xEDa",
+    category: "Ciencia & Naturaleza",
     isOfflineReady: true
   },
   {
-    id: "9bZkp7q19f0",
-    title: "Cinematic Drone 4K - Fiordos de Noruega y Auroras Boreales en Invierno",
-    channelTitle: "Nordic Wanderer",
+    id: "fJ9rUzIMcZQ",
+    title: "Queen \u2013 Bohemian Rhapsody (Official Video Remastered 4K Ultra HD)",
+    channelTitle: "Queen Official",
+    channelAvatar: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&auto=format&fit=crop&q=80",
+    duration: "5:59",
+    durationSec: 359,
+    viewCount: "1.7B",
+    publishedAt: "Remasterizado",
+    description: "El video musical legendario de Bohemian Rhapsody interpretado por Freddie Mercury y Queen en calidad remasterizada ultra n\xEDtida.",
+    thumbnail: "https://i.ytimg.com/vi/fJ9rUzIMcZQ/hqdefault.jpg",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    },
+    category: "M\xFAsica & Lo-Fi",
+    isOfflineReady: true
+  },
+  {
+    id: "4xDzrJKXOOY",
+    title: "Synthwave / Retro Electro Beats for Deep Focus & Night Coding Session",
+    channelTitle: "Electronic Odyssey",
+    channelAvatar: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=100&auto=format&fit=crop&q=80",
+    duration: "42:18",
+    durationSec: 2538,
+    viewCount: "1.2M",
+    publishedAt: "Hace 1 semana",
+    description: "Sintetizadores anal\xF3gicos y ritmos synthwave ideales para programadores y amantes de la est\xE9tica retro futurista.",
+    thumbnail: "https://i.ytimg.com/vi/4xDzrJKXOOY/hqdefault.jpg",
+    resolutions: ["1080p", "720p", "480p", "Audio"],
+    streamSources: {
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
+    },
+    category: "M\xFAsica & Lo-Fi",
+    isOfflineReady: true
+  },
+  {
+    id: "1La4QzGeaaQ",
+    title: "Norway 4K Scenic Relaxation Film with Calming Music - Fjords, Waterfalls & Glaciers",
+    channelTitle: "Scenic Relaxation",
     channelAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
-    duration: "15:40",
-    durationSec: 940,
-    viewCount: "1.8M",
-    publishedAt: "Hace 5 d\xEDas",
-    description: "Tomas a\xE9reas cinematogr\xE1ficas en resoluci\xF3n nativa. Calma visual absoluta con paisajes nevados, aguas cristalinas y el baile celestial de las luces del norte.",
-    thumbnail: "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&auto=format&fit=crop&q=80",
+    duration: "28:15",
+    durationSec: 1695,
+    viewCount: "8.4M",
+    publishedAt: "Hace 2 semanas",
+    description: "Paisajes majestuosos de Noruega grabados con drones cinematogr\xE1ficos en 4K. Relajaci\xF3n visual total y naturaleza virgen.",
+    thumbnail: "https://i.ytimg.com/vi/1La4QzGeaaQ/hqdefault.jpg",
     resolutions: ["1080p", "720p", "480p", "Audio"],
     streamSources: {
       "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
@@ -173,58 +194,58 @@ var SAMPLE_VIDEOS = [
     isOfflineReady: true
   },
   {
-    id: "jNQXAC9IVRw",
-    title: "Gu\xEDa Completa de Caf\xE9 de Especialidad: Desde el Origen hasta el Filtrado V60",
-    channelTitle: "Barista Masterclass",
-    channelAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
-    duration: "21:15",
-    durationSec: 1275,
-    viewCount: "630K",
-    publishedAt: "Hace 3 semanas",
-    description: "Aprende los secretos del ratio de molienda, temperatura del agua y t\xE9cnicas de vertido para extraer la taza de caf\xE9 perfecta en casa con m\xE9todos manuales.",
-    thumbnail: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&auto=format&fit=crop&q=80",
+    id: "0rJ94rt2hww",
+    title: "Modern Web Architecture & Zero-Knowledge Cryptography: Building Secure Systems",
+    channelTitle: "Computerphile Tech",
+    channelAvatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80",
+    duration: "19:40",
+    durationSec: 1180,
+    viewCount: "620K",
+    publishedAt: "Hace 5 d\xEDas",
+    description: "C\xF3mo funcionan las llaves criptogr\xE1ficas sim\xE9tricas AES-GCM en navegadores modernos y c\xF3mo construir aplicaciones privadas sin almacenar datos sensibles en la nube.",
+    thumbnail: "https://i.ytimg.com/vi/0rJ94rt2hww/hqdefault.jpg",
     resolutions: ["1080p", "720p", "480p", "Audio"],
     streamSources: {
-      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
       "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
       "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     },
-    category: "Estilo de Vida",
+    category: "Tecnolog\xEDa",
     isOfflineReady: true
   },
   {
-    id: "L_LUpnjgPso",
-    title: "Minimalismo Digital: C\xF3mo Redise\xF1ar tu Relaci\xF3n con la Tecnolog\xEDa y el Tiempo",
-    channelTitle: "Slow Life Manifesto",
-    channelAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
-    duration: "14:30",
-    durationSec: 870,
-    viewCount: "980K",
-    publishedAt: "Hace 1 mes",
-    description: "Estrategias pr\xE1cticas para eliminar la sobrecarga de notificaciones, optimizar tu espacio de trabajo y recuperar la atenci\xF3n sostenida en la era de los algoritmos.",
-    thumbnail: "https://images.unsplash.com/photo-1507842229451-79b1be886a27?w=800&auto=format&fit=crop&q=80",
+    id: "kJQP7kiw5Fk",
+    title: "Luis Fonsi \u2013 Despacito ft. Daddy Yankee (Official Music Video 4K)",
+    channelTitle: "Luis Fonsi",
+    channelAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+    duration: "4:41",
+    durationSec: 281,
+    viewCount: "8.4B",
+    publishedAt: "Oficial",
+    description: "Uno de los videos m\xE1s reproducidos de la historia de YouTube con alta fidelidad de sonido y reproducci\xF3n sin publicidad.",
+    thumbnail: "https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg",
     resolutions: ["1080p", "720p", "480p", "Audio"],
     streamSources: {
-      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
-      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
       "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
     },
-    category: "Productividad",
+    category: "M\xFAsica & Lo-Fi",
     isOfflineReady: true
   },
   {
     id: "3JZ_D3ELwOQ",
-    title: "Sonidos de Lluvia en Caba\xF1a de Bosque 1080p HD - 60fps Audio Binaural 3D",
-    channelTitle: "Deep Sleep & Rain",
+    title: "Calm Rain Sounds at Cozy Forest Cottage for Sleeping, Relaxing & Deep Study 1080p",
+    channelTitle: "Relaxation Meditation",
     channelAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80",
-    duration: "32:00",
-    durationSec: 1920,
-    viewCount: "3.1M",
+    duration: "35:00",
+    durationSec: 2100,
+    viewCount: "5.6M",
     publishedAt: "Hace 4 d\xEDas",
-    description: "Grabaci\xF3n de audio de alta fidelidad con gotas de lluvia en cristal y trueno suave distante. Ideal para dormir, meditar o trabajar sin distracciones.",
-    thumbnail: "https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=800&auto=format&fit=crop&q=80",
+    description: "Sonidos de lluvia suave en bosque con trueno distante. Audio 3D binaural para conciliar el sue\xF1o y concentraci\xF3n m\xE1xima.",
+    thumbnail: "https://i.ytimg.com/vi/3JZ_D3ELwOQ/hqdefault.jpg",
     resolutions: ["1080p", "720p", "480p", "Audio"],
     streamSources: {
       "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
@@ -236,24 +257,24 @@ var SAMPLE_VIDEOS = [
     isOfflineReady: true
   },
   {
-    id: "7NOSDKb0HlU",
-    title: "Rust vs Go en 2026: Rendimiento de Sistemas, Concurrencia y Consumo de Memoria",
-    channelTitle: "Backend Architecture",
+    id: "dQw4w9WgXcQ",
+    title: "Rick Astley \u2013 Never Gonna Give You Up (Official Music Video 4K Remastered)",
+    channelTitle: "Rick Astley",
     channelAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-    duration: "24:50",
-    durationSec: 1490,
-    viewCount: "520K",
-    publishedAt: "Hace 6 d\xEDas",
-    description: "Comparativa exhaustiva con benchmarks reales de microservicios, compilaci\xF3n a binario nativo, manejo de hilos y ciclo de vida de memoria.",
-    thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80",
+    duration: "3:33",
+    durationSec: 213,
+    viewCount: "1.5B",
+    publishedAt: "Remasterizado",
+    description: "El cl\xE1sico indiscutible de Rick Astley remasterizado en alta resoluci\xF3n.",
+    thumbnail: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
     resolutions: ["1080p", "720p", "480p", "Audio"],
     streamSources: {
       "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
-      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
+      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     },
-    category: "Tecnolog\xEDa",
+    category: "M\xFAsica & Lo-Fi",
     isOfflineReady: true
   }
 ];
@@ -518,69 +539,132 @@ async function startServer() {
     return 300;
   }
   async function searchYouTubeLive(query) {
-    try {
-      const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}&hl=es`;
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 6500);
-      const res = await fetch(url, {
-        signal: controller.signal,
-        headers: {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "Accept-Language": "es-419,es;q=0.9,en;q=0.8"
-        }
-      });
-      clearTimeout(timeoutId);
-      if (!res.ok) return [];
-      const html = await res.text();
-      const match = html.match(/ytInitialData\s*=\s*({.+?});<\/script>/);
-      if (!match) return [];
-      const data = JSON.parse(match[1]);
-      const sections = data.contents?.twoColumnSearchResultsRenderer?.primaryContents?.sectionListRenderer?.contents || [];
-      const items = [];
-      for (const sec of sections) {
-        const itemSection = sec.itemSectionRenderer?.contents || [];
-        for (const item of itemSection) {
-          if (item.videoRenderer) {
-            const v = item.videoRenderer;
-            const id = v.videoId;
-            if (!id) continue;
-            const title = v.title?.runs?.map((r) => r.text).join("") || v.title?.simpleText || "Video de YouTube";
-            const channelTitle = v.ownerText?.runs?.map((r) => r.text).join("") || v.longBylineText?.runs?.map((r) => r.text).join("") || "Canal";
-            const channelAvatar = v.channelThumbnailSupportedRenderers?.channelThumbnailWithLinkRenderer?.thumbnail?.thumbnails?.[0]?.url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80";
-            const duration = v.lengthText?.simpleText || "En vivo";
-            const viewCount = v.viewCountText?.simpleText || v.shortViewCountText?.simpleText || "Vistas";
-            const publishedAt = v.publishedTimeText?.simpleText || "Reciente";
-            const thumbnail = v.thumbnail?.thumbnails?.slice(-1)[0]?.url || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-            const description = v.detailedMetadataSnippets?.[0]?.snippetText?.runs?.map((r) => r.text).join("") || `Video en alta definici\xF3n de YouTube (${channelTitle}). Compatible con reproducci\xF3n sin anuncios y descargas offline locales.`;
-            items.push({
-              id,
-              title,
-              channelTitle,
-              channelAvatar,
-              duration,
-              durationSec: parseDurationTextToSec(duration),
-              viewCount,
-              publishedAt,
-              description,
-              thumbnail,
-              resolutions: ["1080p", "720p", "480p", "Audio"],
-              streamSources: {
-                "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-                "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-                "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-                "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-              },
-              category: "YouTube",
-              isOfflineReady: true
-            });
+    const searchTasks = [
+      // Provider 1: Direct YouTube Scraper with Consent Header
+      async () => {
+        const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}&hl=es&gl=ES`;
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 4500);
+        const res = await fetch(url, {
+          signal: controller.signal,
+          headers: {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+            "Cookie": "CONSENT=YES+cb.20210328-17-p0.es+FX+999; SOCS=CAESEwgDEgk0ODE3Nzk3MjQaAmVuIAEaBgiA_LyaBg; PREF=hl=es&gl=ES;"
+          }
+        });
+        clearTimeout(timeoutId);
+        if (!res.ok) return [];
+        const html = await res.text();
+        const match = html.match(/ytInitialData\s*=\s*({.+?});<\/script>/) || html.match(/var ytInitialData\s*=\s*({.+?});/);
+        if (!match) return [];
+        const data = JSON.parse(match[1]);
+        const sections = data.contents?.twoColumnSearchResultsRenderer?.primaryContents?.sectionListRenderer?.contents || [];
+        const items = [];
+        for (const sec of sections) {
+          const itemSection = sec.itemSectionRenderer?.contents || [];
+          for (const item of itemSection) {
+            if (item.videoRenderer) {
+              const v = item.videoRenderer;
+              const id = v.videoId;
+              if (!id) continue;
+              const title = v.title?.runs?.map((r) => r.text).join("") || v.title?.simpleText || "Video de YouTube";
+              const channelTitle = v.ownerText?.runs?.map((r) => r.text).join("") || v.longBylineText?.runs?.map((r) => r.text).join("") || "Canal Oficial";
+              const channelAvatar = v.channelThumbnailSupportedRenderers?.channelThumbnailWithLinkRenderer?.thumbnail?.thumbnails?.[0]?.url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80";
+              const duration = v.lengthText?.simpleText || "HD";
+              const viewCount = v.viewCountText?.simpleText || v.shortViewCountText?.simpleText || "Vistas";
+              const publishedAt = v.publishedTimeText?.simpleText || "Reciente";
+              const thumbnail = v.thumbnail?.thumbnails?.slice(-1)[0]?.url || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+              const description = v.detailedMetadataSnippets?.[0]?.snippetText?.runs?.map((r) => r.text).join("") || `Video de YouTube (${channelTitle}). Compatible con reproducci\xF3n en alta definici\xF3n sin anuncios y descargas offline locales.`;
+              items.push({
+                id,
+                title,
+                channelTitle,
+                channelAvatar,
+                duration,
+                durationSec: parseDurationTextToSec(duration),
+                viewCount,
+                publishedAt,
+                description,
+                thumbnail,
+                resolutions: ["1080p", "720p", "480p", "Audio"],
+                streamSources: {
+                  "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                  "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                  "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+                  "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                },
+                category: "YouTube",
+                isOfflineReady: true
+              });
+            }
           }
         }
+        return items;
+      },
+      // Provider 2: Public Invidious API Instance 1
+      async () => {
+        const invidiousEndpoints = [
+          `https://inv.nadeko.net/api/v1/search?q=${encodeURIComponent(query)}&type=video`,
+          `https://yewtu.be/api/v1/search?q=${encodeURIComponent(query)}&type=video`,
+          `https://invidious.nerdvpn.de/api/v1/search?q=${encodeURIComponent(query)}&type=video`,
+          `https://invidious.projectsegfau.lt/api/v1/search?q=${encodeURIComponent(query)}&type=video`
+        ];
+        for (const ep of invidiousEndpoints) {
+          try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 3500);
+            const res = await fetch(ep, { signal: controller.signal });
+            clearTimeout(timeoutId);
+            if (res.ok) {
+              const data = await res.json();
+              if (Array.isArray(data) && data.length > 0) {
+                return data.filter((item) => item.videoId && item.title).map((item) => {
+                  const secs = item.lengthSeconds || 300;
+                  const mins = Math.floor(secs / 60);
+                  const remSec = secs % 60;
+                  const duration = `${mins}:${remSec < 10 ? "0" : ""}${remSec}`;
+                  return {
+                    id: item.videoId,
+                    title: item.title,
+                    channelTitle: item.author || "Canal",
+                    channelAvatar: item.authorThumbnails?.[0]?.url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+                    duration,
+                    durationSec: secs,
+                    viewCount: `${(item.viewCount || 1e3).toLocaleString()} vistas`,
+                    publishedAt: item.publishedText || "Reciente",
+                    description: item.description || `Video en alta definici\xF3n de YouTube (${item.author || "Canal"}).`,
+                    thumbnail: item.videoThumbnails?.find((t) => t.quality === "medium")?.url || `https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`,
+                    resolutions: ["1080p", "720p", "480p", "Audio"],
+                    streamSources: {
+                      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+                      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                    },
+                    category: "YouTube",
+                    isOfflineReady: true
+                  };
+                });
+              }
+            }
+          } catch {
+          }
+        }
+        return [];
       }
-      return items;
-    } catch (err) {
-      console.warn("Live YouTube scrape timed out or encountered error, falling back:", err);
-      return [];
+    ];
+    for (const task of searchTasks) {
+      try {
+        const results = await task();
+        if (results && results.length > 0) {
+          return results;
+        }
+      } catch (err) {
+      }
     }
+    return [];
   }
   app.get("/api/youtube/search", async (req, res) => {
     const rawQuery = (req.query.q || "").trim();
