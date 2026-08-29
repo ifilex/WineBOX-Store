@@ -1163,6 +1163,24 @@ window.appData = [
         category: "multimedia",
         link: "https://www.bing.com/videos/search?q=YouTube+music%3A+&qs=n&form=QBVR&sp=-1&lq=0&pq=youtube+music%3A+&sc=10-15&sk=&cvid=B1A441CAFF804A8B814B97D33448DD22"
     },
+{
+  "name": "8Bit Retro Reader",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/retroreader.jpg",
+  "description": "8Bit Retro Reader es un lector de documentos multifomato con estilo retro, diseñado para leer archivos PDF, EPUB, CBR y CBZ de manera cómoda, con soporte para carga local, URLs y guardado de progreso.",
+  "description": {
+    "es": "8Bit Retro Reader es un lector de documentos multifomato con estilo retro, diseñado para leer archivos PDF, EPUB, CBR y CBZ de manera cómoda, con soporte para carga local, URLs y guardado de progreso.",
+    "en": "8Bit Retro Reader is a multi-format document reader with a retro style, designed to comfortably read PDF, EPUB, CBR, and CBZ files, with support for local uploads, URLs, and progress saving.",
+    "de": "8Bit Retro Reader ist ein Multiformat-Dokumentenleser im Retro-Stil, der zum bequemen Lesen von PDF-, EPUB-, CBR- und CBZ-Dateien entwickelt wurde und lokales Laden, URLs und Fortschrittsspeicherung unterstützt.",
+    "fr": "8Bit Retro Reader est un lecteur de documents multi-format de style rétro, conçu pour lire confortablement des fichiers PDF, EPUB, CBR et CBZ, avec prise en charge du chargement local, des URL et de la sauvegarde de la progression.",
+    "it": "8Bit Retro Reader è un lettore di documenti multiformato in stile retrò, progettato per leggere comodamente file PDF, EPUB, CBR e CBZ, con supporto per caricamento locale, URL e salvataggio dei progressi.",
+    "pt": "8Bit Retro Reader é um leitor de documentos multiformato com estilo retrô, projetado para ler arquivos PDF, EPUB, CBR e CBZ de forma confortável, com suporte para upload local, URLs e salvamento de progresso.",
+    "ru": "8Bit Retro Reader — это многоформатный читатель документов в ретро-стиле, предназначенный для удобного чтения файлов PDF, EPUB, CBR и CBZ, с поддержкой локальной загрузки, URL и сохранения прогресса.",
+    "zh": "8Bit Retro Reader 是一款复古风格的多格式文档阅读器，旨在舒适地阅读 PDF、EPUB、CBR 和 CBZ 文件，支持本地上传、URL 链接和进度保存。",
+    "ja": "8Bit Retro Readerは、レトロスタイルの多形式ドキュメントリーダーで、PDF、EPUB、CBR、CBZファイルを快適に読むために設計されており、ローカルアップロード、URL、進行状況の保存をサポートしています。"
+  },
+  "category": "apps",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/retroreader/index.html"
+},
     {
         name: "Arachne Browser",
         image: "https://ifilex.github.io/WineBOX-Store/box/arachne.jpg",
@@ -1792,6 +1810,24 @@ window.appData = [
         category: "apps",
         link: "https://copy.sh/v86/?profile=oberon"
     },
+{
+  "name": "OmniPDF Studio",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/pdf.png",
+  "description": "OmniPDF Studio es una aplicación profesional para visualizar y firmar documentos PDF, con autenticación biométrica integrada (huella digital y reconocimiento facial) para garantizar la seguridad y validez legal de tus firmas digitales.",
+  "description": {
+    "es": "OmniPDF Studio es una aplicación profesional para visualizar y firmar documentos PDF, con autenticación biométrica integrada (huella digital y reconocimiento facial) para garantizar la seguridad y validez legal de tus firmas digitales.",
+    "en": "OmniPDF Studio is a professional application for viewing and signing PDF documents, with integrated biometric authentication (fingerprint and facial recognition) to ensure the security and legal validity of your digital signatures.",
+    "de": "OmniPDF Studio ist eine professionelle Anwendung zum Betrachten und Signieren von PDF-Dokumenten mit integrierter biometrischer Authentifizierung (Fingerabdruck- und Gesichtserkennung) für die Sicherheit und rechtliche Gültigkeit Ihrer digitalen Signaturen.",
+    "fr": "OmniPDF Studio est une application professionnelle pour visualiser et signer des documents PDF, avec une authentification biométrique intégrée (empreinte digitale et reconnaissance faciale) pour garantir la sécurité et la validité légale de vos signatures numériques.",
+    "it": "OmniPDF Studio è un'applicazione professionale per visualizzare e firmare documenti PDF, con autenticazione biometrica integrata (impronta digitale e riconoscimento facciale) per garantire la sicurezza e la validità legale delle tue firme digitali.",
+    "pt": "OmniPDF Studio é um aplicativo profissional para visualizar e assinar documentos PDF, com autenticação biométrica integrada (impressão digital e reconhecimento facial) para garantir a segurança e validade legal de suas assinaturas digitais.",
+    "ru": "OmniPDF Studio — это профессиональное приложение для просмотра и подписания PDF-документов со встроенной биометрической аутентификацией (отпечаток пальца и распознавание лица), обеспечивающей безопасность и юридическую силу ваших цифровых подписей.",
+    "zh": "OmniPDF Studio 是一款专业的 PDF 文档查看和签名应用程序，集成生物特征认证（指纹和面部识别），确保数字签名的安全性和法律有效性。",
+    "ja": "OmniPDF Studioは、PDF文書の表示と署名のためのプロフェッショナルアプリケーションで、生体認証（指紋認証と顔認識）を統合し、デジタル署名のセキュリティと法的有効性を保証します。"
+  },
+  "category": "utilities",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/pdf/index.html"
+},
     {
         name: "Paint",
         image: "https://ifilex.github.io/WineBOX-Store/box/paint.jpg",
@@ -3523,6 +3559,24 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/oregon.html"
     },
+{
+  "name": "Robotrivia 8Bit",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/robotrivia.jpg",
+  "description": "Robotrivia 8Bit es un juego de preguntas y respuestas con temática de robots en estilo 8-bit, donde cada acierto daña a tu oponente robótico en un duelo de conocimiento. ¡Responde bien y conviértete en el campeón de la trivia mecánica!",
+  "description": {
+    "es": "Robotrivia 8Bit es un juego de preguntas y respuestas con temática de robots en estilo 8-bit, donde cada acierto daña a tu oponente robótico en un duelo de conocimiento. ¡Responde bien y conviértete en el campeón de la trivia mecánica!",
+    "en": "Robotrivia 8Bit is a trivia game with an 8-bit robot theme, where each correct answer damages your robotic opponent in a knowledge duel. Answer well and become the champion of mechanical trivia!",
+    "de": "Robotrivia 8Bit ist ein Quiz-Spiel mit Roboter-Thema im 8-Bit-Stil, bei dem jede richtige Antwort deinem Roboter-Gegner in einem Wissensduell Schaden zufügt. Antworte gut und werde der Champion der mechanischen Trivia!",
+    "fr": "Robotrivia 8Bit est un jeu de questions-réponses sur le thème des robots en style 8-bit, où chaque bonne réponse inflige des dégâts à votre adversaire robotique dans un duel de connaissances. Répondez bien et devenez le champion de la trivia mécanique!",
+    "it": "Robotrivia 8Bit è un gioco di domande e risposte a tema robot in stile 8-bit, dove ogni risposta corretta danneggia il tuo avversario robotico in un duello di conoscenza. Rispondi bene e diventa il campione della trivia meccanica!",
+    "pt": "Robotrivia 8Bit é um jogo de perguntas e respostas com tema de robôs em estilo 8-bit, onde cada acerto danifica seu oponente robótico em um duelo de conhecimento. Responda bem e torne-se o campeão da trivia mecânica!",
+    "ru": "Robotrivia 8Bit — это игра-викторина на тему роботов в стиле 8-bit, где каждый правильный ответ наносит урон вашему роботу-противнику в дуэли знаний. Отвечайте хорошо и станьте чемпионом механической викторины!",
+    "zh": "Robotrivia 8Bit 是一款以8位机器人风格为主题的问答游戏，每答对一题都会在知识对决中伤害你的机器人对手。好好回答，成为机械问答冠军！",
+    "ja": "Robotrivia 8Bitは、8ビットのロボットをテーマにしたクイズゲームで、正解するたびに知識の決闘でロボットの対戦相手にダメージを与えます。うまく答えて、メカニカルクイズのチャンピオンになりましょう！"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/robotrivia/index.html"
+},
     {
         name: "Sim City",
         image: "https://ifilex.github.io/WineBOX-Store/box/simcity.jpg",
