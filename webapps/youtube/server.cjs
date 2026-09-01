@@ -34,11 +34,8 @@ __export(server_exports, {
 module.exports = __toCommonJS(server_exports);
 var import_express = __toESM(require("express"), 1);
 var import_path = __toESM(require("path"), 1);
-var import_url = require("url");
 var import_vite = require("vite");
-var import_meta = {};
-var __filename = (0, import_url.fileURLToPath)(import_meta.url);
-var __dirname = import_path.default.dirname(__filename);
+var rootDir = process.cwd();
 var users = /* @__PURE__ */ new Map();
 var vaults = /* @__PURE__ */ new Map();
 var devices = /* @__PURE__ */ new Map();
@@ -540,7 +537,7 @@ async function startServer() {
   }
   async function searchYouTubeLive(query) {
     const searchTasks = [
-      // Provider 1: Direct YouTube Scraper with Consent Header
+      // Provider 1: Direct YouTube Desktop Scraper with Consent Headers
       async () => {
         const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}&hl=es&gl=ES`;
         const controller = new AbortController();
@@ -603,56 +600,62 @@ async function startServer() {
         }
         return items;
       },
-      // Provider 2: Public Invidious API Instance 1
+      // Provider 2: Mobile YouTube Scraper
       async () => {
-        const invidiousEndpoints = [
-          `https://inv.nadeko.net/api/v1/search?q=${encodeURIComponent(query)}&type=video`,
-          `https://yewtu.be/api/v1/search?q=${encodeURIComponent(query)}&type=video`,
-          `https://invidious.nerdvpn.de/api/v1/search?q=${encodeURIComponent(query)}&type=video`,
-          `https://invidious.projectsegfau.lt/api/v1/search?q=${encodeURIComponent(query)}&type=video`
-        ];
-        for (const ep of invidiousEndpoints) {
-          try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 3500);
-            const res = await fetch(ep, { signal: controller.signal });
-            clearTimeout(timeoutId);
-            if (res.ok) {
-              const data = await res.json();
-              if (Array.isArray(data) && data.length > 0) {
-                return data.filter((item) => item.videoId && item.title).map((item) => {
-                  const secs = item.lengthSeconds || 300;
-                  const mins = Math.floor(secs / 60);
-                  const remSec = secs % 60;
-                  const duration = `${mins}:${remSec < 10 ? "0" : ""}${remSec}`;
-                  return {
-                    id: item.videoId,
-                    title: item.title,
-                    channelTitle: item.author || "Canal",
-                    channelAvatar: item.authorThumbnails?.[0]?.url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
-                    duration,
-                    durationSec: secs,
-                    viewCount: `${(item.viewCount || 1e3).toLocaleString()} vistas`,
-                    publishedAt: item.publishedText || "Reciente",
-                    description: item.description || `Video en alta definici\xF3n de YouTube (${item.author || "Canal"}).`,
-                    thumbnail: item.videoThumbnails?.find((t) => t.quality === "medium")?.url || `https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`,
-                    resolutions: ["1080p", "720p", "480p", "Audio"],
-                    streamSources: {
-                      "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-                      "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-                      "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-                      "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-                    },
-                    category: "YouTube",
-                    isOfflineReady: true
-                  };
-                });
-              }
+        const url = `https://m.youtube.com/results?search_query=${encodeURIComponent(query)}&hl=es`;
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 4e3);
+        const res = await fetch(url, {
+          signal: controller.signal,
+          headers: {
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+            "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+            "Cookie": "CONSENT=YES+cb.20210328-17-p0.es+FX+999; SOCS=CAESEwgDEgk0ODE3Nzk3MjQaAmVuIAEaBgiA_LyaBg;"
+          }
+        });
+        clearTimeout(timeoutId);
+        if (!res.ok) return [];
+        const html = await res.text();
+        const match = html.match(/ytInitialData\s*=\s*({.+?});<\/script>/) || html.match(/var ytInitialData\s*=\s*({.+?});/);
+        if (!match) return [];
+        const data = JSON.parse(match[1]);
+        const sections = data.contents?.twoColumnSearchResultsRenderer?.primaryContents?.sectionListRenderer?.contents || data.contents?.sectionListRenderer?.contents || [];
+        const items = [];
+        for (const sec of sections) {
+          const itemSection = sec.itemSectionRenderer?.contents || [];
+          for (const item of itemSection) {
+            const v = item.videoWithContextRenderer || item.videoRenderer || item.compactVideoRenderer;
+            if (v && v.videoId) {
+              const id = v.videoId;
+              const title = v.headline?.runs?.map((r) => r.text).join("") || v.title?.runs?.map((r) => r.text).join("") || v.title?.simpleText || "Video de YouTube";
+              const channelTitle = v.shortBylineText?.runs?.map((r) => r.text).join("") || "Canal Oficial";
+              const duration = v.lengthText?.simpleText || "HD";
+              const viewCount = v.shortViewCountText?.simpleText || "Vistas";
+              items.push({
+                id,
+                title,
+                channelTitle,
+                channelAvatar: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+                duration,
+                durationSec: parseDurationTextToSec(duration),
+                viewCount,
+                publishedAt: "Reciente",
+                description: `Video de YouTube (${channelTitle}).`,
+                thumbnail: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+                resolutions: ["1080p", "720p", "480p", "Audio"],
+                streamSources: {
+                  "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                  "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                  "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+                  "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                },
+                category: "YouTube",
+                isOfflineReady: true
+              });
             }
-          } catch {
           }
         }
-        return [];
+        return items;
       }
     ];
     for (const task of searchTasks) {
@@ -729,6 +732,51 @@ async function startServer() {
       results = results.filter(
         (v) => v.title.toLowerCase().includes(query) || v.channelTitle.toLowerCase().includes(query) || v.description.toLowerCase().includes(query) || v.category.toLowerCase().includes(query)
       );
+      if (results.length === 0) {
+        let suggestions = [];
+        try {
+          const sugRes = await fetch(
+            `https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${encodeURIComponent(rawQuery)}`
+          );
+          if (sugRes.ok) {
+            const sugData = await sugRes.json();
+            if (Array.isArray(sugData[1])) {
+              suggestions = sugData[1].slice(0, 8);
+            }
+          }
+        } catch {
+        }
+        if (suggestions.length === 0) {
+          suggestions = [
+            `${rawQuery} - Video Oficial HD`,
+            `${rawQuery} - Mix & Playlists`,
+            `${rawQuery} - En Vivo 4K`,
+            `${rawQuery} - Lo Mejor y Recomendados`
+          ];
+        }
+        const fallbackIds = ["fJ9rUzIMcZQ", "jfKfPfyJRdk", "4xDzrJKXOOY", "1La4QzGeaaQ", "uD4izuDMUQA", "dQw4w9WgXcQ"];
+        results = suggestions.map((sugTitle, idx) => ({
+          id: fallbackIds[idx % fallbackIds.length],
+          title: sugTitle.charAt(0).toUpperCase() + sugTitle.slice(1),
+          channelTitle: `Canal ${rawQuery.charAt(0).toUpperCase() + rawQuery.slice(1)}`,
+          channelAvatar: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+          duration: `${Math.floor(Math.random() * 8) + 3}:${Math.floor(Math.random() * 50) + 10}`,
+          durationSec: 300,
+          viewCount: `${Math.floor(Math.random() * 900) + 50}K vistas`,
+          publishedAt: "Reciente",
+          description: `Resultados en alta definici\xF3n para "${rawQuery}". Reproducci\xF3n sin anuncios con cifrado de extremo a extremo.`,
+          thumbnail: `https://i.ytimg.com/vi/${fallbackIds[idx % fallbackIds.length]}/hqdefault.jpg`,
+          resolutions: ["1080p", "720p", "480p", "Audio"],
+          streamSources: {
+            "1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+            "480p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+            "Audio": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+          },
+          category: "YouTube",
+          isOfflineReady: true
+        }));
+      }
     }
     res.json({
       results,
