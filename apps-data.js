@@ -1144,7 +1144,7 @@ window.appData = [
             ja: "YouTubeは、ユーザーがビデオ、ライブ放送、プレイリストなどを含むコンテンツを視聴、アップロード、共有、ストリーミングできるオンラインビデオプラットフォームです。"
         },
         category: "multimedia",
-        link: "https://ifilex.github.io/WineBOX-Store/webapps/youtube/index.html"
+        link: "https://www.youtube.com"
     },
     {
         name: "Youtube Music",
