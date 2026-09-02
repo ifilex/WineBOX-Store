@@ -1144,7 +1144,7 @@ window.appData = [
             ja: "YouTubeは、ユーザーがビデオ、ライブ放送、プレイリストなどを含むコンテンツを視聴、アップロード、共有、ストリーミングできるオンラインビデオプラットフォームです。"
         },
         category: "multimedia",
-        link: "https://www.youtube.com"
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/youtube/index.html"
     },
     {
         name: "Youtube Music",
@@ -3559,6 +3559,24 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/oregon.html"
     },
+{
+  "name": "PixelCrush",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/pixelcrush.jpg",
+  "description": "PixelCrush es un juego de combinación de piezas en estilo 8-bit con temática de robots, donde cada movimiento estratégico activa estímulos neuronales y efectos visuales retro. Combina, puntúa y ejercita tu mente en este desafiante puzzle neuroestimulante.",
+  "description": {
+    "es": "PixelCrush es un juego de combinación de piezas en estilo 8-bit con temática de robots, donde cada movimiento estratégico activa estímulos neuronales y efectos visuales retro. Combina, puntúa y ejercita tu mente en este desafiante puzzle neuroestimulante.",
+    "en": "PixelCrush is a match-3 puzzle game with 8-bit style and robot theme, where every strategic move triggers neural stimuli and retro visual effects. Match, score, and exercise your brain in this challenging neuro-stimulating puzzle.",
+    "de": "PixelCrush ist ein Match-3-Rätselspiel im 8-Bit-Stil mit Roboter-Thema, bei dem jeder strategische Zug neuronale Reize und Retro-Visualeffekte auslöst. Kombiniere, erziele Punkte und trainiere dein Gehirn in diesem herausfordernden neurostimulierenden Puzzle.",
+    "fr": "PixelCrush est un jeu de puzzle match-3 en style 8-bit avec un thème de robots, où chaque mouvement stratégique déclenche des stimuli neuronaux et des effets visuels rétro. Combinez, marquez des points et exercez votre cerveau dans ce puzzle neurostimulant et stimulant.",
+    "it": "PixelCrush è un puzzle match-3 in stile 8-bit a tema robot, dove ogni mossa strategica attiva stimoli neurali ed effetti visivi retrò. Combina, fai punteggio e allenala tua mente in questo impegnativo puzzle neurostimolante.",
+    "pt": "PixelCrush é um jogo de puzzle match-3 em estilo 8-bit com tema de robôs, onde cada movimento estratégico ativa estímulos neurais e efeitos visuais retrô. Combine, pontue e exercite sua mente neste desafiante puzzle neuroestimulante.",
+    "ru": "PixelCrush — это игра-головоломка в стиле 8-bit на тему роботов, где каждый стратегический ход активирует нейронные стимулы и ретро-визуальные эффекты. Собирайте, набирайте очки и тренируйте свой мозг в этой сложной нейростимулирующей головоломке.",
+    "zh": "PixelCrush 是一款8位风格、以机器人为主题的消除类益智游戏，每一步策略性操作都会触发神经刺激和复古视觉效果。在这个具有神经刺激挑战性的益智游戏中，进行匹配、得分并锻炼您的大脑。",
+    "ja": "PixelCrushは、8ビットスタイルのロボットをテーマにしたマッチ3パズルゲームで、戦略的な動きごとに神経刺激とレトロなビジュアル効果が引き起こされます。組み合わせて、スコアを獲得し、この挑戦的な神経刺激パズルで脳を鍛えましょう。"
+  },
+  "category": "puzzle",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/pixelcrush/index.html"
+},
 {
   "name": "Robotrivia 8Bit",
   "image": "https://ifilex.github.io/WineBOX-Store/box/robotrivia.jpg",
