@@ -3574,7 +3574,7 @@ window.appData = [
     "zh": "PixelCrush 是一款8位风格、以机器人为主题的消除类益智游戏，每一步策略性操作都会触发神经刺激和复古视觉效果。在这个具有神经刺激挑战性的益智游戏中，进行匹配、得分并锻炼您的大脑。",
     "ja": "PixelCrushは、8ビットスタイルのロボットをテーマにしたマッチ3パズルゲームで、戦略的な動きごとに神経刺激とレトロなビジュアル効果が引き起こされます。組み合わせて、スコアを獲得し、この挑戦的な神経刺激パズルで脳を鍛えましょう。"
   },
-  "category": "puzzle",
+  "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/pixelcrush/index.html"
 },
 {
