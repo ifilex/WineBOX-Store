@@ -1996,7 +1996,7 @@ window.appData = [
             ja: "RetroArchは、エミュレータ、ゲームエンジン、メディアプレーヤー用のフロントエンドです。"
         },
         category: "utilities",
-        link: "https://web.libretro.com/"
+        link: "https://binbashbanana.github.io/webretro/"
     },
     {
         name: "SerenityOS",
