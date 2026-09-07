@@ -37,40 +37,6 @@ window.appData = [
         link: "https://drummyfish.gitlab.io/anarch/bin/web/anarch.html"
     },
     {
-        name: "Brutal: Paws of Fury",
-        image: "https://ifilex.github.io/WineBOX-Store/box/brutal-paws-of-fury_1.png",
-        description: "Brutal: Paws of Fury is a one-on-one fighting game in the style of Street Fighter and other similar fighting games from the 90's. ",
-        description: {
-            es: "Brutal: Paws of Fury es un juego de lucha uno contra uno al estilo de Street Fighter y otros juegos de lucha similares de los 90.",
-            de: "Brutal: Paws of Fury ist ein Eins-gegen-Eins-Kampfspiel im Stil von Street Fighter und anderen ähnlichen Kampfspielen der 90er Jahre.",
-            fr: "Brutal: Paws of Fury est un jeu de combat un-contre-un dans le style de Street Fighter et d'autres jeux de combat similaires des années 90.",
-            it: "Brutal: Paws of Fury è un picchiaduro uno contro uno nello stile di Street Fighter e altri giochi di lotta simili degli anni '90.",
-            pt: "Brutal: Paws of Fury é um jogo de luta um-contra-um no estilo de Street Fighter e outros jogos de luta semelhantes dos anos 90.",
-            ru: "Brutal: Paws of Fury — это файтинг один на один в стиле Street Fighter и других подобных игр 90-х годов.",
-            zh: "Brutal: Paws of Fury 是一款一对一的格斗游戏，风格类似于《街头霸王》和其他 90 年代类似的格斗游戏。",
-            ja: "Brutal: Paws of Furyは、『ストリートファイター』やその他の90年代の類似格闘ゲームスタイルの1対1の格闘ゲームです。"
-        },
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/brutal.html"
-    },
-    {
-        name: "Destruction Derby",
-        image: "https://ifilex.github.io/WineBOX-Store/box/destructionderby.png",
-        description: "Destruction Derby plays pretty much as you would expect: Crash your car into your opponents' cars, trying to cause as much damage to them as possible, while avoiding damage yourself.",
-        description: {
-            es: "Destruction Derby se juega más o menos como esperarías: Choca tu coche contra los coches de tus oponentes, tratando de causarles el mayor daño posible, mientras evitas dañarte a ti mismo.",
-            de: "Destruction Derby spielt sich so, wie Sie es erwarten würden: Lassen Sie Ihr Auto in die Autos Ihrer Gegner krachen, versuchen Sie, ihnen so viel Schaden wie möglich zuzufügen, während Sie selbst Schäden vermeiden.",
-            fr: "Destruction Derby se joue à peu près comme vous vous y attendriez : Écraser votre voiture contre les voitures de vos adversaires, en essayant de leur causer le plus de dégâts possible, tout en évitant les dégâts vous-même.",
-            it: "Destruction Derby si gioca più o meno come ci si aspetterebbe: Schianta la tua auto contro quelle degli avversari, cercando di causare loro il maggior danno possibile, mentre eviti i danni a te stesso.",
-            pt: "Destruction Derby joga mais ou menos como você esperaria: Bata seu carro nos carros de seus oponentes, tentando causar o máximo de dano possível a eles, enquanto evita danos a si mesmo.",
-            ru: "Destruction Derby играется примерно так, как вы ожидаете: Врежьтесь своей машиной в машины противников, пытаясь нанести им как можно больше урона, избегая при этом повреждений.",
-            zh: "Destruction Derby 的玩法和你预想的差不多：让你的车撞向对手的车，尽可能对他们造成最大的伤害，同时避免自己受到伤害。",
-            ja: "Destruction Derbyのプレイ方法はおおよそ予想通りです。自分の車を相手の車に衝突させ、自分はダメージを避けながら、相手に最大限のダメージを与えようとします。"
-        },
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/derby.html"
-    },
-    {
         name: "Diablo",
         image: "https://ifilex.github.io/WineBOX-Store/box/diablo.jpg",
         description: "Diablo is an action role-playing dungeon crawler video game series developed by Blizzard North and continued by Blizzard Entertainment after the North studio shut down in 2005.",
@@ -86,23 +52,6 @@ window.appData = [
         },
         category: "games",
         link: "https://d07riv.github.io/diabloweb/"
-    },
-    {
-        name: "Death Rally",
-        image: "https://ifilex.github.io/WineBOX-Store/box/deathrally.gif",
-        description: "Top-down racing games are sort of a sub-genre of the larger racing genre, and Death Rally is a good example of how to do things right. Sort of like Super Sprint with more destruction.",
-        description: {
-            es: "Los juegos de carreras en vista cenital son una especie de subgénero del género de carreras más amplio, y Death Rally es un buen ejemplo de cómo hacer las cosas bien. Algo así como Super Sprint con más destrucción.",
-            de: "Top-Down-Rennspiele sind eine Art Subgenre des größeren Rennspielgenres, und Death Rally ist ein gutes Beispiel dafür, wie man Dinge richtig macht. Ähnlich wie Super Sprint mit mehr Zerstörung.",
-            fr: "Les jeux de course vue du dessus sont une sorte de sous-genre du genre de course plus large, et Death Rally est un bon exemple de la façon de bien faire les choses. Un peu comme Super Sprint avec plus de destruction.",
-            it: "I giochi di corse dall'alto sono una sorta di sottogenere del più ampio genere delle corse, e Death Rally è un buon esempio di come fare le cose per bene. Un po' come Super Sprint con più distruzione.",
-            pt: "Jogos de corrida com visão de cima são uma espécie de subgênero do gênero de corrida mais amplo, e Death Rally é um bom exemplo de como fazer as coisas direito. Meio como Super Sprint com mais destruição.",
-            ru: "Гоночные игры с видом сверху — это своего рода поджанр более широкого гоночного жанра, и Death Rally — хороший пример того, как делать все правильно. Вроде Super Sprint, но с большими разрушениями.",
-            zh: "自上而下的赛车游戏算是更广泛的赛车游戏类型的一个子类型，而 Death Rally 就是一个如何做对事情的好例子。有点像《超级冲刺赛》，但破坏性更强。",
-            ja: "トップビューのレーシングゲームは、より広いレースジャンルの一種のサブジャンルであり、Death Rallyはそれを正しく行う方法の良い例です。より破壊的なSuper Sprintのようなものです。"
-        },
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/rally.html"
     },
 {
   "name": "Minecraft",
@@ -122,23 +71,6 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
 },
-    {
-        name: "One Must Fall 2097",
-        image: "https://ifilex.github.io/WineBOX-Store/box/omf2097.gif",
-        description: "One Must Fall 2097 is a futuristic one-on-one fighting game in the style of other popular fighting games of the time such as Street Fighter II, Mortal Kombat, and numerous others. ",
-        description: {
-            es: "One Must Fall 2097 es un juego de lucha futurista uno contra uno al estilo de otros juegos de lucha populares de la época como Street Fighter II, Mortal Kombat y muchos otros.",
-            de: "One Must Fall 2097 ist ein futuristisches Eins-gegen-Eins-Kampfspiel im Stile anderer beliebter Kampfspiele der damaligen Zeit wie Street Fighter II, Mortal Kombat und zahlreicher anderer.",
-            fr: "One Must Fall 2097 est un jeu de combat futuriste un-contre-un dans le style d'autres jeux de combat populaires de l'époque comme Street Fighter II, Mortal Kombat et de nombreux autres.",
-            it: "One Must Fall 2097 è un picchiaduro futuristico uno contro uno nello stile di altri popolari giochi di lotta dell'epoca come Street Fighter II, Mortal Kombat e numerosi altri.",
-            pt: "One Must Fall 2097 é um jogo de luta futurista um-contra-um no estilo de outros jogos de luta populares da época, como Street Fighter II, Mortal Kombat e muitos outros.",
-            ru: "One Must Fall 2097 — это футуристический файтинг один на один в стиле других популярных игр того времени, таких как Street Fighter II, Mortal Kombat и многих других.",
-            zh: "One Must Fall 2097 是一款未来主义的一对一格斗游戏，风格类似于当时其他流行的格斗游戏，如《街头霸王 II》、《真人快打》等。",
-            ja: "One Must Fall 2097は、『ストリートファイターII』、『モータルコンバット』など、当時の他の人気格闘ゲームスタイルの未来的な1対1の格闘ゲームです。"
-        },
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/omf.html"
-    },
 {
   "name": "Retrocraft",
   "image": "https://ifilex.github.io/WineBOX-Store/box/retrocraft.jpg",
@@ -175,6 +107,40 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/rivals/index.html"
 },
+    {
+        name: "Shadow Warrior",
+        image: "https://ifilex.github.io/WineBOX-Store/box/shadwar.gif",
+        description: "Created using the Build engine (the same software the Duke Nukem 3D was created with), Shadow Warrior was largely ignored upon its release due to the fact that Quake has been released the year before, with superior graphics and gameplay enhancements (true 3D environments).",
+       description: {
+            es: "Creado con el motor Build (el mismo software con el que se creó Duke Nukem 3D), Shadow Warrior fue ampliamente ignorado en su lanzamiento debido a que Quake se había lanzado el año anterior, con gráficos superiores y mejoras en la jugabilidad (entornos 3D reales).",
+            de: "Shadow Warrior wurde mit der Build-Engine erstellt (derselben Software, mit der Duke Nukem 3D erstellt wurde) und wurde bei seiner Veröffentlichung weitgehend ignoriert, da Quake im Jahr zuvor mit überlegener Grafik und Gameplay-Verbesserungen (echten 3D-Umgebungen) veröffentlicht worden war.",
+            fr: "Créé avec le moteur Build (le même logiciel avec lequel Duke Nukem 3D a été créé), Shadow Warrior a été largement ignoré lors de sa sortie car Quake était sorti l'année précédente, avec des graphismes supérieurs et des améliorations du gameplay (environnements 3D réels).",
+            it: "Creato con il motore Build (lo stesso software con cui è stato creato Duke Nukem 3D), Shadow Warrior fu ampiamente ignorato al momento del rilascio a causa del fatto che Quake era stato rilasciato l'anno prima, con grafica superiore e miglioramenti del gameplay (ambienti 3D reali).",
+            pt: "Criado com o mecanismo Build (o mesmo software com o qual Duke Nukem 3D foi criado), Shadow Warrior foi amplamente ignorado em seu lançamento devido ao fato de que Quake havia sido lançado no ano anterior, com gráficos superiores e melhorias na jogabilidade (ambientes 3D reais).",
+            ru: "Созданный с использованием движка Build (того же программного обеспечения, на котором был создан Duke Nukem 3D), Shadow Warrior был в значительной степени проигнорирован при выпуске из-за того, что Quake был выпущен годом ранее с превосходной графикой и улучшениями игрового процесса (настоящие 3D-среды).",
+            zh: "Shadow Warrior 使用 Build 引擎（与《毁灭公爵 3D》相同的软件）创建，但发布时在很大程度上被忽视，因为《雷神之锤》在前一年发布，具有更出色的图形和游戏性增强（真正的 3D 环境）。",
+            ja: "Buildエンジン（Duke Nukem 3Dの作成に使用されたのと同じソフトウェア）を使用して作成されたShadow Warriorは、Quakeが前年にリリースされ、優れたグラフィックとゲームプレイの強化（真の3D環境）を備えていたため、リリース時にほとんど無視されました。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/shadow.html"
+    },
+    {
+        name: "One Must Fall 2097",
+        image: "https://ifilex.github.io/WineBOX-Store/box/omf2097.gif",
+        description: "One Must Fall 2097 is a futuristic one-on-one fighting game in the style of other popular fighting games of the time such as Street Fighter II, Mortal Kombat, and numerous others. ",
+        description: {
+            es: "One Must Fall 2097 es un juego de lucha futurista uno contra uno al estilo de otros juegos de lucha populares de la época como Street Fighter II, Mortal Kombat y muchos otros.",
+            de: "One Must Fall 2097 ist ein futuristisches Eins-gegen-Eins-Kampfspiel im Stile anderer beliebter Kampfspiele der damaligen Zeit wie Street Fighter II, Mortal Kombat und zahlreicher anderer.",
+            fr: "One Must Fall 2097 est un jeu de combat futuriste un-contre-un dans le style d'autres jeux de combat populaires de l'époque comme Street Fighter II, Mortal Kombat et de nombreux autres.",
+            it: "One Must Fall 2097 è un picchiaduro futuristico uno contro uno nello stile di altri popolari giochi di lotta dell'epoca come Street Fighter II, Mortal Kombat e numerosi altri.",
+            pt: "One Must Fall 2097 é um jogo de luta futurista um-contra-um no estilo de outros jogos de luta populares da época, como Street Fighter II, Mortal Kombat e muitos outros.",
+            ru: "One Must Fall 2097 — это футуристический файтинг один на один в стиле других популярных игр того времени, таких как Street Fighter II, Mortal Kombat и многих других.",
+            zh: "One Must Fall 2097 是一款未来主义的一对一格斗游戏，风格类似于当时其他流行的格斗游戏，如《街头霸王 II》、《真人快打》等。",
+            ja: "One Must Fall 2097は、『ストリートファイターII』、『モータルコンバット』など、当時の他の人気格闘ゲームスタイルの未来的な1対1の格闘ゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/omf.html"
+    },
 {
   "name": "Voxel Minicraft",
   "image": "https://ifilex.github.io/WineBOX-Store/box/voxel.png",
@@ -1116,23 +1082,6 @@ window.appData = [
         link: "https://copy.sh/v86/?profile=serenity"
     },
     {
-        name: "Shadow Warrior",
-        image: "https://ifilex.github.io/WineBOX-Store/box/shadwar.gif",
-        description: "Created using the Build engine (the same software the Duke Nukem 3D was created with), Shadow Warrior was largely ignored upon its release due to the fact that Quake has been released the year before, with superior graphics and gameplay enhancements (true 3D environments).",
-       description: {
-            es: "Creado con el motor Build (el mismo software con el que se creó Duke Nukem 3D), Shadow Warrior fue ampliamente ignorado en su lanzamiento debido a que Quake se había lanzado el año anterior, con gráficos superiores y mejoras en la jugabilidad (entornos 3D reales).",
-            de: "Shadow Warrior wurde mit der Build-Engine erstellt (derselben Software, mit der Duke Nukem 3D erstellt wurde) und wurde bei seiner Veröffentlichung weitgehend ignoriert, da Quake im Jahr zuvor mit überlegener Grafik und Gameplay-Verbesserungen (echten 3D-Umgebungen) veröffentlicht worden war.",
-            fr: "Créé avec le moteur Build (le même logiciel avec lequel Duke Nukem 3D a été créé), Shadow Warrior a été largement ignoré lors de sa sortie car Quake était sorti l'année précédente, avec des graphismes supérieurs et des améliorations du gameplay (environnements 3D réels).",
-            it: "Creato con il motore Build (lo stesso software con cui è stato creato Duke Nukem 3D), Shadow Warrior fu ampiamente ignorato al momento del rilascio a causa del fatto che Quake era stato rilasciato l'anno prima, con grafica superiore e miglioramenti del gameplay (ambienti 3D reali).",
-            pt: "Criado com o mecanismo Build (o mesmo software com o qual Duke Nukem 3D foi criado), Shadow Warrior foi amplamente ignorado em seu lançamento devido ao fato de que Quake havia sido lançado no ano anterior, com gráficos superiores e melhorias na jogabilidade (ambientes 3D reais).",
-            ru: "Созданный с использованием движка Build (того же программного обеспечения, на котором был создан Duke Nukem 3D), Shadow Warrior был в значительной степени проигнорирован при выпуске из-за того, что Quake был выпущен годом ранее с превосходной графикой и улучшениями игрового процесса (настоящие 3D-среды).",
-            zh: "Shadow Warrior 使用 Build 引擎（与《毁灭公爵 3D》相同的软件）创建，但发布时在很大程度上被忽视，因为《雷神之锤》在前一年发布，具有更出色的图形和游戏性增强（真正的 3D 环境）。",
-            ja: "Buildエンジン（Duke Nukem 3Dの作成に使用されたのと同じソフトウェア）を使用して作成されたShadow Warriorは、Quakeが前年にリリースされ、優れたグラフィックとゲームプレイの強化（真の3D環境）を備えていたため、リリース時にほとんど無視されました。"
-        },
-        category: "games",
-        link: "https://ifilex.github.io/WineBOX-Store/shadow.html"
-    },
-    {
         name: "Shell",
         image: "https://ifilex.github.io/WineBOX-Store/box/shell.png",
         description: "Command Prompt is a WineBOX command-line interpreter that allows users to execute commands, automate tasks, and manage system functions through text-based input.",
@@ -1492,74 +1441,22 @@ window.appData = [
         category: "apps",
         link: "https://copy.sh/v86/?profile=xcom"
     },
-
     {
-        name: "Agi Tetris",
-        image: "https://ifilex.github.io/WineBOX-Store/box/AGIWiki_tetris1a.png",
-        description: "AGI Tetris is a version of Tetris released as part of the 0 MS-DOS Classic Games collection.",   
+        name: "Abuse",
+        image: "https://ifilex.github.io/WineBOX-Store/box/abuse.gif",
+        description: "Abuse is a great side-scrolling action game that uses a unique system to control your character.",   
         description: {
-            es: "AGI Tetris es una versión de Tetris lanzada como parte de la colección 0 MS-DOS Classic Games.",
-            de: "AGI Tetris ist eine Version von Tetris, die als Teil der 0 MS-DOS Classic Games-Sammlung veröffentlicht wurde.",
-            fr: "AGI Tetris est une version de Tetris publiée dans le cadre de la collection 0 MS-DOS Classic Games.",
-            it: "AGI Tetris è una versione di Tetris pubblicata come parte della collezione 0 MS-DOS Classic Games.",
-            pt: "AGI Tetris é uma versão do Tetris lançada como parte da coleção 0 MS-DOS Classic Games.",
-            ru: "AGI Tetris — это версия тетриса, выпущенная в составе коллекции 0 MS-DOS Classic Games.",
-            zh: "AGI Tetris 是作为 0 MS-DOS Classic Games 合集的一部分发布的俄罗斯方块版本。",
-            ja: "AGI Tetrisは、0 MS-DOS Classic Gamesコレクションの一部としてリリースされたバージョンのテトリスです。"
+            es: "Abuse es un gran juego de acción de desplazamiento lateral que utiliza un sistema único para controlar a tu personaje.",
+            de: "Abuse ist ein großartiges Side-Scrolling-Actionspiel, das ein einzigartiges System zur Steuerung deines Charakters verwendet.",
+            fr: "Abuse est un excellent jeu d'action à défilement latéral qui utilise un système unique pour contrôler votre personnage.",
+            it: "Abuse è un ottimo gioco d'azione a scorrimento laterale che utilizza un sistema unico per controllare il tuo personaggio.",
+            pt: "Abuse é um ótimo jogo de ação de rolagem lateral que usa um sistema único para controlar seu personagem.",
+            ru: "Abuse — это отличный экшн с боковой прокруткой, в котором используется уникальная система управления персонажем.",
+            zh: "Abuse 是一款出色的横向卷轴动作游戏，使用独特的系统来控制你的角色。",
+            ja: "Abuseは、ユニークなシステムでキャラクターを操作する素晴らしい横スクロールアクションゲームです。"
         },
         category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/tetris.html"
-    },
-    {
-        name: "Amazon: Guardian of Eden",
-        image: "https://ifilex.github.io/WineBOX-Store/box/amdemo.png",
-        description: "Amazon is a graphical point-and-click adventure game using a similar engine to that seen in later Sierra and Lucasarts releases.",
-        description: {
-            es: "Amazon es un juego de aventura gráfico point-and-click que utiliza un motor similar al visto en lanzamientos posteriores de Sierra y Lucasarts.",
-            de: "Amazon ist ein grafisches Point-and-Click-Adventure, das eine ähnliche Engine verwendet wie in späteren Veröffentlichungen von Sierra und Lucasarts.",
-            fr: "Amazon est un jeu d'aventure graphique pointer-cliquer utilisant un moteur similaire à celui des versions ultérieures de Sierra et Lucasarts.",
-            it: "Amazon è un'avventura grafica punta e clicca che utilizza un motore simile a quello visto nelle successive versioni di Sierra e Lucasarts.",
-            pt: "Amazon é um jogo de aventura gráfica point-and-click que usa um mecanismo semelhante ao visto em lançamentos posteriores da Sierra e Lucasarts.",
-            ru: "Amazon — это графическая приключенческая игра point-and-click, использующая движок, похожий на тот, что был в более поздних релизах Sierra и Lucasarts.",
-            zh: "Amazon 是一款图形化的点击式冒险游戏，使用了与 Sierra 和 Lucasarts 后期版本类似的引擎。",
-            ja: "Amazonは、SierraやLucasartsの後期リリースで見られたものと同様のエンジンを使用したグラフィカルなポイントアンドクリックアドベンチャーゲームです。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/amdemo.html"
-    },
-    {
-        name: "Azrael Tear",
-        image: "https://ifilex.github.io/WineBOX-Store/box/atdemo.png",
-        description: "Azrael's Tear is an interesting 3D first-person perspective adventure game. It plays similarly to graphical adventure games, where you collect items in your inventory and use them to progress.",
-        description: {
-            es: "Azrael's Tear es un interesante juego de aventura en primera persona en 3D. Se juega de manera similar a los juegos de aventura gráfica, donde recoges objetos en tu inventario y los usas para progresar.",
-            de: "Azrael's Tear ist ein interessantes 3D-Adventure aus der Egoperspektive. Es spielt sich ähnlich wie grafische Adventures, bei denen du Gegenstände in deinem Inventar sammelst und sie zum Fortschritt verwendest.",
-            fr: "Azrael's Tear est un jeu d'aventure intéressant à la première personne en 3D. Il se joue de manière similaire aux jeux d'aventure graphiques, où vous collectez des objets dans votre inventaire et les utilisez pour progresser.",
-            it: "Azrael's Tear è un'interessante avventura in prima persona 3D. Si gioca in modo simile ai giochi di avventura grafica, in cui raccogli oggetti nel tuo inventario e li usi per progredire.",
-            pt: "Azrael's Tear é um interessante jogo de aventura em primeira pessoa em 3D. Ele é jogado de forma semelhante aos jogos de aventura gráfica, onde você coleta itens em seu inventário e os usa para progredir.",
-            ru: "Azrael's Tear — это интересная приключенческая игра от первого лица в 3D. Она играется аналогично графическим приключенческим играм, где вы собираете предметы в инвентаре и используете их для продвижения.",
-            zh: "Azrael's Tear 是一款有趣的第一人称 3D 视角冒险游戏。它的玩法类似于图形冒险游戏，你在库存中收集物品并使用它们来推进游戏。",
-            ja: "Azrael's Tearは、興味深い3Dファーストパーソンパースペクティブのアドベンチャーゲームです。アイテムをインベントリに集めて進行に使用するグラフィカルアドベンチャーゲームと同様にプレイします。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/atdem.html"
-    },
-    {
-        name: "Baryon",
-        image: "https://ifilex.github.io/WineBOX-Store/box/baryon.jpg",
-        description: "Baryon is a straightforward vertical shooter which features a smooth graphical engine, a short digital sound track and various types of enemies.",
-        description: {
-            es: "Baryon es un shooter vertical sencillo que presenta un motor gráfico fluido, una banda sonora digital corta y varios tipos de enemigos.",
-            de: "Baryon ist ein einfacher vertikaler Shooter mit einer flüssigen Grafik-Engine, einem kurzen digitalen Soundtrack und verschiedenen Arten von Feinden.",
-            fr: "Baryon est un shoot them up vertical simple qui dispose d'un moteur graphique fluide, d'une courte bande sonore numérique et de différents types d'ennemis.",
-            it: "Baryon è uno sparatutto verticale semplice con un motore grafico fluido, una breve colonna sonora digitale e vari tipi di nemici.",
-            pt: "Baryon é um shooter vertical simples que possui um mecanismo gráfico suave, uma curta trilha sonora digital e vários tipos de inimigos.",
-            ru: "Baryon — это простой вертикальный шутер с плавным графическим движком, коротким цифровым саундтреком и различными типами врагов.",
-            zh: "Baryon 是一款简单的垂直射击游戏，具有流畅的图形引擎、简短的数字配乐和各种类型的敌人。",
-            ja: "Baryonは、スムーズなグラフィックエンジン、短いデジタルサウンドトラック、様々なタイプの敵を特徴とする、ストレートな縦スクロールシューティングゲームです。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/baryon.html"
+        link: "https://ifilex.github.io/WineBOX-Store/abuse.html"
     },
     {
         name: "Beats Of Rage",
@@ -1577,74 +1474,6 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/ber.html"
-    },
-    {
-        name: "Bust a Move 2",
-        image: "https://ifilex.github.io/WineBOX-Store/box/bam2.png",
-        description: "Bust-a-Move (aka Puzzle Bobble) is an extremely popular series of bubble-matching games which combine a puzzle game's need for strategy with the quick-thinking and reflexes needed for success in an action game.",
-        description: {
-            es: "Bust-a-Move (también conocido como Puzzle Bobble) es una serie extremadamente popular de juegos de emparejamiento de burbujas que combinan la necesidad de estrategia de un juego de rompecabezas con el pensamiento rápido y los reflejos necesarios para tener éxito en un juego de acción.",
-            de: "Bust-a-Move (auch bekannt als Puzzle Bobble) ist eine äußerst beliebte Serie von Bubble-Matching-Spielen, die das strategische Denken eines Puzzlespiels mit dem schnellen Denken und den Reflexen kombiniert, die für den Erfolg in einem Actionspiel erforderlich sind.",
-            fr: "Bust-a-Move (alias Puzzle Bobble) est une série extrêmement populaire de jeux d'association de bulles qui combinent le besoin de stratégie d'un jeu de réflexion avec la réflexion rapide et les réflexes nécessaires pour réussir dans un jeu d'action.",
-            it: "Bust-a-Move (noto anche come Puzzle Bobble) è una serie estremamente popolare di giochi di abbinamento di bolle che combinano la necessità di strategia di un puzzle game con il pensiero rapido e i riflessi necessari per il successo in un gioco d'azione.",
-            pt: "Bust-a-Move (também conhecido como Puzzle Bobble) é uma série extremamente popular de jogos de combinar bolhas que combinam a necessidade de estratégia de um jogo de quebra-cabeça com o pensamento rápido e reflexos necessários para o sucesso em um jogo de ação.",
-            ru: "Bust-a-Move (также известная как Puzzle Bobble) — это чрезвычайно популярная серия игр на сопоставление пузырьков, которая сочетает в себе потребность в стратегии, присущую головоломкам, с быстрым мышлением и рефлексами, необходимыми для успеха в экшн-игре.",
-            zh: "Bust-a-Move（又称 Puzzle Bobble）是一个非常受欢迎的泡泡配对游戏系列，它结合了益智游戏对策略的需求和动作游戏成功所需的快速思维和反应能力。",
-            ja: "Bust-a-Move（パズルボブルとしても知られる）は、パズルゲームの戦略性と、アクションゲームの成功に必要な素早い思考と反射神経を組み合わせた、非常に人気のあるバブルマッチングゲームシリーズです。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/bam2.html"
-    },
-    {
-        name: "CD-MAN",
-        image: "https://ifilex.github.io/WineBOX-Store/box/cdman.jpg",
-        description: "CD-Man features 5 different worlds to pass each having nicely-drawn graphics in high-res EGA mode and therefore a new character.",
-        description: {
-            es: "CD-Man presenta 5 mundos diferentes para pasar, cada uno con gráficos bien dibujados en modo EGA de alta resolución y, por lo tanto, un nuevo personaje.",
-            de: "CD-Man bietet 5 verschiedene Welten zu durchlaufen, jede mit schön gezeichneten Grafiken im hochauflösenden EGA-Modus und daher mit einem neuen Charakter.",
-            fr: "CD-Man propose 5 mondes différents à parcourir, chacun avec des graphismes bien dessinés en mode EGA haute résolution et donc un nouveau personnage.",
-            it: "CD-Man presenta 5 mondi diversi da superare, ognuno con grafica ben disegnata in modalità EGA ad alta risoluzione e quindi un nuovo personaggio.",
-            pt: "CD-Man apresenta 5 mundos diferentes para passar, cada um com gráficos bem desenhados em modo EGA de alta resolução e, portanto, um novo personagem.",
-            ru: "CD-Man предлагает 5 различных миров для прохождения, каждый с красивой графикой в высокоразрешающем режиме EGA и, следовательно, новым персонажем.",
-            zh: "CD-Man 有 5 个不同的世界需要通关，每个世界都具有高分辨率 EGA 模式下的精美图形，因此也是一个新角色。",
-            ja: "CD-Manは、高解像度EGAモードで美しく描かれたグラフィックを持ち、それぞれ異なる新しいキャラクターが登場する5つの異なる世界を特徴としています。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/cdman.html"
-    },
-    {
-        name: "Chompsters",
-        image: "https://ifilex.github.io/WineBOX-Store/box/chompsters.gif",
-        description: "A very fun Pacman type game that expands on the original Pacman idea by adding different characters to play",
-        description: {
-            es: "Un juego tipo Pacman muy divertido que amplía la idea original de Pacman al agregar diferentes personajes para jugar.",
-            de: "Ein sehr lustiges Pacman-ähnliches Spiel, das die ursprüngliche Pacman-Idee erweitert, indem es verschiedene Charaktere zum Spielen hinzufügt.",
-            fr: "Un jeu de type Pacman très amusant qui développe l'idée originale de Pacman en ajoutant différents personnages à jouer.",
-            it: "Un gioco di tipo Pacman molto divertente che espande l'idea originale di Pacman aggiungendo diversi personaggi con cui giocare.",
-            pt: "Um jogo do tipo Pacman muito divertido que expande a ideia original do Pacman adicionando diferentes personagens para jogar.",
-            ru: "Очень веселая игра типа Pacman, которая расширяет оригинальную идею Pacman, добавляя разных персонажей для игры.",
-            zh: "一款非常有趣的吃豆人类型游戏，通过添加不同的可玩角色来扩展原始吃豆人的概念。",
-            ja: "オリジナルのパックマンのアイデアを拡張し、プレイ可能な異なるキャラクターを追加した非常に楽しいパックマンタイプのゲームです。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/chom.html"
-    },
-    {
-        name: "Cristal Caves",
-        image: "https://ifilex.github.io/WineBOX-Store/box/Crystal_Caves_CD_Cover.jpg",
-        description: "Crystal Caves is a side-scrolling platform game developed by Apogee Software for MS-DOS, in which the player controls Mylo on a treasure hunt that goes wrong and leads him into a world of alien technology, traps, and creatures.",
-        description: {
-            es: "Crystal Caves es un juego de plataformas de desplazamiento lateral desarrollado por Apogee Software para MS-DOS, en el que el jugador controla a Mylo en una búsqueda del tesoro que sale mal y lo lleva a un mundo de tecnología alienígena, trampas y criaturas.",
-            de: "Crystal Caves ist ein Side-Scrolling-Plattformspiel, das von Apogee Software für MS-DOS entwickelt wurde. Der Spieler steuert Mylo auf einer Schatzsuche, die schiefgeht und ihn in eine Welt voller außerirdischer Technologie, Fallen und Kreaturen führt.",
-            fr: "Crystal Caves est un jeu de plateforme à défilement latéral développé par Apogee Software pour MS-DOS, dans lequel le joueur contrôle Mylo lors d'une chasse au trésor qui tourne mal et le mène dans un monde de technologies extraterrestres, de pièges et de créatures.",
-            it: "Crystal Caves è un gioco a piattaforme a scorrimento laterale sviluppato da Apogee Software per MS-DOS, in cui il giocatore controlla Mylo in una caccia al tesoro che va male e lo porta in un mondo di tecnologia aliena, trappole e creature.",
-            pt: "Crystal Caves é um jogo de plataforma de rolagem lateral desenvolvido pela Apogee Software para MS-DOS, no qual o jogador controla Mylo em uma caça ao tesouro que dá errado e o leva a um mundo de tecnologia alienígena, armadilhas e criaturas.",
-            ru: "Crystal Caves — это платформенная игра с боковой прокруткой, разработанная Apogee Software для MS-DOS, в которой игрок управляет Майло в охоте за сокровищами, которая идет не по плану и приводит его в мир инопланетных технологий, ловушек и существ.",
-            zh: "Crystal Caves（水晶洞穴）是由 Apogee Software 为 MS-DOS 开发的一款横向卷轴平台游戏，玩家控制 Mylo 进行一次寻宝，但出了差错，将他带到了一个充满外星技术、陷阱和生物的世界。",
-            ja: "Crystal Cavesは、Apogee SoftwareがMS-DOS向けに開発した横スクロールプラットフォームゲームで、プレイヤーはMyloを操作して宝探しをしますが、それは失敗に終わり、彼をエイリアンの技術、罠、生き物の世界へと導きます。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/crystal.html"
     },
     {
         name: "Hextris",
@@ -1731,23 +1560,6 @@ window.appData = [
         },      
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/ski.html"
-    },
-    {
-        name: "Space Invaders",
-        image: "https://ifilex.github.io/WineBOX-Store/box/spaceinvaders.png",
-        description: "Icónico juego arcade de disparos espaciales.",
-        description: {
-            es: "Icónico juego arcade de disparos espaciales.",
-            de: "Ikoniches Arkadenspiel für Weltraumshooter.",
-            fr: "Jeu d'arcade emblématique de tir spatial.",
-            it: "Iconico gioco arcade di sparatorie spaziali.",
-            pt: "Icônico jogo de arcade de tiro espacial.",
-            ru: "Культовая аркадная игра про космические стрелялки.",
-            zh: "标志性的太空射击街机游戏。",
-            ja: "象徴的なスペースシューティングアーケードゲーム。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/spaceinvaders.html"
     },
     {
         name: "Stargunner",
