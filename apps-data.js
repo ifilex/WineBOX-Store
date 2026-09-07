@@ -37,6 +37,23 @@ window.appData = [
         link: "https://drummyfish.gitlab.io/anarch/bin/web/anarch.html"
     },
     {
+        name: "Black Stone",
+        image: "https://ifilex.github.io/WineBOX-Store/box/blake.gif",
+        description: "Not that bad at all. This is a game that Apogee released between Wolfenstein 3D and Rise of the Triad. ",
+        description: {
+            es: "No está nada mal. Este es un juego que Apogee lanzó entre Wolfenstein 3D y Rise of the Triad.",
+            de: "Gar nicht so schlecht. Dies ist ein Spiel, das Apogee zwischen Wolfenstein 3D und Rise of the Triad veröffentlicht hat.",
+            fr: "Pas mal du tout. C'est un jeu qu'Apogee a publié entre Wolfenstein 3D et Rise of the Triad.",
+            it: "Non male per niente. Questo è un gioco che Apogee ha pubblicato tra Wolfenstein 3D e Rise of the Triad.",
+            pt: "Nada mal. Este é um jogo que a Apogee lançou entre Wolfenstein 3D e Rise of the Triad.",
+            ru: "Совсем неплохо. Это игра, которую Apogee выпустила между Wolfenstein 3D и Rise of the Triad.",
+            zh: "一点也不差。这是 Apogee 在《德军总部 3D》和《升刚》之间发布的一款游戏。",
+            ja: "決して悪くありません。これはApogeeがWolfenstein 3DとRise of the Triadの間にリリースしたゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/bstone.html"
+    },
+    {
         name: "Diablo",
         image: "https://ifilex.github.io/WineBOX-Store/box/diablo.jpg",
         description: "Diablo is an action role-playing dungeon crawler video game series developed by Blizzard North and continued by Blizzard Entertainment after the North studio shut down in 2005.",
@@ -1718,6 +1735,23 @@ window.appData = [
   },
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/chichon/index.html"
+    },
+    {
+        name: "Command & Conquer",
+        image: "https://ifilex.github.io/WineBOX-Store/box/command.jpg",
+        description: "Wage real-time war in more ways than ever with a modern and near-future arsenal. Command the powerful US forces.",
+        description: {
+            es: "Libra una guerra en tiempo real de más formas que nunca con un arsenal moderno y casi futurista. Comanda las poderosas fuerzas estadounidenses.",
+            de: "Führen Sie Echtzeitkrieg auf mehr Arten denn je mit einer modernen und nahen zukünftigen Waffenarsenal. Befehlen Sie die mächtigen US-Streitkräfte.",
+            fr: "Menez une guerre en temps réel de plus de façons que jamais avec un arsenal moderne et de futur proche. Commandez les puissantes forces américaines.",
+            it: "Conduci una guerra in tempo reale in più modi che mai con un arsenale moderno e prossimo futuro. Comanda le potenti forze statunitensi.",
+            pt: "Trave guerra em tempo real de mais maneiras do que nunca com um arsenal moderno e de futuro próximo. Comande as poderosas forças norte-americanas.",
+            ru: "Ведите войну в реальном времени большим количеством способов, чем когда-либо, с современным и ближайшим будущим арсеналом. Командуйте мощными силами США.",
+            zh: "使用现代和近未来的武器库，以比以往更多的方式进行实时战争。指挥强大的美军部队。",
+            ja: "近代的で近未来的な兵器群を使い、これまでにない多様な方法でリアルタイム戦争を戦いましょう。強力な米軍を指揮します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/commandconquer.html"
     },
    {
   "name": "Damas",
