@@ -18,7 +18,57 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/99noches/index.html"
 },
-
+    {
+        name: "Absence",
+        image: "https://ifilex.github.io/WineBOX-Store/box/absence.png",
+        description: "Absence is a mod (total conversion, I would say) of Wolfenstein 3D. ",
+        description: {
+            es: "Absence es un mod (conversión total, diría yo) de Wolfenstein 3D.",
+            de: "Absence ist ein Mod (Total Conversion, würde ich sagen) von Wolfenstein 3D.",
+            fr: "Absence est un mod (conversion totale, je dirais) de Wolfenstein 3D.",
+            it: "Absence è una mod (conversione totale, direi) di Wolfenstein 3D.",
+            pt: "Absence é um mod (conversão total, eu diria) de Wolfenstein 3D.",
+            ru: "Absence — это мод (полная конверсия, я бы сказал) для Wolfenstein 3D.",
+            zh: "Absence 是《德军总部 3D》的一个模组（可以说是完全转换）。",
+            ja: "AbsenceはWolfenstein 3DのMod（トータルコンバージョン）です。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/absence.html"
+    },
+    {
+        name: "Alien Cabal",
+        image: "https://ifilex.github.io/WineBOX-Store/box/aliencabal.jpg",
+        description: "Alien Cabal is a 1997 first-person shooter published by QASoft and consisting of ten levels. Its distribution package also contains the vedit level editor.",
+        description: {
+            es: "Alien Cabal es un shooter en primera persona de 1997 publicado por QASoft y que consta de diez niveles. Su paquete de distribución también contiene el editor de niveles vedit.",
+            de: "Alien Cabal ist ein 1997 von QASoft veröffentlichter First-Person-Shooter mit zehn Levels. Das Vertriebspaket enthält auch den Level-Editor vedit.",
+            fr: "Alien Cabal est un jeu de tir à la première personne de 1997 publié par QASoft et composé de dix niveaux. Son package de distribution contient également l'éditeur de niveaux vedit.",
+            it: "Alien Cabal è uno sparatutto in prima persona del 1997 pubblicato da QASoft e composto da dieci livelli. Il suo pacchetto di distribuzione contiene anche l'editor di livelli vedit.",
+            pt: "Alien Cabal é um jogo de tiro em primeira pessoa de 1997 publicado pela QASoft e composto por dez níveis. Seu pacote de distribuição também contém o editor de níveis vedit.",
+            ru: "Alien Cabal — это шутер от первого лица 1997 года, выпущенный QASoft и состоящий из десяти уровней. В его дистрибутив также входит редактор уровней vedit.",
+            zh: "Alien Cabal 是 1997 年由 QASoft 发行的第一人称射击游戏，包含十个关卡。其发行包中还包含 vedit 关卡编辑器。",
+            ja: "Alien Cabalは、QASoftが1997年に発売した10レベルのファーストパーソン・シューティングゲームです。配布パッケージにはレベルエディタ「vedit」も含まれています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/aliencabal.html"
+    },
+    {
+        name: "Alien Trilogy",
+        image: "https://ifilex.github.io/WineBOX-Store/box/trilogy.png",
+        description: "Alien Trilogy is a FPS based on the popular movie series that was released the same year as Quake.",
+        description: {
+            es: "Alien Trilogy es un FPS basado en la popular serie de películas que se lanzó el mismo año que Quake.",
+            de: "Alien Trilogy ist ein Ego-Shooter, der auf der beliebten Filmreihe basiert und im selben Jahr wie Quake veröffentlicht wurde.",
+            fr: "Alien Trilogy est un FPS basé sur la célèbre série de films, sorti la même année que Quake.",
+            it: "Alien Trilogy è uno sparatutto in prima persona basato sulla famosa serie di film, uscito lo stesso anno di Quake.",
+            pt: "Alien Trilogy é um FPS baseado na famosa série de filmes, lançado no mesmo ano que Quake.",
+            ru: "Alien Trilogy — это шутер от первого лица, основанный на популярной серии фильмов, выпущенный в том же году, что и Quake.",
+            zh: "Alien Trilogy 是一款基于同名热门电影系列的第一人称射击游戏，与《雷神之锤》同年发布。",
+            ja: "Alien Trilogyは、人気映画シリーズを基にしたFPSで、Quakeと同じ年にリリースされました。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/alien.html"
+    },
     {
         name: "Anarch",
         image: "https://ifilex.github.io/WineBOX-Store/box/riced.png",
@@ -37,6 +87,108 @@ window.appData = [
         link: "https://drummyfish.gitlab.io/anarch/bin/web/anarch.html"
     },
     {
+        name: "Astro3D",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Astro3D.png",
+        description: "Sometimes described as Asteroids on steroids, Astro3D is a 3D space shooter in which your job is to clear a field of debris from a massive three-dimensional space.",
+        description: {
+            es: "A veces descrito como Asteroids con esteroides, Astro3D es un shooter espacial 3D en el que tu trabajo es limpiar un campo de escombros de un enorme espacio tridimensional.",
+            de: "Manchmal als Asteroids auf Steroiden beschrieben, ist Astro3D ein 3D-Weltraum-Shooter, bei dem es Ihre Aufgabe ist, ein Feld von Trümmern aus einem massiven dreidimensionalen Raum zu räumen.",
+            fr: "Parfois décrit comme Asteroids sous stéroïdes, Astro3D est un jeu de tir spatial 3D dans lequel votre travail consiste à nettoyer un champ de débris d'un immense espace tridimensionnel.",
+            it: "A volte descritto come Asteroids sotto steroidi, Astro3D è uno sparatutto spaziale 3D in cui il tuo compito è ripulire un campo di detriti da un enorme spazio tridimensionale.",
+            pt: "Às vezes descrito como Asteroids com esteroides, Astro3D é um jogo de tiro espacial 3D no qual seu trabalho é limpar um campo de detritos de um enorme espaço tridimensional.",
+            ru: "Иногда описываемый как Asteroids на стероидах, Astro3D — это 3D-космический шутер, в котором ваша задача — очистить поле от обломков в огромном трехмерном пространстве.",
+            zh: "Astro3D 有时被描述为“打了类固醇的《爆破彗星》”，是一款 3D 太空射击游戏，您的工作是清除巨大三维空间中的碎片场。",
+            ja: "時に「ステロイドを飲んだAsteroids」と例えられるAstro3Dは、広大な3D空間から破片を取り除くことが目的の3Dスペースシューティングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/a3dsw100.html"
+    },
+    {
+        name: "Battle Arena Toshinden",
+        image: "https://ifilex.github.io/WineBOX-Store/box/toshinden.png",
+        description: "Battle Arena Toshinden is a well-known Playstation 1 3D fighting game. It was one of the first games I bought for my PS1.",
+        description: {
+            es: "Battle Arena Toshinden es un conocido juego de lucha en 3D de PlayStation 1. Fue uno de los primeros juegos que compré para mi PS1.",
+            de: "Battle Arena Toshinden ist ein bekanntes 3D-Kampfspiel für die PlayStation 1. Es war eines der ersten Spiele, die ich für meine PS1 gekauft habe.",
+            fr: "Battle Arena Toshinden est un célèbre jeu de combat 3D sur PlayStation 1. C'était l'un des premiers jeux que j'ai achetés pour ma PS1.",
+            it: "Battle Arena Toshinden è un famoso picchiaduro 3D per PlayStation 1. È stato uno dei primi giochi che ho comprato per la mia PS1.",
+            pt: "Battle Arena Toshinden é um conhecido jogo de luta 3D do PlayStation 1. Foi um dos primeiros jogos que comprei para o meu PS1.",
+            ru: "Battle Arena Toshinden — это известная 3D-файтинг-игра для PlayStation 1. Это была одна из первых игр, которые я купил для своей PS1.",
+            zh: "Battle Arena Toshinden 是 PlayStation 1 上一款著名的 3D 格斗游戏。它是我为我的 PS1 购买的首批游戏之一。",
+            ja: "Battle Arena Toshindenは、PlayStation 1用の有名な3D格闘ゲームです。私がPS1用に最初に購入したゲームの一つです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/tsd.html"
+    },
+    {
+        name: "Beneath a Steel Sky",
+        image: "https://ifilex.github.io/WineBOX-Store/box/60313c7fa88f998977e0852a5f661711.webp",
+        description: "Beneath a Steel Sky is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Beneath a Steel Sky on mobile. On DOS.Zone Beneath a Steel Sky available to play for free without registration.",
+        description: {
+            es: "Beneath a Steel Sky es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar a Beneath a Steel Sky en dispositivos móviles. En DOS.Zone, Beneath a Steel Sky está disponible para jugar gratis sin registro.",
+            de: "Beneath a Steel Sky ist ein berühmtes und vielgespieltes DOS-Spiel, das jetzt im Browser gespielt werden kann. Mit virtuellen mobilen Steuerelementen können Sie Beneath a Steel Sky auch auf dem Handy spielen. Auf DOS.Zone ist Beneath a Steel Sky kostenlos und ohne Registrierung spielbar.",
+            fr: "Beneath a Steel Sky est un jeu DOS célèbre et très joué, désormais disponible pour jouer dans le navigateur. Avec des commandes mobiles virtuelles, vous pouvez également jouer à Beneath a Steel Sky sur mobile. Sur DOS.Zone, Beneath a Steel Sky est disponible gratuitement sans inscription.",
+            it: "Beneath a Steel Sky è un famoso e giocatissimo gioco DOS ora disponibile per giocare nel browser. Con i controlli mobili virtuali puoi anche giocare a Beneath a Steel Sky su dispositivi mobili. Su DOS.Zone, Beneath a Steel Sky è disponibile gratuitamente senza registrazione.",
+            pt: "Beneath a Steel Sky é um famoso e muito jogado jogo de DOS que agora está disponível para jogar no navegador. Com controles móveis virtuais, você também pode jogar Beneath a Steel Sky no celular. No DOS.Zone, Beneath a Steel Sky está disponível para jogar gratuitamente sem registro.",
+            ru: "Beneath a Steel Sky — это известная и популярная DOS-игра, в которую теперь можно играть в браузере. С помощью виртуальных мобильных элементов управления вы также можете играть в Beneath a Steel Sky на мобильных устройствах. На DOS.Zone в Beneath a Steel Sky можно играть бесплатно без регистрации.",
+            zh: "Beneath a Steel Sky 是一款著名且玩得最多的 DOS 游戏，现在可以在浏览器中游玩。通过虚拟移动控件，您也可以在移动设备上玩《钢铁天空下》。在 DOS.Zone 上，Beneath a Steel Sky 可以免费游玩，无需注册。",
+            ja: "Beneath a Steel Skyは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもBeneath a Steel Skyをプレイできます。DOS.Zoneでは、Beneath a Steel Skyを登録なしで無料でプレイできます。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/beneath.html"
+    },
+    {
+        name: "Black Stone",
+        image: "https://ifilex.github.io/WineBOX-Store/box/blake.gif",
+        description: "Not that bad at all. This is a game that Apogee released between Wolfenstein 3D and Rise of the Triad. ",
+        description: {
+            es: "No está nada mal. Este es un juego que Apogee lanzó entre Wolfenstein 3D y Rise of the Triad.",
+            de: "Gar nicht so schlecht. Dies ist ein Spiel, das Apogee zwischen Wolfenstein 3D und Rise of the Triad veröffentlicht hat.",
+            fr: "Pas mal du tout. C'est un jeu qu'Apogee a publié entre Wolfenstein 3D et Rise of the Triad.",
+            it: "Non male per niente. Questo è un gioco che Apogee ha pubblicato tra Wolfenstein 3D e Rise of the Triad.",
+            pt: "Nada mal. Este é um jogo que a Apogee lançou entre Wolfenstein 3D e Rise of the Triad.",
+            ru: "Совсем неплохо. Это игра, которую Apogee выпустила между Wolfenstein 3D и Rise of the Triad.",
+            zh: "一点也不差。这是 Apogee 在《德军总部 3D》和《升刚》之间发布的一款游戏。",
+            ja: "決して悪くありません。これはApogeeがWolfenstein 3DとRise of the Triadの間にリリースしたゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/bstone.html"
+    },
+    {
+        name: "Blam!",
+        image: "https://ifilex.github.io/WineBOX-Store/box/bammachinehead.png",
+        description: "Blam! Machinehead is a first-person shooting game where you pilot a hovercraft around a strange world.",
+        description: {
+            es: "Blam! Machinehead es un juego de disparos en primera persona donde pilotas un aerodeslizador alrededor de un mundo extraño.",
+            de: "Blam! Machinehead ist ein Ego-Shooter, bei dem Sie ein Luftkissenfahrzeug durch eine seltsame Welt steuern.",
+            fr: "Blam! Machinehead est un jeu de tir à la première personne où vous pilotez un aéroglisseur dans un monde étrange.",
+            it: "Blam! Machinehead è uno sparatutto in prima persona in cui piloti un hovercraft in un mondo strano.",
+            pt: "Blam! Machinehead é um jogo de tiro em primeira pessoa onde você pilota um hovercraft em um mundo estranho.",
+            ru: "Blam! Machinehead — это шутер от первого лица, в котором вы управляете судном на воздушной подушке по странному миру.",
+            zh: "Blam! Machinehead 是一款第一人称射击游戏，您将驾驶气垫船在一个奇怪的世界中穿梭。",
+            ja: "Blam! Machineheadは、奇妙な世界でホバークラフトを操縦するファーストパーソン・シューティングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/blam.html"
+    },
+    {
+        name: "Blood",
+        image: "https://ifilex.github.io/WineBOX-Store/box/blood.jpg",
+        description: "Blood is a 3D first-person shooter video game developed by Monolith Productions and published by GT Interactive.",
+        description: {
+            es: "Blood es un videojuego de disparos en primera persona en 3D desarrollado por Monolith Productions y publicado por GT Interactive.",
+            de: "Blood ist ein 3D-Ego-Shooter-Videospiel, entwickelt von Monolith Productions und veröffentlicht von GT Interactive.",
+            fr: "Blood est un jeu de tir à la première personne en 3D développé par Monolith Productions et publié par GT Interactive.",
+            it: "Blood è un videogioco sparatutto in prima persona 3D sviluppato da Monolith Productions e pubblicato da GT Interactive.",
+            pt: "Blood é um jogo de tiro em primeira pessoa 3D desenvolvido pela Monolith Productions e publicado pela GT Interactive.",
+            ru: "Blood — это 3D-шутер от первого лица, разработанный Monolith Productions и изданный GT Interactive.",
+            zh: "Blood 是一款由 Monolith Productions 开发、GT Interactive 发行的 3D 第一人称射击游戏。",
+            ja: "Bloodは、Monolith Productionsが開発しGT Interactiveが発売した3Dファーストパーソン・シューティングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/blood.html"
+    },
+    {
         name: "Brutal: Paws of Fury",
         image: "https://ifilex.github.io/WineBOX-Store/box/brutal-paws-of-fury_1.png",
         description: "Brutal: Paws of Fury is a one-on-one fighting game in the style of Street Fighter and other similar fighting games from the 90's. ",
@@ -52,6 +204,91 @@ window.appData = [
         },
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/brutal.html"
+    },
+    {
+        name: "Chex Quest",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Chex_Quest-front_cover.png",
+        description: "Chex Quest is an English-language, MS-DOS first-person shooter game released in 1996, where players fight cereal-themed aliens called Flemoids",
+        description: {
+            es: "Chex Quest es un juego de disparos en primera persona en inglés para MS-DOS lanzado en 1996, donde los jugadores luchan contra aliens con temática de cereal llamados Flemoids.",
+            de: "Chex Quest ist ein englischsprachiger Ego-Shooter für MS-DOS, der 1996 veröffentlicht wurde und bei dem Spieler gegen Müsli-thematisierte Aliens namens Flemoids kämpfen.",
+            fr: "Chex Quest est un jeu de tir à la première personne en anglais pour MS-DOS sorti en 1996, où les joueurs combattent des aliens à thème céréalier appelés Flemoids.",
+            it: "Chex Quest è uno sparatutto in prima persona in lingua inglese per MS-DOS uscito nel 1996, in cui i giocatori combattono alieni a tema cereali chiamati Flemoidi.",
+            pt: "Chex Quest é um jogo de tiro em primeira pessoa em inglês para MS-DOS lançado em 1996, onde os jogadores lutam contra alienígenas com tema de cereal chamados Flemoids.",
+            ru: "Chex Quest — это англоязычный шутер от первого лица для MS-DOS, выпущенный в 1996 году, в котором игроки сражаются с инопланетянами в стиле хлопьев, называемыми Flemoids.",
+            zh: "Chex Quest 是一款 1996 年发布的英语 MS-DOS 第一人称射击游戏，玩家在其中与名为 Flemoids 的谷物主题外星人战斗。",
+            ja: "Chex Questは、1996年にリリースされた英語版MS-DOS用ファーストパーソン・シューティングゲームで、プレイヤーはFlemoidsと呼ばれるシリアルをテーマにしたエイリアンと戦います。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/chexquest.html"
+    },
+    {
+        name: "Cham: The Rift",
+        image: "https://ifilex.github.io/WineBOX-Store/box/chasm.png",
+        description: "This surprisingly good 3D shooting game (the demo is downloadable here) is, in terms of technical things like graphics, somewhere between DOOM and Quake.",
+        description: {
+            es: "Este sorprendentemente bueno juego de disparos en 3D (la demo se puede descargar aquí) se encuentra, en términos de aspectos técnicos como los gráficos, en algún punto entre DOOM y Quake.",
+            de: "Dieses überraschend gute 3D-Shooting-Spiel (die Demo kann hier heruntergeladen werden) liegt in Bezug auf technische Dinge wie die Grafik irgendwo zwischen DOOM und Quake.",
+            fr: "Ce jeu de tir 3D étonnamment bon (la démo est téléchargeable ici) se situe, en termes de choses techniques comme les graphismes, quelque part entre DOOM et Quake.",
+            it: "Questo sorprendentemente buon sparatutto 3D (la demo è scaricabile qui) si colloca, in termini di aspetti tecnici come la grafica, da qualche parte tra DOOM e Quake.",
+            pt: "Este jogo de tiro 3D surpreendentemente bom (a demonstração pode ser baixada aqui) está, em termos de aspectos técnicos como gráficos, em algum lugar entre DOOM e Quake.",
+            ru: "Эта удивительно хорошая 3D-стрелялка (демо можно скачать здесь) с точки зрения технических вещей, таких как графика, находится где-то между DOOM и Quake.",
+            zh: "这款出奇优秀的 3D 射击游戏（可在此处下载演示版）在图形等技术方面介于《毁灭战士》和《雷神之锤》之间。",
+            ja: "この驚くほど優れた3Dシューティングゲーム（デモはここからダウンロード可能）は、グラフィックなどの技術面において、DOOMとQuakeの中間あたりに位置します。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/cham.html"
+    },
+    {
+        name: "Chub Gam 3D",
+        image: "https://ifilex.github.io/WineBOX-Store/box/chubgam.gif",
+        description: "While this game has supposedly won many awards (listed on the ChubGamSoft website) I m not a huge fan. It plays well enough and has some interesting graphic/gameplay elements (like an actual storyline, and cutscenes to tell it)",
+        description: {
+            es: "Si bien se supone que este juego ha ganado muchos premios (enumerados en el sitio web de ChubGamSoft), no soy un gran fan. Juega lo suficientemente bien y tiene algunos elementos gráficos / de juego interesantes (como una historia real y escenas cinemáticas para contarla).",
+            de: "Obwohl dieses Spiel angeblich viele Preise gewonnen hat (aufgeführt auf der ChubGamSoft-Website), bin ich kein großer Fan. Es spielt sich gut genug und hat einige interessante Grafik-/Spielelemente (wie eine echte Handlung und Zwischensequenzen, um sie zu erzählen).",
+            fr: "Bien que ce jeu ait soi-disant remporté de nombreux prix (listés sur le site Web de ChubGamSoft), je ne suis pas un grand fan. Il se joue assez bien et possède des éléments graphiques / de gameplay intéressants (comme un scénario réel et des cinématiques pour le raconter).",
+            it: "Sebbene questo gioco abbia presumibilmente vinto molti premi (elencati sul sito web di ChubGamSoft), non ne sono un grande fan. Gioca abbastanza bene e ha alcuni elementi grafici / di gioco interessanti (come una trama reale e filmati per raccontarla).",
+            pt: "Embora este jogo supostamente tenha ganho muitos prêmios (listados no site da ChubGamSoft), não sou um grande fã. Ele funciona bem o suficiente e tem alguns elementos gráficos/de jogabilidade interessantes (como uma história real e cenas de corte para contá-la).",
+            ru: "Хотя эта игра якобы выиграла много наград (перечисленных на веб-сайте ChubGamSoft), я не большой поклонник. В нее достаточно хорошо играть, и в ней есть некоторые интересные графические/игровые элементы (например, настоящая сюжетная линия и кат-сцены, чтобы ее рассказать).",
+            zh: "虽然这款游戏据说赢得了许多奖项（列在 ChubGamSoft 网站上），但我并不是很喜欢它。它的可玩性还行，并有一些有趣的图形/游戏元素（比如实际的故事线和讲述故事的过场动画）。",
+            ja: "このゲームは多くの賞を受賞しているようですが（ChubGamSoftのウェブサイトに記載）、私はあまりファンではありません。十分にプレイ可能で、いくつかの興味深いグラフィック/ゲームプレイ要素（実際のストーリーラインやそれを伝えるカットシーンなど）があります。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/chubdc.html"
+    },
+    {
+        name: "Corridor 7: Alien Invasion",
+        image: "https://ifilex.github.io/WineBOX-Store/box/00_coverscreenshot.jpg",
+        description: "CORRIDOR 7: ALIEN INVASION By Capstone SoftwareTechnology Licensed From Id Software Creators Of WOLFENSTEIN 3D",
+        description: {
+            es: "CORRIDOR 7: ALIEN INVASION de Capstone Software Technology, con licencia de Id Software, creadores de WOLFENSTEIN 3D.",
+            de: "CORRIDOR 7: ALIEN INVASION von Capstone SoftwareTechnology, lizenziert von Id Software, den Machern von WOLFENSTEIN 3D.",
+            fr: "CORRIDOR 7: ALIEN INVASION par Capstone SoftwareTechnology sous licence d'Id Software, créateurs de WOLFENSTEIN 3D.",
+            it: "CORRIDOR 7: ALIEN INVASION di Capstone SoftwareTechnology con licenza di Id Software, creatori di WOLFENSTEIN 3D.",
+            pt: "CORRIDOR 7: ALIEN INVASION por Capstone SoftwareTechnology licenciado da Id Software, criadores do WOLFENSTEIN 3D.",
+            ru: "CORRIDOR 7: ALIEN INVASION от Capstone SoftwareTechnology по лицензии Id Software, создателей WOLFENSTEIN 3D.",
+            zh: "CORRIDOR 7: ALIEN INVASION，由 Capstone SoftwareTechnology 出品，获得《德军总部 3D》创作者 Id Software 的授权。",
+            ja: "CORRIDOR 7: ALIEN INVASIONは、Capstone SoftwareTechnologyがWOLFENSTEIN 3Dの製作者であるId Softwareからライセンスを受けて発売しました。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/corr7.html"
+    },
+    {
+        name: "Dark Forces",
+        image: "https://ifilex.github.io/WineBOX-Store/box/darkforces.gif",
+        description: "A demo version of one of a simply great 3D shooting game that I missed playing when it was originally released. Also known as Star Wars: Dark Forces, this 3D shooting game does not use the DOOM engine, it uses LucasArts' own engine which includes a few features not seen in DOOM. ",
+        description: {
+            es: "Una versión demo de un gran juego de disparos en 3D que me perdí cuando se lanzó originalmente. También conocido como Star Wars: Dark Forces, este juego de disparos en 3D no usa el motor DOOM, usa el motor propio de LucasArts que incluye algunas características no vistas en DOOM.",
+            de: "Eine Demoversion eines einfach großartigen 3D-Shooting-Spiels, das ich verpasst habe, als es ursprünglich veröffentlicht wurde. Auch bekannt als Star Wars: Dark Forces, verwendet dieses 3D-Shooting-Spiel nicht die DOOM-Engine, sondern die eigene Engine von LucasArts, die einige Funktionen enthält, die in DOOM nicht zu sehen sind.",
+            fr: "Une version démo d'un excellent jeu de tir 3D auquel je n'ai pas joué lors de sa sortie initiale. Également connu sous le nom de Star Wars: Dark Forces, ce jeu de tir 3D n'utilise pas le moteur DOOM, il utilise le propre moteur de LucasArts qui inclut quelques fonctionnalités non vues dans DOOM.",
+            it: "Una versione demo di un semplicemente grande sparatutto 3D che mi sono perso quando è stato originariamente rilasciato. Conosciuto anche come Star Wars: Dark Forces, questo sparatutto 3D non utilizza il motore DOOM, utilizza il motore proprietario di LucasArts che include alcune funzionalità non viste in DOOM.",
+            pt: "Uma versão demo de um simplesmente ótimo jogo de tiro 3D que perdi quando foi lançado originalmente. Também conhecido como Star Wars: Dark Forces, este jogo de tiro 3D não usa o mecanismo DOOM, ele usa o mecanismo próprio da LucasArts que inclui alguns recursos não vistos no DOOM.",
+            ru: "Демо-версия просто отличной 3D-стрелялки, которую я пропустил, когда она была первоначально выпущена. Также известная как Star Wars: Dark Forces, эта 3D-стрелялка не использует движок DOOM, она использует собственный движок LucasArts, который включает несколько функций, невиданных в DOOM.",
+            zh: "这是一款非常棒的 3D 射击游戏的演示版，我在它最初发布时错过了。这款 3D 射击游戏也被称为《星球大战：黑暗力量》，它不使用 DOOM 引擎，而是使用 LucasArts 自己的引擎，其中包含一些在 DOOM 中没有的功能。",
+            ja: "オリジナルリリース時にプレイし損ねた、非常に素晴らしい3Dシューティングゲームのデモ版です。Star Wars: Dark Forcesとしても知られるこの3Dシューティングゲームは、DOOMエンジンを使用せず、LucasArts独自のエンジンを使用しており、DOOMにはないいくつかの機能が含まれています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/darkforces.html"
     },
     {
         name: "Destruction Derby",
@@ -104,6 +341,176 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/rally.html"
     },
+    {
+        name: "Descent II",
+        image: "https://ifilex.github.io/WineBOX-Store/box/descent.jpg",
+        description: "Descent II is a 3D first-person shooter where players pilot a spaceship through underground mines filled with hostile robots. The game features six degrees of freedom, allowing full movement in 3D space, and focuses on exploration, combat, and rescuing hostages.",
+        description: {
+            es: "Descent II es un shooter en primera persona 3D donde los jugadores pilotan una nave espacial a través de minas subterráneas llenas de robots hostiles. El juego presenta seis grados de libertad, lo que permite un movimiento completo en el espacio 3D, y se centra en la exploración, el combate y el rescate de rehenes.",
+            de: "Descent II ist ein 3D-Ego-Shooter, bei dem die Spieler ein Raumschiff durch unterirdische Minen voller feindlicher Roboter steuern. Das Spiel bietet sechs Freiheitsgrade, die eine vollständige Bewegung im 3D-Raum ermöglichen, und konzentriert sich auf Erkundung, Kampf und die Rettung von Geiseln.",
+            fr: "Descent II est un jeu de tir à la première personne en 3D où les joueurs pilotent un vaisseau spatial à travers des mines souterraines remplies de robots hostiles. Le jeu dispose de six degrés de liberté, permettant un mouvement complet dans l'espace 3D, et se concentre sur l'exploration, le combat et le sauvetage d'otages.",
+            it: "Descent II è uno sparatutto in prima persona 3D in cui i giocatori pilotano un'astronave attraverso miniere sotterranee piene di robot ostili. Il gioco presenta sei gradi di libertà, consentendo il movimento completo nello spazio 3D, e si concentra sull'esplorazione, il combattimento e il salvataggio di ostaggi.",
+            pt: "Descent II é um jogo de tiro em primeira pessoa 3D onde os jogadores pilotam uma nave espacial através de minas subterrâneas cheias de robôs hostis. O jogo apresenta seis graus de liberdade, permitindo movimento total no espaço 3D, e se concentra em exploração, combate e resgate de reféns.",
+            ru: "Descent II — это 3D-шутер от первого лица, в котором игроки управляют космическим кораблем по подземным шахтам, заполненным враждебными роботами. Игра предлагает шесть степеней свободы, обеспечивая полное движение в 3D-пространстве, и фокусируется на исследовании, бою и спасении заложников.",
+            zh: "Descent II 是一款 3D 第一人称射击游戏，玩家驾驶宇宙飞船穿越充满敌对机器人的地下矿井。游戏具有六自由度，允许在 3D 空间中完全移动，并侧重于探索、战斗和解救人质。",
+            ja: "Descent IIは、敵対的なロボットであふれた地下鉱山を宇宙船で航行する3Dファーストパーソン・シューティングゲームです。6自由度を備え、3D空間での完全な移動が可能で、探索、戦闘、人質の救出に焦点を当てています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/descent.html"
+    },
+    {
+        name: "Doom",
+        image: "https://ifilex.github.io/WineBOX-Store/box/doom.jpg",
+        description: "*Doom* is a first-person shooter game released in 1993, developed by id Software. Players take on the role of a space marine battling hordes of demons and hellish creatures in a Martian base. It's renowned for its fast-paced action, groundbreaking graphics for its time, and for being one of the pioneers of the FPS genre.",
+        description: {
+            es: "*Doom* es un juego de disparos en primera persona lanzado en 1993, desarrollado por id Software. Los jugadores asumen el papel de un marine espacial que lucha contra hordas de demonios y criaturas infernales en una base marciana. Es reconocido por su acción trepidante, sus gráficos innovadores para su época y por ser uno de los pioneros del género FPS.",
+            de: "*Doom* ist ein 1993 von id Software entwickelter Ego-Shooter. Die Spieler schlüpfen in die Rolle eines Space Marines, der in einer Marsbasis gegen Horden von Dämonen und höllischen Kreaturen kämpft. Es ist bekannt für seine schnelle Action, seine für die Zeit bahnbrechende Grafik und dafür, einer der Pioniere des FPS-Genres zu sein.",
+            fr: "*Doom* est un jeu de tir à la première personne sorti en 1993, développé par id Software. Les joueurs incarnent un marine de l'espace combattant des hordes de démons et de créatures infernales dans une base martienne. Il est réputé pour son action rapide, ses graphismes révolutionnaires pour l'époque et pour être l'un des pionniers du genre FPS.",
+            it: "*Doom* è uno sparatutto in prima persona uscito nel 1993, sviluppato da id Software. I giocatori assumono il ruolo di un marine spaziale che combatte orde di demoni e creature infernali in una base marziana. È rinomato per la sua azione frenetica, la grafica innovativa per l'epoca e per essere uno dei pionieri del genere FPS.",
+            pt: "*Doom* é um jogo de tiro em primeira pessoa lançado em 1993, desenvolvido pela id Software. Os jogadores assumem o papel de um fuzileiro naval espacial lutando contra hordas de demônios e criaturas infernais em uma base marciana. É renomado por sua ação rápida, gráficos inovadores para a época e por ser um dos pioneiros do gênero FPS.",
+            ru: "*Doom* — это шутер от первого лица, выпущенный в 1993 году, разработанный id Software. Игроки берут на себя роль космического пехотинца, сражающегося с полчищами демонов и адских тварей на марсианской базе. Он славится своим динамичным действием, новаторской для своего времени графикой и тем, что является одним из пионеров жанра FPS.",
+            zh: "*Doom*（毁灭战士）是一款于 1993 年发布的第一人称射击游戏，由 id Software 开发。玩家扮演一名太空陆战队员，在火星基地上与成群的恶魔和地狱生物作战。它以其快节奏的动作、在当时开创性的图形以及作为 FPS 类型的先驱之一而闻名。",
+            ja: "*Doom*は、id Softwareが開発した1993年リリースのファーストパーソン・シューティングゲームです。プレイヤーは宇宙海兵隊員となり、火星基地で悪魔や地獄の生き物の大群と戦います。その高速なアクション、当時としては画期的なグラフィック、そしてFPSジャンルのパイオニアの一つであることで知られています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/doom.html"
+    },
+    {
+        name: "Duke Nukem 3D",
+        image: "https://ifilex.github.io/WineBOX-Store/box/duke3d.webp",
+        description: "Duke Nukem 3D is a first-person shooter video game developed by 3D Realms.",
+        description: {
+            es: "Duke Nukem 3D es un videojuego de disparos en primera persona desarrollado por 3D Realms.",
+            de: "Duke Nukem 3D ist ein Ego-Shooter-Videospiel, das von 3D Realms entwickelt wurde.",
+            fr: "Duke Nukem 3D est un jeu vidéo de tir à la première personne développé par 3D Realms.",
+            it: "Duke Nukem 3D è un videogioco sparatutto in prima persona sviluppato da 3D Realms.",
+            pt: "Duke Nukem 3D é um jogo eletrônico de tiro em primeira pessoa desenvolvido pela 3D Realms.",
+            ru: "Duke Nukem 3D — это шутер от первого лица, разработанный 3D Realms.",
+            zh: "Duke Nukem 3D 是一款由 3D Realms 开发的第一人称射击游戏。",
+            ja: "Duke Nukem 3Dは、3D Realmsが開発したファーストパーソン・シューティングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/duke3d.html"
+    },
+    {
+        name: "Eradicator",
+        image: "https://ifilex.github.io/WineBOX-Store/box/eradicator.png",
+        description: "Eradicator is a unique FPS from Accolade, who are much better known for their Test Drive series and other non-FPS type games.",
+        description: {
+            es: "Eradicator es un FPS único de Accolade, mucho más conocidos por su serie Test Drive y otros juegos que no son del tipo FPS.",
+            de: "Eradicator ist ein einzigartiger FPS von Accolade, die viel besser für ihre Test Drive-Serie und andere Nicht-FPS-Spiele bekannt sind.",
+            fr: "Eradicator est un FPS unique d'Accolade, qui est bien mieux connu pour sa série Test Drive et d'autres jeux non-FPS.",
+            it: "Eradicator è un FPS unico di Accolade, molto più nota per la sua serie Test Drive e altri giochi non FPS.",
+            pt: "Eradicator é um FPS exclusivo da Accolade, muito mais conhecida por sua série Test Drive e outros jogos que não são do tipo FPS.",
+            ru: "Eradicator — это уникальный шутер от первого лица от Accolade, которая гораздо лучше известна своей серией Test Drive и другими играми не в жанре FPS.",
+            zh: "Eradicator 是 Accolade 推出的一款独特的 FPS 游戏，该公司更出名的是其《测试驾驶》系列和其他非 FPS 类型的游戏。",
+            ja: "Eradicatorは、Test Driveシリーズや他の非FPSゲームでよく知られているAccoladeによるユニークなFPSです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/erad.html"
+    },
+    {
+        name: "Escape from Dr. Colosso",
+        image: "https://ifilex.github.io/WineBOX-Store/box/drcolosso.png",
+        description: "The story involves a mad doctor who has done bad stuff, and now you need to shoot your way out after being freed by a for some reason malevolent executioner. ",
+        description: {
+            es: "La historia involucra a un médico loco que ha hecho cosas malas, y ahora necesitas disparar para salir después de ser liberado por un verdugo malévolo por alguna razón.",
+            de: "Die Geschichte handelt von einem verrückten Arzt, der böse Dinge getan hat, und jetzt müssen Sie sich freischießen, nachdem Sie von einem aus irgendeinem Grund bösartigen Henker befreit wurden.",
+            fr: "L'histoire implique un médecin fou qui a fait de mauvaises choses, et maintenant vous devez vous frayer un chemin en tirant après avoir été libéré par un bourreau malveillant pour une raison quelconque.",
+            it: "La storia coinvolge un medico pazzo che ha fatto cose malvagie, e ora devi spararti per uscire dopo essere stato liberato da un boia malvagio per qualche motivo.",
+            pt: "A história envolve um médico louco que fez coisas ruins, e agora você precisa atirar para sair depois de ser libertado por um carrasco malévolo por alguma razão.",
+            ru: "В сюжете участвует сумасшедший доктор, который делал плохие вещи, и теперь вам нужно стрелять, чтобы выбраться, после того как вас освободил по какой-то причине злобный палач.",
+            zh: "故事涉及一个做了坏事的疯狂医生，现在你需要在一个出于某种原因而恶毒的刽子手释放你后，一路射击杀出重围。",
+            ja: "ストーリーは、悪事を働いたマッドドクターが登場し、何らかの理由で悪意のある死刑執行人によって解放された後、あなたは銃で道を切り開く必要があります。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/escape.html"
+    },
+    {
+        name: "Gore Galore",
+        image: "https://ifilex.github.io/WineBOX-Store/box/goregalore.png",
+        description: "Due to the general clunkiness of that GCS, the gameplay here is kinda rough. It's obviously intended to be a Wolfenstein 3D clone, right down to the door-opening sound.",
+        description: {
+            es: "Debido a la torpeza general de ese GCS, la jugabilidad aquí es un poco tosca. Obviamente, está destinado a ser un clon de Wolfenstein 3D, hasta el sonido de apertura de puertas.",
+            de: "Aufgrund der allgemeinen Klobigkeit dieser GCS ist das Gameplay hier etwas rau. Es ist offensichtlich als Wolfenstein 3D-Klon gedacht, bis hin zum Türöffnungsgeräusch.",
+            fr: "En raison de la maladresse générale de ce GCS, le gameplay ici est un peu rude. Il est évidemment destiné à être un clone de Wolfenstein 3D, jusqu'au bruit d'ouverture de porte.",
+            it: "A causa della goffaggine generale di quel GCS, il gameplay qui è un po' grezzo. È ovviamente inteso come un clone di Wolfenstein 3D, fino al suono dell'apertura della porta.",
+            pt: "Devido à falta de jeito geral desse GCS, a jogabilidade aqui é meio rude. Obviamente, pretende ser um clone de Wolfenstein 3D, até o som de abertura da porta.",
+            ru: "Из-за общей неуклюжести этого GCS, игровой процесс здесь довольно грубый. Очевидно, он задуман как клон Wolfenstein 3D, вплоть до звука открывания двери.",
+            zh: "由于那个 GCS 整体上很笨拙，这里的游戏性有点粗糙。它显然旨在成为《德军总部 3D》的克隆版，甚至连开门的声音都一样。",
+            ja: "そのGCSの全般的な扱いにくさのため、ゲームプレイはやや粗削りです。ドアを開ける音に至るまで、明らかにWolfenstein 3Dのクローンとして意図されています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/gore.html"
+    },
+    {
+        name: "Heretic",
+        image: "https://ifilex.github.io/WineBOX-Store/box/heretic.jpg",
+        description: "Heretic: Shadow of the Serpent Riders is a dark fantasy, spellcasting, first-person shooter developed by Raven Software and published by id Software in 1994.",
+        description: {
+            es: "Heretic: Shadow of the Serpent Riders es un shooter en primera persona de fantasía oscura y lanzamiento de hechizos desarrollado por Raven Software y publicado por id Software en 1994.",
+            de: "Heretic: Shadow of the Serpent Riders ist ein düsterer Fantasy-Ego-Shooter mit Zauberei, der 1994 von Raven Software entwickelt und von id Software veröffentlicht wurde.",
+            fr: "Heretic: Shadow of the Serpent Riders est un jeu de tir à la première personne de dark fantasy et de lancement de sorts développé par Raven Software et publié par id Software en 1994.",
+            it: "Heretic: Shadow of the Serpent Riders è uno sparatutto in prima persona dark fantasy e di lancio di incantesimi sviluppato da Raven Software e pubblicato da id Software nel 1994.",
+            pt: "Heretic: Shadow of the Serpent Riders é um jogo de tiro em primeira pessoa de fantasia sombria e lançamento de feitiços desenvolvido pela Raven Software e publicado pela id Software em 1994.",
+            ru: "Heretic: Shadow of the Serpent Riders — это шутер от первого лица в жанре темного фэнтези с использованием заклинаний, разработанный Raven Software и изданный id Software в 1994 году.",
+            zh: "Heretic: Shadow of the Serpent Riders 是一款由 Raven Software 开发、id Software 于 1994 年发行的黑暗奇幻、施法类第一人称射击游戏。",
+            ja: "Heretic: Shadow of the Serpent Ridersは、Raven Softwareが開発し、id Softwareが1994年に発売した、ダークファンタジーで呪文を唱えるファーストパーソン・シューティングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/heretic.html"
+    },
+    {
+        name: "Hexen",
+        image: "https://ifilex.github.io/WineBOX-Store/box/hexen.gif",
+        description: "The sequel to the popular Heretic game, Hexen takes the Heretic engine and adds some notable improvements, like weather effects, breakable environments, roleplaying elements and less linear gameplay.", 
+        description: {
+            es: "La secuela del popular juego Heretic, Hexen toma el motor de Heretic y añade algunas mejoras notables, como efectos climáticos, entornos destructibles, elementos de rol y una jugabilidad menos lineal.",
+            de: "Die Fortsetzung des beliebten Heretic-Spiels, Hexen, übernimmt die Heretic-Engine und fügt einige bemerkenswerte Verbesserungen hinzu, wie Wettereffekte, zerstörbare Umgebungen, Rollenspielelemente und weniger lineares Gameplay.",
+            fr: "La suite du jeu populaire Heretic, Hexen reprend le moteur d'Heretic et ajoute quelques améliorations notables, comme des effets météo, des environnements destructibles, des éléments de jeu de rôle et un gameplay moins linéaire.",
+            it: "Il sequel del popolare gioco Heretic, Hexen prende il motore di Heretic e aggiunge alcuni notevoli miglioramenti, come effetti meteorologici, ambienti distruttibili, elementi di ruolo e un gameplay meno lineare.",
+            pt: "A sequência do popular jogo Heretic, Hexen pega o motor de Heretic e adiciona algumas melhorias notáveis, como efeitos climáticos, ambientes destrutíveis, elementos de RPG e jogabilidade menos linear.",
+            ru: "Продолжение популярной игры Heretic, Hexen берет движок Heretic и добавляет некоторые заметные улучшения, такие как погодные эффекты, разрушаемое окружение, ролевые элементы и менее линейный геймплей.",
+            zh: "作为热门游戏 Heretic 的续作，Hexen 采用了 Heretic 的引擎，并增加了一些显著的改进，如天气效果、可破坏环境、角色扮演元素和更不线性的游戏玩法。",
+            ja: "人気ゲームHereticの続編であるHexenは、Hereticのエンジンを基に、ウェザーエフェクト、破壊可能な環境、ロールプレイング要素、より非直線的なゲームプレイなど、いくつかの注目すべき改善を追加しています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/hexen.html"
+    },
+    {
+        name: "Hurl",
+        image: "https://ifilex.github.io/WineBOX-Store/box/hurl.jpg",
+        description: "H.U.R.L. (Humans Under Robot Law) is a kid-friendly first-person shooter for MS-DOS where players throw soap, water balloons, and deodorant to clean up trash-throwing animals and robots. Instead of violence, the game focuses on hygiene and features colorful, cartoon-style graphics.",
+        description: {
+            es: "H.U.R.L. (Humanos Bajo la Ley de los Robots) es un shooter en primera persona para MS-DOS apto para niños, donde los jugadores lanzan jabón, globos de agua y desodorante para limpiar a los animales y robots que tiran basura. En lugar de violencia, el juego se centra en la higiene y presenta gráficos coloridos de estilo caricaturesco.",
+            de: "H.U.R.L. (Humans Under Robot Law) ist ein kindgerechter Ego-Shooter für MS-DOS, bei dem Spieler Seife, Wasserbomben und Deodorant werfen, um müllwerfende Tiere und Roboter zu reinigen. Anstelle von Gewalt konzentriert sich das Spiel auf Hygiene und bietet bunte, cartoonartige Grafiken.",
+            fr: "H.U.R.L. (Humans Under Robot Law) est un jeu de tir à la première personne pour MS-DOS adapté aux enfants, où les joueurs lancent du savon, des ballons d'eau et du déodorant pour nettoyer les animaux et les robots qui jettent des déchets. Au lieu de la violence, le jeu se concentre sur l'hygiène et présente des graphismes colorés de style cartoon.",
+            it: "H.U.R.L. (Humani Sotto la Legge dei Robot) è uno sparatutto in prima persona per MS-DOS adatto ai bambini, in cui i giocatori lanciano sapone, palloncini d'acqua e deodorante per ripulire animali e robot che lanciano spazzatura. Invece della violenza, il gioco si concentra sull'igiene e presenta grafiche colorate in stile cartone animato.",
+            pt: "H.U.R.L. (Humanos Sob a Lei dos Robôs) é um jogo de tiro em primeira pessoa para MS-DOS adequado para crianças, onde os jogadores jogam sabão, balões de água e desodorante para limpar animais e robôs que jogam lixo. Em vez de violência, o jogo foca na higiene e apresenta gráficos coloridos em estilo cartoon.",
+            ru: "H.U.R.L. (Люди под Законом Роботов) — это дружественный к детям шутер от первого лица для MS-DOS, в котором игроки бросают мыло, водяные шарики и дезодорант, чтобы очистить мусорящих животных и роботов. Вместо насилия игра фокусируется на гигиене и отличается красочной графикой в стиле мультфильмов.",
+            zh: "H.U.R.L.（机器人法则下的人类）是一款面向儿童的 MS-DOS 第一人称射击游戏，玩家投掷肥皂、水气球和除臭剂来清理乱扔垃圾的动物和机器人。游戏不涉及暴力，而是专注于卫生，并具有色彩缤纷的卡通风格图形。",
+            ja: "H.U.R.L.（Humans Under Robot Law）は、MS-DOS用の子供向けファーストパーソン・シューティングゲームで、プレイヤーは石鹸、水風船、消臭剤を投げて、ゴミを投げる動物やロボットを掃除します。暴力の代わりに衛生面に焦点を当て、カラフルな漫画スタイルのグラフィックが特徴です。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/hurl.html"
+    },
+    {
+        name: "Indianapolis 500: The Simulation",
+        image: "https://ifilex.github.io/WineBOX-Store/box/indi.jpg",
+        description: "Indianapolis 500: The Simulation is a 1989 computer game for MS-DOS. It was hailed as the first step of differentiating racing games from the arcade realm and into racing simulation.",
+        description: {
+            es: "Indianapolis 500: The Simulation es un juego de computadora de 1989 para MS-DOS. Fue aclamado como el primer paso para diferenciar los juegos de carreras del ámbito arcade y llevarlos a la simulación de carreras.",
+            de: "Indianapolis 500: The Simulation ist ein Computerspiel von 1989 für MS-DOS. Es wurde als erster Schritt gefeiert, um Rennspiele vom Arcade-Bereich zu unterscheiden und in die Rennsimulation zu führen.",
+            fr: "Indianapolis 500: The Simulation est un jeu informatique de 1989 pour MS-DOS. Il a été salué comme la première étape pour différencier les jeux de course du domaine de l'arcade et les faire entrer dans la simulation de course.",
+            it: "Indianapolis 500: The Simulation è un gioco per computer del 1989 per MS-DOS. È stato acclamato come il primo passo per differenziare i giochi di corse dall'ambito arcade e portarli nella simulazione di corse.",
+            pt: "Indianapolis 500: The Simulation é um jogo de computador de 1989 para MS-DOS. Foi aclamado como o primeiro passo para diferenciar os jogos de corrida do domínio arcade e trazê-los para a simulação de corridas.",
+            ru: "Indianapolis 500: The Simulation — это компьютерная игра 1989 года для MS-DOS. Она была названа первым шагом к дифференциации гоночных игр от аркадного жанра и переходу к гоночным симуляторам.",
+            zh: "Indianapolis 500: The Simulation 是一款 1989 年的 MS-DOS 电脑游戏。它被誉为将赛车游戏从街机领域区分出来、迈向赛车模拟的第一步。",
+            ja: "Indianapolis 500: The Simulationは、MS-DOS用の1989年のコンピューターゲームです。レースゲームをアーケードの領域から区別し、レースシミュレーションへと導く最初の一歩として賞賛されました。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/indi.html"
+    },
 {
   "name": "Minecraft",
   "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
@@ -123,6 +530,40 @@ window.appData = [
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
 },
     {
+        name: "Mr. Pibb",
+        image: "https://ifilex.github.io/WineBOX-Store/box/mrpibb.png",
+        description: "Mr. Pibb - The 3D Interactive Game is a 3D shooter FPS type game which is not very good",
+        description: {
+            es: "Mr. Pibb - The 3D Interactive Game es un juego de tipo shooter FPS en 3D que no es muy bueno.",
+            de: "Mr. Pibb - The 3D Interactive Game ist ein 3D-Ego-Shooter, der nicht sehr gut ist.",
+            fr: "Mr. Pibb - The 3D Interactive Game est un jeu de tir à la première personne en 3D qui n'est pas très bon.",
+            it: "Mr. Pibb - The 3D Interactive Game è uno sparatutto in prima persona 3D che non è molto buono.",
+            pt: "Mr. Pibb - The 3D Interactive Game é um jogo de tiro FPS 3D que não é muito bom.",
+            ru: "Mr. Pibb - The 3D Interactive Game — это 3D-шутер от первого лица, который не очень хорош.",
+            zh: "Mr. Pibb - The 3D Interactive Game 是一款 3D 射击 FPS 类型游戏，但质量不高。",
+            ja: "Mr. Pibb - The 3D Interactive Gameは、あまり良くない3DシューターFPSタイプのゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/mrpibb.html"
+    },
+    {
+        name: "Nightmare 3D",
+        image: "https://ifilex.github.io/WineBOX-Store/box/nite3d.jpg",
+        description: "Nightmare 3D is a horror-themed shooter where the player explores a spooky mansion filled with monsters, traps, and secret passages. You play as a man trying to rescue his girlfriend from an evil doctor. The game features maze-like levels, spooky music, and enemies like ghosts, skeletons, and robots, combining puzzle-solving with action. It uses raycasting graphics similar to Wolfenstein 3D.",
+        description: {
+            es: "Nightmare 3D es un shooter con temática de terror donde el jugador explora una mansión espeluznante llena de monstruos, trampas y pasajes secretos. Juegas como un hombre que intenta rescatar a su novia de un médico malvado. El juego presenta niveles laberínticos, música espeluznante y enemigos como fantasmas, esqueletos y robots, combinando la resolución de acertijos con la acción. Utiliza gráficos de raycasting similares a los de Wolfenstein 3D.",
+            de: "Nightmare 3D ist ein Horror-Shooter, bei dem der Spieler eine gruselige Villa voller Monster, Fallen und geheimer Durchgänge erkundet. Sie spielen einen Mann, der versucht, seine Freundin von einem bösen Arzt zu retten. Das Spiel bietet labyrinthartige Levels, gruselige Musik und Gegner wie Geister, Skelette und Roboter und kombiniert Rätsellösung mit Action. Es verwendet Raycasting-Grafiken ähnlich wie Wolfenstein 3D.",
+            fr: "Nightmare 3D est un jeu de tir à thème horrifique où le joueur explore un manoir effrayant rempli de monstres, de pièges et de passages secrets. Vous incarnez un homme essayant de sauver sa petite amie d'un médecin maléfique. Le jeu propose des niveaux de type labyrinthe, une musique effrayante et des ennemis comme des fantômes, des squelettes et des robots, combinant la résolution d'énigmes avec l'action. Il utilise des graphismes de raycasting similaires à ceux de Wolfenstein 3D.",
+            it: "Nightmare 3D è uno sparatutto a tema horror in cui il giocatore esplora una villa spettrale piena di mostri, trappole e passaggi segreti. Giochi nei panni di un uomo che cerca di salvare la sua ragazza da un dottore malvagio. Il gioco presenta livelli labirintici, musica spettrale e nemici come fantasmi, scheletri e robot, combinando la risoluzione di enigmi con l'azione. Utilizza una grafica raycasting simile a quella di Wolfenstein 3D.",
+            pt: "Nightmare 3D é um jogo de tiro com tema de terror onde o jogador explora uma mansão assustadora cheia de monstros, armadilhas e passagens secretas. Você joga como um homem tentando resgatar sua namorada de um médico maligno. O jogo apresenta níveis labirínticos, música assustadora e inimigos como fantasmas, esqueletos e robôs, combinando solução de quebra-cabeças com ação. Ele usa gráficos de raycasting semelhantes aos de Wolfenstein 3D.",
+            ru: "Nightmare 3D — это хоррор-шутер, в котором игрок исследует жуткий особняк, полный монстров, ловушек и секретных проходов. Вы играете за человека, пытающегося спасти свою девушку от злого доктора. В игре представлены лабиринтные уровни, жуткая музыка и враги, такие как призраки, скелеты и роботы, сочетающие решение головоломок с действием. В ней используется графика рейкастинга, похожая на Wolfenstein 3D.",
+            zh: "Nightmare 3D 是一款恐怖主题射击游戏，玩家探索一座充满怪物、陷阱和秘密通道的阴森豪宅。你扮演一个试图从邪恶医生手中救出女友的男人。游戏具有迷宫般的关卡、阴森的音乐以及幽灵、骷髅和机器人等敌人，将解谜与动作相结合。它使用了类似于《德军总部 3D》的光线投射图形技术。",
+            ja: "Nightmare 3Dはホラーテーマのシューティングゲームで、プレイヤーはモンスター、トラップ、秘密の通路でいっぱいの不気味な大邸宅を探索します。あなたは邪悪な医者から彼女を救おうとする男を演じます。迷路のようなレベル、不気味な音楽、幽霊、骸骨、ロボットなどの敵が特徴で、パズル解決とアクションを組み合わせています。Wolfenstein 3Dに似たレイキャスティンググラフィックを使用しています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/nite3d.html"
+    },
+    {
         name: "One Must Fall 2097",
         image: "https://ifilex.github.io/WineBOX-Store/box/omf2097.gif",
         description: "One Must Fall 2097 is a futuristic one-on-one fighting game in the style of other popular fighting games of the time such as Street Fighter II, Mortal Kombat, and numerous others. ",
@@ -138,6 +579,91 @@ window.appData = [
         },
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/omf.html"
+    },
+    {
+        name: "Operation Body Count",
+        image: "https://ifilex.github.io/WineBOX-Store/box/bodycount.gif",
+        description: "OpenJKDF2 is a function-by-function reimplementation of DF2 in C, with 64-bit ports to Windows 7+, macOS 10.15+, and Linux.",
+        description: {
+            es: "OpenJKDF2 es una reimplementación función por función de DF2 en C, con versiones de 64 bits para Windows 7+, macOS 10.15+ y Linux.",
+            de: "OpenJKDF2 ist eine funktionsweise Neuimplementierung von DF2 in C, mit 64-Bit-Ports für Windows 7+, macOS 10.15+ und Linux.",
+            fr: "OpenJKDF2 est une réimplémentation fonction par fonction de DF2 en C, avec des ports 64 bits pour Windows 7+, macOS 10.15+ et Linux.",
+            it: "OpenJKDF2 è una reimplementazione funzione per funzione di DF2 in C, con porte a 64 bit per Windows 7+, macOS 10.15+ e Linux.",
+            pt: "OpenJKDF2 é uma reimplementação função por função do DF2 em C, com portes de 64 bits para Windows 7+, macOS 10.15+ e Linux.",
+            ru: "OpenJKDF2 — это пофункциональная реимплементация DF2 на C с 64-битными портами для Windows 7+, macOS 10.15+ и Linux.",
+            zh: "OpenJKDF2 是用 C 语言对 DF2 进行逐函数重写的实现，并提供了适用于 Windows 7+、macOS 10.15+ 和 Linux 的 64 位移植版。",
+            ja: "OpenJKDF2は、DF2の関数単位の再実装をC言語で行ったもので、Windows 7+、macOS 10.15+、Linuxへの64ビットポートを備えています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/bcount.html"
+    },
+    {
+        name: "Powerslave",
+        image: "https://ifilex.github.io/WineBOX-Store/box/pslave.gif",
+        description: "Powerslave (also known as Exhumed) is a FPS built using the Build engine (an the engine used to create Duke Nukem 3D).",
+        description: {
+            es: "Powerslave (también conocido como Exhumed) es un FPS construido con el motor Build (el motor utilizado para crear Duke Nukem 3D).",
+            de: "Powerslave (auch bekannt als Exhumed) ist ein Ego-Shooter, der mit der Build-Engine erstellt wurde (der Engine, die zur Erstellung von Duke Nukem 3D verwendet wurde).",
+            fr: "Powerslave (également connu sous le nom d'Exhumed) est un FPS construit à l'aide du moteur Build (le moteur utilisé pour créer Duke Nukem 3D).",
+            it: "Powerslave (noto anche come Exhumed) è un FPS costruito utilizzando il motore Build (il motore utilizzato per creare Duke Nukem 3D).",
+            pt: "Powerslave (também conhecido como Exhumed) é um FPS construído usando o mecanismo Build (o mecanismo usado para criar Duke Nukem 3D).",
+            ru: "Powerslave (также известная как Exhumed) — это шутер от первого лица, созданный с использованием движка Build (движок, используемый для создания Duke Nukem 3D).",
+            zh: "Powerslave（也称为 Exhumed）是一款使用 Build 引擎（用于创建《毁灭公爵 3D》的引擎）构建的 FPS 游戏。",
+            ja: "Powerslave（Exhumedとしても知られる）は、Buildエンジン（Duke Nukem 3Dの作成に使用されたエンジン）を使用して構築されたFPSです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/powerslave.html"
+    },
+    {
+        name: "Pray for Death",
+        image: "https://ifilex.github.io/WineBOX-Store/box/prayfordeath.png",
+        description: "Pray for Death is a one-on-one fighting game which tries to transfer some of the excitement from arcade beat-em-ups like the popular Street Fighter II, Mortal Kombat, and in this case perhaps most directly Killer Instinct games to the PC platform.",
+        description: {
+            es: "Pray for Death es un juego de lucha uno contra uno que intenta transferir parte de la emoción de los juegos de lucha arcade como el popular Street Fighter II, Mortal Kombat y, en este caso, quizás más directamente, los juegos de Killer Instinct a la plataforma de PC.",
+            de: "Pray for Death ist ein Eins-gegen-Eins-Kampfspiel, das versucht, etwas von der Spannung von Arcade-Prügelspielen wie dem beliebten Street Fighter II, Mortal Kombat und in diesem Fall vielleicht am direktesten von Killer Instinct-Spielen auf die PC-Plattform zu übertragen.",
+            fr: "Pray for Death est un jeu de combat un-contre-un qui tente de transférer une partie de l'excitation des jeux de baston d'arcade comme le populaire Street Fighter II, Mortal Kombat, et dans ce cas peut-être plus directement les jeux Killer Instinct, vers la plateforme PC.",
+            it: "Pray for Death è un picchiaduro uno contro uno che cerca di trasferire un po' dell'eccitazione dei giochi arcade picchiaduro come il popolare Street Fighter II, Mortal Kombat e, in questo caso, forse più direttamente i giochi di Killer Instinct sulla piattaforma PC.",
+            pt: "Pray for Death é um jogo de luta um-contra-um que tenta transferir um pouco da empolgação dos jogos de luta de arcade como o popular Street Fighter II, Mortal Kombat e, neste caso, talvez mais diretamente os jogos Killer Instinct para a plataforma PC.",
+            ru: "Pray for Death — это файтинг один на один, который пытается перенести часть волнения от аркадных драк, таких как популярные Street Fighter II, Mortal Kombat, и в данном случае, возможно, наиболее напрямую игры Killer Instinct, на платформу ПК.",
+            zh: "Pray for Death 是一款一对一的格斗游戏，试图将街机格斗游戏（如流行的《街头霸王 II》、《真人快打》，以及本例中可能最直接的《杀手本能》游戏）的部分刺激感转移到 PC 平台上。",
+            ja: "Pray for Deathは、人気の『ストリートファイターII』、『モータルコンバット』、そしてこの場合はおそらく最も直接的な『キラー・インスティンクト』ゲームのようなアーケード格闘ゲームの興奮の一部をPCプラットフォームに移そうとする1対1の格闘ゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/pfd.html"
+    },
+    {
+        name: "Quake",
+        image: "https://ifilex.github.io/WineBOX-Store/box/quake.jpg",
+        description: "Play legendary Quake game in browser without registration and ads. You can play orginal game as well as Scourge of Armagon and Dissolution of Eternity",
+        description: {
+            es: "Juega al legendario juego Quake en el navegador sin registro ni anuncios. Puedes jugar al juego original, así como a Scourge of Armagon y Dissolution of Eternity.",
+            de: "Spielen Sie das legendäre Quake-Spiel im Browser ohne Registrierung und Werbung. Sie können das Originalspiel sowie Scourge of Armagon und Dissolution of Eternity spielen.",
+            fr: "Jouez au légendaire jeu Quake dans le navigateur sans inscription ni publicité. Vous pouvez jouer au jeu original ainsi qu'à Scourge of Armagon et Dissolution of Eternity.",
+            it: "Gioca al leggendario gioco Quake nel browser senza registrazione e pubblicità. Puoi giocare al gioco originale così come a Scourge of Armagon e Dissolution of Eternity.",
+            pt: "Jogue o lendário jogo Quake no navegador sem registro e anúncios. Você pode jogar o jogo original, bem como Scourge of Armagon e Dissolution of Eternity.",
+            ru: "Играйте в легендарную игру Quake в браузере без регистрации и рекламы. Вы можете играть в оригинальную игру, а также в Scourge of Armagon и Dissolution of Eternity.",
+            zh: "在浏览器中无需注册和广告即可玩传奇游戏《雷神之锤》。你可以玩原版游戏以及《Armagon 的灾祸》和《永恒的解体》。",
+            ja: "登録や広告なしで、伝説的なゲームQuakeをブラウザでプレイしましょう。オリジナルゲームはもちろん、Scourge of ArmagonやDissolution of Eternityもプレイできます。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/quake.html"
+    },
+    {
+        name: "Quarantine",
+        image: "https://ifilex.github.io/WineBOX-Store/box/qua.jpg",
+        description: "Quarantine is a 1994 racing/first-person shooter video game for MS-DOS and 3DO, created by Imagexcel and published by GameTek.",
+        description: {
+            es: "Quarantine es un videojuego de carreras/shooter en primera persona de 1994 para MS-DOS y 3DO, creado por Imagexcel y publicado por GameTek.",
+            de: "Quarantine ist ein Renn-/Ego-Shooter-Videospiel von 1994 für MS-DOS und 3DO, entwickelt von Imagexcel und veröffentlicht von GameTek.",
+            fr: "Quarantine est un jeu vidéo de course/tir à la première personne de 1994 pour MS-DOS et 3DO, créé par Imagexcel et publié par GameTek.",
+            it: "Quarantine è un videogioco di corse/sparatutto in prima persona del 1994 per MS-DOS e 3DO, creato da Imagexcel e pubblicato da GameTek.",
+            pt: "Quarantine é um jogo eletrônico de corrida/tiro em primeira pessoa de 1994 para MS-DOS e 3DO, criado pela Imagexcel e publicado pela GameTek.",
+            ru: "Quarantine — это видеоигра 1994 года в жанре гонок/шутера от первого лица для MS-DOS и 3DO, созданная Imagexcel и изданная GameTek.",
+            zh: "Quarantine 是一款 1994 年的赛车/第一人称射击视频游戏，适用于 MS-DOS 和 3DO，由 Imagexcel 创建，GameTek 发行。",
+            ja: "Quarantineは、Imagexcelが作成しGameTekが発売した、MS-DOSおよび3DO用の1994年のレーシング/ファーストパーソン・シューティングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/quarantine.html"
     },
 {
   "name": "Retrocraft",
@@ -157,6 +683,23 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/retrocraft/index.html"
 },
+    {
+        name: "Rise of the triad",
+        image: "https://ifilex.github.io/WineBOX-Store/box/rise.webp",
+        description: "Rise of the Triad: Dark War is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Rise of the Triad: Dark War on mobile. On DOS.Zone Rise of the Triad: Dark War available to play for free without registration.",
+        description: {
+            es: "Rise of the Triad: Dark War es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar a Rise of the Triad: Dark War en dispositivos móviles. En DOS.Zone, Rise of the Triad: Dark War está disponible para jugar gratis sin registro.",
+            de: "Rise of the Triad: Dark War ist ein berühmtes und vielgespieltes DOS-Spiel, das jetzt im Browser gespielt werden kann. Mit virtuellen mobilen Steuerelementen können Sie Rise of the Triad: Dark War auch auf dem Handy spielen. Auf DOS.Zone ist Rise of the Triad: Dark War kostenlos und ohne Registrierung spielbar.",
+            fr: "Rise of the Triad: Dark War est un jeu DOS célèbre et très joué, désormais disponible pour jouer dans le navigateur. Avec des commandes mobiles virtuelles, vous pouvez également jouer à Rise of the Triad: Dark War sur mobile. Sur DOS.Zone, Rise of the Triad: Dark War est disponible gratuitement sans inscription.",
+            it: "Rise of the Triad: Dark War è un famoso e giocatissimo gioco DOS ora disponibile per giocare nel browser. Con i controlli mobili virtuali puoi anche giocare a Rise of the Triad: Dark War su dispositivi mobili. Su DOS.Zone, Rise of the Triad: Dark War è disponibile gratuitamente senza registrazione.",
+            pt: "Rise of the Triad: Dark War é um famoso e muito jogado jogo de DOS que agora está disponível para jogar no navegador. Com controles móveis virtuais, você também pode jogar Rise of the Triad: Dark War no celular. No DOS.Zone, Rise of the Triad: Dark War está disponível para jogar gratuitamente sem registro.",
+            ru: "Rise of the Triad: Dark War — это известная и популярная DOS-игра, в которую теперь можно играть в браузере. С помощью виртуальных мобильных элементов управления вы также можете играть в Rise of the Triad: Dark War на мобильных устройствах. На DOS.Zone в Rise of the Triad: Dark War можно играть бесплатно без регистрации.",
+            zh: "Rise of the Triad: Dark War 是一款著名且玩得最多的 DOS 游戏，现在可以在浏览器中游玩。通过虚拟移动控件，您也可以在移动设备上玩《升刚：暗黑战争》。在 DOS.Zone 上，Rise of the Triad: Dark War 可以免费游玩，无需注册。",
+            ja: "Rise of the Triad: Dark Warは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもRise of the Triad: Dark Warをプレイできます。DOS.Zoneでは、Rise of the Triad: Dark Warを登録なしで無料でプレイできます。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/rise.html"
+    },
 {
   "name": "Rivals",
   "image": "https://ifilex.github.io/WineBOX-Store/box/rivals.jpg",
@@ -175,6 +718,227 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/rivals/index.html"
 },
+    {
+        name: "Robod",
+        image: "https://ifilex.github.io/WineBOX-Store/box/robod.png",
+        description: "Robod is a 3D-perspective action game similar to Wolfenstein-3D or Blake Stone except that it was made over 22 years after those games",
+        description: {
+            es: "Robod es un juego de acción en perspectiva 3D similar a Wolfenstein-3D o Blake Stone, excepto que fue creado más de 22 años después de esos juegos.",
+            de: "Robod ist ein 3D-Perspektiv-Actionspiel ähnlich wie Wolfenstein-3D oder Blake Stone, nur dass es über 22 Jahre nach diesen Spielen erstellt wurde.",
+            fr: "Robod est un jeu d'action en perspective 3D similaire à Wolfenstein-3D ou Blake Stone, sauf qu'il a été créé plus de 22 ans après ces jeux.",
+            it: "Robod è un gioco d'azione in prospettiva 3D simile a Wolfenstein-3D o Blake Stone, tranne per il fatto che è stato realizzato oltre 22 anni dopo quei giochi.",
+            pt: "Robod é um jogo de ação em perspectiva 3D semelhante a Wolfenstein-3D ou Blake Stone, exceto que foi criado mais de 22 anos depois desses jogos.",
+            ru: "Robod — это экшн-игра с 3D-перспективой, похожая на Wolfenstein-3D или Blake Stone, за исключением того, что она была создана спустя более 22 лет после этих игр.",
+            zh: "Robod 是一款 3D 视角动作游戏，类似于《德军总部 3D》或《布莱克斯通》，只不过它是在这些游戏推出 22 多年后才制作的。",
+            ja: "Robodは、Wolfenstein-3DやBlake Stoneと類似した3Dパースペクティブのアクションゲームですが、それらのゲームから22年以上後に作成されました。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/robod.html"
+    },
+    {
+        name: "Sango Fighter",
+        image: "https://ifilex.github.io/WineBOX-Store/box/sango.gif",
+        description: "Sango Fighter is a game that looks better than it actually plays. Inspired by the extremely popular Street Fighter series of games.",
+        description: {
+            es: "Sango Fighter es un juego que se ve mejor de lo que realmente se juega. Inspirado en la extremadamente popular serie de juegos Street Fighter.",
+            de: "Sango Fighter ist ein Spiel, das besser aussieht, als es sich tatsächlich spielt. Inspiriert von der äußerst beliebten Street Fighter-Serie.",
+            fr: "Sango Fighter est un jeu qui a meilleure apparence qu'il ne se joue. Inspiré de la série de jeux Street Fighter extrêmement populaire.",
+            it: "Sango Fighter è un gioco che sembra migliore di quanto non sia effettivamente giocato. Ispirato all'estremamente popolare serie di giochi Street Fighter.",
+            pt: "Sango Fighter é um jogo que parece melhor do que realmente joga. Inspirado na extremamente popular série de jogos Street Fighter.",
+            ru: "Sango Fighter — это игра, которая выглядит лучше, чем в нее на самом деле играется. Вдохновлена чрезвычайно популярной серией игр Street Fighter.",
+            zh: "Sango Fighter 是一款看起来比实际玩起来更好的游戏。受到极受欢迎的《街头霸王》游戏系列的启发。",
+            ja: "Sango Fighterは、実際のプレイ感よりも見た目が良いゲームです。非常に人気のある『ストリートファイター』シリーズのゲームに影響を受けています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/sango.html"
+    },
+    {
+        name: "Sango Fighter 2",
+        image: "https://ifilex.github.io/WineBOX-Store/box/sango2.gif",
+        description: "Sango Fighter 2 is more of an updated and improved remake of the original than it is a totally new game. Like the first game, it's a one-on-one fighting game just like another much more well-known fighting game",
+        description: {
+            es: "Sango Fighter 2 es más un remake actualizado y mejorado del original que un juego totalmente nuevo. Al igual que el primer juego, es un juego de lucha uno contra uno, como otro juego de lucha mucho más conocido.",
+            de: "Sango Fighter 2 ist eher ein aktualisiertes und verbessertes Remake des Originals als ein völlig neues Spiel. Wie das erste Spiel ist es ein Eins-gegen-Eins-Kampfspiel, genau wie ein anderes, viel bekannteres Kampfspiel.",
+            fr: "Sango Fighter 2 est davantage un remake mis à jour et amélioré de l'original qu'un jeu totalement nouveau. Comme le premier jeu, c'est un jeu de combat un-contre-un, tout comme un autre jeu de combat beaucoup plus connu.",
+            it: "Sango Fighter 2 è più un remake aggiornato e migliorato dell'originale che un gioco completamente nuovo. Come il primo gioco, è un picchiaduro uno contro uno proprio come un altro picchiaduro molto più noto.",
+            pt: "Sango Fighter 2 é mais um remake atualizado e melhorado do original do que um jogo totalmente novo. Como o primeiro jogo, é um jogo de luta um-contra-um, assim como outro jogo de luta muito mais conhecido.",
+            ru: "Sango Fighter 2 — это скорее обновленный и улучшенный ремейк оригинала, чем совершенно новая игра. Как и первая игра, это файтинг один на один, прямо как другая, гораздо более известная игра.",
+            zh: "Sango Fighter 2 更像是原作更新和改进的重制版，而不是一款全新的游戏。和第一款游戏一样，它是一款一对一的格斗游戏，就像另一款更为著名的格斗游戏一样。",
+            ja: "Sango Fighter 2は、完全に新しいゲームというよりも、オリジナルを更新・改良したリメイク版です。最初のゲームと同様、それは他のもっと有名な格闘ゲームと同じように、1対1の格闘ゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/sango.html"
+    },
+    {
+        name: "Space Quest: Chapter I - The Sarien Encounter",
+        image: "https://ifilex.github.io/WineBOX-Store/box/spaceq.jpg",
+        description: "Space Quest: Chapter I - The Sarien Encounter is a graphic adventure game, created by Scott Murphy and Mark Crowe.",
+        description: {
+            es: "Space Quest: Chapter I - The Sarien Encounter es un juego de aventura gráfica, creado por Scott Murphy y Mark Crowe.",
+            de: "Space Quest: Chapter I - The Sarien Encounter ist ein grafisches Abenteuerspiel, erstellt von Scott Murphy und Mark Crowe.",
+            fr: "Space Quest: Chapter I - The Sarien Encounter est un jeu d'aventure graphique, créé par Scott Murphy et Mark Crowe.",
+            it: "Space Quest: Chapter I - The Sarien Encounter è un'avventura grafica, creata da Scott Murphy e Mark Crowe.",
+            pt: "Space Quest: Chapter I - The Sarien Encounter é um jogo de aventura gráfica, criado por Scott Murphy e Mark Crowe.",
+            ru: "Space Quest: Chapter I - The Sarien Encounter — это графическая приключенческая игра, созданная Скоттом Мерфи и Марком Кроу.",
+            zh: "Space Quest: Chapter I - The Sarien Encounter 是一款图形冒险游戏，由 Scott Murphy 和 Mark Crowe 创作。",
+            ja: "Space Quest: Chapter I - The Sarien Encounterは、Scott MurphyとMark Croweによって作成されたグラフィックアドベンチャーゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/spaceq.html"
+    },
+    {
+        name: "Strife",
+        image: "https://ifilex.github.io/WineBOX-Store/box/strife.gif",
+        description: "Strife is one of the best 3D shooting game's that you've likely never heard of. This demo version showcases some of the great gameplay and features that you'll find in the full version, if you're able to find it anywhere ",
+        description: {
+            es: "Strife es uno de los mejores juegos de disparos en 3D que probablemente nunca hayas oído hablar. Esta versión demo muestra algunas de las excelentes jugabilidad y características que encontrarás en la versión completa, si puedes encontrarla en algún lado.",
+            de: "Strife ist eines der besten 3D-Shooting-Spiele, von dem Sie wahrscheinlich noch nie gehört haben. Diese Demoversion zeigt einige der großartigen Spielmechaniken und Funktionen, die Sie in der Vollversion finden, falls Sie sie irgendwo finden können.",
+            fr: "Strife est l'un des meilleurs jeux de tir 3D dont vous n'avez probablement jamais entendu parler. Cette version démo présente certaines des excellents gameplay et fonctionnalités que vous trouverez dans la version complète, si vous parvenez à la trouver quelque part.",
+            it: "Strife è uno dei migliori sparatutto 3D di cui probabilmente non hai mai sentito parlare. Questa versione demo mostra alcune delle grandi meccaniche di gioco e funzionalità che troverai nella versione completa, se riesci a trovarla da qualche parte.",
+            pt: "Strife é um dos melhores jogos de tiro 3D que você provavelmente nunca ouviu falar. Esta versão demo mostra algumas das ótimas jogabilidades e recursos que você encontrará na versão completa, se conseguir encontrá-la em algum lugar.",
+            ru: "Strife — одна из лучших 3D-стрелялок, о которой вы, вероятно, никогда не слышали. Эта демо-версия демонстрирует некоторые из замечательных игровых механик и функций, которые вы найдете в полной версии, если сможете ее где-нибудь найти.",
+            zh: "Strife 是你可能从未听说过的最好的 3D 射击游戏之一。这个演示版展示了完整版中一些很棒的游戏性和功能，如果你能在任何地方找到完整版的话。",
+            ja: "Strifeは、おそらく聞いたことのない最高の3Dシューティングゲームの一つです。このデモ版は、フルバージョンで見つけることができる素晴らしいゲームプレイと機能のいくつかを紹介しています（もしどこかで見つけられたら）。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/strife.html"
+    },
+    {
+        name: "Super Street Fighter II Turbo",
+        image: "https://ifilex.github.io/WineBOX-Store/box/ssf2t.png",
+        description: "Street Fighter II first came to DOS PCs in 1992, with an absolutely terrible port of the original game Street Fighter II: The World Warrior.",
+        description: {
+            es: "Street Fighter II llegó por primera vez a las PC con DOS en 1992, con un puerto absolutamente terrible del juego original Street Fighter II: The World Warrior.",
+            de: "Street Fighter II kam erstmals 1992 auf DOS-PCs, mit einem absolut schrecklichen Port des ursprünglichen Spiels Street Fighter II: The World Warrior.",
+            fr: "Street Fighter II est arrivé pour la première fois sur les PC DOS en 1992, avec un port absolument terrible du jeu original Street Fighter II: The World Warrior.",
+            it: "Street Fighter II arrivò per la prima volta su PC DOS nel 1992, con un port assolutamente terribile del gioco originale Street Fighter II: The World Warrior.",
+            pt: "Street Fighter II chegou aos PCs com DOS em 1992, com uma versão absolutamente terrível do jogo original Street Fighter II: The World Warrior.",
+            ru: "Street Fighter II впервые появилась на DOS-ПК в 1992 году с совершенно ужасным портом оригинальной игры Street Fighter II: The World Warrior.",
+            zh: "Street Fighter II 于 1992 年首次登陆 DOS PC，其移植版《街头霸王 II：天下斗士》表现非常糟糕。",
+            ja: "Street Fighter IIが初めてDOS PCに登場したのは1992年で、オリジナルゲーム『Street Fighter II: The World Warrior』の移植版は非常にひどいものでした。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/ss2.html"
+    },
+    {
+        name: "Thanatos 3D",
+        image: "https://ifilex.github.io/WineBOX-Store/box/thanatos3d.png",
+        description: "Thanatos 3D is an obscure FPS that was released in 1998. For reference, this is five years after DOOM, and two years after Quake.",
+        description: {
+            es: "Thanatos 3D es un FPS oscuro que fue lanzado en 1998. A modo de referencia, esto es cinco años después de DOOM y dos años después de Quake.",
+            de: "Thanatos 3D ist ein obskurer Ego-Shooter, der 1998 veröffentlicht wurde. Zu Referenzzwecken: Das ist fünf Jahre nach DOOM und zwei Jahre nach Quake.",
+            fr: "Thanatos 3D est un FPS obscur sorti en 1998. Pour référence, cela fait cinq ans après DOOM et deux ans après Quake.",
+            it: "Thanatos 3D è un FPS oscuro rilasciato nel 1998. Per riferimento, questo è cinque anni dopo DOOM e due anni dopo Quake.",
+            pt: "Thanatos 3D é um FPS obscuro que foi lançado em 1998. Para referência, isso é cinco anos após DOOM e dois anos após Quake.",
+            ru: "Thanatos 3D — это малоизвестный шутер от первого лица, выпущенный в 1998 году. Для справки: это через пять лет после DOOM и через два года после Quake.",
+            zh: "Thanatos 3D 是一款于 1998 年发布的默默无闻的 FPS 游戏。作为参考，这是在 DOOM 发布五年后、Quake 发布两年后。",
+            ja: "Thanatos 3Dは、1998年にリリースされた無名のFPSです。参考までに、これはDOOMから5年後、Quakeから2年後です。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/thanatos.html"
+    },
+    {
+        name: "Terror in Christmas Town",
+        image: "https://ifilex.github.io/WineBOX-Store/box/termrampage.gif",
+        description: "Ever felt the need to rescue a kidnapped elf who has been captured by a evil polar bear? No, me neither. ",
+        description: {
+            es: "¿Alguna vez has sentido la necesidad de rescatar a un elfo secuestrado que ha sido capturado por un malvado oso polar? No, yo tampoco.",
+            de: "Haben Sie jemals das Bedürfnis verspürt, einen entführten Elfen zu retten, der von einem bösen Eisbären gefangen genommen wurde? Nein, ich auch nicht.",
+            fr: "Avez-vous déjà ressenti le besoin de sauver un elfe kidnappé capturé par un ours polaire maléfique ? Non, moi non plus.",
+            it: "Hai mai sentito il bisogno di salvare un elfo rapito e catturato da un malvagio orso polare? No, neanche io.",
+            pt: "Alguma vez sentiu a necessidade de resgatar um elfo sequestrado que foi capturado por um urso polar malvado? Não, eu também não.",
+            ru: "Вы когда-нибудь чувствовали необходимость спасти похищенного эльфа, которого захватил злой белый медведь? Нет, я тоже нет.",
+            zh: "有没有觉得需要从邪恶的北极熊手中救出一个被绑架的精灵？没有，我也没有。",
+            ja: "邪悪なシロクマに捕まった誘拐されたエルフを救出する必要性を感じたことがありますか？いいえ、私もありません。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/terror.html"
+    },
+    {
+        name: "Terminal Velocity",
+        image: "https://ifilex.github.io/WineBOX-Store/box/tv.gif",
+        description: "It takes a little while to get used to, but this flying/shooting game (sort of like Decent, but more out in the open) can be really fun to play.",
+        description: {
+            es: "Toma un tiempo acostumbrarse, pero este juego de vuelo/disparos (algo así como Decent, pero más al aire libre) puede ser muy divertido de jugar.",
+            de: "Es braucht eine Weile, um sich daran zu gewöhnen, aber dieses Flug-/Shooting-Spiel (ähnlich wie Decent, aber offener) kann wirklich Spaß machen.",
+            fr: "Il faut un certain temps pour s'y habituer, mais ce jeu de vol/tir (un peu comme Decent, mais plus à l'air libre) peut être vraiment amusant à jouer.",
+            it: "Ci vuole un po' per abituarsi, ma questo gioco di volo/sparatorie (un po' come Decent, ma più all'aperto) può essere davvero divertente da giocare.",
+            pt: "Demora um pouco para se acostumar, mas este jogo de voo/tiro (meio como Decent, mas mais ao ar livre) pode ser muito divertido de jogar.",
+            ru: "Требуется немного времени, чтобы привыкнуть, но в эту летающую/стреляющую игру (вроде Decent, но более открытую) действительно весело играть.",
+            zh: "需要一点时间来适应，但这款飞行/射击游戏（有点像《天旋地转》，但更开放）玩起来真的很有趣。",
+            ja: "慣れるまで少し時間がかかりますが、このフライング/シューティングゲーム（Descentのようなものですが、より野外向き）は実際にプレイするととても楽しいです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/tv.html"
+    },
+    {
+        name: "Terminator: Rampage",
+        image: "https://ifilex.github.io/WineBOX-Store/box/termrampage.gif",
+        description: "Terminator: Rampage is a 3D shooting game from Bethesda, one of several in their early/mid 90's line of Terminator FPS games. ",
+        description: {
+            es: "Terminator: Rampage es un juego de disparos en 3D de Bethesda, uno de los varios en su línea de juegos de FPS de Terminator de principios / mediados de los 90.",
+            de: "Terminator: Rampage ist ein 3D-Shooting-Spiel von Bethesda, eines von mehreren in ihrer Terminator-FPS-Spielereihe der frühen/mittleren 90er Jahre.",
+            fr: "Terminator: Rampage est un jeu de tir 3D de Bethesda, l'un des plusieurs de leur gamme de jeux de tir à la première personne Terminator du début/milieu des années 90.",
+            it: "Terminator: Rampage è uno sparatutto 3D di Bethesda, uno dei diversi nella loro linea di giochi FPS di Terminator dei primi/metà anni '90.",
+            pt: "Terminator: Rampage é um jogo de tiro 3D da Bethesda, um dos vários em sua linha de jogos FPS do Exterminador do início/meados dos anos 90.",
+            ru: "Terminator: Rampage — это 3D-стрелялка от Bethesda, одна из нескольких в их линейке шутеров от первого лица о Терминаторе начала/середины 90-х годов.",
+            zh: "Terminator: Rampage 是 Bethesda 推出的一款 3D 射击游戏，是他们 90 年代早期/中期推出的多款《终结者》FPS 游戏之一。",
+            ja: "Terminator: RampageはBethesdaによる3Dシューティングゲームで、90年代初頭から中期にかけての彼らのTerminator FPSゲームラインの一つです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/ramdemo.html"
+    },
+    {
+        name: "Test Drive",
+        image: "https://ifilex.github.io/WineBOX-Store/box/testdrive.jpg",
+        description: "Test Drive is a series of racing video games that were originally published by Accolade until they were bought by Infogrames, which later turned into Atari.",
+        description: {
+            es: "Test Drive es una serie de videojuegos de carreras publicados originalmente por Accolade hasta que fueron comprados por Infogrames, que luego se convirtió en Atari.",
+            de: "Test Drive ist eine Reihe von Rennvideospielen, die ursprünglich von Accolade veröffentlicht wurden, bis sie von Infogrames aufgekauft wurden, das später zu Atari wurde.",
+            fr: "Test Drive est une série de jeux vidéo de course qui ont été initialement publiés par Accolade jusqu'à ce qu'ils soient rachetés par Infogrames, qui est ensuite devenu Atari.",
+            it: "Test Drive è una serie di videogiochi di corse originariamente pubblicati da Accolade fino a quando non furono acquisiti da Infogrames, che in seguito divenne Atari.",
+            pt: "Test Drive é uma série de jogos eletrônicos de corrida originalmente publicados pela Accolade até serem comprados pela Infogrames, que mais tarde se tornou a Atari.",
+            ru: "Test Drive — это серия гоночных видеоигр, первоначально издаваемых Accolade, пока они не были куплены Infogrames, которая позже превратилась в Atari.",
+            zh: "Test Drive 是一个赛车视频游戏系列，最初由 Accolade 发行，直到被 Infogrames 收购，后者后来转变为 Atari。",
+            ja: "Test Driveは、もともとAccoladeが発行していたレーシングゲームのシリーズですが、後にInfogramesに買収され、その後Atariに変わりました。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/testdrive.html"
+    },
+    {
+        name: "The Need for Speed",
+        image: "https://ifilex.github.io/WineBOX-Store/box/nfs.jpg",
+        description: "The Need for Speed is a 1994 racing game developed by EA Canada, originally known as Pioneer Productions, and published by Electronic Arts for 3DO.",
+        description: {
+            es: "The Need for Speed es un juego de carreras de 1994 desarrollado por EA Canada, originalmente conocido como Pioneer Productions, y publicado por Electronic Arts para 3DO.",
+            de: "The Need for Speed ist ein Rennspiel aus dem Jahr 1994, das von EA Canada (ursprünglich bekannt als Pioneer Productions) entwickelt und von Electronic Arts für 3DO veröffentlicht wurde.",
+            fr: "The Need for Speed est un jeu de course de 1994 développé par EA Canada, à l'origine connu sous le nom de Pioneer Productions, et publié par Electronic Arts pour 3DO.",
+            it: "The Need for Speed è un gioco di corse del 1994 sviluppato da EA Canada, originariamente noto come Pioneer Productions, e pubblicato da Electronic Arts per 3DO.",
+            pt: "The Need for Speed é um jogo de corrida de 1994 desenvolvido pela EA Canada, originalmente conhecida como Pioneer Productions, e publicado pela Electronic Arts para 3DO.",
+            ru: "The Need for Speed — это гоночная игра 1994 года, разработанная EA Canada, первоначально известной как Pioneer Productions, и изданная Electronic Arts для 3DO.",
+            zh: "The Need for Speed（极品飞车）是一款 1994 年的赛车游戏，由 EA Canada（最初名为 Pioneer Productions）开发，Electronic Arts 为 3DO 发行。",
+            ja: "The Need for Speedは、EA Canada（当初はPioneer Productionsとして知られていた）が開発し、Electronic Artsが3DO用に発売した1994年のレーシングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/nfs.html"
+    },
+    {
+        name: "Tomb Rider",
+        image: "https://ifilex.github.io/WineBOX-Store/box/d44c441b8ff939af74625c8375f4c8c1.webp",
+        description: "Tomb Raider, released in 1996, is a groundbreaking action-adventure game that introduced players to the iconic character Lara Croft.",
+        description: {
+            es: "Tomb Raider, lanzado en 1996, es un innovador juego de acción y aventuras que presentó a los jugadores a la icónica personaje Lara Croft.",
+            de: "Tomb Raider, veröffentlicht 1996, ist ein bahnbrechendes Action-Adventure-Spiel, das den Spielern die ikonische Figur Lara Croft vorstellte.",
+            fr: "Tomb Raider, sorti en 1996, est un jeu d'action-aventure révolutionnaire qui a présenté aux joueurs l'emblématique personnage de Lara Croft.",
+            it: "Tomb Raider, uscito nel 1996, è un rivoluzionario gioco d'azione e avventura che ha introdotto ai giocatori l'iconica figura di Lara Croft.",
+            pt: "Tomb Raider, lançado em 1996, é um inovador jogo de ação e aventura que apresentou aos jogadores a icônica personagem Lara Croft.",
+            ru: "Tomb Raider, выпущенная в 1996 году, является новаторской приключенческой игрой, которая познакомила игроков с культовым персонажем Ларой Крофт.",
+            zh: "Tomb Raider（古墓丽影）于 1996 年发布，是一款开创性的动作冒险游戏，向玩家介绍了标志性角色劳拉·克劳馥。",
+            ja: "Tomb Raiderは1996年にリリースされ、象徴的なキャラクターであるララ・クロフトをプレイヤーに紹介した画期的なアクションアドベンチャーゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/tombrider.html"
+    },
 {
   "name": "Voxel Minicraft",
   "image": "https://ifilex.github.io/WineBOX-Store/box/voxel.png",
@@ -193,6 +957,142 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/voxel/index.html"
 },
+    {
+        name: "Wolfenstein 3D",
+        image: "https://ifilex.github.io/WineBOX-Store/box/wolf3d.jpg",
+        description: "Wolfenstein 3D is a first-person shooter video game developed by id Software and published by Apogee Software and FormGen.",
+        description: {
+            es: "Wolfenstein 3D es un videojuego de disparos en primera persona desarrollado por id Software y publicado por Apogee Software y FormGen.",
+            de: "Wolfenstein 3D ist ein Ego-Shooter-Videospiel, entwickelt von id Software und veröffentlicht von Apogee Software und FormGen.",
+            fr: "Wolfenstein 3D est un jeu vidéo de tir à la première personne développé par id Software et publié par Apogee Software et FormGen.",
+            it: "Wolfenstein 3D è un videogioco sparatutto in prima persona sviluppato da id Software e pubblicato da Apogee Software e FormGen.",
+            pt: "Wolfenstein 3D é um jogo eletrônico de tiro em primeira pessoa desenvolvido pela id Software e publicado pela Apogee Software e FormGen.",
+            ru: "Wolfenstein 3D — это шутер от первого лица, разработанный id Software и изданный Apogee Software и FormGen.",
+            zh: "Wolfenstein 3D（德军总部 3D）是一款由 id Software 开发、Apogee Software 和 FormGen 发行的第一人称射击游戏。",
+            ja: "Wolfenstein 3Dは、id Softwareが開発し、Apogee SoftwareとFormGenが発売したファーストパーソン・シューティングゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/wolf3d.html"
+    },
+    {
+        name: "WolfenDOOM",
+        image: "https://ifilex.github.io/WineBOX-Store/box/wolfdoom.jpg",
+        description: "Wolfenstein 3D under the DOOM world.",
+        description: {
+            es: "Wolfenstein 3D en el mundo de DOOM.",
+            de: "Wolfenstein 3D in der DOOM-Welt.",
+            fr: "Wolfenstein 3D dans le monde de DOOM.",
+            it: "Wolfenstein 3D nel mondo di DOOM.",
+            pt: "Wolfenstein 3D no mundo de DOOM.",
+            ru: "Wolfenstein 3D в мире DOOM.",
+            zh: "DOOM 世界中的《德军总部 3D》。",
+            ja: "DOOMの世界におけるWolfenstein 3D。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/wolfdoom.html"
+    },
+    {
+        name: "Wrath of Earth",
+        image: "https://ifilex.github.io/WineBOX-Store/box/woe.png",
+        description: "Wrath of Earth is a fairly obscure FPS with a sci-fi theme. It bears similarities to the Apogee FPS Blake Stone as well as some stylistic influences from the popular Mac game Marathon. ",
+        description: {
+            es: "Wrath of Earth es un FPS bastante oscuro con temática de ciencia ficción. Tiene similitudes con el FPS de Apogee Blake Stone, así como algunas influencias estilísticas del popular juego de Mac Marathon.",
+            de: "Wrath of Earth ist ein ziemlich obskurer Ego-Shooter mit Sci-Fi-Thema. Er ähnelt dem Apogee-FPS Blake Stone und hat auch einige stilistische Einflüsse des beliebten Mac-Spiels Marathon.",
+            fr: "Wrath of Earth est un FPS assez obscur à thème de science-fiction. Il ressemble au FPS Blake Stone d'Apogee et présente également des influences stylistiques du jeu Mac populaire Marathon.",
+            it: "Wrath of Earth è un FPS abbastanza oscuro con tema fantascientifico. Ha somiglianze con l'FPS Apogee Blake Stone, nonché alcune influenze stilistiche dal popolare gioco Mac Marathon.",
+            pt: "Wrath of Earth é um FPS bastante obscuro com tema de ficção científica. Ele tem semelhanças com o FPS da Apogee Blake Stone, bem como algumas influências estilísticas do popular jogo de Mac Marathon.",
+            ru: "Wrath of Earth — это довольно неизвестный шутер от первого лица на научно-фантастическую тему. Он имеет сходство с FPS Apogee Blake Stone, а также некоторые стилистические влияния от популярной игры для Mac Marathon.",
+            zh: "Wrath of Earth 是一款相当默默无闻的科幻主题 FPS 游戏。它与 Apogee 的 FPS 游戏《布莱克斯通》有相似之处，也受到流行 Mac 游戏《马拉松》的一些风格影响。",
+            ja: "Wrath of Earthは、SFテーマのかなり無名のFPSです。ApogeeのFPSであるBlake Stoneと類似点があり、人気のMacゲームMarathonからの様式的な影響もあります。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/wrath.html"
+    },
+    {
+        name: "Wing Commander",
+        image: "https://ifilex.github.io/WineBOX-Store/box/wing.jpg",
+        description: "Wing Commander is a space flight simulation game, with the player piloting a ship, completing missions, and engaging enemy ships of various capabilities.",
+        description: {
+            es: "Wing Commander es un juego de simulación de vuelo espacial, donde el jugador pilotea una nave, completa misiones y se enfrenta a naves enemigas de diversas capacidades.",
+            de: "Wing Commander ist ein Raumflugsimulationsspiel, bei dem der Spieler ein Schiff steuert, Missionen abschließt und sich mit feindlichen Schiffen verschiedener Fähigkeiten auseinandersetzt.",
+            fr: "Wing Commander est un jeu de simulation de vol spatial, où le joueur pilote un vaisseau, accomplit des missions et engage des vaisseaux ennemis de capacités diverses.",
+            it: "Wing Commander è un gioco di simulazione di volo spaziale, in cui il giocatore pilota un'astronave, completa missioni e ingaggia navi nemiche di varie capacità.",
+            pt: "Wing Commander é um jogo de simulação de voo espacial, onde o jogador pilota uma nave, completa missões e enfrenta naves inimigas de várias capacidades.",
+            ru: "Wing Commander — это игра-симулятор космических полетов, в которой игрок управляет кораблем, выполняет миссии и вступает в бой с вражескими кораблями различного уровня.",
+            zh: "Wing Commander（银河飞将）是一款太空飞行模拟游戏，玩家驾驶飞船、完成任务并与不同能力的敌舰交战。",
+            ja: "Wing Commanderは、プレイヤーが宇宙船を操縦し、ミッションを完了し、さまざまな能力の敵船と交戦する宇宙飛行シミュレーションゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/wing.html"
+    },
+    {
+        name: "Wipeout",
+        image: "https://ifilex.github.io/WineBOX-Store/box/wipeout-wasm.png",
+        description: "The source code for the classic PSX launch title wipEout was leaked in 2022. A few month ago I finally sat down to take a look at it.",
+        description: {
+            es: "El código fuente del clásico título de lanzamiento de PSX wipEout fue filtrado en 2022. Hace unos meses finalmente me senté a echarle un vistazo.",
+            de: "Der Quellcode für den klassischen PSX-Starttitel wipEout wurde 2022 durchgesickert. Vor ein paar Monaten habe ich mich endlich hingesetzt und ihn mir angesehen.",
+            fr: "Le code source du jeu de lancement classique de la PSX, wipEout, a fuité en 2022. Il y a quelques mois, je me suis enfin installé pour y jeter un coup d'œil.",
+            it: "Il codice sorgente del classico titolo di lancio per PSX wipEout è stato trapelato nel 2022. Alcuni mesi fa, finalmente mi sono seduto a dargli un'occhiata.",
+            pt: "O código-fonte do clássico título de lançamento do PSX, wipEout, foi vazado em 2022. Alguns meses atrás, finalmente me sentei para dar uma olhada.",
+            ru: "Исходный код классической стартовой игры для PSX, wipEout, был слит в сеть в 2022 году. Несколько месяцев назад я наконец сел и посмотрел на него.",
+            zh: "经典 PSX 首发游戏 wipEout 的源代码于 2022 年被泄露。几个月前，我终于坐下来看了看它。",
+            ja: "クラシックなPSXローンチタイトルwipEoutのソースコードが2022年にリークされました。数ヶ月前、ようやくそれを見てみることにしました。"
+        },
+        category: "games",
+        link: "https://phoboslab.org/wipegame/"
+    },
+    {
+        name: "Xenophage: Alien BloodSport",
+        image: "https://ifilex.github.io/WineBOX-Store/box/xenophage.gif",
+        description: " this game certainly has the looks of a great game, but IMHO falls a bit short in the gameplay department.",
+        description: {
+            es: "Este juego ciertamente tiene la apariencia de un gran juego, pero en mi humilde opinión, se queda un poco corto en el departamento de jugabilidad.",
+            de: "Dieses Spiel sieht sicherlich nach einem großartigen Spiel aus, aber meiner bescheidenen Meinung nach fällt es im Gameplay-Bereich etwas ab.",
+            fr: "Ce jeu a certainement l'apparence d'un grand jeu, mais à mon humble avis, il est un peu en deçà au niveau du gameplay.",
+            it: "Questo gioco ha certamente l'aspetto di un grande gioco, ma a mio modesto parere, è un po' carente nel reparto del gameplay.",
+            pt: "Este jogo certamente tem a aparência de um grande jogo, mas na minha humilde opinião, fica um pouco aquém no departamento de jogabilidade.",
+            ru: "У этой игры, безусловно, вид отличной игры, но, по моему скромному мнению, её игровая часть немного не дотягивает.",
+            zh: "这款游戏看起来确实像一款很棒的游戏，但恕我直言，在游戏性方面稍显不足。",
+            ja: "このゲームは確かに素晴らしいゲームのように見えますが、私見ではゲームプレイ部門で少し不足しています。"
+        },
+        category: "games",        
+         link: "https://ifilex.github.io/WineBOX-Store/xeno.html"
+    },
+    {
+        name: "X-Men: Children of the Atom",
+        image: "https://ifilex.github.io/WineBOX-Store/box/xmen.png",
+        description: "X-Men: Children of the Atom is a port of the one-on-one Street Fighter 2-style fighting game featuring characters from Marvel's X-Men comics.",
+        description: {
+            es: "X-Men: Children of the Atom es una versión del juego de lucha uno contra uno estilo Street Fighter 2 que presenta personajes de los cómics de X-Men de Marvel.",
+            de: "X-Men: Children of the Atom ist ein Port des Eins-gegen-Eins-Kampfspiels im Street-Fighter-2-Stil mit Charakteren aus den Marvel-X-Men-Comics.",
+            fr: "X-Men: Children of the Atom est un portage du jeu de combat un-contre-un de style Street Fighter 2 mettant en vedette des personnages des bandes dessinées X-Men de Marvel.",
+            it: "X-Men: Children of the Atom è un port del picchiaduro uno contro uno in stile Street Fighter 2 con personaggi dei fumetti X-Men della Marvel.",
+            pt: "X-Men: Children of the Atom é uma versão do jogo de luta um-contra-um estilo Street Fighter 2 com personagens dos quadrinhos X-Men da Marvel.",
+            ru: "X-Men: Children of the Atom — это порт файтинга один на один в стиле Street Fighter 2, в котором представлены персонажи из комиксов Marvel об X-Men.",
+            zh: "X-Men: Children of the Atom 是一款移植的《街头霸王 2》风格的一对一格斗游戏，角色来自漫威《X 战警》漫画。",
+            ja: "X-Men: Children of the Atomは、マーベルのX-Menコミックのキャラクターをフィーチャーした、ストリートファイター2スタイルの1対1の格闘ゲームの移植版です。"
+        },
+        category: "games",        
+         link: "https://ifilex.github.io/WineBOX-Store/xmen.html"
+    },
+    {
+        name: "4D BOXING",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4dboxing.gif",
+        description: "4D Boxing attempts to recreate the sport of boxing more accurately than a lot of popular computer or arcade game based on the sport.",
+        description: {
+            es: "4D Boxing intenta recrear el deporte del boxeo con mayor precisión que muchos juegos populares de computadora o arcade basados en este deporte.",
+            de: "4D Boxing versucht, den Boxsport genauer nachzubilden als viele beliebte Computer- oder Arcade-Spiele, die auf diesem Sport basieren.",
+            fr: "4D Boxing tente de recréer le sport de la boxe plus précisément que de nombreux jeux informatiques ou d'arcade populaires basés sur ce sport.",
+            it: "4D Boxing tenta di ricreare lo sport della boxe in modo più accurato rispetto a molti popolari giochi per computer o arcade basati su questo sport.",
+            pt: "4D Boxing tenta recriar o esporte do boxe com mais precisão do que muitos jogos populares de computador ou arcade baseados no esporte.",
+            ru: "4D Boxing пытается воссоздать бокс более точно, чем многие популярные компьютерные или аркадные игры, основанные на этом виде спорта.",
+            zh: "4D Boxing 试图比许多基于该运动的流行电脑或街机游戏更准确地再现拳击运动。",
+            ja: "4D Boxingは、このスポーツに基づいた多くの人気のあるコンピューターゲームやアーケードゲームよりも正確にボクシングを再現しようとしています。"
+        },
+        category: "games",        
+         link: "https://ifilex.github.io/WineBOX-Store/4dbox.html"
+    },
 {
   "name": "Rec",
   "image": "https://ifilex.github.io/WineBOX-Store/box/rec.jpg",
@@ -1218,6 +2118,23 @@ window.appData = [
         link: "https://copy.sh/v86/?profile=syllable"
     },
     {
+        name: "Tekwar",
+        image: "https://ifilex.github.io/WineBOX-Store/box/tekwar.gif",
+        description: "William Shatner's Tekwar is a game based on the series of books written by Captain Kirk himself.",
+        description: {
+            es: "Tekwar de William Shatner es un juego basado en la serie de libros escrita por el mismísimo Capitán Kirk.",
+            de: "William Shatners Tekwar ist ein Spiel, das auf der Buchreihe von Captain Kirk persönlich basiert.",
+            fr: "Tekwar de William Shatner est un jeu basé sur la série de livres écrite par le capitaine Kirk lui-même.",
+            it: "Tekwar di William Shatner è un gioco basato sulla serie di libri scritta dal Capitano Kirk stesso.",
+            pt: "Tekwar de William Shatner é um jogo baseado na série de livros escrita pelo próprio Capitão Kirk.",
+            ru: "Tekwar Уильяма Шатнера — это игра, основанная на серии книг, написанных самим капитаном Кирком.",
+            zh: "威廉·夏特纳的《Tekwar》是一款基于柯克船长本人所著书籍系列的游戏。",
+            ja: "ウィリアム・シャトナーのTekwarは、カーク船長自身によって書かれた一連の本に基づいたゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/tekwar.html"
+    },
+    {
         name: "TexWorks",
         image: "https://ifilex.github.io/WineBOX-Store/box/texworks.jpg",
         description: "A simple (La)TeX editor and PDF previewer that is available on all major desktop operating systems.",
@@ -1492,7 +2409,40 @@ window.appData = [
         category: "apps",
         link: "https://copy.sh/v86/?profile=xcom"
     },
-
+    {
+        name: "5 Days a Stranger",
+        image: "https://ifilex.github.io/WineBOX-Store/box/5days-1.png",
+        description: "5 Days A Stranger is a horror-themed point-and-click adventure game using the Adventure Game Studio (AGS) development kit.",
+        description: {
+            es: "5 Days A Stranger es un juego de aventura point-and-click con temática de terror que utiliza el kit de desarrollo Adventure Game Studio (AGS).",
+            de: "5 Days A Stranger ist ein point-and-click Adventure-Spiel mit Horror-Thema, das das Adventure Game Studio (AGS)-Entwicklungskit verwendet.",
+            fr: "5 Days A Stranger est un jeu d'aventure pointer-cliquer sur le thème de l'horreur utilisant le kit de développement Adventure Game Studio (AGS).",
+            it: "5 Days A Stranger è un'avventura grafica punta e clicca a tema horror che utilizza il kit di sviluppo Adventure Game Studio (AGS).",
+            pt: "5 Days A Stranger é um jogo de aventura point-and-click com tema de terror que usa o kit de desenvolvimento Adventure Game Studio (AGS).",
+            ru: "5 Days A Stranger — это приключенческая игра в жанре point-and-click на тему ужасов, использующая набор разработки Adventure Game Studio (AGS).",
+            zh: "5 Days A Stranger 是一款使用 Adventure Game Studio (AGS) 开发套件制作的恐怖主题点击式冒险游戏。",
+            ja: "5 Days A Strangerは、Adventure Game Studio (AGS) 開発キットを使用したホラーテーマのポイントアンドクリックアドベンチャーゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/5daysdos.html"
+    },
+    {
+        name: "Abuse",
+        image: "https://ifilex.github.io/WineBOX-Store/box/abuse.gif",
+        description: "Abuse is a great side-scrolling action game that uses a unique system to control your character.",   
+        description: {
+            es: "Abuse es un gran juego de acción de desplazamiento lateral que utiliza un sistema único para controlar a tu personaje.",
+            de: "Abuse ist ein großartiges Side-Scrolling-Actionspiel, das ein einzigartiges System zur Steuerung deines Charakters verwendet.",
+            fr: "Abuse est un excellent jeu d'action à défilement latéral qui utilise un système unique pour contrôler votre personnage.",
+            it: "Abuse è un ottimo gioco d'azione a scorrimento laterale che utilizza un sistema unico per controllare il tuo personaggio.",
+            pt: "Abuse é um ótimo jogo de ação de rolagem lateral que usa um sistema único para controlar seu personagem.",
+            ru: "Abuse — это отличный экшн с боковой прокруткой, в котором используется уникальная система управления персонажем.",
+            zh: "Abuse 是一款出色的横向卷轴动作游戏，使用独特的系统来控制你的角色。",
+            ja: "Abuseは、ユニークなシステムでキャラクターを操作する素晴らしい横スクロールアクションゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/abuse.html"
+    },
     {
         name: "Agi Tetris",
         image: "https://ifilex.github.io/WineBOX-Store/box/AGIWiki_tetris1a.png",
@@ -1509,6 +2459,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/tetris.html"
+    },
+    {
+        name: "Arkanoid",
+        image: "https://ifilex.github.io/WineBOX-Store/box/arkanoid.png",
+        description: "Arkanoid is a block breaker video game. Its plot involves the starship Arkanoid being attacked by a mysterious entity from space named DOH.",
+        description: {
+            es: "Arkanoid es un videojuego de rompebloques. Su trama involucra a la nave estelar Arkanoid siendo atacada por una misteriosa entidad del espacio llamada DOH.",
+            de: "Arkanoid ist ein Block-Breaker-Videospiel. Die Handlung dreht sich um das Raumschiff Arkanoid, das von einer mysteriösen Entität aus dem Weltraum namens DOH angegriffen wird.",
+            fr: "Arkanoid est un jeu vidéo de casse-briques. Son intrigue implique le vaisseau spatial Arkanoid attaqué par une entité mystérieuse de l'espace nommée DOH.",
+            it: "Arkanoid è un videogioco rompipalle. La sua trama coinvolge l'astronave Arkanoid attaccata da una misteriosa entità dallo spazio chiamata DOH.",
+            pt: "Arkanoid é um videogame de quebrar blocos. Seu enredo envolve a nave estelar Arkanoid sendo atacada por uma entidade misteriosa do espaço chamada DOH.",
+            ru: "Arkanoid — это видеоигра в жанре арканоид. Ее сюжет включает в себя звездолет Arkanoid, атакованный таинственной сущностью из космоса по имени DOH.",
+            zh: "Arkanoid（打砖块）是一款打砖块视频游戏。其情节涉及星际飞船 Arkanoid 被一个名为 DOH 的神秘太空实体攻击。",
+            ja: "Arkanoidはブロック崩しゲームです。そのプロットは、宇宙船ArkanoidがDOHという宇宙からの謎の存在に攻撃されるというものです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/arkanoid.html"
     },
     {
         name: "Amazon: Guardian of Eden",
@@ -1528,6 +2495,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/amdemo.html"
     },
     {
+        name: "Adventure Fun-Pak ",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Adventure_Fun-Pak.png",
+        description: "Scott Miller had a new idea and created Adventure Fun-Pak and Puzzle Fun-Pak out of the best games that had been submitted to Apogee by aspiring authors. The four games in the Adventure Fun-Pak make an interesting study of some surprising and sometimes questionable programming techniques. There are two ASCII and two graphical games, each of which uses a different CGA mode, although the ASCII games will fall back to Mode 7 for MDA/Hercules cards.",
+        description: {
+            es: "Scott Miller tuvo una nueva idea y creó Adventure Fun-Pak y Puzzle Fun-Pak con los mejores juegos que autores aspirantes habían enviado a Apogee. Los cuatro juegos en Adventure Fun-Pak ofrecen un estudio interesante de algunas técnicas de programación sorprendentes y a veces cuestionables. Hay dos juegos ASCII y dos gráficos, cada uno de los cuales usa un modo CGA diferente, aunque los juegos ASCII recurren al Modo 7 para tarjetas MDA/Hercules.",
+            de: "Scott Miller hatte eine neue Idee und kreierte Adventure Fun-Pak und Puzzle Fun-Pak aus den besten Spielen, die von aufstrebenden Autoren bei Apogee eingereicht wurden. Die vier Spiele im Adventure Fun-Pak bieten eine interessante Studie über einige überraschende und manchmal fragwürdige Programmiertechniken. Es gibt zwei ASCII- und zwei Grafikspiele, die jeweils einen anderen CGA-Modus verwenden, wobei die ASCII-Spiele für MDA/Hercules-Karten auf Modus 7 zurückfallen.",
+            fr: "Scott Miller a eu une nouvelle idée et a créé Adventure Fun-Pak et Puzzle Fun-Pak à partir des meilleurs jeux qui avaient été soumis à Apogee par des auteurs en herbe. Les quatre jeux d'Adventure Fun-Pak offrent une étude intéressante de certaines techniques de programmation surprenantes et parfois discutables. Il y a deux jeux ASCII et deux jeux graphiques, chacun utilisant un mode CGA différent, bien que les jeux ASCII reviennent au mode 7 pour les cartes MDA/Hercules.",
+            it: "Scott Miller ebbe una nuova idea e creò Adventure Fun-Pak e Puzzle Fun-Pak dai migliori giochi che erano stati inviati ad Apogee da aspiranti autori. I quattro giochi in Adventure Fun-Pak offrono uno studio interessante di alcune tecniche di programmazione sorprendenti e talvolta discutibili. Ci sono due giochi ASCII e due giochi grafici, ognuno dei quali utilizza una diversa modalità CGA, sebbene i giochi ASCII utilizzino la Modalità 7 per le schede MDA/Hercules.",
+            pt: "Scott Miller teve uma nova ideia e criou o Adventure Fun-Pak e o Puzzle Fun-Pak a partir dos melhores jogos que haviam sido enviados à Apogee por autores aspirantes. Os quatro jogos do Adventure Fun-Pak oferecem um estudo interessante de algumas técnicas de programação surpreendentes e às vezes questionáveis. Existem dois jogos ASCII e dois gráficos, cada um usando um modo CGA diferente, embora os jogos ASCII recorram ao Modo 7 para placas MDA/Hercules.",
+            ru: "Скотт Миллер придумал новую идею и создал Adventure Fun-Pak и Puzzle Fun-Pak из лучших игр, которые были отправлены в Apogee начинающими авторами. Четыре игры в Adventure Fun-Pak представляют собой интересное исследование некоторых удивительных и иногда сомнительных методов программирования. Есть две ASCII-игры и две графические игры, каждая из которых использует другой режим CGA, хотя ASCII-игры переходят в режим 7 для карт MDA/Hercules.",
+            zh: "Scott Miller 有了一个新想法，并从有抱负的作者提交给 Apogee 的最佳游戏中创建了 Adventure Fun-Pak 和 Puzzle Fun-Pak。Adventure Fun-Pak 中的四款游戏对一些令人惊讶且有时有问题的编程技术进行了有趣的研究。有两款 ASCII 游戏和两款图形游戏，每款都使用不同的 CGA 模式，尽管 ASCII 游戏会为 MDA/Hercules 显卡退回到模式 7。",
+            ja: "スコット・ミラーは新しいアイデアを思いつき、Apogeeに提出された意欲的な作者による最高のゲームからAdventure Fun-PakとPuzzle Fun-Pakを作成しました。Adventure Fun-Pakの4つのゲームは、驚くべき、時には問題のあるプログラミング技術の興味深い研究を提供します。2つのASCIIゲームと2つのグラフィックゲームがあり、それぞれ異なるCGAモードを使用していますが、ASCIIゲームはMDA/Herculesカードの場合、モード7にフォールバックします。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/packs.html"
+    },
+    {
         name: "Azrael Tear",
         image: "https://ifilex.github.io/WineBOX-Store/box/atdemo.png",
         description: "Azrael's Tear is an interesting 3D first-person perspective adventure game. It plays similarly to graphical adventure games, where you collect items in your inventory and use them to progress.",
@@ -1543,6 +2527,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/atdem.html"
+    },
+    {
+        name: "Baby Type",
+        image: "https://ifilex.github.io/WineBOX-Store/box/baby.jpg",
+        description: "BabyType is a multi-language educational game aimed at teaching fast touch typing skills.",
+        description: {
+            es: "BabyType es un juego educativo multilingüe destinado a enseñar habilidades de mecanografía rápida al tacto.",
+            de: "BabyType ist ein mehrsprachiges Lernspiel, das darauf abzielt, schnelle Tippfähigkeiten zu vermitteln.",
+            fr: "BabyType est un jeu éducatif multilingue visant à enseigner les compétences de dactylographie rapide au toucher.",
+            it: "BabyType è un gioco educativo multilingue mirato a insegnare le abilità di digitazione tattile veloce.",
+            pt: "BabyType é um jogo educacional multilíngue destinado a ensinar habilidades de digitação rápida ao toque.",
+            ru: "BabyType — это многоязычная обучающая игра, направленная на обучение навыкам быстрой слепой печати.",
+            zh: "BabyType 是一款多语言教育游戏，旨在教授快速触摸打字技能。",
+            ja: "BabyTypeは、高速タッチタイピングスキルを教えることを目的とした多言語教育ゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/babytype.html"
     },
     {
         name: "Baryon",
@@ -1577,6 +2578,40 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/ber.html"
+    },
+    {
+        name: "Breakout",
+        image: "https://ifilex.github.io/WineBOX-Store/box/breakout.jpg",
+        description: "Breakout is a classic arcade game where the player controls a paddle to bounce a ball and break all the bricks on the screen. The goal is to clear the bricks without letting the ball fall past the paddle.",
+        description: {
+            es: "Breakout es un juego arcade clásico donde el jugador controla una paleta para rebotar una pelota y romper todos los ladrillos en la pantalla. El objetivo es limpiar los ladrillos sin dejar que la pelota caiga más allá de la paleta.",
+            de: "Breakout ist ein klassisches Arcade-Spiel, bei dem der Spieler einen Schläger steuert, um einen Ball abzuprallen und alle Steine auf dem Bildschirm zu zerbrechen. Ziel ist es, die Steine zu beseitigen, ohne dass der Ball am Schläger vorbeifällt.",
+            fr: "Breakout est un jeu d'arcade classique où le joueur contrôle une raquette pour faire rebondir une balle et casser toutes les briques à l'écran. Le but est de nettoyer les briques sans laisser la balle tomber au-delà de la raquette.",
+            it: "Breakout è un classico gioco arcade in cui il giocatore controlla una racchetta per far rimbalzare una palla e rompere tutti i mattoni sullo schermo. L'obiettivo è eliminare i mattoni senza far cadere la palla oltre la racchetta.",
+            pt: "Breakout é um jogo de arcade clássico onde o jogador controla uma paleta para quicar uma bola e quebrar todos os tijolos na tela. O objetivo é limpar os tijolos sem deixar a bola cair além da paleta.",
+            ru: "Breakout — это классическая аркадная игра, в которой игрок управляет ракеткой, чтобы отбивать мяч и разбивать все кирпичи на экране. Цель — убрать кирпичи, не давая мячу упасть за ракетку.",
+            zh: "Breakout（打砖块）是一款经典街机游戏，玩家控制一个挡板反弹球并打碎屏幕上的所有砖块。目标是在不让球从挡板旁落下的情况下清除所有砖块。",
+            ja: "Breakoutは、プレイヤーがパドルを操作してボールを跳ね返し、画面上のすべてのレンガを壊す古典的なアーケードゲームです。ボールがパドルを通り過ぎて落ちることなくレンガをすべて取り除くことが目標です。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/breakout.html"
+    },
+    {
+        name: "Brix",
+        image: "https://ifilex.github.io/WineBOX-Store/box/00_coverscreenshot.jpg",
+        description: "Breakout is a classic arcade game making puzzles",
+        description: {
+            es: "Breakout es un juego arcade clásico que crea rompecabezas.",
+            de: "Breakout ist ein klassisches Arcade-Spiel, das Puzzles erstellt.",
+            fr: "Breakout est un jeu d'arcade classique qui crée des puzzles.",
+            it: "Breakout è un classico gioco arcade che crea puzzle.",
+            pt: "Breakout é um jogo de arcade clássico que cria quebra-cabeças.",
+            ru: "Breakout — это классическая аркадная игра, создающая головоломки.",
+            zh: "Breakout（打砖块）是一款经典的街机游戏，制作拼图。",
+            ja: "Breakoutは、パズルを作成する古典的なアーケードゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/brix.html"
     },
     {
         name: "Bust a Move 2",
@@ -1647,6 +2682,108 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/crystal.html"
     },
     {
+        name: "Dave",
+        image: "https://ifilex.github.io/WineBOX-Store/box/dave.jpg",
+        description: "Dangerous Dave in the Haunted Mansion is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Dangerous Dave in the Haunted Mansion on mobile.",
+        description: {
+            es: "Dangerous Dave in the Haunted Mansion es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar a Dangerous Dave in the Haunted Mansion en dispositivos móviles.",
+            de: "Dangerous Dave in the Haunted Mansion ist ein berühmtes und vielgespieltes DOS-Spiel, das jetzt im Browser gespielt werden kann. Mit virtuellen mobilen Steuerelementen können Sie Dangerous Dave in the Haunted Mansion auch auf dem Handy spielen.",
+            fr: "Dangerous Dave in the Haunted Mansion est un jeu DOS célèbre et très joué, désormais disponible pour jouer dans le navigateur. Avec des commandes mobiles virtuelles, vous pouvez également jouer à Dangerous Dave in the Haunted Mansion sur mobile.",
+            it: "Dangerous Dave in the Haunted Mansion è un famoso e giocatissimo gioco DOS ora disponibile per giocare nel browser. Con i controlli mobili virtuali puoi anche giocare a Dangerous Dave in the Haunted Mansion su dispositivi mobili.",
+            pt: "Dangerous Dave in the Haunted Mansion é um famoso e muito jogado jogo de DOS que agora está disponível para jogar no navegador. Com controles móveis virtuais, você também pode jogar Dangerous Dave in the Haunted Mansion no celular.",
+            ru: "Dangerous Dave in the Haunted Mansion — это известная и популярная DOS-игра, в которую теперь можно играть в браузере. С помощью виртуальных мобильных элементов управления вы также можете играть в Dangerous Dave in the Haunted Mansion на мобильных устройствах.",
+            zh: "Dangerous Dave in the Haunted Mansion 是一款著名且玩得最多的 DOS 游戏，现在可以在浏览器中游玩。通过虚拟移动控件，您也可以在移动设备上玩《鬼屋里的危险戴夫》。",
+            ja: "Dangerous Dave in the Haunted Mansionは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもDangerous Dave in the Haunted Mansionをプレイできます。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/dave.html"
+    },
+    {
+        name: "Disney Aladdin",
+        image: "https://ifilex.github.io/WineBOX-Store/box/aladdin.jpg",
+        description: "Disney's Aladdin is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Disney's Aladdin on mobile.",
+        description: {
+            es: "Disney's Aladdin es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar a Disney's Aladdin en dispositivos móviles.",
+            de: "Disney's Aladdin ist ein berühmtes und vielgespieltes DOS-Spiel, das jetzt im Browser gespielt werden kann. Mit virtuellen mobilen Steuerelementen können Sie Disney's Aladdin auch auf dem Handy spielen.",
+            fr: "Disney's Aladdin est un jeu DOS célèbre et très joué, désormais disponible pour jouer dans le navigateur. Avec des commandes mobiles virtuelles, vous pouvez également jouer à Disney's Aladdin sur mobile.",
+            it: "Disney's Aladdin è un famoso e giocatissimo gioco DOS ora disponibile per giocare nel browser. Con i controlli mobili virtuali puoi anche giocare a Disney's Aladdin su dispositivi mobili.",
+            pt: "Disney's Aladdin é um famoso e muito jogado jogo de DOS que agora está disponível para jogar no navegador. Com controles móveis virtuais, você também pode jogar Disney's Aladdin no celular.",
+            ru: "Disney's Aladdin — это известная и популярная DOS-игра, в которую теперь можно играть в браузере. С помощью виртуальных мобильных элементов управления вы также можете играть в Disney's Aladdin на мобильных устройствах.",
+            zh: "Disney's Aladdin 是一款著名且玩得最多的 DOS 游戏，现在可以在浏览器中游玩。通过虚拟移动控件，您也可以在移动设备上玩《迪士尼阿拉丁》。",
+            ja: "Disney's Aladdinは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもDisney's Aladdinをプレイできます。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/aladdin.html"
+    },
+    {
+        name: "Doom 2D",
+        image: "https://ifilex.github.io/WineBOX-Store/box/doom2d.png",
+        description: "First of all, if you're looking for the real 3D DOOM game from id Software, the game on this page is not by id Software and certainly not endorsed by them!",
+        description: {
+            es: "En primer lugar, si estás buscando el verdadero juego DOOM en 3D de id Software, el juego de esta página no es de id Software y ciertamente no está respaldado por ellos.",
+            de: "Wenn Sie auf der Suche nach dem echten 3D-DOOM-Spiel von id Software sind, ist das Spiel auf dieser Seite nicht von id Software und sicherlich nicht von ihnen empfohlen!",
+            fr: "Tout d'abord, si vous cherchez le vrai jeu DOOM 3D d'id Software, le jeu sur cette page n'est pas d'id Software et certainement pas soutenu par eux !",
+            it: "Prima di tutto, se stai cercando il vero gioco DOOM 3D di id Software, il gioco in questa pagina non è di id Software e certamente non è approvato da loro!",
+            pt: "Em primeiro lugar, se você está procurando o verdadeiro jogo DOOM 3D da id Software, o jogo nesta página não é da id Software e certamente não é endossado por eles!",
+            ru: "Прежде всего, если вы ищете настоящую 3D-игру DOOM от id Software, игра на этой странице не от id Software и, конечно, не одобрена ими!",
+            zh: "首先，如果您正在寻找 id Software 真正的 3D DOOM 游戏，那么此页面上的游戏并非来自 id Software，当然也未获得他们的认可！",
+            ja: "まず第一に、もしあなたがid Software製の本物の3D DOOMゲームを探しているなら、このページのゲームはid Software製ではなく、もちろん彼らから推奨されているわけでもありません！"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/doom2d.html"
+    },
+    {
+        name: "Duke Nukem 2",
+        image: "https://ifilex.github.io/WineBOX-Store/box/duke2.gif",
+        description: "Between the original, classic Duke and the kickass Duke Nukem 3D came the unheralded sequel, Duke II.",
+        description: {
+            es: "Entre el Duke clásico original y el increíble Duke Nukem 3D llegó la secuela no anunciada, Duke II.",
+            de: "Zwischen dem originalen, klassischen Duke und dem grandiosen Duke Nukem 3D kam die unangekündigte Fortsetzung, Duke II.",
+            fr: "Entre le Duke classique original et le génial Duke Nukem 3D est arrivée la suite inaperçue, Duke II.",
+            it: "Tra il Duke classico originale e il fantastico Duke Nukem 3D è arrivato il sequel non annunciato, Duke II.",
+            pt: "Entre o Duke clássico original e o arrasador Duke Nukem 3D, surgiu a sequência não anunciada, Duke II.",
+            ru: "Между оригинальным классическим Duke и крутым Duke Nukem 3D вышло незамеченное продолжение, Duke II.",
+            zh: "在原创经典《毁灭公爵》和超棒的《毁灭公爵 3D》之间，出现了默默无闻的续作《毁灭公爵 II》。",
+            ja: "オリジナルのクラシックなDukeと素晴らしいDuke Nukem 3Dの間に、注目されなかった続編、Duke IIが登場しました。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/duke2.html"
+    },
+    {
+        name: "Dyna Blaster",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
+        description: "Refers to the European title for certain games in the Bomberman franchise, such as the TurboGrafx-16/PC Engine version",
+        description: {
+            es: "Se refiere al título europeo para ciertos juegos de la franquicia Bomberman, como la versión de TurboGrafx-16/PC Engine.",
+            de: "Bezieht sich auf den europäischen Titel für bestimmte Spiele der Bomberman-Franchise, wie die Version für TurboGrafx-16/PC Engine.",
+            fr: "Fait référence au titre européen pour certains jeux de la franchise Bomberman, comme la version TurboGrafx-16/PC Engine.",
+            it: "Si riferisce al titolo europeo per alcuni giochi del franchise di Bomberman, come la versione per TurboGrafx-16/PC Engine.",
+            pt: "Refere-se ao título europeu para certos jogos da franquia Bomberman, como a versão TurboGrafx-16/PC Engine.",
+            ru: "Относится к европейскому названию для некоторых игр франшизы Bomberman, таких как версия для TurboGrafx-16/PC Engine.",
+            zh: "指的是炸弹人系列中某些游戏在欧洲地区的名称，例如 TurboGrafx-16/PC Engine 版本。",
+            ja: "Bombermanフランチャイズの特定のゲーム（TurboGrafx-16/PC Engineバージョンなど）のヨーロッパタイトルを指します。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/dyna.html"
+    },
+    {
+        name: "Earthworm Jim",
+        image: "https://ifilex.github.io/WineBOX-Store/box/jim.jpg",
+        description: "Earthworm Jim is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play in Earthworm Jim on mobile.",
+        description: {
+            es: "Earthworm Jim es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar a Earthworm Jim en dispositivos móviles.",
+            de: "Earthworm Jim ist ein berühmtes und vielgespieltes DOS-Spiel, das jetzt im Browser gespielt werden kann. Mit virtuellen mobilen Steuerelementen können Sie Earthworm Jim auch auf dem Handy spielen.",
+            fr: "Earthworm Jim est un jeu DOS célèbre et très joué, désormais disponible pour jouer dans le navigateur. Avec des commandes mobiles virtuelles, vous pouvez également jouer à Earthworm Jim sur mobile.",
+            it: "Earthworm Jim è un famoso e giocatissimo gioco DOS ora disponibile per giocare nel browser. Con i controlli mobili virtuali puoi anche giocare a Earthworm Jim su dispositivi mobili.",
+            pt: "Earthworm Jim é um famoso e muito jogado jogo de DOS que agora está disponível para jogar no navegador. Com controles móveis virtuais, você também pode jogar Earthworm Jim no celular.",
+            ru: "Earthworm Jim — это известная и популярная DOS-игра, в которую теперь можно играть в браузере. С помощью виртуальных мобильных элементов управления вы также можете играть в Earthworm Jim на мобильных устройствах.",
+            zh: "Earthworm Jim 是一款著名且玩得最多的 DOS 游戏，现在可以在浏览器中游玩。通过虚拟移动控件，您也可以在移动设备上玩《蚯蚓战士》。",
+            ja: "Earthworm Jimは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもEarthworm Jimをプレイできます。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/earthworm.html"
+    },
+    {
         name: "Hextris",
         image: "https://ifilex.github.io/WineBOX-Store/box/hextris-lite.png",
         description: "Hextris is a game where users rotate a central hexagon and add similar colors.",
@@ -1662,6 +2799,91 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/webapps/hextris/index.html"
+    },
+    {
+        name: "Indiana Jones and the Fate of Atlantis",
+        image: "https://ifilex.github.io/WineBOX-Store/box/indyjones.gif",
+        description: "This demo version of the interactive Indiana Jones adventure game gives you an idea what to expect in the full game",
+        description: {
+            es: "Esta versión demo del juego de aventura interactivo de Indiana Jones te da una idea de lo que te espera en el juego completo.",
+            de: "Diese Demoversion des interaktiven Indiana-Jones-Adventures gibt Ihnen eine Vorstellung davon, was Sie im vollständigen Spiel erwartet.",
+            fr: "Cette version démo du jeu d'aventure interactif Indiana Jones vous donne une idée de ce à quoi vous attendre dans le jeu complet.",
+            it: "Questa versione demo del gioco di avventura interattivo di Indiana Jones ti dà un'idea di cosa aspettarti nel gioco completo.",
+            pt: "Esta versão demo do jogo de aventura interativo do Indiana Jones dá uma ideia do que esperar no jogo completo.",
+            ru: "Эта демо-версия интерактивной приключенческой игры об Индиане Джонсе дает вам представление о том, чего ожидать в полной игре.",
+            zh: "这款互动式印第安纳·琼斯冒险游戏的演示版让您了解完整版游戏的内容。",
+            ja: "このインタラクティブなインディ・ジョーンズアドベンチャーゲームのデモ版は、フルゲームで何が期待できるかをあなたに示します。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/indy.html"
+    },
+    {
+        name: "Golden Axe",
+        image: "https://ifilex.github.io/WineBOX-Store/box/axe.jpg",
+        description: "Golden Axe is a side-scrolling, beat 'em up, hack and slash arcade video game released in 1989 by Sega for the System 16-B arcade hardware.",
+        description: {
+            es: "Golden Axe es un videojuego arcade de desplazamiento lateral, beat 'em up, hack and slash lanzado en 1989 por Sega para el hardware arcade System 16-B.",
+            de: "Golden Axe ist ein Side-Scrolling-Beat-'em-up-Hack-and-Slay-Arcade-Spiel, das 1989 von Sega für die Arcade-Hardware System 16-B veröffentlicht wurde.",
+            fr: "Golden Axe est un jeu d'arcade à défilement latéral, beat them all, hack and slash sorti en 1989 par Sega pour le matériel d'arcade System 16-B.",
+            it: "Golden Axe è un videogioco arcade a scorrimento laterale, picchiaduro a scorrimento, hack and slash rilasciato nel 1989 da Sega per l'hardware arcade System 16-B.",
+            pt: "Golden Axe é um jogo de arcade de rolagem lateral, beat 'em up, hack and slash lançado em 1989 pela Sega para o hardware de arcade System 16-B.",
+            ru: "Golden Axe — это аркадная видеоигра с боковой прокруткой в жанре beat 'em up, hack and slash, выпущенная в 1989 году компанией Sega для аркадного оборудования System 16-B.",
+            zh: "Golden Axe（战斧）是一款横向卷轴、清版动作、砍杀类街机游戏，由 Sega 于 1989 年为 System 16-B 街机硬件发行。",
+            ja: "Golden Axeは、セガが1989年にSystem 16-Bアーケードハードウェア向けにリリースした、横スクロールのベルトスクロールアクション、ハックアンドスラッシュのアーケードゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/goldenaxe.html"
+    },
+    {
+        name: "Nero Chess",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Psion_Chess.png",
+        description: "Nero 5 is a freeware chess programme, the fifth in a series of revisions by Finnish author Jari Huikari.",
+        description: {
+            es: "Nero 5 es un programa de ajedrez gratuito, el quinto de una serie de revisiones del autor finlandés Jari Huikari.",
+            de: "Nero 5 ist ein Freeware-Schachprogramm, das fünfte einer Reihe von Überarbeitungen des finnischen Autors Jari Huikari.",
+            fr: "Nero 5 est un programme d'échecs gratuit, le cinquième d'une série de révisions par l'auteur finlandais Jari Huikari.",
+            it: "Nero 5 è un programma di scacchi freeware, il quinto di una serie di revisioni dell'autore finlandese Jari Huikari.",
+            pt: "Nero 5 é um programa de xadrez gratuito, o quinto de uma série de revisões do autor finlandês Jari Huikari.",
+            ru: "Nero 5 — это бесплатная шахматная программа, пятая в серии редакций финского автора Яри Хуйкари.",
+            zh: "Nero 5 是一个免费的象棋程序，是芬兰作者 Jari Huikari 系列修订版的第五个。",
+            ja: "Nero 5はフリーウェアのチェスプログラムで、フィンランド人の著者Jari Huikariによる一連の改訂版の5番目です。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/nero5.html"
+    },
+    {
+        name: "Ms Pacman PC",
+        image: "https://ifilex.github.io/WineBOX-Store/box/mspac.gif",
+        description: "It's just like Pac-Man, but it is MS Pac-Man! What's the difference? Well, there's a bow on her ...This game IS a lot the same as the classic Pac-Man game, but with some variations, like different maze layouts and smarter ghosts.",
+        description: {
+            es: "Es como Pac-Man, ¡pero es MS Pac-Man! ¿Cuál es la diferencia? Bueno, ella tiene un lazo... Este juego es muy similar al clásico Pac-Man, pero con algunas variaciones, como diferentes diseños de laberintos y fantasmas más inteligentes.",
+            de: "Es ist genau wie Pac-Man, aber es ist MS Pac-Man! Was ist der Unterschied? Nun, sie hat eine Schleife ... Dieses Spiel ist dem klassischen Pac-Man weitgehend ähnlich, jedoch mit einigen Variationen, wie verschiedenen Labyrinth-Layouts und schlaueren Geistern.",
+            fr: "C'est comme Pac-Man, mais c'est MS Pac-Man ! Quelle est la différence ? Eh bien, elle a un nœud... Ce jeu est très similaire au jeu Pac-Man classique, mais avec quelques variations, comme différents agencements de labyrinthes et des fantômes plus intelligents.",
+            it: "È come Pac-Man, ma è MS Pac-Man! Qual è la differenza? Beh, lei ha un fiocco... Questo gioco è molto simile al classico Pac-Man, ma con alcune variazioni, come diversi layout di labirinti e fantasmi più intelligenti.",
+            pt: "É como Pac-Man, mas é o Ms. Pac-Man! Qual é a diferença? Bem, ela tem um laço... Este jogo é muito parecido com o clássico Pac-Man, mas com algumas variações, como diferentes layouts de labirinto e fantasmas mais espertos.",
+            ru: "Это как Pac-Man, но это MS Pac-Man! В чем разница? Ну, у нее есть бант... Эта игра во многом похожа на классическую игру Pac-Man, но с некоторыми изменениями, такими как различная планировка лабиринтов и более умные привидения.",
+            zh: "它就像《吃豆人》，但它是《小精灵女士》！有什么不同呢？嗯，她头上有个蝴蝶结......这款游戏和经典的《吃豆人》游戏非常相似，但有一些变化，比如不同的迷宫布局和更聪明的幽灵。",
+            ja: "パックマンのようなものですが、それがMs.パックマンです！違いは何ですか？ええと、彼女にはリボンがあります...このゲームはクラシックなパックマンと多くの点で同じですが、異なる迷路レイアウトやより賢いゴーストなどのバリエーションがあります。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/msppc.html"
+    },
+    {
+        name: "Monkey Island",
+        image: "https://ifilex.github.io/WineBOX-Store/box/monkey.jpg",
+        description: "Demo Version Of Lucasfilms Monkey Island.",
+        description: {
+            es: "Versión demo de Monkey Island de Lucasfilm.",
+            de: "Demoversion von Lucasfilms Monkey Island.",
+            fr: "Version démo de Monkey Island de Lucasfilm.",
+            it: "Versione demo di Monkey Island di Lucasfilm.",
+            pt: "Versão demo de Monkey Island da Lucasfilm.",
+            ru: "Демо-версия Обезьяньего острова Lucasfilm.",
+            zh: "Lucasfilm 出品的《猴岛小英雄》演示版。",
+            ja: "LucasfilmのMonkey Islandのデモ版。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/midemo.html"
     },
     {
         name: "Pacman",
@@ -1681,6 +2903,91 @@ window.appData = [
         link: "https://fosiper.com/games/pacman-lite/"
     },
     {
+        name: "Plague of the Moon",
+        image: "https://ifilex.github.io/WineBOX-Store/box/plague.gif",
+        description: "Plague of the Moon is a Lucasarts style adventure game. However, it does not approach the Lucasarts level of quality, even though it tries.",
+        description: {
+            es: "Plague of the Moon es un juego de aventura al estilo de Lucasarts. Sin embargo, no alcanza el nivel de calidad de Lucasarts, aunque lo intenta.",
+            de: "Plague of the Moon ist ein Adventure im Lucasarts-Stil. Es erreicht jedoch nicht das Qualitätsniveau von Lucasarts, obwohl es es versucht.",
+            fr: "Plague of the Moon est un jeu d'aventure de style Lucasarts. Cependant, il n'atteint pas le niveau de qualité de Lucasarts, même s'il essaie.",
+            it: "Plague of the Moon è un'avventura in stile Lucasarts. Tuttavia, non raggiunge il livello di qualità di Lucasarts, anche se ci prova.",
+            pt: "Plague of the Moon é um jogo de aventura no estilo Lucasarts. No entanto, não atinge o nível de qualidade da Lucasarts, mesmo tentando.",
+            ru: "Plague of the Moon — это приключенческая игра в стиле Lucasarts. Однако она не достигает уровня качества Lucasarts, хотя и пытается.",
+            zh: "Plague of the Moon 是一款卢卡斯艺术风格的冒险游戏。但是，尽管它很努力，但并未达到卢卡斯艺术的质量水平。",
+            ja: "Plague of the Moonは、Lucasartsスタイルのアドベンチャーゲームです。しかし、Lucasartsの品質レベルには達していません。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/plague.html"
+    },
+    {
+        name: "Prince of persia",
+        image: "https://ifilex.github.io/WineBOX-Store/box/prince.jpg",
+        description: "Prince of Persia: Is a clasic platform game.",
+        description: {
+            es: "Prince of Persia: Es un juego de plataformas clásico.",
+            de: "Prince of Persia: Ist ein klassisches Plattformspiel.",
+            fr: "Prince of Persia: Est un jeu de plateforme classique.",
+            it: "Prince of Persia: È un classico gioco a piattaforme.",
+            pt: "Prince of Persia: É um jogo de plataforma clássico.",
+            ru: "Prince of Persia: Это классическая платформенная игра.",
+            zh: "Prince of Persia（波斯王子）：是一款经典的平台游戏。",
+            ja: "Prince of Persia： 古典的なプラットフォームゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/princeofpersia.html"
+    },
+    {
+        name: "Prince of persia 2",
+        image: "https://ifilex.github.io/WineBOX-Store/box/prince2.jpg",
+        description: "Prince of Persia 2: The Shadow and the Flame is a platform game released by Brøderbund in 1993.",
+        description: {
+            es: "Prince of Persia 2: The Shadow and the Flame es un juego de plataformas lanzado por Brøderbund en 1993.",
+            de: "Prince of Persia 2: The Shadow and the Flame ist ein von Brøderbund 1993 veröffentlichtes Plattformspiel.",
+            fr: "Prince of Persia 2: The Shadow and the Flame est un jeu de plateforme publié par Brøderbund en 1993.",
+            it: "Prince of Persia 2: The Shadow and the Flame è un gioco a piattaforme pubblicato da Brøderbund nel 1993.",
+            pt: "Prince of Persia 2: The Shadow and the Flame é um jogo de plataforma lançado pela Brøderbund em 1993.",
+            ru: "Prince of Persia 2: The Shadow and the Flame — это платформенная игра, выпущенная Brøderbund в 1993 году.",
+            zh: "Prince of Persia 2: The Shadow and the Flame（波斯王子 2：影与火）是 Brøderbund 于 1993 年发行的平台游戏。",
+            ja: "Prince of Persia 2: The Shadow and the Flameは、Brøderbundが1993年にリリースしたプラットフォームゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/princeofpersia2.html"
+    },
+    {
+        name: "Prehistorik",
+        image: "https://ifilex.github.io/WineBOX-Store/box/pre2.jpg",
+        description: "Prehistorik is a platform game developed by Titus Interactive for the Amiga, Atari ST, Amstrad CPC and DOS.",
+        description: {
+            es: "Prehistorik es un juego de plataformas desarrollado por Titus Interactive para Amiga, Atari ST, Amstrad CPC y DOS.",
+            de: "Prehistorik ist ein Plattformspiel, das von Titus Interactive für Amiga, Atari ST, Amstrad CPC und DOS entwickelt wurde.",
+            fr: "Prehistorik est un jeu de plateforme développé par Titus Interactive pour Amiga, Atari ST, Amstrad CPC et DOS.",
+            it: "Prehistorik è un gioco a piattaforme sviluppato da Titus Interactive per Amiga, Atari ST, Amstrad CPC e DOS.",
+            pt: "Prehistorik é um jogo de plataforma desenvolvido pela Titus Interactive para Amiga, Atari ST, Amstrad CPC e DOS.",
+            ru: "Prehistorik — это платформенная игра, разработанная Titus Interactive для Amiga, Atari ST, Amstrad CPC и DOS.",
+            zh: "Prehistorik 是一款由 Titus Interactive 为 Amiga、Atari ST、Amstrad CPC 和 DOS 开发的平台游戏。",
+            ja: "Prehistorikは、Titus InteractiveがAmiga、Atari ST、Amstrad CPC、DOS向けに開発したプラットフォームゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/prehistorik.html"
+    },
+    {
+        name: "Prehistorik 2",
+        image: "https://ifilex.github.io/WineBOX-Store/box/pre2.jpg",
+        description: "Prehistorik 2 is a platform game developed by Titus Interactive for the Amiga, Atari ST, Amstrad CPC and DOS.",
+        description: {
+            es: "Prehistorik 2 es un juego de plataformas desarrollado por Titus Interactive para Amiga, Atari ST, Amstrad CPC y DOS.",
+            de: "Prehistorik 2 ist ein Plattformspiel, das von Titus Interactive für Amiga, Atari ST, Amstrad CPC und DOS entwickelt wurde.",
+            fr: "Prehistorik 2 est un jeu de plateforme développé par Titus Interactive pour Amiga, Atari ST, Amstrad CPC et DOS.",
+            it: "Prehistorik 2 è un gioco a piattaforme sviluppato da Titus Interactive per Amiga, Atari ST, Amstrad CPC e DOS.",
+            pt: "Prehistorik 2 é um jogo de plataforma desenvolvido pela Titus Interactive para Amiga, Atari ST, Amstrad CPC e DOS.",
+            ru: "Prehistorik 2 — это платформенная игра, разработанная Titus Interactive для Amiga, Atari ST, Amstrad CPC и DOS.",
+            zh: "Prehistorik 2 是一款由 Titus Interactive 为 Amiga、Atari ST、Amstrad CPC 和 DOS 开发的平台游戏。",
+            ja: "Prehistorik 2は、Titus InteractiveがAmiga、Atari ST、Amstrad CPC、DOS向けに開発したプラットフォームゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/prehistorik2.html"
+    },
+    {
         name: "Rocks Diamonds",
         image: "https://ifilex.github.io/WineBOX-Store/box/mainmenu.png",
         description: "arcade style game for Linux, Mac, Windows and Android in the tradition of: Boulder Dash, Emerald Mine, Supaplex” (Amiga/PC), Sokoban” (PC).",
@@ -1696,6 +3003,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://www.artsoft.org/rocksndiamonds/play/"
+    },
+    {
+        name: "Sam and Max: Hit the road",
+        image: "https://ifilex.github.io/WineBOX-Store/box/snm.gif",
+        description: "Sam & Max features a detective dog and hyperkinetic rabbit in a graphical adventure game.",
+        description: {
+            es: "Sam & Max presenta a un perro detective y un conejo hiperquinético en un juego de aventura gráfica.",
+            de: "Sam & Max präsentiert einen Detektivhund und ein hyperkinetisches Kaninchen in einem grafischen Adventure-Spiel.",
+            fr: "Sam & Max met en scène un chien détective et un lapin hyperkinétique dans un jeu d'aventure graphique.",
+            it: "Sam & Max presenta un cane detective e un coniglio ipercinetico in un'avventura grafica.",
+            pt: "Sam & Max apresenta um cão detetive e um coelho hipercinético em um jogo de aventura gráfica.",
+            ru: "Sam & Max представляет детектива-пса и гиперактивного кролика в графической приключенческой игре.",
+            zh: "Sam & Max 在一款图形冒险游戏中，以一位侦探狗和一只多动症的兔子为主角。",
+            ja: "Sam & Maxは、探偵の犬と多動なウサギをグラフィカルアドベンチャーゲームでフィーチャーしています。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/sm.html"
     },
 {
     name: "Simon",
@@ -1714,6 +3038,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/webapps/simon/index.html"
+    },
+    {
+        name: "Simon the Sorcerer",
+        image: "https://ifilex.github.io/WineBOX-Store/box/simon.gif",
+        description: "Simon the Sorcerer is a classic graphical adventure game, and one of the few well-known games of its type from its time that was not released by Sierra or Lucasarts.",
+        description: {
+            es: "Simon the Sorcerer es un juego de aventura gráfica clásico, y uno de los pocos juegos conocidos de su tipo de su época que no fue lanzado por Sierra o Lucasarts.",
+            de: "Simon the Sorcerer ist ein klassisches grafisches Adventure und eines der wenigen bekannten Spiele seiner Art aus seiner Zeit, die nicht von Sierra oder Lucasarts veröffentlicht wurden.",
+            fr: "Simon the Sorcerer est un jeu d'aventure graphique classique, et l'un des rares jeux connus de son type de son époque qui n'a pas été publié par Sierra ou Lucasarts.",
+            it: "Simon the Sorcerer è un'avventura grafica classica, e uno dei pochi giochi conosciuti del suo tipo dell'epoca che non è stato pubblicato da Sierra o Lucasarts.",
+            pt: "Simon the Sorcerer é um jogo de aventura gráfica clássico, e um dos poucos jogos conhecidos do seu tipo da sua época que não foi lançado pela Sierra ou Lucasarts.",
+            ru: "Simon the Sorcerer — это классическая графическая приключенческая игра, одна из немногих известных игр своего типа своего времени, которая не была выпущена Sierra или Lucasarts.",
+            zh: "Simon the Sorcerer 是一款经典的图形冒险游戏，也是其时代为数不多的并非由 Sierra 或 Lucasarts 发行的同类知名游戏之一。",
+            ja: "Simon the Sorcererは、古典的なグラフィカルアドベンチャーゲームであり、SierraやLucasartsからリリースされなかった、その時代のタイプの数少ない有名なゲームの一つです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/simon.html"
     },
     {
         name: "Ski",
@@ -1766,6 +3107,74 @@ window.appData = [
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/stargunner.html"
     },
+    {
+        name: "The Last Express",
+        image: "https://ifilex.github.io/WineBOX-Store/box/lastexpress.png",
+        description: "The Last Express is a unique graphical adventure / detective game where the goal is to prevent certain events from happening before reaching the next station.",
+        description: {
+            es: "The Last Express es un juego único de aventura gráfica / detective donde el objetivo es evitar que ciertos eventos sucedan antes de llegar a la siguiente estación.",
+            de: "The Last Express ist ein einzigartiges grafisches Adventure-/Detektivspiel, bei dem das Ziel darin besteht, zu verhindern, dass bestimmte Ereignisse eintreten, bevor der nächste Bahnhof erreicht wird.",
+            fr: "The Last Express est un jeu d'aventure graphique/détective unique où le but est d'empêcher certains événements de se produire avant d'atteindre la gare suivante.",
+            it: "The Last Express è un'avventura grafica / gioco investigativo unico in cui l'obiettivo è impedire che determinati eventi accadano prima di raggiungere la stazione successiva.",
+            pt: "The Last Express é um jogo de aventura gráfica / detetive único, onde o objetivo é evitar que certos eventos aconteçam antes de chegar à próxima estação.",
+            ru: "The Last Express — это уникальная графическая приключенческая / детективная игра, цель которой — предотвратить определенные события до прибытия на следующую станцию.",
+            zh: "The Last Express 是一款独特的图形冒险/侦探游戏，目标是阻止某些事件在到达下一站之前发生。",
+            ja: "The Last Expressは、次の駅に到着する前に特定の出来事が起こるのを防ぐことを目的とした、ユニークなグラフィカルアドベンチャー/探偵ゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/express.html"
+    },
+    {
+        name: "The Lion King",
+        image: "https://ifilex.github.io/WineBOX-Store/box/lionking.gif",
+        description: "The Lion King represents one of the rare times that a movie-to-game conversion actually worked and granted us a pretty good game",
+        description: {
+            es: "El Rey León representa una de las raras veces que una conversión de película a juego realmente funcionó y nos brindó un juego bastante bueno.",
+            de: "Der König der Löwen ist einer der seltenen Fälle, in denen eine Film-zu-Spiel-Umsetzung tatsächlich funktioniert hat und uns ein ziemlich gutes Spiel beschert hat.",
+            fr: "Le Roi Lion représente l'une des rares fois où une conversion de film en jeu a réellement fonctionné et nous a offert un très bon jeu.",
+            it: "Il Re Leone rappresenta una delle rare volte in cui una conversione da film a gioco ha effettivamente funzionato e ci ha regalato un gioco abbastanza buono.",
+            pt: "O Rei Leão representa uma das raras vezes que uma conversão de filme para jogo realmente funcionou e nos presenteou com um jogo muito bom.",
+            ru: "Король Лев — один из редких случаев, когда преобразование фильма в игру действительно сработало и подарило нам довольно хорошую игру.",
+            zh: "《狮子王》代表了电影转游戏成功并为我们带来了一款相当不错游戏的罕见案例之一。",
+            ja: "ライオン・キングは、映画からゲームへの変換が実際に機能し、かなり良いゲームをもたらした稀な例の一つです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/lionking.html"
+    },
+    {
+        name: "The Lost Vikings",
+        image: "https://ifilex.github.io/WineBOX-Store/box/vikings.jpg",
+        description: "In the game, the three Vikings get kidnapped by Tomator, emperor of the alien Croutonian empire, for an inter-galactic zoo and become lost in various periods.",
+        description: {
+            es: "En el juego, los tres vikingos son secuestrados por Tomator, emperador del imperio alienígena Croutoniano, para un zoológico intergaláctico y se pierden en varios períodos.",
+            de: "Im Spiel werden die drei Wikinger von Tomator, dem Kaiser des außerirdischen Croutonischen Reiches, für einen intergalaktischen Zoo entführt und verirren sich in verschiedenen Zeitperioden.",
+            fr: "Dans le jeu, les trois Vikings sont kidnappés par Tomator, empereur de l'empire extraterrestre Croutonien, pour un zoo intergalactique et se perdent à différentes époques.",
+            it: "Nel gioco, i tre vichinghi vengono rapiti da Tomator, imperatore dell'impero alieno Croutoniano, per uno zoo intergalattico e si perdono in vari periodi.",
+            pt: "No jogo, os três vikings são sequestrados por Tomator, imperador do império alienígena Croutoniano, para um zoológico intergaláctico e se perdem em vários períodos.",
+            ru: "В игре троих викингов похищает Томатор, император инопланетной империи кроутонов, для межгалактического зоопарка, и они теряются в разных периодах времени.",
+            zh: "在游戏中，三名维京人被外星 Crotonian 帝国的皇帝 Tomator 绑架，用于建造一个星际动物园，并在不同时期迷失。",
+            ja: "ゲームでは、3人のバイキングがエイリアンのクロートニアン帝国の皇帝トマトールによって銀河間動物園のために誘拐され、さまざまな時代に迷い込みます。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/vikings.html"
+    },
+    {
+        name: "Wacky Wheels",
+        image: "https://ifilex.github.io/WineBOX-Store/box/wacky.gif",
+        description: "Seems like a rip-off of Super Mario Kart, with animals in place of the familiar Mario characters", 
+        description: {
+            es: "Parece una copia de Super Mario Kart, con animales en lugar de los familiares personajes de Mario.",
+            de: "Scheint eine Abkupferung von Super Mario Kart zu sein, mit Tieren anstelle der bekannten Mario-Figuren.",
+            fr: "On dirait une copie de Super Mario Kart, avec des animaux à la place des personnages familiers de Mario.",
+            it: "Sembra una copia di Super Mario Kart, con animali al posto dei familiari personaggi di Mario.",
+            pt: "Parece uma cópia de Super Mario Kart, com animais no lugar dos familiares personagens Mario.",
+            ru: "Похоже на клон Super Mario Kart, только с животными вместо знакомых персонажей Марио.",
+            zh: "看起来像是《超级马里奥赛车》的仿制品，用动物取代了熟悉的马里奥角色。",
+            ja: "おなじみのマリオキャラクターの代わりに動物が登場する、Super Mario Kartのパクリのように見えます。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/wacky.html"
+    },
    {
     name: "Winemine",
     image: "https://ifilex.github.io/WineBOX-Store/box/winemine.png",
@@ -1783,6 +3192,23 @@ window.appData = [
     },
     category: "arcade",
     link: "https://ifilex.github.io/WineBOX-Store/winemine.html"
+    },
+    {
+        name: "Wizardry: Crusaders of the Dark Savant",
+        image: "https://ifilex.github.io/WineBOX-Store/box/w7-introscreen-624x468.png",
+        description: "Crusaders of the Dark Savant is a classic role-playing game published by Sir-Tech, celebrated for its rich storyline and strategic depth.",
+        description: {
+            es: "Crusaders of the Dark Savant es un juego de rol clásico publicado por Sir-Tech, célebre por su rica historia y profundidad estratégica.",
+            de: "Crusaders of the Dark Savant ist ein klassisches Rollenspiel, das von Sir-Tech veröffentlicht wurde und für seine reichhaltige Handlung und strategische Tiefe bekannt ist.",
+            fr: "Crusaders of the Dark Savant est un jeu de rôle classique publié par Sir-Tech, célèbre pour sa riche intrigue et sa profondeur stratégique.",
+            it: "Crusaders of the Dark Savant è un classico gioco di ruolo pubblicato da Sir-Tech, celebrato per la sua ricca storia e profondità strategica.",
+            pt: "Crusaders of the Dark Savant é um jogo de RPG clássico publicado pela Sir-Tech, celebrado por sua rica história e profundidade estratégica.",
+            ru: "Crusaders of the Dark Savant — это классическая ролевая игра, опубликованная Sir-Tech, известная своим богатым сюжетом и стратегической глубиной.",
+            zh: "Crusaders of the Dark Savant 是一款由 Sir-Tech 发行的经典角色扮演游戏，以其丰富的故事情节和战略深度而著称。",
+            ja: "Crusaders of the Dark Savantは、Sir-Techが発行した古典的なロールプレイングゲームで、豊かなストーリーと戦略的な深さで知られています。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/wizardry.html"
     },
     {
         name: "XBill",
@@ -1889,6 +3315,23 @@ window.appData = [
          category: "rts",
          link: "https://ifilex.github.io/WineBOX-Store/boxworld.html"
     },
+    {
+        name: "Capture the Flag",
+        image: "https://ifilex.github.io/WineBOX-Store/box/capflag.gif",
+        description: "This game was given several glowing reviews upon its initial release (1994/95) and its easy to see why. This shareware game has an interface that is very professionally done and rivals the commercial games of its time.",
+        description: {
+            es: "Este juego recibió varias críticas entusiastas en su lanzamiento inicial (1994/95) y es fácil ver por qué. Este juego shareware tiene una interfaz muy profesional que rivaliza con los juegos comerciales de su época.",
+            de: "Dieses Spiel erhielt bei seiner Erstveröffentlichung (1994/95) mehrere begeisterte Kritiken, und es ist leicht zu verstehen, warum. Dieses Shareware-Spiel hat eine sehr professionell gestaltete Oberfläche, die mit den kommerziellen Spielen seiner Zeit konkurriert.",
+            fr: "Ce jeu a reçu plusieurs critiques élogieuses lors de sa sortie initiale (1994/95) et il est facile de voir pourquoi. Ce shareware a une interface très professionnelle qui rivalise avec les jeux commerciaux de son époque.",
+            it: "Questo gioco ha ricevuto diverse recensioni entusiastiche al suo rilascio iniziale (1994/95) ed è facile capire perché. Questo gioco shareware ha un'interfaccia molto professionale che rivaleggia con i giochi commerciali del suo tempo.",
+            pt: "Este jogo recebeu vários elogios críticos em seu lançamento inicial (1994/95) e é fácil ver porquê. Este jogo shareware tem uma interface muito profissional que rivaliza com os jogos comerciais da sua época.",
+            ru: "Эта игра получила несколько восторженных отзывов при своем первоначальном выпуске (1994/95), и легко понять почему. Эта условно-бесплатная игра имеет очень профессионально сделанный интерфейс, который соперничает с коммерческими играми того времени.",
+            zh: "这款游戏在最初发布时（1994/95 年）获得了许多热烈的好评，原因显而易见。这款共享软件的界面非常专业，可与同时代的商业游戏相媲美。",
+            ja: "このゲームは最初のリリース（1994/95）時にいくつかの絶賛レビューを受けましたが、その理由は簡単にわかります。このシェアウェアゲームは、非常にプロフェッショナルに作られたインターフェースを備えており、当時の商用ゲームに匹敵します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/flag.html"
+    },
    {
   "name": "Chinchón",
   "image": "https://ifilex.github.io/WineBOX-Store/box/chinchon.png",
@@ -1906,6 +3349,40 @@ window.appData = [
   },
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/chichon/index.html"
+    },
+    {
+        name: "Command & Conquer",
+        image: "https://ifilex.github.io/WineBOX-Store/box/command.jpg",
+        description: "Wage real-time war in more ways than ever with a modern and near-future arsenal. Command the powerful US forces.",
+        description: {
+            es: "Libra una guerra en tiempo real de más formas que nunca con un arsenal moderno y casi futurista. Comanda las poderosas fuerzas estadounidenses.",
+            de: "Führen Sie Echtzeitkrieg auf mehr Arten denn je mit einer modernen und nahen zukünftigen Waffenarsenal. Befehlen Sie die mächtigen US-Streitkräfte.",
+            fr: "Menez une guerre en temps réel de plus de façons que jamais avec un arsenal moderne et de futur proche. Commandez les puissantes forces américaines.",
+            it: "Conduci una guerra in tempo reale in più modi che mai con un arsenale moderno e prossimo futuro. Comanda le potenti forze statunitensi.",
+            pt: "Trave guerra em tempo real de mais maneiras do que nunca com um arsenal moderno e de futuro próximo. Comande as poderosas forças norte-americanas.",
+            ru: "Ведите войну в реальном времени большим количеством способов, чем когда-либо, с современным и ближайшим будущим арсеналом. Командуйте мощными силами США.",
+            zh: "使用现代和近未来的武器库，以比以往更多的方式进行实时战争。指挥强大的美军部队。",
+            ja: "近代的で近未来的な兵器群を使い、これまでにない多様な方法でリアルタイム戦争を戦いましょう。強力な米軍を指揮します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/commandconquer.html"
+    },
+    {
+        name: "Crazy Cows",
+        image: "https://ifilex.github.io/WineBOX-Store/box/crazycows.png",
+        description: "Crazy Cows is not as crazy as its name might suggest. It's a strategy game, which superficially resembles real-time strategy games like Warcraft or Warcraft II but this is a turn-based game.",
+        description: {
+            es: "Crazy Cows no es tan loco como su nombre podría sugerir. Es un juego de estrategia, que superficialmente se parece a juegos de estrategia en tiempo real como Warcraft o Warcraft II, pero este es un juego por turnos.",
+            de: "Crazy Cows ist nicht so verrückt, wie der Name vermuten lässt. Es ist ein Strategiespiel, das oberflächlich Echtzeit-Strategiespielen wie Warcraft oder Warcraft II ähnelt, aber dieses ist ein rundenbasiertes Spiel.",
+            fr: "Crazy Cows n'est pas aussi fou que son nom pourrait le suggérer. C'est un jeu de stratégie, qui ressemble superficiellement aux jeux de stratégie en temps réel comme Warcraft ou Warcraft II, mais c'est un jeu au tour par tour.",
+            it: "Crazy Cows non è così pazzo come il suo nome potrebbe suggerire. È un gioco di strategia, che assomiglia superficialmente a giochi di strategia in tempo reale come Warcraft o Warcraft II, ma questo è un gioco a turni.",
+            pt: "Crazy Cows não é tão louco quanto seu nome pode sugerir. É um jogo de estratégia, que superficialmente se assemelha a jogos de estratégia em tempo real como Warcraft ou Warcraft II, mas este é um jogo baseado em turnos.",
+            ru: "Crazy Cows не так безумны, как может показаться из названия. Это стратегическая игра, которая внешне напоминает стратегии в реальном времени, такие как Warcraft или Warcraft II, но это пошаговая игра.",
+            zh: "Crazy Cows 并不像它的名字听起来那么疯狂。它是一款策略游戏，表面上类似于《魔兽争霸》或《魔兽争霸 II》等即时战略游戏，但这是一款回合制游戏。",
+            ja: "Crazy Cowsは、その名前が示唆するほどクレイジーではありません。それは戦略ゲームであり、表面的にはWarcraftやWarcraft IIのようなリアルタイムストラテジーゲームに似ていますが、これはターンベースのゲームです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/cows.html"
     },
    {
   "name": "Damas",
@@ -1961,6 +3438,23 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/generala/index.html"
 },
+    {
+        name: "Incredible Machine",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
+        description: "The objective of the game is to create Rube Goldberg machines by arranging collections of objects in a complex fashion, so as to perform some simple task",
+        description: {
+            es: "El objetivo del juego es crear máquinas de Rube Goldberg organizando colecciones de objetos de manera compleja, para realizar alguna tarea simple.",
+            de: "Das Ziel des Spiels ist es, Rube-Goldberg-Maschinen zu erstellen, indem Sammlungen von Objekten auf komplexe Weise angeordnet werden, um eine einfache Aufgabe auszuführen.",
+            fr: "L'objectif du jeu est de créer des machines de Rube Goldberg en arrangeant des collections d'objets de manière complexe, afin d'effectuer une tâche simple.",
+            it: "L'obiettivo del gioco è creare macchine di Rube Goldberg disponendo collezioni di oggetti in modo complesso, in modo da eseguire un compito semplice.",
+            pt: "O objetivo do jogo é criar máquinas de Rube Goldberg organizando coleções de objetos de maneira complexa, para realizar alguma tarefa simples.",
+            ru: "Цель игры — создавать машины Руба Голдберга, располагая наборы объектов замысловатым образом, чтобы выполнить какое-либо простое задание.",
+            zh: "游戏的目标是通过以复杂的方式排列物体集合来创建鲁布·戈德堡机械，从而执行一些简单的任务。",
+            ja: "ゲームの目的は、オブジェクトのコレクションを複雑に配置してルーブ・ゴールドバーグマシンを作成し、単純なタスクを実行することです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/machine.html"
+    },
    {
   "name": "La escoba de 15",
   "image": "https://ifilex.github.io/WineBOX-Store/box/escoba.png",
@@ -1998,6 +3492,40 @@ window.appData = [
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/lemonade/index.html"
 },
     {
+        name: "Master of Orion II",
+        image: "https://ifilex.github.io/WineBOX-Store/box/master.jpg",
+        description: "Forge an empire in a universe where population growth is stripping away planetary resources. Colonize unknown planets and trade.",
+        description: {
+            es: "Forja un imperio en un universo donde el crecimiento de la población está agotando los recursos planetarios. Coloniza planetas desconocidos y comercia.",
+            de: "Schmieden Sie ein Imperium in einem Universum, in dem das Bevölkerungswachstum die planetaren Ressourcen raubt. Besiedeln Sie unbekannte Planeten und handeln Sie.",
+            fr: "Forgez un empire dans un univers où la croissance démographique dépouille les ressources planétaires. Colonisez des planètes inconnues et commerçez.",
+            it: "Forgia un impero in un universo in cui la crescita della popolazione sta spogliando le risorse planetarie. Colonizza pianeti sconosciuti e commerci.",
+            pt: "Forje um império em um universo onde o crescimento populacional está destruindo os recursos planetários. Colonize planetas desconhecidos e negocie.",
+            ru: "Создайте империю во вселенной, где рост населения истощает планетарные ресурсы. Колонизируйте неизвестные планеты и торгуйте.",
+            zh: "在一个人口增长正在耗尽行星资源的宇宙中建立帝国。殖民未知星球并进行贸易。",
+            ja: "人口増加が惑星の資源を奪い取っている宇宙で帝国を築き上げてください。未知の惑星を植民地化し、交易を行います。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/masteroforion.html"
+    },
+    {
+        name: "Max Mechanized Assault",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4d120df40fcf9efe1111c3b030510769.webp",
+        description: "M.A.X.: Mechanized Assault & Exploration is a real-time strategy game set in a futuristic world. Players build bases, gather resources, and command customizable mechs to conquer opponents and explore new territories.",
+        description: {
+            es: "M.A.X.: Mechanized Assault & Exploration es un juego de estrategia en tiempo real ambientado en un mundo futurista. Los jugadores construyen bases, recolectan recursos y comandan mechs personalizables para conquistar oponentes y explorar nuevos territorios.",
+            de: "M.A.X.: Mechanized Assault & Exploration ist ein Echtzeit-Strategiespiel, das in einer futuristischen Welt spielt. Spieler bauen Basen, sammeln Ressourcen und befehligen anpassbare Mechs, um Gegner zu erobern und neue Gebiete zu erkunden.",
+            fr: "M.A.X.: Mechanized Assault & Exploration est un jeu de stratégie en temps réel se déroulant dans un monde futuriste. Les joueurs construisent des bases, collectent des ressources et commandent des mechs personnalisables pour conquérir des adversaires et explorer de nouveaux territoires.",
+            it: "M.A.X.: Mechanized Assault & Exploration è un gioco di strategia in tempo reale ambientato in un mondo futuristico. I giocatori costruiscono basi, raccolgono risorse e comandano mech personalizzabili per conquistare gli avversari ed esplorare nuovi territori.",
+            pt: "M.A.X.: Mechanized Assault & Exploration é um jogo de estratégia em tempo real ambientado em um mundo futurista. Os jogadores constroem bases, coletam recursos e comandam mechs personalizáveis para conquistar oponentes e explorar novos territórios.",
+            ru: "M.A.X.: Mechanized Assault & Exploration — это стратегия в реальном времени, действие которой происходит в футуристическом мире. Игроки строят базы, собирают ресурсы и управляют настраиваемыми мехами, чтобы побеждать противников и исследовать новые территории.",
+            zh: "M.A.X.: Mechanized Assault & Exploration 是一款以未来世界为背景的即时战略游戏。玩家建造基地、收集资源并指挥可定制的机甲来征服对手并探索新领土。",
+            ja: "M.A.X.: Mechanized Assault & Explorationは、未来的な世界を舞台にしたリアルタイムストラテジーゲームです。プレイヤーは基地を建設し、リソースを収集し、カスタマイズ可能なメカを指揮して対戦相手を征服し、新しい領土を探索します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/max.html"
+    },
+    {
         name: "Open TTD",
         image: "https://ifilex.github.io/WineBOX-Store/box/openttd.jpg",
         description: "OpenTTD is a business simulation game in which players try to earn money by transporting passengers, minerals and goods via road, rail, water and air. It is an open-source remake and expansion of the 1995 Chris Sawyer video game Transport Tycoon Deluxe.",
@@ -2013,6 +3541,23 @@ window.appData = [
         },
         category: "rts",
         link: "https://pelya.github.io/openttd-touch-webapp/openttd.html"
+    },
+  {
+        name: "Oregon Trail Delux",
+        image: "https://ifilex.github.io/WineBOX-Store/box/oregon.jpg",
+        description: "You get to play the role of a wagon leader and guide your group of chosen settlers from Independence, Missouri, to the Willamette Valley in Oregon.",
+        description: {
+            es: "Tú juegas el papel de un líder de caravana y guías a tu grupo de colonos elegidos desde Independence, Missouri, hasta el Valle de Willamette en Oregón.",
+            de: "Sie spielen die Rolle eines Wagenführers und führen Ihre ausgewählte Gruppe von Siedlern von Independence, Missouri, ins Willamette Valley in Oregon.",
+            fr: "Vous jouez le rôle d'un chef de convoi et guidez votre groupe de colons choisis depuis Independence, Missouri, jusqu'à la vallée de Willamette en Oregon.",
+            it: "Interpreti il ruolo di un capo carovana e guidi il tuo gruppo di coloni scelti da Independence, Missouri, fino alla Willamette Valley in Oregon.",
+            pt: "Você interpreta o papel de um líder de caravana e guia seu grupo de colonos escolhidos de Independence, Missouri, até o Vale Willamette, no Oregon.",
+            ru: "Вы играете роль лидера фургона и ведете свою группу выбранных поселенцев из Индепенденса, штат Миссури, в долину Уилламетт в Орегоне.",
+            zh: "您将扮演马车队领导者的角色，带领您选定的定居者团体从密苏里州的独立城前往俄勒冈州的威拉米特河谷。",
+            ja: "あなたは幌馬車のリーダーの役割を果たし、ミズーリ州インディペンデンスからオレゴン州ウィラメットバレーまで、選ばれた入植者のグループを導きます。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/oregon.html"
     },
 {
   "name": "PixelCrush",
@@ -2050,6 +3595,40 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/robotrivia/index.html"
 },
+    {
+        name: "Sim City",
+        image: "https://ifilex.github.io/WineBOX-Store/box/simcity.jpg",
+        description: "SimCity is an open-ended city-building video game franchise originally designed by Will Wright.",
+        description: {
+            es: "SimCity es una franquicia de videojuegos de construcción de ciudades de mundo abierto diseñada originalmente por Will Wright.",
+            de: "SimCity ist eine Open-World-Städtebau-Videospiel-Franchise, die ursprünglich von Will Wright entworfen wurde.",
+            fr: "SimCity est une franchise de jeux vidéo de construction de ville en monde ouvert initialement conçue par Will Wright.",
+            it: "SimCity è un franchise di videogiochi sandbox di costruzione di città originariamente progettato da Will Wright.",
+            pt: "SimCity é uma franquia de videogame de construção de cidade de mundo aberto originalmente projetada por Will Wright.",
+            ru: "SimCity — это франшиза видеоигр о строительстве городов с открытым миром, первоначально разработанная Уиллом Райтом.",
+            zh: "SimCity（模拟城市）是一个开放式的城市建造视频游戏系列，最初由 Will Wright 设计。",
+            ja: "SimCityは、Will Wrightによって最初に設計されたオープンエンドの都市建設ゲームフランチャイズです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/simcity.html"
+    },
+    {
+        name: "Sim City 2000",
+        image: "https://ifilex.github.io/WineBOX-Store/box/sim2000.jpg",
+        description: "SimCity 2000 marked a major shift in gameplay from the original SimCity, the basic structure set forth in this seminal version has defined subsequent releases.",
+        description: {
+            es: "SimCity 2000 marcó un cambio importante en la jugabilidad con respecto al SimCity original, la estructura básica establecida en esta versión seminal ha definido los lanzamientos posteriores.",
+            de: "SimCity 2000 markierte einen großen Wandel im Gameplay gegenüber dem ursprünglichen SimCity. Die grundlegende Struktur dieser wegweisenden Version hat die nachfolgenden Versionen geprägt.",
+            fr: "SimCity 2000 a marqué un changement majeur dans le gameplay par rapport au SimCity original, la structure de base énoncée dans cette version séminale a défini les versions ultérieures.",
+            it: "SimCity 2000 ha segnato un importante cambiamento nel gameplay rispetto al SimCity originale, la struttura di base delineata in questa versione seminale ha definito le versioni successive.",
+            pt: "SimCity 2000 marcou uma grande mudança na jogabilidade em relação ao SimCity original, a estrutura básica estabelecida nesta versão seminal definiu os lançamentos subsequentes.",
+            ru: "SimCity 2000 ознаменовал серьезный сдвиг в игровом процессе по сравнению с оригинальным SimCity. Базовая структура, изложенная в этой знаковой версии, определила последующие выпуски.",
+            zh: "SimCity 2000 标志着与原版 SimCity 相比游戏玩法的重大转变，这个开创性版本中提出的基本结构定义了后续的版本。",
+            ja: "SimCity 2000は、オリジナルのSimCityからの大きなゲームプレイの変化を示し、この画期的なバージョンで示された基本構造がその後のリリースを定義しました。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/simcity2000.html"
+    },
 {
   "name": "Sopa de letras",
   "image": "https://ifilex.github.io/WineBOX-Store/box/sopa.jpg",
@@ -2121,6 +3700,23 @@ window.appData = [
       category: "rts",
       link: "https://ifilex.github.io/WineBOX-Store/spider.html"
     },
+    {
+        name: "Syndicate Plus",
+        image: "https://ifilex.github.io/WineBOX-Store/box/0d60ba79f3cc2bb7493618a3e7491d01.webp",
+        description: "Syndicate Plus is a combination of Syndicate and the American Revolt expansion pack. Syndicate Plus is a strategy game in which you control cyborg 'agents' in an attempt to dominate the world. American Revolt adds new missions to the game, as well as multiplayer capability and multiplayer missions.",
+        description: {
+            es: "Syndicate Plus es una combinación de Syndicate y el paquete de expansión American Revolt. Syndicate Plus es un juego de estrategia en el que controlas 'agentes' cyborg en un intento de dominar el mundo. American Revolt agrega nuevas misiones al juego, así como capacidad multijugador y misiones multijugador.",
+            de: "Syndicate Plus ist eine Kombination aus Syndicate und dem Add-On American Revolt. Syndicate Plus ist ein Strategiespiel, in dem Sie Cyborg-„Agenten“ kontrollieren, um die Welt zu dominieren. American Revolt fügt dem Spiel neue Missionen sowie Mehrspielerfähigkeiten und Mehrspielermissionen hinzu.",
+            fr: "Syndicate Plus est une combinaison de Syndicate et du pack d'extension American Revolt. Syndicate Plus est un jeu de stratégie dans lequel vous contrôlez des « agents » cyborgs pour tenter de dominer le monde. American Revolt ajoute de nouvelles missions au jeu, ainsi qu'une capacité multijoueur et des missions multijoueur.",
+            it: "Syndicate Plus è una combinazione di Syndicate e del pacchetto di espansione American Revolt. Syndicate Plus è un gioco di strategia in cui controlli 'agenti' cyborg nel tentativo di dominare il mondo. American Revolt aggiunge nuove missioni al gioco, oltre alla capacità multigiocatore e missioni multigiocatore.",
+            pt: "Syndicate Plus é uma combinação de Syndicate e do pacote de expansão American Revolt. Syndicate Plus é um jogo de estratégia em que você controla 'agentes' ciborgues na tentativa de dominar o mundo. American Revolt adiciona novas missões ao jogo, bem como capacidade multijogador e missões multijogador.",
+            ru: "Syndicate Plus — это комбинация Syndicate и дополнения American Revolt. Syndicate Plus — это стратегическая игра, в которой вы управляете киборгами-«агентами» в попытке доминировать в мире. American Revolt добавляет в игру новые миссии, а также многопользовательскую функцию и многопользовательские миссии.",
+            zh: "Syndicate Plus 是由《暴力辛迪加》和扩展包《美国叛乱》组合而成。Syndicate Plus 是一款策略游戏，你控制半机械人“特工”试图统治世界。《美国叛乱》为游戏添加了新任务，以及多人游戏功能和多人任务。",
+            ja: "Syndicate Plusは、Syndicateと拡張パックAmerican Revoltの組み合わせです。Syndicate Plusは、サイボーグの「エージェント」を制御して世界を支配しようとするストラテジーゲームです。American Revoltは、ゲームに新しいミッションと、マルチプレイヤー機能とマルチプレイヤーミッションを追加します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/syndicate.html"
+    },
 {
     "name": "TATETI",
     "image": "https://ifilex.github.io/WineBOX-Store/box/tateti.jpg",
@@ -2139,6 +3735,74 @@ window.appData = [
     "category": "rts",
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/tateti/index.html"
 },
+    {
+        name: "Theme park",
+        image: "https://ifilex.github.io/WineBOX-Store/box/themepark.gif",
+        description: "Theme Park is a classic strategy game, and one of the earliest tycoon-style games. In this demo version, your ride selection is limited to just one ride type, and there are many other limits as well. ",
+        description: {
+            es: "Theme Park es un juego de estrategia clásico y uno de los primeros juegos de estilo tycoon. En esta versión demo, tu selección de atracciones se limita a un solo tipo de atracción, y también hay muchos otros límites.",
+            de: "Theme Park ist ein klassisches Strategiespiel und eines der frühesten Tycoon-Spiele. In dieser Demoversion ist Ihre Fahrgeschäftsauswahl auf nur einen Fahrgeschäftstyp beschränkt, und es gibt auch viele andere Einschränkungen.",
+            fr: "Theme Park est un jeu de stratégie classique et l'un des premiers jeux de type tycoon. Dans cette version démo, votre sélection d'attractions est limitée à un seul type d'attraction, et il y a aussi de nombreuses autres limites.",
+            it: "Theme Park è un classico gioco di strategia, e uno dei primi giochi di tipo tycoon. In questa versione demo, la tua selezione di attrazioni è limitata a un solo tipo di giostra, e ci sono anche molti altri limiti.",
+            pt: "Theme Park é um jogo de estratégia clássico e um dos primeiros jogos do estilo tycoon. Nesta versão demo, sua seleção de brinquedos é limitada a apenas um tipo de brinquedo, e há muitos outros limites também.",
+            ru: "Theme Park — это классическая стратегическая игра, одна из первых игр в стиле tycoon. В этой демо-версии выбор аттракционов ограничен только одним типом аттракционов, а также есть много других ограничений.",
+            zh: "Theme Park（主题公园）是一款经典的策略游戏，也是最早的模拟经营类游戏之一。在这个演示版中，您可选择的游乐设施仅限于一种类型，并且还有许多其他限制。",
+            ja: "Theme Parkは、クラシックなストラテジーゲームであり、最も初期のタイクーンスタイルのゲームの一つです。このデモ版では、乗り物の選択は1種類のみに制限されており、他にも多くの制限があります。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/themepark.html"
+    },
+    {
+        name: "The Horde",
+        image: "https://ifilex.github.io/WineBOX-Store/box/thehorde.png",
+        description: "The Horde is a real-time action / strategy fantasy themed game.",
+        description: {
+            es: "The Horde es un juego de acción/estrategia en tiempo real con temática de fantasía.",
+            de: "The Horde ist ein Echtzeit-Action-/Strategiespiel mit Fantasiethema.",
+            fr: "The Horde est un jeu d'action/stratégie en temps réel sur le thème de la fantasy.",
+            it: "The Horde è un gioco d'azione/strategia in tempo reale a tema fantasy.",
+            pt: "The Horde é um jogo de ação/estratégia em tempo real com tema de fantasia.",
+            ru: "The Horde — это игра в реальном времени в жанре экшн/стратегии на тему фэнтези.",
+            zh: "The Horde 是一款实时动作/策略幻想主题游戏。",
+            ja: "The Hordeは、ファンタジーをテーマにしたリアルタイムアクション/ストラテジーゲームです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/horde.html"
+    },
+    {
+        name: "Warcraft",
+        image: "https://ifilex.github.io/WineBOX-Store/box/war1.jpg",
+        description: "Warcraft: Orcs & Humans is a real-time strategy game (RTS) developed and published by Blizzard Entertainment, and published by Interplay Productions in Europe.",
+        description: {
+            es: "Warcraft: Orcs & Humans es un juego de estrategia en tiempo real (RTS) desarrollado y publicado por Blizzard Entertainment, y publicado por Interplay Productions en Europa.",
+            de: "Warcraft: Orcs & Humans ist ein Echtzeit-Strategiespiel (RTS), das von Blizzard Entertainment entwickelt und veröffentlicht wurde und in Europa von Interplay Productions veröffentlicht wurde.",
+            fr: "Warcraft: Orcs & Humans est un jeu de stratégie en temps réel (RTS) développé et publié par Blizzard Entertainment, et publié par Interplay Productions en Europe.",
+            it: "Warcraft: Orcs & Humans è un gioco di strategia in tempo reale (RTS) sviluppato e pubblicato da Blizzard Entertainment, e pubblicato da Interplay Productions in Europa.",
+            pt: "Warcraft: Orcs & Humans é um jogo de estratégia em tempo real (RTS) desenvolvido e publicado pela Blizzard Entertainment, e publicado pela Interplay Productions na Europa.",
+            ru: "Warcraft: Orcs & Humans — это стратегия в реальном времени (RTS), разработанная и изданная Blizzard Entertainment, а в Европе изданная Interplay Productions.",
+            zh: "Warcraft: Orcs & Humans（魔兽争霸：兽人与人类）是一款由暴雪娱乐开发和发行的即时战略游戏（RTS），在欧洲由 Interplay Productions 发行。",
+            ja: "Warcraft: Orcs & Humansは、Blizzard Entertainmentが開発・発売したリアルタイムストラテジーゲームであり、ヨーロッパではInterplay Productionsが発売しました。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/warcraft.html"
+    },
+    {
+        name: "Warcraft II",
+        image: "https://ifilex.github.io/WineBOX-Store/box/war2.jpg",
+        description: "WarCraft II: Tides of Darkness is a sequel to WarCraft: Orcs & Humans strategy game for DOS.",
+        description: {
+            es: "WarCraft II: Tides of Darkness es una secuela del juego de estrategia WarCraft: Orcs & Humans para DOS.",
+            de: "WarCraft II: Tides of Darkness ist eine Fortsetzung des Strategiespiels WarCraft: Orcs & Humans für DOS.",
+            fr: "WarCraft II: Tides of Darkness est une suite du jeu de stratégie WarCraft: Orcs & Humans pour DOS.",
+            it: "WarCraft II: Tides of Darkness è un seguito del gioco di strategia WarCraft: Orcs & Humans per DOS.",
+            pt: "WarCraft II: Tides of Darkness é uma sequência do jogo de estratégia WarCraft: Orcs & Humans para DOS.",
+            ru: "WarCraft II: Tides of Darkness — это продолжение стратегической игры WarCraft: Orcs & Humans для DOS.",
+            zh: "WarCraft II: Tides of Darkness（魔兽争霸 II：黑暗之潮）是 DOS 平台策略游戏《魔兽争霸：兽人与人类》的续作。",
+            ja: "WarCraft II: Tides of Darknessは、DOS用ストラテジーゲームWarCraft: Orcs & Humansの続編です。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/warcraft2.html"
+    },
     {
         name: "Warpath",
         image: "https://archive.org/download/win3_Warpath/screenshot_00.jpg",
@@ -2175,6 +3839,23 @@ window.appData = [
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/warpath2/index.html"
 },
     {
+        name: "Waterworld",
+        image: "https://ifilex.github.io/WineBOX-Store/box/waterworld.png",
+        description: "Waterworld is a real-time mission-based strategy game based on the expensive (at the time) and largely poorly regarded movie of the same name.",
+        description: {
+            es: "Waterworld es un juego de estrategia en tiempo real basado en misiones, inspirado en la costosa (en ese momento) y en gran medida mal considerada película del mismo nombre.",
+            de: "Waterworld ist ein Echtzeit-Missions-Strategiespiel, das auf dem teuren (zu der Zeit) und weitgehend schlecht angesehenen Film gleichen Namens basiert.",
+            fr: "Waterworld est un jeu de stratégie en temps réel basé sur des missions, basé sur le film du même nom, coûteux (à l'époque) et largement mal considéré.",
+            it: "Waterworld è un gioco di strategia in tempo reale basato su missioni, basato sull'omonimo film costoso (all'epoca) e in gran parte mal considerato.",
+            pt: "Waterworld é um jogo de estratégia em tempo real baseado em missões, baseado no caro (na época) e amplamente mal considerado filme de mesmo nome.",
+            ru: "Waterworld — это стратегическая игра в реальном времени, основанная на миссиях и основанная на дорогом (на тот момент) и в значительной степени плохо воспринятом одноименном фильме.",
+            zh: "Waterworld 是一款基于任务的即时战略游戏，改编自当时制作成本高昂且口碑普遍不佳的同名电影。",
+            ja: "Waterworldは、当時高額で、ほとんど評価されなかった同名の映画に基づいたリアルタイムミッション制ストラテジーゲームです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/water.html"
+    },
+    {
         name: "Win Solit",
         image: "https://ia801904.us.archive.org/31/items/win3_SOLITARE/00_coverscreenshot.jpg",
         description: "El Windows Solitario es el clásico juego de cartas incluido en Windows, y uno de los pasatiempos digitales más emblemáticos que ha ayudado a millones de usuarios a aprender a usar el ratón mientras ordenaban mazos virtuales.",
@@ -2191,7 +3872,57 @@ window.appData = [
       },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/winsolit.html"
+    },
+    {
+        name: "Worm",
+        image: "https://ifilex.github.io/WineBOX-Store/box/worms.jpg",
+        description: "This demo version of the popular WORMS game allows you to get a taste of what the full game is like. ",
+        description: {
+            es: "Esta versión demo del popular juego WORMS te permite probar cómo es el juego completo.",
+            de: "Diese Demoversion des beliebten WORMS-Spiels ermöglicht es Ihnen, einen Vorgeschmack darauf zu bekommen, wie das vollständige Spiel ist.",
+            fr: "Cette version démo du jeu WORMS populaire vous permet d'avoir un avant-goût de ce à quoi ressemble le jeu complet.",
+            it: "Questa versione demo del popolare gioco WORMS ti permette di assaggiare com'è il gioco completo.",
+            pt: "Esta versão demo do popular jogo WORMS permite que você experimente como é o jogo completo.",
+            ru: "Эта демо-версия популярной игры WORMS позволяет вам узнать, что представляет собой полная игра.",
+            zh: "这款流行游戏《百战天虫》的演示版让您得以一窥完整版游戏的风貌。",
+            ja: "人気ゲームWORMSのこのデモ版では、フルゲームがどのようなものか体験することができます。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/wdemo.html"
+    },
+    {
+        name: "X-COM: UFO Defense",
+        image: "https://ifilex.github.io/WineBOX-Store/box/xcom.jpg",
+        description: "Shooting down UFOs is just the beginning: you must then lead a squad of heavily-armed soldiers across different terrains as they investigate the UFO crash site.",
+        description: {
+            es: "Derribar ovnis es solo el comienzo: luego debes liderar un escuadrón de soldados fuertemente armados a través de diferentes terrenos mientras investigan el lugar del accidente del ovni.",
+            de: "Das Abschießen von UFOs ist nur der Anfang: Dann müssen Sie ein Team schwer bewaffneter Soldaten über verschiedene Gelände führen, während sie die UFO-Absturzstelle untersuchen.",
+            fr: "Abattre des OVNIs n'est que le début : vous devez ensuite diriger une escouade de soldats lourdement armés à travers différents terrains pendant qu'ils enquêtent sur le lieu du crash de l'OVNI.",
+            it: "Abbattere gli UFO è solo l'inizio: devi quindi guidare una squadra di soldati pesantemente armati attraverso diversi terreni mentre indagano sul luogo dell'incidente UFO.",
+            pt: "Atirar em OVNIs é apenas o começo: você deve então liderar um esquadrão de soldados fortemente armados através de diferentes terrenos enquanto eles investigam o local do acidente do OVNI.",
+            ru: "Сбить НЛО — это только начало: затем вы должны возглавить отряд тяжеловооруженных солдат по разным местам, пока они исследуют место крушения НЛО.",
+            zh: "击落 UFO 只是开始：然后你必须带领一队全副武装的士兵穿越不同的地形，调查 UFO 坠毁地点。",
+            ja: "UFOを撃墜することは始まりに過ぎません。次に、UFOの墜落現場を調査する際に、重武装した兵士の分隊をさまざまな地形で指揮する必要があります。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/xcom.html"
+    },
+    {
+        name: "ZED",
+        image: "https://ifilex.github.io/WineBOX-Store/box/1418a024ed1903d472446d6aebc8ce6c.webp",
+        description: "Z (ZED) is a real-time strategy game featuring fast-paced, action-packed gameplay. Players command robotic armies, capture territories, and engage in tactical battles across diverse landscapes to achieve victory.",
+        description: {
+            es: "Z (ZED) es un juego de estrategia en tiempo real que presenta un juego rápido y lleno de acción. Los jugadores comandan ejércitos robóticos, capturan territorios y participan en batallas tácticas en diversos paisajes para lograr la victoria.",
+            de: "Z (ZED) ist ein Echtzeit-Strategiespiel mit schnellem, actiongeladenem Gameplay. Die Spieler befehligen Roboterarmeen, erobern Territorien und liefern sich taktische Schlachten in verschiedenen Landschaften, um den Sieg zu erringen.",
+            fr: "Z (ZED) est un jeu de stratégie en temps réel avec un gameplay rapide et plein d'action. Les joueurs commandent des armées robotiques, capturent des territoires et participent à des batailles tactiques à travers divers paysages pour remporter la victoire.",
+            it: "Z (ZED) è un gioco di strategia in tempo reale con un gameplay veloce e ricco di azione. I giocatori comandano eserciti robotici, catturano territori e si impegnano in battaglie tattiche in diversi paesaggi per ottenere la vittoria.",
+            pt: "Z (ZED) é um jogo de estratégia em tempo real com jogabilidade rápida e cheia de ação. Os jogadores comandam exércitos robóticos, capturam territórios e se envolvem em batalhas táticas em diversas paisagens para alcançar a vitória.",
+            ru: "Z (ZED) — это стратегия в реальном времени с динамичным, насыщенным действием геймплеем. Игроки командуют роботизированными армиями, захватывают территории и участвуют в тактических сражениях на различных ландшафтах для достижения победы.",
+            zh: "Z (ZED) 是一款即时战略游戏，具有快节奏、动作丰富的游戏玩法。玩家指挥机器人军队，占领领土，并在不同的地形中进行战术战斗以取得胜利。",
+            ja: "Z (ZED)は、高速でアクション満載のゲームプレイを特徴とするリアルタイムストラテジーゲームです。プレイヤーはロボット軍を指揮し、領土を奪取し、多様な景観で戦術的な戦闘を行い、勝利を目指します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/z.html"
     }
-  
 ];
 
