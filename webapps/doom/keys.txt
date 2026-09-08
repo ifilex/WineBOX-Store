@@ -1,0 +1,387 @@
+{
+    "version": 2,
+    "layers": [
+        {
+            "grid": "square",
+            "title": "Layer#0",
+            "controls": [
+                {
+                    "row": 0,
+                    "column": 9,
+                    "symbol": "⚙",
+                    "type": "Options"
+                },
+                {
+                    "row": 4,
+                    "column": 1,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 1,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 0,
+                    "symbol": "←",
+                    "type": "Key",
+                    "mapTo": [
+                        263
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 2,
+                    "symbol": "→",
+                    "type": "Key",
+                    "mapTo": [
+                        262
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 2,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265,
+                        262
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 0,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265,
+                        263
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 2,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264,
+                        262
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 0,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264,
+                        263
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 1,
+                    "type": "NippleActivator",
+                    "symbol": "◯"
+                },
+                {
+                    "row": 4,
+                    "column": 7,
+                    "symbol": "A",
+                    "type": "Key",
+                    "mapTo": [
+                        341
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 8,
+                    "symbol": "B",
+                    "type": "Key",
+                    "mapTo": [
+                        32
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 0,
+                    "symbol": "␛",
+                    "type": "Key",
+                    "mapTo": [
+                        256
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 1,
+                    "symbol": "⏎",
+                    "type": "Key",
+                    "mapTo": [
+                        257
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 9,
+                    "symbol": "C",
+                    "type": "Key",
+                    "mapTo": [
+                        342
+                    ]
+                },
+                {
+                    "row": 1,
+                    "column": 9,
+                    "type": "Switch",
+                    "symbol": ">",
+                    "layerName": "Layer#1"
+                },
+                {
+                    "row": 0,
+                    "column": 2,
+                    "symbol": "tab",
+                    "type": "Key",
+                    "mapTo": [
+                        258
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 3,
+                    "symbol": "-",
+                    "type": "Key",
+                    "mapTo": [
+                        48
+                    ]
+                }
+            ]
+        },
+        {
+            "grid": "square",
+            "title": "Layer#1",
+            "controls": [
+                {
+                    "row": 0,
+                    "column": 9,
+                    "symbol": "⚙",
+                    "type": "Options"
+                },
+                {
+                    "row": 1,
+                    "column": 9,
+                    "type": "Switch",
+                    "symbol": ">",
+                    "layerName": "Layer#0"
+                },
+                {
+                    "row": 0,
+                    "column": 5,
+                    "symbol": "1",
+                    "type": "Key",
+                    "mapTo": [
+                        49
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 6,
+                    "symbol": "2",
+                    "type": "Key",
+                    "mapTo": [
+                        50
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 7,
+                    "symbol": "3",
+                    "type": "Key",
+                    "mapTo": [
+                        51
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 8,
+                    "symbol": "4",
+                    "type": "Key",
+                    "mapTo": [
+                        52
+                    ]
+                },
+                {
+                    "row": 1,
+                    "column": 6,
+                    "symbol": "5",
+                    "type": "Key",
+                    "mapTo": [
+                        53
+                    ]
+                },
+                {
+                    "row": 1,
+                    "column": 7,
+                    "symbol": "6",
+                    "type": "Key",
+                    "mapTo": [
+                        54
+                    ]
+                },
+                {
+                    "row": 1,
+                    "column": 8,
+                    "symbol": "7",
+                    "type": "Key",
+                    "mapTo": [
+                        55
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 0,
+                    "symbol": "␛",
+                    "type": "Key",
+                    "mapTo": [
+                        256
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 1,
+                    "symbol": "⏎",
+                    "type": "Key",
+                    "mapTo": [
+                        257
+                    ]
+                },
+                {
+                    "row": 0,
+                    "column": 2,
+                    "symbol": "tab",
+                    "type": "Key",
+                    "mapTo": [
+                        258
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 1,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 0,
+                    "symbol": "←",
+                    "type": "Key",
+                    "mapTo": [
+                        263
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 1,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 2,
+                    "symbol": "→",
+                    "type": "Key",
+                    "mapTo": [
+                        262
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 0,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265,
+                        263
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 2,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265,
+                        262
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 0,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264,
+                        263
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 2,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264,
+                        262
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 1,
+                    "type": "NippleActivator",
+                    "symbol": "◯"
+                },
+                {
+                    "row": 6,
+                    "column": 9,
+                    "symbol": "C",
+                    "type": "Key",
+                    "mapTo": [
+                        342
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 8,
+                    "symbol": "B",
+                    "type": "Key",
+                    "mapTo": [
+                        32
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 7,
+                    "symbol": "A",
+                    "type": "Key",
+                    "mapTo": [
+                        341
+                    ]
+                }
+            ]
+        }
+    ]
+}

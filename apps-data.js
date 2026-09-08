@@ -70,6 +70,23 @@ window.appData = [
         category: "games",
         link: "https://d07riv.github.io/diabloweb/"
     },
+    {
+        name: "FreeDoom",
+        image: "https://ifilex.github.io/WineBOX-Store/box/doom.jpg",
+        description: "*FreeDoom* is a first-person shooter game released in 1993, developed by id Software. Players take on the role of a space marine battling hordes of demons and hellish creatures in a Martian base. It's renowned for its fast-paced action, groundbreaking graphics for its time, and for being one of the pioneers of the FPS genre.",
+        description: {
+            es: "*FreeDoom* es un juego de disparos en primera persona lanzado en 1993, desarrollado por id Software. Los jugadores asumen el papel de un marine espacial que lucha contra hordas de demonios y criaturas infernales en una base marciana. Es reconocido por su acción trepidante, sus gráficos innovadores para su época y por ser uno de los pioneros del género FPS.",
+            de: "*FreeDoom* ist ein 1993 von id Software entwickelter Ego-Shooter. Die Spieler schlüpfen in die Rolle eines Space Marines, der in einer Marsbasis gegen Horden von Dämonen und höllischen Kreaturen kämpft. Es ist bekannt für seine schnelle Action, seine für die Zeit bahnbrechende Grafik und dafür, einer der Pioniere des FPS-Genres zu sein.",
+            fr: "*FreeDoom* est un jeu de tir à la première personne sorti en 1993, développé par id Software. Les joueurs incarnent un marine de l'espace combattant des hordes de démons et de créatures infernales dans une base martienne. Il est réputé pour son action rapide, ses graphismes révolutionnaires pour l'époque et pour être l'un des pionniers du genre FPS.",
+            it: "*FreeDoom* è uno sparatutto in prima persona uscito nel 1993, sviluppato da id Software. I giocatori assumono il ruolo di un marine spaziale che combatte orde di demoni e creature infernali in una base marziana. È rinomato per la sua azione frenetica, la grafica innovativa per l'epoca e per essere uno dei pionieri del genere FPS.",
+            pt: "*FreeDoom* é um jogo de tiro em primeira pessoa lançado em 1993, desenvolvido pela id Software. Os jogadores assumem o papel de um fuzileiro naval espacial lutando contra hordas de demônios e criaturas infernais em uma base marciana. É renomado por sua ação rápida, gráficos inovadores para a época e por ser um dos pioneiros do gênero FPS.",
+            ru: "*FreeDoom* — это шутер от первого лица, выпущенный в 1993 году, разработанный id Software. Игроки берут на себя роль космического пехотинца, сражающегося с полчищами демонов и адских тварей на марсианской базе. Он славится своим динамичным действием, новаторской для своего времени графикой и тем, что является одним из пионеров жанра FPS.",
+            zh: "*FreeDoom*（毁灭战士）是一款于 1993 年发布的第一人称射击游戏，由 id Software 开发。玩家扮演一名太空陆战队员，在火星基地上与成群的恶魔和地狱生物作战。它以其快节奏的动作、在当时开创性的图形以及作为 FPS 类型的先驱之一而闻名。",
+            ja: "*FreeDoom*は、id Softwareが開発した1993年リリースのファーストパーソン・シューティングゲームです。プレイヤーは宇宙海兵隊員となり、火星基地で悪魔や地獄の生き物の大群と戦います。その高速なアクション、当時としては画期的なグラフィック、そしてFPSジャンルのパイオニアの一つであることで知られています。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/doom.html"
+    },
 {
   "name": "Minecraft",
   "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
@@ -1493,6 +1510,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/ber.html"
     },
     {
+        name: "Biomenace 8bit",
+        image: "https://ifilex.github.io/WineBOX-Store/box/dave.jpg",
+        description: "Biomenace 8bit is a famous and most played DOS game that now is available to play in browser. With virtual mobile controls you also can play on mobile.",
+        description: {
+            es: "Biomenace 8bit es un famoso y muy jugado juego de DOS que ahora está disponible para jugar en el navegador. Con controles móviles virtuales también puedes jugar  en dispositivos móviles.",
+            de: "Biomenace 8bit ist ein berühmtes und vielgespieltes DOS-Spiel, das jetzt im Browser gespielt werden kann. Mit virtuellen mobilen Steuerelementen können auch auf dem Handy spielen.",
+            fr: "Biomenace 8bit est un jeu DOS célèbre et très joué, désormais disponible pour jouer dans le navigateur. Avec des commandes mobiles virtuelles, vous pouvez également jouer à sur mobile.",
+            it: "Biomenace 8bit è un famoso e giocatissimo gioco DOS ora disponibile per giocare nel browser. Con i controlli mobili virtuali puoi anche giocare a  su dispositivi mobili.",
+            pt: "Biomenace 8bit é um famoso e muito jogado jogo de DOS que agora está disponível para jogar no navegador. Com controles móveis virtuais, você também pode jogar no celular.",
+            ru: "Biomenace 8bit n — это известная и популярная DOS-игра, в которую теперь можно играть в браузере. С помощью виртуальных мобильных элементов управления вы также можете играть в  на мобильных устройствах.",
+            zh: "Biomenace 8bit 是一款著名且玩得最多的 DOS 游戏，现在可以在浏览器中游玩。通过虚拟移动控件，您也可以在移动设备上玩《鬼屋里的危险戴夫》。",
+            ja: "Biomenace 8bitは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもBiomenace 8bitをプレイできます。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/wepapps/biomenace/index.html"
+    },
+    {
         name: "Hextris",
         image: "https://ifilex.github.io/WineBOX-Store/box/hextris-lite.png",
         description: "Hextris is a game where users rotate a central hexagon and add similar colors.",
@@ -1718,6 +1752,23 @@ window.appData = [
          category: "rts",
          link: "https://ifilex.github.io/WineBOX-Store/boxworld.html"
     },
+    {
+        name: "Capture the Flag 95",
+        image: "https://ifilex.github.io/WineBOX-Store/box/capflag.gif",
+        description: "This game was given several glowing reviews upon its initial release (1994/95) and its easy to see why. This shareware game has an interface that is very professionally done and rivals the commercial games of its time.",
+        description: {
+            es: "Este juego recibió varias críticas entusiastas en su lanzamiento inicial (1994/95) y es fácil ver por qué. Este juego shareware tiene una interfaz muy profesional que rivaliza con los juegos comerciales de su época.",
+            de: "Dieses Spiel erhielt bei seiner Erstveröffentlichung (1994/95) mehrere begeisterte Kritiken, und es ist leicht zu verstehen, warum. Dieses Shareware-Spiel hat eine sehr professionell gestaltete Oberfläche, die mit den kommerziellen Spielen seiner Zeit konkurriert.",
+            fr: "Ce jeu a reçu plusieurs critiques élogieuses lors de sa sortie initiale (1994/95) et il est facile de voir pourquoi. Ce shareware a une interface très professionnelle qui rivalise avec les jeux commerciaux de son époque.",
+            it: "Questo gioco ha ricevuto diverse recensioni entusiastiche al suo rilascio iniziale (1994/95) ed è facile capire perché. Questo gioco shareware ha un'interfaccia molto professionale che rivaleggia con i giochi commerciali del suo tempo.",
+            pt: "Este jogo recebeu vários elogios críticos em seu lançamento inicial (1994/95) e é fácil ver porquê. Este jogo shareware tem uma interface muito profissional que rivaliza com os jogos comerciais da sua época.",
+            ru: "Эта игра получила несколько восторженных отзывов при своем первоначальном выпуске (1994/95), и легко понять почему. Эта условно-бесплатная игра имеет очень профессионально сделанный интерфейс, который соперничает с коммерческими играми того времени.",
+            zh: "这款游戏在最初发布时（1994/95 年）获得了许多热烈的好评，原因显而易见。这款共享软件的界面非常专业，可与同时代的商业游戏相媲美。",
+            ja: "このゲームは最初のリリース（1994/95）時にいくつかの絶賛レビューを受けましたが、その理由は簡単にわかります。このシェアウェアゲームは、非常にプロフェッショナルに作られたインターフェースを備えており、当時の商用ゲームに匹敵します。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/capture/index.html"
+    },
    {
   "name": "Chinchón",
   "image": "https://ifilex.github.io/WineBOX-Store/box/chinchon.png",
@@ -1807,6 +1858,23 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/generala/index.html"
 },
+    {
+        name: "Incredible Machine",
+        image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
+        description: "The objective of the game is to create Rube Goldberg machines by arranging collections of objects in a complex fashion, so as to perform some simple task",
+        description: {
+            es: "El objetivo del juego es crear máquinas de Rube Goldberg organizando colecciones de objetos de manera compleja, para realizar alguna tarea simple.",
+            de: "Das Ziel des Spiels ist es, Rube-Goldberg-Maschinen zu erstellen, indem Sammlungen von Objekten auf komplexe Weise angeordnet werden, um eine einfache Aufgabe auszuführen.",
+            fr: "L'objectif du jeu est de créer des machines de Rube Goldberg en arrangeant des collections d'objets de manière complexe, afin d'effectuer une tâche simple.",
+            it: "L'obiettivo del gioco è creare macchine di Rube Goldberg disponendo collezioni di oggetti in modo complesso, in modo da eseguire un compito semplice.",
+            pt: "O objetivo do jogo é criar máquinas de Rube Goldberg organizando coleções de objetos de maneira complexa, para realizar alguma tarefa simples.",
+            ru: "Цель игры — создавать машины Руба Голдберга, располагая наборы объектов замысловатым образом, чтобы выполнить какое-либо простое задание.",
+            zh: "游戏的目标是通过以复杂的方式排列物体集合来创建鲁布·戈德堡机械，从而执行一些简单的任务。",
+            ja: "ゲームの目的は、オブジェクトのコレクションを複雑に配置してルーブ・ゴールドバーグマシンを作成し、単純なタスクを実行することです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/machine/index.html"
+    },
    {
   "name": "La escoba de 15",
   "image": "https://ifilex.github.io/WineBOX-Store/box/escoba.png",
@@ -1878,6 +1946,23 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/pixelcrush/index.html"
 },
+    {
+        name: "Retro Urban City",
+        image: "https://ifilex.github.io/WineBOX-Store/box/simcity.jpg",
+        description: "Retro Urban City is an open-ended city-building video game franchise originally designed by Will Wright.",
+        description: {
+            es: "Retro Urban City es una franquicia de videojuegos de construcción de ciudades de mundo abierto diseñada originalmente por Will Wright.",
+            de: "Retro Urban City ist eine Open-World-Städtebau-Videospiel-Franchise, die ursprünglich von Will Wright entworfen wurde.",
+            fr: "Retro Urban City est une franchise de jeux vidéo de construction de ville en monde ouvert initialement conçue par Will Wright.",
+            it: "Retro Urban City è un franchise di videogiochi sandbox di costruzione di città originariamente progettato da Will Wright.",
+            pt: "Retro Urban City é uma franquia de videogame de construção de cidade de mundo aberto originalmente projetada por Will Wright.",
+            ru: "Retro Urban City — это франшиза видеоигр о строительстве городов с открытым миром, первоначально разработанная Уиллом Райтом.",
+            zh: "Retro Urban City（模拟城市）是一个开放式的城市建造视频游戏系列，最初由 Will Wright 设计。",
+            ja: "Retro Urban Cityは、Will Wrightによって最初に設計されたオープンエンドの都市建設ゲームフランチャイズです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/simcity/index.html"
+    },
 {
   "name": "Robotrivia 8Bit",
   "image": "https://ifilex.github.io/WineBOX-Store/box/robotrivia.jpg",
@@ -1985,6 +2070,23 @@ window.appData = [
     "category": "rts",
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/tateti/index.html"
 },
+    {
+        name: "Warcraft 8bit",
+        image: "https://ifilex.github.io/WineBOX-Store/box/war1.jpg",
+        description: "Warcraft 8bit: Orcs & Humans is a real-time strategy game (RTS) developed , in 8bit.",
+        description: {
+            es: "Warcraft 8bit: Orcs & Humans es un juego de estrategia en tiempo real (RTS) desarrollado y publicado por Blizzard Entertainment, y publicado por Interplay Productions en Europa.",
+            de: "Warcraft 8bit: Orcs & Humans ist ein Echtzeit-Strategiespiel (RTS), das von Blizzard Entertainment entwickelt und veröffentlicht wurde und in Europa von Interplay Productions veröffentlicht wurde.",
+            fr: "Warcraft 8bit: Orcs & Humans est un jeu de stratégie en temps réel (RTS) développé et publié par Blizzard Entertainment, et publié par Interplay Productions en Europe.",
+            it: "Warcraft 8bit: Orcs & Humans è un gioco di strategia in tempo reale (RTS) sviluppato e pubblicato da Blizzard Entertainment, e pubblicato da Interplay Productions in Europa.",
+            pt: "Warcraft 8bit: Orcs & Humans é um jogo de estratégia em tempo real (RTS) desenvolvido e publicado pela Blizzard Entertainment, e publicado pela Interplay Productions na Europa.",
+            ru: "Warcraft 8bit: Orcs & Humans — это стратегия в реальном времени (RTS), разработанная и изданная Blizzard Entertainment, а в Европе изданная Interplay Productions.",
+            zh: "Warcraft 8bit: Orcs & Humans（魔兽争霸：兽人与人类）是一款由暴雪娱乐开发和发行的即时战略游戏（RTS），在欧洲由 Interplay Productions 发行。",
+            ja: "Warcraft 8bit: Orcs & Humansは、Blizzard Entertainmentが開発・発売したリアルタイムストラテジーゲームであり、ヨーロッパではInterplay Productionsが発売しました。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/war/index.html"
+    },
     {
         name: "Warpath",
         image: "https://archive.org/download/win3_Warpath/screenshot_00.jpg",
