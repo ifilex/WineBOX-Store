@@ -1524,7 +1524,7 @@ window.appData = [
             ja: "Biomenace 8bitは、有名で最もプレイされたDOSゲームの一つで、現在はブラウザでプレイできます。仮想モバイルコントロールを使用すれば、モバイルでもBiomenace 8bitをプレイできます。"
         },
         category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/wepapps/biomenace/index.html"
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/biomenace/index.html"
     },
     {
         name: "Hextris",
