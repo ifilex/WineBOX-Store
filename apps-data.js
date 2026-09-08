@@ -71,7 +71,7 @@ window.appData = [
         link: "https://d07riv.github.io/diabloweb/"
     },
 {
-        "name": "FreeDoom 1",
+        "name": "Doom",
         "image": "https://ifilex.github.io/WineBOX-Store/box/freedoom.jpg",
         "description": "FreeDoom 1 es un juego de disparos en primera persona que recrea fielmente la experiencia del Doom original de 1993, pero con una diferencia clave: está desarrollado completamente con contenido libre y de código abierto. Esto significa que todos sus gráficos, sonidos y niveles son totalmente legales y gratuitos, sin necesidad de poseer el juego original. Su jugabilidad es idéntica a la del clásico: acción rápida, laberintos oscuros, armas potentes y hordas de demonios que aniquilar en una base marciana.",
         "description": {
@@ -88,7 +88,7 @@ window.appData = [
         "link": "https://ifilex.github.io/WineBOX-Store/doom1.html"
     },
 {
-        "name": "FreeDoom 2",
+        "name": "Doom 2",
         "image": "https://ifilex.github.io/WineBOX-Store/box/freedoom2.jpg",
         "description": "FreeDoom 2 es la secuela libre y de código abierto que emula fielmente la experiencia del Doom 2 original, lanzado en 1994. Al igual que su predecesor, está desarrollado completamente con contenido libre y gratuito, sin necesidad de poseer el juego original. Esta versión introduce nuevas armas como la superescopeta, enemigos más peligrosos como el Archvile y el Arachnotron, y niveles más grandes y complejos. La acción sigue siendo la misma: disparos frenéticos, laberintos infernales y demonios que aniquilar, ahora en escenarios aún más variados y desafiantes.",
         "description": {
@@ -1561,6 +1561,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/webapps/biomenace/index.html"
     },
     {
+        name: "Breakout",
+        image: "https://ifilex.github.io/WineBOX-Store/box/breakout.jpg",
+        description: "Breakout is a classic arcade game where the player controls a paddle to bounce a ball and break all the bricks on the screen. The goal is to clear the bricks without letting the ball fall past the paddle.",
+        description: {
+            es: "Breakout es un juego arcade clásico donde el jugador controla una paleta para rebotar una pelota y romper todos los ladrillos en la pantalla. El objetivo es limpiar los ladrillos sin dejar que la pelota caiga más allá de la paleta.",
+            de: "Breakout ist ein klassisches Arcade-Spiel, bei dem der Spieler einen Schläger steuert, um einen Ball abzuprallen und alle Steine auf dem Bildschirm zu zerbrechen. Ziel ist es, die Steine zu beseitigen, ohne dass der Ball am Schläger vorbeifällt.",
+            fr: "Breakout est un jeu d'arcade classique où le joueur contrôle une raquette pour faire rebondir une balle et casser toutes les briques à l'écran. Le but est de nettoyer les briques sans laisser la balle tomber au-delà de la raquette.",
+            it: "Breakout è un classico gioco arcade in cui il giocatore controlla una racchetta per far rimbalzare una palla e rompere tutti i mattoni sullo schermo. L'obiettivo è eliminare i mattoni senza far cadere la palla oltre la racchetta.",
+            pt: "Breakout é um jogo de arcade clássico onde o jogador controla uma paleta para quicar uma bola e quebrar todos os tijolos na tela. O objetivo é limpar os tijolos sem deixar a bola cair além da paleta.",
+            ru: "Breakout — это классическая аркадная игра, в которой игрок управляет ракеткой, чтобы отбивать мяч и разбивать все кирпичи на экране. Цель — убрать кирпичи, не давая мячу упасть за ракетку.",
+            zh: "Breakout（打砖块）是一款经典街机游戏，玩家控制一个挡板反弹球并打碎屏幕上的所有砖块。目标是在不让球从挡板旁落下的情况下清除所有砖块。",
+            ja: "Breakoutは、プレイヤーがパドルを操作してボールを跳ね返し、画面上のすべてのレンガを壊す古典的なアーケードゲームです。ボールがパドルを通り過ぎて落ちることなくレンガをすべて取り除くことが目標です。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/breakout/index.html"
+    },
+    {
         name: "Hextris",
         image: "https://ifilex.github.io/WineBOX-Store/box/hextris-lite.png",
         description: "Hextris is a game where users rotate a central hexagon and add similar colors.",
@@ -1593,6 +1610,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://fosiper.com/games/pacman-lite/"
+    },
+    {
+        name: "Prehistorik",
+        image: "https://ifilex.github.io/WineBOX-Store/box/pre2.jpg",
+        description: "Prehistorik is a platform game developed by Titus Interactive for the Amiga, Atari ST, Amstrad CPC and DOS.",
+        description: {
+            es: "Prehistorik es un juego de plataformas desarrollado por Titus Interactive para Amiga, Atari ST, Amstrad CPC y DOS.",
+            de: "Prehistorik ist ein Plattformspiel, das von Titus Interactive für Amiga, Atari ST, Amstrad CPC und DOS entwickelt wurde.",
+            fr: "Prehistorik est un jeu de plateforme développé par Titus Interactive pour Amiga, Atari ST, Amstrad CPC et DOS.",
+            it: "Prehistorik è un gioco a piattaforme sviluppato da Titus Interactive per Amiga, Atari ST, Amstrad CPC e DOS.",
+            pt: "Prehistorik é um jogo de plataforma desenvolvido pela Titus Interactive para Amiga, Atari ST, Amstrad CPC e DOS.",
+            ru: "Prehistorik — это платформенная игра, разработанная Titus Interactive для Amiga, Atari ST, Amstrad CPC и DOS.",
+            zh: "Prehistorik 是一款由 Titus Interactive 为 Amiga、Atari ST、Amstrad CPC 和 DOS 开发的平台游戏。",
+            ja: "Prehistorikは、Titus InteractiveがAmiga、Atari ST、Amstrad CPC、DOS向けに開発したプラットフォームゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/prehistorik/index.html"
     },
     {
         name: "Rocks Diamonds",
@@ -1662,6 +1696,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/stargunner.html"
+    },
+    {
+        name: "Tetris",
+        image: "https://ifilex.github.io/WineBOX-Store/box/AGIWiki_tetris1a.png",
+        description: "Tetris is a version of Tetris released as part of the 0 MS-DOS Classic Games collection.",   
+        description: {
+            es: "Tetris es una versión de Tetris lanzada como parte de la colección 0 MS-DOS Classic Games.",
+            de: "Tetris ist eine Version von Tetris, die als Teil der 0 MS-DOS Classic Games-Sammlung veröffentlicht wurde.",
+            fr: "Tetris est une version de Tetris publiée dans le cadre de la collection 0 MS-DOS Classic Games.",
+            it: "Tetris è una versione di Tetris pubblicata come parte della collezione 0 MS-DOS Classic Games.",
+            pt: "Tetris é uma versão do Tetris lançada como parte da coleção 0 MS-DOS Classic Games.",
+            ru: "Tetris — это версия тетриса, выпущенная в составе коллекции 0 MS-DOS Classic Games.",
+            zh: "Tetris 是作为 0 MS-DOS Classic Games 合集的一部分发布的俄罗斯方块版本。",
+            ja: "Tetrisは、0 MS-DOS Classic Gamesコレクションの一部としてリリースされたバージョンのテトリスです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/tetris/index.html"
     },
    {
     name: "Winemine",
