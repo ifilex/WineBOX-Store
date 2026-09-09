@@ -1559,6 +1559,23 @@ window.appData = [
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/abuse.html"
     },
+   {
+        name: "Arkanoid",
+        image: "https://ifilex.github.io/WineBOX-Store/box/arkanoid.png",
+        description: "Arkanoid is a block breaker video game. Its plot involves the starship Arkanoid being attacked by a mysterious entity from space named DOH.",
+        description: {
+            es: "Arkanoid es un videojuego de rompebloques. Su trama involucra a la nave estelar Arkanoid siendo atacada por una misteriosa entidad del espacio llamada DOH.",
+            de: "Arkanoid ist ein Block-Breaker-Videospiel. Die Handlung dreht sich um das Raumschiff Arkanoid, das von einer mysteriösen Entität aus dem Weltraum namens DOH angegriffen wird.",
+            fr: "Arkanoid est un jeu vidéo de casse-briques. Son intrigue implique le vaisseau spatial Arkanoid attaqué par une entité mystérieuse de l'espace nommée DOH.",
+            it: "Arkanoid è un videogioco rompipalle. La sua trama coinvolge l'astronave Arkanoid attaccata da una misteriosa entità dallo spazio chiamata DOH.",
+            pt: "Arkanoid é um videogame de quebrar blocos. Seu enredo envolve a nave estelar Arkanoid sendo atacada por uma entidade misteriosa do espaço chamada DOH.",
+            ru: "Arkanoid — это видеоигра в жанре арканоид. Ее сюжет включает в себя звездолет Arkanoid, атакованный таинственной сущностью из космоса по имени DOH.",
+            zh: "Arkanoid（打砖块）是一款打砖块视频游戏。其情节涉及星际飞船 Arkanoid 被一个名为 DOH 的神秘太空实体攻击。",
+            ja: "Arkanoidはブロック崩しゲームです。そのプロットは、宇宙船ArkanoidがDOHという宇宙からの謎の存在に攻撃されるというものです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/arkanoid/index.html"
+    },
     {
         name: "Beats Of Rage",
         image: "https://ifilex.github.io/WineBOX-Store/box/beatsofrage.gif",
@@ -1609,6 +1626,40 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/webapps/breakout/index.html"
+    },
+    {
+        name: "Dyna Blaster",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
+        description: "Refers to the European title for certain games in the Bomberman franchise, such as the TurboGrafx-16/PC Engine version",
+        description: {
+            es: "Se refiere al título europeo para ciertos juegos de la franquicia Bomberman, como la versión de TurboGrafx-16/PC Engine.",
+            de: "Bezieht sich auf den europäischen Titel für bestimmte Spiele der Bomberman-Franchise, wie die Version für TurboGrafx-16/PC Engine.",
+            fr: "Fait référence au titre européen pour certains jeux de la franchise Bomberman, comme la version TurboGrafx-16/PC Engine.",
+            it: "Si riferisce al titolo europeo per alcuni giochi del franchise di Bomberman, come la versione per TurboGrafx-16/PC Engine.",
+            pt: "Refere-se ao título europeu para certos jogos da franquia Bomberman, como a versão TurboGrafx-16/PC Engine.",
+            ru: "Относится к европейскому названию для некоторых игр франшизы Bomberman, таких как версия для TurboGrafx-16/PC Engine.",
+            zh: "指的是炸弹人系列中某些游戏在欧洲地区的名称，例如 TurboGrafx-16/PC Engine 版本。",
+            ja: "Bombermanフランチャイズの特定のゲーム（TurboGrafx-16/PC Engineバージョンなど）のヨーロッパタイトルを指します。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/dyna/index.html"
+    },
+    {
+        name: "Golden Axe",
+        image: "https://ifilex.github.io/WineBOX-Store/box/axe.jpg",
+        description: "Golden Axe is a side-scrolling, beat 'em up, hack and slash arcade video game released in 1989 by Sega for the System 16-B arcade hardware.",
+        description: {
+            es: "Golden Axe es un videojuego arcade de desplazamiento lateral, beat 'em up, hack and slash lanzado en 1989 por Sega para el hardware arcade System 16-B.",
+            de: "Golden Axe ist ein Side-Scrolling-Beat-'em-up-Hack-and-Slay-Arcade-Spiel, das 1989 von Sega für die Arcade-Hardware System 16-B veröffentlicht wurde.",
+            fr: "Golden Axe est un jeu d'arcade à défilement latéral, beat them all, hack and slash sorti en 1989 par Sega pour le matériel d'arcade System 16-B.",
+            it: "Golden Axe è un videogioco arcade a scorrimento laterale, picchiaduro a scorrimento, hack and slash rilasciato nel 1989 da Sega per l'hardware arcade System 16-B.",
+            pt: "Golden Axe é um jogo de arcade de rolagem lateral, beat 'em up, hack and slash lançado em 1989 pela Sega para o hardware de arcade System 16-B.",
+            ru: "Golden Axe — это аркадная видеоигра с боковой прокруткой в жанре beat 'em up, hack and slash, выпущенная в 1989 году компанией Sega для аркадного оборудования System 16-B.",
+            zh: "Golden Axe（战斧）是一款横向卷轴、清版动作、砍杀类街机游戏，由 Sega 于 1989 年为 System 16-B 街机硬件发行。",
+            ja: "Golden Axeは、セガが1989年にSystem 16-Bアーケードハードウェア向けにリリースした、横スクロールのベルトスクロールアクション、ハックアンドスラッシュのアーケードゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/golden/index.html"
     },
     {
         name: "Hextris",
@@ -1712,6 +1763,23 @@ window.appData = [
         },      
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/ski.html"
+    },
+    {
+        name: "Space Invaders",
+        image: "https://ifilex.github.io/WineBOX-Store/box/spaceinvaders.png",
+        description: "Icónico juego arcade de disparos espaciales.",
+        description: {
+            es: "Icónico juego arcade de disparos espaciales.",
+            de: "Ikoniches Arkadenspiel für Weltraumshooter.",
+            fr: "Jeu d'arcade emblématique de tir spatial.",
+            it: "Iconico gioco arcade di sparatorie spaziali.",
+            pt: "Icônico jogo de arcade de tiro espacial.",
+            ru: "Культовая аркадная игра про космические стрелялки.",
+            zh: "标志性的太空射击街机游戏。",
+            ja: "象徴的なスペースシューティングアーケードゲーム。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/space/index.html"
     },
     {
         name: "Stargunner",
@@ -2029,6 +2097,23 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/lemonade/index.html"
 },
+    {
+        name: "Nero Chess",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Psion_Chess.png",
+        description: "Nero Chess is a freeware chess programme, the fifth in a series of revisions by Finnish author Jari Huikari.",
+        description: {
+            es: "Nero 5 es un programa de ajedrez gratuito, el quinto de una serie de revisiones del autor finlandés Jari Huikari.",
+            de: "Nero 5 ist ein Freeware-Schachprogramm, das fünfte einer Reihe von Überarbeitungen des finnischen Autors Jari Huikari.",
+            fr: "Nero 5 est un programme d'échecs gratuit, le cinquième d'une série de révisions par l'auteur finlandais Jari Huikari.",
+            it: "Nero 5 è un programma di scacchi freeware, il quinto di una serie di revisioni dell'autore finlandese Jari Huikari.",
+            pt: "Nero 5 é um programa de xadrez gratuito, o quinto de uma série de revisões do autor finlandês Jari Huikari.",
+            ru: "Nero 5 — это бесплатная шахматная программа, пятая в серии редакций финского автора Яри Хуйкари.",
+            zh: "Nero 5 是一个免费的象棋程序，是芬兰作者 Jari Huikari 系列修订版的第五个。",
+            ja: "Nero 5はフリーウェアのチェスプログラムで、フィンランド人の著者Jari Huikariによる一連の改訂版の5番目です。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/nero/index.html"
+    },
     {
         name: "Open TTD",
         image: "https://ifilex.github.io/WineBOX-Store/box/openttd.jpg",
