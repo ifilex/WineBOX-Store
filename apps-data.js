@@ -18,7 +18,23 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/99noches/index.html"
 },
-
+  {
+        name: "Absence",
+        image: "https://ifilex.github.io/WineBOX-Store/box/absence.png",
+        description: "Absence is a mod (total conversion, I would say) of Wolfenstein 3D. ",
+        description: {
+            es: "Absence es un mod (conversión total, diría yo) de Wolfenstein 3D.",
+            de: "Absence ist ein Mod (Total Conversion, würde ich sagen) von Wolfenstein 3D.",
+            fr: "Absence est un mod (conversion totale, je dirais) de Wolfenstein 3D.",
+            it: "Absence è una mod (conversione totale, direi) di Wolfenstein 3D.",
+            pt: "Absence é um mod (conversão total, eu diria) de Wolfenstein 3D.",
+            ru: "Absence — это мод (полная конверсия, я бы сказал) для Wolfenstein 3D.",
+            zh: "Absence 是《德军总部 3D》的一个模组（可以说是完全转换）。",
+            ja: "AbsenceはWolfenstein 3DのMod（トータルコンバージョン）です。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/absence.html"
+    },
     {
         name: "Anarch",
         image: "https://ifilex.github.io/WineBOX-Store/box/riced.png",
@@ -68,6 +84,23 @@ window.appData = [
         },
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/bstone.html"
+    },
+    {
+        name: "Chex Quest",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Chex_Quest-front_cover.png",
+        description: "Chex Quest is an English-language, MS-DOS first-person shooter game released in 1996, where players fight cereal-themed aliens called Flemoids",
+        description: {
+            es: "Chex Quest es un juego de disparos en primera persona en inglés para MS-DOS lanzado en 1996, donde los jugadores luchan contra aliens con temática de cereal llamados Flemoids.",
+            de: "Chex Quest ist ein englischsprachiger Ego-Shooter für MS-DOS, der 1996 veröffentlicht wurde und bei dem Spieler gegen Müsli-thematisierte Aliens namens Flemoids kämpfen.",
+            fr: "Chex Quest est un jeu de tir à la première personne en anglais pour MS-DOS sorti en 1996, où les joueurs combattent des aliens à thème céréalier appelés Flemoids.",
+            it: "Chex Quest è uno sparatutto in prima persona in lingua inglese per MS-DOS uscito nel 1996, in cui i giocatori combattono alieni a tema cereali chiamati Flemoidi.",
+            pt: "Chex Quest é um jogo de tiro em primeira pessoa em inglês para MS-DOS lançado em 1996, onde os jogadores lutam contra alienígenas com tema de cereal chamados Flemoids.",
+            ru: "Chex Quest — это англоязычный шутер от первого лица для MS-DOS, выпущенный в 1996 году, в котором игроки сражаются с инопланетянами в стиле хлопьев, называемыми Flemoids.",
+            zh: "Chex Quest 是一款 1996 年发布的英语 MS-DOS 第一人称射击游戏，玩家在其中与名为 Flemoids 的谷物主题外星人战斗。",
+            ja: "Chex Questは、1996年にリリースされた英語版MS-DOS用ファーストパーソン・シューティングゲームで、プレイヤーはFlemoidsと呼ばれるシリアルをテーマにしたエイリアンと戦います。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/chexquest.html"
     },
     {
         name: "Diablo",
@@ -155,6 +188,23 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
 },
+   {
+        name: "Mr. Pibb",
+        image: "https://ifilex.github.io/WineBOX-Store/box/mrpibb.png",
+        description: "Mr. Pibb - The 3D Interactive Game is a 3D shooter FPS type game which is not very good",
+        description: {
+            es: "Mr. Pibb - The 3D Interactive Game es un juego de tipo shooter FPS en 3D que no es muy bueno.",
+            de: "Mr. Pibb - The 3D Interactive Game ist ein 3D-Ego-Shooter, der nicht sehr gut ist.",
+            fr: "Mr. Pibb - The 3D Interactive Game est un jeu de tir à la première personne en 3D qui n'est pas très bon.",
+            it: "Mr. Pibb - The 3D Interactive Game è uno sparatutto in prima persona 3D che non è molto buono.",
+            pt: "Mr. Pibb - The 3D Interactive Game é um jogo de tiro FPS 3D que não é muito bom.",
+            ru: "Mr. Pibb - The 3D Interactive Game — это 3D-шутер от первого лица, который не очень хорош.",
+            zh: "Mr. Pibb - The 3D Interactive Game 是一款 3D 射击 FPS 类型游戏，但质量不高。",
+            ja: "Mr. Pibb - The 3D Interactive Gameは、あまり良くない3DシューターFPSタイプのゲームです。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/mrpibb.html"
+    },
 {
   "name": "Retrocraft",
   "image": "https://ifilex.github.io/WineBOX-Store/box/retrocraft.jpg",
@@ -191,6 +241,23 @@ window.appData = [
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/rivals/index.html"
 },
+    {
+        name: "Robod",
+        image: "https://ifilex.github.io/WineBOX-Store/box/robod.png",
+        description: "Robod is a 3D-perspective action game similar to Wolfenstein-3D or Blake Stone except that it was made over 22 years after those games",
+        description: {
+            es: "Robod es un juego de acción en perspectiva 3D similar a Wolfenstein-3D o Blake Stone, excepto que fue creado más de 22 años después de esos juegos.",
+            de: "Robod ist ein 3D-Perspektiv-Actionspiel ähnlich wie Wolfenstein-3D oder Blake Stone, nur dass es über 22 Jahre nach diesen Spielen erstellt wurde.",
+            fr: "Robod est un jeu d'action en perspective 3D similaire à Wolfenstein-3D ou Blake Stone, sauf qu'il a été créé plus de 22 ans après ces jeux.",
+            it: "Robod è un gioco d'azione in prospettiva 3D simile a Wolfenstein-3D o Blake Stone, tranne per il fatto che è stato realizzato oltre 22 anni dopo quei giochi.",
+            pt: "Robod é um jogo de ação em perspectiva 3D semelhante a Wolfenstein-3D ou Blake Stone, exceto que foi criado mais de 22 anos depois desses jogos.",
+            ru: "Robod — это экшн-игра с 3D-перспективой, похожая на Wolfenstein-3D или Blake Stone, за исключением того, что она была создана спустя более 22 лет после этих игр.",
+            zh: "Robod 是一款 3D 视角动作游戏，类似于《德军总部 3D》或《布莱克斯通》，只不过它是在这些游戏推出 22 多年后才制作的。",
+            ja: "Robodは、Wolfenstein-3DやBlake Stoneと類似した3Dパースペクティブのアクションゲームですが、それらのゲームから22年以上後に作成されました。"
+        },
+        category: "games",
+        link: "https://ifilex.github.io/WineBOX-Store/robod.html"
+    },
     {
         name: "Shadow Warrior",
         image: "https://ifilex.github.io/WineBOX-Store/box/shadwar.gif",
@@ -1973,6 +2040,23 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/chichon/index.html"
     },
+  {
+        name: "Crazy Cows",
+        image: "https://ifilex.github.io/WineBOX-Store/box/crazycows.png",
+        description: "Crazy Cows is not as crazy as its name might suggest. It's a strategy game, which superficially resembles real-time strategy games like Warcraft or Warcraft II but this is a turn-based game.",
+        description: {
+            es: "Crazy Cows no es tan loco como su nombre podría sugerir. Es un juego de estrategia, que superficialmente se parece a juegos de estrategia en tiempo real como Warcraft o Warcraft II, pero este es un juego por turnos.",
+            de: "Crazy Cows ist nicht so verrückt, wie der Name vermuten lässt. Es ist ein Strategiespiel, das oberflächlich Echtzeit-Strategiespielen wie Warcraft oder Warcraft II ähnelt, aber dieses ist ein rundenbasiertes Spiel.",
+            fr: "Crazy Cows n'est pas aussi fou que son nom pourrait le suggérer. C'est un jeu de stratégie, qui ressemble superficiellement aux jeux de stratégie en temps réel comme Warcraft ou Warcraft II, mais c'est un jeu au tour par tour.",
+            it: "Crazy Cows non è così pazzo come il suo nome potrebbe suggerire. È un gioco di strategia, che assomiglia superficialmente a giochi di strategia in tempo reale come Warcraft o Warcraft II, ma questo è un gioco a turni.",
+            pt: "Crazy Cows não é tão louco quanto seu nome pode sugerir. É um jogo de estratégia, que superficialmente se assemelha a jogos de estratégia em tempo real como Warcraft ou Warcraft II, mas este é um jogo baseado em turnos.",
+            ru: "Crazy Cows не так безумны, как может показаться из названия. Это стратегическая игра, которая внешне напоминает стратегии в реальном времени, такие как Warcraft или Warcraft II, но это пошаговая игра.",
+            zh: "Crazy Cows 并不像它的名字听起来那么疯狂。它是一款策略游戏，表面上类似于《魔兽争霸》或《魔兽争霸 II》等即时战略游戏，但这是一款回合制游戏。",
+            ja: "Crazy Cowsは、その名前が示唆するほどクレイジーではありません。それは戦略ゲームであり、表面的にはWarcraftやWarcraft IIのようなリアルタイムストラテジーゲームに似ていますが、これはターンベースのゲームです。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/cows.html"
+    },
     {
         name: "Command & Conquer",
         image: "https://ifilex.github.io/WineBOX-Store/box/command.jpg",
@@ -2098,9 +2182,9 @@ window.appData = [
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/lemonade/index.html"
 },
     {
-        name: "Nero Chess",
+        name: "Nero Chess 5",
         image: "https://ifilex.github.io/WineBOX-Store/box/Psion_Chess.png",
-        description: "Nero Chess is a freeware chess programme, the fifth in a series of revisions by Finnish author Jari Huikari.",
+        description: "Nero 5 is a freeware chess programme, the fifth in a series of revisions by Finnish author Jari Huikari.",
         description: {
             es: "Nero 5 es un programa de ajedrez gratuito, el quinto de una serie de revisiones del autor finlandés Jari Huikari.",
             de: "Nero 5 ist ein Freeware-Schachprogramm, das fünfte einer Reihe von Überarbeitungen des finnischen Autors Jari Huikari.",
@@ -2110,6 +2194,23 @@ window.appData = [
             ru: "Nero 5 — это бесплатная шахматная программа, пятая в серии редакций финского автора Яри Хуйкари.",
             zh: "Nero 5 是一个免费的象棋程序，是芬兰作者 Jari Huikari 系列修订版的第五个。",
             ja: "Nero 5はフリーウェアのチェスプログラムで、フィンランド人の著者Jari Huikariによる一連の改訂版の5番目です。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/nero5.html"
+    },
+    {
+        name: "New Chess",
+        image: "https://ifilex.github.io/WineBOX-Store/box/chess.png",
+        description: "New Chess is a freeware chess programme, the fifth in a series of revisions by Finnish author Jari Huikari.",
+        description: {
+            es: "New es un programa de ajedrez gratuito, el quinto de una serie de revisiones del autor finlandés Jari Huikari.",
+            de: "New ist ein Freeware-Schachprogramm, das fünfte einer Reihe von Überarbeitungen des finnischen Autors Jari Huikari.",
+            fr: "New est un programme d'échecs gratuit, le cinquième d'une série de révisions par l'auteur finlandais Jari Huikari.",
+            it: "New è un programma di scacchi freeware, il quinto di una serie di revisioni dell'autore finlandese Jari Huikari.",
+            pt: "New é um programa de xadrez gratuito, o quinto de uma série de revisões do autor finlandês Jari Huikari.",
+            ru: "New — это бесплатная шахматная программа, пятая в серии редакций финского автора Яри Хуйкари.",
+            zh: "New 是一个免费的象棋程序，是芬兰作者 Jari Huikari 系列修订版的第五个。",
+            ja: "Newはフリーウェアのチェスプログラムで、フィンランド人の著者Jari Huikariによる一連の改訂版の5番目です。"
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/webapps/nero/index.html"
