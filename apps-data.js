@@ -224,7 +224,7 @@ window.appData = [
     },
 {
     "name": "My Balls Have Dropped",
-    "image": "https://ifilex.github.io/WineBOX-Store/box/myballs.gif",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/myballs.jpg",
     "description": "My Balls Have Dropped 是一款 1996 年发布的 MS-DOS 免费益智游戏，由独立开发者 Happi Llama Realtech 制作，本质上是经典街机游戏《Bust-a-Move》/《Puzzle Bobble》的克隆版[citation:1][citation:2]。尽管标题带有粗俗的双关意味，但它实际上是一款相当不错的单人/双人益智游戏，使用 C 语言结合 Allegro 图形库编写[citation:1][citation:2]。玩家控制屏幕底部的炮台发射彩色球，目标是将至少三个同色球排列在一起使其消除；每发射十余次，顶部的“天花板”会下降一格，一旦球触底则游戏结束[citation:1][citation:2]。游戏画面虽显粗糙（使用了借用素材和 MS Paint 涂鸦背景），但操作手感出奇流畅，动画平滑，还配有不错的音效[citation:1][citation:2]。游戏为免费软件，可通过 DOSBox 运行[citation:1][citation:4]。",
     "description": {
         "es": "My Balls Have Dropped es un juego de puzzle gratuito para MS-DOS lanzado en 1996, creado por el programador amateur Happi Llama Realtech, esencialmente un clon del clásico arcade Bust-a-Move/Puzzle Bobble. A pesar del doble sentido vulgar del título, en realidad es un juego de puzzle bastante decente para uno o dos jugadores, escrito en C usando la biblioteca Allegro. El jugador controla un cañón en la parte inferior de la pantalla que dispara bolas de colores, con el objetivo de alinear al menos tres bolas del mismo color para eliminarlas del campo. Cada docena de disparos aproximadamente, el \"techo\" desciende un nivel, y si una bola toca el fondo de la pantalla, el juego termina. La presentación es visiblemente poco pulida (usa recursos prestados y fondos garabateados en MS Paint), pero la jugabilidad es sorprendentemente fluida, con animaciones suaves y buenos efectos de sonido. El juego es freeware y se ejecuta mediante DOSBox.",
