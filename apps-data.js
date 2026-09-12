@@ -379,6 +379,23 @@ window.appData = [
   "category": "multimedia",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/recorder/index.html"
 },
+    {
+        name: "RetroArch",
+        image: "https://ifilex.github.io/WineBOX-Store/box/RetroArch_logo_theme.png",
+        description: "RetroArch is a frontend for emulators, game engines and media players.",
+        description: {
+            es: "RetroArch es un frontend para emuladores, motores de juegos y reproductores multimedia.",
+            de: "RetroArch ist ein Frontend für Emulatoren, Spiel-Engines und Mediaplayer.",
+            fr: "RetroArch est un frontal pour émulateurs, moteurs de jeu et lecteurs multimédias.",
+            it: "RetroArch è un frontend per emulatori, motori di gioco e lettori multimediali.",
+            pt: "RetroArch é um frontend para emuladores, mecanismos de jogos e players de mídia.",
+            ru: "RetroArch — это внешний интерфейс для эмуляторов, игровых движков и медиаплееров.",
+            zh: "RetroArch 是模拟器、游戏引擎和媒体播放器的前端。",
+            ja: "RetroArchは、エミュレータ、ゲームエンジン、メディアプレーヤー用のフロントエンドです。"
+        },
+        category: "multimedia",
+        link: "https://binbashbanana.github.io/webretro/"
+    },
 {
     "name": "PixelStream IPTV 8-Bit - TV Legal & VOD Retro",
     "image": "https://ifilex.github.io/WineBOX-Store/box/iptv.jpg",
@@ -1248,23 +1265,6 @@ window.appData = [
         },
         category: "apps",
         link: "https://copy.sh/v86/?profile=redox"
-    },
-    {
-        name: "RetroArch",
-        image: "https://ifilex.github.io/WineBOX-Store/box/RetroArch_logo_theme.png",
-        description: "RetroArch is a frontend for emulators, game engines and media players.",
-        description: {
-            es: "RetroArch es un frontend para emuladores, motores de juegos y reproductores multimedia.",
-            de: "RetroArch ist ein Frontend für Emulatoren, Spiel-Engines und Mediaplayer.",
-            fr: "RetroArch est un frontal pour émulateurs, moteurs de jeu et lecteurs multimédias.",
-            it: "RetroArch è un frontend per emulatori, motori di gioco e lettori multimediali.",
-            pt: "RetroArch é um frontend para emuladores, mecanismos de jogos e players de mídia.",
-            ru: "RetroArch — это внешний интерфейс для эмуляторов, игровых движков и медиаплееров.",
-            zh: "RetroArch 是模拟器、游戏引擎和媒体播放器的前端。",
-            ja: "RetroArchは、エミュレータ、ゲームエンジン、メディアプレーヤー用のフロントエンドです。"
-        },
-        category: "utilities",
-        link: "https://binbashbanana.github.io/webretro/"
     },
     {
         name: "SerenityOS",
