@@ -203,7 +203,7 @@ window.appData = [
     },
     "category": "games",
     "link": "https://ifilex.github.io/WineBOX-Store/fostiator.html"
-}
+},
 {
     "name": "Maura & Ash",
     "image": "https://ifilex.github.io/WineBOX-Store/box/mauraash.jpg",
