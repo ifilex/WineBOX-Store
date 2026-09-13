@@ -2246,7 +2246,7 @@ window.appData = [
     },
     "category": "games",
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/granja/index.html"
-}
+},
     {
         name: "Incredible Machine",
         image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
