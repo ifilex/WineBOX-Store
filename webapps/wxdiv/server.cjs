@@ -31,14 +31,15 @@ import_dotenv.default.config();
 var app = (0, import_express.default)();
 var PORT = 3e3;
 app.use(import_express.default.json({ limit: "15mb" }));
-var aiClient = null;
-function getAI() {
-  if (!process.env.GEMINI_API_KEY) {
+var defaultAiClient = null;
+function resolveAI(userKey) {
+  const key = userKey && userKey.trim() || process.env.GEMINI_API_KEY;
+  if (!key) {
     return null;
   }
-  if (!aiClient) {
-    aiClient = new import_genai.GoogleGenAI({
-      apiKey: process.env.GEMINI_API_KEY,
+  if (userKey && userKey.trim()) {
+    return new import_genai.GoogleGenAI({
+      apiKey: userKey.trim(),
       httpOptions: {
         headers: {
           "User-Agent": "aistudio-build"
@@ -46,7 +47,17 @@ function getAI() {
       }
     });
   }
-  return aiClient;
+  if (!defaultAiClient) {
+    defaultAiClient = new import_genai.GoogleGenAI({
+      apiKey: key,
+      httpOptions: {
+        headers: {
+          "User-Agent": "aistudio-build"
+        }
+      }
+    });
+  }
+  return defaultAiClient;
 }
 async function generateGeminiWithFallback(ai, options) {
   const modelList = options.models || [
@@ -252,22 +263,63 @@ function generateProceduralSpriteFallback(prompt, size, name) {
   };
 }
 app.get("/api/health", (req, res) => {
+  const headerKey = req.headers["x-api-key"];
+  const hasKey = Boolean(process.env.GEMINI_API_KEY || headerKey);
   res.json({
     status: "ok",
     version: "3.0.0",
     engine: "WXDIV 3.0 Game Engine",
-    hasApiKey: Boolean(process.env.GEMINI_API_KEY)
+    hasApiKey: hasKey,
+    hasServerEnvKey: Boolean(process.env.GEMINI_API_KEY)
   });
 });
+app.post("/api/gemini/verify", async (req, res) => {
+  const { apiKey = "", model = "gemini-3.8-flash" } = req.body || {};
+  const headerKey = req.headers["x-api-key"];
+  const effectiveKey = apiKey && apiKey.trim() || headerKey;
+  const ai = resolveAI(effectiveKey);
+  if (!ai) {
+    return res.status(400).json({
+      success: false,
+      message: "No se proporcion\xF3 una clave de API ni existe una configurada en el servidor."
+    });
+  }
+  try {
+    const testModel = model || "gemini-3.8-flash";
+    const response = await ai.models.generateContent({
+      model: testModel,
+      contents: "Responde \xFAnicamente: 'OK DIV ENGINE'",
+      config: {
+        maxOutputTokens: 15
+      }
+    });
+    res.json({
+      success: true,
+      message: "\xA1Conexi\xF3n validada exitosamente con Gemini API!",
+      text: response.text || "OK",
+      modelUsed: testModel
+    });
+  } catch (err) {
+    console.warn("Gemini verification failed:", err?.message || err);
+    res.status(400).json({
+      success: false,
+      message: err?.message || "Error al validar la clave con Google Gemini API"
+    });
+  }
+});
 app.post("/api/gemini/assist", async (req, res) => {
-  const { prompt = "", code = "", task = "chat", currentFpg = [] } = req.body || {};
-  const ai = getAI();
+  const { prompt = "", code = "", task = "chat", currentFpg = [], apiKey = "", model = "gemini-3.8-flash" } = req.body || {};
+  const headerKey = req.headers["x-api-key"];
+  const effectiveKey = apiKey && apiKey.trim() || headerKey;
+  const ai = resolveAI(effectiveKey);
   if (!ai) {
     const localText = generateLocalDivFallback(prompt, code, task);
     return res.json({
-      text: `\u26A0\uFE0F *GEMINI_API_KEY no configurada. Mostrando respuesta de respaldo local:*
+      text: `\u26A0\uFE0F *No se detect\xF3 una Gemini API Key (ni en Ajustes de IA ni en .env). Mostrando respuesta de respaldo del motor local:*
 
-${localText}`,
+${localText}
+
+*Consejo: Puedes ingresar tu propia clave gratuita en la barra superior o en el bot\xF3n 'Configurar API' sin necesidad de editar archivos.*`,
       modelUsed: "offline-engine"
     });
   }
@@ -335,8 +387,14 @@ ${code}
 ${currentFpg && currentFpg.length > 0 ? `
 Sprites disponibles en FPG actual: ${JSON.stringify(currentFpg)}` : ""}`;
   try {
+    const modelsToTry = [
+      model || "gemini-3.8-flash",
+      "gemini-flash-latest",
+      "gemini-3.1-flash-lite"
+    ];
     const result = await generateGeminiWithFallback(ai, {
       contents: userPrompt,
+      models: modelsToTry,
       config: {
         systemInstruction,
         temperature: 0.7
@@ -352,13 +410,15 @@ Sprites disponibles en FPG actual: ${JSON.stringify(currentFpg)}` : ""}`;
     res.json({
       text: fallbackText,
       modelUsed: "fallback-engine",
-      notice: "Gemini server experienced a high-demand spike. Returned optimized DIV template."
+      notice: "Servidor de IA report\xF3 alta demanda o error. WXDIV 3.0 gener\xF3 una soluci\xF3n directa optimizada."
     });
   }
 });
 app.post("/api/gemini/generate-sprite", async (req, res) => {
-  const { prompt = "", size = 16, name = "sprite" } = req.body || {};
-  const ai = getAI();
+  const { prompt = "", size = 16, name = "sprite", apiKey = "" } = req.body || {};
+  const headerKey = req.headers["x-api-key"];
+  const effectiveKey = apiKey && apiKey.trim() || headerKey;
+  const ai = resolveAI(effectiveKey);
   if (!ai) {
     return res.json(generateProceduralSpriteFallback(prompt, size, name));
   }
