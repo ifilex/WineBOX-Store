@@ -412,7 +412,7 @@ window.appData = [
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/voxelfighter/index.html"
 },
 {
-  "name": "Voxel Minicraft",
+  "name": "Voxel Quest",
   "image": "https://ifilex.github.io/WineBOX-Store/box/voxel.png",
   "description": "Voxel Minicraft es un juego de aventura y laberintos en 3D, inspirado en los mundos de bloques, donde el objetivo es explorar y escapar de un complejo laberinto en el menor tiempo posible, superando obstáculos y enemigos.",
   "description": {
@@ -1933,18 +1933,18 @@ window.appData = [
         link: "https://www.artsoft.org/rocksndiamonds/play/"
     },
 {
-    name: "Simon",
+    name: "Sequence",
     image: "https://ifilex.github.io/WineBOX-Store/box/simonx.jpg",
-    description: "Simon es el clásico juego electrónico de memoria y ritmo que puso a prueba a toda una generación. Cuatro botones de colores brillan y suenan en una secuencia que deberás recordar y repetir sin fallar. Un desafío hipnótico que entrena la mente al ritmo de luces y tonos.",
+    description: "Sequence es el clásico juego electrónico de memoria y ritmo que puso a prueba a toda una generación. Cuatro botones de colores brillan y suenan en una secuencia que deberás recordar y repetir sin fallar. Un desafío hipnótico que entrena la mente al ritmo de luces y tonos.",
     description: {
-        "es": "Simon es el clásico juego electrónico de memoria y ritmo que puso a prueba a toda una generación. Cuatro botones de colores brillan y suenan en una secuencia que deberás recordar y repetir sin fallar. Un desafío hipnótico que entrena la mente al ritmo de luces y tonos.",
-        "en": "Simon is the classic electronic memory and rhythm game that challenged an entire generation. Four colored buttons light up and beep in a sequence you must remember and repeat without mistakes. A hypnotic challenge that trains your mind to the beat of lights and tones.",
-        "de": "Simon ist das klassische elektronische Gedächtnis- und Rhythmusspiel, das eine ganze Generation herausforderte. Vier farbige Tasten leuchten und piepen in einer Sequenz, die Sie sich merken und fehlerfrei wiederholen müssen. Eine hypnotische Herausforderung, die das Gehirn im Takt von Lichtern und Tönen trainiert.",
-        "fr": "Simon est le jeu électronique classique de mémoire et de rythme qui a défié toute une génération. Quatre boutons colorés s'allument et émettent des bips dans une séquence que vous devez mémoriser et répéter sans vous tromper. Un défi hypnotique qui entraîne l'esprit au rythme des lumières et des sons.",
-        "it": "Simon è il classico gioco elettronico di memoria e ritmo che ha sfidato un'intera generazione. Quattro pulsanti colorati si illuminano e suonano in una sequenza che devi ricordare e ripetere senza sbagliare. Una sfida ipnotica che allena la mente al ritmo di luci e toni.",
-        "pt": "Simon é o clássico jogo eletrônico de memória e ritmo que desafiou uma geração inteira. Quatro botões coloridos acendem e apitam em uma sequência que você deve lembrar e repetir sem errar. Um desafio hipnótico que treina a mente ao ritmo de luzes e tons.",
-        "ru": "Simon — это классическая электронная игра на память и ритм, которая бросила вызов целому поколению. Четыре цветные кнопки загораются и издают звуки в определённой последовательности, которую нужно запомнить и повторить без ошибок. Гипнотическая задача, тренирующая мозг в ритме света и звука.",
-        "zh": "西蒙（Simon）是经典的电子记忆与节奏游戏，曾向整整一代人发起挑战。四个彩色按钮会按一定顺序亮起并发出提示音，你必须记住并准确无误地重复出来。这是一场在灯光与音调节奏中训练大脑的催眠式挑战。",
+        "es": "Sequence es el clásico juego electrónico de memoria y ritmo que puso a prueba a toda una generación. Cuatro botones de colores brillan y suenan en una secuencia que deberás recordar y repetir sin fallar. Un desafío hipnótico que entrena la mente al ritmo de luces y tonos.",
+        "en": "Sequence is the classic electronic memory and rhythm game that challenged an entire generation. Four colored buttons light up and beep in a sequence you must remember and repeat without mistakes. A hypnotic challenge that trains your mind to the beat of lights and tones.",
+        "de": "Sequence ist das klassische elektronische Gedächtnis- und Rhythmusspiel, das eine ganze Generation herausforderte. Vier farbige Tasten leuchten und piepen in einer Sequenz, die Sie sich merken und fehlerfrei wiederholen müssen. Eine hypnotische Herausforderung, die das Gehirn im Takt von Lichtern und Tönen trainiert.",
+        "fr": "Sequence est le jeu électronique classique de mémoire et de rythme qui a défié toute une génération. Quatre boutons colorés s'allument et émettent des bips dans une séquence que vous devez mémoriser et répéter sans vous tromper. Un défi hypnotique qui entraîne l'esprit au rythme des lumières et des sons.",
+        "it": "Sequence è il classico gioco elettronico di memoria e ritmo che ha sfidato un'intera generazione. Quattro pulsanti colorati si illuminano e suonano in una sequenza che devi ricordare e ripetere senza sbagliare. Una sfida ipnotica che allena la mente al ritmo di luci e toni.",
+        "pt": "Sequence é o clássico jogo eletrônico de memória e ritmo que desafiou uma geração inteira. Quatro botões coloridos acendem e apitam em uma sequência que você deve lembrar e repetir sem errar. Um desafio hipnótico que treina a mente ao ritmo de luzes e tons.",
+        "ru": "Sequence — это классическая электронная игра на память и ритм, которая бросила вызов целому поколению. Четыре цветные кнопки загораются и издают звуки в определённой последовательности, которую нужно запомнить и повторить без ошибок. Гипнотическая задача, тренирующая мозг в ритме света и звука.",
+        "zh": "西蒙（Sequence）是经典的电子记忆与节奏游戏，曾向整整一代人发起挑战。四个彩色按钮会按一定顺序亮起并发出提示音，你必须记住并准确无误地重复出来。这是一场在灯光与音调节奏中训练大脑的催眠式挑战。",
         "ja": "サイモンは、一世代に挑戦した古典的な電子記憶＆リズムゲームです。4つのカラフルなボタンが点灯し、ある順序でビープ音を鳴らします。あなたはその順序を覚え、間違えずに繰り返さなければなりません。光と音のリズムに合わせて脳を鍛える、催眠術のような挑戦です。"
         },
         category: "arcade",
@@ -2088,6 +2088,23 @@ window.appData = [
   "category": "rts",
   "link": "webapps/chess/index.html"
     }, */
+    {
+        name: "8bits Realms",
+        image: "https://ifilex.github.io/WineBOX-Store/box/orc.png",
+        description: "8bit Realms: Orcs & Humans is a real-time strategy game (RTS) developed , in 8bit.",
+        description: {
+            es: "8bit Realms: Orcs & Humans es un juego de estrategia en tiempo real (RTS) desarrollado y publicado por Blizzard Entertainment, y publicado por Interplay Productions en Europa.",
+            de: "8bit Realms: Orcs & Humans ist ein Echtzeit-Strategiespiel (RTS), das von Blizzard Entertainment entwickelt und veröffentlicht wurde und in Europa von Interplay Productions veröffentlicht wurde.",
+            fr: "8bit Realms: Orcs & Humans est un jeu de stratégie en temps réel (RTS) développé et publié par Blizzard Entertainment, et publié par Interplay Productions en Europe.",
+            it: "8bit Reams: Orcs & Humans è un gioco di strategia in tempo reale (RTS) sviluppato e pubblicato da Blizzard Entertainment, e pubblicato da Interplay Productions in Europa.",
+            pt: "8bit Realms: Orcs & Humans é um jogo de estratégia em tempo real (RTS) desenvolvido e publicado pela Blizzard Entertainment, e publicado pela Interplay Productions na Europa.",
+            ru: "8bit Realms: Orcs & Humans — это стратегия в реальном времени (RTS), разработанная и изданная Blizzard Entertainment, а в Европе изданная Interplay Productions.",
+            zh: "8bit Realms: Orcs & Humans（魔兽争霸：兽人与人类）是一款由暴雪娱乐开发和发行的即时战略游戏（RTS），在欧洲由 Interplay Productions 发行。",
+            ja: "8bit Realms: Orcs & Humansは、Blizzard Entertainmentが開発・発売したリアルタイムストラテジーゲームであり、ヨーロッパではInterplay Productionsが発売しました。"
+        },
+        category: "rts",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/war/index.html"
+    },
 {
     "name": "Ahorcado",
     "image": "https://ifilex.github.io/WineBOX-Store/box/ahorcado.jpg",
@@ -2404,18 +2421,18 @@ window.appData = [
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/pixelcrush/index.html"
 },
     {
-        name: "Retro Urban City",
+        name: "Retro Urban",
         image: "https://ifilex.github.io/WineBOX-Store/box/simcity.jpg",
-        description: "Retro Urban City is an open-ended city-building video game franchise originally designed by Will Wright.",
+        description: "Retro Urban is an open-ended city-building video game franchise originally designed by Will Wright.",
         description: {
-            es: "Retro Urban City es una franquicia de videojuegos de construcción de ciudades de mundo abierto diseñada originalmente por Will Wright.",
-            de: "Retro Urban City ist eine Open-World-Städtebau-Videospiel-Franchise, die ursprünglich von Will Wright entworfen wurde.",
-            fr: "Retro Urban City est une franchise de jeux vidéo de construction de ville en monde ouvert initialement conçue par Will Wright.",
-            it: "Retro Urban City è un franchise di videogiochi sandbox di costruzione di città originariamente progettato da Will Wright.",
-            pt: "Retro Urban City é uma franquia de videogame de construção de cidade de mundo aberto originalmente projetada por Will Wright.",
-            ru: "Retro Urban City — это франшиза видеоигр о строительстве городов с открытым миром, первоначально разработанная Уиллом Райтом.",
-            zh: "Retro Urban City（模拟城市）是一个开放式的城市建造视频游戏系列，最初由 Will Wright 设计。",
-            ja: "Retro Urban Cityは、Will Wrightによって最初に設計されたオープンエンドの都市建設ゲームフランチャイズです。"
+            es: "Retro Urban es una franquicia de videojuegos de construcción de ciudades de mundo abierto diseñada originalmente por Will Wright.",
+            de: "Retro Urban ist eine Open-World-Städtebau-Videospiel-Franchise, die ursprünglich von Will Wright entworfen wurde.",
+            fr: "Retro Urban est une franchise de jeux vidéo de construction de ville en monde ouvert initialement conçue par Will Wright.",
+            it: "Retro Urban è un franchise di videogiochi sandbox di costruzione di città originariamente progettato da Will Wright.",
+            pt: "Retro Urban é uma franquia de videogame de construção de cidade de mundo aberto originalmente projetada por Will Wright.",
+            ru: "Retro Urban — это франшиза видеоигр о строительстве городов с открытым миром, первоначально разработанная Уиллом Райтом.",
+            zh: "Retro Urban （模拟城市）是一个开放式的城市建造视频游戏系列，最初由 Will Wright 设计。",
+            ja: "Retro Urban は、Will Wrightによって最初に設計されたオープンエンドの都市建設ゲームフランチャイズです。"
         },
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/webapps/simcity/index.html"
@@ -2544,23 +2561,6 @@ window.appData = [
     "category": "rts",
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/truco/index.html"
 },
-    {
-        name: "Warcraft 8bit",
-        image: "https://ifilex.github.io/WineBOX-Store/box/war1.jpg",
-        description: "Warcraft 8bit: Orcs & Humans is a real-time strategy game (RTS) developed , in 8bit.",
-        description: {
-            es: "Warcraft 8bit: Orcs & Humans es un juego de estrategia en tiempo real (RTS) desarrollado y publicado por Blizzard Entertainment, y publicado por Interplay Productions en Europa.",
-            de: "Warcraft 8bit: Orcs & Humans ist ein Echtzeit-Strategiespiel (RTS), das von Blizzard Entertainment entwickelt und veröffentlicht wurde und in Europa von Interplay Productions veröffentlicht wurde.",
-            fr: "Warcraft 8bit: Orcs & Humans est un jeu de stratégie en temps réel (RTS) développé et publié par Blizzard Entertainment, et publié par Interplay Productions en Europe.",
-            it: "Warcraft 8bit: Orcs & Humans è un gioco di strategia in tempo reale (RTS) sviluppato e pubblicato da Blizzard Entertainment, e pubblicato da Interplay Productions in Europa.",
-            pt: "Warcraft 8bit: Orcs & Humans é um jogo de estratégia em tempo real (RTS) desenvolvido e publicado pela Blizzard Entertainment, e publicado pela Interplay Productions na Europa.",
-            ru: "Warcraft 8bit: Orcs & Humans — это стратегия в реальном времени (RTS), разработанная и изданная Blizzard Entertainment, а в Европе изданная Interplay Productions.",
-            zh: "Warcraft 8bit: Orcs & Humans（魔兽争霸：兽人与人类）是一款由暴雪娱乐开发和发行的即时战略游戏（RTS），在欧洲由 Interplay Productions 发行。",
-            ja: "Warcraft 8bit: Orcs & Humansは、Blizzard Entertainmentが開発・発売したリアルタイムストラテジーゲームであり、ヨーロッパではInterplay Productionsが発売しました。"
-        },
-        category: "rts",
-        link: "https://ifilex.github.io/WineBOX-Store/webapps/war/index.html"
-    },
     {
         name: "Warpath",
         image: "https://archive.org/download/win3_Warpath/screenshot_00.jpg",
