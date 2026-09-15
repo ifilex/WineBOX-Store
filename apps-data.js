@@ -52,22 +52,6 @@ window.appData = [
         category: "games",
         link: "https://drummyfish.gitlab.io/anarch/bin/web/anarch.html"
     },
-{
-        "name": "Batman Doom",
-        "image": "https://ifilex.github.io/WineBOX-Store/box/batman.jpg",
-        "description": "Batman Doom es un aclamado mod total para Doom que transforma el infierno marciano en los oscuros callejones y tejados de Gotham City. Encarnando al Caballero Oscuro, deberás enfrentarte a los villanos más icónicos del universo DC, como el Joker, Dos Caras y el Espantapájaros, en una atmósfera opresiva que mezcla la acción trepidante del Doom clásico con la estética noir y la narrativa de los cómics de Batman. Este mod destaca por su increíble diseño de niveles, que incluye interiores góticos, fábricas abandonadas y el mismísimo Asilo Arkham, además de una banda sonora original y nuevas texturas que recrean fielmente el mundo de Batman.",
-        "description": {             "es": "Batman Doom es un aclamado mod total para Doom que transforma el infierno marciano en los oscuros callejones y tejados de Gotham City. Encarnando al Caballero Oscuro, deberás enfrentarte a los villanos más icónicos del universo DC, como el Joker, Dos Caras y el Espantapájaros, en una atmósfera opresiva que mezcla la acción trepidante del Doom clásico con la estética noir y la narrativa de los cómics de Batman. Este mod destaca por su increíble diseño de niveles, que incluye interiores góticos, fábricas abandonadas y el mismísimo Asilo Arkham, además de una banda sonora original y nuevas texturas que recrean fielmente el mundo de Batman.",
-            "de": "Batman Doom ist ein gefeierter Total-Conversion-Mod für Doom, der die marsianische Hölle in die dunklen Gassen und Dächer von Gotham City verwandelt. Als Dunkler Ritter stellst du dich den berüchtigtsten Schurken des DC-Universums wie dem Joker, Two-Face und dem Scarecrow in einer bedrückenden Atmosphäre, die die rasante Action des klassischen Doom mit der Noir-Ästhetik und der Erzählweise der Batman-Comics verbindet. Dieser Mod besticht durch sein unglaubliches Leveldesign, das gotische Innenräume, verlassene Fabriken und das berüchtigte Arkham Asylum umfasst, sowie durch einen originellen Soundtrack und neue Texturen, die Batmans Welt originalgetreu nachbilden.",
-            "fr": "Batman Doom est un mod total très acclamé pour Doom qui transforme l'enfer martien en les sombres ruelles et toits de Gotham City. Incarnant le Chevalier Noir, vous affronterez les vilains les plus emblématiques de l'univers DC, comme le Joker, Double-Face et l'Épouvantail, dans une atmosphère oppressante qui mêle l'action frénétique du Doom classique à l'esthétique noir et au récit des comics de Batman. Ce mod se distingue par son incroyable conception de niveaux, incluant des intérieurs gothiques, des usines abandonnées et l'asile d'Arkham lui-même, ainsi qu'une bande-son originale et de nouvelles textures qui recréent fidèlement l'univers de Batman.",
-            "it": "Batman Doom è un acclamato mod totale per Doom che trasforma l'inferno marziano nei vicoli oscuri e sui tetti di Gotham City. Nei panni del Cavaliere Oscuro, affronterai i cattivi più iconici dell'universo DC, come Joker, Due Facce e Spaventapasseri, in un'atmosfera opprimente che mescola l'azione frenetica del Doom classico con l'estetica noir e la narrativa dei fumetti di Batman. Questa mod si distingue per il suo incredibile design dei livelli, che include interni gotici, fabbriche abbandonate e il famigerato Arkham Asylum, oltre a una colonna sonora originale e nuove texture che ricreano fedelmente il mondo di Batman.",
-            "pt": "Batman Doom é um aclamado mod total para Doom que transforma o inferno marciano nos becos escuros e telhados de Gotham City. Encarnando o Cavaleiro das Trevas, você enfrentará os vilões mais icônicos do universo DC, como o Coringa, Duas-Caras e o Espantalho, em uma atmosfera opressiva que mistura a ação acelerada do Doom clássico com a estética noir e a narrativa dos quadrinhos do Batman. Este mod se destaca pelo seu incrível design de níveis, que inclui interiores góticos, fábricas abandonadas e o próprio Asilo Arkham, além de uma trilha sonora original e novas texturas que recriam fielmente o mundo de Batman.",
-            "ru": "Batman Doom — это знаменитый тотальный мод для Doom, превращающий марсианский ад в тёмные переулки и крыши Готэм-сити. В роли Тёмного рыцаря вам предстоит сразиться с самыми культовыми злодеями вселенной DC, такими как Джокер, Двуликий и Пугало, в гнетущей атмосфере, сочетающей стремительный экшен классического Doom с нуарной эстетикой и нарративом комиксов о Бэтмене. Этот мод выделяется невероятным дизайном уровней, включающим готические интерьеры, заброшенные фабрики и самоё лечебницу Аркхем, а также оригинальным саундтреком и новыми текстурами, достоверно воссоздающими мир Бэтмена.",
-            "zh": "Batman Doom 是一款备受赞誉的《毁灭战士》总转换模组，将火星地狱转变为哥谭市黑暗的小巷和屋顶。你将化身黑暗骑士，在压抑的氛围中对抗 DC 宇宙中最具代表性的反派，如小丑、双面人和稻草人，这种氛围将经典《毁灭战士》的快速动作与黑色电影美学和蝙蝠侠漫画的叙事相结合。此模组以其令人难以置信的关卡设计而著称，包括哥特式内部、废弃工厂和臭名昭著的阿卡姆疯人院，此外还有原创配乐和新纹理，忠实再现了蝙蝠侠的世界。",
-            "ja": "Batman Doomは、Doomの総合変換MODで、火星の地獄をゴッサム・シティの暗い路地や屋上に変えます。ダークナイトとなり、DCユニバースで最も象徴的なヴィラン（ジョーカー、トゥーフェイス、スケアクロウなど）と、クラシックDoomの迅速なアクションとノワール美学、バットマン・コミックの物語性を融合させた重苦しい雰囲気の中で戦います。このMODは、ゴシック様式の内部、廃工場、そしてアーカム・アサイラムそのものを含む信じられないレベルのデザインと、バットマンの世界を忠実に再現するオリジナルサウンドトラックと新しいテクスチャで際立っています。"
-        },
-        "category": "games",
-        "link": "https://ifilex.github.io/WineBOX-Store/batman.html"
-    },
     {
         name: "Black Stone",
         image: "https://ifilex.github.io/WineBOX-Store/box/blake.gif",
@@ -137,7 +121,7 @@ window.appData = [
         link: "https://d07riv.github.io/diabloweb/"
     },
 {
-        "name": "Doom",
+        "name": "FreeDoom",
         "image": "https://ifilex.github.io/WineBOX-Store/box/freedoom.jpg",
         "description": "FreeDoom 1 es un juego de disparos en primera persona que recrea fielmente la experiencia del Doom original de 1993, pero con una diferencia clave: está desarrollado completamente con contenido libre y de código abierto. Esto significa que todos sus gráficos, sonidos y niveles son totalmente legales y gratuitos, sin necesidad de poseer el juego original. Su jugabilidad es idéntica a la del clásico: acción rápida, laberintos oscuros, armas potentes y hordas de demonios que aniquilar en una base marciana.",
         "description": {
@@ -154,7 +138,7 @@ window.appData = [
         "link": "https://ifilex.github.io/WineBOX-Store/doom1.html"
     },
 {
-        "name": "Doom 2",
+        "name": "FreeDoom 2",
         "image": "https://ifilex.github.io/WineBOX-Store/box/freedoom2.jpg",
         "description": "FreeDoom 2 es la secuela libre y de código abierto que emula fielmente la experiencia del Doom 2 original, lanzado en 1994. Al igual que su predecesor, está desarrollado completamente con contenido libre y gratuito, sin necesidad de poseer el juego original. Esta versión introduce nuevas armas como la superescopeta, enemigos más peligrosos como el Archvile y el Arachnotron, y niveles más grandes y complejos. La acción sigue siendo la misma: disparos frenéticos, laberintos infernales y demonios que aniquilar, ahora en escenarios aún más variados y desafiantes.",
         "description": {
@@ -220,24 +204,6 @@ window.appData = [
     },
     "category": "games",
     "link": "https://ifilex.github.io/WineBOX-Store/mauraash.html"
-},
-{
-  "name": "Minecraft",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
-  "description": "Minecraft es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
-  "description": {
-    "es": "Minecraft es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
-    "en": "Minecraft is the iconic block-building and adventure game in an open world, where players can explore, create, and survive in procedurally generated infinite landscapes.",
-    "de": "Minecraft ist das ikonische Bau- und Abenteuerspiel in einer offenen Blockwelt, in der Spieler in prozedural generierten, unendlichen Landschaften erkunden, bauen und überleben können.",
-    "fr": "Minecraft est le jeu emblématique de construction et d'aventure dans un monde ouvert en blocs, où les joueurs peuvent explorer, créer et survivre dans des paysages infinis générés de manière procédurale.",
-    "it": "Minecraft è l'iconico gioco di costruzione e avventura in un mondo aperto a blocchi, dove i giocatori possono esplorare, creare e sopravvivere in paesaggi infiniti generati proceduralmente.",
-    "pt": "Minecraft é o icônico jogo de construção e aventura em um mundo aberto de blocos, onde os jogadores podem explorar, criar e sobreviver em paisagens infinitas geradas processualmente.",
-    "ru": "Minecraft — это культовая игра о строительстве и приключениях в открытом блочном мире, где игроки могут исследовать, создавать и выживать в бесконечных процедурно генерируемых ландшафтах.",
-    "zh": "Minecraft 是一款标志性的开放世界沙盒建造冒险游戏，玩家可以在程序生成的无限景观中探索、创造和生存。",
-    "ja": "Minecraftは、オープンワールドのブロック構築とアドベンチャーを特徴とする象徴的なゲームで、プレイヤーは手続き的に生成される無限の風景を探索し、創造し、生き延びることができます。"
-  },
-  "category": "games",
-  "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
 },
    {
         name: "Mr. Pibb",
@@ -378,23 +344,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/omf.html"
     },
 {
-        "name": "Volcano",
-        "image": "https://ifilex.github.io/WineBOX-Store/box/volcano.jpg",
-        "description": "Doom Volcano es un mod para Doom 2 que transporta la acción infernal a un planeta volcánico en constante erupción. Este wad te sumerge en un entorno hostil donde la lava fluye por cada rincón, la tierra tiembla bajo tus pies y el cielo se tiñe de rojo ceniza. Con nuevos niveles diseñados meticulosamente, este mod ofrece un desafío renovado con trampas de fuego, plataformas móviles y rutas ocultas que pondrán a prueba tu destreza. Además, incorpora texturas personalizadas y una paleta de colores cálidos que intensifican la sensación de estar en el mismísimo corazón de un volcán en activo, luchando contra hordas de demonios en un escenario tan implacable como el infierno original.",
-        "description": {
-            "es": "Doom Volcano es un mod para Doom 2 que transporta la acción infernal a un planeta volcánico en constante erupción. Este wad te sumerge en un entorno hostil donde la lava fluye por cada rincón, la tierra tiembla bajo tus pies y el cielo se tiñe de rojo ceniza. Con nuevos niveles diseñados meticulosamente, este mod ofrece un desafío renovado con trampas de fuego, plataformas móviles y rutas ocultas que pondrán a prueba tu destreza. Además, incorpora texturas personalizadas y una paleta de colores cálidos que intensifican la sensación de estar en el mismísimo corazón de un volcán en activo, luchando contra hordas de demonios en un escenario tan implacable como el infierno original.",
-            "de": "Doom Volcano ist ein Mod für Doom 2, der die höllische Action auf einen ständig ausbrechenden Vulkanplaneten verlegt. Dieser Wad taucht dich in eine feindselige Umgebung ein, in der Lava durch jede Ecke fließt, der Boden unter deinen Füßen bebt und der Himmel sich aschrot färbt. Mit sorgfältig gestalteten neuen Levels bietet dieser Mod eine erneuerte Herausforderung mit Feuerspuren, beweglichen Plattformen und versteckten Pfaden, die dein Geschick auf die Probe stellen. Darüber hinaus enthält er individuelle Texturen und eine warme Farbpalette, die das Gefühl verstärken, sich im Herzen eines aktiven Vulkans zu befinden, während du gegen Dämonenhorden in einer ebenso gnadenlosen Umgebung wie der ursprünglichen Hölle kämpfst.",
-            "fr": "Doom Volcano est un mod pour Doom 2 qui transporte l'action infernale sur une planète volcanique en éruption constante. Ce wad te plonge dans un environnement hostile où la lave coule dans chaque recoin, la terre tremble sous tes pieds et le ciel se teinte de rouge cendré. Avec de nouveaux niveaux méticuleusement conçus, ce mod offre un défi renouvelé avec des pièges de feu, des plateformes mobiles et des chemins cachés qui mettront à l'épreuve ton habileté. Il intègre également des textures personnalisées et une palette de couleurs chaudes qui renforcent la sensation d'être au cœur même d'un volcan en activité, combattant des hordes de démons dans un décor aussi impitoyable que l'enfer original.",
-            "it": "Doom Volcano è un mod per Doom 2 che trasporta l'azione infernale su un pianeta vulcanico in costante eruzione. Questo wad ti immerge in un ambiente ostile dove la lava scorre in ogni angolo, il terreno trema sotto i tuoi piedi e il cielo si tinge di rosso cenere. Con nuovi livelli progettati meticolosamente, questo mod offre una sfida rinnovata con trappole di fuoco, piattaforme mobili e percorsi nascosti che metteranno alla prova la tua abilità. Inoltre, incorpora texture personalizzate e una tavolozza di colori caldi che intensificano la sensazione di trovarsi nel cuore stesso di un vulcano attivo, combattendo orde di demoni in uno scenario tanto spietato quanto l'inferno originale.",
-            "pt": "Doom Volcano é um mod para Doom 2 que transporta a ação infernal para um planeta vulcânico em constante erupção. Este wad te mergulha em um ambiente hostil onde a lava flui por cada canto, a terra treme sob seus pés e o céu se tinge de vermelho cinza. Com novos níveis meticulosamente projetados, este mod oferece um desafio renovado com armadilhas de fogo, plataformas móveis e rotas ocultas que testarão sua destreza. Além disso, incorpora texturas personalizadas e uma paleta de cores quentes que intensificam a sensação de estar no coração de um vulcão ativo, lutando contra hordas de demônios em um cenário tão impiedoso quanto o inferno original.",
-            "ru": "Doom Volcano — это мод для Doom 2, переносящий адское действие на постоянно извергающуюся вулканическую планету. Этот вад погружает тебя во враждебную среду, где лава течёт в каждом углу, земля дрожит под ногами, а небо окрашивается в пепельно-красный цвет. С новыми тщательно продуманными уровнями этот мод предлагает обновлённое испытание с огненными ловушками, подвижными платформами и скрытыми путями, которые проверят твоё мастерство. Кроме того, он включает пользовательские текстуры и тёплую цветовую палитру, усиливающую ощущение нахождения в самом сердце действующего вулкана, сражаясь с полчищами демонов в обстановке, столь же безжалостной, как и исходный ад.",
-            "zh": "Doom Volcano 是《毁灭战士2》的一个模组，将地狱般的战斗带到了一个不断喷发的火山星球。此 WAD 让你沉浸在一个充满敌意的环境中，岩浆在每个角落流淌，大地在脚下颤抖，天空被染成灰红色。凭借精心设计的新关卡，此模组通过火焰陷阱、移动平台和隐藏路径提供了全新的挑战，考验你的技巧。此外，它还采用了自定义纹理和暖色调色板，增强了身处活火山中心的感觉，在如同原始地狱般无情的场景中与恶魔大军作战。",
-            "ja": "Doom Volcanoは、Doom 2のMODで、地獄のアクションを絶えず噴火する火山惑星に移します。このWADは、溶岩があらゆる隅々に流れ、足元の地面が震え、空が灰赤色に染まる過酷な環境にあなたを没入させます。入念にデザインされた新しいレベルを備えたこのMODは、火炎トラップ、可動プラットフォーム、隠し経路などで新たな挑戦を提供し、あなたの技量を試します。さらに、カスタムテクスチャと暖色系のカラーパレットを採用し、活火山の中心にいる感覚を強め、元の地獄と同様に容赦ないシナリオで悪魔の大群と戦います。"
-        },
-        "category": "games",
-        "link": "https://ifilex.github.io/WineBOX-Store/volcano.html"
-    },
-{
     "name": "Voxel Fighter 3D",
     "image": "https://ifilex.github.io/WineBOX-Store/box/voxelfighter.jpg",
     "description": "Voxel Fighter 3D es un juego de lucha en primera persona con estilo voxel inspirado en la saga Street Fighter. En lugar de la vista lateral clásica, te sumerges en la acción desde tus propios ojos, enfrentándote a oponentes en combates cuerpo a cuerpo donde deberás ejecutar puñetazos, patadas y movimientos especiales con precisión. Cada personaje tiene su propio estilo de lucha y ataques característicos, y los escenarios están construidos con vóxeles, dándole un aspecto retro-moderno. Con rondas, barras de vida y combinaciones, Voxel Fighter 3D ofrece una perspectiva única y frenética del género de lucha.",
@@ -414,9 +363,9 @@ window.appData = [
 {
   "name": "Voxel Quest",
   "image": "https://ifilex.github.io/WineBOX-Store/box/voxel.png",
-  "description": "Voxel Minicraft es un juego de aventura y laberintos en 3D, inspirado en los mundos de bloques, donde el objetivo es explorar y escapar de un complejo laberinto en el menor tiempo posible, superando obstáculos y enemigos.",
+  "description": "Voxel Quest es un juego de aventura y laberintos en 3D, inspirado en los mundos de bloques, donde el objetivo es explorar y escapar de un complejo laberinto en el menor tiempo posible, superando obstáculos y enemigos.",
   "description": {
-    "es": "Voxel Minicraft es un juego de aventura y laberintos en 3D, inspirado en los mundos de bloques, donde el objetivo es explorar y escapar de un complejo laberinto en el menor tiempo posible, superando obstáculos y enemigos.",
+    "es": "Voxel Quest es un juego de aventura y laberintos en 3D, inspirado en los mundos de bloques, donde el objetivo es explorar y escapar de un complejo laberinto en el menor tiempo posible, superando obstáculos y enemigos.",
     "en": "Voxel Minicraft is a 3D adventure and maze game, inspired by block worlds, where the goal is to explore and escape a complex maze in the shortest time possible, overcoming obstacles and enemies.",
     "de": "Voxel Minicraft ist ein 3D-Abenteuer- und Labyrinthspiel, inspiriert von Blockwelten, bei dem das Ziel darin besteht, ein komplexes Labyrinth in kürzester Zeit zu erkunden und zu entkommen, indem man Hindernisse und Gegner überwindet.",
     "fr": "Voxel Minicraft est un jeu d'aventure et de labyrinthe en 3D, inspiré des mondes en blocs, où l'objectif est d'explorer et de s'échapper d'un labyrinthe complexe le plus rapidement possible, en surmontant les obstacles et les ennemis.",
@@ -428,6 +377,24 @@ window.appData = [
   },
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/voxel/index.html"
+},
+{
+  "name": "Voxel World",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
+  "description": "Minecraft es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
+  "description": {
+    "es": "VoxelWorld es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
+    "en": "VoxelWorld is the iconic block-building and adventure game in an open world, where players can explore, create, and survive in procedurally generated infinite landscapes.",
+    "de": "VoxelWorld ist das ikonische Bau- und Abenteuerspiel in einer offenen Blockwelt, in der Spieler in prozedural generierten, unendlichen Landschaften erkunden, bauen und überleben können.",
+    "fr": "VoxelWorld est le jeu emblématique de construction et d'aventure dans un monde ouvert en blocs, où les joueurs peuvent explorer, créer et survivre dans des paysages infinis générés de manière procédurale.",
+    "it": "VoxelWorld è l'iconico gioco di costruzione e avventura in un mondo aperto a blocchi, dove i giocatori possono esplorare, creare e sopravvivere in paesaggi infiniti generati proceduralmente.",
+    "pt": "VoxelWorld é o icônico jogo de construção e aventura em um mundo aberto de blocos, onde os jogadores podem explorar, criar e sobreviver em paisagens infinitas geradas processualmente.",
+    "ru": "VoxelWorld — это культовая игра о строительстве и приключениях в открытом блочном мире, где игроки могут исследовать, создавать и выживать в бесконечных процедурно генерируемых ландшафтах.",
+    "zh": "VoxelWorld 是一款标志性的开放世界沙盒建造冒险游戏，玩家可以在程序生成的无限景观中探索、创造和生存。",
+    "ja": "VoxelWorldは、オープンワールドのブロック構築とアドベンチャーを特徴とする象徴的なゲームで、プレイヤーは手続き的に生成される無限の風景を探索し、創造し、生き延びることができます。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
 },
 {
   "name": "Rec",
@@ -1797,21 +1764,21 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/webapps/biomenace/index.html"
     },
     {
-        name: "Breakout",
-        image: "https://ifilex.github.io/WineBOX-Store/box/breakout.jpg",
-        description: "Breakout is a classic arcade game where the player controls a paddle to bounce a ball and break all the bricks on the screen. The goal is to clear the bricks without letting the ball fall past the paddle.",
+        name: "BlockMatrix",
+        image: "https://ifilex.github.io/WineBOX-Store/box/AGIWiki_tetris1a.png",
+        description: "BlockMatrix is a version of Tetris released as part of the 0 MS-DOS Classic Games collection.",   
         description: {
-            es: "Breakout es un juego arcade clásico donde el jugador controla una paleta para rebotar una pelota y romper todos los ladrillos en la pantalla. El objetivo es limpiar los ladrillos sin dejar que la pelota caiga más allá de la paleta.",
-            de: "Breakout ist ein klassisches Arcade-Spiel, bei dem der Spieler einen Schläger steuert, um einen Ball abzuprallen und alle Steine auf dem Bildschirm zu zerbrechen. Ziel ist es, die Steine zu beseitigen, ohne dass der Ball am Schläger vorbeifällt.",
-            fr: "Breakout est un jeu d'arcade classique où le joueur contrôle une raquette pour faire rebondir une balle et casser toutes les briques à l'écran. Le but est de nettoyer les briques sans laisser la balle tomber au-delà de la raquette.",
-            it: "Breakout è un classico gioco arcade in cui il giocatore controlla una racchetta per far rimbalzare una palla e rompere tutti i mattoni sullo schermo. L'obiettivo è eliminare i mattoni senza far cadere la palla oltre la racchetta.",
-            pt: "Breakout é um jogo de arcade clássico onde o jogador controla uma paleta para quicar uma bola e quebrar todos os tijolos na tela. O objetivo é limpar os tijolos sem deixar a bola cair além da paleta.",
-            ru: "Breakout — это классическая аркадная игра, в которой игрок управляет ракеткой, чтобы отбивать мяч и разбивать все кирпичи на экране. Цель — убрать кирпичи, не давая мячу упасть за ракетку.",
-            zh: "Breakout（打砖块）是一款经典街机游戏，玩家控制一个挡板反弹球并打碎屏幕上的所有砖块。目标是在不让球从挡板旁落下的情况下清除所有砖块。",
-            ja: "Breakoutは、プレイヤーがパドルを操作してボールを跳ね返し、画面上のすべてのレンガを壊す古典的なアーケードゲームです。ボールがパドルを通り過ぎて落ちることなくレンガをすべて取り除くことが目標です。"
+            es: "BlockMatrix es una versión de Tetris lanzada como parte de la colección 0 MS-DOS Classic Games.",
+            de: "BlockMatrix ist eine Version von Tetris, die als Teil der 0 MS-DOS Classic Games-Sammlung veröffentlicht wurde.",
+            fr: "BlockMatrix est une version de Tetris publiée dans le cadre de la collection 0 MS-DOS Classic Games.",
+            it: "BlockMatrix è una versione di Tetris pubblicata come parte della collezione 0 MS-DOS Classic Games.",
+            pt: "BlockMatrix é uma versão do Tetris lançada como parte da coleção 0 MS-DOS Classic Games.",
+            ru: "BlockMatrix — это версия тетриса, выпущенная в составе коллекции 0 MS-DOS Classic Games.",
+            zh: "BlockMatrix 是作为 0 MS-DOS Classic Games 合集的一部分发布的俄罗斯方块版本。",
+            ja: "BlockMatrixは、0 MS-DOS Classic Gamesコレクションの一部としてリリースされたバージョンのテトリスです。"
         },
         category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/webapps/breakout/index.html"
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/tetris/index.html"
     },
 {
     name: "Clumsy Bird",
@@ -1899,18 +1866,18 @@ window.appData = [
         link: "https://fosiper.com/games/pacman-lite/"
     },
     {
-        name: "Prehistorik",
+        name: "Prehistorix",
         image: "https://ifilex.github.io/WineBOX-Store/box/pre2.jpg",
-        description: "Prehistorik is a platform game developed by Titus Interactive for the Amiga, Atari ST, Amstrad CPC and DOS.",
+        description: "Prehistorix is a platform game developed by Titus Interactive for the Amiga, Atari ST, Amstrad CPC and DOS.",
         description: {
-            es: "Prehistorik es un juego de plataformas desarrollado por Titus Interactive para Amiga, Atari ST, Amstrad CPC y DOS.",
-            de: "Prehistorik ist ein Plattformspiel, das von Titus Interactive für Amiga, Atari ST, Amstrad CPC und DOS entwickelt wurde.",
-            fr: "Prehistorik est un jeu de plateforme développé par Titus Interactive pour Amiga, Atari ST, Amstrad CPC et DOS.",
-            it: "Prehistorik è un gioco a piattaforme sviluppato da Titus Interactive per Amiga, Atari ST, Amstrad CPC e DOS.",
-            pt: "Prehistorik é um jogo de plataforma desenvolvido pela Titus Interactive para Amiga, Atari ST, Amstrad CPC e DOS.",
-            ru: "Prehistorik — это платформенная игра, разработанная Titus Interactive для Amiga, Atari ST, Amstrad CPC и DOS.",
-            zh: "Prehistorik 是一款由 Titus Interactive 为 Amiga、Atari ST、Amstrad CPC 和 DOS 开发的平台游戏。",
-            ja: "Prehistorikは、Titus InteractiveがAmiga、Atari ST、Amstrad CPC、DOS向けに開発したプラットフォームゲームです。"
+            es: "Prehistorix es un juego de plataformas desarrollado por Titus Interactive para Amiga, Atari ST, Amstrad CPC y DOS.",
+            de: "Prehistorix ist ein Plattformspiel, das von Titus Interactive für Amiga, Atari ST, Amstrad CPC und DOS entwickelt wurde.",
+            fr: "Prehistorix est un jeu de plateforme développé par Titus Interactive pour Amiga, Atari ST, Amstrad CPC et DOS.",
+            it: "Prehistorix è un gioco a piattaforme sviluppato da Titus Interactive per Amiga, Atari ST, Amstrad CPC e DOS.",
+            pt: "Prehistorix é um jogo de plataforma desenvolvido pela Titus Interactive para Amiga, Atari ST, Amstrad CPC e DOS.",
+            ru: "Prehistorix — это платформенная игра, разработанная Titus Interactive для Amiga, Atari ST, Amstrad CPC и DOS.",
+            zh: "Prehistorix 是一款由 Titus Interactive 为 Amiga、Atari ST、Amstrad CPC 和 DOS 开发的平台游戏。",
+            ja: "Prehistorixは、Titus InteractiveがAmiga、Atari ST、Amstrad CPC、DOS向けに開発したプラットフォームゲームです。"
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/webapps/prehistorik/index.html"
@@ -2002,21 +1969,21 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/stargunner.html"
     },
     {
-        name: "Tetris",
-        image: "https://ifilex.github.io/WineBOX-Store/box/AGIWiki_tetris1a.png",
-        description: "Tetris is a version of Tetris released as part of the 0 MS-DOS Classic Games collection.",   
+        name: "Vulkan/Metal Breakout",
+        image: "https://ifilex.github.io/WineBOX-Store/box/breakout.jpg",
+        description: "Breakout is a classic arcade game where the player controls a paddle to bounce a ball and break all the bricks on the screen. The goal is to clear the bricks without letting the ball fall past the paddle.",
         description: {
-            es: "Tetris es una versión de Tetris lanzada como parte de la colección 0 MS-DOS Classic Games.",
-            de: "Tetris ist eine Version von Tetris, die als Teil der 0 MS-DOS Classic Games-Sammlung veröffentlicht wurde.",
-            fr: "Tetris est une version de Tetris publiée dans le cadre de la collection 0 MS-DOS Classic Games.",
-            it: "Tetris è una versione di Tetris pubblicata come parte della collezione 0 MS-DOS Classic Games.",
-            pt: "Tetris é uma versão do Tetris lançada como parte da coleção 0 MS-DOS Classic Games.",
-            ru: "Tetris — это версия тетриса, выпущенная в составе коллекции 0 MS-DOS Classic Games.",
-            zh: "Tetris 是作为 0 MS-DOS Classic Games 合集的一部分发布的俄罗斯方块版本。",
-            ja: "Tetrisは、0 MS-DOS Classic Gamesコレクションの一部としてリリースされたバージョンのテトリスです。"
+            es: "Breakout es un juego arcade clásico donde el jugador controla una paleta para rebotar una pelota y romper todos los ladrillos en la pantalla. El objetivo es limpiar los ladrillos sin dejar que la pelota caiga más allá de la paleta.",
+            de: "Breakout ist ein klassisches Arcade-Spiel, bei dem der Spieler einen Schläger steuert, um einen Ball abzuprallen und alle Steine auf dem Bildschirm zu zerbrechen. Ziel ist es, die Steine zu beseitigen, ohne dass der Ball am Schläger vorbeifällt.",
+            fr: "Breakout est un jeu d'arcade classique où le joueur contrôle une raquette pour faire rebondir une balle et casser toutes les briques à l'écran. Le but est de nettoyer les briques sans laisser la balle tomber au-delà de la raquette.",
+            it: "Breakout è un classico gioco arcade in cui il giocatore controlla una racchetta per far rimbalzare una palla e rompere tutti i mattoni sullo schermo. L'obiettivo è eliminare i mattoni senza far cadere la palla oltre la racchetta.",
+            pt: "Breakout é um jogo de arcade clássico onde o jogador controla uma paleta para quicar uma bola e quebrar todos os tijolos na tela. O objetivo é limpar os tijolos sem deixar a bola cair além da paleta.",
+            ru: "Breakout — это классическая аркадная игра, в которой игрок управляет ракеткой, чтобы отбивать мяч и разбивать все кирпичи на экране. Цель — убрать кирпичи, не давая мячу упасть за ракетку.",
+            zh: "Breakout（打砖块）是一款经典街机游戏，玩家控制一个挡板反弹球并打碎屏幕上的所有砖块。目标是在不让球从挡板旁落下的情况下清除所有砖块。",
+            ja: "Breakoutは、プレイヤーがパドルを操作してボールを跳ね返し、画面上のすべてのレンガを壊す古典的なアーケードゲームです。ボールがパドルを通り過ぎて落ちることなくレンガをすべて取り除くことが目標です。"
         },
         category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/webapps/tetris/index.html"
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/breakout/index.html"
     },
    {
     name: "Winemine",
@@ -2122,24 +2089,6 @@ window.appData = [
     },
     "category": "rts",
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/ahorcado/index.html"
-},
-{
-  "name": "Batalla Naval",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/naval.jpg",
-  "description": "Batalla Naval es el clásico juego de estrategia donde dos jugadores colocan sus barcos en un tablero y se turnan para disparar, intentando hundir toda la flota enemiga.",
-  "description": {
-    "es": "Batalla Naval es el clásico juego de estrategia donde dos jugadores colocan sus barcos en un tablero y se turnan para disparar, intentando hundir toda la flota enemiga.",
-    "en": "Battleship is the classic strategy game where two players place their ships on a board and take turns firing, trying to sink the entire enemy fleet.",
-    "de": "Schiffe versenken ist das klassische Strategiespiel, bei dem zwei Spieler ihre Schiffe auf einem Brett platzieren und abwechselnd schießen, um die gesamte feindliche Flotte zu versenken.",
-    "fr": "La bataille navale est le jeu de stratégie classique où deux joueurs placent leurs navires sur un plateau et tirent à tour de rôle, essayant de couler toute la flotte ennemie.",
-    "it": "Battaglia navale è il classico gioco di strategia dove due giocatori posizionano le loro navi su una griglia e si alternano per sparare, cercando di affondare l'intera flotta nemica.",
-    "pt": "Batalha Naval é o clássico jogo de estratégia onde dois jogadores posicionam seus navios em um tabuleiro e se revezam para atirar, tentando afundar toda a frota inimiga.",
-    "ru": "Морской бой — это классическая стратегическая игра, где два игрока расставляют свои корабли на доске и по очереди стреляют, пытаясь потопить весь вражеский флот.",
-    "zh": "海战是一款经典的策略游戏，两名玩家在棋盘上放置自己的船只，轮流开火，试图击沉所有敌方舰队。",
-    "ja": "バトルシップは、2人のプレイヤーがボード上に船を配置し、交代で砲撃して敵艦隊をすべて沈めることを目指す古典的な戦略ゲームです。"
-  },
-  "category": "rts",
-  "link": "https://ifilex.github.io/WineBOX-Store/webapps/naval/index.html"
 },
     {
         name: "Box World",
@@ -2350,6 +2299,24 @@ window.appData = [
   },
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/lemonade/index.html"
+},
+{
+  "name": "Naval Pixel",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/naval.jpg",
+  "description": "Naval Pixel es el clásico juego de estrategia donde dos jugadores colocan sus barcos en un tablero y se turnan para disparar, intentando hundir toda la flota enemiga.",
+  "description": {
+    "es": "Naval Pixel es el clásico juego de estrategia donde dos jugadores colocan sus barcos en un tablero y se turnan para disparar, intentando hundir toda la flota enemiga.",
+    "en": "Naval Pixel is the classic strategy game where two players place their ships on a board and take turns firing, trying to sink the entire enemy fleet.",
+    "de": "Schiffe versenken ist das klassische Strategiespiel, bei dem zwei Spieler ihre Schiffe auf einem Brett platzieren und abwechselnd schießen, um die gesamte feindliche Flotte zu versenken.",
+    "fr": "Naval Pixel est le jeu de stratégie classique où deux joueurs placent leurs navires sur un plateau et tirent à tour de rôle, essayant de couler toute la flotte ennemie.",
+    "it": "Naval Pixel è il classico gioco di strategia dove due giocatori posizionano le loro navi su una griglia e si alternano per sparare, cercando di affondare l'intera flotta nemica.",
+    "pt": "Naval Pixel é o clássico jogo de estratégia onde dois jogadores posicionam seus navios em um tabuleiro e se revezam para atirar, tentando afundar toda a frota inimiga.",
+    "ru": "Морской бой — это классическая стратегическая игра, где два игрока расставляют свои корабли на доске и по очереди стреляют, пытаясь потопить весь вражеский флот.",
+    "zh": "海战是一款经典的策略游戏，两名玩家在棋盘上放置自己的船只，轮流开火，试图击沉所有敌方舰队。",
+    "ja": "バトルシップは、2人のプレイヤーがボード上に船を配置し、交代で砲撃して敵艦隊をすべて沈めることを目指す古典的な戦略ゲームです。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/naval/index.html"
 },
     {
         name: "Nero Chess 5",
