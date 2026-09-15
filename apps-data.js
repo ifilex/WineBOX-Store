@@ -205,6 +205,24 @@ window.appData = [
     "category": "games",
     "link": "https://ifilex.github.io/WineBOX-Store/mauraash.html"
 },
+{
+  "name": "Mindcraft 3D",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
+  "description": "Mindcraft es un juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente en un mundo subconsciente.",
+  "description": {
+    "es": "Mindcraft 3D es yn juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
+    "en": "Mindcraft 3D is a block-building and adventure game in an open world, where players can explore, create, and survive in procedurally generated infinite landscapes.",
+    "de": "Mindcraft 3D ist  Bau- und Abenteuerspiel in einer offenen Blockwelt, in der Spieler in prozedural generierten, unendlichen Landschaften erkunden, bauen und überleben können.",
+    "fr": "Mindcraft 3D est le jeu emblématique de construction et d'aventure dans un monde ouvert en blocs, où les joueurs peuvent explorer, créer et survivre dans des paysages infinis générés de manière procédurale.",
+    "it": "Mindcraft 3D è gioco di costruzione e avventura in un mondo aperto a blocchi, dove i giocatori possono esplorare, creare e sopravvivere in paesaggi infiniti generati proceduralmente.",
+    "pt": "Mindcraft 3D é jogo de construção e aventura em um mundo aberto de blocos, onde os jogadores podem explorar, criar e sobreviver em paisagens infinitas geradas processualmente.",
+    "ru": "Mindcraft 3D — это культовая игра о строительстве и приключениях в открытом блочном мире, где игроки могут исследовать, создавать и выживать в бесконечных процедурно генерируемых ландшафтах.",
+    "zh": "Mindcraft 3D 是一款标志性的开放世界沙盒建造冒险游戏，玩家可以在程序生成的无限景观中探索、创造和生存。",
+    "ja": "Mindcraft 3Dは、オープンワールドのブロック構築とアドベンチャーを特徴とする象徴的なゲームで、プレイヤーは手続き的に生成される無限の風景を探索し、創造し、生き延びることができます。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
+},
    {
         name: "Mr. Pibb",
         image: "https://ifilex.github.io/WineBOX-Store/box/mrpibb.png",
@@ -377,24 +395,6 @@ window.appData = [
   },
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/voxel/index.html"
-},
-{
-  "name": "Voxel World",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
-  "description": "Minecraft es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
-  "description": {
-    "es": "VoxelWorld es el icónico juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente.",
-    "en": "VoxelWorld is the iconic block-building and adventure game in an open world, where players can explore, create, and survive in procedurally generated infinite landscapes.",
-    "de": "VoxelWorld ist das ikonische Bau- und Abenteuerspiel in einer offenen Blockwelt, in der Spieler in prozedural generierten, unendlichen Landschaften erkunden, bauen und überleben können.",
-    "fr": "VoxelWorld est le jeu emblématique de construction et d'aventure dans un monde ouvert en blocs, où les joueurs peuvent explorer, créer et survivre dans des paysages infinis générés de manière procédurale.",
-    "it": "VoxelWorld è l'iconico gioco di costruzione e avventura in un mondo aperto a blocchi, dove i giocatori possono esplorare, creare e sopravvivere in paesaggi infiniti generati proceduralmente.",
-    "pt": "VoxelWorld é o icônico jogo de construção e aventura em um mundo aberto de blocos, onde os jogadores podem explorar, criar e sobreviver em paisagens infinitas geradas processualmente.",
-    "ru": "VoxelWorld — это культовая игра о строительстве и приключениях в открытом блочном мире, где игроки могут исследовать, создавать и выживать в бесконечных процедурно генерируемых ландшафтах.",
-    "zh": "VoxelWorld 是一款标志性的开放世界沙盒建造冒险游戏，玩家可以在程序生成的无限景观中探索、创造和生存。",
-    "ja": "VoxelWorldは、オープンワールドのブロック構築とアドベンチャーを特徴とする象徴的なゲームで、プレイヤーは手続き的に生成される無限の風景を探索し、創造し、生き延びることができます。"
-  },
-  "category": "games",
-  "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
 },
 {
   "name": "Rec",
@@ -1730,6 +1730,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/webapps/arkanoid/index.html"
     },
     {
+        name: "Axe Warriors",
+        image: "https://ifilex.github.io/WineBOX-Store/box/axe.jpg",
+        description: "Axe Warriors is a side-scrolling, beat 'em up, hack and slash arcade video game released in 1989 by Sega for the System 16-B arcade hardware.",
+        description: {
+            es: "Axe Warriors es un videojuego arcade de desplazamiento lateral, beat 'em up, hack and slash lanzado en 1989 por Sega para el hardware arcade System 16-B.",
+            de: "Axe Warriors ist ein Side-Scrolling-Beat-'em-up-Hack-and-Slay-Arcade-Spiel, das 1989 von Sega für die Arcade-Hardware System 16-B veröffentlicht wurde.",
+            fr: "Axe Warriors est un jeu d'arcade à défilement latéral, beat them all, hack and slash sorti en 1989 par Sega pour le matériel d'arcade System 16-B.",
+            it: "Axe Warriors è un videogioco arcade a scorrimento laterale, picchiaduro a scorrimento, hack and slash rilasciato nel 1989 da Sega per l'hardware arcade System 16-B.",
+            pt: "Axe Warriors é um jogo de arcade de rolagem lateral, beat 'em up, hack and slash lançado em 1989 pela Sega para o hardware de arcade System 16-B.",
+            ru: "Axe Warriors — это аркадная видеоигра с боковой прокруткой в жанре beat 'em up, hack and slash, выпущенная в 1989 году компанией Sega для аркадного оборудования System 16-B.",
+            zh: "Axe Warriors（战斧）是一款横向卷轴、清版动作、砍杀类街机游戏，由 Sega 于 1989 年为 System 16-B 街机硬件发行。",
+            ja: "Axe Warriorsは、セガが1989年にSystem 16-Bアーケードハードウェア向けにリリースした、横スクロールのベルトスクロールアクション、ハックアンドスラッシュのアーケードゲームです。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/golden/index.html"
+    },
+    {
         name: "Beats Of Rage",
         image: "https://ifilex.github.io/WineBOX-Store/box/beatsofrage.gif",
         description: "If you've ever played Streets of Rage (in an arcade or for any of Sega's old home console systems) you'll know what to expect from Beats of Rage.",
@@ -1762,6 +1779,23 @@ window.appData = [
         },
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/webapps/biomenace/index.html"
+    },
+    {
+        name: "Blaster",
+        image: "https://ifilex.github.io/WineBOX-Store/box/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
+        description: "Refers to the European title for certain games in the Bomberman franchise, such as the TurboGrafx-16/PC Engine version",
+        description: {
+            es: "Se refiere al título europeo para ciertos juegos de la franquicia Bomberman, como la versión de TurboGrafx-16/PC Engine.",
+            de: "Bezieht sich auf den europäischen Titel für bestimmte Spiele der Bomberman-Franchise, wie die Version für TurboGrafx-16/PC Engine.",
+            fr: "Fait référence au titre européen pour certains jeux de la franchise Bomberman, comme la version TurboGrafx-16/PC Engine.",
+            it: "Si riferisce al titolo europeo per alcuni giochi del franchise di Bomberman, come la versione per TurboGrafx-16/PC Engine.",
+            pt: "Refere-se ao título europeu para certos jogos da franquia Bomberman, como a versão TurboGrafx-16/PC Engine.",
+            ru: "Относится к европейскому названию для некоторых игр франшизы Bomberman, таких как версия для TurboGrafx-16/PC Engine.",
+            zh: "指的是炸弹人系列中某些游戏在欧洲地区的名称，例如 TurboGrafx-16/PC Engine 版本。",
+            ja: "Bombermanフランチャイズの特定のゲーム（TurboGrafx-16/PC Engineバージョンなど）のヨーロッパタイトルを指します。"
+        },
+        category: "arcade",
+        link: "https://ifilex.github.io/WineBOX-Store/webapps/dyna/index.html"
     },
     {
         name: "BlockMatrix",
@@ -1797,40 +1831,6 @@ window.appData = [
     category: "arcade",
     link: "https://ellisonleao.github.io/clumsy-bird/"
 },
-    {
-        name: "Dyna Blaster",
-        image: "https://ifilex.github.io/WineBOX-Store/box/Bomberman_%28TurboGrafx-16%29_boxart.jpg",
-        description: "Refers to the European title for certain games in the Bomberman franchise, such as the TurboGrafx-16/PC Engine version",
-        description: {
-            es: "Se refiere al título europeo para ciertos juegos de la franquicia Bomberman, como la versión de TurboGrafx-16/PC Engine.",
-            de: "Bezieht sich auf den europäischen Titel für bestimmte Spiele der Bomberman-Franchise, wie die Version für TurboGrafx-16/PC Engine.",
-            fr: "Fait référence au titre européen pour certains jeux de la franchise Bomberman, comme la version TurboGrafx-16/PC Engine.",
-            it: "Si riferisce al titolo europeo per alcuni giochi del franchise di Bomberman, come la versione per TurboGrafx-16/PC Engine.",
-            pt: "Refere-se ao título europeu para certos jogos da franquia Bomberman, como a versão TurboGrafx-16/PC Engine.",
-            ru: "Относится к европейскому названию для некоторых игр франшизы Bomberman, таких как версия для TurboGrafx-16/PC Engine.",
-            zh: "指的是炸弹人系列中某些游戏在欧洲地区的名称，例如 TurboGrafx-16/PC Engine 版本。",
-            ja: "Bombermanフランチャイズの特定のゲーム（TurboGrafx-16/PC Engineバージョンなど）のヨーロッパタイトルを指します。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/webapps/dyna/index.html"
-    },
-    {
-        name: "Golden Axe",
-        image: "https://ifilex.github.io/WineBOX-Store/box/axe.jpg",
-        description: "Golden Axe is a side-scrolling, beat 'em up, hack and slash arcade video game released in 1989 by Sega for the System 16-B arcade hardware.",
-        description: {
-            es: "Golden Axe es un videojuego arcade de desplazamiento lateral, beat 'em up, hack and slash lanzado en 1989 por Sega para el hardware arcade System 16-B.",
-            de: "Golden Axe ist ein Side-Scrolling-Beat-'em-up-Hack-and-Slay-Arcade-Spiel, das 1989 von Sega für die Arcade-Hardware System 16-B veröffentlicht wurde.",
-            fr: "Golden Axe est un jeu d'arcade à défilement latéral, beat them all, hack and slash sorti en 1989 par Sega pour le matériel d'arcade System 16-B.",
-            it: "Golden Axe è un videogioco arcade a scorrimento laterale, picchiaduro a scorrimento, hack and slash rilasciato nel 1989 da Sega per l'hardware arcade System 16-B.",
-            pt: "Golden Axe é um jogo de arcade de rolagem lateral, beat 'em up, hack and slash lançado em 1989 pela Sega para o hardware de arcade System 16-B.",
-            ru: "Golden Axe — это аркадная видеоигра с боковой прокруткой в жанре beat 'em up, hack and slash, выпущенная в 1989 году компанией Sega для аркадного оборудования System 16-B.",
-            zh: "Golden Axe（战斧）是一款横向卷轴、清版动作、砍杀类街机游戏，由 Sega 于 1989 年为 System 16-B 街机硬件发行。",
-            ja: "Golden Axeは、セガが1989年にSystem 16-Bアーケードハードウェア向けにリリースした、横スクロールのベルトスクロールアクション、ハックアンドスラッシュのアーケードゲームです。"
-        },
-        category: "arcade",
-        link: "https://ifilex.github.io/WineBOX-Store/webapps/golden/index.html"
-    },
     {
         name: "Hextris",
         image: "https://ifilex.github.io/WineBOX-Store/box/hextris-lite.png",
@@ -2248,7 +2248,7 @@ window.appData = [
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/granja/index.html"
 },
     {
-        name: "Incredible Machine",
+        name: "La Maquina increible",
         image: "https://ifilex.github.io/WineBOX-Store/box/4e049778-5a53-11ee-a0a7-02420a0001cf.webp",
         description: "The objective of the game is to create Rube Goldberg machines by arranging collections of objects in a complex fashion, so as to perform some simple task",
         description: {
@@ -2283,19 +2283,19 @@ window.appData = [
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/escoba/index.html"
     },
 {
-  "name": "Lemonade Tycoon",
+  "name": "Lemon Tycoon",
   "image": "https://ifilex.github.io/WineBOX-Store/box/lemonade.jpg",
-  "description": "Lemonade Tycoon es un juego de simulación y estrategia donde administras tu propio puesto de limonada, gestionando recursos como limones, azúcar, hielo y vasos para maximizar ganancias mientras enfrentas desafíos climáticos y de inventario.",
+  "description": "Lemon Tycoon es un juego de simulación y estrategia donde administras tu propio puesto de limonada, gestionando recursos como limones, azúcar, hielo y vasos para maximizar ganancias mientras enfrentas desafíos climáticos y de inventario.",
   "description": {
-    "es": "Lemonade Tycoon es un juego de simulación y estrategia donde administras tu propio puesto de limonada, gestionando recursos como limones, azúcar, hielo y vasos para maximizar ganancias mientras enfrentas desafíos climáticos y de inventario.",
-    "en": "Lemonade Tycoon is a simulation and strategy game where you manage your own lemonade stand, handling resources like lemons, sugar, ice, and cups to maximize profits while facing weather and inventory challenges.",
-    "de": "Lemonade Tycoon ist ein Simulations- und Strategiespiel, in dem Sie Ihren eigenen Limonadenstand verwalten, Ressourcen wie Zitronen, Zucker, Eis und Becher verwalten, um den Gewinn zu maximieren, während Sie sich Wetter- und Bestandsproblemen stellen.",
-    "fr": "Lemonade Tycoon est un jeu de simulation et de stratégie où vous gérez votre propre stand de limonade, en gérant des ressources comme les citrons, le sucre, la glace et les gobelets pour maximiser les bénéfices tout en faisant face aux défis climatiques et de stock.",
-    "it": "Lemonade Tycoon è un gioco di simulazione e strategia dove gestisci il tuo banco di limonata, gestendo risorse come limoni, zucchero, ghiaccio e bicchieri per massimizzare i profitti affrontando sfide meteorologiche e di inventario.",
-    "pt": "Lemonade Tycoon é um jogo de simulação e estratégia onde você administra sua própria barraca de limonada, gerenciando recursos como limões, açúcar, gelo e copos para maximizar lucros enquanto enfrenta desafios climáticos e de estoque.",
-    "ru": "Lemonade Tycoon — это игра-симуляция и стратегия, где вы управляете своим киоском с лимонадом, распределяя ресурсы: лимоны, сахар, лёд и стаканы, чтобы максимизировать прибыль, преодолевая погодные и складские трудности.",
-    "zh": "Lemonade Tycoon 是一款模拟经营策略游戏，你管理自己的柠檬水摊位，调配柠檬、糖、冰块和杯子等资源以最大化利润，同时应对天气和库存挑战。",
-    "ja": "Lemonade Tycoonは、レモネードスタンドを経営するシミュレーション＆ストラテジーゲームで、レモン、砂糖、氷、カップなどのリソースを管理し、天候や在庫の課題に直面しながら利益を最大化します。"
+    "es": "Lemon Tycoon es un juego de simulación y estrategia donde administras tu propio puesto de limonada, gestionando recursos como limones, azúcar, hielo y vasos para maximizar ganancias mientras enfrentas desafíos climáticos y de inventario.",
+    "en": "Lemon Tycoon is a simulation and strategy game where you manage your own lemonade stand, handling resources like lemons, sugar, ice, and cups to maximize profits while facing weather and inventory challenges.",
+    "de": "Lemon Tycoon ist ein Simulations- und Strategiespiel, in dem Sie Ihren eigenen Limonadenstand verwalten, Ressourcen wie Zitronen, Zucker, Eis und Becher verwalten, um den Gewinn zu maximieren, während Sie sich Wetter- und Bestandsproblemen stellen.",
+    "fr": "Lemon Tycoon est un jeu de simulation et de stratégie où vous gérez votre propre stand de limonade, en gérant des ressources comme les citrons, le sucre, la glace et les gobelets pour maximiser les bénéfices tout en faisant face aux défis climatiques et de stock.",
+    "it": "Lemon Tycoon è un gioco di simulazione e strategia dove gestisci il tuo banco di limonata, gestendo risorse come limoni, zucchero, ghiaccio e bicchieri per massimizzare i profitti affrontando sfide meteorologiche e di inventario.",
+    "pt": "Lemon Tycoon é um jogo de simulação e estratégia onde você administra sua própria barraca de limonada, gerenciando recursos como limões, açúcar, gelo e copos para maximizar lucros enquanto enfrenta desafios climáticos e de estoque.",
+    "ru": "Lemon Tycoon — это игра-симуляция и стратегия, где вы управляете своим киоском с лимонадом, распределяя ресурсы: лимоны, сахар, лёд и стаканы, чтобы максимизировать прибыль, преодолевая погодные и складские трудности.",
+    "zh": "Lemon Tycoon 是一款模拟经营策略游戏，你管理自己的柠檬水摊位，调配柠檬、糖、冰块和杯子等资源以最大化利润，同时应对天气和库存挑战。",
+    "ja": "Lemon Tycoonは、レモネードスタンドを経営するシミュレーション＆ストラテジーゲームで、レモン、砂糖、氷、カップなどのリソースを管理し、天候や在庫の課題に直面しながら利益を最大化します。"
   },
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/lemonade/index.html"
@@ -2441,7 +2441,7 @@ window.appData = [
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/sopa/index.html"
 },
    {
-    name: "Sudoku",
+    name: "Sudoku Cognitive",
     image: "https://ifilex.github.io/WineBOX-Store/box/sudoku.png",
     description: "Sudoku es el clásico rompecabezas numérico japonés que conquistó al mundo. Una cuadrícula de 9x9 con números del 1 al 9 que no deben repetirse ni en filas, ni en columnas, ni en las subcuadrículas de 3x3. Un ejercicio de lógica pura y paciencia que agudiza la mente sin necesidad de operaciones matemáticas.",
     description: {
