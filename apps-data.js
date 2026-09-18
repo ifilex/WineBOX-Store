@@ -272,7 +272,7 @@ window.appData = [
         "ja": "Pathfinderは、1991年にDMA Designが開発しPsygnosisが発売した古典的な戦略パズルゲーム『Lemmings』のフリーでオープンソースのバージョンです。オリジナルと同様に、絶え間なく歩き続け、自分では止まれない小さな生き物の群れを、各レベルの入口から安全な出口まで導くことが目的です。そのためには、掘る、階段を作る、道を塞ぐ、浮かぶ、爆発するなどの能力を彼らに割り当て、正確に正しい順序で使用して、障害物、罠、崖を克服する必要があります。Pathfinderは、Lemmingsを90年代のパズルゲームの象徴にした中毒性のあるゲームプレイと独創的なレベルデザインを忠実に再現しつつ、完全無料でオープンソースであるという利点を備えています。"
     },
     "category": "games",
-    "link": "https://ifilex.github.io/WineBOX-Store/webapps/pathfinder/index.html"
+    "link": "https://ifilex.github.io/WineBOX-Store/webapps/pathfinders/index.html"
 },
 {
   "name": "Retrocraft",
