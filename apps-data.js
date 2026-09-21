@@ -289,7 +289,7 @@ window.appData = [
         "ja": "Pixel Leapは、プロシージャル生成されるレベルを備えた2Dプラットフォーマーです。つまり、プレイするたびにユニークで無限の挑戦が楽しめます。タッチ操作とカスタマイズ可能なコントロール、アクションに合わせて変化するダイナミックなサウンドトラック、どのデバイスでも続けられるクラウドセーブ、そして世界中のプレイヤーと競い合えるグローバルランキングをお楽しみください。"
     },
     "category": "games",
-    "link": "https://ifilex.github.io/WineBOX-Store/pixelleap/index.html
+    "link": "https://ifilex.github.io/WineBOX-Store/pixelleap/index.html"
 },
 {
     "name": "PixelPou",
