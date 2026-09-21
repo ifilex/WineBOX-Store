@@ -275,6 +275,40 @@ window.appData = [
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/pathfinders/index.html"
 },
 {
+    "name": "Pixel Leap",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/pixelleap.jpg",
+    "description": "Pixel Leap es un juego de plataformas 2D con generación procedural de niveles, lo que significa que cada partida ofrece desafíos únicos e infinitos. Disfruta de controles táctiles y personalizables, una banda sonora dinámica que se adapta a la acción, guardado en la nube para continuar en cualquier dispositivo, y tablas de clasificación mundial para competir con jugadores de todo el mundo.",
+    "description": {
+        "es": "Pixel Leap es un juego de plataformas 2D con generación procedural de niveles, lo que significa que cada partida ofrece desafíos únicos e infinitos. Disfruta de controles táctiles y personalizables, una banda sonora dinámica que se adapta a la acción, guardado en la nube para continuar en cualquier dispositivo, y tablas de clasificación mundial para competir con jugadores de todo el mundo.",
+        "de": "Pixel Leap ist ein 2D-Plattformspiel mit prozeduraler Levelgenerierung, bei dem jede Partie einzigartige und endlose Herausforderungen bietet. Genieße Touch- und anpassbare Steuerung, einen dynamischen Soundtrack, der sich der Action anpasst, Cloud-Speicherung zum Weiterspielen auf jedem Gerät und weltweite Bestenlisten, um mit Spielern aus aller Welt zu konkurrieren.",
+        "fr": "Pixel Leap est un jeu de plateforme 2D avec génération procédurale de niveaux, ce qui signifie que chaque partie offre des défis uniques et infinis. Profitez de commandes tactiles et personnalisables, d'une bande-son dynamique qui s'adapte à l'action, d'une sauvegarde dans le cloud pour continuer sur n'importe quel appareil, et de classements mondiaux pour rivaliser avec des joueurs du monde entier.",
+        "it": "Pixel Leap è un gioco di piattaforme 2D con generazione procedurale dei livelli, il che significa che ogni partita offre sfide uniche e infinite. Goditi controlli touch e personalizzabili, una colonna sonora dinamica che si adatta all'azione, salvataggio nel cloud per continuare su qualsiasi dispositivo e classifiche mondiali per competere con giocatori di tutto il mondo.",
+        "pt": "Pixel Leap é um jogo de plataforma 2D com geração procedural de níveis, o que significa que cada partida oferece desafios únicos e infinitos. Aproveite controles de toque e personalizáveis, uma trilha sonora dinâmica que se adapta à ação, salvamento na nuvem para continuar em qualquer dispositivo e tabelas de classificação mundial para competir com jogadores de todo o mundo.",
+        "ru": "Pixel Leap — это 2D-платформер с процедурной генерацией уровней, благодаря чему каждая игра предлагает уникальные и бесконечные испытания. Наслаждайтесь сенсорным и настраиваемым управлением, динамичным саундтреком, адаптирующимся к действию, облачным сохранением для продолжения на любом устройстве и мировыми таблицами лидеров для соревнования с игроками со всего мира.",
+        "zh": "Pixel Leap 是一款具有程序化关卡生成的 2D 平台游戏，这意味着每局游戏都能带来独特且无尽的挑战。享受触控和可自定义的控制方式、随动作变化的动态配乐、可在任何设备上继续游戏的云存档，以及与全球玩家竞争的全球排行榜。",
+        "ja": "Pixel Leapは、プロシージャル生成されるレベルを備えた2Dプラットフォーマーです。つまり、プレイするたびにユニークで無限の挑戦が楽しめます。タッチ操作とカスタマイズ可能なコントロール、アクションに合わせて変化するダイナミックなサウンドトラック、どのデバイスでも続けられるクラウドセーブ、そして世界中のプレイヤーと競い合えるグローバルランキングをお楽しみください。"
+    },
+    "category": "games",
+    "link": "https://ifilex.github.io/WineBOX-Store/pixelleap/index.html
+},
+{
+    "name": "PixelPou",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/pixelpou.jpg",
+    "description": "PixelPou es un juego retro de mascota virtual inspirado en Pou, con gráficos pixel-art. Cuida a tu mascota atendiendo sus hábitos diarios (alimentación, higiene, sueño y diversión), diseñado especialmente para niños. Incluye minijuegos educativos, opciones de personalización y la posibilidad de tomar fotos compartibles de tu mascota.",
+    "description": {
+        "es": "PixelPou es un juego retro de mascota virtual inspirado en Pou, con gráficos pixel-art. Cuida a tu mascota atendiendo sus hábitos diarios (alimentación, higiene, sueño y diversión), diseñado especialmente para niños. Incluye minijuegos educativos, opciones de personalización y la posibilidad de tomar fotos compartibles de tu mascota.",
+        "de": "PixelPou ist ein Retro-Spiel für ein virtuelles Haustier im Pou-Stil mit Pixel-Art-Grafik. Kümmere dich um dein Haustier, indem du tägliche Pflegeroutinen (Füttern, Hygiene, Schlaf, Spielen) erfüllst – speziell für Kinder entwickelt. Es enthält lehrreiche Minispiele, Anpassungsoptionen und die Möglichkeit, teilbare Fotos von deinem Haustier aufzunehmen.",
+        "fr": "PixelPou est un jeu rétro de compagnon virtuel dans le style Pou, avec des graphismes en pixel-art. Prenez soin de votre compagnon en assurant ses habitudes quotidiennes (nourriture, hygiène, sommeil, jeu), conçu pour les enfants. Il comprend des mini-jeux éducatifs, des options de personnalisation et la possibilité de prendre des photos partageables de votre compagnon.",
+        "it": "PixelPou è un gioco retro di animale domestico virtuale in stile Pou, con grafica pixel-art. Prenditi cura del tuo cucciolo soddisfacendo le sue abitudini quotidiane (cibo, igiene, sonno, gioco), pensato per i bambini. Include minigiochi educativi, opzioni di personalizzazione e la possibilità di scattare foto condivisibili del tuo animale.",
+        "pt": "PixelPou é um jogo retrô de bichinho virtual no estilo Pou, com gráficos pixel-art. Cuide do seu bichinho atendendo aos hábitos diários (alimentação, higiene, sono, diversão), projetado para crianças. Inclui minijogos educativos, opções de personalização e a possibilidade de tirar fotos compartilháveis do seu bichinho.",
+        "ru": "PixelPou — это ретро-игра с виртуальным питомцем в стиле Pou, с пиксельной графикой. Заботьтесь о питомце, выполняя ежедневные процедуры (кормление, гигиена, сон, игры), созданная для детей. Включает обучающие мини-игры, возможности кастомизации и создание фото питомца для обмена.",
+        "zh": "PixelPou 是一款复古风格的 Pou 式虚拟宠物游戏，采用像素艺术画面。通过满足日常照料习惯（喂食、卫生、睡眠、玩耍）来照顾你的宠物，专为儿童设计。包含教育性小游戏、个性化选项以及拍摄可分享的宠物照片。",
+        "ja": "PixelPouは、Pou風のレトロなバーチャルペットゲームで、ピクセルアートのグラフィックを備えています。毎日の世話（食事、衛生、睡眠、遊び）を行ってペットを育てる、子ども向けに設計されたゲームです。教育的なミニゲーム、カスタマイズオプション、共有可能なペットの写真撮影機能が含まれています。"
+    },
+    "category": "games",
+    "link": "https://ifilex.github.io/WineBOX-Store/pixelpou/index.html"
+},
+{
   "name": "Retrocraft",
   "image": "https://ifilex.github.io/WineBOX-Store/box/retrocraft.jpg",
   "description": "Retrocraft es un sandbox de creación de mundos 3D con estilo 2D retro, donde los jugadores pueden construir y explorar entornos pixelados en tercera persona, combinando la estética clásica con la libertad de un mundo tridimensional.",
