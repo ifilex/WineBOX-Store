@@ -858,6 +858,22 @@ window.appData = [
         category: "utilities",
         link: "https://ifilex.github.io/WineBOX-Store/clock.html"
     },
+{
+    "name": "Comic",
+    "image": "https://ifilex.github.io/WineBOX-Store/box/comic.jpg",
+    "description": {
+        "es": "Comic es un lector adaptable y fluido de cómics en formatos CBR y CBZ, diseñado para móviles, tablets y PC. Ofrece una experiencia de lectura cómoda y personalizable, con soporte para archivos locales y en la nube, para que puedas acceder a tu colección desde cualquier dispositivo. Su interfaz intuitiva y su rendimiento optimizado lo convierten en la herramienta ideal para los amantes del cómic digital.",
+        "de": "Comic ist ein anpassungsfähiger und flüssiger Comic-Reader für die Formate CBR und CBZ, entwickelt für Mobilgeräte, Tablets und PCs. Er bietet ein komfortables und anpassbares Leseerlebnis mit Unterstützung für lokale und Cloud-Dateien, sodass du von jedem Gerät aus auf deine Sammlung zugreifen kannst. Seine intuitive Benutzeroberfläche und optimierte Leistung machen ihn zum idealen Werkzeug für Liebhaber digitaler Comics.",
+        "fr": "Comic est un lecteur de bandes dessinées adaptable et fluide pour les formats CBR et CBZ, conçu pour mobiles, tablettes et PC. Il offre une expérience de lecture confortable et personnalisable, avec prise en charge des fichiers locaux et cloud, pour accéder à votre collection depuis n'importe quel appareil. Son interface intuitive et ses performances optimisées en font l'outil idéal pour les amateurs de BD numérique.",
+        "it": "Comic è un lettore di fumetti adattabile e fluido per i formati CBR e CBZ, progettato per cellulari, tablet e PC. Offre un'esperienza di lettura comoda e personalizzabile, con supporto per file locali e cloud, per accedere alla tua collezione da qualsiasi dispositivo. La sua interfaccia intuitiva e le prestazioni ottimizzate lo rendono lo strumento ideale per gli amanti dei fumetti digitali.",
+        "pt": "Comic é um leitor adaptável e fluido de quadrinhos nos formatos CBR e CBZ, projetado para celulares, tablets e PC. Oferece uma experiência de leitura confortável e personalizável, com suporte para arquivos locais e na nuvem, para acessar sua coleção de qualquer dispositivo. Sua interface intuitiva e desempenho otimizado o tornam a ferramenta ideal para os amantes de quadrinhos digitais.",
+        "ru": "Comic — это адаптивный и плавный читатель комиксов в форматах CBR и CBZ, разработанный для мобильных устройств, планшетов и ПК. Он обеспечивает удобное и настраиваемое чтение с поддержкой локальных и облачных файлов, позволяя получить доступ к коллекции с любого устройства. Интуитивный интерфейс и оптимизированная производительность делают его идеальным инструментом для любителей цифровых комиксов.",
+        "zh": "Comic 是一款适应性强且流畅的 CBR 和 CBZ 格式漫画阅读器，专为手机、平板和 PC 设计。它提供舒适且可定制的阅读体验，支持本地和云端文件，让您可以从任何设备访问您的收藏。其直观的界面和优化的性能使其成为数字漫画爱好者的理想工具。",
+        "ja": "Comicは、CBRおよびCBZ形式に対応した適応性が高く滑らかなコミックリーダーで、モバイル、タブレット、PC向けに設計されています。快適でカスタマイズ可能な読書体験を提供し、ローカルファイルとクラウドファイルの両方をサポートしているため、どのデバイスからでもコレクションにアクセスできます。直感的なインターフェースと最適化されたパフォーマンスにより、デジタルコミック愛好家に最適なツールとなっています。"
+    },
+    "category": "apps",
+    "link": "https://ifilex.github.io/WineBOX-Store/webapps/comic/index.html"
+},
     {
         name: "Control",
         image: "https://ifilex.github.io/WineBOX-Store/box/control.png",
