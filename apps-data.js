@@ -631,23 +631,6 @@ window.appData = [
     "link": "https://ifilex.github.io/WineBOX-Store/mauraash.html"
 },
 {
-  "name": "MDK",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/mdk.jpg",
-  "description": {
-    "es": "MDK es un clásico shooter de acción en tercera persona para MS-DOS lanzado en 1997 por Shiny Entertainment. Encarnas a Kurt Hectic, equipado con un traje de planeo y un rifle de francotirador, para detener una invasión alienígena en escenarios extravagantes, con humor absurdo y jefes gigantescos.",
-    "en": "MDK is a classic third-person action shooter for MS-DOS released in 1997 by Shiny Entertainment. You play as Kurt Hectic, equipped with a gliding suit and a sniper rifle, to stop an alien invasion across outlandish levels with absurd humor and gigantic bosses.",
-    "de": "MDK ist ein klassischer Third-Person-Action-Shooter für MS-DOS, der 1997 von Shiny Entertainment veröffentlicht wurde. Du spielst Kurt Hectic, ausgestattet mit einem Gleitanzug und einem Scharfschützengewehr, um eine Alien-Invasion in skurrilen Levels mit absurdem Humor und gigantischen Bossen zu stoppen.",
-    "fr": "MDK est un classique du shooter d'action à la troisième personne pour MS-DOS, sorti en 1997 par Shiny Entertainment. Vous incarnez Kurt Hectic, équipé d'une combinaison de vol plané et d'un fusil de sniper, pour arrêter une invasion extraterrestre dans des niveaux extravagants, avec un humour absurde et des boss gigantesques.",
-    "it": "MDK è un classico sparatutto d'azione in terza persona per MS-DOS pubblicato nel 1997 da Shiny Entertainment. Interpreti Kurt Hectic, equipaggiato con una tuta planante e un fucile da cecchino, per fermare un'invasione aliena in livelli stravaganti, con umorismo assurdo e boss giganteschi.",
-    "pt": "MDK é um clássico shooter de ação em terceira pessoa para MS-DOS lançado em 1997 pela Shiny Entertainment. Você interpreta Kurt Hectic, equipado com um traje planador e um rifle de precisão, para deter uma invasão alienígena em cenários extravagantes, com humor absurdo e chefes gigantescos.",
-    "ru": "MDK — это классический экшн-шутер от третьего лица для MS-DOS, выпущенный Shiny Entertainment в 1997 году. Вы играете за Курта Хектика, оснащённого планирующим костюмом и снайперской винтовкой, чтобы остановить вторжение пришельцев на причудливых уровнях с абсурдным юмором и гигантскими боссами.",
-    "zh": "《MDK》是一款由 Shiny Entertainment 于 1997 年发行的经典 MS-DOS 第三人称动作射击游戏。你将扮演库尔特·赫克蒂克，装备滑翔服和狙击步枪，在离奇的关卡中阻止外星人入侵，体验荒诞幽默和巨大 Boss 战。",
-    "ja": "MDKは、1997年にShiny EntertainmentがリリースしたMS-DOS向けの古典的な三人称アクションシューターです。グライディングスーツとスナイパーライフルを装備したカート・ヘクティックとなり、奇抜なレベルでエイリアンの侵略を阻止します。不条理なユーモアと巨大なボスが特徴です。"
-  },
-  "category": "games",
-  "link": "https://ifilex.github.io/WineBOX-Store/mdk.html"
-},
-{
   "name": "Mindcraft 3D",
   "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
   "description": "Mindcraft es un juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente en un mundo subconsciente.",
@@ -837,7 +820,7 @@ window.appData = [
     },
 {
   "name": "Quarantine II: Road Warrior",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/quarantine2.jpg",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/quarentine2.jpg",
   "description": {
     "es": "Quarantine II: Road Warrior es la secuela del clásico de 1994 para MS-DOS, un híbrido de conducción y shooter en primera persona. Recorre la ciudad de Kemo con tu taxi armado, acepta encargos de pasajeros, elimina enemigos y mejora tu vehículo en un mundo cyberpunk violento y lleno de acción.",
     "en": "Quarantine II: Road Warrior is the sequel to the 1994 MS-DOS classic, a hybrid of driving and first-person shooting. Drive through Kemo City in your armed taxi, take on passenger jobs, eliminate enemies, and upgrade your vehicle in a violent, action-packed cyberpunk world.",
@@ -850,7 +833,7 @@ window.appData = [
     "ja": "Quarantine II: Road Warriorは、1994年のMS-DOSクラシックの続編で、ドライビングと一人称シューティングを融合させた作品です。武装タクシーでKemo Cityを走り回り、乗客の依頼を受け、敵を排除し、暴力的でアクション満載のサイバーパンク世界で車両を強化します。"
   },
   "category": "games",
-  "link": "https://ifilex.github.io/WineBOX-Store/quarentine2.html"
+  "link": "https://ifilex.github.io/WineBOX-Store/quarantine2.html"
 },
 {
     "name": "Pathfinder",
