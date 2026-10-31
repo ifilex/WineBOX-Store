@@ -392,6 +392,23 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/duke3d.html"
     },
+{
+  "name": "Ecstatica",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/ecstatica.jpg",
+  "description": {
+    "es": "Ecstatica es una aventura de terror para MS-DOS lanzada en 1994. Ambientada en un pueblo medieval plagado de criaturas monstruosas, destaca por sus gráficos de elipsoides, su atmósfera inquietante y su control de personaje en tercera persona mientras exploras, resuelves puzles y combates para sobrevivir.",
+    "en": "Ecstatica is a horror adventure for MS-DOS released in 1994. Set in a medieval village overrun by monstrous creatures, it is notable for its ellipsoid-based graphics, eerie atmosphere, and third-person character control as you explore, solve puzzles, and fight to survive.",
+    "de": "Ecstatica ist ein Horror-Adventure für MS-DOS aus dem Jahr 1994. Es spielt in einem mittelalterlichen Dorf, das von monströsen Kreaturen heimgesucht wird, und zeichnet sich durch seine auf Ellipsoiden basierende Grafik, die unheimliche Atmosphäre und die Third-Person-Steuerung aus, während du erkundest, Rätsel löst und ums Überleben kämpfst.",
+    "fr": "Ecstatica est une aventure d'horreur pour MS-DOS sortie en 1994. Situé dans un village médiéval envahi par des créatures monstrueuses, il se distingue par ses graphismes à base d'ellipsoïdes, son atmosphère inquiétante et son contrôle à la troisième personne tandis que vous explorez, résolvez des énigmes et combattez pour survivre.",
+    "it": "Ecstatica è un'avventura horror per MS-DOS pubblicata nel 1994. Ambientata in un villaggio medievale invaso da creature mostruose, si distingue per la grafica a base di ellissoidi, l'atmosfera inquietante e il controllo in terza persona mentre esplori, risolvi enigmi e combatti per sopravvivere.",
+    "pt": "Ecstatica é uma aventura de terror para MS-DOS lançada em 1994. Ambientada em uma vila medieval tomada por criaturas monstruosas, destaca-se pelos gráficos baseados em elipsoides, pela atmosfera assustadora e pelo controle em terceira pessoa enquanto você explora, resolve quebra-cabeças e luta para sobreviver.",
+    "ru": "Ecstatica — это хоррор-приключение для MS-DOS, выпущенное в 1994 году. Действие происходит в средневековой деревне, захваченной чудовищными существами; игра известна графикой на основе эллипсоидов, жуткой атмосферой и управлением от третьего лица, пока вы исследуете, решаете головоломки и сражаетесь за выживание.",
+    "zh": "《Ecstatica》是一款 1994 年发行的 MS-DOS 恐怖冒险游戏。故事发生在一个被怪物侵占的中世纪村庄，以其基于椭球体的画面、阴森的氛围和第三人称角色控制而著称，玩家需要探索、解谜并战斗求生。",
+    "ja": "Ecstaticaは、1994年にリリースされたMS-DOS向けのホラーアドベンチャーです。怪物が徘徊する中世の村を舞台に、楕円体ベースのグラフィック、不気味な雰囲気、三人称視点のキャラクター操作が特徴で、探索やパズル解き、戦闘をしながら生き延びます。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/ecstatica.html"
+},
     {
         name: "Eradicator",
         image: "https://ifilex.github.io/WineBOX-Store/box/eradicator.png",
@@ -545,6 +562,23 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/hexen.html"
     },
+{
+  "name": "Hexen II",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/hexen2.jpg",
+  "description": {
+    "es": "Hexen II es la secuela de Hexen, un FPS de fantasía oscura desarrollado por Raven Software y publicado en 1997. Utiliza el motor de Quake y añade elementos de rol: elige entre cuatro clases de personaje, explora mundos conectados por hubs, resuelve puzzles y combate a legiones de criaturas con armas y magias únicas.",
+    "en": "Hexen II is the sequel to Hexen, a dark fantasy first-person shooter developed by Raven Software and released in 1997. Built on the Quake engine, it adds role-playing elements: choose from four character classes, explore hub-connected worlds, solve puzzles, and battle legions of creatures with unique weapons and spells.",
+    "de": "Hexen II ist die Fortsetzung von Hexen, ein Dark-Fantasy-Ego-Shooter von Raven Software aus dem Jahr 1997. Es basiert auf der Quake-Engine und fügt Rollenspielelemente hinzu: Wähle aus vier Charakterklassen, erkunde über Hubs verbundene Welten, löse Rätsel und bekämpfe Legionen von Kreaturen mit einzigartigen Waffen und Zaubern.",
+    "fr": "Hexen II est la suite de Hexen, un FPS de dark fantasy développé par Raven Software et sorti en 1997. Basé sur le moteur de Quake, il ajoute des éléments de jeu de rôle : choisissez parmi quatre classes de personnages, explorez des mondes reliés par des hubs, résolvez des énigmes et affrontez des légions de créatures avec des armes et des sorts uniques.",
+    "it": "Hexen II è il seguito di Hexen, uno sparatutto in prima persona dark fantasy sviluppato da Raven Software e pubblicato nel 1997. Basato sul motore di Quake, aggiunge elementi ruolistici: scegli tra quattro classi di personaggio, esplora mondi collegati tramite hub, risolvi enigmi e combatti legioni di creature con armi e incantesimi unici.",
+    "pt": "Hexen II é a sequência de Hexen, um FPS de fantasia sombria desenvolvido pela Raven Software e lançado em 1997. Baseado no motor do Quake, adiciona elementos de RPG: escolha entre quatro classes de personagem, explore mundos conectados por hubs, resolva quebra-cabeças e enfrente legiões de criaturas com armas e magias únicas.",
+    "ru": "Hexen II — продолжение Hexen, шутер от первого лица в жанре тёмного фэнтези, разработанный Raven Software и выпущенный в 1997 году. Он построен на движке Quake и добавляет ролевые элементы: выбирайте один из четырёх классов персонажей, исследуйте связанные хабами миры, решайте головоломки и сражайтесь с легионами существ, используя уникальное оружие и заклинания.",
+    "zh": "《Hexen II》是《Hexen》的续作，一款由 Raven Software 开发、于 1997 年发行的黑暗奇幻第一人称射击游戏。它基于 Quake 引擎，并加入角色扮演元素：可选择四种职业，探索通过枢纽连接的世界，解开谜题，并使用独特的武器和法术与成群的怪物战斗。",
+    "ja": "Hexen IIは、Raven Softwareが開発し1997年にリリースされたダークファンタジーFPS、Hexenの続編です。Quakeエンジンをベースにしており、RPG要素を追加しています。4つのキャラクタークラスから選び、ハブで結ばれた世界を探索し、パズルを解き、独特な武器と魔法で数々のクリーチャーと戦います。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/hexen2.html"
+},
     {
         name: "Hurl",
         image: "https://ifilex.github.io/WineBOX-Store/box/hurl.jpg",
@@ -597,6 +631,23 @@ window.appData = [
     "link": "https://ifilex.github.io/WineBOX-Store/mauraash.html"
 },
 {
+  "name": "MDK",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/mdk.jpg",
+  "description": {
+    "es": "MDK es un clásico shooter de acción en tercera persona para MS-DOS lanzado en 1997 por Shiny Entertainment. Encarnas a Kurt Hectic, equipado con un traje de planeo y un rifle de francotirador, para detener una invasión alienígena en escenarios extravagantes, con humor absurdo y jefes gigantescos.",
+    "en": "MDK is a classic third-person action shooter for MS-DOS released in 1997 by Shiny Entertainment. You play as Kurt Hectic, equipped with a gliding suit and a sniper rifle, to stop an alien invasion across outlandish levels with absurd humor and gigantic bosses.",
+    "de": "MDK ist ein klassischer Third-Person-Action-Shooter für MS-DOS, der 1997 von Shiny Entertainment veröffentlicht wurde. Du spielst Kurt Hectic, ausgestattet mit einem Gleitanzug und einem Scharfschützengewehr, um eine Alien-Invasion in skurrilen Levels mit absurdem Humor und gigantischen Bossen zu stoppen.",
+    "fr": "MDK est un classique du shooter d'action à la troisième personne pour MS-DOS, sorti en 1997 par Shiny Entertainment. Vous incarnez Kurt Hectic, équipé d'une combinaison de vol plané et d'un fusil de sniper, pour arrêter une invasion extraterrestre dans des niveaux extravagants, avec un humour absurde et des boss gigantesques.",
+    "it": "MDK è un classico sparatutto d'azione in terza persona per MS-DOS pubblicato nel 1997 da Shiny Entertainment. Interpreti Kurt Hectic, equipaggiato con una tuta planante e un fucile da cecchino, per fermare un'invasione aliena in livelli stravaganti, con umorismo assurdo e boss giganteschi.",
+    "pt": "MDK é um clássico shooter de ação em terceira pessoa para MS-DOS lançado em 1997 pela Shiny Entertainment. Você interpreta Kurt Hectic, equipado com um traje planador e um rifle de precisão, para deter uma invasão alienígena em cenários extravagantes, com humor absurdo e chefes gigantescos.",
+    "ru": "MDK — это классический экшн-шутер от третьего лица для MS-DOS, выпущенный Shiny Entertainment в 1997 году. Вы играете за Курта Хектика, оснащённого планирующим костюмом и снайперской винтовкой, чтобы остановить вторжение пришельцев на причудливых уровнях с абсурдным юмором и гигантскими боссами.",
+    "zh": "《MDK》是一款由 Shiny Entertainment 于 1997 年发行的经典 MS-DOS 第三人称动作射击游戏。你将扮演库尔特·赫克蒂克，装备滑翔服和狙击步枪，在离奇的关卡中阻止外星人入侵，体验荒诞幽默和巨大 Boss 战。",
+    "ja": "MDKは、1997年にShiny EntertainmentがリリースしたMS-DOS向けの古典的な三人称アクションシューターです。グライディングスーツとスナイパーライフルを装備したカート・ヘクティックとなり、奇抜なレベルでエイリアンの侵略を阻止します。不条理なユーモアと巨大なボスが特徴です。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/mdk.html"
+},
+{
   "name": "Mindcraft 3D",
   "image": "https://ifilex.github.io/WineBOX-Store/box/minecraft.jpg",
   "description": "Mindcraft es un juego de construcción y aventura en un mundo abierto de bloques, donde los jugadores pueden explorar, crear y sobrevivir en infinitos paisajes generados proceduralmente en un mundo subconsciente.",
@@ -613,6 +664,23 @@ window.appData = [
   },
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/minecraft/index.html"
+},
+{
+  "name": "Mortal Kombat",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/mk.jpg",
+  "description": {
+    "es": "Mortal Kombat 1 es el clásico juego de lucha arcade de 1992 desarrollado por Midway. Enfrenta a luchadores uno contra uno en torneos, utilizando golpes especiales, proyectiles y fatalities en escenarios icónicos.",
+    "en": "Mortal Kombat 1 is the classic 1992 arcade fighting game developed by Midway. It pits fighters against each other one-on-one in tournaments, using special moves, projectiles, and fatalities across iconic stages.",
+    "de": "Mortal Kombat 1 ist das klassische Arcade-Kampfspiel von 1992, entwickelt von Midway. Kämpfer treten in Turnieren eins gegen eins an und setzen Spezialangriffe, Projektile und Fatalities in ikonischen Schauplätzen ein.",
+    "fr": "Mortal Kombat 1 est le classique jeu de combat d'arcade de 1992 développé par Midway. Les combattants s'affrontent en un contre un dans des tournois, avec des coups spéciaux, des projectiles et des fatalities sur des scènes emblématiques.",
+    "it": "Mortal Kombat 1 è il classico picchiaduro arcade del 1992 sviluppato da Midway. I combattenti si affrontano uno contro uno in tornei, usando mosse speciali, proiettili e fatalities in scenari iconici.",
+    "pt": "Mortal Kombat 1 é o clássico jogo de luta arcade de 1992 desenvolvido pela Midway. Os lutadores se enfrentam um contra um em torneios, usando golpes especiais, projéteis e fatalities em cenários icônicos.",
+    "ru": "Mortal Kombat 1 — это классический аркадный файтинг 1992 года, разработанный Midway. Бойцы сражаются один на один в турнирах, используя специальные приёмы, снаряды и фаталити на культовых аренах.",
+    "zh": "《Mortal Kombat 1》是 Midway 于 1992 年开发的经典街机格斗游戏。斗士们在一对一锦标赛中对战，在标志性场景中使用特殊招式、投射物和终结技。",
+    "ja": "Mortal Kombat 1は、Midwayが1992年に開発した古典的なアーケード格闘ゲームです。ファイター同士が1対1のトーナメントで戦い、象徴的なステージで特殊技、飛び道具、ファタリティを駆使します。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/mk.html"
 },
    {
         name: "Mr. Pibb",
@@ -682,6 +750,23 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/omf.html"
     },
+{
+  "name": "PC Fútbol",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/pcfutbol.jpg",
+  "description": {
+    "es": "PC Fútbol es el clásico simulador de gestión de fútbol español de los años 90. Dirige tu equipo, ficha jugadores, define tácticas, gestiona finanzas y compite en ligas y copas con una base de datos detallada de clubes y futbolistas.",
+    "en": "PC Fútbol is the classic Spanish football management simulation from the 1990s. Manage your team, sign players, set tactics, handle finances, and compete in leagues and cups with a detailed database of clubs and players.",
+    "de": "PC Fútbol ist die klassische spanische Fußball-Management-Simulation der 1990er Jahre. Verwalte dein Team, verpflichte Spieler, lege Taktiken fest, kümmere dich um Finanzen und tritt mit einer detaillierten Datenbank von Vereinen und Spielern in Ligen und Pokalen an.",
+    "fr": "PC Fútbol est la classique simulation de gestion de football espagnole des années 90. Gérez votre équipe, recrutez des joueurs, définissez des tactiques, gérez les finances et participez à des championnats et coupes avec une base de données détaillée de clubs et de joueurs.",
+    "it": "PC Fútbol è la classica simulazione di gestione calcistica spagnola degli anni '90. Gestisci la tua squadra, ingaggia giocatori, imposta tattiche, amministra le finanze e competi in campionati e coppe con un database dettagliato di club e calciatori.",
+    "pt": "PC Fútbol é a clássica simulação de gestão de futebol espanhola dos anos 90. Gerencie seu time, contrate jogadores, defina táticas, administre finanças e compita em ligas e copas com um banco de dados detalhado de clubes e jogadores.",
+    "ru": "PC Fútbol — это классический испанский футбольный менеджер 1990-х годов. Управляйте командой, подписывайте игроков, выбирайте тактику, ведите финансы и участвуйте в лигах и кубках с подробной базой клубов и футболистов.",
+    "zh": "《PC Fútbol》是 20 世纪 90 年代经典的西班牙足球管理模拟游戏。你可以管理球队、签约球员、制定战术、处理财务，并凭借详细的俱乐部和球员数据库参加联赛和杯赛。",
+    "ja": "PC Fútbolは、1990年代の古典的なスペインのフットボールマネジメントシミュレーションです。チームを指揮し、選手を獲得し、戦術を設定し、財務を管理し、クラブと選手の詳細なデータベースを備えたリーグやカップ戦で競い合います。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/pcfutbol.html"
+},
     {
         name: "Powerslave",
         image: "https://ifilex.github.io/WineBOX-Store/box/pslave.gif",
@@ -750,6 +835,23 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/quarantine.html"
     },
+{
+  "name": "Quarantine II: Road Warrior",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/quarantine2.jpg",
+  "description": {
+    "es": "Quarantine II: Road Warrior es la secuela del clásico de 1994 para MS-DOS, un híbrido de conducción y shooter en primera persona. Recorre la ciudad de Kemo con tu taxi armado, acepta encargos de pasajeros, elimina enemigos y mejora tu vehículo en un mundo cyberpunk violento y lleno de acción.",
+    "en": "Quarantine II: Road Warrior is the sequel to the 1994 MS-DOS classic, a hybrid of driving and first-person shooting. Drive through Kemo City in your armed taxi, take on passenger jobs, eliminate enemies, and upgrade your vehicle in a violent, action-packed cyberpunk world.",
+    "de": "Quarantine II: Road Warrior ist die Fortsetzung des MS-DOS-Klassikers von 1994, ein Hybrid aus Fahr- und Ego-Shooter. Fahre mit deinem bewaffneten Taxi durch Kemo City, nimm Passagieraufträge an, vernichte Feinde und rüste dein Fahrzeug in einer brutalen, actiongeladenen Cyberpunk-Welt auf.",
+    "fr": "Quarantine II: Road Warrior est la suite du classique MS-DOS de 1994, un hybride de conduite et de tir à la première personne. Parcourez Kemo City dans votre taxi armé, acceptez des missions de passagers, éliminez les ennemis et améliorez votre véhicule dans un monde cyberpunk violent et bourré d'action.",
+    "it": "Quarantine II: Road Warrior è il seguito del classico MS-DOS del 1994, un ibrido tra guida e sparatutto in prima persona. Guida il tuo taxi armato per Kemo City, accetta incarichi per i passeggeri, elimina i nemici e potenzia il tuo veicolo in un mondo cyberpunk violento e ricco d'azione.",
+    "pt": "Quarantine II: Road Warrior é a sequência do clássico de MS-DOS de 1994, um híbrido de condução e tiro em primeira pessoa. Percorra Kemo City no seu táxi armado, aceite trabalhos de passageiros, elimine inimigos e melhore seu veículo em um mundo cyberpunk violento e cheio de ação.",
+    "ru": "Quarantine II: Road Warrior — продолжение классики MS-DOS 1994 года, гибрид вождения и шутера от первого лица. Разъезжайте по городу Кемо на вооружённом такси, берите заказы пассажиров, уничтожайте врагов и улучшайте свой автомобиль в жестоком, насыщенном действием киберпанк-мире.",
+    "zh": "《Quarantine II: Road Warrior》是 1994 年 MS-DOS 经典游戏的续作，融合了驾驶与第一人称射击玩法。驾驶你的武装出租车穿行于 Kemo City，接受载客任务，消灭敌人，并在一个暴力而充满动作的赛博朋克世界中升级你的载具。",
+    "ja": "Quarantine II: Road Warriorは、1994年のMS-DOSクラシックの続編で、ドライビングと一人称シューティングを融合させた作品です。武装タクシーでKemo Cityを走り回り、乗客の依頼を受け、敵を排除し、暴力的でアクション満載のサイバーパンク世界で車両を強化します。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/quarentine2.html"
+},
 {
     "name": "Pathfinder",
     "image": "https://ifilex.github.io/WineBOX-Store/box/pathfinder.jpg",
@@ -3833,6 +3935,23 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/max.html"
     },
+{
+  "name": "MechWarrior 2",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/mechwarrior2.jpg",
+  "description": {
+    "es": "MechWarrior 2: 31st Century Combat es el clásico simulador de combate con mechs para MS-DOS, ambientado en el universo BattleTech. Pilota enormes robots de guerra, personaliza su armamento y blindaje, y participa en una campaña por facciones con gestión de calor, munición y tácticas de combate.",
+    "en": "MechWarrior 2: 31st Century Combat is the classic mech combat simulator for MS-DOS, set in the BattleTech universe. Pilot massive war machines, customize their weapons and armor, and fight through a faction-based campaign managing heat, ammunition, and combat tactics.",
+    "de": "MechWarrior 2: 31st Century Combat ist der klassische Mech-Kampfsimulator für MS-DOS im BattleTech-Universum. Steuere gewaltige Kriegsmaschinen, passe ihre Waffen und Panzerung an und kämpfe in einer fraktionsbasierten Kampagne, während du Hitze, Munition und Kampftaktik verwaltest.",
+    "fr": "MechWarrior 2: 31st Century Combat est le classique simulateur de combat de mechs pour MS-DOS, situé dans l'univers BattleTech. Pilotez d'énormes machines de guerre, personnalisez leurs armes et leur blindage, et menez une campagne par factions en gérant la chaleur, les munitions et les tactiques de combat.",
+    "it": "MechWarrior 2: 31st Century Combat è il classico simulatore di combattimento tra mech per MS-DOS, ambientato nell'universo BattleTech. Pilota enormi macchine da guerra, personalizza armi e corazza, e affronta una campagna per fazioni gestendo calore, munizioni e tattiche di combattimento.",
+    "pt": "MechWarrior 2: 31st Century Combat é o clássico simulador de combate com mechs para MS-DOS, ambientado no universo BattleTech. Pilote enormes máquinas de guerra, personalize suas armas e blindagem, e enfrente uma campanha por facções gerenciando calor, munição e táticas de combate.",
+    "ru": "MechWarrior 2: 31st Century Combat — это классический симулятор боя на мехах для MS-DOS во вселенной BattleTech. Управляйте огромными боевыми машинами, настраивайте их вооружение и броню и проходите кампанию за фракции, контролируя тепло, боеприпасы и тактику боя.",
+    "zh": "《MechWarrior 2: 31st Century Combat》是一款经典的 MS-DOS 机甲战斗模拟游戏，背景设定在 BattleTech 宇宙中。驾驶巨型战争机器，自定义其武器与装甲，并在管理热量、弹药和战斗战术的同时，进行阵营战役。",
+    "ja": "MechWarrior 2: 31st Century Combatは、BattleTech宇宙を舞台にしたMS-DOS向けの古典的なメック戦闘シミュレーターです。巨大な戦闘マシンを操縦し、武器や装甲をカスタマイズし、熱、弾薬、戦闘戦術を管理しながら勢力別のキャンペーンを戦い抜きます。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/mechwarriors2.html"
+},
     {
         name: "Open TTD",
         image: "https://ifilex.github.io/WineBOX-Store/box/openttd.jpg",
@@ -3920,6 +4039,40 @@ window.appData = [
   "category": "rts",
   "link": "https://ifilex.github.io/WineBOX-Store/webapps/robotrivia/index.html"
 },
+{
+  "name": "Scorched Earth",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/scorched.jpg",
+  "description": {
+    "es": "Scorched Earth es un clásico juego de estrategia de artillería por turnos para MS-DOS. Los jugadores controlan tanques, ajustan el ángulo y la potencia de sus disparos, eligen entre múltiples armas y tienen en cuenta el viento para destruir a los oponentes en terrenos destructibles.",
+    "en": "Scorched Earth is a classic turn-based artillery strategy game for MS-DOS. Players control tanks, adjust shot angle and power, choose from multiple weapons, and account for wind to destroy opponents on destructible terrain.",
+    "de": "Scorched Earth ist ein klassisches rundenbasiertes Artillerie-Strategiespiel für MS-DOS. Die Spieler steuern Panzer, stellen Winkel und Schusskraft ein, wählen aus verschiedenen Waffen und berücksichtigen den Wind, um Gegner auf zerstörbarer Landschaft zu vernichten.",
+    "fr": "Scorched Earth est un classique du jeu de stratégie d'artillerie au tour par tour pour MS-DOS. Les joueurs contrôlent des chars, ajustent l'angle et la puissance de tir, choisissent parmi plusieurs armes et tiennent compte du vent pour détruire leurs adversaires sur un terrain destructible.",
+    "it": "Scorched Earth è un classico gioco di strategia di artiglieria a turni per MS-DOS. I giocatori controllano carri armati, regolano angolo e potenza del tiro, scelgono tra diverse armi e tengono conto del vento per distruggere gli avversari su terreni distruttibili.",
+    "pt": "Scorched Earth é um clássico jogo de estratégia de artilharia por turnos para MS-DOS. Os jogadores controlam tanques, ajustam o ângulo e a potência do disparo, escolhem entre várias armas e consideram o vento para destruir os oponentes em terrenos destrutíveis.",
+    "ru": "Scorched Earth — это классическая пошаговая артиллерийская стратегия для MS-DOS. Игроки управляют танками, регулируют угол и силу выстрела, выбирают различное оружие и учитывают ветер, чтобы уничтожать противников на разрушаемой местности.",
+    "zh": "《Scorched Earth》是一款经典的 MS-DOS 回合制火炮策略游戏。玩家控制坦克，调整射击角度和力度，从多种武器中进行选择，并考虑风向，在可破坏的地形上摧毁对手。",
+    "ja": "Scorched Earthは、MS-DOS向けの古典的なターン制砲撃戦略ゲームです。プレイヤーは戦車を操作し、射角と威力を調整し、多彩な武器から選び、風向きを考慮しながら破壊可能な地形で敵を撃破します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/scorched.html"
+},
+{
+  "name": "SimEarth",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/simearth.jpg",
+  "description": {
+    "es": "SimEarth es el clásico simulador de planeta de Maxis para MS-DOS. Controla la evolución de un mundo entero: ajusta la atmósfera, la temperatura y la geología, guía la aparición de la vida y moldea el desarrollo de especies y civilizaciones a lo largo de millones de años.",
+    "en": "SimEarth is Maxis' classic planet simulation for MS-DOS. Control the evolution of an entire world: adjust the atmosphere, temperature, and geology, guide the emergence of life, and shape the development of species and civilizations over millions of years.",
+    "de": "SimEarth ist Maxis' klassische Planetensimulation für MS-DOS. Steuere die Evolution einer ganzen Welt: Passe Atmosphäre, Temperatur und Geologie an, leite die Entstehung des Lebens und forme die Entwicklung von Arten und Zivilisationen über Millionen von Jahren.",
+    "fr": "SimEarth est la classique simulation de planète de Maxis pour MS-DOS. Contrôlez l'évolution d'un monde entier : ajustez l'atmosphère, la température et la géologie, guidez l'apparition de la vie et façonnez le développement des espèces et des civilisations sur des millions d'années.",
+    "it": "SimEarth è la classica simulazione di pianeta di Maxis per MS-DOS. Controlla l'evoluzione di un intero mondo: regola atmosfera, temperatura e geologia, guida la comparsa della vita e plasmare lo sviluppo di specie e civiltà nel corso di milioni di anni.",
+    "pt": "SimEarth é a clássica simulação de planeta da Maxis para MS-DOS. Controle a evolução de um mundo inteiro: ajuste a atmosfera, a temperatura e a geologia, oriente o surgimento da vida e molde o desenvolvimento de espécies e civilizações ao longo de milhões de anos.",
+    "ru": "SimEarth — это классический симулятор планеты от Maxis для MS-DOS. Управляйте эволюцией целого мира: регулируйте атмосферу, температуру и геологию, направляйте зарождение жизни и формируйте развитие видов и цивилизаций на протяжении миллионов лет.",
+    "zh": "《SimEarth》是 Maxis 为 MS-DOS 打造的经典行星模拟游戏。掌控整个世界的演化：调节大气、温度和地质，引导生命的出现，并在数百万年间塑造物种与文明的发展。",
+    "ja": "SimEarthは、MaxisによるMS-DOS向けの古典的な惑星シミュレーションです。世界全体の進化を操り、大気、温度、地質を調整し、生命の発生を導き、何百万年にもわたる種や文明の発展を形作ります。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/simearth.html"
+},
   {
         name: "Sim City",
         image: "https://ifilex.github.io/WineBOX-Store/box/simcity.jpg",
@@ -3954,6 +4107,74 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/simcity2000.html"
     },
+{
+  "name": "SimFarm",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/simfarm.jpg",
+  "description": {
+    "es": "SimFarm es el clásico simulador de gestión agrícola de Maxis para MS-DOS. Dirige una granja: elige y rota cultivos, cría ganado, compra maquinaria, controla plagas y el clima, y gestiona las finanzas para hacer crecer tu explotación y competir con las granjas vecinas.",
+    "en": "SimFarm is Maxis' classic farm management simulation for MS-DOS. Run a farm: choose and rotate crops, raise livestock, buy machinery, deal with pests and weather, and manage finances to grow your operation and compete with neighboring farms.",
+    "de": "SimFarm ist Maxis' klassische Landwirtschafts-Management-Simulation für MS-DOS. Führe einen Bauernhof: Wähle und rotiere Feldfrüchte, züchte Vieh, kaufe Maschinen, bekämpfe Schädlinge und Wettereinflüsse und verwalte die Finanzen, um deinen Betrieb auszubauen und mit benachbarten Höfen zu konkurrieren.",
+    "fr": "SimFarm est la classique simulation de gestion agricole de Maxis pour MS-DOS. Gérez une ferme : choisissez et alternez les cultures, élevez du bétail, achetez des machines, gérez les nuisibles et la météo, et administrez les finances pour développer votre exploitation et rivaliser avec les fermes voisines.",
+    "it": "SimFarm è la classica simulazione di gestione agricola di Maxis per MS-DOS. Gestisci una fattoria: scegli e ruota le colture, alleva bestiame, acquista macchinari, affronta parassiti e condizioni meteorologiche e amministra le finanze per far crescere l'azienda e competere con le fattorie vicine.",
+    "pt": "SimFarm é a clássica simulação de gestão agrícola da Maxis para MS-DOS. Administre uma fazenda: escolha e rotacione culturas, crie gado, compre maquinário, lide com pragas e clima, e gerencie as finanças para expandir sua operação e competir com fazendas vizinhas.",
+    "ru": "SimFarm — это классический симулятор управления фермой от Maxis для MS-DOS. Управляйте хозяйством: выбирайте и чередуйте культуры, разводите скот, покупайте технику, боритесь с вредителями и погодой и ведите финансы, чтобы развивать ферму и конкурировать с соседями.",
+    "zh": "《SimFarm》是 Maxis 为 MS-DOS 打造的经典农场管理模拟游戏。经营一座农场：选择并轮作农作物、饲养牲畜、购买机械、应对病虫害和天气，并管理财务以扩大经营并与邻近农场竞争。",
+    "ja": "SimFarmは、MaxisによるMS-DOS向けの古典的な農場経営シミュレーションです。農場を運営し、作物の選択と輪作、家畜の飼育、機械の購入、害虫や天候への対応、財務管理を行い、農場を成長させて近隣の農場と競い合います。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/simfarm.html"
+},
+{
+  "name": "SimHealth",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/simhealth.jpg",
+  "description": {
+    "es": "SimHealth es el peculiar simulador de Maxis para MS-DOS centrado en la reforma sanitaria. En lugar de gestionar ciudades o ecosistemas, experimentas con modelos de política sanitaria: ajustas impuestos, seguros, presupuestos y coberturas para equilibrar costes, acceso y calidad mientras observas el impacto en la población.",
+    "en": "SimHealth is Maxis' unusual MS-DOS simulation focused on health care reform. Instead of managing cities or ecosystems, you experiment with health policy models: adjust taxes, insurance, budgets, and coverage to balance costs, access, and quality while observing the impact on the population.",
+    "de": "SimHealth ist Maxis' ungewöhnliche MS-DOS-Simulation zur Gesundheitsreform. Statt Städte oder Ökosysteme zu verwalten, experimentierst du mit gesundheitspolitischen Modellen: Passe Steuern, Versicherungen, Budgets und Deckung an, um Kosten, Zugang und Qualität auszubalancieren und die Auswirkungen auf die Bevölkerung zu beobachten.",
+    "fr": "SimHealth est l'inhabituelle simulation de Maxis pour MS-DOS consacrée à la réforme de la santé. Au lieu de gérer des villes ou des écosystèmes, vous expérimentez des modèles de politique sanitaire : ajustez impôts, assurances, budgets et couvertures pour équilibrer coûts, accès et qualité tout en observant l'impact sur la population.",
+    "it": "SimHealth è l'insolita simulazione di Maxis per MS-DOS incentrata sulla riforma sanitaria. Invece di gestire città o ecosistemi, sperimenti modelli di politica sanitaria: regoli tasse, assicurazioni, budget e coperture per bilanciare costi, accesso e qualità osservando l'impatto sulla popolazione.",
+    "pt": "SimHealth é a incomum simulação da Maxis para MS-DOS focada na reforma da saúde. Em vez de gerenciar cidades ou ecossistemas, você experimenta modelos de política de saúde: ajusta impostos, seguros, orçamentos e coberturas para equilibrar custos, acesso e qualidade enquanto observa o impacto na população.",
+    "ru": "SimHealth — необычный симулятор от Maxis для MS-DOS, посвящённый реформе здравоохранения. Вместо управления городами или экосистемами вы экспериментируете с моделями медицинской политики: регулируете налоги, страхование, бюджеты и покрытие, чтобы сбалансировать расходы, доступность и качество, наблюдая за влиянием на население.",
+    "zh": "《SimHealth》是 Maxis 为 MS-DOS 打造的一款别具一格的模拟游戏，聚焦医疗保健改革。你不再管理城市或生态系统，而是试验各种卫生政策模型：调整税收、保险、预算和覆盖范围，在观察对民众影响的同时，平衡成本、可及性与质量。",
+    "ja": "SimHealthは、医療制度改革に焦点を当てたMaxisの異色のMS-DOSシミュレーションです。都市や生態系を管理する代わりに、医療政策のモデルを実験します。税金、保険、予算、保障範囲を調整してコスト、アクセス、質のバランスを取�り、人口への影響を観察します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/simhealth.html"
+},
+{
+  "name": "SimLife",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/simlife.jpg",
+  "description": {
+    "es": "SimLife es el clásico simulador de ecosistemas de Maxis para MS-DOS. Diseña y experimenta con mundos vivos: crea plantas y animales, define sus genes y cadenas alimenticias, ajusta el clima y observa cómo evolucionan, compiten y se extinguen las especies en un ecosistema interactivo.",
+    "en": "SimLife is Maxis' classic ecosystem simulation for MS-DOS. Design and experiment with living worlds: create plants and animals, define their genes and food chains, adjust the climate, and watch species evolve, compete, and go extinct in an interactive ecosystem.",
+    "de": "SimLife ist Maxis' klassische Ökosystem-Simulation für MS-DOS. Entwirf und experimentiere mit lebendigen Welten: Erschaffe Pflanzen und Tiere, definiere ihre Gene und Nahrungsketten, passe das Klima an und beobachte, wie Arten in einem interaktiven Ökosystem evolvieren, konkurrieren und aussterben.",
+    "fr": "SimLife est la classique simulation d'écosystème de Maxis pour MS-DOS. Concevez et expérimentez avec des mondes vivants : créez des plantes et des animaux, définissez leurs gènes et chaînes alimentaires, ajustez le climat et observez les espèces évoluer, rivaliser et s'éteindre dans un écosystème interactif.",
+    "it": "SimLife è la classica simulazione di ecosistema di Maxis per MS-DOS. Progetta e sperimenta con mondi viventi: crea piante e animali, definisci i loro geni e catene alimentari, regola il clima e osserva le specie evolversi, competere ed estinguersi in un ecosistema interattivo.",
+    "pt": "SimLife é a clássica simulação de ecossistema da Maxis para MS-DOS. Projete e experimente com mundos vivos: crie plantas e animais, defina seus genes e cadeias alimentares, ajuste o clima e observe as espécies evoluírem, competirem e se extinguirem em um ecossistema interativo.",
+    "ru": "SimLife — это классический симулятор экосистемы от Maxis для MS-DOS. Создавайте и экспериментируйте с живыми мирами: создавайте растения и животных, задавайте их гены и пищевые цепочки, регулируйте климат и наблюдайте, как виды эволюционируют, конкурируют и вымирают в интерактивной экосистеме.",
+    "zh": "《SimLife》是 Maxis 为 MS-DOS 打造的经典生态系统模拟游戏。设计并实验各种生命世界：创造植物和动物，定义它们的基因和食物链，调节气候，并在互动生态系统中观察物种的演化、竞争与灭绝。",
+    "ja": "SimLifeは、MaxisによるMS-DOS向けの古典的な生態系シミュレーションです。生命の世界を設計し実験します。植物や動物を作り、遺伝子や食物連鎖を定義し、気候を調整して、インタラクティブな生態系の中で種が進化し、競争し、絶滅していく様子を観察します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/simlife.html"
+},
+{
+  "name": "SimRefinery",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/simrefinery.jpg",
+  "description": {
+    "es": "SimRefinery es un prototipo de simulación de gestión desarrollado por Maxis para Chevron. Sumérgete en el funcionamiento de una refinería de petróleo: controla el proceso de refinado, gestiona el suministro de crudo, ajusta las unidades de procesamiento y toma decisiones para mantener la eficiencia y la rentabilidad de la planta.",
+    "en": "SimRefinery is a management simulation prototype developed by Maxis for Chevron. Dive into the operation of an oil refinery: control the refining process, manage crude supply, adjust processing units, and make decisions to maintain plant efficiency and profitability.",
+    "de": "SimRefinery ist ein Management-Simulationsprototyp, den Maxis für Chevron entwickelt hat. Tauche in den Betrieb einer Ölraffinerie ein: Steuere den Raffinierungsprozess, verwalte die Rohölversorgung, passe die Verarbeitungseinheiten an und triff Entscheidungen, um Effizienz und Rentabilität der Anlage aufrechtzuerhalten.",
+    "fr": "SimRefinery est un prototype de simulation de gestion développé par Maxis pour Chevron. Plongez dans le fonctionnement d'une raffinerie de pétrole : contrôlez le processus de raffinage, gérez l'approvisionnement en brut, ajustez les unités de traitement et prenez des décisions pour maintenir l'efficacité et la rentabilité de l'usine.",
+    "it": "SimRefinery è un prototipo di simulazione gestionale sviluppato da Maxis per Chevron. Immergiti nel funzionamento di una raffineria di petrolio: controlla il processo di raffinazione, gestisci l'approvvigionamento di greggio, regola le unità di lavorazione e prendi decisioni per mantenere l'efficienza e la redditività dell'impianto.",
+    "pt": "SimRefinery é um protótipo de simulação de gestão desenvolvido pela Maxis para a Chevron. Mergulhe no funcionamento de uma refinaria de petróleo: controle o processo de refino, gerencie o fornecimento de petróleo bruto, ajuste as unidades de processamento e tome decisões para manter a eficiência e a rentabilidade da planta.",
+    "ru": "SimRefinery — это прототип симулятора управления, разработанный Maxis для Chevron. Погрузитесь в работу нефтеперерабатывающего завода: управляйте процессом переработки, поставками сырой нефти, настраивайте технологические установки и принимайте решения для поддержания эффективности и рентабельности предприятия.",
+    "zh": "《SimRefinery》是 Maxis 为雪佛龙开发的一款管理模拟原型。深入体验炼油厂的运营：控制炼油过程、管理原油供应、调整加工装置，并做出决策以维持工厂的效率和盈利能力。",
+    "ja": "SimRefineryは、MaxisがChevron向けに開発した経営シミュレーションのプロトタイプです。石油精製所の運用に飛び込み、精製プロセスを制御し、原油の供給を管理し、処理ユニットを調整し、プラントの効率と収益性を維持するための意思決定を行います。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/simrefinery.html"
+},
 {
   "name": "Sopa de letras",
   "image": "https://ifilex.github.io/WineBOX-Store/box/sopa.jpg",
@@ -4043,6 +4264,23 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/syndicate.html"
     },
 {
+  "name": "Syndicate Wars",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/syndicatewars.jpg",
+  "description": {
+    "es": "Syndicate Wars es la secuela del clásico Syndicate de Bullfrog para MS-DOS. Comandas un escuadrón de agentes cibernéticos en un futuro distópico, cumpliendo misiones de sabotaje, infiltración y combate en tiempo real, con armas devastadoras, implantes y vehículos, mientras gestionas recursos y territorios entre corporaciones rivales.",
+    "en": "Syndicate Wars is the sequel to Bullfrog's classic Syndicate for MS-DOS. Command a squad of cybernetic agents in a dystopian future, completing sabotage, infiltration, and combat missions in real time with devastating weapons, implants, and vehicles while managing resources and territory among rival corporations.",
+    "de": "Syndicate Wars ist die Fortsetzung von Bullfrogs klassischem Syndicate für MS-DOS. Befehlige ein Team kybernetischer Agenten in einer dystopischen Zukunft, erfülle Sabotage-, Infiltrations- und Kampfmissionen in Echtzeit mit verheerenden Waffen, Implantaten und Fahrzeugen und verwalte Ressourcen und Territorien zwischen rivalisierenden Konzernen.",
+    "fr": "Syndicate Wars est la suite du classique Syndicate de Bullfrog pour MS-DOS. Commandez une escouade d'agents cybernétiques dans un futur dystopique, accomplissez des missions de sabotage, d'infiltration et de combat en temps réel avec des armes dévastatrices, des implants et des véhicules, tout en gérant ressources et territoires entre corporations rivales.",
+    "it": "Syndicate Wars è il seguito del classico Syndicate di Bullfrog per MS-DOS. Comandi una squadra di agenti cibernetici in un futuro distopico, completando missioni di sabotaggio, infiltrazione e combattimento in tempo reale con armi devastanti, impianti e veicoli, gestendo risorse e territori tra corporazioni rivali.",
+    "pt": "Syndicate Wars é a sequência do clássico Syndicate da Bullfrog para MS-DOS. Comande um esquadrão de agentes cibernéticos em um futuro distópico, cumprindo missões de sabotagem, infiltração e combate em tempo real com armas devastadoras, implantes e veículos, enquanto gerencia recursos e territórios entre corporações rivais.",
+    "ru": "Syndicate Wars — продолжение классического Syndicate от Bullfrog для MS-DOS. Командуйте отрядом кибернетических агентов в антиутопическом будущем, выполняя задания по саботажу, проникновению и бою в реальном времени с разрушительным оружием, имплантами и техникой, управляя ресурсами и территориями между конкурирующими корпорациями.",
+    "zh": "《Syndicate Wars》是 Bullfrog 经典作品《Syndicate》的 MS-DOS 续作。在反乌托邦的未来指挥一支半机械人特工小队，使用毁灭性武器、植入体和载具实时执行破坏、渗透和战斗任务，同时在敌对财团之间管理资源与领地。",
+    "ja": "Syndicate Warsは、Bullfrogの古典的作品SyndicateのMS-DOS向け続編です。ディストピア的未来でサイバネティックエージェントの分隊を指揮し、破壊的な武器、インプラント、車両を使って破壊工作、潜入、戦闘ミッションをリアルタイムで遂行しながら、敵対する企業間で資源と領土を管理します。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/syndicatewars.html"
+},
+{
     "name": "TATETI",
     "image": "https://ifilex.github.io/WineBOX-Store/box/tateti.jpg",
     "description": "TATETI es el clásico juego de tres en raya para dos jugadores. Con un diseño minimalista y limpio, los jugadores se turnan para colocar sus marcas (X y O) en una cuadrícula de 3x3, con el objetivo de alinear tres símbolos consecutivos en horizontal, vertical o diagonal. Ideal para partidas rápidas y para todos los públicos.",
@@ -4061,6 +4299,23 @@ window.appData = [
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/tateti/index.html"
 },
 {
+  "name": "Traders: The Intergalactic Trading Game",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/traders.jpg",
+  "description": {
+    "es": "Traders: The Intergalactic Trading Game es un clásico juego de estrategia y comercio para MS-DOS. Recorre la galaxia comprando y vendiendo mercancías entre planetas, negocia precios, invierte en naves y rutas comerciales, y compite con otros comerciantes para construir tu imperio económico en el espacio.",
+    "en": "Traders: The Intergalactic Trading Game is a classic MS-DOS strategy and trading game. Travel across the galaxy buying and selling goods between planets, negotiate prices, invest in ships and trade routes, and compete with other traders to build your economic empire in space.",
+    "de": "Traders: The Intergalactic Trading Game ist ein klassisches MS-DOS-Strategie- und Handelsspiel. Reise durch die Galaxie, kaufe und verkaufe Waren zwischen Planeten, verhandle Preise, investiere in Schiffe und Handelsrouten und konkurriere mit anderen Händlern, um dein Wirtschaftsimperium im Weltraum aufzubauen.",
+    "fr": "Traders: The Intergalactic Trading Game est un classique du jeu de stratégie et de commerce pour MS-DOS. Parcourez la galaxie en achetant et vendant des marchandises entre les planètes, négociez les prix, investissez dans des vaisseaux et des routes commerciales, et rivalisez avec d'autres marchands pour bâtir votre empire économique dans l'espace.",
+    "it": "Traders: The Intergalactic Trading Game è un classico gioco di strategia e commercio per MS-DOS. Viaggia per la galassia comprando e vendendo merci tra i pianeti, negozia i prezzi, investi in navi e rotte commerciali e competi con altri mercanti per costruire il tuo impero economico nello spazio.",
+    "pt": "Traders: The Intergalactic Trading Game é um clássico jogo de estratégia e comércio para MS-DOS. Viaje pela galáxia comprando e vendendo mercadorias entre planetas, negocie preços, invista em naves e rotas comerciais, e compita com outros comerciantes para construir seu império econômico no espaço.",
+    "ru": "Traders: The Intergalactic Trading Game — это классическая стратегическая игра о торговле для MS-DOS. Путешествуйте по галактике, покупая и продавая товары между планетами, договаривайтесь о ценах, вкладывайте средства в корабли и торговые маршруты и конкурируйте с другими торговцами, чтобы построить свою экономическую империю в космосе.",
+    "zh": "《Traders: The Intergalactic Trading Game》是一款经典的 MS-DOS 策略贸易游戏。在星系间穿梭，在行星之间买卖货物，谈判价格，投资飞船和贸易路线，并与其他商人竞争，在太空中建立你的经济帝国。",
+    "ja": "Traders: The Intergalactic Trading Gameは、MS-DOS向けの古典的な戦略・交易ゲームです。銀河を旅して惑星間で商品を売買し、価格交渉を行い、船や交易路に投資し、他の商人と競い合いながら宇宙に経済帝国を築き上げます。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/traders.html"
+},
+{
     "name": "Truco",
     "image": "https://ifilex.github.io/WineBOX-Store/box/truco.jpg",
     "description": "Truco es el juego de cartas más popular de Argentina y una tradición profundamente arraigada en la cultura rioplatense. Aunque su origen se remonta al mundo árabe alrededor del año 1440, y llegó a América a través de los colonizadores españoles, fue en las pulperías y el campo argentino donde adoptó su forma actual, convirtiéndose en un símbolo de la \"viveza criolla\" [citation:2][citation:5]. Se juega con una baraja española de 40 cartas (sin ochos ni nueves) y el objetivo es alcanzar 30 puntos, divididos en 15 \"malas\" y 15 \"buenas\" [citation:1][citation:4]. El juego combina habilidad, estrategia y engaño: los jugadores pueden cantar \"Envido\" (para sumar puntos según las cartas del mismo palo) o \"Truco\" (para desafiar al rival a ganar la mano), subiendo las apuestas con \"Retruco\" y \"Vale Cuatro\" [citation:7]. La comunicación con señas entre compañeros de equipo es una característica icónica, al igual que la picardía de mentir sobre las cartas que se poseen [citation:1][citation:10].",
@@ -4076,6 +4331,23 @@ window.appData = [
     },
     "category": "rts",
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/truco/index.html"
+},
+{
+  "name": "Theme Hospital",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/themehospital.jpg",
+  "description": {
+    "es": "Theme Hospital es el clásico simulador de gestión hospitalaria de Bullfrog para MS-DOS. Construye y administra un hospital lleno de humor: diseña salas, contrata médicos y enfermeras, investiga tratamientos y cura a pacientes con enfermedades absurdas mientras mantienes contentos a plantilla y enfermos.",
+    "en": "Theme Hospital is Bullfrog's classic hospital management simulation for MS-DOS. Build and run a humor-filled hospital: design rooms, hire doctors and nurses, research treatments, and cure patients with absurd illnesses while keeping staff and patients happy.",
+    "de": "Theme Hospital ist Bullfrogs klassische Krankenhaus-Management-Simulation für MS-DOS. Baue und leite ein humorvolles Krankenhaus: Entwirf Räume, stelle Ärzte und Krankenschwestern ein, erforsche Behandlungen und heile Patienten mit absurden Krankheiten, während du Personal und Patienten zufrieden hältst.",
+    "fr": "Theme Hospital est la classique simulation de gestion hospitalière de Bullfrog pour MS-DOS. Construisez et gérez un hôpital plein d'humour : concevez des salles, engagez des médecins et des infirmières, recherchez des traitements et soignez des patients atteints de maladies absurdes tout en gardant le personnel et les malades heureux.",
+    "it": "Theme Hospital è la classica simulazione di gestione ospedaliera di Bullfrog per MS-DOS. Costruisci e gestisci un ospedale pieno di umorismo: progetta sale, assumi medici e infermieri, ricerca trattamenti e cura pazienti con malattie assurde mantenendo felici staff e pazienti.",
+    "pt": "Theme Hospital é a clássica simulação de gestão hospitalar da Bullfrog para MS-DOS. Construa e administre um hospital cheio de humor: projete salas, contrate médicos e enfermeiras, pesquise tratamentos e cure pacientes com doenças absurdas enquanto mantém funcionários e doentes satisfeitos.",
+    "ru": "Theme Hospital — это классический симулятор управления больницей от Bullfrog для MS-DOS. Стройте и управляйте больницей с юмором: проектируйте палаты, нанимайте врачей и медсестёр, исследуйте методы лечения и лечите пациентов с абсурдными болезнями, поддерживая довольство персонала и больных.",
+    "zh": "《Theme Hospital》是 Bullfrog 为 MS-DOS 打造的经典医院管理模拟游戏。建造并经营一家充满幽默的医院：设计诊室、雇佣医生和护士、研究治疗方法，治疗患有荒诞疾病的病人，同时让员工和患者保持满意。",
+    "ja": "Theme Hospitalは、BullfrogによるMS-DOS向けの古典的な病院経営シミュレーションです。ユーモアあふれる病院を建設・運営し、部屋を設計し、医師や看護師を雇い、治療法を研究し、奇妙な病気の患者を治療しながら、スタッフと患者の満足度を保ちます。"
+  },
+  "category": "rts",
+  "link": "https://ifilex.github.io/WineBOX-Store/themehospital.html"
 },
     {
         name: "Theme park",
