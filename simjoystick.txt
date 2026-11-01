@@ -1,0 +1,114 @@
+{
+    "version": 2,
+    "layers": [
+        {
+            "grid": "square",
+            "title": "Layer#0",
+            "controls": [
+                {
+                    "row": 0,
+                    "column": 9,
+                    "symbol": "⚙",
+                    "type": "Options"
+                },
+                {
+                    "row": 0,
+                    "column": 8,
+                    "type": "Keyboard",
+                    "symbol": "⌨"
+                },
+                {
+                    "row": 5,
+                    "column": 0,
+                    "symbol": "←",
+                    "type": "Key",
+                    "mapTo": [
+                        263
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 2,
+                    "symbol": "→",
+                    "type": "Key",
+                    "mapTo": [
+                        262
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 1,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 1,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 0,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265,
+                        263
+                    ]
+                },
+                {
+                    "row": 4,
+                    "column": 2,
+                    "symbol": "↑",
+                    "type": "Key",
+                    "mapTo": [
+                        265,
+                        262
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 0,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264,
+                        263
+                    ]
+                },
+                {
+                    "row": 6,
+                    "column": 2,
+                    "symbol": "↓",
+                    "type": "Key",
+                    "mapTo": [
+                        264,
+                        262
+                    ]
+                },
+                {
+                    "row": 5,
+                    "column": 1,
+                    "type": "NippleActivator",
+                    "symbol": "◯"
+                },
+                {
+                    "row": 0,
+                    "column": 7,
+                    "symbol": "␛",
+                    "type": "Key",
+                    "mapTo": [
+                        256
+                    ]
+                }
+            ]
+        }
+    ]
+}

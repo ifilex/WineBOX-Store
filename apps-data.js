@@ -4247,23 +4247,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/syndicate.html"
     },
 {
-  "name": "Syndicate Wars",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/syndicatewars.jpg",
-  "description": {
-    "es": "Syndicate Wars es la secuela del clásico Syndicate de Bullfrog para MS-DOS. Comandas un escuadrón de agentes cibernéticos en un futuro distópico, cumpliendo misiones de sabotaje, infiltración y combate en tiempo real, con armas devastadoras, implantes y vehículos, mientras gestionas recursos y territorios entre corporaciones rivales.",
-    "en": "Syndicate Wars is the sequel to Bullfrog's classic Syndicate for MS-DOS. Command a squad of cybernetic agents in a dystopian future, completing sabotage, infiltration, and combat missions in real time with devastating weapons, implants, and vehicles while managing resources and territory among rival corporations.",
-    "de": "Syndicate Wars ist die Fortsetzung von Bullfrogs klassischem Syndicate für MS-DOS. Befehlige ein Team kybernetischer Agenten in einer dystopischen Zukunft, erfülle Sabotage-, Infiltrations- und Kampfmissionen in Echtzeit mit verheerenden Waffen, Implantaten und Fahrzeugen und verwalte Ressourcen und Territorien zwischen rivalisierenden Konzernen.",
-    "fr": "Syndicate Wars est la suite du classique Syndicate de Bullfrog pour MS-DOS. Commandez une escouade d'agents cybernétiques dans un futur dystopique, accomplissez des missions de sabotage, d'infiltration et de combat en temps réel avec des armes dévastatrices, des implants et des véhicules, tout en gérant ressources et territoires entre corporations rivales.",
-    "it": "Syndicate Wars è il seguito del classico Syndicate di Bullfrog per MS-DOS. Comandi una squadra di agenti cibernetici in un futuro distopico, completando missioni di sabotaggio, infiltrazione e combattimento in tempo reale con armi devastanti, impianti e veicoli, gestendo risorse e territori tra corporazioni rivali.",
-    "pt": "Syndicate Wars é a sequência do clássico Syndicate da Bullfrog para MS-DOS. Comande um esquadrão de agentes cibernéticos em um futuro distópico, cumprindo missões de sabotagem, infiltração e combate em tempo real com armas devastadoras, implantes e veículos, enquanto gerencia recursos e territórios entre corporações rivais.",
-    "ru": "Syndicate Wars — продолжение классического Syndicate от Bullfrog для MS-DOS. Командуйте отрядом кибернетических агентов в антиутопическом будущем, выполняя задания по саботажу, проникновению и бою в реальном времени с разрушительным оружием, имплантами и техникой, управляя ресурсами и территориями между конкурирующими корпорациями.",
-    "zh": "《Syndicate Wars》是 Bullfrog 经典作品《Syndicate》的 MS-DOS 续作。在反乌托邦的未来指挥一支半机械人特工小队，使用毁灭性武器、植入体和载具实时执行破坏、渗透和战斗任务，同时在敌对财团之间管理资源与领地。",
-    "ja": "Syndicate Warsは、Bullfrogの古典的作品SyndicateのMS-DOS向け続編です。ディストピア的未来でサイバネティックエージェントの分隊を指揮し、破壊的な武器、インプラント、車両を使って破壊工作、潜入、戦闘ミッションをリアルタイムで遂行しながら、敵対する企業間で資源と領土を管理します。"
-  },
-  "category": "rts",
-  "link": "https://ifilex.github.io/WineBOX-Store/syndicatewars.html"
-},
-{
     "name": "TATETI",
     "image": "https://ifilex.github.io/WineBOX-Store/box/tateti.jpg",
     "description": "TATETI es el clásico juego de tres en raya para dos jugadores. Con un diseño minimalista y limpio, los jugadores se turnan para colocar sus marcas (X y O) en una cuadrícula de 3x3, con el objetivo de alinear tres símbolos consecutivos en horizontal, vertical o diagonal. Ideal para partidas rápidas y para todos los públicos.",
