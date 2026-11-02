@@ -103,6 +103,23 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/a3dsw100.html"
     },
+{
+  "name": "Batman Doom",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/batman.jpg",
+  "description": {
+    "es": "Batman Doom es una conversión total del clásico Doom para MS-DOS, desarrollada por ACE Team. Te pone en la piel de Batman en Gotham City, enfrentándote a enemigos y jefes del universo del Caballero Oscuro con nuevas armas, gráficos, niveles y sonidos, manteniendo la acción frenética del motor de Doom.",
+    "en": "Batman Doom is a total conversion of the classic Doom for MS-DOS, developed by ACE Team. It puts you in the boots of Batman in Gotham City, facing enemies and bosses from the Dark Knight universe with new weapons, graphics, levels, and sounds, while keeping the frantic action of the Doom engine.",
+    "de": "Batman Doom ist eine Total Conversion des klassischen Doom für MS-DOS, entwickelt von ACE Team. Du schlüpfst in Gotham City in die Rolle von Batman und trittst gegen Feinde und Bosse aus dem Universum des Dunklen Ritters an – mit neuen Waffen, Grafiken, Levels und Sounds, während die rasante Action der Doom-Engine erhalten bleibt.",
+    "fr": "Batman Doom est une conversion totale du classique Doom pour MS-DOS, développée par ACE Team. Vous incarnez Batman à Gotham City, affrontant ennemis et boss de l'univers du Chevalier Noir avec de nouvelles armes, graphismes, niveaux et sons, tout en conservant l'action frénétique du moteur de Doom.",
+    "it": "Batman Doom è una conversione totale del classico Doom per MS-DOS, sviluppata da ACE Team. Vestirai i panni di Batman a Gotham City, affrontando nemici e boss dell'universo del Cavaliere Oscuro con nuove armi, grafica, livelli e suoni, mantenendo l'azione frenetica del motore di Doom.",
+    "pt": "Batman Doom é uma conversão total do clássico Doom para MS-DOS, desenvolvida pela ACE Team. Você assume o papel de Batman em Gotham City, enfrentando inimigos e chefes do universo do Cavaleiro das Trevas com novas armas, gráficos, níveis e sons, mantendo a ação frenética do motor do Doom.",
+    "ru": "Batman Doom — это полная конверсия классического Doom для MS-DOS, разработанная ACE Team. Вы играете за Бэтмена в Готэм-Сити, сражаясь с врагами и боссами из вселенной Тёмного рыцаря, с новым оружием, графикой, уровнями и звуками, сохраняя стремительный экшен движка Doom.",
+    "zh": "《Batman Doom》是由 ACE Team 开发的、经典 MS-DOS 游戏《Doom》的完全转换模组。你将扮演蝙蝠侠在哥谭市中对抗黑暗骑士宇宙中的敌人和首领，拥有全新的武器、画面、关卡和音效，同时保留了 Doom 引擎疯狂的动作体验。",
+    "ja": "Batman Doomは、ACE Teamが開発したMS-DOS向けの古典的ゲームDoomのトータルコンバージョンです。ゴッサムシティでバットマンとなり、ダークナイトの世界の敵やボスに立ち向かいます。新しい武器、グラフィック、レベル、サウンドを備えつつ、Doomエンジンの爽快なアクションを維持しています。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/batman.html"
+}
     {
         name: "Battle Arena Toshinden",
         image: "https://ifilex.github.io/WineBOX-Store/box/toshinden.png",
@@ -562,23 +579,6 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/hexen.html"
     },
-{
-  "name": "Hexen II",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/hexen2.jpg",
-  "description": {
-    "es": "Hexen II es la secuela de Hexen, un FPS de fantasía oscura desarrollado por Raven Software y publicado en 1997. Utiliza el motor de Quake y añade elementos de rol: elige entre cuatro clases de personaje, explora mundos conectados por hubs, resuelve puzzles y combate a legiones de criaturas con armas y magias únicas.",
-    "en": "Hexen II is the sequel to Hexen, a dark fantasy first-person shooter developed by Raven Software and released in 1997. Built on the Quake engine, it adds role-playing elements: choose from four character classes, explore hub-connected worlds, solve puzzles, and battle legions of creatures with unique weapons and spells.",
-    "de": "Hexen II ist die Fortsetzung von Hexen, ein Dark-Fantasy-Ego-Shooter von Raven Software aus dem Jahr 1997. Es basiert auf der Quake-Engine und fügt Rollenspielelemente hinzu: Wähle aus vier Charakterklassen, erkunde über Hubs verbundene Welten, löse Rätsel und bekämpfe Legionen von Kreaturen mit einzigartigen Waffen und Zaubern.",
-    "fr": "Hexen II est la suite de Hexen, un FPS de dark fantasy développé par Raven Software et sorti en 1997. Basé sur le moteur de Quake, il ajoute des éléments de jeu de rôle : choisissez parmi quatre classes de personnages, explorez des mondes reliés par des hubs, résolvez des énigmes et affrontez des légions de créatures avec des armes et des sorts uniques.",
-    "it": "Hexen II è il seguito di Hexen, uno sparatutto in prima persona dark fantasy sviluppato da Raven Software e pubblicato nel 1997. Basato sul motore di Quake, aggiunge elementi ruolistici: scegli tra quattro classi di personaggio, esplora mondi collegati tramite hub, risolvi enigmi e combatti legioni di creature con armi e incantesimi unici.",
-    "pt": "Hexen II é a sequência de Hexen, um FPS de fantasia sombria desenvolvido pela Raven Software e lançado em 1997. Baseado no motor do Quake, adiciona elementos de RPG: escolha entre quatro classes de personagem, explore mundos conectados por hubs, resolva quebra-cabeças e enfrente legiões de criaturas com armas e magias únicas.",
-    "ru": "Hexen II — продолжение Hexen, шутер от первого лица в жанре тёмного фэнтези, разработанный Raven Software и выпущенный в 1997 году. Он построен на движке Quake и добавляет ролевые элементы: выбирайте один из четырёх классов персонажей, исследуйте связанные хабами миры, решайте головоломки и сражайтесь с легионами существ, используя уникальное оружие и заклинания.",
-    "zh": "《Hexen II》是《Hexen》的续作，一款由 Raven Software 开发、于 1997 年发行的黑暗奇幻第一人称射击游戏。它基于 Quake 引擎，并加入角色扮演元素：可选择四种职业，探索通过枢纽连接的世界，解开谜题，并使用独特的武器和法术与成群的怪物战斗。",
-    "ja": "Hexen IIは、Raven Softwareが開発し1997年にリリースされたダークファンタジーFPS、Hexenの続編です。Quakeエンジンをベースにしており、RPG要素を追加しています。4つのキャラクタークラスから選び、ハブで結ばれた世界を探索し、パズルを解き、独特な武器と魔法で数々のクリーチャーと戦います。"
-  },
-  "category": "games",
-  "link": "https://ifilex.github.io/WineBOX-Store/hexen2.html"
-},
     {
         name: "Hurl",
         image: "https://ifilex.github.io/WineBOX-Store/box/hurl.jpg",
@@ -4143,7 +4143,7 @@ window.appData = [
 },
 {
   "name": "SimRefinery",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/simrefinery.jpg",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/simrefinery.png",
   "description": {
     "es": "SimRefinery es un prototipo de simulación de gestión desarrollado por Maxis para Chevron. Sumérgete en el funcionamiento de una refinería de petróleo: controla el proceso de refinado, gestiona el suministro de crudo, ajusta las unidades de procesamiento y toma decisiones para mantener la eficiencia y la rentabilidad de la planta.",
     "en": "SimRefinery is a management simulation prototype developed by Maxis for Chevron. Dive into the operation of an oil refinery: control the refining process, manage crude supply, adjust processing units, and make decisions to maintain plant efficiency and profitability.",
