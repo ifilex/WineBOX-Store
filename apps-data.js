@@ -614,6 +614,40 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/indi.html"
     },
 {
+  "name": "Little Big Adventure",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/lba1.jpg",
+  "description": {
+    "es": "Little Big Adventure (también conocido como Relentless: Twinsen's Adventure) es el clásico juego de aventura y acción de 1994 para MS-DOS, creado por Frédérick Raynal y Adeline Software. Encarnas a Twinsen, un habitante del planeta Twinsun, que debe escapar de la dictadura del Dr. Funfrock, explorar islas, resolver puzles y combatir enemigos con su mágica bola de fuego en un mundo isométrico lleno de encanto.",
+    "en": "Little Big Adventure (also known as Relentless: Twinsen's Adventure) is the classic 1994 action-adventure game for MS-DOS, created by Frédérick Raynal and Adeline Software. You play Twinsen, a citizen of the planet Twinsun, who must escape Dr. Funfrock's tyranny, explore islands, solve puzzles, and fight enemies with his magic ball in a charming isometric world.",
+    "de": "Little Big Adventure (auch bekannt als Relentless: Twinsen's Adventure) ist das klassische Action-Adventure von 1994 für MS-DOS, entwickelt von Frédérick Raynal und Adeline Software. Du spielst Twinsen, einen Bewohner des Planeten Twinsun, der der Tyrannei von Dr. Funfrock entkommen, Inseln erkunden, Rätsel lösen und Feinde mit seinem magischen Ball in einer bezaubernden isometrischen Welt bekämpfen muss.",
+    "fr": "Little Big Adventure (également connu sous le nom de Relentless: Twinsen's Adventure) est le classique jeu d'action-aventure de 1994 pour MS-DOS, créé par Frédérick Raynal et Adeline Software. Vous incarnez Twinsen, un habitant de la planète Twinsun, qui doit échapper à la tyrannie du Dr Funfrock, explorer des îles, résoudre des énigmes et combattre les ennemis avec sa boule de feu magique dans un monde isométrique plein de charme.",
+    "it": "Little Big Adventure (noto anche come Relentless: Twinsen's Adventure) è il classico gioco d'azione e avventura del 1994 per MS-DOS, creato da Frédérick Raynal e Adeline Software. Interpreti Twinsen, un abitante del pianeta Twinsun, che deve sfuggire alla tirannia del Dr. Funfrock, esplorare isole, risolvere enigmi e combattere i nemici con la sua palla di fuoco magica in un affascinante mondo isometrico.",
+    "pt": "Little Big Adventure (também conhecido como Relentless: Twinsen's Adventure) é o clássico jogo de ação e aventura de 1994 para MS-DOS, criado por Frédérick Raynal e Adeline Software. Você interpreta Twinsen, um habitante do planeta Twinsun, que precisa escapar da tirania do Dr. Funfrock, explorar ilhas, resolver quebra-cabeças e combater inimigos com sua bola de fogo mágica em um mundo isométrico cheio de charme.",
+    "ru": "Little Big Adventure (также известная как Relentless: Twinsen's Adventure) — это классическая приключенческая экшн-игра 1994 года для MS-DOS, созданная Фредериком Рейналем и Adeline Software. Вы играете за Твинсена, жителя планеты Твинсун, которому предстоит спастись от тирании доктора Фанфрока, исследовать острова, решать головоломки и сражаться с врагами с помощью магического шара в очаровательном изометрическом мире.",
+    "zh": "《Little Big Adventure》（又名《Relentless: Twinsen's Adventure》）是 1994 年由 Frédérick Raynal 和 Adeline Software 为 MS-DOS 打造的经典动作冒险游戏。你将扮演 Twinsun 星球上的居民 Twinsen，必须逃离 Funfrock 博士的暴政，探索岛屿、解开谜题，并用魔法球与敌人战斗，体验一个充满魅力的等距视角世界。",
+    "ja": "Little Big Adventure（別名 Relentless: Twinsen's Adventure）は、Frédérick RaynalとAdeline Softwareが制作した1994年のMS-DOS向け古典的アクションアドベンチャーです。惑星ツインサンの住民トゥインセンとなり、ファンフロック博士の独裁から逃れ、島々を探索し、パズルを解き、魔法の球で敵と戦う、魅力的なアイソメトリック世界の冒険です。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/lba1.html"
+},
+{
+  "name": "Little Big Adventure 2",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/lba2.jpg",
+  "description": {
+    "es": "Little Big Adventure 2 (también conocido como Twinsen's Odyssey) es la secuela del clásico de 1997 para MS-DOS, desarrollada por Adeline Software. Twinsen regresa para salvar el planeta Twinsun de una nueva amenaza: explora un mundo isométrico más amplio, resuelve puzles, pilota vehículos y combate enemigos con su bola mágica y nuevos poderes en una aventura llena de encanto y humor.",
+    "en": "Little Big Adventure 2 (also known as Twinsen's Odyssey) is the 1997 MS-DOS sequel developed by Adeline Software. Twinsen returns to save the planet Twinsun from a new threat: explore a larger isometric world, solve puzzles, pilot vehicles, and fight enemies with his magic ball and new powers in a charming, humorous adventure.",
+    "de": "Little Big Adventure 2 (auch bekannt als Twinsen's Odyssey) ist die Fortsetzung von 1997 für MS-DOS, entwickelt von Adeline Software. Twinsen kehrt zurück, um den Planeten Twinsun vor einer neuen Bedrohung zu retten: Erkunde eine größere isometrische Welt, löse Rätsel, steuere Fahrzeuge und bekämpfe Feinde mit seinem magischen Ball und neuen Kräften in einem bezaubernden, humorvollen Abenteuer.",
+    "fr": "Little Big Adventure 2 (également connu sous le nom de Twinsen's Odyssey) est la suite de 1997 pour MS-DOS, développée par Adeline Software. Twinsen revient pour sauver la planète Twinsun d'une nouvelle menace : explorez un monde isométrique plus vaste, résolvez des énigmes, pilotez des véhicules et combattez les ennemis avec sa boule magique et de nouveaux pouvoirs dans une aventure pleine de charme et d'humour.",
+    "it": "Little Big Adventure 2 (noto anche come Twinsen's Odyssey) è il seguito del 1997 per MS-DOS, sviluppato da Adeline Software. Twinsen torna per salvare il pianeta Twinsun da una nuova minaccia: esplora un mondo isometrico più ampio, risolvi enigmi, pilota veicoli e combatti i nemici con la sua palla magica e nuovi poteri in un'avventura piena di fascino e umorismo.",
+    "pt": "Little Big Adventure 2 (também conhecido como Twinsen's Odyssey) é a sequência de 1997 para MS-DOS, desenvolvida pela Adeline Software. Twinsen retorna para salvar o planeta Twinsun de uma nova ameaça: explore um mundo isométrico maior, resolva quebra-cabeças, pilote veículos e combata inimigos com sua bola mágica e novos poderes em uma aventura cheia de charme e humor.",
+    "ru": "Little Big Adventure 2 (также известная как Twinsen's Odyssey) — продолжение 1997 года для MS-DOS, разработанное Adeline Software. Твинсен возвращается, чтобы спасти планету Твинсун от новой угрозы: исследуйте более обширный изометрический мир, решайте головоломки, управляйте транспортом и сражайтесь с врагами с помощью магического шара и новых способностей в очаровательном приключении с юмором.",
+    "zh": "《Little Big Adventure 2》（又名《Twinsen's Odyssey》）是 1997 年由 Adeline Software 为 MS-DOS 开发的续作。Twinsen 归来拯救 Twinsun 星球免受新威胁：探索更广阔的等距视角世界，解开谜题，驾驶载具，并使用魔法球和新能力与敌人战斗，体验充满魅力与幽默的冒险。",
+    "ja": "Little Big Adventure 2（別名 Twinsen's Odyssey）は、Adeline Softwareが開発した1997年のMS-DOS向け続編です。トゥインセンが再び惑星ツインサンを新たな脅威から救うため、より広大なアイソメトリック世界を探索し、パズルを解き、乗り物を操縦し、魔法の球と新たな力で敵と戦う、魅力とユーモアあふれる冒険です。"
+  },
+  "category": "games",
+  "link": "https://ifilex.github.io/WineBOX-Store/lba2.html"
+},
+{
     "name": "Maura & Ash",
     "image": "https://ifilex.github.io/WineBOX-Store/box/mauraash.jpg",
     "description": "Maura & Ash es un juego de aventura gráfica point-and-click de código abierto para MS-DOS, lanzado en 2025 por el desarrollador moralrecordings. La historia transcurre en una nave espacial que sufre una avería en el motor, y tu objetivo es repararla utilizando soluciones improvisadas, con una llave inglesa como única herramienta \"oficial\". El juego funciona con Perentie, un motor de aventuras multiplataforma inspirado en los clásicos de LucasArts (SCUMM/GrimE), escrito en Lua y diseñado específicamente para las limitaciones de MS-DOS. Destaca por su excelente pixel art, una interfaz minimalista que permite un control fluido con solo un ratón de dos botones, y la posibilidad de elegir entre gráficos VGA, EGA o CGA, además de efectos de sonido auténticos de PC Speaker. Está disponible como freeware bajo la licencia GNU GPL v3, con el código fuente completo incluido, y puede jugarse tanto en DOSBox como en navegador web.",
