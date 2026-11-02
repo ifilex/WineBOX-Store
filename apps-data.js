@@ -119,7 +119,7 @@ window.appData = [
   },
   "category": "games",
   "link": "https://ifilex.github.io/WineBOX-Store/batman.html"
-}
+},
     {
         name: "Battle Arena Toshinden",
         image: "https://ifilex.github.io/WineBOX-Store/box/toshinden.png",
