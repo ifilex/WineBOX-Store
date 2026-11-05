@@ -358,6 +358,23 @@ window.appData = [
         category: "games",
         link: "https://d07riv.github.io/diabloweb/"
     },
+{
+  "name": "Diablo II",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/diablo2.jpg",
+  "description": {
+    "es": "Diablo II es el aclamado ARPG de Blizzard lanzado en 2000, y una de las secuelas más influyentes de la historia. Elige entre distintas clases, explora Santuario, derrota hordas de demonios y jefes, y haz crecer tu personaje con botín, habilidades y objetos únicos en una oscura aventura de rol y acción.",
+    "en": "Diablo II is Blizzard's acclaimed 2000 action RPG and one of the most influential sequels in gaming history. Choose among distinct classes, explore Sanctuary, defeat hordes of demons and bosses, and grow your character with loot, skills, and unique items in a dark action-RPG adventure.",
+    "de": "Diablo II ist Blizzards gefeiertes Action-Rollenspiel von 2000 und eine der einflussreichsten Fortsetzungen der Spielegeschichte. Wähle zwischen verschiedenen Klassen, erkunde Sanktuario, besiege Horden von Dämonen und Bossen und entwickle deinen Charakter mit Beute, Fähigkeiten und einzigartigen Gegenständen in einem düsteren Action-RPG-Abenteuer.",
+    "fr": "Diablo II est l'acclamé action-RPG de Blizzard sorti en 2000, et l'une des suites les plus influentes de l'histoire du jeu vidéo. Choisissez parmi différentes classes, explorez Sanctuaire, terrassez des hordes de démons et des boss, et faites évoluer votre personnage avec du butin, des compétences et des objets uniques dans une sombre aventure d'action-RPG.",
+    "it": "Diablo II è l'acclamato action RPG di Blizzard del 2000, e uno dei seguiti più influenti nella storia dei videogiochi. Scegli tra classi distinte, esplora Sanctuarium, sconfiggi orde di demoni e boss, e fai crescere il tuo personaggio con bottino, abilità e oggetti unici in una cupa avventura action-RPG.",
+    "pt": "Diablo II é o aclamado ARPG da Blizzard lançado em 2000, e uma das sequências mais influentes da história dos jogos. Escolha entre classes distintas, explore Santuário, derrote hordas de demônios e chefes, e evolua seu personagem com loot, habilidades e itens únicos em uma sombria aventura de ação e RPG.",
+    "ru": "Diablo II — это признанная экшн-RPG от Blizzard, выпущенная в 2000 году, и одно из самых влиятельных продолжений в истории игр. Выберите один из классов, исследуйте Санктуарий, побеждайте орды демонов и боссов и развивайте персонажа с помощью лута, навыков и уникальных предметов в мрачном экшн-RPG-приключении.",
+    "zh": "《Diablo II》是暴雪于 2000 年推出的广受赞誉的动作角色扮演游戏，也是游戏史上最具影响力的续作之一。选择不同职业，探索庇护之地，击败成群的恶魔和首领，并通过战利品、技能和独特物品培养你的角色，体验一场黑暗的动作 RPG 冒险。",
+    "ja": "Diablo IIは、Blizzardが2000年にリリースした高く評価されるアクションRPGであり、ゲーム史において最も影響力のある続編の一つです。個性豊かなクラスから選び、サンクチュアリを探索し、悪魔やボスの大群を打ち倒し、戦利品、スキル、ユニークアイテムでキャラクターを成長させる、ダークなアクションRPGアドベンチャーです。"
+  },
+  "category": "games",
+  "link": "https://d2survivors.lol/play/"
+},
     {
         name: "Death Rally",
         image: "https://ifilex.github.io/WineBOX-Store/box/deathrally.gif",
@@ -614,6 +631,40 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/indi.html"
     },
 {
+  "name": "Ion Fury",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/ionfury.jpg",
+  "description": {
+    "es": "Ion Fury es un shooter en primera persona de estilo retro construido sobre el motor Build, el mismo de Duke Nukem 3D. Encarnas a Shelly 'Bombshell' Harrison, una agente que debe abrirse paso a tiros por una ciudad cyberpunk invadida por un culto transhumano, con armas imaginativas, secretos y acción frenética.",
+    "en": "Ion Fury is a retro-style first-person shooter built on the Build engine, the same one used for Duke Nukem 3D. You play as Shelly 'Bombshell' Harrison, an agent who must shoot her way through a cyberpunk city overrun by a transhumanist cult, with imaginative weapons, secrets, and frantic action.",
+    "de": "Ion Fury ist ein Ego-Shooter im Retro-Stil auf Basis der Build-Engine, derselben wie bei Duke Nukem 3D. Du spielst Shelly 'Bombshell' Harrison, eine Agentin, die sich durch eine Cyberpunk-Stadt schießen muss, die von einem transhumanistischen Kult überrannt wurde – mit fantasievollen Waffen, Geheimnissen und rasanter Action.",
+    "fr": "Ion Fury est un FPS de style rétro construit sur le moteur Build, le même que Duke Nukem 3D. Vous incarnez Shelly 'Bombshell' Harrison, une agente qui doit se frayer un chemin à coups de fusil dans une ville cyberpunk envahie par une secte transhumaniste, avec des armes imaginatives, des secrets et une action frénétique.",
+    "it": "Ion Fury è uno sparatutto in prima persona in stile retrò costruito sul motore Build, lo stesso di Duke Nukem 3D. Interpreti Shelly 'Bombshell' Harrison, un'agente che deve farsi strada a colpi di arma da fuoco in una città cyberpunk invasa da una setta transumanista, con armi fantasiose, segreti e azione frenetica.",
+    "pt": "Ion Fury é um FPS de estilo retrô construído sobre o motor Build, o mesmo de Duke Nukem 3D. Você interpreta Shelly 'Bombshell' Harrison, uma agente que precisa abrir caminho a tiros por uma cidade cyberpunk dominada por um culto transumanista, com armas imaginativas, segredos e ação frenética.",
+    "ru": "Ion Fury — это шутер от первого лица в ретро-стиле на движке Build, том же, что использовался в Duke Nukem 3D. Вы играете за Шелли «Бомбшелл» Харрисон, агента, которой предстоит пробиваться с боем через киберпанк-город, захваченный трансгуманистическим культом, с изобретательным оружием, секретами и стремительным экшеном.",
+    "zh": "《Ion Fury》是一款使用 Build 引擎（与《毁灭公爵 3D》相同）打造的复古风格第一人称射击游戏。你将扮演特工 Shelly “Bombshell” Harrison，在被超人类主义邪教占领的赛博朋克城市中一路枪战突围，体验富有创意的武器、隐藏秘密和疯狂的动作场面。",
+    "ja": "Ion Furyは、Duke Nukem 3Dと同じBuildエンジンで作られたレトロスタイルの一人称シューティングゲームです。トランスヒューマニストのカルトに占拠されたサイバーパンク都市を銃で切り抜けるエージェント、シェリー・“ボムシェル”・ハリソンを演じます。独創的な武器、秘密、そして爽快なアクションが特徴です。"
+  },
+  "category": "games",
+  "link": "https://agentcube.github.io/ion-fury-wasm/"
+},
+{
+  "name": "Lego Racers (Step On It)",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/legoracers.jpg",
+  "description": {
+    "es": "Step On It es una recreación fan no oficial del clásico Lego Racers de 1999, jugable directamente en el navegador. Incluye los circuitos temáticos y pilotos basados en sagas de Lego como Piratas, Aventureros y Espacio, y añade mejoras modernas: hasta seis jugadores en línea, todos los contenidos desbloqueados desde el inicio, objetos y atajos reequilibrados, e IA más agresiva.",
+    "en": "Step On It is an unofficial fan-made recreation of the classic 1999 Lego Racers, playable directly in the browser. It includes the themed tracks and racers based on Lego properties such as Pirates, Adventurers and Space, and adds modern improvements: up to six players online, all content unlocked from the start, rebalanced items and shortcuts, and more aggressive AI.",
+    "de": "Step On It ist eine inoffizielle Fan-Nachbildung des klassischen Lego Racers von 1999, die direkt im Browser spielbar ist. Es enthält die thematischen Strecken und Rennfahrer basierend auf Lego-Serien wie Piraten, Abenteurer und Weltraum und fügt moderne Verbesserungen hinzu: bis zu sechs Spieler online, alle Inhalte von Anfang an freigeschaltet, neu ausbalancierte Items und Abkürzungen sowie aggressivere KI.",
+    "fr": "Step On It est une recréation non officielle par des fans du classique Lego Racers de 1999, jouable directement dans le navigateur. Il comprend les circuits thématiques et les pilotes inspirés des séries Lego telles que Pirates, Aventuriers et Espace, et ajoute des améliorations modernes : jusqu'à six joueurs en ligne, tout le contenu débloqué dès le départ, objets et raccourcis rééquilibrés, et une IA plus agressive.",
+    "it": "Step On It è una recreazione non ufficiale creata dai fan del classico Lego Racers del 1999, giocabile direttamente nel browser. Include i circuiti a tema e i piloti basati sulle serie Lego come Pirati, Avventurieri e Spazio, e aggiunge miglioramenti moderni: fino a sei giocatori online, tutti i contenuti sbloccati fin dall'inizio, oggetti e scorciatoie riequilibrati e un'IA più aggressiva.",
+    "pt": "Step On It é uma recriação não oficial feita por fãs do clássico Lego Racers de 1999, jogável diretamente no navegador. Inclui as pistas temáticas e pilotos baseados em séries Lego como Piratas, Aventureiros e Espaço, e adiciona melhorias modernas: até seis jogadores online, todo o conteúdo desbloqueado desde o início, itens e atalhos rebalanceados e uma IA mais agressiva.",
+    "ru": "Step On It — это неофициальная фанатская реконструкция классической Lego Racers 1999 года, играбельная прямо в браузере. Она включает тематические трассы и гонщиков по мотивам серий Lego, таких как «Пираты», «Приключенцы» и «Космос», и добавляет современные улучшения: до шести игроков онлайн, весь контент открыт с самого начала, перебалансированные предметы и сокращения, а также более агрессивный ИИ.",
+    "zh": "《Step On It》是对 1999 年经典《Lego Racers》的非官方粉丝重制版，可直接在浏览器中游玩。它包含以乐高系列（如海盗、探险家和太空）为主题赛道和赛车手，并加入现代改进：最多六人在线游戏、所有内容从一开始就解锁、道具和捷径重新平衡，以及更具侵略性的 AI。",
+    "ja": "Step On Itは、1999年の古典的Lego Racersをファンが非公式に再現したもので、ブラウザで直接プレイできます。パイレーツ、アドベンチャラーズ、スペースなどのレゴシリーズを基にしたテーマ別コースとレーサーを収録し、最大6人のオンラインプレイ、最初から全コンテンツがアンロック、アイテムとショートカットの再調整、より攻撃的なAIといった現代的な改良を加えています。"
+  },
+  "category": "games",
+  "link": "https://steponit.online/"
+},
+{
   "name": "Little Big Adventure",
   "image": "https://ifilex.github.io/WineBOX-Store/box/lba1.jpg",
   "description": {
@@ -732,6 +783,23 @@ window.appData = [
     },
     "category": "games",
     "link": "https://ifilex.github.io/WineBOX-Store/myballs.html"
+},
+{
+  "name": "Need for Speed: Underground 2 Online",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/nfs2.jpg",
+  "description": {
+    "es": "Need for Speed: Underground 2 Online es una versión jugable en navegador del clásico juego de carreras y tuning urbano de 2004. Personaliza tus coches con una enorme variedad de piezas, compite en carreras callejeras, derrapes y pruebas de velocidad, y disfruta del modo online para retar a otros jugadores en la ciudad de Bayview.",
+    "en": "Need for Speed: Underground 2 Online is a browser-playable version of the classic 2004 urban racing and tuning game. Customize your cars with a huge variety of parts, compete in street races, drifts, and speed challenges, and enjoy online mode to challenge other players in Bayview.",
+    "de": "Need for Speed: Underground 2 Online ist eine im Browser spielbare Version des klassischen Urban-Racing- und Tuning-Spiels von 2004. Passe deine Autos mit einer riesigen Auswahl an Teilen an, tritt in Straßenrennen, Drifts und Geschwindigkeitsprüfungen an und genieße den Online-Modus, um andere Spieler in Bayview herauszufordern.",
+    "fr": "Need for Speed: Underground 2 Online est une version jouable dans le navigateur du classique jeu de course urbaine et de tuning de 2004. Personnalisez vos voitures avec une immense variété de pièces, participez à des courses de rue, des drifts et des défis de vitesse, et profitez du mode en ligne pour défier d'autres joueurs à Bayview.",
+    "it": "Need for Speed: Underground 2 Online è una versione giocabile nel browser del classico gioco di corse urbane e tuning del 2004. Personalizza le tue auto con un'enorme varietà di componenti, gareggia in corse di strada, drift e prove di velocità, e goditi la modalità online per sfidare altri giocatori a Bayview.",
+    "pt": "Need for Speed: Underground 2 Online é uma versão jogável no navegador do clássico jogo de corrida urbana e tuning de 2004. Personalize seus carros com uma enorme variedade de peças, compita em corridas de rua, drifts e desafios de velocidade, e aproveite o modo online para desafiar outros jogadores em Bayview.",
+    "ru": "Need for Speed: Underground 2 Online — это играбельная в браузере версия классической игры 2004 года об уличных гонках и тюнинге. Настраивайте автомобили с огромным выбором деталей, участвуйте в уличных гонках, дрифте и испытаниях на скорость, а также пользуйтесь онлайн-режимом, чтобы бросить вызов другим игрокам в Бэйвью.",
+    "zh": "《Need for Speed: Underground 2 Online》是 2004 年经典都市赛车与改装游戏的浏览器可玩版本。使用海量零件自定义你的车辆，参加街头竞速、漂移和速度挑战，并通过在线模式在 Bayview 挑战其他玩家。",
+    "ja": "Need for Speed: Underground 2 Onlineは、2004年の古典的な都市レース＆チューニングゲームをブラウザで遊べるバージョンです。豊富なパーツで車をカスタマイズし、ストリートレース、ドリフト、スピードチャレンジに挑み、オンラインモードでベイビューの他のプレイヤーと競い合いましょう。"
+  },
+  "category": "games",
+  "link": "https://nfsu2.xyz/"
 },
     {
         name: "Nightmare 3D",
@@ -1245,6 +1313,23 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/tombrider.html"
     },
+{
+  "name": "Tweetcraft",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/tweetcraft.jpg",
+  "description": {
+    "es": "Tweetcraft es un experimento de sandbox voxel inspirado en Minecraft, jugable en el navegador y con un giro social: el mundo se construye y evoluciona a partir de las acciones de los jugadores, que interactúan mediante tweets. Un proyecto experimental de jai.vin que convierte las redes sociales en una herramienta de construcción colaborativa.",
+    "en": "Tweetcraft is a Minecraft-inspired voxel sandbox experiment, playable in the browser with a social twist: the world is built and evolves through players' actions, interacting via tweets. An experimental project by jai.vin that turns social media into a collaborative building tool.",
+    "de": "Tweetcraft ist ein von Minecraft inspiriertes Voxel-Sandbox-Experiment, das im Browser spielbar ist und eine soziale Wendung hat: Die Welt wird durch die Aktionen der Spieler aufgebaut und weiterentwickelt, die über Tweets interagieren. Ein experimentelles Projekt von jai.vin, das soziale Medien zu einem kollaborativen Bauwerkzeug macht.",
+    "fr": "Tweetcraft est une expérience de bac à sable voxel inspirée de Minecraft, jouable dans le navigateur avec une touche sociale : le monde se construit et évolue grâce aux actions des joueurs, qui interagissent via des tweets. Un projet expérimental de jai.vin qui transforme les réseaux sociaux en outil de construction collaborative.",
+    "it": "Tweetcraft è un esperimento di sandbox voxel ispirato a Minecraft, giocabile nel browser con una svolta sociale: il mondo viene costruito ed evolve grazie alle azioni dei giocatori, che interagiscono tramite tweet. Un progetto sperimentale di jai.vin che trasforma i social media in uno strumento di costruzione collaborativa.",
+    "pt": "Tweetcraft é um experimento de sandbox voxel inspirado em Minecraft, jogável no navegador e com um toque social: o mundo é construído e evolui a partir das ações dos jogadores, que interagem por meio de tweets. Um projeto experimental de jai.vin que transforma as redes sociais em uma ferramenta de construção colaborativa.",
+    "ru": "Tweetcraft — это вдохновлённый Minecraft воксельный песочный эксперимент, играбельный в браузере с социальным поворотом: мир строится и развивается благодаря действиям игроков, которые взаимодействуют через твиты. Экспериментальный проект jai.vin, превращающий соцсети в инструмент совместного строительства.",
+    "zh": "《Tweetcraft》是一款灵感来自 Minecraft 的体素沙盒实验作品，可在浏览器中游玩，并带有社交特色：世界由玩家的行动构建并不断演化，玩家通过推文进行互动。这是 jai.vin 的一个实验性项目，将社交媒体变成了协作建造的工具。",
+    "ja": "Tweetcraftは、Minecraftにインスパイアされたボクセルサンドボックスの実験作で、ブラウザでプレイ可能であり、ソーシャルな工夫が施されています。世界はプレイヤーの行動によって構築・進化し、プレイヤーはツイートを通じて交流します。ソーシャルメディアを協働の建築ツールに変える、jai.vinによる実験的プロジェクトです。"
+  },
+  "category": "games",
+  "link": "https://tweetcraft.jai.vin/"
+},
 {
     "name": "Voxel Fighter 3D",
     "image": "https://ifilex.github.io/WineBOX-Store/box/voxelfighter.jpg",
@@ -3397,6 +3482,23 @@ window.appData = [
         category: "arcade",
         link: "https://ifilex.github.io/WineBOX-Store/ski.html"
     },
+{
+  "name": "Sonic Mania",
+  "image": "https://ifilex.github.io/WineBOX-Store/box/sonicmania.jpg",
+  "description": {
+    "es": "Sonic Mania es el aclamado juego de plataformas de 2017 que rinde homenaje a los clásicos de Mega Drive. Corre, salta y haz el spin dash con Sonic, Tails y Knuckles a través de niveles llenos de color, anillos, bucles y jefes, en una experiencia que combina el mejor diseño de la era de 16 bits con nuevas mecánicas.",
+    "en": "Sonic Mania is the acclaimed 2017 platformer that pays homage to the Mega Drive classics. Run, jump, and spin dash as Sonic, Tails, and Knuckles through colorful levels full of rings, loops, and bosses, in an experience that combines the best 16-bit era design with new mechanics.",
+    "de": "Sonic Mania ist das gefeierte Plattformspiel von 2017, das den Mega-Drive-Klassikern huldigt. Renne, springe und mache den Spin Dash als Sonic, Tails und Knuckles durch farbenfrohe Level voller Ringe, Loops und Bosse – ein Erlebnis, das das beste Design der 16-Bit-Ära mit neuen Mechaniken verbindet.",
+    "fr": "Sonic Mania est le jeu de plateforme acclamé de 2017 qui rend hommage aux classiques de la Mega Drive. Courez, sautez et faites le spin dash avec Sonic, Tails et Knuckles à travers des niveaux colorés remplis d'anneaux, de loopings et de boss, dans une expérience qui combine le meilleur du design de l'ère 16 bits avec de nouvelles mécaniques.",
+    "it": "Sonic Mania è l'acclamato platform del 2017 che rende omaggio ai classici del Mega Drive. Corri, salta e fai lo spin dash con Sonic, Tails e Knuckles attraverso livelli colorati pieni di anelli, loop e boss, in un'esperienza che combina il miglior design dell'era a 16 bit con nuove meccaniche.",
+    "pt": "Sonic Mania é o aclamado jogo de plataforma de 2017 que homenageia os clássicos do Mega Drive. Corra, pule e faça o spin dash com Sonic, Tails e Knuckles através de níveis coloridos cheios de anéis, loops e chefes, em uma experiência que combina o melhor design da era de 16 bits com novas mecânicas.",
+    "ru": "Sonic Mania — это признанный платформер 2017 года, отдающий дань уважения классике Mega Drive. Бегите, прыгайте и выполняйте spin dash за Соника, Тейлза и Наклза по красочным уровням, полным колец, петель и боссов, в опыте, сочетающем лучший дизайн эпохи 16 бит с новыми механиками.",
+    "zh": "《Sonic Mania》是 2017 年广受好评的横版平台游戏，向 Mega Drive 经典作品致敬。扮演索尼克、塔尔斯和纳克鲁斯，在充满金环、回环和首领的色彩缤纷关卡中奔跑、跳跃和旋转冲刺，体验融合 16 位时代最佳设计与新机制的冒险。",
+    "ja": "Sonic Maniaは、メガドライブの古典的作品にオマージュを捧げる2017年の高評価プラットフォーマーです。ソニック、テイルス、ナックルズを操作し、リング、ループ、ボスが満載のカラフルなステージを走り、跳び、スピンダッシュで駆け抜けます。16ビット時代の最高のデザインと新たな仕掛けを融合させた体験です。"
+  },
+  "category": "arcade",
+  "link": "https://ugbontop.github.io/Sonic-Mania-InYourBrowser/"
+},
     {
         name: "Space Invaders",
         image: "https://ifilex.github.io/WineBOX-Store/box/spaceinvaders.png",
@@ -3952,23 +4054,6 @@ window.appData = [
         category: "rts",
         link: "https://ifilex.github.io/WineBOX-Store/max.html"
     },
-{
-  "name": "MechWarrior 2",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/mechwarrior2.jpg",
-  "description": {
-    "es": "MechWarrior 2: 31st Century Combat es el clásico simulador de combate con mechs para MS-DOS, ambientado en el universo BattleTech. Pilota enormes robots de guerra, personaliza su armamento y blindaje, y participa en una campaña por facciones con gestión de calor, munición y tácticas de combate.",
-    "en": "MechWarrior 2: 31st Century Combat is the classic mech combat simulator for MS-DOS, set in the BattleTech universe. Pilot massive war machines, customize their weapons and armor, and fight through a faction-based campaign managing heat, ammunition, and combat tactics.",
-    "de": "MechWarrior 2: 31st Century Combat ist der klassische Mech-Kampfsimulator für MS-DOS im BattleTech-Universum. Steuere gewaltige Kriegsmaschinen, passe ihre Waffen und Panzerung an und kämpfe in einer fraktionsbasierten Kampagne, während du Hitze, Munition und Kampftaktik verwaltest.",
-    "fr": "MechWarrior 2: 31st Century Combat est le classique simulateur de combat de mechs pour MS-DOS, situé dans l'univers BattleTech. Pilotez d'énormes machines de guerre, personnalisez leurs armes et leur blindage, et menez une campagne par factions en gérant la chaleur, les munitions et les tactiques de combat.",
-    "it": "MechWarrior 2: 31st Century Combat è il classico simulatore di combattimento tra mech per MS-DOS, ambientato nell'universo BattleTech. Pilota enormi macchine da guerra, personalizza armi e corazza, e affronta una campagna per fazioni gestendo calore, munizioni e tattiche di combattimento.",
-    "pt": "MechWarrior 2: 31st Century Combat é o clássico simulador de combate com mechs para MS-DOS, ambientado no universo BattleTech. Pilote enormes máquinas de guerra, personalize suas armas e blindagem, e enfrente uma campanha por facções gerenciando calor, munição e táticas de combate.",
-    "ru": "MechWarrior 2: 31st Century Combat — это классический симулятор боя на мехах для MS-DOS во вселенной BattleTech. Управляйте огромными боевыми машинами, настраивайте их вооружение и броню и проходите кампанию за фракции, контролируя тепло, боеприпасы и тактику боя.",
-    "zh": "《MechWarrior 2: 31st Century Combat》是一款经典的 MS-DOS 机甲战斗模拟游戏，背景设定在 BattleTech 宇宙中。驾驶巨型战争机器，自定义其武器与装甲，并在管理热量、弹药和战斗战术的同时，进行阵营战役。",
-    "ja": "MechWarrior 2: 31st Century Combatは、BattleTech宇宙を舞台にしたMS-DOS向けの古典的なメック戦闘シミュレーターです。巨大な戦闘マシンを操縦し、武器や装甲をカスタマイズし、熱、弾薬、戦闘戦術を管理しながら勢力別のキャンペーンを戦い抜きます。"
-  },
-  "category": "games",
-  "link": "https://ifilex.github.io/WineBOX-Store/mechwarriors2.html"
-},
     {
         name: "Open TTD",
         image: "https://ifilex.github.io/WineBOX-Store/box/openttd.jpg",
