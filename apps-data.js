@@ -358,23 +358,6 @@ window.appData = [
         category: "games",
         link: "https://d07riv.github.io/diabloweb/"
     },
-{
-  "name": "Diablo II",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/diablo2.jpg",
-  "description": {
-    "es": "Diablo II es el aclamado ARPG de Blizzard lanzado en 2000, y una de las secuelas más influyentes de la historia. Elige entre distintas clases, explora Santuario, derrota hordas de demonios y jefes, y haz crecer tu personaje con botín, habilidades y objetos únicos en una oscura aventura de rol y acción.",
-    "en": "Diablo II is Blizzard's acclaimed 2000 action RPG and one of the most influential sequels in gaming history. Choose among distinct classes, explore Sanctuary, defeat hordes of demons and bosses, and grow your character with loot, skills, and unique items in a dark action-RPG adventure.",
-    "de": "Diablo II ist Blizzards gefeiertes Action-Rollenspiel von 2000 und eine der einflussreichsten Fortsetzungen der Spielegeschichte. Wähle zwischen verschiedenen Klassen, erkunde Sanktuario, besiege Horden von Dämonen und Bossen und entwickle deinen Charakter mit Beute, Fähigkeiten und einzigartigen Gegenständen in einem düsteren Action-RPG-Abenteuer.",
-    "fr": "Diablo II est l'acclamé action-RPG de Blizzard sorti en 2000, et l'une des suites les plus influentes de l'histoire du jeu vidéo. Choisissez parmi différentes classes, explorez Sanctuaire, terrassez des hordes de démons et des boss, et faites évoluer votre personnage avec du butin, des compétences et des objets uniques dans une sombre aventure d'action-RPG.",
-    "it": "Diablo II è l'acclamato action RPG di Blizzard del 2000, e uno dei seguiti più influenti nella storia dei videogiochi. Scegli tra classi distinte, esplora Sanctuarium, sconfiggi orde di demoni e boss, e fai crescere il tuo personaggio con bottino, abilità e oggetti unici in una cupa avventura action-RPG.",
-    "pt": "Diablo II é o aclamado ARPG da Blizzard lançado em 2000, e uma das sequências mais influentes da história dos jogos. Escolha entre classes distintas, explore Santuário, derrote hordas de demônios e chefes, e evolua seu personagem com loot, habilidades e itens únicos em uma sombria aventura de ação e RPG.",
-    "ru": "Diablo II — это признанная экшн-RPG от Blizzard, выпущенная в 2000 году, и одно из самых влиятельных продолжений в истории игр. Выберите один из классов, исследуйте Санктуарий, побеждайте орды демонов и боссов и развивайте персонажа с помощью лута, навыков и уникальных предметов в мрачном экшн-RPG-приключении.",
-    "zh": "《Diablo II》是暴雪于 2000 年推出的广受赞誉的动作角色扮演游戏，也是游戏史上最具影响力的续作之一。选择不同职业，探索庇护之地，击败成群的恶魔和首领，并通过战利品、技能和独特物品培养你的角色，体验一场黑暗的动作 RPG 冒险。",
-    "ja": "Diablo IIは、Blizzardが2000年にリリースした高く評価されるアクションRPGであり、ゲーム史において最も影響力のある続編の一つです。個性豊かなクラスから選び、サンクチュアリを探索し、悪魔やボスの大群を打ち倒し、戦利品、スキル、ユニークアイテムでキャラクターを成長させる、ダークなアクションRPGアドベンチャーです。"
-  },
-  "category": "games",
-  "link": "https://d2survivors.lol/play/"
-},
     {
         name: "Death Rally",
         image: "https://ifilex.github.io/WineBOX-Store/box/deathrally.gif",
@@ -631,23 +614,6 @@ window.appData = [
         link: "https://ifilex.github.io/WineBOX-Store/indi.html"
     },
 {
-  "name": "Ion Fury",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/ionfury.jpg",
-  "description": {
-    "es": "Ion Fury es un shooter en primera persona de estilo retro construido sobre el motor Build, el mismo de Duke Nukem 3D. Encarnas a Shelly 'Bombshell' Harrison, una agente que debe abrirse paso a tiros por una ciudad cyberpunk invadida por un culto transhumano, con armas imaginativas, secretos y acción frenética.",
-    "en": "Ion Fury is a retro-style first-person shooter built on the Build engine, the same one used for Duke Nukem 3D. You play as Shelly 'Bombshell' Harrison, an agent who must shoot her way through a cyberpunk city overrun by a transhumanist cult, with imaginative weapons, secrets, and frantic action.",
-    "de": "Ion Fury ist ein Ego-Shooter im Retro-Stil auf Basis der Build-Engine, derselben wie bei Duke Nukem 3D. Du spielst Shelly 'Bombshell' Harrison, eine Agentin, die sich durch eine Cyberpunk-Stadt schießen muss, die von einem transhumanistischen Kult überrannt wurde – mit fantasievollen Waffen, Geheimnissen und rasanter Action.",
-    "fr": "Ion Fury est un FPS de style rétro construit sur le moteur Build, le même que Duke Nukem 3D. Vous incarnez Shelly 'Bombshell' Harrison, une agente qui doit se frayer un chemin à coups de fusil dans une ville cyberpunk envahie par une secte transhumaniste, avec des armes imaginatives, des secrets et une action frénétique.",
-    "it": "Ion Fury è uno sparatutto in prima persona in stile retrò costruito sul motore Build, lo stesso di Duke Nukem 3D. Interpreti Shelly 'Bombshell' Harrison, un'agente che deve farsi strada a colpi di arma da fuoco in una città cyberpunk invasa da una setta transumanista, con armi fantasiose, segreti e azione frenetica.",
-    "pt": "Ion Fury é um FPS de estilo retrô construído sobre o motor Build, o mesmo de Duke Nukem 3D. Você interpreta Shelly 'Bombshell' Harrison, uma agente que precisa abrir caminho a tiros por uma cidade cyberpunk dominada por um culto transumanista, com armas imaginativas, segredos e ação frenética.",
-    "ru": "Ion Fury — это шутер от первого лица в ретро-стиле на движке Build, том же, что использовался в Duke Nukem 3D. Вы играете за Шелли «Бомбшелл» Харрисон, агента, которой предстоит пробиваться с боем через киберпанк-город, захваченный трансгуманистическим культом, с изобретательным оружием, секретами и стремительным экшеном.",
-    "zh": "《Ion Fury》是一款使用 Build 引擎（与《毁灭公爵 3D》相同）打造的复古风格第一人称射击游戏。你将扮演特工 Shelly “Bombshell” Harrison，在被超人类主义邪教占领的赛博朋克城市中一路枪战突围，体验富有创意的武器、隐藏秘密和疯狂的动作场面。",
-    "ja": "Ion Furyは、Duke Nukem 3Dと同じBuildエンジンで作られたレトロスタイルの一人称シューティングゲームです。トランスヒューマニストのカルトに占拠されたサイバーパンク都市を銃で切り抜けるエージェント、シェリー・“ボムシェル”・ハリソンを演じます。独創的な武器、秘密、そして爽快なアクションが特徴です。"
-  },
-  "category": "games",
-  "link": "https://agentcube.github.io/ion-fury-wasm/"
-},
-{
   "name": "Lego Racers (Step On It)",
   "image": "https://ifilex.github.io/WineBOX-Store/box/legoracers.jpg",
   "description": {
@@ -783,23 +749,6 @@ window.appData = [
     },
     "category": "games",
     "link": "https://ifilex.github.io/WineBOX-Store/myballs.html"
-},
-{
-  "name": "Need for Speed: Underground 2 Online",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/nfs2.jpg",
-  "description": {
-    "es": "Need for Speed: Underground 2 Online es una versión jugable en navegador del clásico juego de carreras y tuning urbano de 2004. Personaliza tus coches con una enorme variedad de piezas, compite en carreras callejeras, derrapes y pruebas de velocidad, y disfruta del modo online para retar a otros jugadores en la ciudad de Bayview.",
-    "en": "Need for Speed: Underground 2 Online is a browser-playable version of the classic 2004 urban racing and tuning game. Customize your cars with a huge variety of parts, compete in street races, drifts, and speed challenges, and enjoy online mode to challenge other players in Bayview.",
-    "de": "Need for Speed: Underground 2 Online ist eine im Browser spielbare Version des klassischen Urban-Racing- und Tuning-Spiels von 2004. Passe deine Autos mit einer riesigen Auswahl an Teilen an, tritt in Straßenrennen, Drifts und Geschwindigkeitsprüfungen an und genieße den Online-Modus, um andere Spieler in Bayview herauszufordern.",
-    "fr": "Need for Speed: Underground 2 Online est une version jouable dans le navigateur du classique jeu de course urbaine et de tuning de 2004. Personnalisez vos voitures avec une immense variété de pièces, participez à des courses de rue, des drifts et des défis de vitesse, et profitez du mode en ligne pour défier d'autres joueurs à Bayview.",
-    "it": "Need for Speed: Underground 2 Online è una versione giocabile nel browser del classico gioco di corse urbane e tuning del 2004. Personalizza le tue auto con un'enorme varietà di componenti, gareggia in corse di strada, drift e prove di velocità, e goditi la modalità online per sfidare altri giocatori a Bayview.",
-    "pt": "Need for Speed: Underground 2 Online é uma versão jogável no navegador do clássico jogo de corrida urbana e tuning de 2004. Personalize seus carros com uma enorme variedade de peças, compita em corridas de rua, drifts e desafios de velocidade, e aproveite o modo online para desafiar outros jogadores em Bayview.",
-    "ru": "Need for Speed: Underground 2 Online — это играбельная в браузере версия классической игры 2004 года об уличных гонках и тюнинге. Настраивайте автомобили с огромным выбором деталей, участвуйте в уличных гонках, дрифте и испытаниях на скорость, а также пользуйтесь онлайн-режимом, чтобы бросить вызов другим игрокам в Бэйвью.",
-    "zh": "《Need for Speed: Underground 2 Online》是 2004 年经典都市赛车与改装游戏的浏览器可玩版本。使用海量零件自定义你的车辆，参加街头竞速、漂移和速度挑战，并通过在线模式在 Bayview 挑战其他玩家。",
-    "ja": "Need for Speed: Underground 2 Onlineは、2004年の古典的な都市レース＆チューニングゲームをブラウザで遊べるバージョンです。豊富なパーツで車をカスタマイズし、ストリートレース、ドリフト、スピードチャレンジに挑み、オンラインモードでベイビューの他のプレイヤーと競い合いましょう。"
-  },
-  "category": "games",
-  "link": "https://nfsu2.xyz/"
 },
     {
         name: "Nightmare 3D",
@@ -1313,23 +1262,6 @@ window.appData = [
         category: "games",
         link: "https://ifilex.github.io/WineBOX-Store/tombrider.html"
     },
-{
-  "name": "Tweetcraft",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/tweetcraft.jpg",
-  "description": {
-    "es": "Tweetcraft es un experimento de sandbox voxel inspirado en Minecraft, jugable en el navegador y con un giro social: el mundo se construye y evoluciona a partir de las acciones de los jugadores, que interactúan mediante tweets. Un proyecto experimental de jai.vin que convierte las redes sociales en una herramienta de construcción colaborativa.",
-    "en": "Tweetcraft is a Minecraft-inspired voxel sandbox experiment, playable in the browser with a social twist: the world is built and evolves through players' actions, interacting via tweets. An experimental project by jai.vin that turns social media into a collaborative building tool.",
-    "de": "Tweetcraft ist ein von Minecraft inspiriertes Voxel-Sandbox-Experiment, das im Browser spielbar ist und eine soziale Wendung hat: Die Welt wird durch die Aktionen der Spieler aufgebaut und weiterentwickelt, die über Tweets interagieren. Ein experimentelles Projekt von jai.vin, das soziale Medien zu einem kollaborativen Bauwerkzeug macht.",
-    "fr": "Tweetcraft est une expérience de bac à sable voxel inspirée de Minecraft, jouable dans le navigateur avec une touche sociale : le monde se construit et évolue grâce aux actions des joueurs, qui interagissent via des tweets. Un projet expérimental de jai.vin qui transforme les réseaux sociaux en outil de construction collaborative.",
-    "it": "Tweetcraft è un esperimento di sandbox voxel ispirato a Minecraft, giocabile nel browser con una svolta sociale: il mondo viene costruito ed evolve grazie alle azioni dei giocatori, che interagiscono tramite tweet. Un progetto sperimentale di jai.vin che trasforma i social media in uno strumento di costruzione collaborativa.",
-    "pt": "Tweetcraft é um experimento de sandbox voxel inspirado em Minecraft, jogável no navegador e com um toque social: o mundo é construído e evolui a partir das ações dos jogadores, que interagem por meio de tweets. Um projeto experimental de jai.vin que transforma as redes sociais em uma ferramenta de construção colaborativa.",
-    "ru": "Tweetcraft — это вдохновлённый Minecraft воксельный песочный эксперимент, играбельный в браузере с социальным поворотом: мир строится и развивается благодаря действиям игроков, которые взаимодействуют через твиты. Экспериментальный проект jai.vin, превращающий соцсети в инструмент совместного строительства.",
-    "zh": "《Tweetcraft》是一款灵感来自 Minecraft 的体素沙盒实验作品，可在浏览器中游玩，并带有社交特色：世界由玩家的行动构建并不断演化，玩家通过推文进行互动。这是 jai.vin 的一个实验性项目，将社交媒体变成了协作建造的工具。",
-    "ja": "Tweetcraftは、Minecraftにインスパイアされたボクセルサンドボックスの実験作で、ブラウザでプレイ可能であり、ソーシャルな工夫が施されています。世界はプレイヤーの行動によって構築・進化し、プレイヤーはツイートを通じて交流します。ソーシャルメディアを協働の建築ツールに変える、jai.vinによる実験的プロジェクトです。"
-  },
-  "category": "games",
-  "link": "https://tweetcraft.jai.vin/"
-},
 {
     "name": "Voxel Fighter 3D",
     "image": "https://ifilex.github.io/WineBOX-Store/box/voxelfighter.jpg",
@@ -4416,23 +4348,6 @@ window.appData = [
     },
     "category": "rts",
     "link": "https://ifilex.github.io/WineBOX-Store/webapps/truco/index.html"
-},
-{
-  "name": "Theme Hospital",
-  "image": "https://ifilex.github.io/WineBOX-Store/box/themehospital.jpg",
-  "description": {
-    "es": "Theme Hospital es el clásico simulador de gestión hospitalaria de Bullfrog para MS-DOS. Construye y administra un hospital lleno de humor: diseña salas, contrata médicos y enfermeras, investiga tratamientos y cura a pacientes con enfermedades absurdas mientras mantienes contentos a plantilla y enfermos.",
-    "en": "Theme Hospital is Bullfrog's classic hospital management simulation for MS-DOS. Build and run a humor-filled hospital: design rooms, hire doctors and nurses, research treatments, and cure patients with absurd illnesses while keeping staff and patients happy.",
-    "de": "Theme Hospital ist Bullfrogs klassische Krankenhaus-Management-Simulation für MS-DOS. Baue und leite ein humorvolles Krankenhaus: Entwirf Räume, stelle Ärzte und Krankenschwestern ein, erforsche Behandlungen und heile Patienten mit absurden Krankheiten, während du Personal und Patienten zufrieden hältst.",
-    "fr": "Theme Hospital est la classique simulation de gestion hospitalière de Bullfrog pour MS-DOS. Construisez et gérez un hôpital plein d'humour : concevez des salles, engagez des médecins et des infirmières, recherchez des traitements et soignez des patients atteints de maladies absurdes tout en gardant le personnel et les malades heureux.",
-    "it": "Theme Hospital è la classica simulazione di gestione ospedaliera di Bullfrog per MS-DOS. Costruisci e gestisci un ospedale pieno di umorismo: progetta sale, assumi medici e infermieri, ricerca trattamenti e cura pazienti con malattie assurde mantenendo felici staff e pazienti.",
-    "pt": "Theme Hospital é a clássica simulação de gestão hospitalar da Bullfrog para MS-DOS. Construa e administre um hospital cheio de humor: projete salas, contrate médicos e enfermeiras, pesquise tratamentos e cure pacientes com doenças absurdas enquanto mantém funcionários e doentes satisfeitos.",
-    "ru": "Theme Hospital — это классический симулятор управления больницей от Bullfrog для MS-DOS. Стройте и управляйте больницей с юмором: проектируйте палаты, нанимайте врачей и медсестёр, исследуйте методы лечения и лечите пациентов с абсурдными болезнями, поддерживая довольство персонала и больных.",
-    "zh": "《Theme Hospital》是 Bullfrog 为 MS-DOS 打造的经典医院管理模拟游戏。建造并经营一家充满幽默的医院：设计诊室、雇佣医生和护士、研究治疗方法，治疗患有荒诞疾病的病人，同时让员工和患者保持满意。",
-    "ja": "Theme Hospitalは、BullfrogによるMS-DOS向けの古典的な病院経営シミュレーションです。ユーモアあふれる病院を建設・運営し、部屋を設計し、医師や看護師を雇い、治療法を研究し、奇妙な病気の患者を治療しながら、スタッフと患者の満足度を保ちます。"
-  },
-  "category": "rts",
-  "link": "https://ifilex.github.io/WineBOX-Store/themehospital.html"
 },
     {
         name: "Theme park",
