@@ -2301,7 +2301,7 @@ window.appData = [
             ja: "Program Managerは、WineBOXでアプリケーションとプログラムグループを管理するためのグラフィカルシェルです。ユーザーは、ウィンドウインターフェース内でソフトウェアのショートカットを整理、起動、カスタマイズできます。"
         },
         category: "apps",
-        link: "progman.html"
+        link: "https://ifilex.github.io/WineBOX-Store/progman.html"
     },
     {
         name: "QNX 4.05",
